@@ -1,0 +1,26 @@
+name: update
+on:
+ schedule:
+  - cron:  '30 1 * * *'
+    
+    
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: install dependencies
+        run: pip install -r requirements.txt
+      - name: commit
+        run: |
+          git config --global user.name 'github-runner'
+          git config --global user.email 'github-runner@github.com'
+          git commit -am "update data"
+          git push
