@@ -36,7 +36,7 @@ def get_launchpad_data():
         data.append(str(len(bugs)))
 
     with open("data/snapcraft-launchpad.csv", "a", encoding="utf-8") as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, lineterminator="\n")
         writer.writerow(data)
 
 
@@ -49,28 +49,16 @@ def get_github_data(user: str, project: str):
 
     github_api = Github(github_token)
 
-
     data = [datetime.now().strftime("%Y-%b-%d %H:%M:%S")]
 
+    total_issues = github_api.get_repo(f"{user}/{project}").get_issues(state="open").totalCount
+    prs = github_api.get_repo(f"{user}/{project}").get_pulls(state="open").totalCount
+    open_issues = total_issues - prs
 
-    # open pull requests
-    data.append(str(github_api.get_repo(f"{user}/{project}").get_pulls(state="open").totalCount))
-
-    # closed pull requests
-    data.append(str(github_api.get_repo(f"{user}/{project}").get_pulls(state="closed").totalCount))
-
-    # open issues
-    issues = github_api.get_repo(f"{user}/{project}").get_issues(state="open")
-    open_issues = sum(not issue.pull_request for issue in issues)
-    data.append(str(open_issues))
-
-    # closed issues
-    issues = github_api.get_repo(f"{user}/{project}").get_issues(state="closed")
-    closed_issues = sum(not issue.pull_request for issue in issues)
-    data.append(str(closed_issues))
+    data.extend([str(prs), str(open_issues)])
 
     with open(f"data/{project}-github.csv", "a", encoding="utf-8") as file:
-        writer = csv.writer(file)
+        writer = csv.writer(file, lineterminator="\n")
         writer.writerow(data)
 
 
