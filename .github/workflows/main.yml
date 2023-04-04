@@ -23,6 +23,8 @@ jobs:
       - name: install dependencies
         run: pip install -r requirements.txt
       - name: collect data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./src/main.py
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4

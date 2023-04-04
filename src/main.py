@@ -1,11 +1,15 @@
 #! /usr/bin/env python3
 
 import csv
-from datetime import datetime
 import json
+from datetime import datetime
+import os
+
+from github import Github
 from launchpadlib.launchpad import Launchpad
 
-def main():
+
+def get_launchpad_data():
     launchpad = Launchpad.login_anonymously('hello', 'production')
     snapcraft = launchpad.projects["snapcraft"]
 
@@ -33,9 +37,45 @@ def main():
         data.append(str(len(bugs)))
 
     with open("data/snapcraft-bugs.csv", "a") as file:
-        fields = ["Date"] + statuses
         writer = csv.writer(file)
         writer.writerow(data)
+
+def get_github_data(user: str, project: str):
+    github_token = os.getenv("GITHUB_TOKEN")
+    if not github_token:
+        raise Exception(
+            "Could not connect to github because envvar GITHUB_TOKEN is missing"
+        )
+
+    github_api = Github(github_token)
+
+
+    data = [datetime.now().strftime("%Y-%b-%d %H:%M:%S")]
+
+
+    # open pull requests
+    data.append(str(github_api.get_repo(f"{user}/{project}").get_pulls(state="open").totalCount))
+
+    # closed pull requests
+    data.append(str(github_api.get_repo(f"{user}/{project}").get_pulls(state="closed").totalCount))
+
+    # open issues
+    issues = github_api.get_repo(f"{user}/{project}").get_issues(state="open")
+    open_issues = sum(not issue.pull_request for issue in issues)
+    data.append(str(open_issues))
+
+    # closed issues
+    issues = github_api.get_repo(f"{user}/{project}").get_issues(state="closed")
+    closed_issues = sum(not issue.pull_request for issue in issues)
+    data.append(str(closed_issues))
+
+    with open(f"data/{project}-github.csv", "a") as file:
+        writer = csv.writer(file)
+        writer.writerow(data)
+
+
+def main():
+    get_github_data("canonical", "charmcraft")
 
 if __name__ == "__main__":
     main()
