@@ -1,7 +1,6 @@
 #! /usr/bin/env python3
 
 import csv
-import json
 from datetime import datetime
 import os
 
@@ -36,9 +35,10 @@ def get_launchpad_data():
         print(f"{len(bugs)} {status} bugs")
         data.append(str(len(bugs)))
 
-    with open("data/snapcraft-bugs.csv", "a") as file:
+    with open("data/snapcraft-launchpad.csv", "a", encoding="utf-8") as file:
         writer = csv.writer(file)
         writer.writerow(data)
+
 
 def get_github_data(user: str, project: str):
     github_token = os.getenv("GITHUB_TOKEN")
@@ -69,13 +69,22 @@ def get_github_data(user: str, project: str):
     closed_issues = sum(not issue.pull_request for issue in issues)
     data.append(str(closed_issues))
 
-    with open(f"data/{project}-github.csv", "a") as file:
+    with open(f"data/{project}-github.csv", "a", encoding="utf-8") as file:
         writer = csv.writer(file)
         writer.writerow(data)
 
 
 def main():
+    get_launchpad_data()
     get_github_data("canonical", "charmcraft")
+    get_github_data("canonical", "craft-archives")
+    get_github_data("canonical", "craft-cli")
+    get_github_data("canonical", "craft-grammar")
+    get_github_data("canonical", "craft-parts")
+    get_github_data("canonical", "craft-providers")
+    get_github_data("canonical", "craft-store")
+    get_github_data("canonical", "rockcraft")
+    get_github_data("snapcore", "snapcraft")
 
 if __name__ == "__main__":
     main()
