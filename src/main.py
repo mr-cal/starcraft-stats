@@ -1,8 +1,9 @@
 #! /usr/bin/env python3
 
 import csv
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
+from typing import List, Union
 
 from github import Github
 from launchpadlib.launchpad import Launchpad
@@ -40,6 +41,26 @@ def get_launchpad_data():
         writer.writerow(data)
 
 
+def get_mean_date(dates: List[datetime]) -> Union[datetime, str]:
+    if not dates:
+        return ""
+
+    reference = datetime(2000, 1, 1)
+    return reference + sum([date - reference for date in dates], timedelta()) / len(dates)
+
+
+def get_median_date(dates: List[datetime]) -> Union[datetime, str]:
+    if not dates:
+        return ""
+
+    # if the list is even, average the middle two values
+    if len(dates) % 2 == 0:
+        return get_mean_date(dates[int(len(dates)/2)-1:int(len(dates)/2)])
+
+    # if the list is odd, return the middle value
+    return dates[int(len(dates)/2)]
+
+
 def get_github_data(user: str, project: str):
     github_token = os.getenv("GITHUB_TOKEN")
     if not github_token:
@@ -51,11 +72,27 @@ def get_github_data(user: str, project: str):
 
     data = [datetime.now().strftime("%Y-%b-%d %H:%M:%S")]
 
-    total_issues = github_api.get_repo(f"{user}/{project}").get_issues(state="open").totalCount
-    prs = github_api.get_repo(f"{user}/{project}").get_pulls(state="open").totalCount
-    open_issues = total_issues - prs
+    open_issues = []
+    open_prs = []
 
-    data.extend([str(prs), str(open_issues)])
+    issues = github_api.get_repo(f"{user}/{project}").get_issues(state="open")
+    for issue in issues:
+        if issue.pull_request:
+            open_prs.append(issue.created_at)
+        else:
+            open_issues.append(issue.created_at)
+
+    data.extend(
+        [
+            str(len(open_prs)),
+            str(len(open_issues)),
+            get_mean_date(open_issues),
+            get_median_date(open_issues),
+            get_mean_date(open_prs),
+            get_median_date(open_prs)
+         ]
+    )
+
 
     with open(f"data/{project}-github.csv", "a", encoding="utf-8") as file:
         writer = csv.writer(file, lineterminator="\n")
