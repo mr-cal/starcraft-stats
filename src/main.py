@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 
+import argparse
 import csv
 from datetime import datetime, timedelta
 import os
@@ -9,9 +10,10 @@ from github import Github
 from launchpadlib.launchpad import Launchpad
 
 
-def get_launchpad_data():
+def get_launchpad_data(parsed_args: argparse.Namespace):
+    project: str = parsed_args.project
     launchpad = Launchpad.login_anonymously('hello', 'production')
-    snapcraft = launchpad.projects["snapcraft"]
+    launchpad_project = launchpad.projects[project]
 
     statuses = [
         "New",
@@ -30,13 +32,13 @@ def get_launchpad_data():
 
     data = [datetime.now().strftime('%Y-%b-%d %H:%M:%S')]
 
-    print("snapcraft bugs on launchpad")
+    print(f"{project} bugs on launchpad")
     for status in statuses:
-        bugs = snapcraft.searchTasks(status=status)
+        bugs = launchpad_project.searchTasks(status=status)
         print(f"{len(bugs)} {status} bugs")
         data.append(str(len(bugs)))
 
-    with open("data/snapcraft-launchpad.csv", "a", encoding="utf-8") as file:
+    with open(f"data/{project}-launchpad.csv", "a", encoding="utf-8") as file:
         writer = csv.writer(file, lineterminator="\n")
         writer.writerow(data)
 
@@ -61,7 +63,9 @@ def get_median_date(dates: List[datetime]) -> Union[datetime, str]:
     return dates[int(len(dates)/2)]
 
 
-def get_github_data(user: str, project: str):
+def get_github_data(parsed_args: argparse.Namespace):
+    user: str = parsed_args.user
+    project: str = parsed_args.project
     github_token = os.getenv("GITHUB_TOKEN")
     if not github_token:
         raise Exception(
@@ -100,16 +104,38 @@ def get_github_data(user: str, project: str):
 
 
 def main():
-    get_launchpad_data()
-    get_github_data("canonical", "charmcraft")
-    get_github_data("canonical", "craft-archives")
-    get_github_data("canonical", "craft-cli")
-    get_github_data("canonical", "craft-grammar")
-    get_github_data("canonical", "craft-parts")
-    get_github_data("canonical", "craft-providers")
-    get_github_data("canonical", "craft-store")
-    get_github_data("canonical", "rockcraft")
-    get_github_data("snapcore", "snapcraft")
+    parser = argparse.ArgumentParser(
+        description="Fetch starcraft data from github and launchpad."
+    )
+
+    subparsers = parser.add_subparsers(help="sub-command help")
+
+    fetch_launchpad = subparsers.add_parser("launchpad", help="fetch data from launchpad")
+    fetch_launchpad.set_defaults(func=get_launchpad_data)
+    fetch_launchpad.add_argument(
+        "project",
+        help="github user project is under",
+        metavar="user",
+        type=str,
+    )
+
+    fetch_github = subparsers.add_parser("github", help="build and install a craft application")
+    fetch_github.set_defaults(func=get_github_data)
+    fetch_github.add_argument(
+        "user",
+        help="github user project is under",
+        metavar="user",
+        type=str,
+    )
+    fetch_github.add_argument(
+        "project",
+        help="github project",
+        metavar="project",
+        type=str,
+    )
+
+    args = parser.parse_args()
+    args.func(args)
 
 if __name__ == "__main__":
     main()
