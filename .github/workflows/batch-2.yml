@@ -1,7 +1,7 @@
-name: update
+name: github batch 2
 on:
   schedule:
-    - cron:  '30 1 * * *'
+    - cron:  '25 2 * * *'
   workflow_dispatch:
 
 jobs:
@@ -25,7 +25,10 @@ jobs:
       - name: collect data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./src/main.py
+        run: |
+          ./src/main.py github canonical craft-grammar
+          ./src/main.py github canonical craft-parts
+          ./src/main.py github canonical craft-providers
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
