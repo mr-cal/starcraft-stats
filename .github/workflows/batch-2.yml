@@ -1,7 +1,7 @@
 name: github batch 2
 on:
   schedule:
-    - cron:  '25 2 * * *'
+    - cron:  '25 6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -32,4 +32,5 @@ jobs:
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: update data
+          commit_message: ci: update craft-grammar, craft-parts, craft-providers data
+          commit_author: github-actions
