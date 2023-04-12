@@ -32,5 +32,5 @@ jobs:
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: ci: update craft-grammar, craft-parts, craft-providers data
+          commit_message: "ci: update craft-grammar, craft-parts, craft-providers data"
           commit_author: github-actions

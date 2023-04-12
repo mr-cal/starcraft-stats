@@ -32,5 +32,5 @@ jobs:
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: ci: update charmcraft, craft-archives, craft-cli data
+          commit_message: "ci: update charmcraft, craft-archives, craft-cli data"
           commit_author: github-actions
