@@ -30,4 +30,3 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "ci: update snapcraft data"
-          commit_author: github-actions
