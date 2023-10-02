@@ -2,7 +2,7 @@
 
 import argparse
 import csv
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import os
 from typing import List, Union
 
@@ -47,7 +47,7 @@ def get_mean_date(dates: List[datetime]) -> Union[datetime, str]:
     if not dates:
         return ""
 
-    reference = datetime(2000, 1, 1)
+    reference = datetime(year=2000, month=1, day=1, tzinfo=timezone.utc)
     return reference + sum([date - reference for date in dates], timedelta()) / len(dates)
 
 
