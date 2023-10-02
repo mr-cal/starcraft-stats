@@ -12,7 +12,7 @@ from launchpadlib.launchpad import Launchpad
 
 def get_launchpad_data(parsed_args: argparse.Namespace):
     project: str = parsed_args.project
-    launchpad = Launchpad.login_anonymously('hello', 'production')
+    launchpad = Launchpad.login_anonymously("hello", "production")
     launchpad_project = launchpad.projects[project]
 
     statuses = [
@@ -30,7 +30,7 @@ def get_launchpad_data(parsed_args: argparse.Namespace):
         "Does Not Exist",
     ]
 
-    data = [datetime.now().strftime('%Y-%b-%d %H:%M:%S')]
+    data = [datetime.now().strftime("%Y-%b-%d %H:%M:%S")]
 
     print(f"{project} bugs on launchpad")
     for status in statuses:
@@ -48,7 +48,9 @@ def get_mean_date(dates: List[datetime]) -> Union[datetime, str]:
         return ""
 
     reference = datetime(year=2000, month=1, day=1, tzinfo=timezone.utc)
-    return reference + sum([date - reference for date in dates], timedelta()) / len(dates)
+    return reference + sum([date - reference for date in dates], timedelta()) / len(
+        dates
+    )
 
 
 def get_median_date(dates: List[datetime]) -> Union[datetime, str]:
@@ -57,10 +59,10 @@ def get_median_date(dates: List[datetime]) -> Union[datetime, str]:
 
     # if the list is even, average the middle two values
     if len(dates) % 2 == 0:
-        return get_mean_date(dates[int(len(dates)/2)-1:int(len(dates)/2)])
+        return get_mean_date(dates[int(len(dates) / 2) - 1 : int(len(dates) / 2)])
 
     # if the list is odd, return the middle value
-    return dates[int(len(dates)/2)]
+    return dates[int(len(dates) / 2)]
 
 
 def get_github_data(parsed_args: argparse.Namespace):
@@ -93,10 +95,9 @@ def get_github_data(parsed_args: argparse.Namespace):
             get_mean_date(open_issues),
             get_median_date(open_issues),
             get_mean_date(open_prs),
-            get_median_date(open_prs)
-         ]
+            get_median_date(open_prs),
+        ]
     )
-
 
     with open(f"data/{project}-github.csv", "a", encoding="utf-8") as file:
         writer = csv.writer(file, lineterminator="\n")
@@ -110,7 +111,9 @@ def main():
 
     subparsers = parser.add_subparsers(help="sub-command help")
 
-    fetch_launchpad = subparsers.add_parser("launchpad", help="fetch data from launchpad")
+    fetch_launchpad = subparsers.add_parser(
+        "launchpad", help="fetch data from launchpad"
+    )
     fetch_launchpad.set_defaults(func=get_launchpad_data)
     fetch_launchpad.add_argument(
         "project",
@@ -119,7 +122,9 @@ def main():
         type=str,
     )
 
-    fetch_github = subparsers.add_parser("github", help="build and install a craft application")
+    fetch_github = subparsers.add_parser(
+        "github", help="build and install a craft application"
+    )
     fetch_github.set_defaults(func=get_github_data)
     fetch_github.add_argument(
         "user",
@@ -136,6 +141,7 @@ def main():
 
     args = parser.parse_args()
     args.func(args)
+
 
 if __name__ == "__main__":
     main()
