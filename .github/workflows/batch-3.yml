@@ -1,7 +1,7 @@
 name: github batch 3
 on:
   schedule:
-    - cron:  '35 7 * * *'
+    - cron:  '10 6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -26,10 +26,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          ./src/main.py github canonical craft-providers
           ./src/main.py github canonical craft-store
           ./src/main.py github canonical rockcraft
-          ./src/main.py github snapcore snapcraft
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "ci: update craft-store, rockcraft, snapcraft data"
+          commit_message: "ci: update craft-providers, craft-store, rockcraft"
