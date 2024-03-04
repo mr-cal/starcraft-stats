@@ -38,7 +38,7 @@ def get_launchpad_data(parsed_args: argparse.Namespace):
         print(f"{len(bugs)} {status} bugs")
         data.append(str(len(bugs)))
 
-    with open(f"data/{project}-launchpad.csv", "a", encoding="utf-8") as file:
+    with open(f"html/data/{project}-launchpad.csv", "a", encoding="utf-8") as file:
         writer = csv.writer(file, lineterminator="\n")
         writer.writerow(data)
 
@@ -123,7 +123,7 @@ def main():
     )
 
     fetch_github = subparsers.add_parser(
-        "github", help="build and install a craft application"
+        "github", help="github options"
     )
     fetch_github.set_defaults(func=get_github_data)
     fetch_github.add_argument(
