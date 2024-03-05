@@ -1,6 +1,7 @@
 """Starcraft stats."""
 
-from typing import List, Optional, Any
+from .cli import main
+
 
 try:
     from ._version import __version__
@@ -13,14 +14,7 @@ except ImportError:  # pragma: no cover
         __version__ = "dev"
 
 
-def hello(people: Optional[List[Any]] = None) -> None:
-    """Says hello."""
-    print("Hello *craft team!")
-    if people:
-        for person in people:
-            print(f"Hello {person}!")
-
-
 __all__ = [
     "__version__",
+    "main",
 ]

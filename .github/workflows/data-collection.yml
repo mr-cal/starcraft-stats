@@ -1,15 +1,13 @@
-name: update launchpad
+name: data collection
 on:
   schedule:
-    - cron:  '5 3 * * *'
+    - cron: '00 4 * * *'
   workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     permissions:
-      # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
       contents: write
     steps:
       - name: checkout
@@ -19,14 +17,15 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
-      - name: install dependencies
-        run: pip install -r requirements.txt
+          python-version: '3.11'
+      - name: install project
+        run: pip install .
       - name: collect data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./src/main.py launchpad snapcraft
+        run: |
+          starcraft-stats fetch-reqs
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "ci: update snapcraft data"
+          commit_message: "ci: fetch craft applications & libraries"

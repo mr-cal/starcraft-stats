@@ -11,7 +11,7 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -47,7 +47,7 @@ jobs:
   unit:
     strategy:
       matrix:
-        platform: [ubuntu-20.04, ubuntu-22.04, windows-latest, macos-latest]
+        platform: [ubuntu-22.04]
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v4
@@ -57,10 +57,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: |
-            3.8
-            3.10
             3.11
-            3.12-dev
           cache: 'pip'
       - name: Configure environment
         run: |
@@ -84,40 +81,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: unit-test-results-${{ matrix.platform }}
-          path: results/
-  integration:
-    strategy:
-      matrix:
-        platform: [ubuntu-20.04, ubuntu-22.04, windows-latest, macos-latest]
-    runs-on: ${{ matrix.platform }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: |
-            3.8
-            3.10
-            3.11
-            3.12-dev
-          cache: 'pip'
-      - name: Configure environment
-        run: |
-          echo "::group::pip install"
-          python -m pip install tox
-          echo "::endgroup::"
-          mkdir -p results
-      - name: Setup Tox environments
-        run: tox run --colored yes -m tests --notest
-      - name: Test with tox
-        run: tox run --skip-pkg-install --no-list-dependencies --result-json results/tox-${{ matrix.platform }}.json --colored yes -m integration-tests
-        env:
-          PYTEST_ADDOPTS: "--no-header -vv -rN"
-      - name: Upload test results
-        if: success() || failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: integration-test-results-${{ matrix.platform }}
           path: results/

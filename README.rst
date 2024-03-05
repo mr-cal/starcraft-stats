@@ -6,16 +6,13 @@ Overview
 
 Dashboard, insights, and statistics for the \*craft libraries.
 
+https://mr-cal.github.io/starcraft-stats/html/index.html
+
 TODO
 ====
 
-☐ organize python modules
+☐ track github issues for craft applications and libraries
 
-☐ refactor how data is pulled and processed
-
-☐ github workflows
-
-☐ craft library dependency tracker
 
 Contributing
 ============

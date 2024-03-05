@@ -2,14 +2,30 @@
 <html lang="en">
 <head>
   <title>Starcraft Stats</title>
+  <link rel="stylesheet" href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.8.0.min.css" />
   <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.js"></script>
   <script type="module" src="index.js"></script>
 </head>
 
-<body>
-  <div id="wrapper" style="position: relative; height:33vh; width:90vw">
-    <canvas id="chart"></canvas>
-  </div>
+<body class="is-paper">
+  <section>
+    <div class="p-suru--25-75">
+      <div class="row--25-75">
+        <div class="col">
+          <h1>Starcraft Stats</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row--25-75">
+      <div class="col">
+        <p class="p-muted-heading">Libraries & Applications</p>
+      </div>
+      <div class="col">
+        <div id="app-deps" class="p-section"></div>
+        <hr>
+      </div>
+    </div>
+</section>
 </body>
 </html>
