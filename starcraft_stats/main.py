@@ -2,8 +2,8 @@
 
 import argparse
 import csv
-from datetime import datetime, timedelta, timezone
 import os
+from datetime import datetime, timedelta, timezone
 from typing import List, Union
 
 from github import Github
@@ -38,7 +38,7 @@ def get_launchpad_data(parsed_args: argparse.Namespace):
         print(f"{len(bugs)} {status} bugs")
         data.append(str(len(bugs)))
 
-    with open(f"html/data/{project}-launchpad.csv", "a", encoding="utf-8") as file:
+    with open(f"data/{project}-launchpad.csv", "a", encoding="utf-8") as file:
         writer = csv.writer(file, lineterminator="\n")
         writer.writerow(data)
 
@@ -49,7 +49,7 @@ def get_mean_date(dates: List[datetime]) -> Union[datetime, str]:
 
     reference = datetime(year=2000, month=1, day=1, tzinfo=timezone.utc)
     return reference + sum([date - reference for date in dates], timedelta()) / len(
-        dates
+        dates,
     )
 
 
@@ -71,7 +71,7 @@ def get_github_data(parsed_args: argparse.Namespace):
     github_token = os.getenv("GITHUB_TOKEN")
     if not github_token:
         raise Exception(
-            "Could not connect to github because envvar GITHUB_TOKEN is missing"
+            "Could not connect to github because envvar GITHUB_TOKEN is missing",
         )
 
     github_api = Github(github_token)
@@ -96,7 +96,7 @@ def get_github_data(parsed_args: argparse.Namespace):
             get_median_date(open_issues),
             get_mean_date(open_prs),
             get_median_date(open_prs),
-        ]
+        ],
     )
 
     with open(f"data/{project}-github.csv", "a", encoding="utf-8") as file:
@@ -106,13 +106,14 @@ def get_github_data(parsed_args: argparse.Namespace):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Fetch starcraft data from github and launchpad."
+        description="Fetch starcraft data from github and launchpad.",
     )
 
     subparsers = parser.add_subparsers(help="sub-command help")
 
     fetch_launchpad = subparsers.add_parser(
-        "launchpad", help="fetch data from launchpad"
+        "launchpad",
+        help="fetch data from launchpad",
     )
     fetch_launchpad.set_defaults(func=get_launchpad_data)
     fetch_launchpad.add_argument(
@@ -122,9 +123,7 @@ def main():
         type=str,
     )
 
-    fetch_github = subparsers.add_parser(
-        "github", help="github options"
-    )
+    fetch_github = subparsers.add_parser("github", help="github options")
     fetch_github.set_defaults(func=get_github_data)
     fetch_github.add_argument(
         "user",

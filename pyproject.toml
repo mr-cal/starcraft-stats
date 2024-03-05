@@ -1,8 +1,9 @@
 [project]
-name = "starcraft"
+name = "starcraft-stats"
 dynamic = ["version", "readme"]
 dependencies = [
-
+    "launchpadlib",
+    "PyGithub",
 ]
 classifiers = [
     "Development Status :: 1 - Planning",
@@ -13,7 +14,7 @@ classifiers = [
 requires-python = ">=3.8"
 
 [project.scripts]
-starcraft-hello = "starcraft:hello"
+starcraft-hello = "starcraft_stats:hello"
 
 [project.optional-dependencies]
 dev = [
@@ -55,7 +56,7 @@ build-backend = "setuptools.build_meta"
 readme = {file = "README.rst"}
 
 [tool.setuptools_scm]
-write_to = "starcraft/_version.py"
+write_to = "starcraft_stats/_version.py"
 # the version comes from the latest annotated git tag formatted as 'X.Y.Z'
 # version scheme:
 #   - X.Y.Z.post<commits since tag>+g<hash>.d<%Y%m%d>
@@ -109,7 +110,7 @@ exclude_also = [
 ]
 
 [tool.pyright]
-strict = ["starcraft"]
+strict = ["starcraft_stats"]
 pythonVersion = "3.8"
 pythonPlatform = "Linux"
 exclude = [
@@ -136,7 +137,7 @@ disallow_untyped_decorators = true
 disallow_any_generics = true
 
 [[tool.mypy.overrides]]
-module = ["starcraft.*"]
+module = ["starcraft_stats.*"]
 disallow_untyped_defs = true
 no_implicit_optional = true
 
@@ -147,7 +148,7 @@ strict = false
 [tool.ruff]
 line-length = 88
 target-version = "py38"
-src = ["starcraft", "tests"]
+src = ["starcraft_stats", "tests"]
 extend-exclude = [
     "docs",
     "__pycache__",
