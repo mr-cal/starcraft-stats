@@ -6,9 +6,25 @@ craft-stats
 Overview
 ========
 
-Dashboard, insights, and statistics for the \*craft libraries.
+Dashboard, insights, and statistics for the \*craft applications and libraries.
 
 https://mr-cal.github.io/starcraft-stats/html/index.html
+
+How to use
+==========
+
+*I want to update the data.*
+
+Data is updated once a day, but you can manually trigger the
+``data-collection`` workflow in GitHub.
+
+*I want to track another branch's usage of craft libraries.*
+
+Add a new item to ``starcraft_stats.dependencies.CRAFT_APPLICATION_BRANCHES``.
+
+*I want to track issues for another project on GitHub.*
+
+Add a new item to ``starcraft_stats.github.CRAFT_PROJECTS``.
 
 TODO
 ====
@@ -25,4 +41,3 @@ Contributions are encouraged!
 .. _test-status-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml
 .. |data-collection-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml/badge.svg?branch=main
 .. _data-collection-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml
-

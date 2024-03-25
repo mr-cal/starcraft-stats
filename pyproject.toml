@@ -11,6 +11,8 @@ dependencies = [
     "craft-store",
     "dparse",
     "launchpadlib",
+    # pydantic is implicitly pinned to 1.x via the craft libraries :(
+    "pydantic",
     "PyGithub",
 ]
 classifiers = [

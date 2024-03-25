@@ -1,52 +1,54 @@
 """cli handler for starcraft-stats."""
 
 import argparse
+import logging
 
-from .fetch_reqs import get_reqs
-from .github import get_github_data
-from .launchpad import get_launchpad_data
+from .dependencies import collect_dependency_data
+from .github import collect_github_data
+from .launchpad import collect_launchpad_data
 
 
 def main() -> None:
     """Entrypoint and cli handler."""
     parser = argparse.ArgumentParser(
-        description="Fetch starcraft data from github and launchpad.",
+        description="Collect and process data for starcraft applications and libraries"
+    )
+    subparsers = parser.add_subparsers(metavar="commands")
+
+    dependencies_parser = subparsers.add_parser(
+        "collect-dependency-data",
+        help="Collect library usage for *craft applications",
+    )
+    dependencies_parser.add_argument(
+        '-v', '--verbose',
+        help="Enable verbose logging",
+        action="store_const", dest="loglevel", const=logging.DEBUG,
+        default=logging.INFO,
     )
 
-    subparsers = parser.add_subparsers(help="sub-command help")
-
-    fetch_reqs = subparsers.add_parser(
-        "fetch-reqs",
-        help="Fetch craft library requirements for an application",
-    )
-    fetch_reqs.set_defaults(func=get_reqs)
+    dependencies_parser.set_defaults(func=collect_dependency_data)
 
     fetch_launchpad = subparsers.add_parser(
-        "launchpad",
-        help="fetch data from launchpad",
+        "collect-launchpad-data",
+        help="collect data from launchpad",
     )
-    fetch_launchpad.set_defaults(func=get_launchpad_data)
     fetch_launchpad.add_argument(
-        "project",
-        help="github user project is under",
-        metavar="user",
-        type=str,
+        '-v', '--verbose',
+        help="Enable verbose logging",
+        action="store_const", dest="loglevel", const=logging.DEBUG,
+        default=logging.INFO,
     )
+    fetch_launchpad.set_defaults(func=collect_launchpad_data)
 
-    fetch_github = subparsers.add_parser("github", help="github options")
-    fetch_github.set_defaults(func=get_github_data)
+    fetch_github = subparsers.add_parser("collect-github-data", help="github options")
     fetch_github.add_argument(
-        "user",
-        help="github user project is under",
-        metavar="user",
-        type=str,
+        '-v', '--verbose',
+        help="Enable verbose logging",
+        action="store_const", dest="loglevel", const=logging.DEBUG,
+        default=logging.INFO,
     )
-    fetch_github.add_argument(
-        "project",
-        help="github project",
-        metavar="project",
-        type=str,
-    )
+    fetch_github.set_defaults(func=collect_github_data)
 
     args = parser.parse_args()
+    logging.basicConfig(level=args.loglevel, format="%(message)s")
     args.func(args)

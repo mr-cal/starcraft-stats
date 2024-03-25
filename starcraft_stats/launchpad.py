@@ -21,8 +21,8 @@ from launchpadlib.launchpad import Launchpad  # type: ignore[import-untyped]
 # pyright: reportIndexIssue=false
 
 
-def get_launchpad_data(parsed_args: argparse.Namespace) -> None:
-    """TODO."""
+def collect_launchpad_data(parsed_args: argparse.Namespace) -> None:
+    """Collect launchpad data for a project."""
     project: str = parsed_args.project
     launchpad = Launchpad.login_anonymously("hello", "production")
     launchpad_project = launchpad.projects[project]

@@ -41,10 +41,116 @@ function snapcraftDeps(data) {
 }
 
 Papa.parse("data/app-deps.csv", {
+  download: true,
+  dynamicTyping: true,
+  header: false,
+  complete: function (data) {
+    snapcraftDeps(data.data)
+  }
+});
+
+
+
+function graphIssues(project, data) {
+  /*
+    A bunch of javascript to create the following HTML:
+    <div class="row--25-75">
+      <div class="col">
+        <p class="p-muted-heading"><project> issues</p>
+      </div>
+      <div class="col">
+        <canvas id="<project>-issues" style="width: 70vw;"></canvas>
+        <hr>
+      </div>
+    </div>
+  */
+
+  let previousElement = document.getElementById("libs-and-apps");
+  let chartDiv = document.createElement("div");
+  chartDiv.setAttribute("class", "row--25-75");
+  let col1 = document.createElement("div");
+  col1.setAttribute("class", "col");
+  chartDiv.appendChild(col1);
+  let title = document.createElement("p");
+  title.setAttribute("class", "p-muted-heading");
+  title.textContent = `${project} issues`;
+  col1.appendChild(title);
+  let col2 = document.createElement("div");
+  col2.setAttribute("class", "col");
+  chartDiv.appendChild(col2);
+  let canvas = document.createElement("canvas");
+  canvas.setAttribute("id", `${project}-issues`);
+  canvas.setAttribute("style", "width: 70vw;");
+  col2.appendChild(canvas);
+  previousElement.parentNode.insertBefore(chartDiv, previousElement.nextSibling)
+  const ctx = document.getElementById(`${project}-issues`);
+
+  // load data from csv file into arrays
+  var dates = data.map(function (d) {
+    return d.date;
+  });
+  var issues = data.map(function (d) {
+    return d.issues;
+  });
+  var age = data.map(function (d) {
+    return d.age;
+  });
+
+  // graph the data
+  const myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [{
+        label: 'Open issues',
+        data: issues,
+      }]
+    },
+    options: {
+      elements: {
+        point: {
+          radius: 0
+        },
+        line: {
+          borderColor: '#000000',
+        }
+      },
+      responsive: true,
+      legend: {
+        display: false
+      },
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+}
+
+let projects = [
+    "all-projects",
+    "charmcraft",
+    "rockcraft",
+    //"snapcraft",
+    "craft-application",
+    "craft-archives",
+    "craft-cli",
+    "craft-grammar",
+    "craft-parts",
+    "craft-providers",
+    "craft-store",
+    "starbase",
+];
+
+
+projects.reverse().forEach(function (project) {
+  Papa.parse(`data/${project}-github.csv`, {
     download: true,
     dynamicTyping: true,
-    header: false,
+    header: true,
     complete: function (data) {
-        snapcraftDeps(data.data)
+      graphIssues(project, data.data)
     }
+  });
 });
