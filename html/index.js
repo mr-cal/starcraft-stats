@@ -73,7 +73,7 @@ function graphIssues(project, data) {
   chartDiv.appendChild(col1);
   let title = document.createElement("p");
   title.setAttribute("class", "p-muted-heading");
-  title.textContent = `${project} issues`;
+  title.textContent = `${project}: open issues`;
   col1.appendChild(title);
   let col2 = document.createElement("div");
   col2.setAttribute("class", "col");
@@ -82,6 +82,8 @@ function graphIssues(project, data) {
   canvas.setAttribute("id", `${project}-issues`);
   canvas.setAttribute("style", "width: 70vw;");
   col2.appendChild(canvas);
+  let hr = document.createElement("hr");
+  col2.appendChild(hr);
   previousElement.parentNode.insertBefore(chartDiv, previousElement.nextSibling)
   const ctx = document.getElementById(`${project}-issues`);
 
@@ -90,7 +92,7 @@ function graphIssues(project, data) {
     return d.date;
   });
   var issues = data.map(function (d) {
-    return d.issues;
+    return d.issues_avg;
   });
   var age = data.map(function (d) {
     return d.age;
@@ -116,12 +118,17 @@ function graphIssues(project, data) {
         }
       },
       responsive: true,
-      legend: {
-        display: false
+      plugins: {
+        legend: {
+          display: false,
+        }
       },
       scales: {
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          ticks: {
+            precision: 0
+          }
         }
       }
     }
@@ -132,7 +139,7 @@ let projects = [
     "all-projects",
     "charmcraft",
     "rockcraft",
-    //"snapcraft",
+    "snapcraft",
     "craft-application",
     "craft-archives",
     "craft-cli",

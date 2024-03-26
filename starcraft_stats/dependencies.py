@@ -133,7 +133,7 @@ def _get_reqs_for_project(
 
         # prefix a ✓ or ✗ to the version
         if library_version == library_versions[library_name]:
-            craft_libraries[library_name] = f"✓ {library_version}"
+            craft_libraries[library_name] = f"{library_version}"
         elif library_version not in ["unknown", "not used"]:
             craft_libraries[library_name] = f"✗ {library_version}"
 

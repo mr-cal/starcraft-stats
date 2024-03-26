@@ -30,7 +30,7 @@ def main() -> None:
 
     fetch_launchpad = subparsers.add_parser(
         "collect-launchpad-data",
-        help="collect data from launchpad",
+        help="Collect data from launchpad",
     )
     fetch_launchpad.add_argument(
         '-v', '--verbose',
@@ -40,7 +40,10 @@ def main() -> None:
     )
     fetch_launchpad.set_defaults(func=collect_launchpad_data)
 
-    fetch_github = subparsers.add_parser("collect-github-data", help="github options")
+    fetch_github = subparsers.add_parser(
+        "collect-github-data",
+        help="Collect data on open issues from github"
+    )
     fetch_github.add_argument(
         '-v', '--verbose',
         help="Enable verbose logging",

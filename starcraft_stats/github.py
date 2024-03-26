@@ -41,6 +41,11 @@ class GithubIssues(CraftBaseModel):
 class GithubProject:
     """Class for a github project.
 
+    This class can load data from a file, update that data from github,
+    and save the data to a file.
+
+    It also generates a CSV file ready for visualization.
+
     :cvar name: The name of the project.
     :cvar owner: The owner of the project.
     :cvar data: Data about the project's issues.
@@ -64,7 +69,7 @@ class GithubProject:
         """Return the project's name."""
         return self.name
 
-    def load_data(self) -> None:
+    def load_data_from_file(self) -> None:
         """Load a local data file containing Github issues for a project."""
         if self.data:
             return
@@ -82,7 +87,7 @@ class GithubProject:
 
         self.data = data
 
-    def update_local_data(self, github_api: Github) -> None:
+    def update_data_from_github(self, github_api: Github) -> None:
         """Update a local data about issues from github."""
         logger.info(f"Collecting data for {self.name}")
         issues = github_api.get_repo(f"{self.owner}/{self.name}").get_issues(
@@ -96,61 +101,85 @@ class GithubProject:
             )
             logger.debug(f"Collected issue {issue.number} {self.data.issues[issue.number]}")
 
+    def save_data_to_file(self) -> None:
+        logger.debug(f"Writing data to {self.data_file}")
         self.data.to_yaml_file(self.data_file)
         logger.info(f"Wrote to {self.data_file}")
 
     def generate_csv(self) -> None:
         """Generate a CSV file from a GithubIssues object.
 
-        Formatted as:
-        | date       | open issues | mean age (days) |
-        | ---------- | ----------- | --------------- |
-        | 2021-01-01 | 10          | 20              |
-        | ...        | ...         | ...             |
+        Steps:
+        1. Generate an intermediate data structure containing the date, open issues, and mean age.
+        2. Compute rolling averages for open issues and mean age and add to data structure.
+        3. Write the data to a CSV file.
+
+        Rolling averages are done for a smoother visualization.
+
+        Data is organized as:
+        | date       | open issues | open issues average | mean age  | mean age average |
+        | ---------- | ----------- | ------------------- | --------- | ---------------- |
+        | 2021-01-01 | 10          | 10                  | 20        | 20               |
+        | ...        | ...         | ...                 | ...       | ...              |
         """
+        # intermediate data structure of
+        intermediate_data: List[Dict[str, int | str | None]] = []
+
+        start_date = datetime(year=2021, month=1, day=1, tzinfo=timezone.utc)
+        end_date = datetime.now(tz=timezone.utc)
+
+        # iterate through each day from start_date to end_date
+        logger.debug(f"Counting open issues and age for {self.name}")
+        for date in [start_date + timedelta(days=i) for i in range((end_date - start_date).days)]:
+            open_issues = [
+                issue for issue in self.data.issues.values() if issue.is_open(date)
+            ]
+            mean_age = get_median_age([issue.date_opened for issue in open_issues], date)
+            intermediate_data.append(
+                {
+                    "date": date.strftime("%Y-%b-%d"),
+                    "open_issues": len(open_issues),
+                    "mean_age": mean_age
+                }
+            )
+
+        logger.debug(f"Calculating rolling averages for {self.name}")
+        window_size = 4
+        for entry in intermediate_data:
+            # a bunch of math for rolling averages
+            start_date_index = max(0, intermediate_data.index(entry) - window_size + 1)
+            window_data = intermediate_data[start_date_index:intermediate_data.index(entry) + 1]
+            avg_open_issues = sum(entry["open_issues"] for entry in window_data) / len(window_data)
+            entry["open_issues_avg"] = int(avg_open_issues)
+
         logger.debug(f"Writing data to {self.csv_file}")
         with self.csv_file.open("w", encoding="utf-8") as file:
             writer = csv.writer(file, lineterminator="\n")
-            writer.writerow(["date", "issues", "age"])
-
-            start_date = datetime(year=2021, month=1, day=1, tzinfo=timezone.utc)
-            end_date = datetime.now(tz=timezone.utc)
-
-            # iterate through each day from start_date to end_date
-            for date in [start_date + timedelta(days=i) for i in range((end_date - start_date).days)]:
-                logger.debug(f"Calculating issues for {date}")
-                open_issues = [
-                    issue for issue in self.data.issues.values() if issue.is_open(date)
-                ]
-                mean_age = get_median_age([issue.date_opened for issue in open_issues], date)
-                logger.debug(
-                    f"Date: {date.strftime('%Y-%m-%d')}, open issues: {len(open_issues)}, median age: {mean_age} days"
+            writer.writerow(["date", "issues", "issues_avg", "age"])
+            for entry in intermediate_data:
+                writer.writerow(
+                    [
+                        entry["date"],
+                        entry["open_issues"],
+                        entry["open_issues_avg"],
+                        entry["mean_age"],
+                    ]
                 )
-                writer.writerow([date.strftime("%Y-%m-%d"), len(open_issues), mean_age])
+        logger.info(f"Wrote to {self.csv_file}")
 
-            logger.info(f"Wrote to {self.csv_file}")
-
-
-# TODO
-# ----
-# rolling averages
-# make "all-projects" project cleaner
-# better sub-commands and arguments to not always fetch data
-# retry on 404?
-# specify which libraries to load
 
 CRAFT_PROJECTS = [
     GithubProject("charmcraft"),
-    #GithubProject("craft-application"),
-    #GithubProject("craft-archives"),
-    #GithubProject("craft-cli"),
-    #GithubProject("craft-grammar"),
-    #GithubProject("craft-parts"),
-    #GithubProject("craft-providers"),
-    #GithubProject("craft-store"),
-    #GithubProject("rockcraft"),
-    #GithubProject("snapcraft"),
-    #GithubProject("starbase"),
+    GithubProject("craft-application"),
+    GithubProject("craft-archives"),
+    GithubProject("craft-cli"),
+    GithubProject("craft-grammar"),
+    GithubProject("craft-parts"),
+    GithubProject("craft-providers"),
+    GithubProject("craft-store"),
+    GithubProject("rockcraft"),
+    GithubProject("snapcraft"),
+    GithubProject("starbase"),
 ]
 
 
@@ -165,32 +194,42 @@ def collect_github_data(parsed_args: argparse.Namespace) -> None:
 
     # pseudo-project to aggregate data for all projects
     all_projects = GithubProject("all-projects")
-    all_projects.load_data()
+    all_projects.load_data_from_file()
 
+    # iterate through all projects
     for project in CRAFT_PROJECTS:
-        project.load_data()
-        project.update_local_data(github_api)
+        project.load_data_from_file()
+        #project.update_data_from_github(github_api)
+        project.save_data_to_file()
         project.generate_csv()
 
         for issue_number in project.data.issues:
             all_projects.data.issues[f"{project.name}-{str(issue_number)}"] = project.data.issues[issue_number]
 
-
-    all_projects.data.to_yaml_file(all_projects.data_file)
+    # generate csv and save data for all projects
     all_projects.generate_csv()
-    logger.info(f"Wrote all project data to {all_projects.data_file}")
+    all_projects.save_data_to_file()
 
 
 def load_github_token() -> str:
-    """Load a github token from the environment."""
-    github_token = os.getenv("GITHUB_TOKEN")
-    if not github_token:
+    """Load a github token from the environment.
+
+    Accept `STARCRAFT_GITHUB_TOKEN` because a personal fine-grained token has a max of
+    5,000 API requests per hour whereas the `GITHUB_TOKEN` provided by GitHub Actions
+    only allows 1,000 API requests per hour.
+    """
+    token = os.getenv("STARCRAFT_GITHUB_TOKEN")
+    if token:
+        logger.debug("Loaded STARCRAFT_GITHUB_TOKEN from environment")
+        return token
+
+    token = os.getenv("GITHUB_TOKEN")
+    if not token:
         raise RuntimeError(
             "Could not connect to github because environment "
-            "variable GITHUB_TOKEN is missing",
+            "variable GITHUB_TOKEN is not set",
         )
-    logger.debug("Loaded GITHUB_TOKEN from environment")
-    return github_token
+    return token
 
 
 def get_median_age(dates: List[datetime] | None, date: datetime) -> int | None:

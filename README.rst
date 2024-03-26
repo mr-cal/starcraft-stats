@@ -24,12 +24,27 @@ Add a new item to ``starcraft_stats.dependencies.CRAFT_APPLICATION_BRANCHES``.
 
 *I want to track issues for another project on GitHub.*
 
-Add a new item to ``starcraft_stats.github.CRAFT_PROJECTS``.
+Add a new item to ``starcraft_stats.github.CRAFT_PROJECTS`` and
+then add the item to ``html/index.js/projects``.
+
+*I want to run this locally*
+
+It's a Python package with a CLI, so it can be installed and run locally.
+
+You will need a github token. You can create a new fine-grained
+token here in your `settings page`_.
+
+.. code-block::
+
+    export GITHUB_TOKEN=<your token from github>
+    pip install -e .
+    starcraft-stats --help
 
 TODO
 ====
 
-☐ track github issues for craft applications and libraries
+☐ track if releases are up-to-date
+(how many commits have happen since a branch's last tag?)
 
 
 Contributing
@@ -41,3 +56,4 @@ Contributions are encouraged!
 .. _test-status-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml
 .. |data-collection-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml/badge.svg?branch=main
 .. _data-collection-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml
+.. _settings page: https://github.com/settings/tokens?type=beta
