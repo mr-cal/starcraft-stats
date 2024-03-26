@@ -1,5 +1,6 @@
-from starcraft_stats import cli
 import sys
+
+from starcraft_stats import cli
 
 
 def test_smoketest(mocker):

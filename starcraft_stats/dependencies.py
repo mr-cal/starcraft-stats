@@ -2,15 +2,14 @@
 
 import argparse
 import csv
-import subprocess
 import logging
+import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict
 
 import requests
 from dparse import filetypes, parse  # type: ignore[import-untyped]
-
 
 logger = logging.getLogger(__name__)
 
@@ -53,7 +52,7 @@ CRAFT_LIBRARIES = {
 
 
 def collect_dependency_data(
-    parsed_args: argparse.Namespace  # noqa: ARG001 (unused argument)
+    parsed_args: argparse.Namespace,  # noqa: ARG001 (unused argument)
 ) -> None:
     """Fetch craft library requirements for all applications.
 

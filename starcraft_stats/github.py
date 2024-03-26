@@ -2,15 +2,15 @@
 
 import argparse
 import csv
-import os
 import logging
+import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List, Union
+
 from craft_application.models import CraftBaseModel
 
 from github import Github
-
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +29,9 @@ class GithubIssue(CraftBaseModel):
 
     def is_open(self, date: datetime) -> bool:
         """Check if an issue was open on a particular date."""
-        return self.date_opened < date and (self.date_closed is None or self.date_closed > date)
+        return self.date_opened < date and (
+            self.date_closed is None or self.date_closed > date
+        )
 
 
 class GithubIssues(CraftBaseModel):
@@ -91,7 +93,8 @@ class GithubProject:
         """Update a local data about issues from github."""
         logger.info(f"Collecting data for {self.name}")
         issues = github_api.get_repo(f"{self.owner}/{self.name}").get_issues(
-            state="all")
+            state="all",
+        )
 
         for issue in issues:
             self.data.issues[issue.number] = GithubIssue(
@@ -99,9 +102,12 @@ class GithubProject:
                 date_opened=issue.created_at,
                 date_closed=issue.closed_at,
             )
-            logger.debug(f"Collected issue {issue.number} {self.data.issues[issue.number]}")
+            logger.debug(
+                f"Collected issue {issue.number} {self.data.issues[issue.number]}",
+            )
 
     def save_data_to_file(self) -> None:
+        """Write data to a local file."""
         logger.debug(f"Writing data to {self.data_file}")
         self.data.to_yaml_file(self.data_file)
         logger.info(f"Wrote to {self.data_file}")
@@ -130,17 +136,22 @@ class GithubProject:
 
         # iterate through each day from start_date to end_date
         logger.debug(f"Counting open issues and age for {self.name}")
-        for date in [start_date + timedelta(days=i) for i in range((end_date - start_date).days)]:
+        for date in [
+            start_date + timedelta(days=i) for i in range((end_date - start_date).days)
+        ]:
             open_issues = [
                 issue for issue in self.data.issues.values() if issue.is_open(date)
             ]
-            mean_age = get_median_age([issue.date_opened for issue in open_issues], date)
+            mean_age = get_median_age(
+                [issue.date_opened for issue in open_issues],
+                date,
+            )
             intermediate_data.append(
                 {
                     "date": date.strftime("%Y-%b-%d"),
                     "open_issues": len(open_issues),
-                    "mean_age": mean_age
-                }
+                    "mean_age": mean_age,
+                },
             )
 
         logger.debug(f"Calculating rolling averages for {self.name}")
@@ -148,8 +159,12 @@ class GithubProject:
         for entry in intermediate_data:
             # a bunch of math for rolling averages
             start_date_index = max(0, intermediate_data.index(entry) - window_size + 1)
-            window_data = intermediate_data[start_date_index:intermediate_data.index(entry) + 1]
-            avg_open_issues = sum(entry["open_issues"] for entry in window_data) / len(window_data)
+            window_data = intermediate_data[
+                start_date_index : intermediate_data.index(entry) + 1
+            ]
+            avg_open_issues = sum(entry["open_issues"] for entry in window_data) / len(
+                window_data,
+            )
             entry["open_issues_avg"] = int(avg_open_issues)
 
         logger.debug(f"Writing data to {self.csv_file}")
@@ -163,7 +178,7 @@ class GithubProject:
                         entry["open_issues"],
                         entry["open_issues_avg"],
                         entry["mean_age"],
-                    ]
+                    ],
                 )
         logger.info(f"Wrote to {self.csv_file}")
 
@@ -183,7 +198,9 @@ CRAFT_PROJECTS = [
 ]
 
 
-def collect_github_data(parsed_args: argparse.Namespace) -> None:
+def collect_github_data(
+    parsed_args: argparse.Namespace,  # noqa: ARG001 (unused argument)
+) -> None:
     """Collect data about issues and PRs for a set of github projects.
 
     Intermediate data about each issue in a project is stored in a yaml file.
@@ -199,12 +216,14 @@ def collect_github_data(parsed_args: argparse.Namespace) -> None:
     # iterate through all projects
     for project in CRAFT_PROJECTS:
         project.load_data_from_file()
-        #project.update_data_from_github(github_api)
+        project.update_data_from_github(github_api)
         project.save_data_to_file()
         project.generate_csv()
 
         for issue_number in project.data.issues:
-            all_projects.data.issues[f"{project.name}-{str(issue_number)}"] = project.data.issues[issue_number]
+            all_projects.data.issues[f"{project.name}-{str(issue_number)}"] = (
+                project.data.issues[issue_number]
+            )
 
     # generate csv and save data for all projects
     all_projects.generate_csv()
@@ -244,7 +263,9 @@ def get_median_age(dates: List[datetime] | None, date: datetime) -> int | None:
 def get_mean_date(dates: List[datetime]) -> datetime:
     """Get mean date from a list of datetimes."""
     reference = datetime(year=2000, month=1, day=1, tzinfo=timezone.utc)
-    return reference + sum([date - reference for date in dates], timedelta()) / len(dates)
+    return reference + sum([date - reference for date in dates], timedelta()) / len(
+        dates,
+    )
 
 
 def get_median_date(dates: List[datetime]) -> Union[datetime, str]:
@@ -254,7 +275,7 @@ def get_median_date(dates: List[datetime]) -> Union[datetime, str]:
 
     # if the list is even, average the middle two values
     if len(dates) % 2 == 0:
-        return get_mean_date(dates[int(len(dates) / 2) - 1: int(len(dates) / 2)])
+        return get_mean_date(dates[int(len(dates) / 2) - 1 : int(len(dates) / 2)])
 
     # if the list is odd, return the middle value
     return dates[int(len(dates) / 2)]
