@@ -22,9 +22,10 @@ jobs:
         run: pip install .
       - name: collect data
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STARCRAFT_GITHUB_TOKEN: ${{ secrets.STARCRAFT_GITHUB_TOKEN }}
         run: |
-          starcraft-stats fetch-reqs
+          starcraft-stats collect-dependency-data
+          starcraft-stats collect-github-data
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
