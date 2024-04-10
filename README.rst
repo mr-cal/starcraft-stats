@@ -59,7 +59,7 @@ Contributions are encouraged!
 
 
 .. |test-status-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml/badge.svg?branch=main
-   :target: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml
+.. _test-status-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml
 .. |data-collection-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml/badge.svg?branch=main
-   :target: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml
+.. _data-collection-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml
 .. _settings page: https://github.com/settings/tokens?type=beta
