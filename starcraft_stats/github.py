@@ -5,8 +5,8 @@ import csv
 import logging
 import os
 from datetime import datetime, timedelta, timezone
+from functools import cached_property
 from pathlib import Path
-from typing import Dict, List, Union
 
 from craft_application.models import CraftBaseModel
 
@@ -37,7 +37,22 @@ class GithubIssue(CraftBaseModel):
 class GithubIssues(CraftBaseModel):
     """Pydantic model for a collection of github issues."""
 
-    issues: Dict[int | str, GithubIssue | None] | None = {}
+    issues: dict[int | str, GithubIssue] = {}
+
+
+class IntermediateDataPoint(CraftBaseModel):
+    """Intermediate datapoint about issues for a github project."""
+
+    date: str
+    open_issues: int
+    open_issues_avg: int | None = None
+    mean_age: int | None
+
+
+class IntermediateData(CraftBaseModel):
+    """Intermediate data about issues for a github project."""
+
+    data: list[IntermediateDataPoint] = []
 
 
 class GithubProject:
@@ -50,14 +65,14 @@ class GithubProject:
 
     :cvar name: The name of the project.
     :cvar owner: The owner of the project.
-    :cvar data: Data about the project's issues.
+    :cvar __data: Data about the project's issues.
     :cvar data_file: The path to the local data file, written as yaml.
     :cvar csv_file: The path to the local csv file.
     """
 
     name: str
     owner: str
-    data: GithubIssues | None = None
+    __data: GithubIssues | None = None
     data_file: Path
     csv_file: Path
 
@@ -66,15 +81,16 @@ class GithubProject:
         self.owner = owner
         self.data_file = Path(f"html/data/{name}-github.yaml")
         self.csv_file = Path(f"html/data/{name}-github.csv")
+        self.get_data()
 
     def __str__(self) -> str:
         """Return the project's name."""
         return self.name
 
-    def load_data_from_file(self) -> None:
+    def get_data(self) -> GithubIssues:
         """Load a local data file containing Github issues for a project."""
-        if self.data:
-            return
+        if self.__data:
+            return self.__data
 
         if not self.data_file.exists():
             self.data_file.write_text("issues:")
@@ -87,7 +103,13 @@ class GithubProject:
         if not data.issues:
             data.issues = {}
 
-        self.data = data
+        self.__data = data
+        return data
+
+    @cached_property
+    def data(self) -> GithubIssues:
+        """Get the data for the project."""
+        return self.get_data()
 
     def update_data_from_github(self, github_api: Github) -> None:
         """Update a local data about issues from github."""
@@ -109,6 +131,7 @@ class GithubProject:
     def save_data_to_file(self) -> None:
         """Write data to a local file."""
         logger.debug(f"Writing data to {self.data_file}")
+
         self.data.to_yaml_file(self.data_file)
         logger.info(f"Wrote to {self.data_file}")
 
@@ -129,7 +152,7 @@ class GithubProject:
         | ...        | ...         | ...                 | ...       | ...              |
         """
         # intermediate data structure of
-        intermediate_data: List[Dict[str, int | str | None]] = []
+        intermediate_data = IntermediateData()
 
         start_date = datetime(year=2021, month=1, day=1, tzinfo=timezone.utc)
         end_date = datetime.now(tz=timezone.utc)
@@ -146,38 +169,41 @@ class GithubProject:
                 [issue.date_opened for issue in open_issues],
                 date,
             )
-            intermediate_data.append(
-                {
-                    "date": date.strftime("%Y-%b-%d"),
-                    "open_issues": len(open_issues),
-                    "mean_age": mean_age,
-                },
+            intermediate_data.data.append(
+                IntermediateDataPoint(
+                    date=date.strftime("%Y-%b-%d"),
+                    open_issues=len(open_issues),
+                    mean_age=mean_age,
+                ),
             )
 
         logger.debug(f"Calculating rolling averages for {self.name}")
         window_size = 4
-        for entry in intermediate_data:
-            # a bunch of math for rolling averages
-            start_date_index = max(0, intermediate_data.index(entry) - window_size + 1)
-            window_data = intermediate_data[
-                start_date_index : intermediate_data.index(entry) + 1
-            ]
-            avg_open_issues = sum(entry["open_issues"] for entry in window_data) / len(
-                window_data,
+        for entry in intermediate_data.data:
+            # compute rolling averages
+            start_date_index = max(
+                0,
+                intermediate_data.data.index(entry) - window_size + 1,
             )
-            entry["open_issues_avg"] = int(avg_open_issues)
+            window_data = intermediate_data.data[
+                start_date_index : intermediate_data.data.index(entry) + 1
+            ]
+            average_open_issues = sum(
+                entry.open_issues for entry in window_data
+            ) // len(window_data)
+            entry.open_issues_avg = average_open_issues
 
         logger.debug(f"Writing data to {self.csv_file}")
         with self.csv_file.open("w", encoding="utf-8") as file:
             writer = csv.writer(file, lineterminator="\n")
             writer.writerow(["date", "issues", "issues_avg", "age"])
-            for entry in intermediate_data:
+            for entry in intermediate_data.data:
                 writer.writerow(
                     [
-                        entry["date"],
-                        entry["open_issues"],
-                        entry["open_issues_avg"],
-                        entry["mean_age"],
+                        entry.date,
+                        entry.open_issues,
+                        entry.open_issues_avg,
+                        entry.mean_age,
                     ],
                 )
         logger.info(f"Wrote to {self.csv_file}")
@@ -211,11 +237,9 @@ def collect_github_data(
 
     # pseudo-project to aggregate data for all projects
     all_projects = GithubProject("all-projects")
-    all_projects.load_data_from_file()
 
     # iterate through all projects
     for project in CRAFT_PROJECTS:
-        project.load_data_from_file()
         project.update_data_from_github(github_api)
         project.save_data_to_file()
         project.generate_csv()
@@ -251,7 +275,7 @@ def load_github_token() -> str:
     return token
 
 
-def get_median_age(dates: List[datetime] | None, date: datetime) -> int | None:
+def get_median_age(dates: list[datetime] | None, date: datetime) -> int | None:
     """Get the median age in days of a list of dates from a reference date."""
     if dates:
         median_date = get_median_date(dates)
@@ -260,7 +284,7 @@ def get_median_age(dates: List[datetime] | None, date: datetime) -> int | None:
     return None
 
 
-def get_mean_date(dates: List[datetime]) -> datetime:
+def get_mean_date(dates: list[datetime]) -> datetime:
     """Get mean date from a list of datetimes."""
     reference = datetime(year=2000, month=1, day=1, tzinfo=timezone.utc)
     return reference + sum([date - reference for date in dates], timedelta()) / len(
@@ -268,10 +292,10 @@ def get_mean_date(dates: List[datetime]) -> datetime:
     )
 
 
-def get_median_date(dates: List[datetime]) -> Union[datetime, str]:
+def get_median_date(dates: list[datetime]) -> datetime:
     """Get median date from a list of datetimes."""
-    if not dates:
-        return ""
+    if len(dates) == 0:
+        raise ValueError("Cannot get median date from an empty list")
 
     # if the list is even, average the middle two values
     if len(dates) % 2 == 0:
