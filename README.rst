@@ -1,7 +1,7 @@
 craft-stats
 ###########
 
-|test-status-badge|_ |data-collection-badge|_
+|test-status-badge| |data-collection-badge|
 
 Overview
 ========
@@ -10,24 +10,28 @@ Dashboard, insights, and statistics for the \*craft applications and libraries.
 
 https://mr-cal.github.io/starcraft-stats/html/index.html
 
-How to use
-==========
+How to
+======
 
-*I want to update the data.*
+How to update data
+^^^^^^^^^^^^^^^^^^
 
 Data is updated once a day, but you can manually trigger the
 ``data-collection`` workflow in GitHub.
 
-*I want to track another branch's usage of craft libraries.*
+How to track another branch's usage of craft libraries
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Add a new item to ``starcraft_stats.dependencies.CRAFT_APPLICATION_BRANCHES``.
 
-*I want to track issues for another project on GitHub.*
+How to track issues for another project on GitHub
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Add a new item to ``starcraft_stats.github.CRAFT_PROJECTS`` and
 then add the item to ``html/index.js/projects``.
 
-*I want to run this locally*
+How to run locally
+^^^^^^^^^^^^^^^^^^
 
 It's a Python package with a CLI, so it can be installed and run locally.
 
@@ -52,8 +56,10 @@ Contributing
 
 Contributions are encouraged!
 
+
+
 .. |test-status-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml/badge.svg?branch=main
-.. _test-status-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml
+   :target: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml
 .. |data-collection-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml/badge.svg?branch=main
-.. _data-collection-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml
+   :target: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml
 .. _settings page: https://github.com/settings/tokens?type=beta
