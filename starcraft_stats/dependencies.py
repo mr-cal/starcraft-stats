@@ -36,7 +36,6 @@ CRAFT_APPLICATION_BRANCHES = [
     CraftApplicationBranch("snapcraft", "main"),
     CraftApplicationBranch("snapcraft", "hotfix/7.5"),
     CraftApplicationBranch("snapcraft", "hotfix/8.0"),
-    CraftApplicationBranch("snapcraft", "feature/craft-application"),
 ]
 
 
