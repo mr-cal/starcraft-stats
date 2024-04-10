@@ -32,6 +32,7 @@ class CraftApplicationBranch:
 
 CRAFT_APPLICATION_BRANCHES = [
     CraftApplicationBranch("charmcraft", "main"),
+    CraftApplicationBranch("charmcraft", "hotfix/2.5"),
     CraftApplicationBranch("rockcraft", "main"),
     CraftApplicationBranch("snapcraft", "main"),
     CraftApplicationBranch("snapcraft", "hotfix/7.5"),
