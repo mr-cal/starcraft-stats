@@ -42,7 +42,7 @@ issues:
   275:
     type: issue
     date-opened: 2024-03-19 16:21:21+00:00
-    date-closed: 2024-03-21 19:13:54+00:00
+    date-closed: null
   274:
     type: issue
     date-opened: 2024-03-19 15:52:31+00:00
@@ -1138,7 +1138,7 @@ issues:
   307:
     type: pr
     date-opened: 2024-04-10 21:27:14+00:00
-    date-closed: null
+    date-closed: 2024-04-11 13:28:07+00:00
   306:
     type: issue
     date-opened: 2024-04-10 21:26:10+00:00
@@ -1146,11 +1146,11 @@ issues:
   305:
     type: pr
     date-opened: 2024-04-10 20:49:53+00:00
-    date-closed: null
+    date-closed: 2024-04-11 16:49:09+00:00
   304:
     type: pr
     date-opened: 2024-04-10 20:49:51+00:00
-    date-closed: null
+    date-closed: 2024-04-11 16:56:01+00:00
   303:
     type: pr
     date-opened: 2024-04-10 20:48:59+00:00

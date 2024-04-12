@@ -138,7 +138,7 @@ issues:
   660:
     type: pr
     date-opened: 2024-02-12 02:22:19+00:00
-    date-closed: null
+    date-closed: 2024-04-11 15:50:11+00:00
   659:
     type: issue
     date-opened: 2024-02-09 13:38:55+00:00
@@ -2794,4 +2794,8 @@ issues:
   695:
     type: pr
     date-opened: 2024-03-26 03:46:19+00:00
+    date-closed: null
+  700:
+    type: pr
+    date-opened: 2024-04-11 15:51:29+00:00
     date-closed: null
