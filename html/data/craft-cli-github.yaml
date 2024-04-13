@@ -983,3 +983,11 @@ issues:
     type: issue
     date-opened: 2024-03-03 14:36:48+00:00
     date-closed: null
+  248:
+    type: issue
+    date-opened: 2024-04-12 21:37:35+00:00
+    date-closed: null
+  247:
+    type: pr
+    date-opened: 2024-04-12 19:54:09+00:00
+    date-closed: null

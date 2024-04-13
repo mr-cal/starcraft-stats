@@ -646,11 +646,11 @@ issues:
   169:
     type: pr
     date-opened: 2024-04-06 07:36:08+00:00
-    date-closed: null
+    date-closed: 2024-04-12 18:12:05+00:00
   168:
     type: pr
     date-opened: 2024-04-06 05:15:25+00:00
-    date-closed: null
+    date-closed: 2024-04-12 17:47:58+00:00
   167:
     type: issue
     date-opened: 2024-04-03 20:11:25+00:00
@@ -658,7 +658,7 @@ issues:
   166:
     type: issue
     date-opened: 2024-04-03 14:16:22+00:00
-    date-closed: null
+    date-closed: 2024-04-12 16:25:27+00:00
   165:
     type: pr
     date-opened: 2024-03-30 03:49:29+00:00
@@ -678,4 +678,8 @@ issues:
   170:
     type: pr
     date-opened: 2024-04-11 19:58:23+00:00
+    date-closed: 2024-04-12 16:25:27+00:00
+  171:
+    type: pr
+    date-opened: 2024-04-13 03:23:06+00:00
     date-closed: null

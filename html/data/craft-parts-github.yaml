@@ -194,7 +194,7 @@ issues:
   646:
     type: pr
     date-opened: 2024-02-01 20:48:45+00:00
-    date-closed: null
+    date-closed: 2024-04-12 18:39:16+00:00
   645:
     type: pr
     date-opened: 2024-02-01 20:37:28+00:00
@@ -2778,15 +2778,15 @@ issues:
   699:
     type: pr
     date-opened: 2024-04-10 21:35:11+00:00
-    date-closed: null
+    date-closed: 2024-04-12 19:48:47+00:00
   698:
     type: pr
     date-opened: 2024-04-10 21:35:07+00:00
-    date-closed: null
+    date-closed: 2024-04-12 22:40:54+00:00
   697:
     type: pr
     date-opened: 2024-03-26 15:08:02+00:00
-    date-closed: null
+    date-closed: 2024-04-12 21:39:39+00:00
   696:
     type: issue
     date-opened: 2024-03-26 14:37:17+00:00
@@ -2798,4 +2798,24 @@ issues:
   700:
     type: pr
     date-opened: 2024-04-11 15:51:29+00:00
+    date-closed: 2024-04-12 22:10:11+00:00
+  705:
+    type: pr
+    date-opened: 2024-04-12 19:54:14+00:00
+    date-closed: 2024-04-12 22:40:09+00:00
+  704:
+    type: pr
+    date-opened: 2024-04-12 19:54:12+00:00
+    date-closed: 2024-04-12 21:32:09+00:00
+  703:
+    type: pr
+    date-opened: 2024-04-12 19:40:22+00:00
     date-closed: null
+  702:
+    type: pr
+    date-opened: 2024-04-12 19:33:29+00:00
+    date-closed: 2024-04-12 20:37:05+00:00
+  701:
+    type: pr
+    date-opened: 2024-04-12 19:01:41+00:00
+    date-closed: 2024-04-12 22:37:00+00:00
