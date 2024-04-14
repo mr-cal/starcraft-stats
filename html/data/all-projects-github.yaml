@@ -36758,7 +36758,7 @@ issues:
   charmcraft-1649:
     type: pr
     date-opened: 2024-04-12 20:03:34+00:00
-    date-closed: 2024-04-13 02:00:31+00:00
+    date-closed: null
   charmcraft-1648:
     type: pr
     date-opened: 2024-04-12 20:03:32+00:00
@@ -36838,7 +36838,7 @@ issues:
   craft-providers-554:
     type: pr
     date-opened: 2024-04-12 19:51:34+00:00
-    date-closed: 2024-04-12 23:02:57+00:00
+    date-closed: null
   craft-store-171:
     type: pr
     date-opened: 2024-04-13 03:23:06+00:00
@@ -36931,3 +36931,7 @@ issues:
     type: pr
     date-opened: 2024-04-12 19:48:10+00:00
     date-closed: 2024-04-12 19:50:27+00:00
+  craft-store-172:
+    type: pr
+    date-opened: 2024-04-13 08:41:04+00:00
+    date-closed: null
