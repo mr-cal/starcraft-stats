@@ -2195,3 +2195,7 @@ issues:
     type: pr
     date-opened: 2024-04-12 19:51:56+00:00
     date-closed: null
+  551:
+    type: pr
+    date-opened: 2024-04-15 09:50:31+00:00
+    date-closed: 2024-04-15 09:50:46+00:00
