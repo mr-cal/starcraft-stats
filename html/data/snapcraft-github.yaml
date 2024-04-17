@@ -858,7 +858,7 @@ issues:
   4481:
     type: issue
     date-opened: 2023-12-05 20:39:59+00:00
-    date-closed: null
+    date-closed: 2024-04-16 21:00:30+00:00
   4480:
     type: pr
     date-opened: 2023-12-05 20:08:17+00:00
@@ -18898,8 +18898,24 @@ issues:
   4734:
     type: pr
     date-opened: 2024-04-15 18:20:42+00:00
-    date-closed: null
+    date-closed: 2024-04-16 16:10:45+00:00
   4733:
     type: pr
     date-opened: 2024-04-15 14:19:45+00:00
+    date-closed: 2024-04-16 12:59:03+00:00
+  4739:
+    type: pr
+    date-opened: 2024-04-16 17:59:53+00:00
+    date-closed: 2024-04-16 19:17:17+00:00
+  4738:
+    type: pr
+    date-opened: 2024-04-16 17:21:38+00:00
+    date-closed: 2024-04-16 20:37:30+00:00
+  4737:
+    type: issue
+    date-opened: 2024-04-16 17:03:37+00:00
     date-closed: null
+  4736:
+    type: pr
+    date-opened: 2024-04-16 14:05:55+00:00
+    date-closed: 2024-04-16 22:44:21+00:00
