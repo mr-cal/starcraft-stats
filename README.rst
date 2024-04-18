@@ -10,6 +10,16 @@ Dashboard, insights, and statistics for the \*craft applications and libraries.
 
 https://mr-cal.github.io/starcraft-stats/html/index.html
 
+Design
+======
+
+This project contains a few parts:
+
+* A Python command-line application that retrieves, processes, and stores data
+  in a CSV file.
+* A static webpage that loads and displays the CSV data as tables and charts.
+* A nightly cron job to refresh data
+
 How to
 ======
 
