@@ -4,9 +4,9 @@ import argparse
 import logging
 
 from .config import CONFIG_FILE, Config
-from .dependencies import collect_dependency_data
-from .github import collect_github_data
-from .launchpad import collect_launchpad_data
+from .dependencies import get_dependencies
+from .issues import get_issues
+from .launchpad import get_launchpad_data
 
 
 def main() -> None:
@@ -16,11 +16,11 @@ def main() -> None:
     )
     subparsers = parser.add_subparsers(metavar="commands")
 
-    dependencies_parser = subparsers.add_parser(
-        "collect-dependency-data",
+    dependencies_command = subparsers.add_parser(
+        "get-dependencies",
         help="Collect library usage for *craft applications",
     )
-    dependencies_parser.add_argument(
+    dependencies_command.add_argument(
         "-v",
         "--verbose",
         help="Enable verbose logging",
@@ -30,13 +30,13 @@ def main() -> None:
         default=logging.INFO,
     )
 
-    dependencies_parser.set_defaults(func=collect_dependency_data)
+    dependencies_command.set_defaults(func=get_dependencies)
 
-    fetch_launchpad = subparsers.add_parser(
+    launchpad_command = subparsers.add_parser(
         "collect-launchpad-data",
         help="Collect data from launchpad",
     )
-    fetch_launchpad.add_argument(
+    launchpad_command.add_argument(
         "-v",
         "--verbose",
         help="Enable verbose logging",
@@ -45,13 +45,13 @@ def main() -> None:
         const=logging.DEBUG,
         default=logging.INFO,
     )
-    fetch_launchpad.set_defaults(func=collect_launchpad_data)
+    launchpad_command.set_defaults(func=get_launchpad_data)
 
-    fetch_github = subparsers.add_parser(
-        "collect-github-data",
+    issues_command = subparsers.add_parser(
+        "get-issues",
         help="Collect data on open issues from github",
     )
-    fetch_github.add_argument(
+    issues_command.add_argument(
         "-v",
         "--verbose",
         help="Enable verbose logging",
@@ -60,7 +60,7 @@ def main() -> None:
         const=logging.DEBUG,
         default=logging.INFO,
     )
-    fetch_github.set_defaults(func=collect_github_data)
+    issues_command.set_defaults(func=get_issues)
 
     args = parser.parse_args()
     logging.basicConfig(level=args.loglevel, format="%(message)s")

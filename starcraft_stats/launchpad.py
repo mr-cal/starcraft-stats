@@ -23,7 +23,7 @@ from .config import Config
 # pyright: reportIndexIssue=false
 
 
-def collect_launchpad_data(
+def get_launchpad_data(
     parsed_args: argparse.Namespace,
     config: Config,  # noqa: ARG001 (unused argument)
 ) -> None:

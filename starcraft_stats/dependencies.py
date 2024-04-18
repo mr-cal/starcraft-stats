@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 DATA_FILE = Path("html/data/app-deps.csv")
 
 
-def collect_dependency_data(
+def get_dependencies(
     parsed_args: argparse.Namespace,  # noqa: ARG001 (unused argument)
     config: Config,
 ) -> None:

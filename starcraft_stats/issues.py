@@ -9,7 +9,6 @@ from functools import cached_property
 from pathlib import Path
 
 from craft_application.models import CraftBaseModel
-
 from github import Github
 
 from .config import Config
@@ -211,7 +210,7 @@ class GithubProject:
         logger.info(f"Wrote to {self.csv_file}")
 
 
-def collect_github_data(
+def get_issues(
     parsed_args: argparse.Namespace,  # noqa: ARG001 (unused argument)
     config: Config,
 ) -> None:

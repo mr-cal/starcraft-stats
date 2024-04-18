@@ -32,7 +32,7 @@ Data is updated once a day, but you can manually trigger the
 How to update what data is collected
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Update the `starcraft-config.yaml` file.
+Update the ``starcraft-config.yaml`` file.
 
 How to run locally
 ^^^^^^^^^^^^^^^^^^
