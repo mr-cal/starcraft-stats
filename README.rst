@@ -29,16 +29,10 @@ How to update data
 Data is updated once a day, but you can manually trigger the
 ``data-collection`` workflow in GitHub.
 
-How to track another branch's usage of craft libraries
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+How to update what data is collected
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Add a new item to ``starcraft_stats.dependencies.CRAFT_APPLICATION_BRANCHES``.
-
-How to track issues for another project on GitHub
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Add a new item to ``starcraft_stats.github.CRAFT_PROJECTS`` and
-then add the item to ``html/index.js/projects``.
+Update the `starcraft-config.yaml` file.
 
 How to run locally
 ^^^^^^^^^^^^^^^^^^

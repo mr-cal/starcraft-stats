@@ -3,6 +3,7 @@
 import argparse
 import logging
 
+from .config import CONFIG_FILE, Config
 from .dependencies import collect_dependency_data
 from .github import collect_github_data
 from .launchpad import collect_launchpad_data
@@ -63,4 +64,7 @@ def main() -> None:
 
     args = parser.parse_args()
     logging.basicConfig(level=args.loglevel, format="%(message)s")
-    args.func(args)
+
+    config = Config.from_yaml_file(CONFIG_FILE)
+
+    args.func(args, config)

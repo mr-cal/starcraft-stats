@@ -4,12 +4,13 @@ import argparse
 import csv
 import logging
 import subprocess
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict
 
 import requests
 from dparse import filetypes, parse  # type: ignore[import-untyped]
+
+from .config import Config, CraftApplicationBranch
 
 logger = logging.getLogger(__name__)
 
@@ -17,42 +18,9 @@ logger = logging.getLogger(__name__)
 DATA_FILE = Path("html/data/app-deps.csv")
 
 
-@dataclass(frozen=True)
-class CraftApplicationBranch:
-    """Dataclass for a craft application."""
-
-    name: str
-    branch: str
-    owner: str = "canonical"
-
-    def __str__(self) -> str:
-        """Return the application name and branch."""
-        return f"{self.name}/{self.branch}"
-
-
-CRAFT_APPLICATION_BRANCHES = [
-    CraftApplicationBranch("charmcraft", "main"),
-    CraftApplicationBranch("charmcraft", "hotfix/2.5"),
-    CraftApplicationBranch("rockcraft", "main"),
-    CraftApplicationBranch("snapcraft", "main"),
-    CraftApplicationBranch("snapcraft", "hotfix/7.5"),
-    CraftApplicationBranch("snapcraft", "hotfix/8.0"),
-]
-
-
-CRAFT_LIBRARIES = {
-    "craft-application",
-    "craft-archives",
-    "craft-cli",
-    "craft-grammar",
-    "craft-parts",
-    "craft-providers",
-    "craft-store",
-}
-
-
 def collect_dependency_data(
     parsed_args: argparse.Namespace,  # noqa: ARG001 (unused argument)
+    config: Config,
 ) -> None:
     """Fetch craft library requirements for all applications.
 
@@ -66,7 +34,7 @@ def collect_dependency_data(
     """
     library_versions: Dict[str, str] = {}
     # libraries are already installed via project dependencies
-    for library in CRAFT_LIBRARIES:
+    for library in config.craft_libraries:
         logger.debug(f"Collecting version for {library}")
         output = subprocess.check_output(
             ["pip", "show", library, "--disable-pip-version-check"],
@@ -76,21 +44,28 @@ def collect_dependency_data(
         logger.info(f"Parsed version {version} for {library}")
         library_versions[library] = version
 
+    # a mapping of application branches to their requirements
     app_reqs: Dict[CraftApplicationBranch, Dict[str, str]] = {}
-    for app in CRAFT_APPLICATION_BRANCHES:
-        app_reqs[app] = _get_reqs_for_project(app, library_versions)
+
+    # fetch requirements for each application
+    for app in config.application_branches:
+        app_reqs[app] = _get_reqs_for_project(
+            app,
+            library_versions,
+            config.craft_libraries,
+        )
 
     # write data to a csv in a ready-to-display format
     logger.debug(f"Writing data to {DATA_FILE}")
     with Path("html/data/app-deps.csv").open("w", encoding="utf-8") as file:
         writer = csv.writer(file, lineterminator="\n")
-        writer.writerow(["library", "latest version", *CRAFT_APPLICATION_BRANCHES])
-        for library in CRAFT_LIBRARIES:
+        writer.writerow(["library", "latest version", *config.application_branches])
+        for library in config.craft_libraries:
             writer.writerow(
                 [
                     library,
                     library_versions[library],
-                    *[app_reqs[app][library] for app in CRAFT_APPLICATION_BRANCHES],
+                    *[app_reqs[app][library] for app in config.application_branches],
                 ],
             )
     logger.info(f"Wrote to {DATA_FILE}")
@@ -99,6 +74,7 @@ def collect_dependency_data(
 def _get_reqs_for_project(
     app: CraftApplicationBranch,
     library_versions: Dict[str, str],
+    craft_libraries: list[str],
 ) -> Dict[str, str]:
     """Fetch craft library requirements for an application.
 
@@ -124,16 +100,16 @@ def _get_reqs_for_project(
         deps[dep] = str(spec).lstrip("=") if spec else "unknown"
 
     # filter for craft library deps
-    craft_libraries = {lib: deps.get(lib, "not used") for lib in CRAFT_LIBRARIES}
+    libraries = {lib: deps.get(lib, "not used") for lib in craft_libraries}
 
     logger.debug(f"Collected requirements for {app.name}:")
-    for library_name, library_version in craft_libraries.items():
+    for library_name, library_version in libraries.items():
         logger.debug(f"  {library_name}: {library_version}")
 
         # prefix a ✓ or ✗ to the version
         if library_version == library_versions[library_name]:
-            craft_libraries[library_name] = f"{library_version}"
+            libraries[library_name] = f"{library_version}"
         elif library_version not in ["unknown", "not used"]:
-            craft_libraries[library_name] = f"✗ {library_version}"
+            libraries[library_name] = f"✗ {library_version}"
 
-    return craft_libraries
+    return libraries

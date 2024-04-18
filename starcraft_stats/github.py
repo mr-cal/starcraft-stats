@@ -12,6 +12,8 @@ from craft_application.models import CraftBaseModel
 
 from github import Github
 
+from .config import Config
+
 logger = logging.getLogger(__name__)
 
 
@@ -209,23 +211,9 @@ class GithubProject:
         logger.info(f"Wrote to {self.csv_file}")
 
 
-CRAFT_PROJECTS = [
-    GithubProject("charmcraft"),
-    GithubProject("craft-application"),
-    GithubProject("craft-archives"),
-    GithubProject("craft-cli"),
-    GithubProject("craft-grammar"),
-    GithubProject("craft-parts"),
-    GithubProject("craft-providers"),
-    GithubProject("craft-store"),
-    GithubProject("rockcraft"),
-    GithubProject("snapcraft"),
-    GithubProject("starbase"),
-]
-
-
 def collect_github_data(
     parsed_args: argparse.Namespace,  # noqa: ARG001 (unused argument)
+    config: Config,
 ) -> None:
     """Collect data about issues and PRs for a set of github projects.
 
@@ -239,14 +227,15 @@ def collect_github_data(
     all_projects = GithubProject("all-projects")
 
     # iterate through all projects
-    for project in CRAFT_PROJECTS:
-        project.update_data_from_github(github_api)
-        project.save_data_to_file()
-        project.generate_csv()
+    for project in config.craft_projects:
+        github_project = GithubProject(project)
+        github_project.update_data_from_github(github_api)
+        github_project.save_data_to_file()
+        github_project.generate_csv()
 
-        for issue_number in project.data.issues:
-            all_projects.data.issues[f"{project.name}-{str(issue_number)}"] = (
-                project.data.issues[issue_number]
+        for issue_number in github_project.data.issues:
+            all_projects.data.issues[f"{github_project.name}-{str(issue_number)}"] = (
+                github_project.data.issues[issue_number]
             )
 
     # generate csv and save data for all projects

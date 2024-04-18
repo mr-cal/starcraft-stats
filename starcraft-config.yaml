@@ -1,0 +1,35 @@
+craft-applications:
+  - name: charmcraft
+    branches:
+      - main
+      - hotfix/2.6
+  - name: rockcraft
+    branches:
+      - main
+  - name: snapcraft
+    branches:
+      - main
+      - hotfix/7.5
+      - hotfix/8.0
+
+craft-libraries:
+  - craft-application
+  - craft-archives
+  - craft-cli
+  - craft-grammar
+  - craft-parts
+  - craft-providers
+  - craft-store
+
+craft-projects:
+  - charmcraft
+  - craft-application
+  - craft-archives
+  - craft-cli
+  - craft-grammar
+  - craft-parts
+  - craft-providers
+  - craft-store
+  - rockcraft
+  - snapcraft
+  - starbase
