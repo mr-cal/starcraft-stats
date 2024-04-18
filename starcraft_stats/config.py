@@ -15,7 +15,7 @@ class CraftApplicationBranch:
 
     name: str
     branch: str
-    owner: str = "canonical"
+    owner: str
 
     def __str__(self) -> str:
         """Return the application name and branch."""
@@ -30,6 +30,9 @@ class CraftApplication(CraftBaseModel):
 
     branches: list[str]
     """A list of all branches of interest."""
+
+    owner: str = "canonical"
+    """Owner of the application in github."""
 
 
 class Config(CraftBaseModel):
@@ -51,7 +54,7 @@ class Config(CraftBaseModel):
 
         for app in self.craft_applications:
             all_branches.extend(
-                [CraftApplicationBranch(app.name, branch) for branch in app.branches],
+                [CraftApplicationBranch(app.name, branch, app.owner) for branch in app.branches],
             )
 
         return all_branches

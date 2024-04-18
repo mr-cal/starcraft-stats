@@ -10,6 +10,7 @@ dependencies = [
     "craft-providers",
     "craft-store",
     "dparse",
+    "gitpython",
     "launchpadlib",
     # pydantic is implicitly pinned to 1.x via the craft libraries :(
     "pydantic",

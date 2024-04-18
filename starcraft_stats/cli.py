@@ -7,6 +7,7 @@ from .config import CONFIG_FILE, Config
 from .dependencies import get_dependencies
 from .issues import get_issues
 from .launchpad import get_launchpad_data
+from .releases import get_releases
 
 
 def main() -> None:
@@ -61,6 +62,21 @@ def main() -> None:
         default=logging.INFO,
     )
     issues_command.set_defaults(func=get_issues)
+
+    releases_command = subparsers.add_parser(
+        "get-releases",
+        help="Collect tag and release data for git repositories",
+    )
+    releases_command.add_argument(
+        "-v",
+        "--verbose",
+        help="Enable verbose logging",
+        action="store_const",
+        dest="loglevel",
+        const=logging.DEBUG,
+        default=logging.INFO,
+    )
+    releases_command.set_defaults(func=get_releases)
 
     args = parser.parse_args()
     logging.basicConfig(level=args.loglevel, format="%(message)s")
