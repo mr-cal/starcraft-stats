@@ -5,7 +5,6 @@ import csv
 import logging
 import subprocess
 from pathlib import Path
-from typing import Dict
 
 import requests
 from dparse import filetypes, parse  # type: ignore[import-untyped]
@@ -32,7 +31,7 @@ def collect_dependency_data(
     | ...       | ...                      | ...           | ... |
 
     """
-    library_versions: Dict[str, str] = {}
+    library_versions: dict[str, str] = {}
     # libraries are already installed via project dependencies
     for library in config.craft_libraries:
         logger.debug(f"Collecting version for {library}")
@@ -45,7 +44,7 @@ def collect_dependency_data(
         library_versions[library] = version
 
     # a mapping of application branches to their requirements
-    app_reqs: Dict[CraftApplicationBranch, Dict[str, str]] = {}
+    app_reqs: dict[CraftApplicationBranch, dict[str, str]] = {}
 
     # fetch requirements for each application
     for app in config.application_branches:
@@ -73,9 +72,9 @@ def collect_dependency_data(
 
 def _get_reqs_for_project(
     app: CraftApplicationBranch,
-    library_versions: Dict[str, str],
+    library_versions: dict[str, str],
     craft_libraries: list[str],
-) -> Dict[str, str]:
+) -> dict[str, str]:
     """Fetch craft library requirements for an application.
 
     :returns: A list of library names and their version.
@@ -91,7 +90,7 @@ def _get_reqs_for_project(
         raise RuntimeError(f"Could not fetch requirements.txt from {url}")
 
     df = parse(reqs_request.text, file_type=filetypes.requirements_txt)
-    deps: Dict[str, str] = {
+    deps: dict[str, str] = {
         dep.name: dep.specs for dep in df.dependencies  # type: ignore[reportUnknownVariableType,reportUnknownMemberType]
     }
 
