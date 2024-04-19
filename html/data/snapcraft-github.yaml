@@ -534,7 +534,7 @@ issues:
   4562:
     type: issue
     date-opened: 2024-02-05 23:10:25+00:00
-    date-closed: null
+    date-closed: 2024-04-19 18:51:28+00:00
   4561:
     type: pr
     date-opened: 2024-02-05 19:47:35+00:00
@@ -634,7 +634,7 @@ issues:
   4537:
     type: issue
     date-opened: 2024-01-24 15:15:47+00:00
-    date-closed: null
+    date-closed: 2024-04-19 15:31:12+00:00
   4536:
     type: pr
     date-opened: 2024-01-24 14:35:19+00:00
@@ -902,11 +902,11 @@ issues:
   4470:
     type: issue
     date-opened: 2023-12-01 22:28:40+00:00
-    date-closed: null
+    date-closed: 2024-04-19 18:46:49+00:00
   4469:
     type: issue
     date-opened: 2023-12-01 22:19:42+00:00
-    date-closed: null
+    date-closed: 2024-04-19 18:48:29+00:00
   4468:
     type: issue
     date-opened: 2023-12-01 22:18:36+00:00
@@ -18774,7 +18774,7 @@ issues:
   4718:
     type: issue
     date-opened: 2024-04-04 22:10:47+00:00
-    date-closed: null
+    date-closed: 2024-04-19 17:28:23+00:00
   4717:
     type: pr
     date-opened: 2024-04-04 21:58:04+00:00
@@ -18946,4 +18946,8 @@ issues:
   4742:
     type: issue
     date-opened: 2024-04-18 12:32:17+00:00
+    date-closed: null
+  4747:
+    type: issue
+    date-opened: 2024-04-19 12:51:58+00:00
     date-closed: null
