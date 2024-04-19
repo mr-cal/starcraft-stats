@@ -26,6 +26,7 @@ jobs:
         run: |
           starcraft-stats get-dependencies
           starcraft-stats get-issues
+          starcraft-stats get-releases
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

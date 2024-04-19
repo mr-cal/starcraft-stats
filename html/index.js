@@ -1,54 +1,46 @@
-function snapcraftDeps(data) {
-    console.log(data)
-    var div = document.getElementById("app-deps");
-    var table = document.createElement('table');
-    var header_group = document.createElement("thead");
-    var body_group = document.createElement("tbody");
+// Create a chart from CSV data
+// Data will be inserted into the div with the given id
+function chartData(data, id) {
+  var div = document.getElementById(id);
+  var table = document.createElement('table');
+  var header_group = document.createElement("thead");
+  var body_group = document.createElement("tbody");
 
-    var is_header = true;
-    var row_name = "th";
+  var is_header = true;
+  var row_name = "th";
 
-    // Iterate through the parsed data
-    data.forEach(function(rowData) {
-      // Create a row for each row of data
-      if (rowData[0] === null) {
-        return; // Skips the current iteration
-      }
-      var row = document.createElement('tr');
+  // Iterate through the parsed data
+  data.forEach(function(rowData) {
+    // Create a row for each row of data
+    if (rowData[0] === null) {
+      return; // Skips the current iteration
+    }
+    var row = document.createElement('tr');
 
-      // Iterate through the row's data and create cells
-      rowData.forEach(function(cellData) {
-        var cell = document.createElement(row_name);
-        cell.setAttribute("class", "u-align--right")
-        var textNode = document.createTextNode(cellData);
-        cell.appendChild(textNode);
-        row.appendChild(cell);
-      });
-
-      // Add the row to the table
-      if (is_header) {
-        header_group.appendChild(row);
-        is_header = false;
-        row_name = "td";
-      } else {
-        body_group.appendChild(row);
-      }
-
+    // Iterate through the row's data and create cells
+    rowData.forEach(function(cellData) {
+      var cell = document.createElement(row_name);
+      cell.setAttribute("class", "u-align--right")
+      var textNode = document.createTextNode(cellData);
+      cell.appendChild(textNode);
+      row.appendChild(cell);
     });
-    table.appendChild(header_group);
-    table.appendChild(body_group);
-    div.appendChild(table);
+
+    // Add the row to the table
+    if (is_header) {
+      header_group.appendChild(row);
+      is_header = false;
+      row_name = "td";
+    } else {
+      body_group.appendChild(row);
+    }
+
+  });
+  table.appendChild(header_group);
+  table.appendChild(body_group);
+  div.appendChild(table);
+
 }
-
-Papa.parse("data/app-deps.csv", {
-  download: true,
-  dynamicTyping: true,
-  header: false,
-  complete: function (data) {
-    snapcraftDeps(data.data)
-  }
-});
-
 
 
 function graphIssues(project, data) {
@@ -65,7 +57,7 @@ function graphIssues(project, data) {
     </div>
   */
 
-  let previousElement = document.getElementById("libs-and-apps");
+  let previousElement = document.getElementById("releases-and-commits");
   let chartDiv = document.createElement("div");
   chartDiv.setAttribute("class", "row--25-75");
   let col1 = document.createElement("div");
@@ -151,6 +143,28 @@ let projects = [
 ];
 
 
+Papa.parse("data/app-deps.csv", {
+  download: true,
+  dynamicTyping: true,
+  header: false,
+  complete: function (data) {
+    chartData(data.data, "libs-and-apps-table")
+  }
+});
+
+
+Papa.parse("data/releases.csv", {
+  download: true,
+  dynamicTyping: true,
+  header: false,
+  complete: function (data) {
+    chartData(data.data, "releases-and-commits-table")
+  }
+});
+
+
+// todo: sleep for a 0.1 seconds or so between loading each graph
+// because they seem to get placed out-of-order
 projects.reverse().forEach(function (project) {
   Papa.parse(`data/${project}-github.csv`, {
     download: true,
