@@ -1158,7 +1158,7 @@ issues:
   302:
     type: pr
     date-opened: 2024-04-09 18:23:17+00:00
-    date-closed: null
+    date-closed: 2024-04-18 19:31:27+00:00
   301:
     type: issue
     date-opened: 2024-04-05 16:21:49+00:00
@@ -1174,7 +1174,7 @@ issues:
   298:
     type: issue
     date-opened: 2024-04-04 19:28:34+00:00
-    date-closed: null
+    date-closed: 2024-04-18 19:31:29+00:00
   297:
     type: issue
     date-opened: 2024-04-04 14:26:43+00:00
@@ -1239,3 +1239,11 @@ issues:
     type: pr
     date-opened: 2024-04-17 17:53:03+00:00
     date-closed: 2024-04-17 18:59:54+00:00
+  313:
+    type: issue
+    date-opened: 2024-04-18 13:51:41+00:00
+    date-closed: null
+  312:
+    type: pr
+    date-opened: 2024-04-18 13:40:45+00:00
+    date-closed: null

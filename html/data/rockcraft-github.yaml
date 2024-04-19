@@ -2134,7 +2134,7 @@ issues:
   534:
     type: pr
     date-opened: 2024-04-11 06:50:56+00:00
-    date-closed: null
+    date-closed: 2024-04-18 16:31:46+00:00
   550:
     type: pr
     date-opened: 2024-04-12 23:30:06+00:00
@@ -2178,7 +2178,7 @@ issues:
   540:
     type: pr
     date-opened: 2024-04-12 20:06:25+00:00
-    date-closed: null
+    date-closed: 2024-04-18 23:27:47+00:00
   539:
     type: pr
     date-opened: 2024-04-12 20:06:22+00:00
@@ -2203,3 +2203,15 @@ issues:
     type: pr
     date-opened: 2024-04-16 19:09:41+00:00
     date-closed: 2024-04-17 11:26:58+00:00
+  555:
+    type: issue
+    date-opened: 2024-04-19 04:20:17+00:00
+    date-closed: null
+  554:
+    type: issue
+    date-opened: 2024-04-18 23:31:12+00:00
+    date-closed: null
+  553:
+    type: issue
+    date-opened: 2024-04-18 21:31:08+00:00
+    date-closed: null

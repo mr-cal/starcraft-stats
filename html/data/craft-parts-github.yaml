@@ -2810,7 +2810,7 @@ issues:
   703:
     type: pr
     date-opened: 2024-04-12 19:40:22+00:00
-    date-closed: null
+    date-closed: 2024-04-18 22:21:53+00:00
   702:
     type: pr
     date-opened: 2024-04-12 19:33:29+00:00
@@ -2835,3 +2835,11 @@ issues:
     type: pr
     date-opened: 2024-04-17 15:31:19+00:00
     date-closed: null
+  711:
+    type: pr
+    date-opened: 2024-04-18 22:54:37+00:00
+    date-closed: null
+  710:
+    type: pr
+    date-opened: 2024-04-18 13:50:57+00:00
+    date-closed: 2024-04-18 17:42:29+00:00
