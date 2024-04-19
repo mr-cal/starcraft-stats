@@ -34,7 +34,7 @@ def main() -> None:
     dependencies_command.set_defaults(func=get_dependencies)
 
     launchpad_command = subparsers.add_parser(
-        "collect-launchpad-data",
+        "get-launchpad-data",
         help="Collect data from launchpad",
     )
     launchpad_command.add_argument(
