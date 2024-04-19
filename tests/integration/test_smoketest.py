@@ -4,5 +4,5 @@ from starcraft_stats import cli
 
 
 def test_smoketest(mocker):
-    mocker.patch.object(sys, "argv", ["starcraft-stats", "collect-github-data"])
+    mocker.patch.object(sys, "argv", ["starcraft-stats", "get-releases"])
     cli.main()

@@ -54,7 +54,10 @@ class Config(CraftBaseModel):
 
         for app in self.craft_applications:
             all_branches.extend(
-                [CraftApplicationBranch(app.name, branch, app.owner) for branch in app.branches],
+                [
+                    CraftApplicationBranch(app.name, branch, app.owner)
+                    for branch in app.branches
+                ],
             )
 
         return all_branches

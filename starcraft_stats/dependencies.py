@@ -56,7 +56,7 @@ def get_dependencies(
 
     # write data to a csv in a ready-to-display format
     logger.debug(f"Writing data to {DATA_FILE}")
-    with Path("html/data/app-deps.csv").open("w", encoding="utf-8") as file:
+    with DATA_FILE.open("w", encoding="utf-8") as file:
         writer = csv.writer(file, lineterminator="\n")
         writer.writerow(["library", "latest version", *config.application_branches])
         for library in config.craft_libraries:
