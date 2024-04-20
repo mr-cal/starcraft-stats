@@ -109,6 +109,6 @@ def _get_reqs_for_project(
         if library_version == library_versions[library_name]:
             libraries[library_name] = f"{library_version}"
         elif library_version not in ["unknown", "not used"]:
-            libraries[library_name] = f"✗ {library_version}"
+            libraries[library_name] = f"!{library_version}"
 
     return libraries

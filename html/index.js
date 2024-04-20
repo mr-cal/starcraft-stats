@@ -20,8 +20,17 @@ function chartData(data, id) {
     // Iterate through the row's data and create cells
     rowData.forEach(function(cellData) {
       var cell = document.createElement(row_name);
-      cell.setAttribute("class", "u-align--right")
-      var textNode = document.createTextNode(cellData);
+      let text = cellData.toString()
+      let attr = "u-align--right"
+      if (text.startsWith("!")) {
+        attr += " outdated"
+        text = text.replace("!", "")
+      } else if (text == "not used") {
+        attr += " not-used"
+      }
+      cell.setAttribute("class", attr)
+
+      var textNode = document.createTextNode(text);
       cell.appendChild(textNode);
       row.appendChild(cell);
     });

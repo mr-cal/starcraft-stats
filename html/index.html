@@ -6,6 +6,11 @@
   <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.js"></script>
   <script type="module" src="index.js"></script>
+  <style>
+    .outdated { color: #d00000; }
+    .outdated:before { content: "\2717\a0"; }
+    .not-used { color: gray; }
+  </style>
 </head>
 
 <body class="is-paper">
@@ -19,7 +24,7 @@
     </div>
     <div class="row--25-75" id="libs-and-apps">
       <div class="col">
-        <p class="p-muted-heading">Libraries & Applications</p>
+        <p class="p-muted-heading">Libraries &amp; Applications</p>
       </div>
       <div class="col">
         <div id="libs-and-apps-table" class="p-section"></div>
@@ -28,7 +33,7 @@
     </div>
     <div class="row--25-75" id="releases-and-commits">
       <div class="col">
-        <p class="p-muted-heading">Releases & Commits</p>
+        <p class="p-muted-heading">Releases &amp; Commits</p>
       </div>
       <div class="col">
         <div id="releases-and-commits-table" class="p-section"></div>
