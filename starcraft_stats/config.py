@@ -3,6 +3,7 @@
 from dataclasses import dataclass
 from pathlib import Path
 
+import git
 from craft_application.models import CraftBaseModel
 
 # you better run this tool from the project root
@@ -53,11 +54,23 @@ class Config(CraftBaseModel):
         all_branches: list[CraftApplicationBranch] = []
 
         for app in self.craft_applications:
-            all_branches.extend(
-                [
-                    CraftApplicationBranch(app.name, branch, app.owner)
-                    for branch in app.branches
-                ],
-            )
+            for branch_regex in app.branches:
+                # fetch branch heads from the remote
+                raw_head_data: str = git.cmd.Git().ls_remote(  # type: ignore[reportUnknownVariableType, reportUnknownMemberType]
+                    "--heads",
+                    f"https://github.com/{app.owner}/{app.name}",
+                    branch_regex,
+                )
+                # convert head data into a list of branch names
+                branches: list[str] = [  # type: ignore[reportUnknownVariableType]
+                    item.split("\t")[1][11:] for item in raw_head_data.split("\n")  # type: ignore[reportUnknownVariableType]
+                ]
+
+                all_branches.extend(
+                    [
+                        CraftApplicationBranch(app.name, branch, app.owner)
+                        for branch in branches
+                    ],
+                )
 
         return all_branches

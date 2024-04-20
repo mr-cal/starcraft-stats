@@ -31,32 +31,37 @@ def get_releases(
     config: Config,
 ) -> None:
     """Get tag and release data for a git repositories."""
-    apps = config.craft_applications
     branch_infos: list[BranchInfo] = []
 
-    # clone a git repo in a temporary directory
-    for app in apps:
+    # yes this clones a new repo for each branch but
+    # pre-optimization is the cause of much suffering
+    for app_branch in config.application_branches:
         with tempfile.TemporaryDirectory() as temp_dir:
-            url = f"https://github.com/{app.owner}/{app.name}.git"
+            url = f"https://github.com/{app_branch.owner}/{app_branch.name}.git"
 
-            print(f"Cloning {app} to {temp_dir}")
+            logger.debug(f"Cloning {app_branch.name} to {temp_dir}")
             repo = git.Repo.clone_from(url, temp_dir)
-            for branch in app.branches:
-                repo.git.checkout(branch)
-                tag = repo.git.describe(
-                    "--abbrev=0",
-                    "--tags",
-                    "--match",
-                    "[0-9]*.[0-9]*.[0-9]*",
-                )
-                commits_since_tag = repo.git.rev_list("--count", "HEAD", f"^{tag}")
+            logger.info(f"Cloned {app_branch.name} to {temp_dir}")
+            repo.git.checkout(app_branch.branch)
+            tag = repo.git.describe(
+                "--abbrev=0",
+                "--tags",
+                "--match",
+                "[0-9]*.[0-9]*.[0-9]*",
+            )
+            commits_since_tag = repo.git.rev_list("--count", "HEAD", f"^{tag}")
 
-                print(
-                    f"branch: {branch}, latest tag: {tag}, commits since tag: {commits_since_tag}",
-                )
-                branch_infos.append(
-                    BranchInfo(app.name, branch, tag, int(commits_since_tag)),
-                )
+            logger.debug(
+                f"branch: {app_branch.branch}, latest tag: {tag}, commits since tag: {commits_since_tag}",
+            )
+            branch_infos.append(
+                BranchInfo(
+                    app_branch.name,
+                    app_branch.branch,
+                    tag,
+                    int(commits_since_tag),
+                ),
+            )
 
     # write data to a csv in a ready-to-display format
     logger.debug(f"Writing data to {DATA_FILE}")

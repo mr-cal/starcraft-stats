@@ -51,8 +51,7 @@ token here in your `settings page`_.
 TODO
 ====
 
-☐ track if releases are up-to-date
-(how many commits have happen since a branch's last tag?)
+☐ graph mean age of issues
 
 
 Contributing
