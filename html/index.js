@@ -1,5 +1,8 @@
-// Create a chart from CSV data
-// Data will be inserted into the div with the given id
+/**
+ * Create a chart from CSV data
+ * @param {*} data a 2D array of data to chart where the first row is contains the headers
+ * @param {*} id the id of the HTML div to insert the chart into
+ */
 function chartData(data, id) {
   var div = document.getElementById(id);
   var table = document.createElement('table');
@@ -52,6 +55,11 @@ function chartData(data, id) {
 }
 
 
+/**
+ * Create a graph of open issues for a project
+ * @param {*} project the name of the project
+ * @param {*} data the data to graph
+ */
 function graphIssues(project, data) {
   /*
     A bunch of javascript to create the following HTML:
@@ -88,7 +96,7 @@ function graphIssues(project, data) {
   previousElement.parentNode.insertBefore(chartDiv, previousElement.nextSibling)
   const ctx = document.getElementById(`${project}-issues`);
 
-  // load data from csv file into arrays
+  // load data into arrays
   var dates = data.map(function (d) {
     return d.date;
   });
@@ -152,6 +160,7 @@ let projects = [
 ];
 
 
+/* Graph the dependencies */
 Papa.parse("data/app-deps.csv", {
   download: true,
   dynamicTyping: true,
@@ -162,6 +171,7 @@ Papa.parse("data/app-deps.csv", {
 });
 
 
+/* Graph the releases and commits */
 Papa.parse("data/releases.csv", {
   download: true,
   dynamicTyping: true,
@@ -172,8 +182,7 @@ Papa.parse("data/releases.csv", {
 });
 
 
-// todo: sleep for a 0.1 seconds or so between loading each graph
-// because they seem to get placed out-of-order
+/* Chart the open issues for each project */
 projects.reverse().forEach(function (project) {
   Papa.parse(`data/${project}-github.csv`, {
     download: true,
@@ -183,4 +192,7 @@ projects.reverse().forEach(function (project) {
       graphIssues(project, data.data)
     }
   });
+  setTimeout(() => {
+    console.log('Waiting 100ms to load next graph');
+  }, 100);
 });
