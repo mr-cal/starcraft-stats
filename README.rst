@@ -16,7 +16,7 @@ Design
 This project contains a few parts:
 
 * A Python command-line application that retrieves, processes, and stores data
-  in a CSV file.
+  in a set of CSV files.
 * A static webpage that loads and displays the CSV data as tables and charts.
 * A nightly cron job to refresh data
 
@@ -48,6 +48,14 @@ token here in your `settings page`_.
     pip install -e .
     starcraft-stats --help
 
+Web browsers will not run Javascript from a local webpage.
+The easiest way to view the webpage locally is to run a web server:
+
+#. Install Visual Studio Code
+#. Install the Live Server extension
+#. Open the ``html`` directory in Visual Studio Code
+#. Right-click on ``index.html`` and select "Open with Live Server"
+
 TODO
 ====
 
@@ -58,8 +66,6 @@ Contributing
 ============
 
 Contributions are encouraged!
-
-
 
 .. |test-status-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml/badge.svg?branch=main
 .. _test-status-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml
