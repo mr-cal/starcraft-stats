@@ -2,18 +2,16 @@
 
 import argparse
 import csv
-import logging
 import os
 import pathlib
 from datetime import datetime, timedelta, timezone
 from functools import cached_property
 
 from craft_application.models import CraftBaseModel
+from craft_cli import BaseCommand, emit
 from github import Github
 
-from .config import Config
-
-logger = logging.getLogger(__name__)
+from .config import CONFIG_FILE, Config
 
 
 class GithubIssue(CraftBaseModel):
@@ -95,7 +93,7 @@ class GithubProject:
 
         if not self.data_file.exists():
             self.data_file.write_text("issues:")
-            logger.info(f"Created {self.data_file}")
+            emit.message(f"Created {self.data_file}")
 
         data: GithubIssues = GithubIssues.from_yaml_file(self.data_file)
         if not data:
@@ -114,7 +112,7 @@ class GithubProject:
 
     def update_data_from_github(self, github_api: Github) -> None:
         """Update a local data about issues from github."""
-        logger.info(f"Collecting data for {self.name}")
+        emit.progress(f"Collecting data for {self.name}", permanent=True)
         issues = github_api.get_repo(f"{self.owner}/{self.name}").get_issues(
             state="all",
         )
@@ -125,16 +123,16 @@ class GithubProject:
                 date_opened=issue.created_at,
                 date_closed=issue.closed_at,
             )
-            logger.debug(
+            emit.debug(
                 f"Collected issue {issue.number} {self.data.issues[issue.number]}",
             )
 
     def save_data_to_file(self) -> None:
         """Write data to a local file."""
-        logger.debug(f"Writing data to {self.data_file}")
+        emit.debug(f"Writing data to {self.data_file}")
 
         self.data.to_yaml_file(self.data_file)
-        logger.info(f"Wrote to {self.data_file}")
+        emit.message(f"Wrote to {self.data_file}")
 
     def generate_csv(self) -> None:
         """Generate a CSV file from a GithubIssues object.
@@ -159,7 +157,7 @@ class GithubProject:
         end_date = datetime.now(tz=timezone.utc)
 
         # iterate through each day from start_date to end_date
-        logger.debug(f"Counting open issues and age for {self.name}")
+        emit.debug(f"Counting open issues and age for {self.name}")
         for date in [
             start_date + timedelta(days=i) for i in range((end_date - start_date).days)
         ]:
@@ -178,7 +176,7 @@ class GithubProject:
                 ),
             )
 
-        logger.debug(f"Calculating rolling averages for {self.name}")
+        emit.debug(f"Calculating rolling averages for {self.name}")
         window_size = 4
         for entry in intermediate_data.data:
             # compute rolling averages
@@ -194,7 +192,7 @@ class GithubProject:
             ) // len(window_data)
             entry.open_issues_avg = average_open_issues
 
-        logger.debug(f"Writing data to {self.csv_file}")
+        emit.debug(f"Writing data to {self.csv_file}")
         with self.csv_file.open("w", encoding="utf-8") as file:
             writer = csv.writer(file, lineterminator="\n")
             writer.writerow(["date", "issues", "issues_avg", "age"])
@@ -207,39 +205,7 @@ class GithubProject:
                         entry.mean_age,
                     ],
                 )
-        logger.info(f"Wrote to {self.csv_file}")
-
-
-def get_issues(
-    parsed_args: argparse.Namespace,  # noqa: ARG001 (unused argument)
-    config: Config,
-) -> None:
-    """Collect data about issues and PRs for a set of github projects.
-
-    Intermediate data about each issue in a project is stored in a yaml file.
-    Then, this data is processed into a CSV file for visualization.
-    """
-    github_token = load_github_token()
-    github_api = Github(github_token)
-
-    # pseudo-project to aggregate data for all projects
-    all_projects = GithubProject("all-projects")
-
-    # iterate through all projects
-    for project in config.craft_projects:
-        github_project = GithubProject(project)
-        github_project.update_data_from_github(github_api)
-        github_project.save_data_to_file()
-        github_project.generate_csv()
-
-        for issue_number in github_project.data.issues:
-            all_projects.data.issues[f"{github_project.name}-{str(issue_number)}"] = (
-                github_project.data.issues[issue_number]
-            )
-
-    # generate csv and save data for all projects
-    all_projects.generate_csv()
-    all_projects.save_data_to_file()
+        emit.message(f"Wrote to {self.csv_file}")
 
 
 def load_github_token() -> str:
@@ -251,7 +217,7 @@ def load_github_token() -> str:
     """
     token = os.getenv("STARCRAFT_GITHUB_TOKEN")
     if token:
-        logger.debug("Loaded STARCRAFT_GITHUB_TOKEN from environment")
+        emit.debug("Loaded STARCRAFT_GITHUB_TOKEN from environment")
         return token
 
     token = os.getenv("GITHUB_TOKEN")
@@ -261,6 +227,50 @@ def load_github_token() -> str:
             "variable GITHUB_TOKEN is not set",
         )
     return token
+
+
+class GetIssuesCommand(BaseCommand):
+    """Collect data about issues and PRs for a set of github projects.
+
+    Intermediate data about each issue in a project is stored in a yaml file.
+    Then, this data is processed into a CSV file for visualization.
+    """
+
+    name = "get-issues"
+    help_msg = "Collect data on open issues from github"
+    overview = "Collect data on open issues from github"
+    common = True
+
+    def run(
+        self,
+        parsed_args: argparse.Namespace,  # noqa: ARG002 (Unused method argument)
+    ) -> None:
+        """Collect data on open issues from github.
+
+        :param parsed_args: parsed command line arguments
+        """
+        config = Config.from_yaml_file(CONFIG_FILE)
+        github_token = load_github_token()
+        github_api = Github(github_token)
+
+        # pseudo-project to aggregate data for all projects
+        all_projects = GithubProject("all-projects")
+
+        # iterate through all projects
+        for project in config.craft_projects:
+            github_project = GithubProject(project)
+            github_project.update_data_from_github(github_api)
+            github_project.save_data_to_file()
+            github_project.generate_csv()
+
+            for issue_number in github_project.data.issues:
+                all_projects.data.issues[
+                    f"{github_project.name}-{str(issue_number)}"
+                ] = github_project.data.issues[issue_number]
+
+        # generate csv and save data for all projects
+        all_projects.generate_csv()
+        all_projects.save_data_to_file()
 
 
 def get_median_age(dates: list[datetime] | None, date: datetime) -> int | None:

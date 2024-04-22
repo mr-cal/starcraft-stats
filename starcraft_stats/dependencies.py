@@ -2,72 +2,83 @@
 
 import argparse
 import csv
-import logging
 import pathlib
 import subprocess
 
 import requests
+from craft_cli import BaseCommand, emit
 from dparse import filetypes, parse  # type: ignore[import-untyped]
 
-from .config import Config, CraftApplicationBranch
-
-logger = logging.getLogger(__name__)
-
+from .config import CONFIG_FILE, Config, CraftApplicationBranch
 
 DATA_FILE = pathlib.Path("html/data/app-deps.csv")
 
 
-def get_dependencies(
-    parsed_args: argparse.Namespace,  # noqa: ARG001 (unused argument)
-    config: Config,
-) -> None:
-    """Fetch craft library requirements for all applications.
+class GetDependenciesCommand(BaseCommand):
+    """Get craft library requirements for all applications."""
 
-    Data is stored in a CSV formatted as:
+    name = "get-dependencies"
+    help_msg = "Collect library usage for *craft applications"
+    overview = "Collect library usage for *craft applications"
+    common = True
 
-    | library   | library's latest version | application 1 | ... |
-    | --------- | -------------------------| ------------- | ... |
-    | library 1 | 1.2.3                    | 1.2.3         | ... |
-    | ...       | ...                      | ...           | ... |
+    def run(
+        self,
+        parsed_args: argparse.Namespace,  # noqa: ARG002 (Unused method argument)
+    ) -> None:
+        """Fetch craft library requirements for all applications.
 
-    """
-    library_versions: dict[str, str] = {}
-    # libraries are already installed via project dependencies
-    for library in config.craft_libraries:
-        logger.debug(f"Collecting version for {library}")
-        output = subprocess.check_output(
-            ["pip", "show", library, "--disable-pip-version-check"],
-        )
-        # get version from output
-        version = output.decode("utf-8").split("\n")[1].split(": ")[1]
-        logger.info(f"Parsed version {version} for {library}")
-        library_versions[library] = version
+        Data is stored in a CSV formatted as:
 
-    # a mapping of application branches to their requirements
-    app_reqs: dict[CraftApplicationBranch, dict[str, str]] = {}
+        | library   | library's latest version | application 1 | ... |
+        | --------- | -------------------------| ------------- | ... |
+        | library 1 | 1.2.3                    | 1.2.3         | ... |
+        | ...       | ...                      | ...           | ... |
 
-    # fetch requirements for each application
-    for app in config.application_branches:
-        app_reqs[app] = _get_reqs_for_project(
-            app,
-            library_versions,
-            config.craft_libraries,
-        )
+        :param parsed_args: parsed command line arguments
+        """
+        config = Config.from_yaml_file(CONFIG_FILE)
 
-    # write data to a csv in a ready-to-display format
-    logger.debug(f"Writing data to {DATA_FILE}")
-    with DATA_FILE.open("w", encoding="utf-8") as file:
-        writer = csv.writer(file, lineterminator="\n")
-        writer.writerow(["library", "latest version", *config.application_branches])
+        library_versions: dict[str, str] = {}
+        # libraries are already installed via project dependencies
         for library in config.craft_libraries:
-            writer.writerow(
-                [
-                    library,
-                    library_versions[library],
-                    *[app_reqs[app][library] for app in config.application_branches],
-                ],
+            emit.debug(f"Collecting version for {library}")
+            output = subprocess.check_output(
+                ["pip", "show", library, "--disable-pip-version-check"],
             )
-    logger.info(f"Wrote to {DATA_FILE}")
+            # get version from output
+            version = output.decode("utf-8").split("\n")[1].split(": ")[1]
+            emit.message(f"Parsed version {version} for {library}")
+            library_versions[library] = version
+
+        # a mapping of application branches to their requirements
+        app_reqs: dict[CraftApplicationBranch, dict[str, str]] = {}
+
+        # fetch requirements for each application
+        for app in config.application_branches:
+            app_reqs[app] = _get_reqs_for_project(
+                app,
+                library_versions,
+                config.craft_libraries,
+            )
+
+        # write data to a csv in a ready-to-display format
+        emit.debug(f"Writing data to {DATA_FILE}")
+        with DATA_FILE.open("w", encoding="utf-8") as file:
+            writer = csv.writer(file, lineterminator="\n")
+            writer.writerow(["library", "latest version", *config.application_branches])
+            for library in config.craft_libraries:
+                writer.writerow(
+                    [
+                        library,
+                        library_versions[library],
+                        *[
+                            app_reqs[app][library]
+                            for app in config.application_branches
+                        ],
+                    ],
+                )
+        emit.message(f"Wrote to {DATA_FILE}")
 
 
 def _get_reqs_for_project(
@@ -83,7 +94,7 @@ def _get_reqs_for_project(
         f"https://raw.githubusercontent.com/{app.owner}/{app.name}/"
         f"{app.branch}/requirements.txt"
     )
-    logger.debug(f"Fetching requirements for {app.name} from {url}")
+    emit.debug(f"Fetching requirements for {app.name} from {url}")
     reqs_request = requests.get(url, timeout=30)
 
     if reqs_request.status_code != 200:  # noqa: PLR2004
@@ -101,9 +112,9 @@ def _get_reqs_for_project(
     # filter for craft library deps
     libraries = {lib: deps.get(lib, "not used") for lib in craft_libraries}
 
-    logger.debug(f"Collected requirements for {app.name}:")
+    emit.debug(f"Collected requirements for {app.name}:")
     for library_name, library_version in libraries.items():
-        logger.debug(f"  {library_name}: {library_version}")
+        emit.debug(f"  {library_name}: {library_version}")
 
         # prefix a ✓ or ✗ to the version
         if library_version == library_versions[library_name]:
