@@ -59,8 +59,9 @@ function chartData(data, id) {
  * Create a graph of open issues for a project
  * @param {*} project the name of the project
  * @param {*} data the data to graph
+ * @param {*} previousElementId id of the html element to insert the graph after
  */
-function graphIssues(project, data) {
+function graphIssues(project, data, previousElementId) {
   /*
     A bunch of javascript to create the following HTML:
     <div class="row--25-75">
@@ -74,9 +75,10 @@ function graphIssues(project, data) {
     </div>
   */
 
-  let previousElement = document.getElementById("releases-and-commits");
+  let previousElement = document.getElementById(previousElementId);
   let chartDiv = document.createElement("div");
   chartDiv.setAttribute("class", "row--25-75");
+  chartDiv.setAttribute("id", `${project}-chart-div`);
   let col1 = document.createElement("div");
   col1.setAttribute("class", "col");
   chartDiv.appendChild(col1);
@@ -144,8 +146,9 @@ function graphIssues(project, data) {
   });
 }
 
+
+// TODO: these should be loaded from a CSV (which needs to be created)
 let projects = [
-    "all-projects",
     "charmcraft",
     "rockcraft",
     "snapcraft",
@@ -181,18 +184,29 @@ Papa.parse("data/releases.csv", {
   }
 });
 
+/* Chart the "all-projects" project first */
+Papa.parse(`data/all-projects-github.csv`, {
+  download: true,
+  dynamicTyping: true,
+  header: true,
+  complete: function (data) {
+    graphIssues("all-projects", data.data, "releases-and-commits")
+  }
+});
 
-/* Chart the open issues for each project */
+/**
+ * Chart the rest of the projects.
+ * `forEach` loops are async, so the order is not guarenteed.
+ * After they are loaded and cached, refreshing the page will probably
+ * result in the "correct" order.
+ */
 projects.reverse().forEach(function (project) {
   Papa.parse(`data/${project}-github.csv`, {
     download: true,
     dynamicTyping: true,
     header: true,
     complete: function (data) {
-      graphIssues(project, data.data)
+      graphIssues(project, data.data, "all-projects-chart-div")
     }
   });
-  setTimeout(() => {
-    console.log('Waiting 100ms to load next graph');
-  }, 100);
 });
