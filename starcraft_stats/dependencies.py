@@ -3,8 +3,8 @@
 import argparse
 import csv
 import logging
+import pathlib
 import subprocess
-from pathlib import Path
 
 import requests
 from dparse import filetypes, parse  # type: ignore[import-untyped]
@@ -14,7 +14,7 @@ from .config import Config, CraftApplicationBranch
 logger = logging.getLogger(__name__)
 
 
-DATA_FILE = Path("html/data/app-deps.csv")
+DATA_FILE = pathlib.Path("html/data/app-deps.csv")
 
 
 def get_dependencies(

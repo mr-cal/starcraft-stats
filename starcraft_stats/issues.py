@@ -4,9 +4,9 @@ import argparse
 import csv
 import logging
 import os
+import pathlib
 from datetime import datetime, timedelta, timezone
 from functools import cached_property
-from pathlib import Path
 
 from craft_application.models import CraftBaseModel
 from github import Github
@@ -74,14 +74,14 @@ class GithubProject:
     name: str
     owner: str
     __data: GithubIssues | None = None
-    data_file: Path
-    csv_file: Path
+    data_file: pathlib.Path
+    csv_file: pathlib.Path
 
     def __init__(self, name: str, owner: str = "canonical") -> None:
         self.name = name
         self.owner = owner
-        self.data_file = Path(f"html/data/{name}-github.yaml")
-        self.csv_file = Path(f"html/data/{name}-github.csv")
+        self.data_file = pathlib.Path(f"html/data/{name}-github.yaml")
+        self.csv_file = pathlib.Path(f"html/data/{name}-github.csv")
         self.get_data()
 
     def __str__(self) -> str:

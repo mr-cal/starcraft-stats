@@ -2,8 +2,8 @@
 
 import argparse
 import csv
+import pathlib
 from datetime import datetime
-from pathlib import Path
 
 from launchpadlib.launchpad import Launchpad  # type: ignore[import-untyped]
 
@@ -55,6 +55,6 @@ def get_launchpad_data(
         print(f"{len(bugs)} {status} bugs")
         data.append(str(len(bugs)))
 
-    with Path(f"data/{project}-launchpad.csv").open("a", encoding="utf-8") as file:
+    with pathlib.Path(f"data/{project}-launchpad.csv").open("a", encoding="utf-8") as file:
         writer = csv.writer(file, lineterminator="\n")
         writer.writerow(data)
