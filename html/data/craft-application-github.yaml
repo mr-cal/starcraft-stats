@@ -1250,8 +1250,12 @@ issues:
   315:
     type: pr
     date-opened: 2024-04-19 22:15:13+00:00
-    date-closed: null
+    date-closed: 2024-04-22 15:49:05+00:00
   314:
     type: pr
     date-opened: 2024-04-19 21:18:51+00:00
+    date-closed: 2024-04-22 12:31:02+00:00
+  316:
+    type: pr
+    date-opened: 2024-04-22 21:12:24+00:00
     date-closed: null

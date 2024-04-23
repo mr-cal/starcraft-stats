@@ -6606,7 +6606,7 @@ issues:
   1661:
     type: pr
     date-opened: 2024-04-19 14:44:36+00:00
-    date-closed: null
+    date-closed: 2024-04-22 14:48:55+00:00
   1660:
     type: pr
     date-opened: 2024-04-19 11:58:58+00:00
@@ -6614,4 +6614,12 @@ issues:
   1659:
     type: issue
     date-opened: 2024-04-19 11:36:26+00:00
+    date-closed: 2024-04-22 11:20:33+00:00
+  1663:
+    type: pr
+    date-opened: 2024-04-22 17:43:52+00:00
     date-closed: null
+  1662:
+    type: pr
+    date-opened: 2024-04-22 16:14:40+00:00
+    date-closed: 2024-04-22 17:57:26+00:00

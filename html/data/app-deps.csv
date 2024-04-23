@@ -1,5 +1,5 @@
 library,latest version,charmcraft/main,charmcraft/hotfix/2.6,rockcraft/main,rockcraft/hotfix/1.3,snapcraft/main,snapcraft/hotfix/7.5,snapcraft/hotfix/8.0
-craft-application,2.5.0,!2.4.0,not used,!2.4.0,!2.4.0,2.5.0,not used,not used
+craft-application,2.5.0,2.5.0,not used,!2.4.0,!2.4.0,2.5.0,not used,not used
 craft-archives,1.1.3,1.1.3,not used,1.1.3,1.1.3,1.1.3,1.1.3,1.1.3
 craft-cli,2.5.1,2.5.1,!2.4.0,2.5.1,2.5.1,2.5.1,!1.2.0,2.5.1
 craft-grammar,1.2.0,1.2.0,not used,not used,not used,1.2.0,!1.1.1,!1.1.2
