@@ -2858,4 +2858,8 @@ issues:
   714:
     type: pr
     date-opened: 2024-04-19 20:07:13+00:00
+    date-closed: 2024-04-23 16:34:50+00:00
+  716:
+    type: issue
+    date-opened: 2024-04-23 17:43:37+00:00
     date-closed: null
