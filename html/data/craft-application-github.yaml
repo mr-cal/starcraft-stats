@@ -1262,7 +1262,7 @@ issues:
   319:
     type: pr
     date-opened: 2024-04-23 22:20:58+00:00
-    date-closed: null
+    date-closed: 2024-04-24 14:00:42+00:00
   318:
     type: pr
     date-opened: 2024-04-23 21:10:46+00:00
@@ -1270,4 +1270,24 @@ issues:
   317:
     type: pr
     date-opened: 2024-04-23 19:07:26+00:00
+    date-closed: 2024-04-24 18:20:58+00:00
+  324:
+    type: pr
+    date-opened: 2024-04-24 23:56:03+00:00
+    date-closed: null
+  323:
+    type: pr
+    date-opened: 2024-04-24 20:31:15+00:00
+    date-closed: null
+  322:
+    type: pr
+    date-opened: 2024-04-24 19:13:02+00:00
+    date-closed: null
+  321:
+    type: pr
+    date-opened: 2024-04-24 18:27:33+00:00
+    date-closed: 2024-04-24 20:26:22+00:00
+  320:
+    type: issue
+    date-opened: 2024-04-24 12:58:25+00:00
     date-closed: null

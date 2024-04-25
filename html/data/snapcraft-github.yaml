@@ -18922,7 +18922,7 @@ issues:
   4741:
     type: pr
     date-opened: 2024-04-17 21:00:54+00:00
-    date-closed: null
+    date-closed: 2024-04-24 18:06:35+00:00
   4740:
     type: issue
     date-opened: 2024-04-17 13:50:43+00:00
@@ -18958,7 +18958,7 @@ issues:
   4753:
     type: pr
     date-opened: 2024-04-22 21:19:04+00:00
-    date-closed: null
+    date-closed: 2024-04-24 22:43:48+00:00
   4752:
     type: pr
     date-opened: 2024-04-22 16:58:27+00:00
@@ -18982,4 +18982,24 @@ issues:
   4754:
     type: pr
     date-opened: 2024-04-23 13:33:52+00:00
+    date-closed: 2024-04-24 17:33:26+00:00
+  4760:
+    type: pr
+    date-opened: 2024-04-25 00:59:30+00:00
+    date-closed: null
+  4759:
+    type: pr
+    date-opened: 2024-04-25 00:58:44+00:00
+    date-closed: 2024-04-25 00:58:59+00:00
+  4758:
+    type: pr
+    date-opened: 2024-04-24 13:02:32+00:00
+    date-closed: 2024-04-25 00:16:44+00:00
+  4757:
+    type: pr
+    date-opened: 2024-04-24 13:01:28+00:00
+    date-closed: 2024-04-24 20:45:14+00:00
+  4756:
+    type: pr
+    date-opened: 2024-04-24 12:55:49+00:00
     date-closed: null
