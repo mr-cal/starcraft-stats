@@ -1274,11 +1274,11 @@ issues:
   324:
     type: pr
     date-opened: 2024-04-24 23:56:03+00:00
-    date-closed: null
+    date-closed: 2024-04-25 20:21:05+00:00
   323:
     type: pr
     date-opened: 2024-04-24 20:31:15+00:00
-    date-closed: null
+    date-closed: 2024-04-25 17:02:45+00:00
   322:
     type: pr
     date-opened: 2024-04-24 19:13:02+00:00
@@ -1290,4 +1290,12 @@ issues:
   320:
     type: issue
     date-opened: 2024-04-24 12:58:25+00:00
+    date-closed: null
+  326:
+    type: pr
+    date-opened: 2024-04-25 22:09:12+00:00
+    date-closed: null
+  325:
+    type: pr
+    date-opened: 2024-04-25 21:32:12+00:00
     date-closed: null

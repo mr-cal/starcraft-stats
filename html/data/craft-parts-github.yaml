@@ -2867,3 +2867,11 @@ issues:
     type: issue
     date-opened: 2024-04-24 18:16:03+00:00
     date-closed: null
+  719:
+    type: pr
+    date-opened: 2024-04-25 23:40:43+00:00
+    date-closed: null
+  718:
+    type: pr
+    date-opened: 2024-04-25 23:38:53+00:00
+    date-closed: null

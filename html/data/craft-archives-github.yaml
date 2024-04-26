@@ -419,3 +419,7 @@ issues:
     type: issue
     date-opened: 2023-01-25 17:18:41+00:00
     date-closed: null
+  106:
+    type: pr
+    date-opened: 2024-04-25 21:11:01+00:00
+    date-closed: null
