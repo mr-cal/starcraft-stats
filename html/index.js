@@ -163,15 +163,46 @@ let projects = [
 ];
 
 
+async function getData(url) {
+  const response = await fetch(url);
+  return response.json();
+}
+
 /* Graph the dependencies */
-Papa.parse("data/app-deps.csv", {
-  download: true,
-  dynamicTyping: true,
-  header: false,
-  complete: function (data) {
-    chartData(data.data, "libs-and-apps-table")
-  }
-});
+
+var deps = await getData('./data/app-deps.json');
+var apps = Object.keys(deps.apps)
+
+console.log(deps)
+
+// Create empty table
+var deps_data = [["Library"].concat(apps)];
+for (var i=0; i < deps.libs.length; i++) {
+    var row = Array(apps.length + 2).fill("")
+    console.log(row)
+    deps_data.push(row)
+}
+
+// Populate table
+for (var i=0; i < deps.libs.length; i++) {
+    var lib = deps.libs[i]
+    deps_data[i+1][0] = lib
+    for (var j=0; j < apps.length; j++) {
+        var app = apps[j]
+        if (app in deps.apps && lib in deps.apps[app]) {
+            var dep_lib = deps.apps[app][lib]
+            var v = dep_lib.version
+            if (dep_lib.outdated) {
+                v = "!" + v + " (" + dep_lib.latest + ")"
+            }
+            deps_data[i+1][j+1] = v
+        } else {
+            deps_data[i+1][j+1] = "not used"
+        }
+    }
+}
+
+chartData(deps_data, "libs-and-apps-table");
 
 
 /* Graph the releases and commits */
@@ -196,7 +227,7 @@ Papa.parse(`data/all-projects-github.csv`, {
 
 /**
  * Chart the rest of the projects.
- * `forEach` loops are async, so the order is not guarenteed.
+ * `forEach` loops are async, so the order is not guaranteed.
  * After they are loaded and cached, refreshing the page will probably
  * result in the "correct" order.
  */
