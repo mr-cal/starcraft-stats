@@ -10,8 +10,8 @@ craft-applications:
   - name: snapcraft
     branches:
       - main
+      - hotfix/8.2
       - hotfix/7.5
-      - hotfix/8.0
 
 craft-libraries:
   - craft-application
