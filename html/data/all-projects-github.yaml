@@ -37370,7 +37370,7 @@ issues:
   rockcraft-559:
     type: pr
     date-opened: 2024-04-26 18:10:46+00:00
-    date-closed: null
+    date-closed: 2024-04-30 18:22:15+00:00
   snapcraft-4763:
     type: pr
     date-opened: 2024-04-26 20:22:34+00:00
@@ -37390,7 +37390,7 @@ issues:
   craft-application-330:
     type: pr
     date-opened: 2024-04-29 21:55:45+00:00
-    date-closed: null
+    date-closed: 2024-04-30 12:35:51+00:00
   craft-application-329:
     type: pr
     date-opened: 2024-04-29 20:08:18+00:00
@@ -37410,7 +37410,7 @@ issues:
   snapcraft-4768:
     type: pr
     date-opened: 2024-04-29 18:58:54+00:00
-    date-closed: null
+    date-closed: 2024-04-30 15:29:42+00:00
   snapcraft-4767:
     type: pr
     date-opened: 2024-04-29 16:49:00+00:00
@@ -37418,7 +37418,7 @@ issues:
   snapcraft-4766:
     type: pr
     date-opened: 2024-04-29 14:35:18+00:00
-    date-closed: null
+    date-closed: 2024-04-30 19:49:59+00:00
   snapcraft-4765:
     type: pr
     date-opened: 2024-04-29 13:08:17+00:00
@@ -37426,4 +37426,68 @@ issues:
   snapcraft-4764:
     type: issue
     date-opened: 2024-04-29 12:39:18+00:00
+    date-closed: 2024-04-30 16:35:03+00:00
+  craft-application-336:
+    type: pr
+    date-opened: 2024-04-30 18:46:32+00:00
+    date-closed: 2024-04-30 19:00:11+00:00
+  craft-application-335:
+    type: pr
+    date-opened: 2024-04-30 15:17:03+00:00
+    date-closed: 2024-04-30 18:34:59+00:00
+  craft-application-334:
+    type: pr
+    date-opened: 2024-04-30 14:02:51+00:00
+    date-closed: 2024-04-30 18:25:50+00:00
+  craft-application-333:
+    type: issue
+    date-opened: 2024-04-30 13:56:50+00:00
+    date-closed: null
+  craft-application-332:
+    type: pr
+    date-opened: 2024-04-30 13:05:34+00:00
+    date-closed: 2024-04-30 15:46:25+00:00
+  craft-application-331:
+    type: issue
+    date-opened: 2024-04-30 12:36:55+00:00
+    date-closed: null
+  craft-grammar-23:
+    type: pr
+    date-opened: 2024-04-30 20:03:34+00:00
+    date-closed: null
+  snapcraft-4778:
+    type: pr
+    date-opened: 2024-04-30 22:15:23+00:00
+    date-closed: null
+  snapcraft-4777:
+    type: pr
+    date-opened: 2024-04-30 19:52:53+00:00
+    date-closed: null
+  snapcraft-4776:
+    type: pr
+    date-opened: 2024-04-30 19:51:16+00:00
+    date-closed: null
+  snapcraft-4775:
+    type: pr
+    date-opened: 2024-04-30 19:50:56+00:00
+    date-closed: null
+  snapcraft-4774:
+    type: pr
+    date-opened: 2024-04-30 19:50:48+00:00
+    date-closed: null
+  snapcraft-4773:
+    type: pr
+    date-opened: 2024-04-30 19:50:41+00:00
+    date-closed: null
+  snapcraft-4772:
+    type: pr
+    date-opened: 2024-04-30 18:54:48+00:00
+    date-closed: null
+  snapcraft-4771:
+    type: issue
+    date-opened: 2024-04-30 14:07:18+00:00
+    date-closed: null
+  snapcraft-4770:
+    type: issue
+    date-opened: 2024-04-30 12:59:52+00:00
     date-closed: null

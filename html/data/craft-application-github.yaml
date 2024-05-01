@@ -1302,7 +1302,7 @@ issues:
   330:
     type: pr
     date-opened: 2024-04-29 21:55:45+00:00
-    date-closed: null
+    date-closed: 2024-04-30 12:35:51+00:00
   329:
     type: pr
     date-opened: 2024-04-29 20:08:18+00:00
@@ -1314,4 +1314,28 @@ issues:
   327:
     type: issue
     date-opened: 2024-04-29 14:21:06+00:00
+    date-closed: null
+  336:
+    type: pr
+    date-opened: 2024-04-30 18:46:32+00:00
+    date-closed: 2024-04-30 19:00:11+00:00
+  335:
+    type: pr
+    date-opened: 2024-04-30 15:17:03+00:00
+    date-closed: 2024-04-30 18:34:59+00:00
+  334:
+    type: pr
+    date-opened: 2024-04-30 14:02:51+00:00
+    date-closed: 2024-04-30 18:25:50+00:00
+  333:
+    type: issue
+    date-opened: 2024-04-30 13:56:50+00:00
+    date-closed: null
+  332:
+    type: pr
+    date-opened: 2024-04-30 13:05:34+00:00
+    date-closed: 2024-04-30 15:46:25+00:00
+  331:
+    type: issue
+    date-opened: 2024-04-30 12:36:55+00:00
     date-closed: null
