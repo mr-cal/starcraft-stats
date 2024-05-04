@@ -37534,4 +37534,28 @@ issues:
   snapcraft-4784:
     type: pr
     date-opened: 2024-05-02 21:56:35+00:00
+    date-closed: 2024-05-03 14:20:30+00:00
+  charmcraft-1669:
+    type: pr
+    date-opened: 2024-05-03 15:52:05+00:00
+    date-closed: null
+  craft-archives-107:
+    type: pr
+    date-opened: 2024-05-03 11:54:42+00:00
+    date-closed: null
+  craft-providers-565:
+    type: pr
+    date-opened: 2024-05-04 03:25:19+00:00
+    date-closed: null
+  rockcraft-560:
+    type: pr
+    date-opened: 2024-05-03 12:13:33+00:00
+    date-closed: null
+  snapcraft-4786:
+    type: pr
+    date-opened: 2024-05-03 17:31:33+00:00
+    date-closed: 2024-05-03 20:40:57+00:00
+  snapcraft-4785:
+    type: issue
+    date-opened: 2024-05-03 09:24:35+00:00
     date-closed: null

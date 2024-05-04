@@ -233,7 +233,7 @@
         "snapcraft/main": {
             "craft-application": {
                 "series": "2.6",
-                "version": "2.6.2",
+                "version": "2.6.3",
                 "latest": "0.0.0",
                 "outdated": true
             },

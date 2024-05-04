@@ -19098,4 +19098,12 @@ issues:
   4784:
     type: pr
     date-opened: 2024-05-02 21:56:35+00:00
+    date-closed: 2024-05-03 14:20:30+00:00
+  4786:
+    type: pr
+    date-opened: 2024-05-03 17:31:33+00:00
+    date-closed: 2024-05-03 20:40:57+00:00
+  4785:
+    type: issue
+    date-opened: 2024-05-03 09:24:35+00:00
     date-closed: null
