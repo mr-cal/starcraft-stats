@@ -99,3 +99,7 @@ issues:
     type: issue
     date-opened: 2024-05-02 16:59:11+00:00
     date-closed: null
+  26:
+    type: pr
+    date-opened: 2024-05-05 14:54:53+00:00
+    date-closed: null

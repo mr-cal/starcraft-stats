@@ -37559,3 +37559,7 @@ issues:
     type: issue
     date-opened: 2024-05-03 09:24:35+00:00
     date-closed: null
+  craft-grammar-26:
+    type: pr
+    date-opened: 2024-05-05 14:54:53+00:00
+    date-closed: null
