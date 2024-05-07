@@ -15,7 +15,7 @@
         "craft-grammar": "1.2.0",
         "craft-parts": "0.0.0",
         "craft-providers": "1.23.1",
-        "craft-store": "2.6.1"
+        "craft-store": "2.6.2"
     },
     "apps": {
         "charmcraft/main": {
@@ -58,8 +58,8 @@
             "craft-store": {
                 "series": "2.6",
                 "version": "2.6.1",
-                "latest": "2.6.1",
-                "outdated": false
+                "latest": "2.6.2",
+                "outdated": true
             }
         },
         "charmcraft/hotfix/2.3": {
@@ -270,8 +270,8 @@
             "craft-store": {
                 "series": "2.6",
                 "version": "2.6.1",
-                "latest": "2.6.1",
-                "outdated": false
+                "latest": "2.6.2",
+                "outdated": true
             }
         },
         "snapcraft/hotfix/7.5": {
@@ -351,8 +351,8 @@
             },
             "craft-store": {
                 "series": "2.6",
-                "version": "2.6.1",
-                "latest": "2.6.1",
+                "version": "2.6.2",
+                "latest": "2.6.2",
                 "outdated": false
             }
         }
