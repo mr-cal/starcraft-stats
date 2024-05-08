@@ -86,7 +86,7 @@ issues:
   1595:
     type: pr
     date-opened: 2024-03-11 09:07:02+00:00
-    date-closed: null
+    date-closed: 2024-05-07 14:51:42+00:00
   1594:
     type: issue
     date-opened: 2024-03-10 13:38:42+00:00
@@ -6650,4 +6650,8 @@ issues:
   1670:
     type: pr
     date-opened: 2024-05-06 22:01:44+00:00
+    date-closed: null
+  1671:
+    type: issue
+    date-opened: 2024-05-07 14:18:49+00:00
     date-closed: null

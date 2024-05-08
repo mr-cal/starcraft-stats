@@ -2239,3 +2239,11 @@ issues:
     type: pr
     date-opened: 2024-05-06 18:24:20+00:00
     date-closed: 2024-05-06 18:25:18+00:00
+  563:
+    type: pr
+    date-opened: 2024-05-07 15:55:23+00:00
+    date-closed: 2024-05-07 17:20:50+00:00
+  562:
+    type: issue
+    date-opened: 2024-05-07 10:15:04+00:00
+    date-closed: null

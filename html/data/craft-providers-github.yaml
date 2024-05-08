@@ -2254,4 +2254,8 @@ issues:
   565:
     type: pr
     date-opened: 2024-05-04 03:25:19+00:00
-    date-closed: null
+    date-closed: 2024-05-07 13:46:27+00:00
+  566:
+    type: pr
+    date-opened: 2024-05-07 14:40:26+00:00
+    date-closed: 2024-05-07 15:45:59+00:00
