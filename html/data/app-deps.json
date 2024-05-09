@@ -20,8 +20,8 @@
     "apps": {
         "charmcraft/main": {
             "craft-application": {
-                "series": "2.5",
-                "version": "2.5.0",
+                "series": "2.6",
+                "version": "2.6.3",
                 "latest": "0.0.0",
                 "outdated": true
             },
@@ -57,86 +57,8 @@
             },
             "craft-store": {
                 "series": "2.6",
-                "version": "2.6.1",
+                "version": "2.6.2",
                 "latest": "2.6.2",
-                "outdated": true
-            }
-        },
-        "charmcraft/hotfix/2.3": {
-            "craft-cli": {
-                "series": "1.2",
-                "version": "1.2.0",
-                "latest": "1.2.0",
-                "outdated": false
-            },
-            "craft-parts": {
-                "series": "1.19",
-                "version": "1.19.3",
-                "latest": "",
-                "outdated": false
-            },
-            "craft-providers": {
-                "series": "1.11",
-                "version": "1.11.0",
-                "latest": "1.11.0",
-                "outdated": false
-            },
-            "craft-store": {
-                "series": "2.4",
-                "version": "2.4.0",
-                "latest": "2.4.0",
-                "outdated": false
-            }
-        },
-        "charmcraft/hotfix/2.4": {
-            "craft-cli": {
-                "series": "2.0",
-                "version": "2.0.1",
-                "latest": "2.0.1",
-                "outdated": false
-            },
-            "craft-parts": {
-                "series": "1.23",
-                "version": "1.23.0",
-                "latest": "",
-                "outdated": false
-            },
-            "craft-providers": {
-                "series": "1.14",
-                "version": "1.14.1",
-                "latest": "1.14.1",
-                "outdated": false
-            },
-            "craft-store": {
-                "series": "2.4",
-                "version": "2.4.0",
-                "latest": "2.4.0",
-                "outdated": false
-            }
-        },
-        "charmcraft/hotfix/2.5": {
-            "craft-cli": {
-                "series": "2.4",
-                "version": "2.4.0",
-                "latest": "2.4.0",
-                "outdated": false
-            },
-            "craft-parts": {
-                "series": "1.25",
-                "version": "1.25.2",
-                "latest": "",
-                "outdated": false
-            },
-            "craft-providers": {
-                "series": "1.19",
-                "version": "1.19.3",
-                "latest": "1.19.3",
-                "outdated": false
-            },
-            "craft-store": {
-                "series": "2.4",
-                "version": "2.4.0",
-                "latest": "2.4.0",
                 "outdated": false
             }
         },
@@ -269,9 +191,9 @@
             },
             "craft-store": {
                 "series": "2.6",
-                "version": "2.6.1",
+                "version": "2.6.2",
                 "latest": "2.6.2",
-                "outdated": true
+                "outdated": false
             }
         },
         "snapcraft/hotfix/7.5": {
@@ -314,8 +236,8 @@
         },
         "snapcraft/hotfix/8.2": {
             "craft-application": {
-                "series": "2.6",
-                "version": "2.6.3",
+                "series": "2.7",
+                "version": "2.7.0",
                 "latest": "",
                 "outdated": false
             },
