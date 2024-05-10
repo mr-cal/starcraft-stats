@@ -2263,3 +2263,7 @@ issues:
     type: pr
     date-opened: 2024-05-08 17:15:12+00:00
     date-closed: 2024-05-08 19:25:53+00:00
+  568:
+    type: issue
+    date-opened: 2024-05-09 13:39:53+00:00
+    date-closed: null
