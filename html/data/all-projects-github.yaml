@@ -5790,7 +5790,7 @@ issues:
   rockcraft-465:
     type: pr
     date-opened: 2024-01-25 12:46:20+00:00
-    date-closed: null
+    date-closed: 2024-05-10 14:11:38+00:00
   rockcraft-464:
     type: pr
     date-opened: 2024-01-25 10:56:14+00:00
@@ -36882,7 +36882,7 @@ issues:
   rockcraft-541:
     type: pr
     date-opened: 2024-04-12 20:06:27+00:00
-    date-closed: null
+    date-closed: 2024-05-10 11:25:37+00:00
   rockcraft-540:
     type: pr
     date-opened: 2024-04-12 20:06:25+00:00
@@ -36894,11 +36894,11 @@ issues:
   rockcraft-538:
     type: pr
     date-opened: 2024-04-12 20:03:59+00:00
-    date-closed: null
+    date-closed: 2024-05-10 12:10:37+00:00
   rockcraft-537:
     type: pr
     date-opened: 2024-04-12 20:03:55+00:00
-    date-closed: null
+    date-closed: 2024-05-10 12:57:38+00:00
   rockcraft-536:
     type: pr
     date-opened: 2024-04-12 19:51:56+00:00
@@ -36922,7 +36922,7 @@ issues:
   snapcraft-4728:
     type: pr
     date-opened: 2024-04-12 19:55:19+00:00
-    date-closed: null
+    date-closed: 2024-05-10 13:27:35+00:00
   starbase-203:
     type: pr
     date-opened: 2024-04-12 23:39:16+00:00
@@ -37538,7 +37538,7 @@ issues:
   charmcraft-1669:
     type: pr
     date-opened: 2024-05-03 15:52:05+00:00
-    date-closed: null
+    date-closed: 2024-05-10 13:00:04+00:00
   craft-archives-107:
     type: pr
     date-opened: 2024-05-03 11:54:42+00:00
@@ -37690,7 +37690,7 @@ issues:
   snapcraft-4798:
     type: pr
     date-opened: 2024-05-09 04:09:25+00:00
-    date-closed: null
+    date-closed: 2024-05-10 15:07:37+00:00
   snapcraft-4797:
     type: pr
     date-opened: 2024-05-08 21:08:39+00:00
@@ -37730,7 +37730,7 @@ issues:
   rockcraft-565:
     type: pr
     date-opened: 2024-05-09 19:00:59+00:00
-    date-closed: null
+    date-closed: 2024-05-10 13:59:49+00:00
   rockcraft-564:
     type: pr
     date-opened: 2024-05-09 11:48:38+00:00
@@ -37755,3 +37755,23 @@ issues:
     type: pr
     date-opened: 2024-05-09 07:44:00+00:00
     date-closed: null
+  craft-providers-569:
+    type: pr
+    date-opened: 2024-05-11 04:11:49+00:00
+    date-closed: null
+  rockcraft-567:
+    type: pr
+    date-opened: 2024-05-10 21:28:34+00:00
+    date-closed: null
+  rockcraft-566:
+    type: pr
+    date-opened: 2024-05-10 13:05:11+00:00
+    date-closed: null
+  snapcraft-4805:
+    type: issue
+    date-opened: 2024-05-10 13:20:28+00:00
+    date-closed: null
+  snapcraft-4804:
+    type: pr
+    date-opened: 2024-05-10 07:16:54+00:00
+    date-closed: 2024-05-10 17:21:29+00:00

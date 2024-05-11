@@ -18890,7 +18890,7 @@ issues:
   4728:
     type: pr
     date-opened: 2024-04-12 19:55:19+00:00
-    date-closed: null
+    date-closed: 2024-05-10 13:27:35+00:00
   4735:
     type: pr
     date-opened: 2024-04-15 21:39:37+00:00
@@ -19142,7 +19142,7 @@ issues:
   4798:
     type: pr
     date-opened: 2024-05-09 04:09:25+00:00
-    date-closed: null
+    date-closed: 2024-05-10 15:07:37+00:00
   4797:
     type: pr
     date-opened: 2024-05-08 21:08:39+00:00
@@ -19175,3 +19175,11 @@ issues:
     type: pr
     date-opened: 2024-05-09 07:44:00+00:00
     date-closed: null
+  4805:
+    type: issue
+    date-opened: 2024-05-10 13:20:28+00:00
+    date-closed: null
+  4804:
+    type: pr
+    date-opened: 2024-05-10 07:16:54+00:00
+    date-closed: 2024-05-10 17:21:29+00:00

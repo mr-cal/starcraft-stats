@@ -202,7 +202,7 @@ issues:
   465:
     type: pr
     date-opened: 2024-01-25 12:46:20+00:00
-    date-closed: null
+    date-closed: 2024-05-10 14:11:38+00:00
   464:
     type: pr
     date-opened: 2024-01-25 10:56:14+00:00
@@ -2174,7 +2174,7 @@ issues:
   541:
     type: pr
     date-opened: 2024-04-12 20:06:27+00:00
-    date-closed: null
+    date-closed: 2024-05-10 11:25:37+00:00
   540:
     type: pr
     date-opened: 2024-04-12 20:06:25+00:00
@@ -2186,11 +2186,11 @@ issues:
   538:
     type: pr
     date-opened: 2024-04-12 20:03:59+00:00
-    date-closed: null
+    date-closed: 2024-05-10 12:10:37+00:00
   537:
     type: pr
     date-opened: 2024-04-12 20:03:55+00:00
-    date-closed: null
+    date-closed: 2024-05-10 12:57:38+00:00
   536:
     type: pr
     date-opened: 2024-04-12 19:51:56+00:00
@@ -2250,8 +2250,16 @@ issues:
   565:
     type: pr
     date-opened: 2024-05-09 19:00:59+00:00
-    date-closed: null
+    date-closed: 2024-05-10 13:59:49+00:00
   564:
     type: pr
     date-opened: 2024-05-09 11:48:38+00:00
     date-closed: 2024-05-09 14:31:20+00:00
+  567:
+    type: pr
+    date-opened: 2024-05-10 21:28:34+00:00
+    date-closed: null
+  566:
+    type: pr
+    date-opened: 2024-05-10 13:05:11+00:00
+    date-closed: null
