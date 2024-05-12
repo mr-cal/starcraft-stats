@@ -37775,3 +37775,15 @@ issues:
     type: pr
     date-opened: 2024-05-10 07:16:54+00:00
     date-closed: 2024-05-10 17:21:29+00:00
+  craft-grammar-28:
+    type: pr
+    date-opened: 2024-05-11 07:54:40+00:00
+    date-closed: null
+  craft-grammar-27:
+    type: pr
+    date-opened: 2024-05-11 05:19:30+00:00
+    date-closed: null
+  craft-providers-570:
+    type: pr
+    date-opened: 2024-05-11 22:13:29+00:00
+    date-closed: null
