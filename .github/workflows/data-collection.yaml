@@ -24,9 +24,9 @@ jobs:
         env:
           STARCRAFT_GITHUB_TOKEN: ${{ secrets.STARCRAFT_GITHUB_TOKEN }}
         run: |
-          starcraft-stats get-dependencies
-          starcraft-stats get-issues
-          starcraft-stats get-releases
+          starcraft-stats get-dependencies --verbosity=trace
+          starcraft-stats get-issues --verbosity=trace
+          starcraft-stats get-releases --verbosity=trace
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
