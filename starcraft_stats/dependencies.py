@@ -129,7 +129,6 @@ def _get_reqs_for_project(
     dlist: dict[str, Dependency] = {}
     emit.debug(f"Collected requirements for {app.name}:")
     for library_name, library_version in libraries.items():
-        emit.debug(f"  {library_name}: {library_version}")
 
         if library_version in ("unknown", "not used"):
             continue
@@ -147,6 +146,8 @@ def _get_reqs_for_project(
                 outdated = library_version not in (latest_ver, "unknown", "not used")
             else:
                 outdated = False
+
+        emit.trace(f"  {library_name}: {library_version} (latest: {latest_ver})")
 
         dlist[library_name] = Dependency(
             series=series,
@@ -167,6 +168,7 @@ def _latest_series_version(versions: list[str]) -> tuple[str, dict[str, str]]:
 
     latest_ver = "0.0.0"
     series_map: dict[str, str] = {}
+    emit.trace(f"{series_versions=}")
     for k, v in series_versions.items():
         v.sort(key=Version, reverse=True)
         series_map[k] = v[0]
