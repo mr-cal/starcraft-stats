@@ -179,21 +179,35 @@ def _latest_series_version(versions: list[str]) -> tuple[str, dict[str, str]]:
 
 
 def _get_pip_versions(library: str) -> list[str]:
-    proc = subprocess.run(
-        ["pip", "install", f"{library}==", "--disable-pip-version-check"],
-        check=False,
-        capture_output=True,
-    )
-    output = proc.stderr.decode("utf-8").split("\n")[0]
+    """Get a list of versions for a library.
 
-    # get the latest version in each major.minor seriess
-    anchor = "from versions: "
-    idx = output.find(anchor)
-    if idx < 0:
-        return []
+    :param library: The library to get versions for.
 
-    versions = output[idx + len(anchor) : -1]
-    if versions == "none":
-        return []
+    :returns: A list of versions for the library."""
+    command = ["pip", "install", f"{library}==", "--disable-pip-version-check"]
+    emit.debug(f"Running {' '.join(command)}")
+    proc = subprocess.run(command, check=False, capture_output=True)
+    output = proc.stderr.decode("utf-8").split("\n")
+    emit.trace(f"pip output: {output}")
 
-    return versions.split(", ")
+    for line in output:
+        emit.trace(f"parsing output line: {line}")
+
+        # get the latest version in each major.minor seriess
+        anchor = "from versions: "
+        idx = line.find(anchor)
+        if idx < 0:
+            emit.trace(f"Could not find anchor {anchor}")
+            continue
+
+        versions = line[idx + len(anchor) : -1]
+        if versions == "none":
+            emit.debug(f"No versions found for library {library}.")
+            return []
+
+        versions_list = versions.split(", ")
+        emit.debug(f"Found versions: {versions_list}")
+        return versions_list
+
+    emit.debug(f"Could not find versions for library {library}.")
+    return []
