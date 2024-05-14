@@ -37795,3 +37795,7 @@ issues:
     type: issue
     date-opened: 2024-05-13 15:08:48+00:00
     date-closed: null
+  charmcraft-1682:
+    type: pr
+    date-opened: 2024-05-14 08:00:45+00:00
+    date-closed: null

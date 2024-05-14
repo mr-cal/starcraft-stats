@@ -6695,3 +6695,7 @@ issues:
     type: issue
     date-opened: 2024-05-09 07:51:12+00:00
     date-closed: null
+  1682:
+    type: pr
+    date-opened: 2024-05-14 08:00:45+00:00
+    date-closed: null
