@@ -37798,4 +37798,16 @@ issues:
   charmcraft-1682:
     type: pr
     date-opened: 2024-05-14 08:00:45+00:00
+    date-closed: 2024-05-14 12:52:32+00:00
+  craft-providers-571:
+    type: pr
+    date-opened: 2024-05-14 12:13:32+00:00
+    date-closed: null
+  rockcraft-569:
+    type: pr
+    date-opened: 2024-05-14 08:16:08+00:00
+    date-closed: null
+  snapcraft-4806:
+    type: issue
+    date-opened: 2024-05-14 10:41:07+00:00
     date-closed: null
