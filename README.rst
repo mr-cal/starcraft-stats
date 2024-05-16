@@ -56,12 +56,6 @@ The easiest way to view the webpage locally is to run a web server:
 #. Open the ``html`` directory in Visual Studio Code
 #. Right-click on ``index.html`` and select "Open with Live Server"
 
-TODO
-====
-
-☐ graph mean age of issues
-
-
 Contributing
 ============
 
