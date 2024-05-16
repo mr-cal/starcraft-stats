@@ -183,7 +183,8 @@ def _get_pip_versions(library: str) -> list[str]:
 
     :param library: The library to get versions for.
 
-    :returns: A list of versions for the library."""
+    :returns: A list of versions for the library.
+    """
     command = ["pip", "install", f"{library}==", "--disable-pip-version-check"]
     emit.debug(f"Running {' '.join(command)}")
     proc = subprocess.run(command, check=False, capture_output=True)
