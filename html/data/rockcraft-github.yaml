@@ -2270,4 +2270,12 @@ issues:
   569:
     type: pr
     date-opened: 2024-05-14 08:16:08+00:00
+    date-closed: 2024-05-15 15:25:33+00:00
+  571:
+    type: pr
+    date-opened: 2024-05-15 14:07:38+00:00
+    date-closed: null
+  570:
+    type: pr
+    date-opened: 2024-05-15 07:22:38+00:00
     date-closed: null

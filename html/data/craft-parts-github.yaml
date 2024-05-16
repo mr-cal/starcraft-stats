@@ -302,7 +302,7 @@ issues:
   619:
     type: issue
     date-opened: 2024-01-05 10:22:33+00:00
-    date-closed: null
+    date-closed: 2024-05-15 14:52:44+00:00
   618:
     type: pr
     date-opened: 2023-12-19 20:33:52+00:00
@@ -2899,3 +2899,27 @@ issues:
     type: pr
     date-opened: 2024-05-08 10:08:33+00:00
     date-closed: null
+  731:
+    type: issue
+    date-opened: 2024-05-15 15:04:36+00:00
+    date-closed: null
+  730:
+    type: issue
+    date-opened: 2024-05-15 14:45:28+00:00
+    date-closed: null
+  729:
+    type: issue
+    date-opened: 2024-05-15 14:43:43+00:00
+    date-closed: null
+  728:
+    type: issue
+    date-opened: 2024-05-15 14:42:47+00:00
+    date-closed: null
+  727:
+    type: pr
+    date-opened: 2024-05-15 13:50:07+00:00
+    date-closed: null
+  726:
+    type: pr
+    date-opened: 2024-05-15 10:20:50+00:00
+    date-closed: 2024-05-15 14:37:43+00:00
