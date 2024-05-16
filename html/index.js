@@ -32,9 +32,7 @@ function chartData(data, id) {
         attr += " not-used"
       }
       cell.setAttribute("class", attr)
-
-      var textNode = document.createTextNode(text);
-      cell.appendChild(textNode);
+      cell.innerHTML = text;
       row.appendChild(cell);
     });
 
