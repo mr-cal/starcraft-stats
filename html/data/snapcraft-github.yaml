@@ -19190,8 +19190,12 @@ issues:
   4808:
     type: pr
     date-opened: 2024-05-15 12:57:14+00:00
-    date-closed: null
+    date-closed: 2024-05-16 10:26:33+00:00
   4807:
     type: pr
     date-opened: 2024-05-15 09:32:17+00:00
+    date-closed: 2024-05-16 08:15:24+00:00
+  4809:
+    type: pr
+    date-opened: 2024-05-16 08:25:55+00:00
     date-closed: null

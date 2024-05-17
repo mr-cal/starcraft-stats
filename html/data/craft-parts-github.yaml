@@ -2854,7 +2854,7 @@ issues:
   715:
     type: pr
     date-opened: 2024-04-19 23:32:03+00:00
-    date-closed: null
+    date-closed: 2024-05-16 09:27:17+00:00
   714:
     type: pr
     date-opened: 2024-04-19 20:07:13+00:00
@@ -2923,3 +2923,7 @@ issues:
     type: pr
     date-opened: 2024-05-15 10:20:50+00:00
     date-closed: 2024-05-15 14:37:43+00:00
+  732:
+    type: pr
+    date-opened: 2024-05-16 08:07:16+00:00
+    date-closed: 2024-05-16 10:22:41+00:00
