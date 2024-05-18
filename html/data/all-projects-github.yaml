@@ -37342,7 +37342,7 @@ issues:
   craft-parts-719:
     type: pr
     date-opened: 2024-04-25 23:40:43+00:00
-    date-closed: null
+    date-closed: 2024-05-17 10:14:11+00:00
   craft-parts-718:
     type: pr
     date-opened: 2024-04-25 23:38:53+00:00
@@ -37822,7 +37822,7 @@ issues:
   craft-parts-731:
     type: issue
     date-opened: 2024-05-15 15:04:36+00:00
-    date-closed: null
+    date-closed: 2024-05-17 10:28:03+00:00
   craft-parts-730:
     type: issue
     date-opened: 2024-05-15 14:45:28+00:00
@@ -37894,4 +37894,40 @@ issues:
   snapcraft-4809:
     type: pr
     date-opened: 2024-05-16 08:25:55+00:00
+    date-closed: 2024-05-17 08:55:13+00:00
+  charmcraft-1686:
+    type: pr
+    date-opened: 2024-05-17 22:46:41+00:00
+    date-closed: null
+  craft-parts-736:
+    type: pr
+    date-opened: 2024-05-17 13:04:39+00:00
+    date-closed: null
+  craft-parts-735:
+    type: pr
+    date-opened: 2024-05-17 10:30:08+00:00
+    date-closed: 2024-05-17 12:27:32+00:00
+  craft-parts-734:
+    type: pr
+    date-opened: 2024-05-17 09:46:36+00:00
+    date-closed: null
+  craft-parts-733:
+    type: issue
+    date-opened: 2024-05-17 08:18:47+00:00
+    date-closed: 2024-05-17 10:28:12+00:00
+  rockcraft-575:
+    type: pr
+    date-opened: 2024-05-17 10:43:33+00:00
+    date-closed: null
+  rockcraft-574:
+    type: pr
+    date-opened: 2024-05-17 08:27:21+00:00
+    date-closed: null
+  snapcraft-4811:
+    type: pr
+    date-opened: 2024-05-17 10:53:33+00:00
+    date-closed: null
+  snapcraft-4810:
+    type: pr
+    date-opened: 2024-05-17 08:59:37+00:00
     date-closed: null

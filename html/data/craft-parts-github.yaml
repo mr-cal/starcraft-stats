@@ -2870,7 +2870,7 @@ issues:
   719:
     type: pr
     date-opened: 2024-04-25 23:40:43+00:00
-    date-closed: null
+    date-closed: 2024-05-17 10:14:11+00:00
   718:
     type: pr
     date-opened: 2024-04-25 23:38:53+00:00
@@ -2902,7 +2902,7 @@ issues:
   731:
     type: issue
     date-opened: 2024-05-15 15:04:36+00:00
-    date-closed: null
+    date-closed: 2024-05-17 10:28:03+00:00
   730:
     type: issue
     date-opened: 2024-05-15 14:45:28+00:00
@@ -2927,3 +2927,19 @@ issues:
     type: pr
     date-opened: 2024-05-16 08:07:16+00:00
     date-closed: 2024-05-16 10:22:41+00:00
+  736:
+    type: pr
+    date-opened: 2024-05-17 13:04:39+00:00
+    date-closed: null
+  735:
+    type: pr
+    date-opened: 2024-05-17 10:30:08+00:00
+    date-closed: 2024-05-17 12:27:32+00:00
+  734:
+    type: pr
+    date-opened: 2024-05-17 09:46:36+00:00
+    date-closed: null
+  733:
+    type: issue
+    date-opened: 2024-05-17 08:18:47+00:00
+    date-closed: 2024-05-17 10:28:12+00:00
