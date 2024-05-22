@@ -37386,7 +37386,7 @@ issues:
   starbase-210:
     type: pr
     date-opened: 2024-04-27 05:08:07+00:00
-    date-closed: null
+    date-closed: 2024-05-21 16:57:50+00:00
   craft-application-330:
     type: pr
     date-opened: 2024-04-29 21:55:45+00:00
@@ -37947,3 +37947,87 @@ issues:
     type: pr
     date-opened: 2024-05-20 15:06:49+00:00
     date-closed: null
+  charmcraft-1690:
+    type: pr
+    date-opened: 2024-05-21 17:50:45+00:00
+    date-closed: null
+  charmcraft-1689:
+    type: pr
+    date-opened: 2024-05-21 14:24:21+00:00
+    date-closed: 2024-05-22 02:37:49+00:00
+  charmcraft-1688:
+    type: pr
+    date-opened: 2024-05-21 14:23:38+00:00
+    date-closed: 2024-05-21 14:23:53+00:00
+  charmcraft-1687:
+    type: issue
+    date-opened: 2024-05-21 14:02:17+00:00
+    date-closed: null
+  craft-application-350:
+    type: issue
+    date-opened: 2024-05-21 20:37:55+00:00
+    date-closed: null
+  craft-archives-109:
+    type: pr
+    date-opened: 2024-05-21 21:57:02+00:00
+    date-closed: null
+  craft-archives-108:
+    type: pr
+    date-opened: 2024-05-21 21:56:39+00:00
+    date-closed: null
+  craft-cli-254:
+    type: pr
+    date-opened: 2024-05-21 17:35:36+00:00
+    date-closed: null
+  rockcraft-578:
+    type: issue
+    date-opened: 2024-05-21 14:17:54+00:00
+    date-closed: null
+  rockcraft-577:
+    type: pr
+    date-opened: 2024-05-21 12:14:47+00:00
+    date-closed: null
+  rockcraft-576:
+    type: pr
+    date-opened: 2024-05-21 12:12:45+00:00
+    date-closed: null
+  snapcraft-4817:
+    type: pr
+    date-opened: 2024-05-21 21:35:19+00:00
+    date-closed: null
+  snapcraft-4816:
+    type: pr
+    date-opened: 2024-05-21 20:40:18+00:00
+    date-closed: null
+  snapcraft-4815:
+    type: pr
+    date-opened: 2024-05-21 18:26:50+00:00
+    date-closed: null
+  snapcraft-4814:
+    type: issue
+    date-opened: 2024-05-21 14:01:27+00:00
+    date-closed: null
+  snapcraft-4813:
+    type: pr
+    date-opened: 2024-05-21 05:48:32+00:00
+    date-closed: null
+  snapcraft-4812:
+    type: pr
+    date-opened: 2024-05-21 05:38:47+00:00
+    date-closed: 2024-05-21 20:34:21+00:00
+  starbase-215:
+    type: pr
+    date-opened: 2024-05-21 16:56:47+00:00
+    date-closed: null
+  starbase-214:
+    type: pr
+    date-opened: 2024-05-21 16:49:48+00:00
+    date-closed: null
+  starbase-213:
+    type: issue
+    date-opened: 2024-05-21 16:32:32+00:00
+    date-closed: null
+  starbase-212:
+    type: pr
+    date-opened: 2024-05-21 16:11:58+00:00
+    date-closed: 2024-05-21 20:39:22+00:00
