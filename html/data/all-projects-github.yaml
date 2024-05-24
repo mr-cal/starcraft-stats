@@ -37290,7 +37290,7 @@ issues:
   craft-parts-717:
     type: issue
     date-opened: 2024-04-24 18:16:03+00:00
-    date-closed: null
+    date-closed: 2024-05-23 14:25:27+00:00
   snapcraft-4760:
     type: pr
     date-opened: 2024-04-25 00:59:30+00:00
@@ -37930,7 +37930,7 @@ issues:
   snapcraft-4810:
     type: pr
     date-opened: 2024-05-17 08:59:37+00:00
-    date-closed: null
+    date-closed: 2024-05-23 23:34:42+00:00
   craft-application-349:
     type: pr
     date-opened: 2024-05-20 21:13:57+00:00
@@ -38106,4 +38106,16 @@ issues:
   snapcraft-4818:
     type: issue
     date-opened: 2024-05-22 14:48:26+00:00
+    date-closed: null
+  craft-parts-743:
+    type: pr
+    date-opened: 2024-05-23 20:10:41+00:00
+    date-closed: null
+  craft-parts-742:
+    type: pr
+    date-opened: 2024-05-23 15:44:48+00:00
+    date-closed: null
+  snapcraft-4819:
+    type: pr
+    date-opened: 2024-05-23 23:19:32+00:00
     date-closed: null

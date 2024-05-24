@@ -19206,7 +19206,7 @@ issues:
   4810:
     type: pr
     date-opened: 2024-05-17 08:59:37+00:00
-    date-closed: null
+    date-closed: 2024-05-23 23:34:42+00:00
   4817:
     type: pr
     date-opened: 2024-05-21 21:35:19+00:00
@@ -19234,4 +19234,8 @@ issues:
   4818:
     type: issue
     date-opened: 2024-05-22 14:48:26+00:00
+    date-closed: null
+  4819:
+    type: pr
+    date-opened: 2024-05-23 23:19:32+00:00
     date-closed: null
