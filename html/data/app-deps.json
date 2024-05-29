@@ -178,10 +178,10 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "1.30",
-                "version": "1.30.0",
+                "series": "1.31",
+                "version": "1.31.0",
                 "latest": "1.31.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-providers": {
                 "series": "1.23",

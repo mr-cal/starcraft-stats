@@ -1850,7 +1850,7 @@ issues:
   craft-parts-232:
     type: pr
     date-opened: 2022-05-29 23:23:19+00:00
-    date-closed: null
+    date-closed: 2024-05-28 21:52:13+00:00
   craft-parts-231:
     type: pr
     date-opened: 2022-05-27 22:58:04+00:00
@@ -37926,7 +37926,7 @@ issues:
   snapcraft-4811:
     type: pr
     date-opened: 2024-05-17 10:53:33+00:00
-    date-closed: null
+    date-closed: 2024-05-28 15:12:40+00:00
   snapcraft-4810:
     type: pr
     date-opened: 2024-05-17 08:59:37+00:00
@@ -38070,11 +38070,11 @@ issues:
   craft-parts-740:
     type: pr
     date-opened: 2024-05-22 14:44:36+00:00
-    date-closed: null
+    date-closed: 2024-05-28 14:22:20+00:00
   craft-store-184:
     type: pr
     date-opened: 2024-05-22 21:07:37+00:00
-    date-closed: null
+    date-closed: 2024-05-28 14:07:10+00:00
   craft-store-183:
     type: pr
     date-opened: 2024-05-22 21:07:34+00:00
@@ -38122,7 +38122,7 @@ issues:
   craft-providers-573:
     type: pr
     date-opened: 2024-05-25 03:17:38+00:00
-    date-closed: null
+    date-closed: 2024-05-28 14:11:10+00:00
   craft-providers-572:
     type: pr
     date-opened: 2024-05-24 13:51:03+00:00
@@ -38151,3 +38151,11 @@ issues:
     type: pr
     date-opened: 2024-05-25 03:40:53+00:00
     date-closed: 2024-05-26 22:43:23+00:00
+  craft-application-351:
+    type: pr
+    date-opened: 2024-05-28 19:34:00+00:00
+    date-closed: null
+  snapcraft-4824:
+    type: pr
+    date-opened: 2024-05-28 13:43:58+00:00
+    date-closed: 2024-05-28 17:36:53+00:00
