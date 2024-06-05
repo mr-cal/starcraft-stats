@@ -160,10 +160,10 @@
         },
         "snapcraft/main": {
             "craft-application": {
-                "series": "2.7",
-                "version": "2.7.0",
+                "series": "2.8",
+                "version": "2.8.0",
                 "latest": "2.8.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "1.1",

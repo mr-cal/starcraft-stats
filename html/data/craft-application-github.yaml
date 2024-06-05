@@ -1294,7 +1294,7 @@ issues:
   326:
     type: pr
     date-opened: 2024-04-25 22:09:12+00:00
-    date-closed: null
+    date-closed: 2024-06-04 14:42:52+00:00
   325:
     type: pr
     date-opened: 2024-04-25 21:32:12+00:00
@@ -1406,7 +1406,7 @@ issues:
   356:
     type: pr
     date-opened: 2024-05-31 22:00:25+00:00
-    date-closed: null
+    date-closed: 2024-06-04 15:16:23+00:00
   355:
     type: pr
     date-opened: 2024-05-31 20:35:37+00:00
@@ -1419,3 +1419,7 @@ issues:
     type: pr
     date-opened: 2024-05-31 12:53:56+00:00
     date-closed: 2024-05-31 16:28:52+00:00
+  357:
+    type: issue
+    date-opened: 2024-06-04 19:00:48+00:00
+    date-closed: null
