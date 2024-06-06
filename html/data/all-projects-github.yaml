@@ -15870,7 +15870,7 @@ issues:
   snapcraft-4685:
     type: issue
     date-opened: 2024-03-20 19:13:31+00:00
-    date-closed: null
+    date-closed: 2024-06-05 16:22:51+00:00
   snapcraft-4684:
     type: pr
     date-opened: 2024-03-20 18:09:09+00:00
@@ -17182,7 +17182,7 @@ issues:
   snapcraft-4356:
     type: issue
     date-opened: 2023-09-07 15:34:46+00:00
-    date-closed: null
+    date-closed: 2024-06-05 16:22:51+00:00
   snapcraft-4355:
     type: pr
     date-opened: 2023-09-07 13:28:44+00:00
@@ -35718,7 +35718,7 @@ issues:
   craft-archives-103:
     type: pr
     date-opened: 2023-12-14 16:12:02+00:00
-    date-closed: null
+    date-closed: 2024-06-05 17:24:34+00:00
   craft-archives-102:
     type: issue
     date-opened: 2023-10-17 22:38:34+00:00
@@ -37310,7 +37310,7 @@ issues:
   snapcraft-4756:
     type: pr
     date-opened: 2024-04-24 12:55:49+00:00
-    date-closed: null
+    date-closed: 2024-06-05 13:41:05+00:00
   starbase-209:
     type: pr
     date-opened: 2024-04-24 20:21:13+00:00
@@ -38294,4 +38294,40 @@ issues:
   snapcraft-4839:
     type: pr
     date-opened: 2024-06-04 14:23:45+00:00
+    date-closed: 2024-06-05 16:22:50+00:00
+  craft-archives-118:
+    type: issue
+    date-opened: 2024-06-05 17:21:15+00:00
+    date-closed: null
+  craft-parts-749:
+    type: pr
+    date-opened: 2024-06-05 17:10:52+00:00
+    date-closed: null
+  craft-parts-748:
+    type: pr
+    date-opened: 2024-06-05 14:28:09+00:00
+    date-closed: 2024-06-05 18:47:07+00:00
+  craft-providers-576:
+    type: issue
+    date-opened: 2024-06-05 06:26:39+00:00
+    date-closed: null
+  snapcraft-4843:
+    type: issue
+    date-opened: 2024-06-06 02:56:08+00:00
+    date-closed: null
+  snapcraft-4842:
+    type: issue
+    date-opened: 2024-06-05 21:37:46+00:00
+    date-closed: null
+  snapcraft-4841:
+    type: pr
+    date-opened: 2024-06-05 19:37:29+00:00
+    date-closed: null
+  snapcraft-4840:
+    type: issue
+    date-opened: 2024-06-05 13:06:34+00:00
+    date-closed: 2024-06-05 15:12:37+00:00
+  starbase-219:
+    type: pr
+    date-opened: 2024-06-05 21:51:40+00:00
     date-closed: null

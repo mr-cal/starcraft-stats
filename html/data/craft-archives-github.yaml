@@ -10,7 +10,7 @@ issues:
   103:
     type: pr
     date-opened: 2023-12-14 16:12:02+00:00
-    date-closed: null
+    date-closed: 2024-06-05 17:24:34+00:00
   102:
     type: issue
     date-opened: 2023-10-17 22:38:34+00:00
@@ -466,4 +466,8 @@ issues:
   110:
     type: issue
     date-opened: 2024-05-22 15:58:38+00:00
+    date-closed: null
+  118:
+    type: issue
+    date-opened: 2024-06-05 17:21:15+00:00
     date-closed: null
