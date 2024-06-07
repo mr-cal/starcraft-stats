@@ -6743,3 +6743,11 @@ issues:
     type: issue
     date-opened: 2024-06-03 15:43:40+00:00
     date-closed: 2024-06-03 15:45:05+00:00
+  1695:
+    type: pr
+    date-opened: 2024-06-06 15:48:23+00:00
+    date-closed: null
+  1694:
+    type: pr
+    date-opened: 2024-06-06 15:23:36+00:00
+    date-closed: null

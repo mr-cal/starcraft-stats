@@ -2311,3 +2311,11 @@ issues:
     type: issue
     date-opened: 2024-05-24 09:33:21+00:00
     date-closed: null
+  581:
+    type: pr
+    date-opened: 2024-06-06 15:32:40+00:00
+    date-closed: null
+  580:
+    type: pr
+    date-opened: 2024-06-06 14:11:00+00:00
+    date-closed: null
