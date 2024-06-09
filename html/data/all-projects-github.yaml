@@ -38387,3 +38387,7 @@ issues:
     type: pr
     date-opened: 2024-06-08 01:44:52+00:00
     date-closed: null
+  craft-providers-577:
+    type: pr
+    date-opened: 2024-06-08 04:32:04+00:00
+    date-closed: null
