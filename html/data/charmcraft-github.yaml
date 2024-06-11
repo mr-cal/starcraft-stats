@@ -6750,8 +6750,20 @@ issues:
   1694:
     type: pr
     date-opened: 2024-06-06 15:23:36+00:00
-    date-closed: null
+    date-closed: 2024-06-10 15:43:03+00:00
   1696:
     type: pr
     date-opened: 2024-06-07 22:44:55+00:00
+    date-closed: null
+  1699:
+    type: pr
+    date-opened: 2024-06-10 18:44:54+00:00
+    date-closed: null
+  1698:
+    type: issue
+    date-opened: 2024-06-10 18:26:10+00:00
+    date-closed: null
+  1697:
+    type: issue
+    date-opened: 2024-06-10 18:10:26+00:00
     date-closed: null
