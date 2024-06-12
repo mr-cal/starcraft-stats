@@ -82,7 +82,7 @@ issues:
   495:
     type: pr
     date-opened: 2024-02-26 17:08:26+00:00
-    date-closed: null
+    date-closed: 2024-06-11 20:35:59+00:00
   494:
     type: pr
     date-opened: 2024-02-26 09:10:23+00:00
@@ -2319,3 +2319,11 @@ issues:
     type: pr
     date-opened: 2024-06-06 14:11:00+00:00
     date-closed: 2024-06-07 14:34:58+00:00
+  583:
+    type: issue
+    date-opened: 2024-06-12 02:10:16+00:00
+    date-closed: null
+  582:
+    type: issue
+    date-opened: 2024-06-12 02:00:09+00:00
+    date-closed: null

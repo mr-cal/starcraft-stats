@@ -19146,7 +19146,7 @@ issues:
   4797:
     type: pr
     date-opened: 2024-05-08 21:08:39+00:00
-    date-closed: null
+    date-closed: 2024-06-11 16:33:22+00:00
   4796:
     type: pr
     date-opened: 2024-05-08 18:53:28+00:00
@@ -19338,11 +19338,11 @@ issues:
   4847:
     type: pr
     date-opened: 2024-06-06 23:26:58+00:00
-    date-closed: null
+    date-closed: 2024-06-11 20:11:13+00:00
   4846:
     type: pr
     date-opened: 2024-06-06 23:26:17+00:00
-    date-closed: null
+    date-closed: 2024-06-11 20:12:16+00:00
   4845:
     type: pr
     date-opened: 2024-06-06 17:11:35+00:00
@@ -19358,4 +19358,12 @@ issues:
   4849:
     type: pr
     date-opened: 2024-06-10 22:23:32+00:00
+    date-closed: null
+  4851:
+    type: pr
+    date-opened: 2024-06-11 22:35:41+00:00
+    date-closed: null
+  4850:
+    type: pr
+    date-opened: 2024-06-11 21:31:57+00:00
     date-closed: null
