@@ -1422,7 +1422,7 @@ issues:
   357:
     type: issue
     date-opened: 2024-06-04 19:00:48+00:00
-    date-closed: null
+    date-closed: 2024-06-12 16:41:59+00:00
   358:
     type: pr
     date-opened: 2024-06-06 15:38:24+00:00
@@ -1430,4 +1430,4 @@ issues:
   359:
     type: pr
     date-opened: 2024-06-11 21:13:28+00:00
-    date-closed: null
+    date-closed: 2024-06-12 16:41:58+00:00
