@@ -88,6 +88,32 @@
                 "outdated": false
             }
         },
+        "charmcraft/hotfix/2.7": {
+            "craft-cli": {
+                "series": "2.4",
+                "version": "2.4.0",
+                "latest": "2.4.0",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "1.25.2",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "1.20.3",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
+                "latest": "2.5.0",
+                "outdated": false
+            }
+        },
         "rockcraft/main": {
             "craft-application": {
                 "series": "2.7",
