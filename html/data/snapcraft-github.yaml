@@ -19374,4 +19374,12 @@ issues:
   4852:
     type: pr
     date-opened: 2024-06-13 18:25:06+00:00
+    date-closed: 2024-06-14 17:41:12+00:00
+  4855:
+    type: pr
+    date-opened: 2024-06-14 17:43:03+00:00
+    date-closed: 2024-06-14 22:45:12+00:00
+  4854:
+    type: issue
+    date-opened: 2024-06-14 15:13:14+00:00
     date-closed: null

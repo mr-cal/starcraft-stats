@@ -1431,3 +1431,7 @@ issues:
     type: pr
     date-opened: 2024-06-11 21:13:28+00:00
     date-closed: 2024-06-12 16:41:58+00:00
+  360:
+    type: issue
+    date-opened: 2024-06-14 15:07:56+00:00
+    date-closed: null
