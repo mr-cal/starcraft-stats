@@ -38414,7 +38414,7 @@ issues:
   charmcraft-1704:
     type: pr
     date-opened: 2024-06-11 19:22:26+00:00
-    date-closed: null
+    date-closed: 2024-06-15 12:46:38+00:00
   charmcraft-1703:
     type: pr
     date-opened: 2024-06-11 18:42:39+00:00
@@ -38510,4 +38510,8 @@ issues:
   snapcraft-4854:
     type: issue
     date-opened: 2024-06-14 15:13:14+00:00
+    date-closed: null
+  starbase-222:
+    type: pr
+    date-opened: 2024-06-15 05:00:18+00:00
     date-closed: null
