@@ -38515,3 +38515,7 @@ issues:
     type: pr
     date-opened: 2024-06-15 05:00:18+00:00
     date-closed: null
+  craft-providers-578:
+    type: pr
+    date-opened: 2024-06-16 18:53:50+00:00
+    date-closed: null
