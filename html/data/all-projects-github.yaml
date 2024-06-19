@@ -38559,3 +38559,31 @@ issues:
     type: pr
     date-opened: 2024-06-17 14:00:24+00:00
     date-closed: null
+  craft-providers-581:
+    type: pr
+    date-opened: 2024-06-18 11:34:37+00:00
+    date-closed: 2024-06-18 17:56:01+00:00
+  craft-providers-580:
+    type: issue
+    date-opened: 2024-06-18 07:13:51+00:00
+    date-closed: 2024-06-18 17:56:02+00:00
+  craft-store-186:
+    type: pr
+    date-opened: 2024-06-18 17:53:51+00:00
+    date-closed: null
+  rockcraft-586:
+    type: pr
+    date-opened: 2024-06-18 14:22:44+00:00
+    date-closed: null
+  snapcraft-4863:
+    type: pr
+    date-opened: 2024-06-18 23:00:34+00:00
+    date-closed: null
+  snapcraft-4862:
+    type: pr
+    date-opened: 2024-06-18 19:45:23+00:00
+    date-closed: null
+  snapcraft-4861:
+    type: issue
+    date-opened: 2024-06-18 19:08:37+00:00
+    date-closed: null
