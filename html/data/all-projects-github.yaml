@@ -38534,7 +38534,7 @@ issues:
   rockcraft-585:
     type: issue
     date-opened: 2024-06-17 13:55:48+00:00
-    date-closed: null
+    date-closed: 2024-06-20 11:06:28+00:00
   rockcraft-584:
     type: issue
     date-opened: 2024-06-17 12:32:44+00:00
@@ -38594,7 +38594,7 @@ issues:
   craft-parts-757:
     type: pr
     date-opened: 2024-06-20 02:39:56+00:00
-    date-closed: null
+    date-closed: 2024-06-20 15:10:11+00:00
   craft-parts-756:
     type: pr
     date-opened: 2024-06-19 12:40:22+00:00
@@ -38614,7 +38614,7 @@ issues:
   rockcraft-592:
     type: pr
     date-opened: 2024-06-19 19:45:53+00:00
-    date-closed: null
+    date-closed: 2024-06-20 11:06:27+00:00
   rockcraft-591:
     type: issue
     date-opened: 2024-06-19 19:04:57+00:00
@@ -38630,7 +38630,7 @@ issues:
   rockcraft-588:
     type: pr
     date-opened: 2024-06-19 17:46:13+00:00
-    date-closed: null
+    date-closed: 2024-06-20 22:11:10+00:00
   rockcraft-587:
     type: issue
     date-opened: 2024-06-19 13:50:45+00:00
@@ -38643,3 +38643,43 @@ issues:
     type: pr
     date-opened: 2024-06-19 12:21:45+00:00
     date-closed: 2024-06-19 17:22:11+00:00
+  craft-application-362:
+    type: pr
+    date-opened: 2024-06-20 21:38:56+00:00
+    date-closed: null
+  craft-parts-758:
+    type: pr
+    date-opened: 2024-06-20 15:12:04+00:00
+    date-closed: 2024-06-21 02:48:16+00:00
+  craft-providers-585:
+    type: pr
+    date-opened: 2024-06-20 23:18:20+00:00
+    date-closed: null
+  craft-providers-584:
+    type: issue
+    date-opened: 2024-06-20 16:39:00+00:00
+    date-closed: null
+  craft-providers-583:
+    type: issue
+    date-opened: 2024-06-20 14:14:19+00:00
+    date-closed: null
+  rockcraft-597:
+    type: pr
+    date-opened: 2024-06-20 15:16:35+00:00
+    date-closed: null
+  rockcraft-596:
+    type: pr
+    date-opened: 2024-06-20 13:30:19+00:00
+    date-closed: null
+  rockcraft-595:
+    type: pr
+    date-opened: 2024-06-20 09:40:48+00:00
+    date-closed: null
+  rockcraft-594:
+    type: pr
+    date-opened: 2024-06-20 05:42:54+00:00
+    date-closed: null
+  snapcraft-4866:
+    type: issue
+    date-opened: 2024-06-20 15:09:16+00:00
+    date-closed: null

@@ -3018,7 +3018,7 @@ issues:
   757:
     type: pr
     date-opened: 2024-06-20 02:39:56+00:00
-    date-closed: null
+    date-closed: 2024-06-20 15:10:11+00:00
   756:
     type: pr
     date-opened: 2024-06-19 12:40:22+00:00
@@ -3027,3 +3027,7 @@ issues:
     type: pr
     date-opened: 2024-06-19 11:58:49+00:00
     date-closed: null
+  758:
+    type: pr
+    date-opened: 2024-06-20 15:12:04+00:00
+    date-closed: 2024-06-21 02:48:16+00:00
