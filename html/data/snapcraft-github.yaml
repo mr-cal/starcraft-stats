@@ -19410,7 +19410,7 @@ issues:
   4862:
     type: pr
     date-opened: 2024-06-18 19:45:23+00:00
-    date-closed: null
+    date-closed: 2024-06-21 20:20:46+00:00
   4861:
     type: issue
     date-opened: 2024-06-18 19:08:37+00:00
@@ -19418,7 +19418,7 @@ issues:
   4865:
     type: issue
     date-opened: 2024-06-19 19:19:41+00:00
-    date-closed: null
+    date-closed: 2024-06-21 20:28:43+00:00
   4864:
     type: pr
     date-opened: 2024-06-19 12:21:45+00:00
@@ -19426,4 +19426,16 @@ issues:
   4866:
     type: issue
     date-opened: 2024-06-20 15:09:16+00:00
+    date-closed: 2024-06-21 18:10:58+00:00
+  4869:
+    type: issue
+    date-opened: 2024-06-21 22:50:23+00:00
+    date-closed: null
+  4868:
+    type: issue
+    date-opened: 2024-06-21 14:15:36+00:00
+    date-closed: null
+  4867:
+    type: issue
+    date-opened: 2024-06-21 10:58:42+00:00
     date-closed: null

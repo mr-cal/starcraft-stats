@@ -1426,7 +1426,7 @@ issues:
   358:
     type: pr
     date-opened: 2024-06-06 15:38:24+00:00
-    date-closed: null
+    date-closed: 2024-06-21 20:42:24+00:00
   359:
     type: pr
     date-opened: 2024-06-11 21:13:28+00:00
@@ -1438,8 +1438,16 @@ issues:
   361:
     type: pr
     date-opened: 2024-06-20 02:44:41+00:00
-    date-closed: null
+    date-closed: 2024-06-21 11:59:42+00:00
   362:
     type: pr
     date-opened: 2024-06-20 21:38:56+00:00
-    date-closed: null
+    date-closed: 2024-06-21 12:17:52+00:00
+  364:
+    type: pr
+    date-opened: 2024-06-21 17:28:56+00:00
+    date-closed: 2024-06-21 17:57:43+00:00
+  363:
+    type: pr
+    date-opened: 2024-06-21 13:15:56+00:00
+    date-closed: 2024-06-21 17:57:01+00:00
