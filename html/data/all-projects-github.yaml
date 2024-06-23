@@ -38706,7 +38706,7 @@ issues:
   rockcraft-604:
     type: pr
     date-opened: 2024-06-22 02:04:28+00:00
-    date-closed: null
+    date-closed: 2024-06-22 13:53:00+00:00
   rockcraft-603:
     type: pr
     date-opened: 2024-06-21 21:35:17+00:00
@@ -38743,3 +38743,15 @@ issues:
     type: issue
     date-opened: 2024-06-21 10:58:42+00:00
     date-closed: null
+  craft-providers-586:
+    type: pr
+    date-opened: 2024-06-22 05:16:05+00:00
+    date-closed: null
+  rockcraft-606:
+    type: pr
+    date-opened: 2024-06-22 13:26:56+00:00
+    date-closed: null
+  rockcraft-605:
+    type: pr
+    date-opened: 2024-06-22 07:24:54+00:00
+    date-closed: 2024-06-22 10:34:59+00:00

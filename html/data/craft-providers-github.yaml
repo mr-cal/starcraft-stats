@@ -2335,3 +2335,7 @@ issues:
     type: issue
     date-opened: 2024-06-20 14:14:19+00:00
     date-closed: null
+  586:
+    type: pr
+    date-opened: 2024-06-22 05:16:05+00:00
+    date-closed: null
