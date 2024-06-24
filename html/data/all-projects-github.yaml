@@ -17454,7 +17454,7 @@ issues:
   snapcraft-4288:
     type: pr
     date-opened: 2023-07-21 09:10:08+00:00
-    date-closed: null
+    date-closed: 2024-06-24 01:44:50+00:00
   snapcraft-4287:
     type: issue
     date-opened: 2023-07-20 15:23:48+00:00
@@ -38755,3 +38755,11 @@ issues:
     type: pr
     date-opened: 2024-06-22 07:24:54+00:00
     date-closed: 2024-06-22 10:34:59+00:00
+  snapcraft-4871:
+    type: issue
+    date-opened: 2024-06-23 20:34:50+00:00
+    date-closed: 2024-06-23 20:37:06+00:00
+  snapcraft-4870:
+    type: issue
+    date-opened: 2024-06-23 15:35:49+00:00
+    date-closed: null
