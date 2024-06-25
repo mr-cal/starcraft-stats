@@ -2419,3 +2419,27 @@ issues:
     type: pr
     date-opened: 2024-06-22 07:24:54+00:00
     date-closed: 2024-06-22 10:34:59+00:00
+  612:
+    type: pr
+    date-opened: 2024-06-24 18:10:05+00:00
+    date-closed: null
+  611:
+    type: pr
+    date-opened: 2024-06-24 12:35:23+00:00
+    date-closed: 2024-06-24 14:42:53+00:00
+  610:
+    type: issue
+    date-opened: 2024-06-24 11:33:51+00:00
+    date-closed: null
+  609:
+    type: pr
+    date-opened: 2024-06-24 07:41:01+00:00
+    date-closed: 2024-06-24 14:42:11+00:00
+  608:
+    type: issue
+    date-opened: 2024-06-24 07:15:07+00:00
+    date-closed: null
+  607:
+    type: pr
+    date-opened: 2024-06-24 05:12:04+00:00
+    date-closed: 2024-06-24 11:42:33+00:00

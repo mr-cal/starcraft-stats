@@ -19446,4 +19446,12 @@ issues:
   4870:
     type: issue
     date-opened: 2024-06-23 15:35:49+00:00
+    date-closed: 2024-06-24 12:10:55+00:00
+  4873:
+    type: pr
+    date-opened: 2024-06-24 23:06:38+00:00
+    date-closed: null
+  4872:
+    type: pr
+    date-opened: 2024-06-24 13:19:35+00:00
     date-closed: null

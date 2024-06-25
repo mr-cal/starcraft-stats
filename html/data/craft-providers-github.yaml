@@ -2306,7 +2306,7 @@ issues:
   578:
     type: pr
     date-opened: 2024-06-16 18:53:50+00:00
-    date-closed: null
+    date-closed: 2024-06-24 12:00:34+00:00
   579:
     type: issue
     date-opened: 2024-06-17 13:08:56+00:00
@@ -2338,4 +2338,12 @@ issues:
   586:
     type: pr
     date-opened: 2024-06-22 05:16:05+00:00
+    date-closed: null
+  588:
+    type: pr
+    date-opened: 2024-06-24 20:05:46+00:00
+    date-closed: null
+  587:
+    type: pr
+    date-opened: 2024-06-24 17:33:56+00:00
     date-closed: null
