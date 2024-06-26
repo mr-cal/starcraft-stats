@@ -2414,7 +2414,7 @@ issues:
   606:
     type: pr
     date-opened: 2024-06-22 13:26:56+00:00
-    date-closed: null
+    date-closed: 2024-06-25 14:14:25+00:00
   605:
     type: pr
     date-opened: 2024-06-22 07:24:54+00:00
@@ -2422,7 +2422,7 @@ issues:
   612:
     type: pr
     date-opened: 2024-06-24 18:10:05+00:00
-    date-closed: null
+    date-closed: 2024-06-25 11:20:34+00:00
   611:
     type: pr
     date-opened: 2024-06-24 12:35:23+00:00
@@ -2443,3 +2443,23 @@ issues:
     type: pr
     date-opened: 2024-06-24 05:12:04+00:00
     date-closed: 2024-06-24 11:42:33+00:00
+  617:
+    type: issue
+    date-opened: 2024-06-25 19:23:31+00:00
+    date-closed: null
+  616:
+    type: pr
+    date-opened: 2024-06-25 14:31:07+00:00
+    date-closed: null
+  615:
+    type: pr
+    date-opened: 2024-06-25 12:51:15+00:00
+    date-closed: 2024-06-25 13:28:18+00:00
+  614:
+    type: pr
+    date-opened: 2024-06-25 12:20:49+00:00
+    date-closed: 2024-06-25 12:45:32+00:00
+  613:
+    type: issue
+    date-opened: 2024-06-25 10:50:20+00:00
+    date-closed: null
