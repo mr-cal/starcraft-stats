@@ -38826,7 +38826,7 @@ issues:
   craft-parts-764:
     type: pr
     date-opened: 2024-06-25 18:57:02+00:00
-    date-closed: null
+    date-closed: 2024-06-26 14:47:45+00:00
   craft-parts-763:
     type: pr
     date-opened: 2024-06-25 14:25:03+00:00
@@ -38863,3 +38863,31 @@ issues:
     type: issue
     date-opened: 2024-06-25 06:14:49+00:00
     date-closed: null
+  charmcraft-1711:
+    type: pr
+    date-opened: 2024-06-26 23:33:24+00:00
+    date-closed: null
+  craft-grammar-31:
+    type: issue
+    date-opened: 2024-06-27 00:34:28+00:00
+    date-closed: null
+  rockcraft-618:
+    type: issue
+    date-opened: 2024-06-26 16:28:32+00:00
+    date-closed: null
+  snapcraft-4880:
+    type: issue
+    date-opened: 2024-06-27 00:09:12+00:00
+    date-closed: null
+  snapcraft-4879:
+    type: issue
+    date-opened: 2024-06-26 20:50:13+00:00
+    date-closed: null
+  snapcraft-4878:
+    type: issue
+    date-opened: 2024-06-26 20:46:47+00:00
+    date-closed: null
+  snapcraft-4877:
+    type: pr
+    date-opened: 2024-06-26 13:21:32+00:00
+    date-closed: 2024-06-26 18:39:41+00:00
