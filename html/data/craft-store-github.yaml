@@ -738,8 +738,12 @@ issues:
   185:
     type: pr
     date-opened: 2024-06-15 03:29:33+00:00
-    date-closed: null
+    date-closed: 2024-06-28 15:23:11+00:00
   186:
     type: pr
     date-opened: 2024-06-18 17:53:51+00:00
     date-closed: 2024-06-27 18:49:33+00:00
+  187:
+    type: pr
+    date-opened: 2024-06-29 03:23:19+00:00
+    date-closed: null
