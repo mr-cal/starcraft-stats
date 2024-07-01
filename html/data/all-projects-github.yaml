@@ -38951,3 +38951,7 @@ issues:
     type: pr
     date-opened: 2024-06-29 07:38:52+00:00
     date-closed: null
+  snapcraft-4888:
+    type: pr
+    date-opened: 2024-06-30 05:48:11+00:00
+    date-closed: null
