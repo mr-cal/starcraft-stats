@@ -19386,7 +19386,7 @@ issues:
   4860:
     type: pr
     date-opened: 2024-06-18 01:23:27+00:00
-    date-closed: null
+    date-closed: 2024-07-02 18:21:22+00:00
   4859:
     type: pr
     date-opened: 2024-06-18 01:22:30+00:00
@@ -19494,7 +19494,7 @@ issues:
   4887:
     type: pr
     date-opened: 2024-06-28 23:50:28+00:00
-    date-closed: null
+    date-closed: 2024-07-02 18:20:19+00:00
   4886:
     type: issue
     date-opened: 2024-06-28 19:23:49+00:00
@@ -19518,4 +19518,8 @@ issues:
   4889:
     type: issue
     date-opened: 2024-07-01 15:51:02+00:00
+    date-closed: null
+  4890:
+    type: issue
+    date-opened: 2024-07-02 16:26:56+00:00
     date-closed: null
