@@ -1470,4 +1470,24 @@ issues:
   369:
     type: pr
     date-opened: 2024-07-03 01:24:29+00:00
+    date-closed: 2024-07-03 11:53:01+00:00
+  374:
+    type: pr
+    date-opened: 2024-07-03 21:27:11+00:00
+    date-closed: null
+  373:
+    type: pr
+    date-opened: 2024-07-03 20:23:38+00:00
+    date-closed: null
+  372:
+    type: pr
+    date-opened: 2024-07-03 18:58:45+00:00
+    date-closed: 2024-07-03 20:41:16+00:00
+  371:
+    type: pr
+    date-opened: 2024-07-03 14:58:48+00:00
+    date-closed: null
+  370:
+    type: issue
+    date-opened: 2024-07-03 12:41:55+00:00
     date-closed: null
