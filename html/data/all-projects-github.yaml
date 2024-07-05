@@ -37850,7 +37850,7 @@ issues:
   rockcraft-570:
     type: pr
     date-opened: 2024-05-15 07:22:38+00:00
-    date-closed: null
+    date-closed: 2024-07-04 08:35:17+00:00
   snapcraft-4808:
     type: pr
     date-opened: 2024-05-15 12:57:14+00:00
@@ -39034,7 +39034,7 @@ issues:
   craft-application-374:
     type: pr
     date-opened: 2024-07-03 21:27:11+00:00
-    date-closed: null
+    date-closed: 2024-07-04 17:36:24+00:00
   craft-application-373:
     type: pr
     date-opened: 2024-07-03 20:23:38+00:00
@@ -39058,4 +39058,60 @@ issues:
   snapcraft-4891:
     type: issue
     date-opened: 2024-07-03 12:08:58+00:00
+    date-closed: null
+  charmcraft-1719:
+    type: issue
+    date-opened: 2024-07-04 18:41:20+00:00
+    date-closed: null
+  charmcraft-1718:
+    type: pr
+    date-opened: 2024-07-04 07:33:04+00:00
+    date-closed: null
+  charmcraft-1717:
+    type: issue
+    date-opened: 2024-07-04 06:44:48+00:00
+    date-closed: null
+  craft-application-376:
+    type: pr
+    date-opened: 2024-07-04 20:38:09+00:00
+    date-closed: null
+  craft-application-375:
+    type: pr
+    date-opened: 2024-07-04 17:54:30+00:00
+    date-closed: 2024-07-04 18:14:27+00:00
+  craft-parts-770:
+    type: issue
+    date-opened: 2024-07-05 01:08:39+00:00
+    date-closed: null
+  rockcraft-629:
+    type: issue
+    date-opened: 2024-07-05 01:28:34+00:00
+    date-closed: null
+  rockcraft-628:
+    type: issue
+    date-opened: 2024-07-05 01:23:30+00:00
+    date-closed: null
+  rockcraft-627:
+    type: issue
+    date-opened: 2024-07-05 01:14:47+00:00
+    date-closed: null
+  rockcraft-626:
+    type: issue
+    date-opened: 2024-07-05 00:58:40+00:00
+    date-closed: null
+  rockcraft-625:
+    type: issue
+    date-opened: 2024-07-04 22:52:42+00:00
+    date-closed: null
+  rockcraft-624:
+    type: pr
+    date-opened: 2024-07-04 18:45:57+00:00
+    date-closed: null
+  rockcraft-623:
+    type: pr
+    date-opened: 2024-07-04 04:22:59+00:00
+    date-closed: null
+  starbase-224:
+    type: pr
+    date-opened: 2024-07-04 21:07:31+00:00
     date-closed: null
