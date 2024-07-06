@@ -462,7 +462,7 @@ issues:
   111:
     type: pr
     date-opened: 2024-05-22 16:07:11+00:00
-    date-closed: null
+    date-closed: 2024-07-05 13:21:34+00:00
   110:
     type: issue
     date-opened: 2024-05-22 15:58:38+00:00
@@ -474,8 +474,12 @@ issues:
   119:
     type: pr
     date-opened: 2024-06-11 21:08:04+00:00
-    date-closed: null
+    date-closed: 2024-07-05 13:16:41+00:00
   120:
     type: pr
     date-opened: 2024-06-25 13:07:08+00:00
-    date-closed: null
+    date-closed: 2024-07-05 13:09:45+00:00
+  121:
+    type: pr
+    date-opened: 2024-07-05 13:30:03+00:00
+    date-closed: 2024-07-05 19:04:55+00:00

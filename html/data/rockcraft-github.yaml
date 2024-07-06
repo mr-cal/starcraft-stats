@@ -2482,7 +2482,7 @@ issues:
   621:
     type: issue
     date-opened: 2024-07-03 01:11:22+00:00
-    date-closed: null
+    date-closed: 2024-07-05 12:06:14+00:00
   629:
     type: issue
     date-opened: 2024-07-05 01:28:34+00:00
@@ -2506,8 +2506,12 @@ issues:
   624:
     type: pr
     date-opened: 2024-07-04 18:45:57+00:00
-    date-closed: null
+    date-closed: 2024-07-05 18:55:26+00:00
   623:
     type: pr
     date-opened: 2024-07-04 04:22:59+00:00
     date-closed: null
+  630:
+    type: pr
+    date-opened: 2024-07-05 19:00:36+00:00
+    date-closed: 2024-07-05 23:23:32+00:00
