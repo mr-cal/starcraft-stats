@@ -2359,3 +2359,7 @@ issues:
     type: issue
     date-opened: 2024-07-05 21:18:35+00:00
     date-closed: null
+  592:
+    type: pr
+    date-opened: 2024-07-06 05:30:48+00:00
+    date-closed: null

@@ -39159,3 +39159,11 @@ issues:
     type: pr
     date-opened: 2024-07-05 17:31:23+00:00
     date-closed: null
+  charmcraft-1720:
+    type: pr
+    date-opened: 2024-07-06 04:22:42+00:00
+    date-closed: null
+  craft-providers-592:
+    type: pr
+    date-opened: 2024-07-06 05:30:48+00:00
+    date-closed: null
