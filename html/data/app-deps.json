@@ -350,8 +350,8 @@
         },
         "snapcraft/hotfix/8.3": {
             "craft-application": {
-                "series": "2.8",
-                "version": "2.8.0",
+                "series": "3.1",
+                "version": "3.1.0",
                 "latest": "",
                 "outdated": false
             },
@@ -362,8 +362,8 @@
                 "outdated": false
             },
             "craft-cli": {
-                "series": "2.5",
-                "version": "2.5.1",
+                "series": "2.6",
+                "version": "2.6.0",
                 "latest": "",
                 "outdated": false
             },
@@ -374,8 +374,8 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "1.32",
-                "version": "1.32.0",
+                "series": "1.33",
+                "version": "1.33.0",
                 "latest": "",
                 "outdated": false
             },

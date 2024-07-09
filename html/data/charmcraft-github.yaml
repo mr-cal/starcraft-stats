@@ -6851,3 +6851,7 @@ issues:
     type: pr
     date-opened: 2024-07-06 04:22:42+00:00
     date-closed: null
+  1721:
+    type: issue
+    date-opened: 2024-07-08 08:15:12+00:00
+    date-closed: null
