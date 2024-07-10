@@ -39190,4 +39190,48 @@ issues:
   snapcraft-4899:
     type: pr
     date-opened: 2024-07-08 19:56:23+00:00
+    date-closed: 2024-07-09 19:25:58+00:00
+  charmcraft-1724:
+    type: pr
+    date-opened: 2024-07-09 22:03:40+00:00
+    date-closed: null
+  charmcraft-1723:
+    type: pr
+    date-opened: 2024-07-09 13:44:15+00:00
+    date-closed: null
+  charmcraft-1722:
+    type: issue
+    date-opened: 2024-07-09 07:07:54+00:00
+    date-closed: 2024-07-09 07:34:50+00:00
+  craft-application-379:
+    type: issue
+    date-opened: 2024-07-09 19:42:54+00:00
+    date-closed: null
+  craft-application-378:
+    type: issue
+    date-opened: 2024-07-09 14:13:03+00:00
+    date-closed: null
+  craft-parts-773:
+    type: pr
+    date-opened: 2024-07-09 21:10:34+00:00
+    date-closed: null
+  craft-parts-772:
+    type: issue
+    date-opened: 2024-07-09 15:48:16+00:00
+    date-closed: null
+  snapcraft-4903:
+    type: pr
+    date-opened: 2024-07-09 19:26:40+00:00
+    date-closed: null
+  snapcraft-4902:
+    type: pr
+    date-opened: 2024-07-09 18:49:49+00:00
+    date-closed: null
+  snapcraft-4901:
+    type: pr
+    date-opened: 2024-07-09 18:49:28+00:00
+    date-closed: null
+  snapcraft-4900:
+    type: pr
+    date-opened: 2024-07-09 12:48:02+00:00
     date-closed: null

@@ -6855,3 +6855,15 @@ issues:
     type: issue
     date-opened: 2024-07-08 08:15:12+00:00
     date-closed: null
+  1724:
+    type: pr
+    date-opened: 2024-07-09 22:03:40+00:00
+    date-closed: null
+  1723:
+    type: pr
+    date-opened: 2024-07-09 13:44:15+00:00
+    date-closed: null
+  1722:
+    type: issue
+    date-opened: 2024-07-09 07:07:54+00:00
+    date-closed: 2024-07-09 07:34:50+00:00
