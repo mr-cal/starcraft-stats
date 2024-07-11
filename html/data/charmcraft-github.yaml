@@ -638,7 +638,7 @@ issues:
   1456:
     type: issue
     date-opened: 2024-01-03 15:44:45+00:00
-    date-closed: null
+    date-closed: 2024-07-10 16:08:32+00:00
   1455:
     type: pr
     date-opened: 2023-12-15 22:52:02+00:00
@@ -6834,7 +6834,7 @@ issues:
   1716:
     type: pr
     date-opened: 2024-07-02 19:15:02+00:00
-    date-closed: null
+    date-closed: 2024-07-10 16:08:31+00:00
   1719:
     type: issue
     date-opened: 2024-07-04 18:41:20+00:00

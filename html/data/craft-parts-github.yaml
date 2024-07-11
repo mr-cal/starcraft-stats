@@ -3082,12 +3082,24 @@ issues:
   771:
     type: pr
     date-opened: 2024-07-08 21:54:50+00:00
-    date-closed: null
+    date-closed: 2024-07-10 18:13:34+00:00
   773:
     type: pr
     date-opened: 2024-07-09 21:10:34+00:00
-    date-closed: null
+    date-closed: 2024-07-11 02:25:46+00:00
   772:
     type: issue
     date-opened: 2024-07-09 15:48:16+00:00
+    date-closed: null
+  776:
+    type: pr
+    date-opened: 2024-07-10 21:56:17+00:00
+    date-closed: null
+  775:
+    type: pr
+    date-opened: 2024-07-10 15:50:43+00:00
+    date-closed: null
+  774:
+    type: pr
+    date-opened: 2024-07-10 14:49:26+00:00
     date-closed: null
