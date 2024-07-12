@@ -37762,7 +37762,7 @@ issues:
   rockcraft-567:
     type: pr
     date-opened: 2024-05-10 21:28:34+00:00
-    date-closed: null
+    date-closed: 2024-07-11 21:09:40+00:00
   rockcraft-566:
     type: pr
     date-opened: 2024-05-10 13:05:11+00:00
@@ -38978,7 +38978,7 @@ issues:
   rockcraft-619:
     type: issue
     date-opened: 2024-07-01 13:59:11+00:00
-    date-closed: null
+    date-closed: 2024-07-11 15:03:09+00:00
   snapcraft-4889:
     type: issue
     date-opened: 2024-07-01 15:51:02+00:00
@@ -39158,7 +39158,7 @@ issues:
   starbase-225:
     type: pr
     date-opened: 2024-07-05 17:31:23+00:00
-    date-closed: null
+    date-closed: 2024-07-11 12:44:24+00:00
   charmcraft-1720:
     type: pr
     date-opened: 2024-07-06 04:22:42+00:00
@@ -39250,7 +39250,7 @@ issues:
   snapcraft-4907:
     type: pr
     date-opened: 2024-07-10 18:04:20+00:00
-    date-closed: null
+    date-closed: 2024-07-11 14:46:59+00:00
   snapcraft-4906:
     type: pr
     date-opened: 2024-07-10 17:00:08+00:00
@@ -39258,8 +39258,48 @@ issues:
   snapcraft-4905:
     type: pr
     date-opened: 2024-07-10 13:57:07+00:00
-    date-closed: 2024-07-10 18:49:43+00:00
+    date-closed: 2024-07-11 20:55:41+00:00
   snapcraft-4904:
     type: pr
     date-opened: 2024-07-10 12:56:18+00:00
+    date-closed: null
+  craft-application-381:
+    type: pr
+    date-opened: 2024-07-11 14:20:25+00:00
+    date-closed: 2024-07-11 15:56:04+00:00
+  craft-application-380:
+    type: pr
+    date-opened: 2024-07-11 14:06:54+00:00
+    date-closed: null
+  craft-providers-593:
+    type: issue
+    date-opened: 2024-07-11 17:08:41+00:00
+    date-closed: null
+  rockcraft-635:
+    type: pr
+    date-opened: 2024-07-11 19:02:52+00:00
+    date-closed: 2024-07-12 00:51:59+00:00
+  rockcraft-634:
+    type: pr
+    date-opened: 2024-07-11 14:43:26+00:00
+    date-closed: null
+  snapcraft-4912:
+    type: issue
+    date-opened: 2024-07-12 01:12:30+00:00
+    date-closed: null
+  snapcraft-4911:
+    type: issue
+    date-opened: 2024-07-11 18:47:29+00:00
+    date-closed: null
+  snapcraft-4910:
+    type: issue
+    date-opened: 2024-07-11 17:12:18+00:00
+    date-closed: null
+  snapcraft-4909:
+    type: issue
+    date-opened: 2024-07-11 17:01:21+00:00
+    date-closed: null
+  snapcraft-4908:
+    type: issue
+    date-opened: 2024-07-11 12:41:08+00:00
     date-closed: null
