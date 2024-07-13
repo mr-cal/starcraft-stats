@@ -1466,7 +1466,7 @@ issues:
   368:
     type: issue
     date-opened: 2024-07-01 13:07:31+00:00
-    date-closed: null
+    date-closed: 2024-07-12 15:21:24+00:00
   369:
     type: pr
     date-opened: 2024-07-03 01:24:29+00:00
@@ -1518,4 +1518,12 @@ issues:
   380:
     type: pr
     date-opened: 2024-07-11 14:06:54+00:00
+    date-closed: 2024-07-12 15:21:23+00:00
+  383:
+    type: pr
+    date-opened: 2024-07-12 15:33:02+00:00
+    date-closed: 2024-07-12 15:56:33+00:00
+  382:
+    type: issue
+    date-opened: 2024-07-12 04:30:34+00:00
     date-closed: null
