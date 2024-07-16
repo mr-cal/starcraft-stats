@@ -3118,8 +3118,12 @@ issues:
   778:
     type: pr
     date-opened: 2024-07-12 17:45:57+00:00
-    date-closed: null
+    date-closed: 2024-07-15 17:45:00+00:00
   777:
     type: issue
     date-opened: 2024-07-12 16:48:13+00:00
+    date-closed: null
+  782:
+    type: pr
+    date-opened: 2024-07-16 00:18:40+00:00
     date-closed: null
