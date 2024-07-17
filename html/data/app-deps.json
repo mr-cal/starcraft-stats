@@ -50,8 +50,8 @@
                 "outdated": true
             },
             "craft-providers": {
-                "series": "1.23",
-                "version": "1.23.1",
+                "series": "1.24",
+                "version": "1.24.1",
                 "latest": "0.0.0",
                 "outdated": true
             },

@@ -1254,7 +1254,7 @@ issues:
   381:
     type: issue
     date-opened: 2023-02-23 04:35:49+00:00
-    date-closed: null
+    date-closed: 2024-07-16 21:20:48+00:00
   380:
     type: issue
     date-opened: 2023-02-23 04:23:14+00:00
@@ -1402,7 +1402,7 @@ issues:
   344:
     type: issue
     date-opened: 2023-01-04 15:45:22+00:00
-    date-closed: null
+    date-closed: 2024-07-16 21:23:14+00:00
   343:
     type: pr
     date-opened: 2023-01-02 19:59:48+00:00
@@ -3126,4 +3126,16 @@ issues:
   782:
     type: pr
     date-opened: 2024-07-16 00:18:40+00:00
+    date-closed: null
+  785:
+    type: pr
+    date-opened: 2024-07-16 22:19:24+00:00
+    date-closed: null
+  784:
+    type: pr
+    date-opened: 2024-07-16 22:19:21+00:00
+    date-closed: null
+  783:
+    type: pr
+    date-opened: 2024-07-16 17:35:35+00:00
     date-closed: null

@@ -6442,7 +6442,7 @@ issues:
   1638:
     type: pr
     date-opened: 2024-04-10 21:35:30+00:00
-    date-closed: null
+    date-closed: 2024-07-16 21:38:41+00:00
   1637:
     type: pr
     date-opened: 2024-04-10 21:35:27+00:00
@@ -6634,7 +6634,7 @@ issues:
   1667:
     type: issue
     date-opened: 2024-04-24 18:44:07+00:00
-    date-closed: null
+    date-closed: 2024-07-16 21:32:13+00:00
   1666:
     type: pr
     date-opened: 2024-04-24 18:12:20+00:00
@@ -6702,7 +6702,7 @@ issues:
   1685:
     type: issue
     date-opened: 2024-05-16 15:19:02+00:00
-    date-closed: null
+    date-closed: 2024-07-16 22:02:20+00:00
   1684:
     type: issue
     date-opened: 2024-05-16 15:16:49+00:00
@@ -6842,7 +6842,7 @@ issues:
   1718:
     type: pr
     date-opened: 2024-07-04 07:33:04+00:00
-    date-closed: null
+    date-closed: 2024-07-16 21:29:32+00:00
   1717:
     type: issue
     date-opened: 2024-07-04 06:44:48+00:00
@@ -6850,7 +6850,7 @@ issues:
   1720:
     type: pr
     date-opened: 2024-07-06 04:22:42+00:00
-    date-closed: null
+    date-closed: 2024-07-16 21:29:32+00:00
   1721:
     type: issue
     date-opened: 2024-07-08 08:15:12+00:00
@@ -6858,7 +6858,7 @@ issues:
   1724:
     type: pr
     date-opened: 2024-07-09 22:03:40+00:00
-    date-closed: null
+    date-closed: 2024-07-16 20:41:54+00:00
   1723:
     type: pr
     date-opened: 2024-07-09 13:44:15+00:00
@@ -6870,15 +6870,15 @@ issues:
   1725:
     type: pr
     date-opened: 2024-07-12 15:24:52+00:00
-    date-closed: null
+    date-closed: 2024-07-16 18:53:39+00:00
   1732:
     type: pr
     date-opened: 2024-07-16 00:56:01+00:00
-    date-closed: null
+    date-closed: 2024-07-16 20:52:11+00:00
   1731:
     type: pr
     date-opened: 2024-07-16 00:21:44+00:00
-    date-closed: null
+    date-closed: 2024-07-16 17:24:44+00:00
   1730:
     type: pr
     date-opened: 2024-07-15 23:03:09+00:00
@@ -6898,4 +6898,20 @@ issues:
   1726:
     type: pr
     date-opened: 2024-07-15 19:38:22+00:00
+    date-closed: 2024-07-16 18:46:24+00:00
+  1736:
+    type: pr
+    date-opened: 2024-07-16 22:17:56+00:00
+    date-closed: null
+  1735:
+    type: pr
+    date-opened: 2024-07-16 21:55:38+00:00
+    date-closed: null
+  1734:
+    type: pr
+    date-opened: 2024-07-16 18:20:28+00:00
+    date-closed: null
+  1733:
+    type: issue
+    date-opened: 2024-07-16 16:56:34+00:00
     date-closed: null
