@@ -6862,7 +6862,7 @@ issues:
   1723:
     type: pr
     date-opened: 2024-07-09 13:44:15+00:00
-    date-closed: null
+    date-closed: 2024-07-17 16:40:37+00:00
   1722:
     type: issue
     date-opened: 2024-07-09 07:07:54+00:00
@@ -6882,7 +6882,7 @@ issues:
   1730:
     type: pr
     date-opened: 2024-07-15 23:03:09+00:00
-    date-closed: null
+    date-closed: 2024-07-17 18:37:02+00:00
   1729:
     type: pr
     date-opened: 2024-07-15 22:30:24+00:00
@@ -6906,12 +6906,16 @@ issues:
   1735:
     type: pr
     date-opened: 2024-07-16 21:55:38+00:00
-    date-closed: null
+    date-closed: 2024-07-17 20:59:02+00:00
   1734:
     type: pr
     date-opened: 2024-07-16 18:20:28+00:00
-    date-closed: null
+    date-closed: 2024-07-17 18:04:29+00:00
   1733:
     type: issue
     date-opened: 2024-07-16 16:56:34+00:00
     date-closed: null
+  1737:
+    type: pr
+    date-opened: 2024-07-17 19:20:56+00:00
+    date-closed: 2024-07-17 20:58:44+00:00

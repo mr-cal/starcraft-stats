@@ -1554,4 +1554,8 @@ issues:
   384:
     type: pr
     date-opened: 2024-07-16 14:35:27+00:00
+    date-closed: 2024-07-17 16:54:12+00:00
+  391:
+    type: issue
+    date-opened: 2024-07-17 15:43:15+00:00
     date-closed: null
