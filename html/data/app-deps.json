@@ -20,8 +20,8 @@
     "apps": {
         "charmcraft/main": {
             "craft-application": {
-                "series": "2.7",
-                "version": "2.7.0",
+                "series": "3.2",
+                "version": "3.2.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
@@ -32,8 +32,8 @@
                 "outdated": true
             },
             "craft-cli": {
-                "series": "2.5",
-                "version": "2.5.1",
+                "series": "2.6",
+                "version": "2.6.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
@@ -44,8 +44,8 @@
                 "outdated": true
             },
             "craft-parts": {
-                "series": "1.31",
-                "version": "1.31.0",
+                "series": "1.33",
+                "version": "1.33.0",
                 "latest": "0.0.0",
                 "outdated": true
             },

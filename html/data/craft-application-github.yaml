@@ -1534,15 +1534,15 @@ issues:
   389:
     type: pr
     date-opened: 2024-07-16 22:56:17+00:00
-    date-closed: null
+    date-closed: 2024-07-18 18:23:57+00:00
   388:
     type: pr
     date-opened: 2024-07-16 21:22:18+00:00
-    date-closed: null
+    date-closed: 2024-07-18 17:58:13+00:00
   387:
     type: pr
     date-opened: 2024-07-16 20:04:19+00:00
-    date-closed: null
+    date-closed: 2024-07-18 18:53:30+00:00
   386:
     type: issue
     date-opened: 2024-07-16 17:24:03+00:00
@@ -1550,7 +1550,7 @@ issues:
   385:
     type: issue
     date-opened: 2024-07-16 17:16:46+00:00
-    date-closed: null
+    date-closed: 2024-07-18 17:58:14+00:00
   384:
     type: pr
     date-opened: 2024-07-16 14:35:27+00:00
@@ -1558,4 +1558,8 @@ issues:
   391:
     type: issue
     date-opened: 2024-07-17 15:43:15+00:00
+    date-closed: null
+  392:
+    type: pr
+    date-opened: 2024-07-18 17:25:02+00:00
     date-closed: null
