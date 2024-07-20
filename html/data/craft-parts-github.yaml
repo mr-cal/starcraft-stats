@@ -3134,7 +3134,7 @@ issues:
   784:
     type: pr
     date-opened: 2024-07-16 22:19:21+00:00
-    date-closed: null
+    date-closed: 2024-07-19 20:33:27+00:00
   783:
     type: pr
     date-opened: 2024-07-16 17:35:35+00:00
@@ -3147,3 +3147,7 @@ issues:
     type: pr
     date-opened: 2024-07-18 17:18:10+00:00
     date-closed: 2024-07-18 21:42:43+00:00
+  788:
+    type: issue
+    date-opened: 2024-07-19 15:46:34+00:00
+    date-closed: null

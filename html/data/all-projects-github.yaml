@@ -9006,7 +9006,7 @@ issues:
   charmcraft-1469:
     type: issue
     date-opened: 2024-01-05 16:04:21+00:00
-    date-closed: null
+    date-closed: 2024-07-19 23:24:45+00:00
   charmcraft-1468:
     type: pr
     date-opened: 2024-01-05 13:25:16+00:00
@@ -38454,7 +38454,7 @@ issues:
   snapcraft-4851:
     type: pr
     date-opened: 2024-06-11 22:35:41+00:00
-    date-closed: null
+    date-closed: 2024-07-19 19:10:37+00:00
   snapcraft-4850:
     type: pr
     date-opened: 2024-06-11 21:31:57+00:00
@@ -38962,7 +38962,7 @@ issues:
   charmcraft-1714:
     type: pr
     date-opened: 2024-07-01 15:00:54+00:00
-    date-closed: null
+    date-closed: 2024-07-19 16:52:37+00:00
   charmcraft-1713:
     type: issue
     date-opened: 2024-07-01 13:59:58+00:00
@@ -39070,7 +39070,7 @@ issues:
   charmcraft-1717:
     type: issue
     date-opened: 2024-07-04 06:44:48+00:00
-    date-closed: null
+    date-closed: 2024-07-19 17:24:10+00:00
   craft-application-376:
     type: pr
     date-opened: 2024-07-04 20:38:09+00:00
@@ -39182,7 +39182,7 @@ issues:
   rockcraft-632:
     type: issue
     date-opened: 2024-07-08 12:36:09+00:00
-    date-closed: null
+    date-closed: 2024-07-19 09:06:47+00:00
   rockcraft-631:
     type: pr
     date-opened: 2024-07-08 10:54:00+00:00
@@ -39394,7 +39394,7 @@ issues:
   charmcraft-1727:
     type: pr
     date-opened: 2024-07-15 21:33:02+00:00
-    date-closed: null
+    date-closed: 2024-07-19 21:03:22+00:00
   charmcraft-1726:
     type: pr
     date-opened: 2024-07-15 19:38:22+00:00
@@ -39498,7 +39498,7 @@ issues:
   craft-parts-784:
     type: pr
     date-opened: 2024-07-16 22:19:21+00:00
-    date-closed: null
+    date-closed: 2024-07-19 20:33:27+00:00
   craft-parts-783:
     type: pr
     date-opened: 2024-07-16 17:35:35+00:00
@@ -39546,11 +39546,11 @@ issues:
   charmcraft-1742:
     type: pr
     date-opened: 2024-07-18 21:02:34+00:00
-    date-closed: null
+    date-closed: 2024-07-19 19:51:13+00:00
   charmcraft-1741:
     type: pr
     date-opened: 2024-07-18 19:46:33+00:00
-    date-closed: null
+    date-closed: 2024-07-19 17:24:09+00:00
   charmcraft-1740:
     type: pr
     date-opened: 2024-07-18 18:53:19+00:00
@@ -39566,7 +39566,7 @@ issues:
   craft-application-392:
     type: pr
     date-opened: 2024-07-18 17:25:02+00:00
-    date-closed: null
+    date-closed: 2024-07-19 16:33:12+00:00
   craft-parts-787:
     type: pr
     date-opened: 2024-07-18 17:18:10+00:00
@@ -39578,4 +39578,64 @@ issues:
   snapcraft-4927:
     type: issue
     date-opened: 2024-07-18 09:11:02+00:00
+    date-closed: null
+  charmcraft-1746:
+    type: pr
+    date-opened: 2024-07-19 23:20:32+00:00
+    date-closed: null
+  charmcraft-1745:
+    type: pr
+    date-opened: 2024-07-19 22:53:24+00:00
+    date-closed: null
+  charmcraft-1744:
+    type: pr
+    date-opened: 2024-07-19 21:31:47+00:00
+    date-closed: null
+  charmcraft-1743:
+    type: issue
+    date-opened: 2024-07-19 20:10:51+00:00
+    date-closed: null
+  craft-parts-788:
+    type: issue
+    date-opened: 2024-07-19 15:46:34+00:00
+    date-closed: null
+  craft-providers-600:
+    type: pr
+    date-opened: 2024-07-20 04:01:46+00:00
+    date-closed: null
+  craft-providers-599:
+    type: pr
+    date-opened: 2024-07-19 12:55:37+00:00
+    date-closed: null
+  craft-providers-598:
+    type: issue
+    date-opened: 2024-07-19 12:33:50+00:00
+    date-closed: null
+  rockcraft-644:
+    type: pr
+    date-opened: 2024-07-19 15:34:32+00:00
+    date-closed: null
+  rockcraft-643:
+    type: pr
+    date-opened: 2024-07-19 11:49:51+00:00
+    date-closed: null
+  rockcraft-642:
+    type: pr
+    date-opened: 2024-07-19 11:42:49+00:00
+    date-closed: null
+  rockcraft-641:
+    type: pr
+    date-opened: 2024-07-19 09:58:06+00:00
+    date-closed: 2024-07-19 11:31:47+00:00
+  rockcraft-640:
+    type: pr
+    date-opened: 2024-07-19 08:23:00+00:00
+    date-closed: 2024-07-19 11:33:15+00:00
+  snapcraft-4930:
+    type: issue
+    date-opened: 2024-07-19 20:55:52+00:00
+    date-closed: null
+  snapcraft-4929:
+    type: issue
+    date-opened: 2024-07-19 15:33:27+00:00
     date-closed: null

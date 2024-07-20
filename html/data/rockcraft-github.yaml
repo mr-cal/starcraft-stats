@@ -2522,7 +2522,7 @@ issues:
   632:
     type: issue
     date-opened: 2024-07-08 12:36:09+00:00
-    date-closed: null
+    date-closed: 2024-07-19 09:06:47+00:00
   631:
     type: pr
     date-opened: 2024-07-08 10:54:00+00:00
@@ -2551,3 +2551,23 @@ issues:
     type: issue
     date-opened: 2024-07-17 15:40:50+00:00
     date-closed: null
+  644:
+    type: pr
+    date-opened: 2024-07-19 15:34:32+00:00
+    date-closed: null
+  643:
+    type: pr
+    date-opened: 2024-07-19 11:49:51+00:00
+    date-closed: null
+  642:
+    type: pr
+    date-opened: 2024-07-19 11:42:49+00:00
+    date-closed: null
+  641:
+    type: pr
+    date-opened: 2024-07-19 09:58:06+00:00
+    date-closed: 2024-07-19 11:31:47+00:00
+  640:
+    type: pr
+    date-opened: 2024-07-19 08:23:00+00:00
+    date-closed: 2024-07-19 11:33:15+00:00

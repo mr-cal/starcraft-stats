@@ -19362,7 +19362,7 @@ issues:
   4851:
     type: pr
     date-opened: 2024-06-11 22:35:41+00:00
-    date-closed: null
+    date-closed: 2024-07-19 19:10:37+00:00
   4850:
     type: pr
     date-opened: 2024-06-11 21:31:57+00:00
@@ -19674,4 +19674,12 @@ issues:
   4927:
     type: issue
     date-opened: 2024-07-18 09:11:02+00:00
+    date-closed: null
+  4930:
+    type: issue
+    date-opened: 2024-07-19 20:55:52+00:00
+    date-closed: null
+  4929:
+    type: issue
+    date-opened: 2024-07-19 15:33:27+00:00
     date-closed: null
