@@ -590,7 +590,7 @@ issues:
   4548:
     type: issue
     date-opened: 2024-01-26 20:10:15+00:00
-    date-closed: null
+    date-closed: 2024-07-22 14:23:45+00:00
   4547:
     type: issue
     date-opened: 2024-01-26 17:56:12+00:00
@@ -19666,7 +19666,7 @@ issues:
   4923:
     type: issue
     date-opened: 2024-07-17 10:02:32+00:00
-    date-closed: null
+    date-closed: 2024-07-22 14:41:30+00:00
   4928:
     type: pr
     date-opened: 2024-07-18 18:57:41+00:00
@@ -19682,4 +19682,20 @@ issues:
   4929:
     type: issue
     date-opened: 2024-07-19 15:33:27+00:00
+    date-closed: null
+  4934:
+    type: pr
+    date-opened: 2024-07-22 22:13:10+00:00
+    date-closed: null
+  4933:
+    type: issue
+    date-opened: 2024-07-22 20:18:14+00:00
+    date-closed: null
+  4932:
+    type: issue
+    date-opened: 2024-07-22 13:19:03+00:00
+    date-closed: null
+  4931:
+    type: issue
+    date-opened: 2024-07-22 12:22:08+00:00
     date-closed: null
