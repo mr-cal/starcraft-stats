@@ -1563,3 +1563,11 @@ issues:
     type: pr
     date-opened: 2024-07-18 17:25:02+00:00
     date-closed: 2024-07-19 16:33:12+00:00
+  394:
+    type: issue
+    date-opened: 2024-07-23 19:00:45+00:00
+    date-closed: null
+  393:
+    type: pr
+    date-opened: 2024-07-23 16:58:18+00:00
+    date-closed: null

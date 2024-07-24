@@ -130,7 +130,7 @@ issues:
   511:
     type: issue
     date-opened: 2024-02-27 15:08:33+00:00
-    date-closed: null
+    date-closed: 2024-07-23 14:49:17+00:00
   510:
     type: pr
     date-opened: 2024-02-12 02:22:36+00:00
@@ -2370,7 +2370,7 @@ issues:
   594:
     type: pr
     date-opened: 2024-07-13 03:35:12+00:00
-    date-closed: null
+    date-closed: 2024-07-23 17:32:26+00:00
   595:
     type: pr
     date-opened: 2024-07-13 08:01:12+00:00
@@ -2378,7 +2378,7 @@ issues:
   597:
     type: pr
     date-opened: 2024-07-16 00:47:49+00:00
-    date-closed: null
+    date-closed: 2024-07-23 16:04:14+00:00
   596:
     type: pr
     date-opened: 2024-07-16 00:39:51+00:00
@@ -2398,8 +2398,12 @@ issues:
   602:
     type: pr
     date-opened: 2024-07-22 21:50:52+00:00
-    date-closed: null
+    date-closed: 2024-07-23 14:49:16+00:00
   601:
     type: pr
     date-opened: 2024-07-22 21:47:25+00:00
+    date-closed: 2024-07-23 12:12:18+00:00
+  603:
+    type: pr
+    date-opened: 2024-07-23 18:50:47+00:00
     date-closed: null
