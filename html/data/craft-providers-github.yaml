@@ -370,7 +370,7 @@ issues:
   451:
     type: pr
     date-opened: 2023-11-09 10:39:44+00:00
-    date-closed: null
+    date-closed: 2024-07-24 18:42:24+00:00
   450:
     type: issue
     date-opened: 2023-11-08 11:39:30+00:00
@@ -2386,7 +2386,7 @@ issues:
   600:
     type: pr
     date-opened: 2024-07-20 04:01:46+00:00
-    date-closed: null
+    date-closed: 2024-07-24 12:44:39+00:00
   599:
     type: pr
     date-opened: 2024-07-19 12:55:37+00:00
@@ -2406,4 +2406,16 @@ issues:
   603:
     type: pr
     date-opened: 2024-07-23 18:50:47+00:00
+    date-closed: 2024-07-24 18:46:48+00:00
+  606:
+    type: pr
+    date-opened: 2024-07-24 14:28:50+00:00
+    date-closed: 2024-07-24 19:58:10+00:00
+  605:
+    type: pr
+    date-opened: 2024-07-24 12:52:06+00:00
+    date-closed: null
+  604:
+    type: issue
+    date-opened: 2024-07-24 12:49:35+00:00
     date-closed: null

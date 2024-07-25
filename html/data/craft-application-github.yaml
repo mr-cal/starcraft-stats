@@ -1570,4 +1570,12 @@ issues:
   393:
     type: pr
     date-opened: 2024-07-23 16:58:18+00:00
+    date-closed: 2024-07-24 15:49:14+00:00
+  396:
+    type: pr
+    date-opened: 2024-07-24 18:14:03+00:00
+    date-closed: null
+  395:
+    type: issue
+    date-opened: 2024-07-24 15:10:32+00:00
     date-closed: null
