@@ -2414,8 +2414,20 @@ issues:
   605:
     type: pr
     date-opened: 2024-07-24 12:52:06+00:00
-    date-closed: null
+    date-closed: 2024-07-25 13:23:49+00:00
   604:
     type: issue
     date-opened: 2024-07-24 12:49:35+00:00
+    date-closed: null
+  609:
+    type: pr
+    date-opened: 2024-07-25 19:51:44+00:00
+    date-closed: null
+  608:
+    type: issue
+    date-opened: 2024-07-25 18:36:19+00:00
+    date-closed: null
+  607:
+    type: pr
+    date-opened: 2024-07-25 14:00:23+00:00
     date-closed: null

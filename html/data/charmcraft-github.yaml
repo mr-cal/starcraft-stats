@@ -7015,3 +7015,19 @@ issues:
     type: issue
     date-opened: 2024-07-24 12:04:53+00:00
     date-closed: 2024-07-24 15:04:16+00:00
+  1765:
+    type: pr
+    date-opened: 2024-07-25 19:08:55+00:00
+    date-closed: null
+  1764:
+    type: pr
+    date-opened: 2024-07-25 18:46:48+00:00
+    date-closed: null
+  1763:
+    type: pr
+    date-opened: 2024-07-25 18:44:17+00:00
+    date-closed: null
+  1762:
+    type: issue
+    date-opened: 2024-07-25 08:19:30+00:00
+    date-closed: null

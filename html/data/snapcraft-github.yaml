@@ -19642,7 +19642,7 @@ issues:
   4918:
     type: issue
     date-opened: 2024-07-15 16:30:05+00:00
-    date-closed: null
+    date-closed: 2024-07-25 13:18:06+00:00
   4917:
     type: issue
     date-opened: 2024-07-15 15:56:00+00:00
@@ -19662,7 +19662,7 @@ issues:
   4924:
     type: pr
     date-opened: 2024-07-17 12:48:05+00:00
-    date-closed: null
+    date-closed: 2024-07-25 13:18:05+00:00
   4923:
     type: issue
     date-opened: 2024-07-17 10:02:32+00:00
@@ -19710,4 +19710,12 @@ issues:
   4935:
     type: issue
     date-opened: 2024-07-24 10:34:16+00:00
+    date-closed: null
+  4939:
+    type: pr
+    date-opened: 2024-07-25 16:46:35+00:00
+    date-closed: null
+  4938:
+    type: pr
+    date-opened: 2024-07-25 13:33:18+00:00
     date-closed: null
