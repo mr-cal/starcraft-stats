@@ -1042,7 +1042,7 @@ issues:
   260:
     type: issue
     date-opened: 2024-07-12 13:17:56+00:00
-    date-closed: null
+    date-closed: 2024-07-26 21:33:56+00:00
   262:
     type: issue
     date-opened: 2024-07-15 18:18:15+00:00
@@ -1051,3 +1051,7 @@ issues:
     type: issue
     date-opened: 2024-07-23 12:50:42+00:00
     date-closed: null
+  264:
+    type: pr
+    date-opened: 2024-07-26 14:34:17+00:00
+    date-closed: 2024-07-26 21:33:55+00:00
