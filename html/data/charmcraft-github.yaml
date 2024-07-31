@@ -7018,7 +7018,7 @@ issues:
   1765:
     type: pr
     date-opened: 2024-07-25 19:08:55+00:00
-    date-closed: null
+    date-closed: 2024-07-30 23:37:05+00:00
   1764:
     type: pr
     date-opened: 2024-07-25 18:46:48+00:00
@@ -7038,7 +7038,7 @@ issues:
   1766:
     type: pr
     date-opened: 2024-07-26 04:11:57+00:00
-    date-closed: null
+    date-closed: 2024-07-31 00:31:17+00:00
   1769:
     type: pr
     date-opened: 2024-07-29 15:23:14+00:00
@@ -7046,4 +7046,12 @@ issues:
   1768:
     type: issue
     date-opened: 2024-07-29 13:47:21+00:00
+    date-closed: null
+  1771:
+    type: issue
+    date-opened: 2024-07-30 23:40:43+00:00
+    date-closed: null
+  1770:
+    type: issue
+    date-opened: 2024-07-30 04:24:37+00:00
     date-closed: null
