@@ -7055,3 +7055,31 @@ issues:
     type: issue
     date-opened: 2024-07-30 04:24:37+00:00
     date-closed: null
+  1778:
+    type: pr
+    date-opened: 2024-07-31 21:47:35+00:00
+    date-closed: 2024-07-31 21:48:34+00:00
+  1777:
+    type: pr
+    date-opened: 2024-07-31 21:46:16+00:00
+    date-closed: null
+  1776:
+    type: pr
+    date-opened: 2024-07-31 19:45:20+00:00
+    date-closed: null
+  1775:
+    type: pr
+    date-opened: 2024-07-31 18:59:21+00:00
+    date-closed: 2024-07-31 19:20:22+00:00
+  1774:
+    type: pr
+    date-opened: 2024-07-31 18:56:17+00:00
+    date-closed: 2024-07-31 19:20:16+00:00
+  1773:
+    type: pr
+    date-opened: 2024-07-31 18:49:47+00:00
+    date-closed: 2024-07-31 19:20:06+00:00
+  1772:
+    type: pr
+    date-opened: 2024-07-31 18:38:42+00:00
+    date-closed: 2024-07-31 19:19:59+00:00

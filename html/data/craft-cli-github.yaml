@@ -6,7 +6,7 @@ issues:
   241:
     type: issue
     date-opened: 2024-02-15 21:05:02+00:00
-    date-closed: null
+    date-closed: 2024-07-31 12:21:52+00:00
   240:
     type: pr
     date-opened: 2024-02-15 18:10:18+00:00
@@ -1055,3 +1055,11 @@ issues:
     type: pr
     date-opened: 2024-07-26 14:34:17+00:00
     date-closed: 2024-07-26 21:33:55+00:00
+  266:
+    type: issue
+    date-opened: 2024-07-31 19:33:39+00:00
+    date-closed: null
+  265:
+    type: pr
+    date-opened: 2024-07-31 12:20:18+00:00
+    date-closed: null

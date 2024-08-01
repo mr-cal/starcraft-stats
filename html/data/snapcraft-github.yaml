@@ -19622,7 +19622,7 @@ issues:
   4915:
     type: pr
     date-opened: 2024-07-13 08:37:55+00:00
-    date-closed: null
+    date-closed: 2024-07-31 16:22:12+00:00
   4922:
     type: pr
     date-opened: 2024-07-15 22:41:07+00:00
@@ -19714,7 +19714,7 @@ issues:
   4939:
     type: pr
     date-opened: 2024-07-25 16:46:35+00:00
-    date-closed: null
+    date-closed: 2024-07-31 22:00:59+00:00
   4938:
     type: pr
     date-opened: 2024-07-25 13:33:18+00:00
@@ -19742,4 +19742,20 @@ issues:
   4945:
     type: pr
     date-opened: 2024-07-30 21:07:22+00:00
+    date-closed: null
+  4949:
+    type: pr
+    date-opened: 2024-07-31 20:44:33+00:00
+    date-closed: null
+  4948:
+    type: pr
+    date-opened: 2024-07-31 19:12:22+00:00
+    date-closed: null
+  4947:
+    type: pr
+    date-opened: 2024-07-31 16:23:47+00:00
+    date-closed: 2024-07-31 23:50:46+00:00
+  4946:
+    type: pr
+    date-opened: 2024-07-31 15:06:26+00:00
     date-closed: null

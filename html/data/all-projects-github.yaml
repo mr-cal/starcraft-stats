@@ -14862,7 +14862,7 @@ issues:
   craft-cli-241:
     type: issue
     date-opened: 2024-02-15 21:05:02+00:00
-    date-closed: null
+    date-closed: 2024-07-31 12:21:52+00:00
   craft-cli-240:
     type: pr
     date-opened: 2024-02-15 18:10:18+00:00
@@ -39370,7 +39370,7 @@ issues:
   snapcraft-4915:
     type: pr
     date-opened: 2024-07-13 08:37:55+00:00
-    date-closed: null
+    date-closed: 2024-07-31 16:22:12+00:00
   charmcraft-1732:
     type: pr
     date-opened: 2024-07-16 00:56:01+00:00
@@ -39842,7 +39842,7 @@ issues:
   craft-providers-609:
     type: pr
     date-opened: 2024-07-25 19:51:44+00:00
-    date-closed: null
+    date-closed: 2024-07-31 22:34:59+00:00
   craft-providers-608:
     type: issue
     date-opened: 2024-07-25 18:36:19+00:00
@@ -39854,7 +39854,7 @@ issues:
   snapcraft-4939:
     type: pr
     date-opened: 2024-07-25 16:46:35+00:00
-    date-closed: null
+    date-closed: 2024-07-31 22:00:59+00:00
   snapcraft-4938:
     type: pr
     date-opened: 2024-07-25 13:33:18+00:00
@@ -39878,7 +39878,7 @@ issues:
   craft-store-192:
     type: pr
     date-opened: 2024-07-27 06:40:36+00:00
-    date-closed: null
+    date-closed: 2024-07-31 15:53:44+00:00
   craft-store-191:
     type: pr
     date-opened: 2024-07-27 04:51:02+00:00
@@ -39954,11 +39954,11 @@ issues:
   craft-application-399:
     type: pr
     date-opened: 2024-07-30 17:43:19+00:00
-    date-closed: null
+    date-closed: 2024-07-31 17:05:41+00:00
   craft-archives-122:
     type: pr
     date-opened: 2024-07-30 23:14:35+00:00
-    date-closed: null
+    date-closed: 2024-07-31 17:05:16+00:00
   craft-grammar-34:
     type: pr
     date-opened: 2024-07-30 20:08:11+00:00
@@ -39994,20 +39994,84 @@ issues:
   craft-providers-614:
     type: pr
     date-opened: 2024-07-30 23:24:06+00:00
-    date-closed: null
+    date-closed: 2024-07-31 13:31:06+00:00
   craft-providers-613:
     type: pr
     date-opened: 2024-07-30 22:20:57+00:00
-    date-closed: null
+    date-closed: 2024-07-31 13:37:53+00:00
   craft-providers-612:
     type: pr
     date-opened: 2024-07-30 22:18:42+00:00
-    date-closed: null
+    date-closed: 2024-07-31 13:31:33+00:00
   craft-providers-611:
     type: pr
     date-opened: 2024-07-30 22:12:22+00:00
-    date-closed: null
+    date-closed: 2024-07-31 17:30:33+00:00
   snapcraft-4945:
     type: pr
     date-opened: 2024-07-30 21:07:22+00:00
+    date-closed: null
+  charmcraft-1778:
+    type: pr
+    date-opened: 2024-07-31 21:47:35+00:00
+    date-closed: 2024-07-31 21:48:34+00:00
+  charmcraft-1777:
+    type: pr
+    date-opened: 2024-07-31 21:46:16+00:00
+    date-closed: null
+  charmcraft-1776:
+    type: pr
+    date-opened: 2024-07-31 19:45:20+00:00
+    date-closed: null
+  charmcraft-1775:
+    type: pr
+    date-opened: 2024-07-31 18:59:21+00:00
+    date-closed: 2024-07-31 19:20:22+00:00
+  charmcraft-1774:
+    type: pr
+    date-opened: 2024-07-31 18:56:17+00:00
+    date-closed: 2024-07-31 19:20:16+00:00
+  charmcraft-1773:
+    type: pr
+    date-opened: 2024-07-31 18:49:47+00:00
+    date-closed: 2024-07-31 19:20:06+00:00
+  charmcraft-1772:
+    type: pr
+    date-opened: 2024-07-31 18:38:42+00:00
+    date-closed: 2024-07-31 19:19:59+00:00
+  craft-cli-266:
+    type: issue
+    date-opened: 2024-07-31 19:33:39+00:00
+    date-closed: null
+  craft-cli-265:
+    type: pr
+    date-opened: 2024-07-31 12:20:18+00:00
+    date-closed: null
+  craft-parts-795:
+    type: pr
+    date-opened: 2024-07-31 19:12:55+00:00
+    date-closed: 2024-07-31 21:10:06+00:00
+  craft-store-193:
+    type: pr
+    date-opened: 2024-07-31 22:02:02+00:00
+    date-closed: null
+  snapcraft-4949:
+    type: pr
+    date-opened: 2024-07-31 20:44:33+00:00
+    date-closed: null
+  snapcraft-4948:
+    type: pr
+    date-opened: 2024-07-31 19:12:22+00:00
+    date-closed: null
+  snapcraft-4947:
+    type: pr
+    date-opened: 2024-07-31 16:23:47+00:00
+    date-closed: 2024-07-31 23:50:46+00:00
+  snapcraft-4946:
+    type: pr
+    date-opened: 2024-07-31 15:06:26+00:00
+    date-closed: null
+  starbase-229:
+    type: issue
+    date-opened: 2024-07-31 15:32:41+00:00
     date-closed: null
