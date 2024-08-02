@@ -3138,7 +3138,7 @@ issues:
   783:
     type: pr
     date-opened: 2024-07-16 17:35:35+00:00
-    date-closed: null
+    date-closed: 2024-08-01 17:01:25+00:00
   786:
     type: issue
     date-opened: 2024-07-17 14:28:32+00:00
@@ -3154,7 +3154,7 @@ issues:
   794:
     type: pr
     date-opened: 2024-07-30 22:03:13+00:00
-    date-closed: null
+    date-closed: 2024-08-01 20:01:08+00:00
   793:
     type: pr
     date-opened: 2024-07-30 18:38:45+00:00
@@ -3170,7 +3170,7 @@ issues:
   790:
     type: pr
     date-opened: 2024-07-30 15:52:42+00:00
-    date-closed: null
+    date-closed: 2024-08-01 14:15:08+00:00
   789:
     type: issue
     date-opened: 2024-07-30 14:37:20+00:00
@@ -3179,3 +3179,19 @@ issues:
     type: pr
     date-opened: 2024-07-31 19:12:55+00:00
     date-closed: 2024-07-31 21:10:06+00:00
+  799:
+    type: pr
+    date-opened: 2024-08-01 18:18:50+00:00
+    date-closed: 2024-08-01 19:44:05+00:00
+  798:
+    type: pr
+    date-opened: 2024-08-01 17:40:43+00:00
+    date-closed: 2024-08-01 19:43:04+00:00
+  797:
+    type: pr
+    date-opened: 2024-08-01 16:26:02+00:00
+    date-closed: 2024-08-01 18:09:16+00:00
+  796:
+    type: pr
+    date-opened: 2024-08-01 14:22:22+00:00
+    date-closed: 2024-08-01 16:20:31+00:00
