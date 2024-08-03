@@ -10102,7 +10102,7 @@ issues:
   charmcraft-1194:
     type: issue
     date-opened: 2023-07-26 16:27:58+00:00
-    date-closed: null
+    date-closed: 2024-08-02 21:46:46+00:00
   charmcraft-1193:
     type: issue
     date-opened: 2023-07-26 15:58:56+00:00
@@ -10346,7 +10346,7 @@ issues:
   charmcraft-1133:
     type: issue
     date-opened: 2023-07-03 13:27:05+00:00
-    date-closed: null
+    date-closed: 2024-08-02 21:46:40+00:00
   charmcraft-1132:
     type: issue
     date-opened: 2023-06-28 13:14:33+00:00
@@ -39934,7 +39934,7 @@ issues:
   snapcraft-4940:
     type: pr
     date-opened: 2024-07-29 09:58:07+00:00
-    date-closed: null
+    date-closed: 2024-08-02 18:20:31+00:00
   charmcraft-1771:
     type: issue
     date-opened: 2024-07-30 23:40:43+00:00
@@ -39946,7 +39946,7 @@ issues:
   craft-application-401:
     type: pr
     date-opened: 2024-07-30 23:08:24+00:00
-    date-closed: null
+    date-closed: 2024-08-02 16:11:41+00:00
   craft-application-400:
     type: pr
     date-opened: 2024-07-30 20:57:00+00:00
@@ -40062,7 +40062,7 @@ issues:
   snapcraft-4948:
     type: pr
     date-opened: 2024-07-31 19:12:22+00:00
-    date-closed: null
+    date-closed: 2024-08-02 13:02:48+00:00
   snapcraft-4947:
     type: pr
     date-opened: 2024-07-31 16:23:47+00:00
@@ -40118,4 +40118,52 @@ issues:
   snapcraft-4950:
     type: pr
     date-opened: 2024-08-01 16:11:26+00:00
+    date-closed: null
+  charmcraft-1787:
+    type: issue
+    date-opened: 2024-08-02 21:50:58+00:00
+    date-closed: null
+  charmcraft-1786:
+    type: issue
+    date-opened: 2024-08-02 21:43:34+00:00
+    date-closed: null
+  charmcraft-1785:
+    type: pr
+    date-opened: 2024-08-02 20:34:10+00:00
+    date-closed: null
+  charmcraft-1784:
+    type: pr
+    date-opened: 2024-08-02 20:04:49+00:00
+    date-closed: null
+  charmcraft-1783:
+    type: issue
+    date-opened: 2024-08-02 12:26:49+00:00
+    date-closed: null
+  charmcraft-1782:
+    type: issue
+    date-opened: 2024-08-02 12:16:51+00:00
+    date-closed: null
+  craft-application-402:
+    type: pr
+    date-opened: 2024-08-02 22:24:12+00:00
+    date-closed: null
+  craft-cli-267:
+    type: pr
+    date-opened: 2024-08-02 17:03:36+00:00
+    date-closed: null
+  craft-providers-615:
+    type: pr
+    date-opened: 2024-08-03 04:01:25+00:00
+    date-closed: null
+  craft-store-194:
+    type: pr
+    date-opened: 2024-08-03 04:03:59+00:00
+    date-closed: null
+  rockcraft-661:
+    type: issue
+    date-opened: 2024-08-02 16:00:53+00:00
+    date-closed: null
+  snapcraft-4951:
+    type: issue
+    date-opened: 2024-08-02 08:28:32+00:00
     date-closed: null
