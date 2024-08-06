@@ -2639,3 +2639,11 @@ issues:
     type: issue
     date-opened: 2024-08-02 16:00:53+00:00
     date-closed: null
+  663:
+    type: pr
+    date-opened: 2024-08-05 17:44:26+00:00
+    date-closed: null
+  662:
+    type: pr
+    date-opened: 2024-08-05 15:20:59+00:00
+    date-closed: null
