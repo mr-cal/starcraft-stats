@@ -7086,7 +7086,7 @@ issues:
   1781:
     type: issue
     date-opened: 2024-08-01 16:09:27+00:00
-    date-closed: null
+    date-closed: 2024-08-06 19:05:46+00:00
   1780:
     type: pr
     date-opened: 2024-08-01 14:13:17+00:00
@@ -7106,11 +7106,11 @@ issues:
   1785:
     type: pr
     date-opened: 2024-08-02 20:34:10+00:00
-    date-closed: null
+    date-closed: 2024-08-06 19:16:50+00:00
   1784:
     type: pr
     date-opened: 2024-08-02 20:04:49+00:00
-    date-closed: null
+    date-closed: 2024-08-06 19:05:45+00:00
   1783:
     type: issue
     date-opened: 2024-08-02 12:26:49+00:00
@@ -7122,4 +7122,36 @@ issues:
   1788:
     type: issue
     date-opened: 2024-08-05 13:26:50+00:00
+    date-closed: null
+  1796:
+    type: pr
+    date-opened: 2024-08-06 21:04:18+00:00
+    date-closed: null
+  1795:
+    type: pr
+    date-opened: 2024-08-06 20:59:13+00:00
+    date-closed: null
+  1794:
+    type: pr
+    date-opened: 2024-08-06 19:19:20+00:00
+    date-closed: 2024-08-06 20:56:55+00:00
+  1793:
+    type: pr
+    date-opened: 2024-08-06 19:13:09+00:00
+    date-closed: null
+  1792:
+    type: pr
+    date-opened: 2024-08-06 19:09:01+00:00
+    date-closed: null
+  1791:
+    type: issue
+    date-opened: 2024-08-06 19:06:23+00:00
+    date-closed: null
+  1790:
+    type: issue
+    date-opened: 2024-08-06 17:49:38+00:00
+    date-closed: null
+  1789:
+    type: issue
+    date-opened: 2024-08-06 10:23:34+00:00
     date-closed: null

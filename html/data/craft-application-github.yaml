@@ -1607,3 +1607,7 @@ issues:
     type: pr
     date-opened: 2024-08-05 15:20:57+00:00
     date-closed: null
+  404:
+    type: pr
+    date-opened: 2024-08-06 18:46:47+00:00
+    date-closed: null
