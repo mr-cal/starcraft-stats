@@ -62,32 +62,6 @@
                 "outdated": true
             }
         },
-        "charmcraft/hotfix/2.6": {
-            "craft-cli": {
-                "series": "2.4",
-                "version": "2.4.0",
-                "latest": "",
-                "outdated": false
-            },
-            "craft-parts": {
-                "series": "1.25",
-                "version": "1.25.2",
-                "latest": "",
-                "outdated": false
-            },
-            "craft-providers": {
-                "series": "1.20",
-                "version": "1.20.3",
-                "latest": "",
-                "outdated": false
-            },
-            "craft-store": {
-                "series": "2.5",
-                "version": "2.5.0",
-                "latest": "",
-                "outdated": false
-            }
-        },
         "charmcraft/hotfix/2.7": {
             "craft-cli": {
                 "series": "2.4",

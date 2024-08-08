@@ -1610,4 +1610,12 @@ issues:
   404:
     type: pr
     date-opened: 2024-08-06 18:46:47+00:00
+    date-closed: 2024-08-07 11:41:45+00:00
+  406:
+    type: issue
+    date-opened: 2024-08-07 21:49:08+00:00
+    date-closed: null
+  405:
+    type: pr
+    date-opened: 2024-08-07 18:23:34+00:00
     date-closed: null
