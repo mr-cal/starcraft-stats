@@ -730,7 +730,7 @@ issues:
   178:
     type: pr
     date-opened: 2024-05-22 20:36:40+00:00
-    date-closed: null
+    date-closed: 2024-08-08 18:37:14+00:00
   177:
     type: issue
     date-opened: 2024-05-22 20:20:50+00:00
@@ -775,3 +775,15 @@ issues:
     type: pr
     date-opened: 2024-08-03 04:03:59+00:00
     date-closed: null
+  197:
+    type: pr
+    date-opened: 2024-08-09 00:33:45+00:00
+    date-closed: null
+  196:
+    type: pr
+    date-opened: 2024-08-08 18:45:13+00:00
+    date-closed: 2024-08-08 19:36:07+00:00
+  195:
+    type: pr
+    date-opened: 2024-08-08 18:26:08+00:00
+    date-closed: 2024-08-08 18:36:50+00:00
