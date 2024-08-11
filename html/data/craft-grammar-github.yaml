@@ -155,3 +155,7 @@ issues:
     type: pr
     date-opened: '2024-08-10T01:31:40Z'
     date-closed: null
+  '40':
+    type: pr
+    date-opened: '2024-08-10T04:35:34Z'
+    date-closed: null

@@ -40447,3 +40447,19 @@ issues:
     type: pr
     date-opened: '2024-08-10T04:05:35Z'
     date-closed: null
+  craft-grammar-40:
+    type: pr
+    date-opened: '2024-08-10T04:35:34Z'
+    date-closed: null
+  craft-providers-621:
+    type: pr
+    date-opened: '2024-08-10T12:20:17Z'
+    date-closed: null
+  craft-providers-620:
+    type: pr
+    date-opened: '2024-08-10T11:40:12Z'
+    date-closed: null
+  craft-providers-619:
+    type: pr
+    date-opened: '2024-08-10T05:03:19Z'
+    date-closed: null
