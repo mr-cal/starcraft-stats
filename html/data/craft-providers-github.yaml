@@ -2470,12 +2470,16 @@ issues:
   '621':
     type: pr
     date-opened: '2024-08-10T12:20:17Z'
-    date-closed: null
+    date-closed: '2024-08-12T15:13:27Z'
   '620':
     type: pr
     date-opened: '2024-08-10T11:40:12Z'
-    date-closed: null
+    date-closed: '2024-08-12T12:48:29Z'
   '619':
     type: pr
     date-opened: '2024-08-10T05:03:19Z'
+    date-closed: '2024-08-12T16:48:38Z'
+  '622':
+    type: issue
+    date-opened: '2024-08-12T14:56:26Z'
     date-closed: null
