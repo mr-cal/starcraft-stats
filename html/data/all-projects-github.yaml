@@ -9326,7 +9326,7 @@ issues:
   charmcraft-1389:
     type: issue
     date-opened: '2023-11-24T09:06:53Z'
-    date-closed: null
+    date-closed: '2024-08-13T18:20:10Z'
   charmcraft-1388:
     type: pr
     date-opened: '2023-11-23T20:16:32Z'
@@ -39730,7 +39730,7 @@ issues:
   craft-application-394:
     type: issue
     date-opened: '2024-07-23T19:00:45Z'
-    date-closed: null
+    date-closed: '2024-08-13T14:26:57Z'
   craft-application-393:
     type: pr
     date-opened: '2024-07-23T16:58:18Z'
@@ -40466,7 +40466,7 @@ issues:
   charmcraft-1808:
     type: pr
     date-opened: '2024-08-12T20:37:58Z'
-    date-closed: null
+    date-closed: '2024-08-13T18:20:09Z'
   charmcraft-1807:
     type: pr
     date-opened: '2024-08-12T16:01:26Z'
@@ -40478,7 +40478,7 @@ issues:
   craft-application-414:
     type: pr
     date-opened: '2024-08-12T17:47:17Z'
-    date-closed: null
+    date-closed: '2024-08-13T14:26:55Z'
   craft-application-413:
     type: issue
     date-opened: '2024-08-12T17:13:40Z'
@@ -40510,4 +40510,32 @@ issues:
   snapcraft-4958:
     type: issue
     date-opened: '2024-08-12T19:45:12Z'
+    date-closed: null
+  charmcraft-1809:
+    type: issue
+    date-opened: '2024-08-13T15:49:30Z'
+    date-closed: null
+  craft-application-417:
+    type: pr
+    date-opened: '2024-08-13T21:42:59Z'
+    date-closed: null
+  craft-application-416:
+    type: pr
+    date-opened: '2024-08-13T21:02:35Z'
+    date-closed: null
+  craft-application-415:
+    type: issue
+    date-opened: '2024-08-13T14:00:52Z'
+    date-closed: null
+  snapcraft-4962:
+    type: pr
+    date-opened: '2024-08-13T20:41:01Z'
+    date-closed: null
+  snapcraft-4961:
+    type: pr
+    date-opened: '2024-08-13T16:43:59Z'
+    date-closed: '2024-08-13T21:50:50Z'
+  snapcraft-4960:
+    type: issue
+    date-opened: '2024-08-13T14:03:48Z'
     date-closed: null

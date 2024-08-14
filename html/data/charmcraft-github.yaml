@@ -906,7 +906,7 @@ issues:
   '1389':
     type: issue
     date-opened: '2023-11-24T09:06:53Z'
-    date-closed: null
+    date-closed: '2024-08-13T18:20:10Z'
   '1388':
     type: pr
     date-opened: '2023-11-23T20:16:32Z'
@@ -7194,7 +7194,7 @@ issues:
   '1808':
     type: pr
     date-opened: '2024-08-12T20:37:58Z'
-    date-closed: null
+    date-closed: '2024-08-13T18:20:09Z'
   '1807':
     type: pr
     date-opened: '2024-08-12T16:01:26Z'
@@ -7202,4 +7202,8 @@ issues:
   '1806':
     type: issue
     date-opened: '2024-08-12T13:40:07Z'
+    date-closed: null
+  '1809':
+    type: issue
+    date-opened: '2024-08-13T15:49:30Z'
     date-closed: null
