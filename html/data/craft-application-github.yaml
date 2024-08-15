@@ -450,7 +450,7 @@ issues:
   '173':
     type: pr
     date-opened: '2024-01-11T15:49:10Z'
-    date-closed: null
+    date-closed: '2024-08-14T14:34:59Z'
   '172':
     type: pr
     date-opened: '2024-01-04T22:34:21Z'
@@ -1246,7 +1246,7 @@ issues:
   '312':
     type: pr
     date-opened: '2024-04-18T13:40:45Z'
-    date-closed: null
+    date-closed: '2024-08-14T18:22:56Z'
   '315':
     type: pr
     date-opened: '2024-04-19T22:15:13Z'
@@ -1390,7 +1390,7 @@ issues:
   '349':
     type: pr
     date-opened: '2024-05-20T21:13:57Z'
-    date-closed: null
+    date-closed: '2024-08-14T14:04:32Z'
   '350':
     type: issue
     date-opened: '2024-05-21T20:37:55Z'
@@ -1614,7 +1614,7 @@ issues:
   '406':
     type: issue
     date-opened: '2024-08-07T21:49:08Z'
-    date-closed: null
+    date-closed: '2024-08-14T13:49:34Z'
   '405':
     type: pr
     date-opened: '2024-08-07T18:23:34Z'
@@ -1622,7 +1622,7 @@ issues:
   '409':
     type: pr
     date-opened: '2024-08-09T00:08:11Z'
-    date-closed: null
+    date-closed: '2024-08-14T16:49:15Z'
   '408':
     type: pr
     date-opened: '2024-08-08T19:08:54Z'
@@ -1654,7 +1654,7 @@ issues:
   '417':
     type: pr
     date-opened: '2024-08-13T21:42:59Z'
-    date-closed: null
+    date-closed: '2024-08-14T13:49:33Z'
   '416':
     type: pr
     date-opened: '2024-08-13T21:02:35Z'
@@ -1663,3 +1663,19 @@ issues:
     type: issue
     date-opened: '2024-08-13T14:00:52Z'
     date-closed: null
+  '421':
+    type: pr
+    date-opened: '2024-08-14T18:00:30Z'
+    date-closed: '2024-08-14T18:18:35Z'
+  '420':
+    type: issue
+    date-opened: '2024-08-14T15:39:37Z'
+    date-closed: null
+  '419':
+    type: issue
+    date-opened: '2024-08-14T13:59:12Z'
+    date-closed: null
+  '418':
+    type: pr
+    date-opened: '2024-08-14T12:34:26Z'
+    date-closed: '2024-08-14T17:01:03Z'

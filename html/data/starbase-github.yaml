@@ -922,7 +922,7 @@ issues:
   '232':
     type: pr
     date-opened: '2024-08-08T23:37:48Z'
-    date-closed: null
+    date-closed: '2024-08-14T12:44:54Z'
   '231':
     type: pr
     date-opened: '2024-08-08T23:35:26Z'
@@ -934,4 +934,8 @@ issues:
   '234':
     type: pr
     date-opened: '2024-08-10T04:05:35Z'
+    date-closed: '2024-08-14T12:44:31Z'
+  '235':
+    type: issue
+    date-opened: '2024-08-14T15:47:16Z'
     date-closed: null
