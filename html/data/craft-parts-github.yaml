@@ -3206,7 +3206,7 @@ issues:
   '805':
     type: pr
     date-opened: '2024-08-09T00:28:06Z'
-    date-closed: null
+    date-closed: '2024-08-15T12:51:52Z'
   '804':
     type: issue
     date-opened: '2024-08-08T18:37:30Z'
@@ -3239,3 +3239,19 @@ issues:
     type: issue
     date-opened: '2024-08-14T18:23:50Z'
     date-closed: null
+  '814':
+    type: issue
+    date-opened: '2024-08-16T03:40:51Z'
+    date-closed: null
+  '813':
+    type: issue
+    date-opened: '2024-08-15T23:50:09Z'
+    date-closed: null
+  '812':
+    type: issue
+    date-opened: '2024-08-15T23:36:49Z'
+    date-closed: null
+  '811':
+    type: pr
+    date-opened: '2024-08-15T19:07:53Z'
+    date-closed: '2024-08-16T00:39:37Z'

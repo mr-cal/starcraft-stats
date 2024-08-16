@@ -19706,7 +19706,7 @@ issues:
   '4936':
     type: issue
     date-opened: '2024-07-24T12:57:22Z'
-    date-closed: null
+    date-closed: '2024-08-15T13:00:00Z'
   '4935':
     type: issue
     date-opened: '2024-07-24T10:34:16Z'
@@ -19734,7 +19734,7 @@ issues:
   '4941':
     type: issue
     date-opened: '2024-07-29T12:58:29Z'
-    date-closed: null
+    date-closed: '2024-08-15T14:08:37Z'
   '4940':
     type: pr
     date-opened: '2024-07-29T09:58:07Z'
@@ -19762,7 +19762,7 @@ issues:
   '4950':
     type: pr
     date-opened: '2024-08-01T16:11:26Z'
-    date-closed: null
+    date-closed: '2024-08-15T12:56:26Z'
   '4951':
     type: issue
     date-opened: '2024-08-02T08:28:32Z'
@@ -19782,7 +19782,7 @@ issues:
   '4955':
     type: pr
     date-opened: '2024-08-06T16:59:34Z'
-    date-closed: null
+    date-closed: '2024-08-15T14:08:36Z'
   '4954':
     type: pr
     date-opened: '2024-08-06T14:01:54Z'
@@ -19802,7 +19802,7 @@ issues:
   '4962':
     type: pr
     date-opened: '2024-08-13T20:41:01Z'
-    date-closed: null
+    date-closed: '2024-08-15T15:44:44Z'
   '4961':
     type: pr
     date-opened: '2024-08-13T16:43:59Z'
@@ -19814,7 +19814,7 @@ issues:
   '4971':
     type: pr
     date-opened: '2024-08-14T17:53:49Z'
-    date-closed: null
+    date-closed: '2024-08-15T14:09:34Z'
   '4970':
     type: issue
     date-opened: '2024-08-14T17:52:29Z'
@@ -19822,7 +19822,7 @@ issues:
   '4969':
     type: pr
     date-opened: '2024-08-14T17:50:42Z'
-    date-closed: null
+    date-closed: '2024-08-15T14:09:45Z'
   '4968':
     type: issue
     date-opened: '2024-08-14T17:48:45Z'
@@ -19846,4 +19846,36 @@ issues:
   '4963':
     type: issue
     date-opened: '2024-08-14T14:00:10Z'
+    date-closed: null
+  '4979':
+    type: pr
+    date-opened: '2024-08-16T01:09:43Z'
+    date-closed: null
+  '4978':
+    type: issue
+    date-opened: '2024-08-15T21:02:44Z'
+    date-closed: null
+  '4977':
+    type: pr
+    date-opened: '2024-08-15T16:46:49Z'
+    date-closed: '2024-08-15T19:45:42Z'
+  '4976':
+    type: pr
+    date-opened: '2024-08-15T16:46:38Z'
+    date-closed: '2024-08-15T22:03:46Z'
+  '4975':
+    type: pr
+    date-opened: '2024-08-15T16:46:01Z'
+    date-closed: null
+  '4974':
+    type: pr
+    date-opened: '2024-08-15T16:12:47Z'
+    date-closed: '2024-08-15T19:45:03Z'
+  '4973':
+    type: pr
+    date-opened: '2024-08-15T14:16:24Z'
+    date-closed: '2024-08-15T20:39:08Z'
+  '4972':
+    type: issue
+    date-opened: '2024-08-15T14:03:41Z'
     date-closed: null

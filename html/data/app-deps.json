@@ -44,14 +44,14 @@
                 "outdated": true
             },
             "craft-parts": {
-                "series": "1.33",
-                "version": "1.33.0",
+                "series": "1.34",
+                "version": "1.34.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
             "craft-providers": {
-                "series": "1.24",
-                "version": "1.24.1",
+                "series": "1.25",
+                "version": "1.25.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
@@ -242,14 +242,14 @@
         },
         "snapcraft/main": {
             "craft-application": {
-                "series": "3.1",
-                "version": "3.1.0",
+                "series": "4.1",
+                "version": "4.1.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
             "craft-archives": {
-                "series": "1.1",
-                "version": "1.1.3",
+                "series": "2.0",
+                "version": "2.0.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
@@ -260,26 +260,26 @@
                 "outdated": true
             },
             "craft-grammar": {
-                "series": "1.2",
-                "version": "1.2.0",
+                "series": "2.0",
+                "version": "2.0.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
             "craft-parts": {
-                "series": "1.34",
-                "version": "1.34.0",
+                "series": "2.0",
+                "version": "2.0.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
             "craft-providers": {
-                "series": "1.23",
-                "version": "1.23.1",
+                "series": "2.0",
+                "version": "2.0.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
             "craft-store": {
-                "series": "2.6",
-                "version": "2.6.2",
+                "series": "3.0",
+                "version": "3.0.0",
                 "latest": "0.0.0",
                 "outdated": true
             }
