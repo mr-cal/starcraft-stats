@@ -3255,3 +3255,11 @@ issues:
     type: pr
     date-opened: '2024-08-15T19:07:53Z'
     date-closed: '2024-08-16T00:39:37Z'
+  '816':
+    type: pr
+    date-opened: '2024-08-16T20:43:09Z'
+    date-closed: null
+  '815':
+    type: pr
+    date-opened: '2024-08-16T18:32:55Z'
+    date-closed: null

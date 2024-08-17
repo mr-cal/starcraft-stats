@@ -20,14 +20,14 @@
     "apps": {
         "charmcraft/main": {
             "craft-application": {
-                "series": "3.2",
-                "version": "3.2.0",
+                "series": "4.1",
+                "version": "4.1.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
             "craft-archives": {
-                "series": "1.2",
-                "version": "1.2.0",
+                "series": "2.0",
+                "version": "2.0.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
@@ -38,26 +38,26 @@
                 "outdated": true
             },
             "craft-grammar": {
-                "series": "1.2",
-                "version": "1.2.0",
+                "series": "2.0",
+                "version": "2.0.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
             "craft-parts": {
-                "series": "1.34",
-                "version": "1.34.0",
+                "series": "2.0",
+                "version": "2.0.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
             "craft-providers": {
-                "series": "1.25",
-                "version": "1.25.0",
+                "series": "2.0",
+                "version": "2.0.0",
                 "latest": "0.0.0",
                 "outdated": true
             },
             "craft-store": {
-                "series": "2.6",
-                "version": "2.6.2",
+                "series": "3.0",
+                "version": "3.0.0",
                 "latest": "0.0.0",
                 "outdated": true
             }
@@ -128,6 +128,32 @@
             "craft-store": {
                 "series": "2.6",
                 "version": "2.6.2",
+                "latest": "",
+                "outdated": false
+            }
+        },
+        "charmcraft/renovate/hotfix/2.7-bugfixes": {
+            "craft-cli": {
+                "series": "2.4",
+                "version": "2.4.0",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
                 "latest": "",
                 "outdated": false
             }

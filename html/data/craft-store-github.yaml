@@ -778,7 +778,7 @@ issues:
   '197':
     type: pr
     date-opened: '2024-08-09T00:33:45Z'
-    date-closed: null
+    date-closed: '2024-08-16T21:14:29Z'
   '196':
     type: pr
     date-opened: '2024-08-08T18:45:13Z'
@@ -791,3 +791,7 @@ issues:
     type: pr
     date-opened: '2024-08-10T03:34:53Z'
     date-closed: '2024-08-14T12:55:15Z'
+  '199':
+    type: pr
+    date-opened: '2024-08-16T18:53:48Z'
+    date-closed: null

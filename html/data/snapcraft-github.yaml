@@ -19850,7 +19850,7 @@ issues:
   '4979':
     type: pr
     date-opened: '2024-08-16T01:09:43Z'
-    date-closed: null
+    date-closed: '2024-08-16T16:52:59Z'
   '4978':
     type: issue
     date-opened: '2024-08-15T21:02:44Z'
@@ -19878,4 +19878,12 @@ issues:
   '4972':
     type: issue
     date-opened: '2024-08-15T14:03:41Z'
+    date-closed: null
+  '4981':
+    type: pr
+    date-opened: '2024-08-16T19:13:08Z'
+    date-closed: null
+  '4980':
+    type: issue
+    date-opened: '2024-08-16T15:00:39Z'
     date-closed: null
