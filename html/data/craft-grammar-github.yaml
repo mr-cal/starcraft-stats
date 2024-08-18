@@ -163,3 +163,11 @@ issues:
     type: pr
     date-opened: '2024-08-16T18:40:33Z'
     date-closed: null
+  '43':
+    type: pr
+    date-opened: '2024-08-17T16:14:25Z'
+    date-closed: null
+  '42':
+    type: pr
+    date-opened: '2024-08-17T05:27:31Z'
+    date-closed: null

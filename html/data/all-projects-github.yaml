@@ -40827,3 +40827,27 @@ issues:
     type: issue
     date-opened: '2024-08-16T15:00:39Z'
     date-closed: null
+  craft-grammar-43:
+    type: pr
+    date-opened: '2024-08-17T16:14:25Z'
+    date-closed: null
+  craft-grammar-42:
+    type: pr
+    date-opened: '2024-08-17T05:27:31Z'
+    date-closed: null
+  craft-providers-627:
+    type: pr
+    date-opened: '2024-08-17T06:32:10Z'
+    date-closed: null
+  craft-providers-626:
+    type: pr
+    date-opened: '2024-08-17T04:35:23Z'
+    date-closed: null
+  craft-store-201:
+    type: pr
+    date-opened: '2024-08-17T07:59:23Z'
+    date-closed: null
+  craft-store-200:
+    type: pr
+    date-opened: '2024-08-17T04:59:20Z'
+    date-closed: null

@@ -132,7 +132,241 @@
                 "outdated": false
             }
         },
+        "charmcraft/renovate/hotfix/2.7-attrs-23.x": {
+            "craft-cli": {
+                "series": "2.4",
+                "version": "2.4.0",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
+                "latest": "",
+                "outdated": false
+            }
+        },
         "charmcraft/renovate/hotfix/2.7-bugfixes": {
+            "craft-cli": {
+                "series": "2.4",
+                "version": "2.4.0",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
+                "latest": "",
+                "outdated": false
+            }
+        },
+        "charmcraft/renovate/hotfix/2.7-cachetools-5.x": {
+            "craft-cli": {
+                "series": "2.4",
+                "version": "2.4.0",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
+                "latest": "",
+                "outdated": false
+            }
+        },
+        "charmcraft/renovate/hotfix/2.7-certifi-2023.x": {
+            "craft-cli": {
+                "series": "2.4",
+                "version": "2.4.0",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
+                "latest": "",
+                "outdated": false
+            }
+        },
+        "charmcraft/renovate/hotfix/2.7-cffi-1.x": {
+            "craft-cli": {
+                "series": "2.4",
+                "version": "2.4.0",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
+                "latest": "",
+                "outdated": false
+            }
+        },
+        "charmcraft/renovate/hotfix/2.7-codespell-2.x": {
+            "craft-cli": {
+                "series": "2.4",
+                "version": "2.4.0",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
+                "latest": "",
+                "outdated": false
+            }
+        },
+        "charmcraft/renovate/hotfix/2.7-coverage-7.x": {
+            "craft-cli": {
+                "series": "2.4",
+                "version": "2.4.0",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
+                "latest": "",
+                "outdated": false
+            }
+        },
+        "charmcraft/renovate/hotfix/2.7-craft-cli-2.x": {
+            "craft-cli": {
+                "series": "2.6",
+                "version": "2.6.0",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
+                "latest": "",
+                "outdated": false
+            }
+        },
+        "charmcraft/renovate/hotfix/2.7-major-github-actions": {
+            "craft-cli": {
+                "series": "2.4",
+                "version": "2.4.0",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "1.25",
+                "version": "1.25.2",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "1.20",
+                "version": "1.20.3",
+                "latest": "",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "2.5",
+                "version": "2.5.0",
+                "latest": "",
+                "outdated": false
+            }
+        },
+        "charmcraft/renovate/hotfix/2.7-pydantic-etc": {
             "craft-cli": {
                 "series": "2.4",
                 "version": "2.4.0",
