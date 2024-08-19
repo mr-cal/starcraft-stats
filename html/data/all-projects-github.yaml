@@ -40851,3 +40851,15 @@ issues:
     type: pr
     date-opened: '2024-08-17T04:59:20Z'
     date-closed: null
+  snapcraft-4984:
+    type: issue
+    date-opened: '2024-08-18T23:21:29Z'
+    date-closed: null
+  snapcraft-4983:
+    type: issue
+    date-opened: '2024-08-18T23:14:42Z'
+    date-closed: null
+  snapcraft-4982:
+    type: issue
+    date-opened: '2024-08-18T23:10:50Z'
+    date-closed: null

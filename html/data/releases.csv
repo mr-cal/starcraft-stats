@@ -10,6 +10,10 @@ charmcraft,renovate/hotfix/2.7-cffi-1.x,2.7.1,1
 charmcraft,renovate/hotfix/2.7-codespell-2.x,2.7.1,1
 charmcraft,renovate/hotfix/2.7-coverage-7.x,2.7.1,1
 charmcraft,renovate/hotfix/2.7-craft-cli-2.x,2.7.1,1
+charmcraft,renovate/hotfix/2.7-craft-parts-1.x,2.7.1,1
+charmcraft,renovate/hotfix/2.7-craft-providers-1.x,2.7.1,1
+charmcraft,renovate/hotfix/2.7-craft-store-2.x,2.7.1,1
+charmcraft,renovate/hotfix/2.7-distro-1.x,2.7.1,1
 charmcraft,renovate/hotfix/2.7-major-github-actions,2.7.1,1
 charmcraft,renovate/hotfix/2.7-pydantic-etc,2.7.1,1
 rockcraft,main,1.5.3,38
