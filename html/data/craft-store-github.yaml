@@ -794,11 +794,11 @@ issues:
   '199':
     type: pr
     date-opened: '2024-08-16T18:53:48Z'
-    date-closed: null
+    date-closed: '2024-08-19T13:10:25Z'
   '201':
     type: pr
     date-opened: '2024-08-17T07:59:23Z'
-    date-closed: null
+    date-closed: '2024-08-19T11:50:16Z'
   '200':
     type: pr
     date-opened: '2024-08-17T04:59:20Z'

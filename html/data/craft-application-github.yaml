@@ -1694,8 +1694,12 @@ issues:
   '423':
     type: pr
     date-opened: '2024-08-16T18:37:13Z'
-    date-closed: null
+    date-closed: '2024-08-19T12:53:48Z'
   '422':
     type: issue
     date-opened: '2024-08-16T17:55:18Z'
+    date-closed: null
+  '427':
+    type: pr
+    date-opened: '2024-08-19T16:01:11Z'
     date-closed: null

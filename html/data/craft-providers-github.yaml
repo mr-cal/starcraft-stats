@@ -2503,3 +2503,7 @@ issues:
     type: pr
     date-opened: '2024-08-17T04:35:23Z'
     date-closed: null
+  '628':
+    type: issue
+    date-opened: '2024-08-19T18:54:30Z'
+    date-closed: null
