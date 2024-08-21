@@ -54,12 +54,12 @@ class Config(CraftBaseModel):
         all_branches: list[CraftApplicationBranch] = []
 
         for app in self.craft_applications:
-            for branch_regex in app.branches:
+            for branch_pattern in app.branches:
                 # fetch branch heads from the remote
                 raw_head_data: str = git.cmd.Git().ls_remote(  # type: ignore[reportUnknownVariableType, reportUnknownMemberType]
                     "--heads",
                     f"https://github.com/{app.owner}/{app.name}",
-                    branch_regex,
+                    f"refs/heads/{branch_pattern}",
                 )
                 if not raw_head_data:
                     continue
