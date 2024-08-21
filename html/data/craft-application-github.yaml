@@ -1703,3 +1703,7 @@ issues:
     type: pr
     date-opened: '2024-08-19T16:01:11Z'
     date-closed: null
+  '428':
+    type: pr
+    date-opened: '2024-08-20T16:05:02Z'
+    date-closed: null
