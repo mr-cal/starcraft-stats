@@ -16,8 +16,8 @@ Design
 This project contains a few parts:
 
 * A Python command-line application that retrieves, processes, and stores data
-  in a set of CSV files.
-* A static webpage that loads and displays the CSV data as tables and charts.
+  in a set of CSV and JSON files.
+* A static webpage that loads and displays the JSON as tables and CSV as graphs.
 * A nightly cron job to refresh data
 
 How to
@@ -40,7 +40,7 @@ How to run locally
 It's a Python package with a CLI, so it can be installed and run locally.
 
 You will need a github token. You can create a new fine-grained
-token here in your `settings page`_.
+token in your `settings page`_.
 
 .. code-block::
 
