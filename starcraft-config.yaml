@@ -18,6 +18,7 @@ craft-libraries:
   - craft-cli
   - craft-grammar
   - craft-parts
+  - craft-platforms
   - craft-providers
   - craft-store
 
@@ -28,6 +29,7 @@ craft-projects:
   - craft-cli
   - craft-grammar
   - craft-parts
+  - craft-platforms
   - craft-providers
   - craft-store
   - rockcraft
