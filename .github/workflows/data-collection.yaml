@@ -43,5 +43,9 @@ jobs:
           starcraft-stats get-releases --verbosity=trace
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v5
+        if: github.event_name != 'pull_request'
         with:
           commit_message: "ci: fetch craft applications & libraries"
+          commit_author: "github-actions"
+          commit_user_name: "github-actions"
+          commit_user_email: "github-actions@users.no-reply.github.com"
