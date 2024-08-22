@@ -185,7 +185,9 @@ def _get_pip_versions(library: str) -> list[str]:
 
     :returns: A list of versions for the library.
     """
-    command = ["pip", "install", f"{library}==", "--disable-pip-version-check"]
+    # pip install <library>==1111111 --disable-pip-version-check will show
+    # all available versions for the library
+    command = ["pip", "install", f"{library}==1111111", "--disable-pip-version-check"]
     emit.debug(f"Running {' '.join(command)}")
     proc = subprocess.run(command, check=False, capture_output=True)
     output = proc.stderr.decode("utf-8").split("\n")
