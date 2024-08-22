@@ -2,6 +2,7 @@ name: data collection
 on:
   schedule:
     - cron: '00 4 * * *'
+  pull_request:
   workflow_dispatch:
     inputs:
       enable_ssh_access:
@@ -25,7 +26,9 @@ jobs:
         with:
           python-version: '3.11'
       - name: install project
-        run: pip install .
+        run: |
+          pip install .
+          pip --version
       - name: Enable ssh access
         uses: mxschmitt/action-tmate@v3
         if: ${{ inputs.enable_ssh_access }}
