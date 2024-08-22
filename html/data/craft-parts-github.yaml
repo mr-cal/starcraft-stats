@@ -3295,3 +3295,11 @@ issues:
     type: issue
     date-opened: '2024-08-20T18:38:54Z'
     date-closed: null
+  '826':
+    type: pr
+    date-opened: '2024-08-21T20:32:01Z'
+    date-closed: null
+  '825':
+    type: pr
+    date-opened: '2024-08-21T19:14:06Z'
+    date-closed: null

@@ -42,11 +42,11 @@ issues:
   '275':
     type: issue
     date-opened: '2024-03-19T16:21:21Z'
-    date-closed: null
+    date-closed: '2024-08-21T18:29:10Z'
   '274':
     type: issue
     date-opened: '2024-03-19T15:52:31Z'
-    date-closed: null
+    date-closed: '2024-08-21T18:31:45Z'
   '273':
     type: pr
     date-opened: '2024-03-18T18:21:13Z'
@@ -1706,4 +1706,8 @@ issues:
   '428':
     type: pr
     date-opened: '2024-08-20T16:05:02Z'
+    date-closed: null
+  '429':
+    type: issue
+    date-opened: '2024-08-21T19:16:46Z'
     date-closed: null
