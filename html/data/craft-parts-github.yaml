@@ -3258,7 +3258,7 @@ issues:
   '816':
     type: pr
     date-opened: '2024-08-16T20:43:09Z'
-    date-closed: null
+    date-closed: '2024-08-22T20:15:13Z'
   '815':
     type: pr
     date-opened: '2024-08-16T18:32:55Z'
@@ -3270,7 +3270,7 @@ issues:
   '819':
     type: pr
     date-opened: '2024-08-19T21:29:51Z'
-    date-closed: null
+    date-closed: '2024-08-22T18:24:07Z'
   '818':
     type: pr
     date-opened: '2024-08-19T20:15:56Z'
@@ -3302,4 +3302,8 @@ issues:
   '825':
     type: pr
     date-opened: '2024-08-21T19:14:06Z'
+    date-closed: null
+  '827':
+    type: pr
+    date-opened: '2024-08-22T18:04:51Z'
     date-closed: null
