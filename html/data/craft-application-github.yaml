@@ -1630,7 +1630,7 @@ issues:
   '407':
     type: issue
     date-opened: '2024-08-08T15:27:41Z'
-    date-closed: null
+    date-closed: '2024-08-23T21:55:35Z'
   '410':
     type: pr
     date-opened: '2024-08-09T20:41:55Z'
@@ -1702,7 +1702,7 @@ issues:
   '427':
     type: pr
     date-opened: '2024-08-19T16:01:11Z'
-    date-closed: null
+    date-closed: '2024-08-23T21:55:35Z'
   '428':
     type: pr
     date-opened: '2024-08-20T16:05:02Z'

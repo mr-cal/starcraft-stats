@@ -7214,7 +7214,7 @@ issues:
   '1814':
     type: issue
     date-opened: '2024-08-14T22:16:25Z'
-    date-closed: null
+    date-closed: '2024-08-23T18:35:28Z'
   '1813':
     type: issue
     date-opened: '2024-08-14T20:25:54Z'
@@ -7326,7 +7326,7 @@ issues:
   '1841':
     type: pr
     date-opened: '2024-08-20T21:02:19Z'
-    date-closed: null
+    date-closed: '2024-08-23T18:35:27Z'
   '1840':
     type: pr
     date-opened: '2024-08-20T19:57:56Z'
@@ -7334,4 +7334,8 @@ issues:
   '1839':
     type: issue
     date-opened: '2024-08-20T18:45:47Z'
+    date-closed: null
+  '1842':
+    type: issue
+    date-opened: '2024-08-24T02:59:42Z'
     date-closed: null
