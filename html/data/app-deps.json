@@ -10,7 +10,7 @@
         "craft-store"
     ],
     "latest": {
-        "craft-application": "4.1.0",
+        "craft-application": "4.1.1",
         "craft-archives": "2.0.0",
         "craft-cli": "2.6.0",
         "craft-grammar": "2.0.0",
@@ -24,8 +24,8 @@
             "craft-application": {
                 "series": "4.1",
                 "version": "4.1.0",
-                "latest": "4.1.0",
-                "outdated": false
+                "latest": "4.1.1",
+                "outdated": true
             },
             "craft-archives": {
                 "series": "2.0",
@@ -136,8 +136,8 @@
             "craft-providers": {
                 "series": "1.24",
                 "version": "1.24.1",
-                "latest": "1.24.1",
-                "outdated": false
+                "latest": "1.24.2",
+                "outdated": true
             },
             "craft-store": {
                 "series": "2.6",
@@ -150,7 +150,7 @@
             "craft-application": {
                 "series": "4.0",
                 "version": "4.0.0",
-                "latest": "4.1.0",
+                "latest": "4.1.1",
                 "outdated": true
             },
             "craft-archives": {
@@ -250,16 +250,16 @@
             "craft-providers": {
                 "series": "1.24",
                 "version": "1.24.1",
-                "latest": "1.24.1",
-                "outdated": false
+                "latest": "1.24.2",
+                "outdated": true
             }
         },
         "snapcraft/main": {
             "craft-application": {
                 "series": "4.1",
                 "version": "4.1.0",
-                "latest": "4.1.0",
-                "outdated": false
+                "latest": "4.1.1",
+                "outdated": true
             },
             "craft-archives": {
                 "series": "2.0",

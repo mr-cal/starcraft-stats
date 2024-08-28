@@ -7186,7 +7186,7 @@ issues:
   '1800':
     type: pr
     date-opened: '2024-08-08T12:48:46Z'
-    date-closed: null
+    date-closed: '2024-08-27T17:13:10Z'
   '1805':
     type: pr
     date-opened: '2024-08-10T00:43:14Z'
@@ -7202,7 +7202,7 @@ issues:
   '1806':
     type: issue
     date-opened: '2024-08-12T13:40:07Z'
-    date-closed: null
+    date-closed: '2024-08-27T15:58:28Z'
   '1809':
     type: issue
     date-opened: '2024-08-13T15:49:30Z'
@@ -7250,7 +7250,7 @@ issues:
   '1835':
     type: pr
     date-opened: '2024-08-16T23:41:06Z'
-    date-closed: null
+    date-closed: '2024-08-27T19:31:45Z'
   '1834':
     type: pr
     date-opened: '2024-08-16T23:41:04Z'
@@ -7322,7 +7322,7 @@ issues:
   '1836':
     type: issue
     date-opened: '2024-08-19T13:40:55Z'
-    date-closed: null
+    date-closed: '2024-08-27T19:29:43Z'
   '1841':
     type: pr
     date-opened: '2024-08-20T21:02:19Z'
@@ -7342,7 +7342,7 @@ issues:
   '1852':
     type: pr
     date-opened: '2024-08-26T22:58:36Z'
-    date-closed: null
+    date-closed: '2024-08-27T19:29:42Z'
   '1851':
     type: issue
     date-opened: '2024-08-26T21:50:19Z'
@@ -7350,11 +7350,11 @@ issues:
   '1850':
     type: pr
     date-opened: '2024-08-26T19:31:17Z'
-    date-closed: null
+    date-closed: '2024-08-27T15:58:27Z'
   '1849':
     type: pr
     date-opened: '2024-08-26T18:14:54Z'
-    date-closed: null
+    date-closed: '2024-08-27T20:28:43Z'
   '1848':
     type: pr
     date-opened: '2024-08-26T15:46:14Z'
@@ -7379,3 +7379,47 @@ issues:
     type: issue
     date-opened: '2024-08-26T14:37:51Z'
     date-closed: null
+  '1863':
+    type: pr
+    date-opened: '2024-08-27T22:04:04Z'
+    date-closed: null
+  '1862':
+    type: pr
+    date-opened: '2024-08-27T21:34:53Z'
+    date-closed: null
+  '1861':
+    type: pr
+    date-opened: '2024-08-27T20:27:15Z'
+    date-closed: null
+  '1860':
+    type: pr
+    date-opened: '2024-08-27T20:08:46Z'
+    date-closed: null
+  '1859':
+    type: pr
+    date-opened: '2024-08-27T20:06:29Z'
+    date-closed: null
+  '1858':
+    type: issue
+    date-opened: '2024-08-27T20:02:59Z'
+    date-closed: null
+  '1857':
+    type: pr
+    date-opened: '2024-08-27T20:01:43Z'
+    date-closed: null
+  '1856':
+    type: issue
+    date-opened: '2024-08-27T19:31:21Z'
+    date-closed: null
+  '1855':
+    type: issue
+    date-opened: '2024-08-27T19:30:25Z'
+    date-closed: null
+  '1854':
+    type: pr
+    date-opened: '2024-08-27T15:31:12Z'
+    date-closed: null
+  '1853':
+    type: issue
+    date-opened: '2024-08-27T13:16:56Z'
+    date-closed: '2024-08-27T21:07:20Z'
