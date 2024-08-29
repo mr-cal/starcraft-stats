@@ -6994,7 +6994,7 @@ issues:
   '1752':
     type: issue
     date-opened: '2024-07-23T15:07:44Z'
-    date-closed: null
+    date-closed: '2024-08-28T17:04:57Z'
   '1751':
     type: pr
     date-opened: '2024-07-23T10:49:32Z'
@@ -7258,11 +7258,11 @@ issues:
   '1833':
     type: pr
     date-opened: '2024-08-16T23:41:01Z'
-    date-closed: null
+    date-closed: '2024-08-28T15:39:16Z'
   '1832':
     type: pr
     date-opened: '2024-08-16T23:41:00Z'
-    date-closed: null
+    date-closed: '2024-08-28T16:37:39Z'
   '1831':
     type: pr
     date-opened: '2024-08-16T23:40:57Z'
@@ -7358,15 +7358,15 @@ issues:
   '1848':
     type: pr
     date-opened: '2024-08-26T15:46:14Z'
-    date-closed: null
+    date-closed: '2024-08-28T14:39:48Z'
   '1847':
     type: pr
     date-opened: '2024-08-26T15:44:20Z'
-    date-closed: null
+    date-closed: '2024-08-28T14:39:49Z'
   '1846':
     type: pr
     date-opened: '2024-08-26T15:33:43Z'
-    date-closed: null
+    date-closed: '2024-08-28T13:44:09Z'
   '1845':
     type: issue
     date-opened: '2024-08-26T14:57:26Z'
@@ -7386,19 +7386,19 @@ issues:
   '1862':
     type: pr
     date-opened: '2024-08-27T21:34:53Z'
-    date-closed: null
+    date-closed: '2024-08-28T14:37:36Z'
   '1861':
     type: pr
     date-opened: '2024-08-27T20:27:15Z'
-    date-closed: null
+    date-closed: '2024-08-28T17:27:50Z'
   '1860':
     type: pr
     date-opened: '2024-08-27T20:08:46Z'
-    date-closed: null
+    date-closed: '2024-08-28T13:38:54Z'
   '1859':
     type: pr
     date-opened: '2024-08-27T20:06:29Z'
-    date-closed: null
+    date-closed: '2024-08-28T13:43:50Z'
   '1858':
     type: issue
     date-opened: '2024-08-27T20:02:59Z'
@@ -7423,3 +7423,15 @@ issues:
     type: issue
     date-opened: '2024-08-27T13:16:56Z'
     date-closed: '2024-08-27T21:07:20Z'
+  '1866':
+    type: pr
+    date-opened: '2024-08-28T17:37:47Z'
+    date-closed: '2024-08-28T19:35:45Z'
+  '1865':
+    type: pr
+    date-opened: '2024-08-28T14:42:18Z'
+    date-closed: null
+  '1864':
+    type: pr
+    date-opened: '2024-08-28T12:53:52Z'
+    date-closed: '2024-08-28T18:13:21Z'

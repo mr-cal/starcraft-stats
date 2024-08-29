@@ -3310,7 +3310,7 @@ issues:
   '830':
     type: pr
     date-opened: '2024-08-26T19:06:00Z'
-    date-closed: null
+    date-closed: '2024-08-28T17:52:50Z'
   '829':
     type: pr
     date-opened: '2024-08-26T16:04:12Z'
@@ -3319,3 +3319,11 @@ issues:
     type: pr
     date-opened: '2024-08-26T15:27:13Z'
     date-closed: '2024-08-26T16:03:39Z'
+  '832':
+    type: pr
+    date-opened: '2024-08-28T18:47:45Z'
+    date-closed: null
+  '831':
+    type: pr
+    date-opened: '2024-08-28T16:32:54Z'
+    date-closed: null

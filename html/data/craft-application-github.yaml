@@ -1718,8 +1718,16 @@ issues:
   '431':
     type: pr
     date-opened: '2024-08-26T20:28:15Z'
-    date-closed: null
+    date-closed: '2024-08-28T18:03:47Z'
   '432':
     type: pr
     date-opened: '2024-08-27T18:02:22Z'
     date-closed: '2024-08-27T20:14:37Z'
+  '434':
+    type: issue
+    date-opened: '2024-08-28T16:07:38Z'
+    date-closed: null
+  '433':
+    type: pr
+    date-opened: '2024-08-28T15:50:52Z'
+    date-closed: null
