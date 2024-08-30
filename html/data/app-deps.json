@@ -15,8 +15,8 @@
         "craft-cli": "2.6.0",
         "craft-grammar": "2.0.0",
         "craft-parts": "2.0.0",
-        "craft-platforms": "0.1.1",
-        "craft-providers": "2.0.0",
+        "craft-platforms": "0.2.0",
+        "craft-providers": "2.0.1",
         "craft-store": "3.0.0"
     },
     "apps": {
@@ -54,14 +54,14 @@
             "craft-platforms": {
                 "series": "0.1",
                 "version": "0.1.1",
-                "latest": "0.1.1",
-                "outdated": false
+                "latest": "0.2.0",
+                "outdated": true
             },
             "craft-providers": {
                 "series": "2.0",
                 "version": "2.0.0",
-                "latest": "2.0.0",
-                "outdated": false
+                "latest": "2.0.1",
+                "outdated": true
             },
             "craft-store": {
                 "series": "3.0",
@@ -136,8 +136,8 @@
             "craft-providers": {
                 "series": "2.0",
                 "version": "2.0.0",
-                "latest": "2.0.0",
-                "outdated": false
+                "latest": "2.0.1",
+                "outdated": true
             },
             "craft-store": {
                 "series": "3.0",
@@ -180,8 +180,8 @@
             "craft-providers": {
                 "series": "2.0",
                 "version": "2.0.0",
-                "latest": "2.0.0",
-                "outdated": false
+                "latest": "2.0.1",
+                "outdated": true
             }
         },
         "rockcraft/hotfix/1.5": {
@@ -256,14 +256,14 @@
             "craft-platforms": {
                 "series": "0.1",
                 "version": "0.1.1",
-                "latest": "0.1.1",
-                "outdated": false
+                "latest": "0.2.0",
+                "outdated": true
             },
             "craft-providers": {
                 "series": "2.0",
                 "version": "2.0.0",
-                "latest": "2.0.0",
-                "outdated": false
+                "latest": "2.0.1",
+                "outdated": true
             },
             "craft-store": {
                 "series": "3.0",
