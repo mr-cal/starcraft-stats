@@ -3331,3 +3331,7 @@ issues:
     type: issue
     date-opened: '2024-08-29T21:45:06Z'
     date-closed: null
+  '834':
+    type: pr
+    date-opened: '2024-09-03T19:58:41Z'
+    date-closed: null

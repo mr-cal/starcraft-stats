@@ -7270,7 +7270,7 @@ issues:
   '1830':
     type: pr
     date-opened: '2024-08-16T23:08:03Z'
-    date-closed: null
+    date-closed: '2024-09-03T16:57:09Z'
   '1829':
     type: pr
     date-opened: '2024-08-16T22:34:26Z'
@@ -7442,4 +7442,20 @@ issues:
   '1868':
     type: pr
     date-opened: '2024-08-30T07:59:53Z'
+    date-closed: null
+  '1872':
+    type: pr
+    date-opened: '2024-09-04T01:20:25Z'
+    date-closed: null
+  '1871':
+    type: pr
+    date-opened: '2024-09-04T01:20:20Z'
+    date-closed: null
+  '1870':
+    type: pr
+    date-opened: '2024-09-04T01:20:15Z'
+    date-closed: null
+  '1869':
+    type: issue
+    date-opened: '2024-09-03T20:28:59Z'
     date-closed: null
