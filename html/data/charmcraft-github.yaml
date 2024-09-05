@@ -7446,7 +7446,7 @@ issues:
   '1872':
     type: pr
     date-opened: '2024-09-04T01:20:25Z'
-    date-closed: null
+    date-closed: '2024-09-04T16:42:54Z'
   '1871':
     type: pr
     date-opened: '2024-09-04T01:20:20Z'
@@ -7454,8 +7454,16 @@ issues:
   '1870':
     type: pr
     date-opened: '2024-09-04T01:20:15Z'
-    date-closed: null
+    date-closed: '2024-09-04T17:55:55Z'
   '1869':
     type: issue
     date-opened: '2024-09-03T20:28:59Z'
+    date-closed: null
+  '1874':
+    type: issue
+    date-opened: '2024-09-04T21:34:41Z'
+    date-closed: null
+  '1873':
+    type: issue
+    date-opened: '2024-09-04T14:22:24Z'
     date-closed: null

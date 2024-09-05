@@ -148,10 +148,10 @@
         },
         "rockcraft/main": {
             "craft-application": {
-                "series": "4.0",
-                "version": "4.0.0",
+                "series": "4.1",
+                "version": "4.1.1",
                 "latest": "4.1.1",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.0",
