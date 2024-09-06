@@ -91,16 +91,12 @@ class GithubProject:
         if self.__data:
             return self.__data
 
-        if not self.data_file.exists():
-            self.data_file.write_text("issues:")
-            emit.message(f"Created {self.data_file}")
-
-        data: GithubIssues = GithubIssues.from_yaml_file(self.data_file)
-        if not data:
+        if self.data_file.exists():
+            emit.message(f"Loading data from {self.data_file}")
+            data: GithubIssues = GithubIssues.from_yaml_file(self.data_file)
+        else:
+            emit.message(f"Data file {self.data_file} does not exist.")
             data = GithubIssues(issues={})
-
-        if not data.issues:
-            data.issues = {}
 
         self.__data = data
         return data
