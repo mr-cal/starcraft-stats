@@ -1766,8 +1766,32 @@ issues:
   '441':
     type: pr
     date-opened: '2024-09-05T15:54:20Z'
-    date-closed: null
+    date-closed: '2024-09-06T13:55:37Z'
   '440':
     type: pr
     date-opened: '2024-09-05T15:53:14Z'
     date-closed: '2024-09-06T01:23:12Z'
+  '450':
+    type: pr
+    date-opened: '2024-09-06T13:46:23Z'
+    date-closed: null
+  '449':
+    type: pr
+    date-opened: '2024-09-06T04:34:41Z'
+    date-closed: '2024-09-06T14:01:39Z'
+  '448':
+    type: pr
+    date-opened: '2024-09-06T04:34:39Z'
+    date-closed: '2024-09-06T14:32:52Z'
+  '447':
+    type: pr
+    date-opened: '2024-09-06T04:24:45Z'
+    date-closed: '2024-09-06T14:39:52Z'
+  '446':
+    type: pr
+    date-opened: '2024-09-06T04:24:43Z'
+    date-closed: '2024-09-06T13:49:30Z'
+  '445':
+    type: pr
+    date-opened: '2024-09-06T04:23:20Z'
+    date-closed: null

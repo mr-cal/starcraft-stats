@@ -138,7 +138,7 @@ issues:
   '481':
     type: pr
     date-opened: '2024-02-12T02:23:15Z'
-    date-closed: null
+    date-closed: '2024-08-28T17:26:51Z'
   '480':
     type: pr
     date-opened: '2024-02-09T21:27:37Z'
@@ -2510,7 +2510,7 @@ issues:
   '623':
     type: pr
     date-opened: '2024-07-04T04:22:59Z'
-    date-closed: null
+    date-closed: '2024-08-27T12:55:58Z'
   '630':
     type: pr
     date-opened: '2024-07-05T19:00:36Z'
@@ -2526,7 +2526,7 @@ issues:
   '631':
     type: pr
     date-opened: '2024-07-08T10:54:00Z'
-    date-closed: null
+    date-closed: '2024-08-28T20:13:57Z'
   '635':
     type: pr
     date-opened: '2024-07-11T19:02:52Z'
@@ -2678,7 +2678,7 @@ issues:
   '673':
     type: pr
     date-opened: '2024-08-14T16:03:30Z'
-    date-closed: null
+    date-closed: '2024-09-03T21:14:49Z'
   '672':
     type: pr
     date-opened: '2024-08-14T14:54:41Z'
@@ -2690,12 +2690,104 @@ issues:
   '675':
     type: pr
     date-opened: '2024-08-16T19:49:38Z'
-    date-closed: null
+    date-closed: '2024-08-27T22:22:41Z'
   '674':
     type: pr
     date-opened: '2024-08-16T11:41:40Z'
-    date-closed: null
+    date-closed: '2024-08-30T09:42:32Z'
   '676':
     type: pr
     date-opened: '2024-08-20T13:35:32Z'
+    date-closed: null
+  '699':
+    type: pr
+    date-opened: '2024-09-05T20:17:13Z'
+    date-closed: null
+  '698':
+    type: issue
+    date-opened: '2024-09-05T19:56:28Z'
+    date-closed: null
+  '697':
+    type: pr
+    date-opened: '2024-09-04T17:35:06Z'
+    date-closed: null
+  '696':
+    type: pr
+    date-opened: '2024-09-04T12:49:10Z'
+    date-closed: '2024-09-04T16:49:49Z'
+  '695':
+    type: issue
+    date-opened: '2024-09-04T10:45:56Z'
+    date-closed: '2024-09-04T19:36:50Z'
+  '694':
+    type: pr
+    date-opened: '2024-09-02T16:29:40Z'
+    date-closed: '2024-09-03T18:54:55Z'
+  '693':
+    type: pr
+    date-opened: '2024-09-02T03:54:45Z'
+    date-closed: null
+  '692':
+    type: pr
+    date-opened: '2024-08-30T09:42:47Z'
+    date-closed: null
+  '691':
+    type: pr
+    date-opened: '2024-08-29T12:39:41Z'
+    date-closed: '2024-09-03T19:47:00Z'
+  '690':
+    type: pr
+    date-opened: '2024-08-29T07:17:05Z'
+    date-closed: null
+  '689':
+    type: pr
+    date-opened: '2024-08-29T01:50:56Z'
+    date-closed: null
+  '688':
+    type: pr
+    date-opened: '2024-08-29T01:42:11Z'
+    date-closed: null
+  '687':
+    type: pr
+    date-opened: '2024-08-28T12:50:50Z'
+    date-closed: '2024-08-28T20:16:38Z'
+  '686':
+    type: pr
+    date-opened: '2024-08-27T16:30:07Z'
+    date-closed: '2024-08-27T20:30:09Z'
+  '685':
+    type: pr
+    date-opened: '2024-08-27T12:50:16Z'
+    date-closed: null
+  '684':
+    type: pr
+    date-opened: '2024-08-27T09:31:03Z'
+    date-closed: '2024-08-29T17:45:17Z'
+  '683':
+    type: issue
+    date-opened: '2024-08-27T09:22:53Z'
+    date-closed: null
+  '682':
+    type: pr
+    date-opened: '2024-08-27T05:39:09Z'
+    date-closed: '2024-09-04T19:36:49Z'
+  '681':
+    type: issue
+    date-opened: '2024-08-26T16:30:08Z'
+    date-closed: null
+  '680':
+    type: issue
+    date-opened: '2024-08-26T11:27:05Z'
+    date-closed: null
+  '679':
+    type: pr
+    date-opened: '2024-08-26T07:39:09Z'
+    date-closed: '2024-08-29T18:24:35Z'
+  '678':
+    type: pr
+    date-opened: '2024-08-23T22:01:47Z'
+    date-closed: null
+  '677':
+    type: pr
+    date-opened: '2024-08-21T06:04:10Z'
     date-closed: null

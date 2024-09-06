@@ -7310,7 +7310,7 @@ issues:
   '1820':
     type: pr
     date-opened: '2024-08-16T04:10:15Z'
-    date-closed: null
+    date-closed: '2024-09-06T07:38:03Z'
   '1838':
     type: pr
     date-opened: '2024-08-19T16:11:51Z'
@@ -7479,3 +7479,27 @@ issues:
     type: pr
     date-opened: '2024-09-05T19:14:49Z'
     date-closed: null
+  '1883':
+    type: pr
+    date-opened: '2024-09-06T07:33:16Z'
+    date-closed: null
+  '1882':
+    type: pr
+    date-opened: '2024-09-06T04:34:41Z'
+    date-closed: null
+  '1881':
+    type: pr
+    date-opened: '2024-09-06T04:34:38Z'
+    date-closed: '2024-09-06T14:55:26Z'
+  '1880':
+    type: pr
+    date-opened: '2024-09-06T04:34:36Z'
+    date-closed: '2024-09-06T14:54:22Z'
+  '1879':
+    type: pr
+    date-opened: '2024-09-06T04:34:34Z'
+    date-closed: null
+  '1878':
+    type: pr
+    date-opened: '2024-09-06T04:29:18Z'
+    date-closed: '2024-09-06T14:00:00Z'

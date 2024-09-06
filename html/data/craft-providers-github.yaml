@@ -286,7 +286,7 @@ issues:
   '472':
     type: pr
     date-opened: '2023-11-30T22:12:14Z'
-    date-closed: null
+    date-closed: '2024-08-26T15:31:50Z'
   '471':
     type: pr
     date-opened: '2023-11-30T18:28:37Z'
@@ -2498,12 +2498,96 @@ issues:
   '627':
     type: pr
     date-opened: '2024-08-17T06:32:10Z'
-    date-closed: null
+    date-closed: '2024-08-21T13:15:43Z'
   '626':
     type: pr
     date-opened: '2024-08-17T04:35:23Z'
-    date-closed: null
+    date-closed: '2024-08-21T12:41:16Z'
   '628':
     type: issue
     date-opened: '2024-08-19T18:54:30Z'
+    date-closed: '2024-08-30T13:12:27Z'
+  '649':
+    type: pr
+    date-opened: '2024-08-31T07:35:13Z'
     date-closed: null
+  '648':
+    type: pr
+    date-opened: '2024-08-31T03:12:40Z'
+    date-closed: '2024-09-06T12:04:08Z'
+  '647':
+    type: pr
+    date-opened: '2024-08-30T12:17:28Z'
+    date-closed: null
+  '646':
+    type: issue
+    date-opened: '2024-08-30T04:04:28Z'
+    date-closed: null
+  '645':
+    type: pr
+    date-opened: '2024-08-30T03:17:05Z'
+    date-closed: null
+  '644':
+    type: pr
+    date-opened: '2024-08-30T02:52:20Z'
+    date-closed: '2024-09-04T15:49:51Z'
+  '643':
+    type: pr
+    date-opened: '2024-08-28T21:29:56Z'
+    date-closed: '2024-08-29T20:49:08Z'
+  '642':
+    type: pr
+    date-opened: '2024-08-27T21:55:43Z'
+    date-closed: '2024-08-28T21:22:57Z'
+  '641':
+    type: pr
+    date-opened: '2024-08-27T19:58:39Z'
+    date-closed: '2024-08-27T21:48:44Z'
+  '640':
+    type: pr
+    date-opened: '2024-08-27T12:54:25Z'
+    date-closed: '2024-08-27T19:53:57Z'
+  '639':
+    type: issue
+    date-opened: '2024-08-26T22:02:14Z'
+    date-closed: null
+  '638':
+    type: issue
+    date-opened: '2024-08-26T19:43:32Z'
+    date-closed: null
+  '637':
+    type: pr
+    date-opened: '2024-08-22T19:15:48Z'
+    date-closed: '2024-08-27T14:28:06Z'
+  '636':
+    type: pr
+    date-opened: '2024-08-22T19:15:46Z'
+    date-closed: '2024-08-27T14:28:04Z'
+  '635':
+    type: pr
+    date-opened: '2024-08-22T16:42:13Z'
+    date-closed: '2024-08-22T17:37:18Z'
+  '634':
+    type: pr
+    date-opened: '2024-08-22T14:55:05Z'
+    date-closed: '2024-08-22T15:51:28Z'
+  '633':
+    type: pr
+    date-opened: '2024-08-22T00:12:24Z'
+    date-closed: '2024-08-22T14:14:38Z'
+  '632':
+    type: pr
+    date-opened: '2024-08-22T00:12:21Z'
+    date-closed: '2024-08-22T12:57:34Z'
+  '631':
+    type: pr
+    date-opened: '2024-08-21T15:48:53Z'
+    date-closed: '2024-08-21T17:16:52Z'
+  '630':
+    type: pr
+    date-opened: '2024-08-21T14:42:12Z'
+    date-closed: '2024-08-21T15:45:08Z'
+  '629':
+    type: pr
+    date-opened: '2024-08-21T13:28:31Z'
+    date-closed: '2024-08-21T14:23:43Z'
