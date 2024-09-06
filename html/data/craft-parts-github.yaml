@@ -3210,7 +3210,7 @@ issues:
   '804':
     type: issue
     date-opened: '2024-08-08T18:37:30Z'
-    date-closed: null
+    date-closed: '2024-09-05T21:22:17Z'
   '803':
     type: pr
     date-opened: '2024-08-08T18:20:43Z'
@@ -3334,4 +3334,12 @@ issues:
   '834':
     type: pr
     date-opened: '2024-09-03T19:58:41Z'
+    date-closed: '2024-09-05T21:22:16Z'
+  '836':
+    type: issue
+    date-opened: '2024-09-05T16:24:52Z'
+    date-closed: null
+  '835':
+    type: issue
+    date-opened: '2024-09-05T16:04:01Z'
     date-closed: null

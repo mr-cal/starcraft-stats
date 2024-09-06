@@ -1050,7 +1050,7 @@ issues:
   '263':
     type: issue
     date-opened: '2024-07-23T12:50:42Z'
-    date-closed: null
+    date-closed: '2024-09-05T20:41:19Z'
   '264':
     type: pr
     date-opened: '2024-07-26T14:34:17Z'
@@ -1075,3 +1075,15 @@ issues:
     type: issue
     date-opened: '2024-08-27T21:44:03Z'
     date-closed: null
+  '272':
+    type: pr
+    date-opened: '2024-09-05T20:46:41Z'
+    date-closed: '2024-09-05T20:54:19Z'
+  '271':
+    type: pr
+    date-opened: '2024-09-05T19:27:48Z'
+    date-closed: '2024-09-05T21:00:31Z'
+  '270':
+    type: pr
+    date-opened: '2024-09-05T14:28:56Z'
+    date-closed: '2024-09-05T20:41:18Z'

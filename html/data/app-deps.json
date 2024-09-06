@@ -10,9 +10,9 @@
         "craft-store"
     ],
     "latest": {
-        "craft-application": "4.1.1",
+        "craft-application": "4.1.2",
         "craft-archives": "2.0.0",
-        "craft-cli": "2.6.0",
+        "craft-cli": "2.7.0",
         "craft-grammar": "2.0.0",
         "craft-parts": "2.0.0",
         "craft-platforms": "0.2.0",
@@ -24,7 +24,7 @@
             "craft-application": {
                 "series": "4.1",
                 "version": "4.1.0",
-                "latest": "4.1.1",
+                "latest": "4.1.2",
                 "outdated": true
             },
             "craft-archives": {
@@ -36,8 +36,8 @@
             "craft-cli": {
                 "series": "2.6",
                 "version": "2.6.0",
-                "latest": "2.6.0",
-                "outdated": false
+                "latest": "2.7.0",
+                "outdated": true
             },
             "craft-grammar": {
                 "series": "2.0",
@@ -100,7 +100,7 @@
             "craft-application": {
                 "series": "4.1",
                 "version": "4.1.0",
-                "latest": "4.1.1",
+                "latest": "4.1.2",
                 "outdated": true
             },
             "craft-archives": {
@@ -150,8 +150,8 @@
             "craft-application": {
                 "series": "4.1",
                 "version": "4.1.1",
-                "latest": "4.1.1",
-                "outdated": false
+                "latest": "4.1.2",
+                "outdated": true
             },
             "craft-archives": {
                 "series": "2.0",
@@ -162,8 +162,8 @@
             "craft-cli": {
                 "series": "2.6",
                 "version": "2.6.0",
-                "latest": "2.6.0",
-                "outdated": false
+                "latest": "2.7.0",
+                "outdated": true
             },
             "craft-grammar": {
                 "series": "2.0",
@@ -226,7 +226,7 @@
             "craft-application": {
                 "series": "4.1",
                 "version": "4.1.0",
-                "latest": "4.1.1",
+                "latest": "4.1.2",
                 "outdated": true
             },
             "craft-archives": {
@@ -238,8 +238,8 @@
             "craft-cli": {
                 "series": "2.6",
                 "version": "2.6.0",
-                "latest": "2.6.0",
-                "outdated": false
+                "latest": "2.7.0",
+                "outdated": true
             },
             "craft-grammar": {
                 "series": "2.0",
@@ -351,6 +351,56 @@
                 "series": "2.6",
                 "version": "2.6.2",
                 "latest": "2.6.2",
+                "outdated": false
+            }
+        },
+        "snapcraft/hotfix/8.4": {
+            "craft-application": {
+                "series": "4.1",
+                "version": "4.1.0",
+                "latest": "4.1.2",
+                "outdated": true
+            },
+            "craft-archives": {
+                "series": "2.0",
+                "version": "2.0.0",
+                "latest": "2.0.0",
+                "outdated": false
+            },
+            "craft-cli": {
+                "series": "2.6",
+                "version": "2.6.0",
+                "latest": "2.6.0",
+                "outdated": false
+            },
+            "craft-grammar": {
+                "series": "2.0",
+                "version": "2.0.0",
+                "latest": "2.0.0",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "2.0",
+                "version": "2.0.0",
+                "latest": "2.0.0",
+                "outdated": false
+            },
+            "craft-platforms": {
+                "series": "0.1",
+                "version": "0.1.1",
+                "latest": "0.1.1",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "2.0",
+                "version": "2.0.0",
+                "latest": "2.0.1",
+                "outdated": true
+            },
+            "craft-store": {
+                "series": "3.0",
+                "version": "3.0.0",
+                "latest": "3.0.0",
                 "outdated": false
             }
         }
