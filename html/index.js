@@ -156,6 +156,7 @@ let projects = [
     "craft-grammar",
     "craft-parts",
     "craft-providers",
+    "craft-platforms",
     "craft-store",
     "starbase",
 ];
