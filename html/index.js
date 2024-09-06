@@ -174,8 +174,10 @@ var apps = Object.keys(deps.apps)
 
 console.log(deps)
 
-// Create empty table
-var deps_data = [["Library"].concat(apps)];
+// First row is the header
+// Replace the first "/" with a line break (i.e. 'charmcraft/hotfix/3.2' -> 'charmcraft<br>hotfix/3.2')
+var deps_data = [["Library"].concat(apps.map(app => app.replace("/", "<br>")))];
+// Create empty rows for each library
 for (var i=0; i < deps.libs.length; i++) {
     var row = Array(apps.length + 2).fill("")
     console.log(row)
@@ -192,7 +194,7 @@ for (var i=0; i < deps.libs.length; i++) {
             var dep_lib = deps.apps[app][lib]
             var v = dep_lib.version
             if (dep_lib.outdated) {
-                v = "!" + v + " (" + dep_lib.latest + ")"
+                v = "!" + v + "<br>(" + dep_lib.latest + ")"
             }
             deps_data[i+1][j+1] = v
         } else {
