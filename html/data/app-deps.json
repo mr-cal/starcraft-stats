@@ -34,10 +34,10 @@
                 "outdated": false
             },
             "craft-cli": {
-                "series": "2.6",
-                "version": "2.6.0",
+                "series": "2.7",
+                "version": "2.7.0",
                 "latest": "2.7.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-grammar": {
                 "series": "2.0",
@@ -110,9 +110,9 @@
                 "outdated": false
             },
             "craft-cli": {
-                "series": "2.6",
-                "version": "2.6.0",
-                "latest": "2.6.0",
+                "series": "2.7",
+                "version": "2.7.0",
+                "latest": "2.7.0",
                 "outdated": false
             },
             "craft-grammar": {
