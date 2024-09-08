@@ -175,3 +175,7 @@ issues:
     type: pr
     date-opened: '2024-08-31T03:10:35Z'
     date-closed: '2024-09-04T16:44:35Z'
+  '45':
+    type: pr
+    date-opened: '2024-09-07T04:52:18Z'
+    date-closed: null
