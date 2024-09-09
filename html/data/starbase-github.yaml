@@ -970,8 +970,20 @@ issues:
   '244':
     type: pr
     date-opened: '2024-09-07T06:48:44Z'
-    date-closed: null
+    date-closed: '2024-09-08T12:38:13Z'
   '243':
     type: pr
     date-opened: '2024-09-07T04:57:16Z'
+    date-closed: '2024-09-08T12:33:44Z'
+  '247':
+    type: pr
+    date-opened: '2024-09-08T19:27:23Z'
     date-closed: null
+  '246':
+    type: pr
+    date-opened: '2024-09-08T16:22:22Z'
+    date-closed: null
+  '245':
+    type: pr
+    date-opened: '2024-09-08T12:34:09Z'
+    date-closed: '2024-09-08T12:37:12Z'
