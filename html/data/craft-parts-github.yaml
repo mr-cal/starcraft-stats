@@ -3347,3 +3347,15 @@ issues:
     type: pr
     date-opened: '2024-09-09T03:32:20Z'
     date-closed: null
+  '840':
+    type: pr
+    date-opened: '2024-09-09T19:35:20Z'
+    date-closed: '2024-09-09T21:26:04Z'
+  '839':
+    type: issue
+    date-opened: '2024-09-09T14:07:31Z'
+    date-closed: null
+  '838':
+    type: issue
+    date-opened: '2024-09-09T13:24:11Z'
+    date-closed: null

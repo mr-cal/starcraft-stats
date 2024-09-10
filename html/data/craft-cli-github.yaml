@@ -1087,3 +1087,11 @@ issues:
     type: pr
     date-opened: '2024-09-05T14:28:56Z'
     date-closed: '2024-09-05T20:41:18Z'
+  '274':
+    type: issue
+    date-opened: '2024-09-09T16:18:02Z'
+    date-closed: null
+  '273':
+    type: issue
+    date-opened: '2024-09-09T14:37:11Z'
+    date-closed: null
