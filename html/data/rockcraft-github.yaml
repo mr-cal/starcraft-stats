@@ -2738,7 +2738,7 @@ issues:
   '690':
     type: pr
     date-opened: '2024-08-29T07:17:05Z'
-    date-closed: null
+    date-closed: '2024-09-10T20:24:39Z'
   '689':
     type: pr
     date-opened: '2024-08-29T01:50:56Z'
@@ -2802,4 +2802,16 @@ issues:
   '700':
     type: pr
     date-opened: '2024-09-09T05:41:08Z'
+    date-closed: null
+  '705':
+    type: issue
+    date-opened: '2024-09-11T00:02:30Z'
+    date-closed: null
+  '704':
+    type: issue
+    date-opened: '2024-09-10T18:24:05Z'
+    date-closed: null
+  '703':
+    type: pr
+    date-opened: '2024-09-10T11:19:53Z'
     date-closed: null

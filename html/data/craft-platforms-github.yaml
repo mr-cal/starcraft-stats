@@ -162,4 +162,8 @@ issues:
   '41':
     type: pr
     date-opened: '2024-09-09T22:10:47Z'
+    date-closed: '2024-09-10T15:54:00Z'
+  '42':
+    type: issue
+    date-opened: '2024-09-10T16:58:11Z'
     date-closed: null

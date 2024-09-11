@@ -3359,3 +3359,7 @@ issues:
     type: issue
     date-opened: '2024-09-09T13:24:11Z'
     date-closed: null
+  '841':
+    type: issue
+    date-opened: '2024-09-10T04:31:06Z'
+    date-closed: '2024-09-10T04:34:16Z'
