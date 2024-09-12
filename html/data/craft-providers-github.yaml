@@ -2599,3 +2599,7 @@ issues:
     type: pr
     date-opened: '2024-09-09T20:23:40Z'
     date-closed: null
+  '652':
+    type: pr
+    date-opened: '2024-09-11T11:28:25Z'
+    date-closed: null

@@ -20050,7 +20050,7 @@ issues:
   '5026':
     type: pr
     date-opened: '2024-09-09T20:07:39Z'
-    date-closed: null
+    date-closed: '2024-09-11T11:52:49Z'
   '5025':
     type: issue
     date-opened: '2024-09-09T17:20:09Z'
@@ -20066,4 +20066,12 @@ issues:
   '5027':
     type: pr
     date-opened: '2024-09-10T13:30:05Z'
+    date-closed: null
+  '5029':
+    type: issue
+    date-opened: '2024-09-11T19:03:08Z'
+    date-closed: null
+  '5028':
+    type: pr
+    date-opened: '2024-09-11T16:02:46Z'
     date-closed: null

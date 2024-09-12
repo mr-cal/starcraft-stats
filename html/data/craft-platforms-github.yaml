@@ -167,3 +167,15 @@ issues:
     type: issue
     date-opened: '2024-09-10T16:58:11Z'
     date-closed: null
+  '45':
+    type: issue
+    date-opened: '2024-09-11T17:21:30Z'
+    date-closed: null
+  '44':
+    type: pr
+    date-opened: '2024-09-11T15:22:19Z'
+    date-closed: null
+  '43':
+    type: issue
+    date-opened: '2024-09-11T15:04:06Z'
+    date-closed: null

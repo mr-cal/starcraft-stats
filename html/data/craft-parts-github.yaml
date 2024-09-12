@@ -3363,3 +3363,11 @@ issues:
     type: issue
     date-opened: '2024-09-10T04:31:06Z'
     date-closed: '2024-09-10T04:34:16Z'
+  '843':
+    type: issue
+    date-opened: '2024-09-11T23:43:49Z'
+    date-closed: null
+  '842':
+    type: issue
+    date-opened: '2024-09-11T15:45:19Z'
+    date-closed: null
