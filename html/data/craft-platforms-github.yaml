@@ -179,3 +179,7 @@ issues:
     type: issue
     date-opened: '2024-09-11T15:04:06Z'
     date-closed: null
+  '46':
+    type: pr
+    date-opened: '2024-09-12T21:31:55Z'
+    date-closed: null
