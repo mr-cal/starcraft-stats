@@ -1090,7 +1090,7 @@ issues:
   '274':
     type: issue
     date-opened: '2024-09-09T16:18:02Z'
-    date-closed: null
+    date-closed: '2024-09-13T13:06:21Z'
   '273':
     type: issue
     date-opened: '2024-09-09T14:37:11Z'
@@ -1098,4 +1098,4 @@ issues:
   '275':
     type: pr
     date-opened: '2024-09-10T22:01:38Z'
-    date-closed: null
+    date-closed: '2024-09-13T13:06:20Z'

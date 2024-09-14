@@ -3378,8 +3378,20 @@ issues:
   '845':
     type: pr
     date-opened: '2024-09-12T17:38:59Z'
-    date-closed: null
+    date-closed: '2024-09-13T13:25:27Z'
   '844':
     type: issue
     date-opened: '2024-09-12T13:47:49Z'
-    date-closed: null
+    date-closed: '2024-09-13T15:47:03Z'
+  '849':
+    type: pr
+    date-opened: '2024-09-13T19:06:40Z'
+    date-closed: '2024-09-13T20:07:31Z'
+  '848':
+    type: pr
+    date-opened: '2024-09-13T18:11:11Z'
+    date-closed: '2024-09-13T18:56:42Z'
+  '847':
+    type: pr
+    date-opened: '2024-09-13T13:58:03Z'
+    date-closed: '2024-09-13T15:12:06Z'

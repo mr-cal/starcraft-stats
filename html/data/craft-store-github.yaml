@@ -802,11 +802,11 @@ issues:
   '200':
     type: pr
     date-opened: '2024-08-17T04:59:20Z'
-    date-closed: null
+    date-closed: '2024-09-13T13:03:11Z'
   '203':
     type: pr
     date-opened: '2024-08-24T03:20:15Z'
-    date-closed: null
+    date-closed: '2024-09-13T13:00:27Z'
   '202':
     type: pr
     date-opened: '2024-08-24T01:21:53Z'
@@ -822,4 +822,12 @@ issues:
   '206':
     type: pr
     date-opened: '2024-09-12T22:46:03Z'
+    date-closed: null
+  '208':
+    type: issue
+    date-opened: '2024-09-13T20:45:25Z'
+    date-closed: null
+  '207':
+    type: pr
+    date-opened: '2024-09-13T13:03:34Z'
     date-closed: null

@@ -966,7 +966,7 @@ issues:
   '237':
     type: pr
     date-opened: '2024-08-26T16:09:45Z'
-    date-closed: null
+    date-closed: '2024-09-14T00:09:01Z'
   '244':
     type: pr
     date-opened: '2024-09-07T06:48:44Z'
@@ -987,3 +987,7 @@ issues:
     type: pr
     date-opened: '2024-09-08T12:34:09Z'
     date-closed: '2024-09-08T12:37:12Z'
+  '248':
+    type: pr
+    date-opened: '2024-09-14T03:33:23Z'
+    date-closed: null
