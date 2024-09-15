@@ -990,4 +990,12 @@ issues:
   '248':
     type: pr
     date-opened: '2024-09-14T03:33:23Z'
-    date-closed: null
+    date-closed: '2024-09-14T12:11:48Z'
+  '250':
+    type: pr
+    date-opened: '2024-09-14T12:05:52Z'
+    date-closed: '2024-09-14T12:07:45Z'
+  '249':
+    type: pr
+    date-opened: '2024-09-14T07:49:27Z'
+    date-closed: '2024-09-14T12:05:31Z'

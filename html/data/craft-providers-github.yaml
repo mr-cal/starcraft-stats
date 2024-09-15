@@ -2603,3 +2603,11 @@ issues:
     type: pr
     date-opened: '2024-09-11T11:28:25Z'
     date-closed: null
+  '654':
+    type: pr
+    date-opened: '2024-09-14T16:05:22Z'
+    date-closed: null
+  '653':
+    type: pr
+    date-opened: '2024-09-14T04:13:47Z'
+    date-closed: '2024-09-14T12:06:47Z'
