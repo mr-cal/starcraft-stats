@@ -20114,7 +20114,7 @@ issues:
   '5037':
     type: pr
     date-opened: '2024-09-13T17:57:16Z'
-    date-closed: null
+    date-closed: '2024-09-16T12:57:24Z'
   '5036':
     type: pr
     date-opened: '2024-09-13T15:42:44Z'
@@ -20127,3 +20127,11 @@ issues:
     type: issue
     date-opened: '2024-09-13T12:40:34Z'
     date-closed: null
+  '5044':
+    type: pr
+    date-opened: '2024-09-16T21:14:18Z'
+    date-closed: null
+  '5043':
+    type: pr
+    date-opened: '2024-09-16T16:59:49Z'
+    date-closed: '2024-09-16T20:29:22Z'

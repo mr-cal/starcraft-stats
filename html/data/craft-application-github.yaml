@@ -1650,7 +1650,7 @@ issues:
   '411':
     type: issue
     date-opened: '2024-08-12T14:44:52Z'
-    date-closed: null
+    date-closed: '2024-09-16T15:46:46Z'
   '417':
     type: pr
     date-opened: '2024-08-13T21:42:59Z'
@@ -1854,11 +1854,11 @@ issues:
   '468':
     type: pr
     date-opened: '2024-09-13T17:56:29Z'
-    date-closed: null
+    date-closed: '2024-09-16T14:29:56Z'
   '467':
     type: pr
     date-opened: '2024-09-13T15:02:38Z'
-    date-closed: null
+    date-closed: '2024-09-16T15:45:29Z'
   '466':
     type: pr
     date-opened: '2024-09-13T14:29:57Z'
@@ -1879,3 +1879,11 @@ issues:
     type: pr
     date-opened: '2024-09-13T12:30:03Z'
     date-closed: '2024-09-13T12:37:37Z'
+  '473':
+    type: pr
+    date-opened: '2024-09-16T21:09:19Z'
+    date-closed: null
+  '472':
+    type: issue
+    date-opened: '2024-09-16T20:28:05Z'
+    date-closed: null

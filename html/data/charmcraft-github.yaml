@@ -638,7 +638,7 @@ issues:
   '1456':
     type: issue
     date-opened: '2024-01-03T15:44:45Z'
-    date-closed: null
+    date-closed: '2024-09-16T16:04:01Z'
   '1455':
     type: pr
     date-opened: '2023-12-15T22:52:02Z'
@@ -7575,3 +7575,15 @@ issues:
     type: issue
     date-opened: '2024-09-13T15:48:49Z'
     date-closed: null
+  '1904':
+    type: pr
+    date-opened: '2024-09-16T16:00:18Z'
+    date-closed: null
+  '1903':
+    type: pr
+    date-opened: '2024-09-16T14:26:54Z'
+    date-closed: '2024-09-16T16:04:00Z'
+  '1902':
+    type: pr
+    date-opened: '2024-09-16T14:11:57Z'
+    date-closed: '2024-09-16T15:13:43Z'
