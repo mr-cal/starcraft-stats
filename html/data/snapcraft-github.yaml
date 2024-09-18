@@ -19998,7 +19998,7 @@ issues:
   '5000':
     type: issue
     date-opened: '2024-08-23T19:13:23Z'
-    date-closed: null
+    date-closed: '2024-09-17T23:37:04Z'
   '4999':
     type: issue
     date-opened: '2024-08-23T15:57:46Z'
@@ -20082,7 +20082,7 @@ issues:
   '5032':
     type: pr
     date-opened: '2024-09-12T18:55:02Z'
-    date-closed: null
+    date-closed: '2024-09-17T14:02:58Z'
   '5031':
     type: pr
     date-opened: '2024-09-12T18:41:15Z'
@@ -20135,3 +20135,7 @@ issues:
     type: pr
     date-opened: '2024-09-16T16:59:49Z'
     date-closed: '2024-09-16T20:29:22Z'
+  '5045':
+    type: pr
+    date-opened: '2024-09-17T19:18:41Z'
+    date-closed: null
