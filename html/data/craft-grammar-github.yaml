@@ -194,8 +194,16 @@ issues:
   '50':
     type: pr
     date-opened: '2024-09-17T00:33:11Z'
-    date-closed: null
+    date-closed: '2024-09-18T17:13:12Z'
   '49':
     type: issue
     date-opened: '2024-09-16T13:04:18Z'
     date-closed: null
+  '52':
+    type: issue
+    date-opened: '2024-09-18T21:14:15Z'
+    date-closed: null
+  '51':
+    type: pr
+    date-opened: '2024-09-18T21:00:50Z'
+    date-closed: '2024-09-18T21:04:09Z'

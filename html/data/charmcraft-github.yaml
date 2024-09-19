@@ -7578,7 +7578,7 @@ issues:
   '1904':
     type: pr
     date-opened: '2024-09-16T16:00:18Z'
-    date-closed: null
+    date-closed: '2024-09-18T14:09:28Z'
   '1903':
     type: pr
     date-opened: '2024-09-16T14:26:54Z'
@@ -7606,4 +7606,4 @@ issues:
   '1905':
     type: pr
     date-opened: '2024-09-17T09:48:25Z'
-    date-closed: null
+    date-closed: '2024-09-18T14:23:04Z'

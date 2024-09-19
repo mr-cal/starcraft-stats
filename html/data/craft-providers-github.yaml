@@ -2518,7 +2518,7 @@ issues:
   '647':
     type: pr
     date-opened: '2024-08-30T12:17:28Z'
-    date-closed: null
+    date-closed: '2024-09-18T11:16:11Z'
   '646':
     type: issue
     date-opened: '2024-08-30T04:04:28Z'
@@ -2602,7 +2602,7 @@ issues:
   '652':
     type: pr
     date-opened: '2024-09-11T11:28:25Z'
-    date-closed: null
+    date-closed: '2024-09-18T13:53:09Z'
   '654':
     type: pr
     date-opened: '2024-09-14T16:05:22Z'
@@ -2611,3 +2611,7 @@ issues:
     type: pr
     date-opened: '2024-09-14T04:13:47Z'
     date-closed: '2024-09-14T12:06:47Z'
+  '655':
+    type: pr
+    date-opened: '2024-09-18T15:59:46Z'
+    date-closed: null
