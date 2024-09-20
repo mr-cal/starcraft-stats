@@ -830,7 +830,7 @@ issues:
   '207':
     type: pr
     date-opened: '2024-09-13T13:03:34Z'
-    date-closed: null
+    date-closed: '2024-09-19T12:06:33Z'
   '211':
     type: pr
     date-opened: '2024-09-14T16:05:08Z'
@@ -842,4 +842,8 @@ issues:
   '209':
     type: pr
     date-opened: '2024-09-14T04:47:25Z'
+    date-closed: '2024-09-19T12:17:16Z'
+  '212':
+    type: pr
+    date-opened: '2024-09-19T22:03:00Z'
     date-closed: null

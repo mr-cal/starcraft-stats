@@ -47,9 +47,9 @@
             },
             "craft-parts": {
                 "series": "2.1",
-                "version": "2.1.0",
+                "version": "2.1.1",
                 "latest": "2.1.1",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.1",
@@ -59,9 +59,9 @@
             },
             "craft-providers": {
                 "series": "2.0",
-                "version": "2.0.0",
+                "version": "2.0.1",
                 "latest": "2.0.1",
-                "outdated": true
+                "outdated": false
             },
             "craft-store": {
                 "series": "3.0",

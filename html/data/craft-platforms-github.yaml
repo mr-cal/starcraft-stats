@@ -26,7 +26,7 @@ issues:
   '33':
     type: pr
     date-opened: '2024-08-29T17:25:03Z'
-    date-closed: null
+    date-closed: '2024-09-19T21:48:06Z'
   '32':
     type: pr
     date-opened: '2024-08-24T01:17:45Z'
@@ -191,3 +191,11 @@ issues:
     type: pr
     date-opened: '2024-09-14T04:13:48Z'
     date-closed: '2024-09-14T04:13:50Z'
+  '50':
+    type: pr
+    date-opened: '2024-09-19T20:47:32Z'
+    date-closed: null
+  '49':
+    type: pr
+    date-opened: '2024-09-19T20:41:58Z'
+    date-closed: null

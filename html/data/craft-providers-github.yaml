@@ -2614,4 +2614,12 @@ issues:
   '655':
     type: pr
     date-opened: '2024-09-18T15:59:46Z'
+    date-closed: '2024-09-19T14:02:35Z'
+  '657':
+    type: issue
+    date-opened: '2024-09-19T15:06:13Z'
+    date-closed: null
+  '656':
+    type: pr
+    date-opened: '2024-09-19T11:13:51Z'
     date-closed: null
