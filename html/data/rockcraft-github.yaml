@@ -2835,3 +2835,7 @@ issues:
     type: issue
     date-opened: '2024-09-19T11:36:10Z'
     date-closed: '2024-09-19T19:58:47Z'
+  '711':
+    type: issue
+    date-opened: '2024-09-21T12:51:41Z'
+    date-closed: null

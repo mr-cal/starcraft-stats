@@ -1014,4 +1014,8 @@ issues:
   '254':
     type: pr
     date-opened: '2024-09-21T03:18:15Z'
-    date-closed: null
+    date-closed: '2024-09-21T13:39:53Z'
+  '255':
+    type: pr
+    date-opened: '2024-09-21T07:13:45Z'
+    date-closed: '2024-09-21T13:37:10Z'

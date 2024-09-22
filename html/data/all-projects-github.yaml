@@ -42482,7 +42482,7 @@ issues:
   craft-providers-658:
     type: pr
     date-opened: '2024-09-21T03:31:17Z'
-    date-closed: null
+    date-closed: '2024-09-21T13:39:15Z'
   craft-store-215:
     type: pr
     date-opened: '2024-09-20T16:13:59Z'
@@ -42522,4 +42522,32 @@ issues:
   starbase-254:
     type: pr
     date-opened: '2024-09-21T03:18:15Z'
+    date-closed: '2024-09-21T13:39:53Z'
+  craft-application-488:
+    type: issue
+    date-opened: '2024-09-21T12:49:22Z'
     date-closed: null
+  craft-application-487:
+    type: issue
+    date-opened: '2024-09-21T12:48:12Z'
+    date-closed: null
+  craft-providers-659:
+    type: pr
+    date-opened: '2024-09-21T20:09:49Z'
+    date-closed: null
+  craft-store-217:
+    type: pr
+    date-opened: '2024-09-21T06:59:54Z'
+    date-closed: null
+  craft-store-216:
+    type: pr
+    date-opened: '2024-09-21T04:20:04Z'
+    date-closed: null
+  rockcraft-711:
+    type: issue
+    date-opened: '2024-09-21T12:51:41Z'
+    date-closed: null
+  starbase-255:
+    type: pr
+    date-opened: '2024-09-21T07:13:45Z'
+    date-closed: '2024-09-21T13:37:10Z'
