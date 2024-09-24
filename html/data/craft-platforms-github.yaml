@@ -203,3 +203,7 @@ issues:
     type: pr
     date-opened: '2024-09-21T03:41:43Z'
     date-closed: '2024-09-21T03:41:45Z'
+  '52':
+    type: pr
+    date-opened: '2024-09-23T18:47:14Z'
+    date-closed: null

@@ -2310,7 +2310,7 @@ issues:
   '579':
     type: issue
     date-opened: '2024-06-17T13:08:56Z'
-    date-closed: null
+    date-closed: '2024-09-23T16:51:16Z'
   '581':
     type: pr
     date-opened: '2024-06-18T11:34:37Z'
@@ -2622,7 +2622,7 @@ issues:
   '656':
     type: pr
     date-opened: '2024-09-19T11:13:51Z'
-    date-closed: null
+    date-closed: '2024-09-23T13:12:43Z'
   '658':
     type: pr
     date-opened: '2024-09-21T03:31:17Z'
@@ -2630,4 +2630,8 @@ issues:
   '659':
     type: pr
     date-opened: '2024-09-21T20:09:49Z'
-    date-closed: null
+    date-closed: '2024-09-23T12:58:05Z'
+  '660':
+    type: pr
+    date-opened: '2024-09-23T13:08:53Z'
+    date-closed: '2024-09-23T15:12:51Z'

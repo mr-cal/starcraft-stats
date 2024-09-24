@@ -1947,3 +1947,7 @@ issues:
     type: issue
     date-opened: '2024-09-21T12:48:12Z'
     date-closed: null
+  '489':
+    type: pr
+    date-opened: '2024-09-23T19:42:43Z'
+    date-closed: null

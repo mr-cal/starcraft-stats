@@ -3403,3 +3403,11 @@ issues:
     type: issue
     date-opened: '2024-09-20T19:53:59Z'
     date-closed: null
+  '853':
+    type: pr
+    date-opened: '2024-09-23T17:02:23Z'
+    date-closed: null
+  '852':
+    type: issue
+    date-opened: '2024-09-23T14:06:37Z'
+    date-closed: null
