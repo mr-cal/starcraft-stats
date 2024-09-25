@@ -1950,4 +1950,12 @@ issues:
   '489':
     type: pr
     date-opened: '2024-09-23T19:42:43Z'
+    date-closed: '2024-09-24T18:26:56Z'
+  '491':
+    type: pr
+    date-opened: '2024-09-24T18:51:56Z'
+    date-closed: null
+  '490':
+    type: pr
+    date-opened: '2024-09-24T18:13:30Z'
     date-closed: null

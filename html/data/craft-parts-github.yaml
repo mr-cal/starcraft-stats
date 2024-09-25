@@ -3406,8 +3406,24 @@ issues:
   '853':
     type: pr
     date-opened: '2024-09-23T17:02:23Z'
-    date-closed: null
+    date-closed: '2024-09-24T19:53:00Z'
   '852':
     type: issue
     date-opened: '2024-09-23T14:06:37Z'
+    date-closed: '2024-09-24T19:53:02Z'
+  '857':
+    type: pr
+    date-opened: '2024-09-24T18:44:44Z'
+    date-closed: null
+  '856':
+    type: pr
+    date-opened: '2024-09-24T18:39:16Z'
+    date-closed: null
+  '855':
+    type: issue
+    date-opened: '2024-09-24T17:33:07Z'
+    date-closed: null
+  '854':
+    type: issue
+    date-opened: '2024-09-24T17:25:09Z'
     date-closed: null

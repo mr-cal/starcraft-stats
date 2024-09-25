@@ -2839,3 +2839,11 @@ issues:
     type: issue
     date-opened: '2024-09-21T12:51:41Z'
     date-closed: null
+  '713':
+    type: pr
+    date-opened: '2024-09-24T16:01:33Z'
+    date-closed: '2024-09-24T19:55:29Z'
+  '712':
+    type: pr
+    date-opened: '2024-09-24T15:55:38Z'
+    date-closed: null

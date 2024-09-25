@@ -1023,3 +1023,11 @@ issues:
     type: pr
     date-opened: '2024-09-22T07:04:45Z'
     date-closed: '2024-09-23T15:16:38Z'
+  '258':
+    type: pr
+    date-opened: '2024-09-24T21:21:08Z'
+    date-closed: '2024-09-24T23:19:18Z'
+  '257':
+    type: issue
+    date-opened: '2024-09-24T18:24:08Z'
+    date-closed: null

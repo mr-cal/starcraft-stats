@@ -7626,7 +7626,7 @@ issues:
   '1916':
     type: pr
     date-opened: '2024-09-23T22:04:23Z'
-    date-closed: null
+    date-closed: '2024-09-24T15:25:34Z'
   '1915':
     type: pr
     date-opened: '2024-09-23T20:54:32Z'
@@ -7634,4 +7634,16 @@ issues:
   '1914':
     type: pr
     date-opened: '2024-09-23T04:53:14Z'
+    date-closed: null
+  '1919':
+    type: issue
+    date-opened: '2024-09-25T00:12:07Z'
+    date-closed: null
+  '1918':
+    type: pr
+    date-opened: '2024-09-24T22:09:47Z'
+    date-closed: null
+  '1917':
+    type: issue
+    date-opened: '2024-09-24T13:34:50Z'
     date-closed: null

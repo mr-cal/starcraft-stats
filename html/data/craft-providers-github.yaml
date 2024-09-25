@@ -2635,3 +2635,15 @@ issues:
     type: pr
     date-opened: '2024-09-23T13:08:53Z'
     date-closed: '2024-09-23T15:12:51Z'
+  '663':
+    type: pr
+    date-opened: '2024-09-24T19:05:45Z'
+    date-closed: null
+  '662':
+    type: pr
+    date-opened: '2024-09-24T16:12:29Z'
+    date-closed: null
+  '661':
+    type: issue
+    date-opened: '2024-09-24T14:02:58Z'
+    date-closed: null

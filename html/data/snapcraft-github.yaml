@@ -20198,8 +20198,12 @@ issues:
   '5058':
     type: pr
     date-opened: '2024-09-23T13:05:15Z'
-    date-closed: null
+    date-closed: '2024-09-24T12:54:37Z'
   '5057':
     type: pr
     date-opened: '2024-09-23T10:46:40Z'
+    date-closed: null
+  '5062':
+    type: pr
+    date-opened: '2024-09-24T14:37:43Z'
     date-closed: null
