@@ -2830,7 +2830,7 @@ issues:
   '709':
     type: pr
     date-opened: '2024-09-18T15:26:41Z'
-    date-closed: null
+    date-closed: '2024-09-25T18:52:09Z'
   '710':
     type: issue
     date-opened: '2024-09-19T11:36:10Z'
@@ -2846,4 +2846,16 @@ issues:
   '712':
     type: pr
     date-opened: '2024-09-24T15:55:38Z'
+    date-closed: '2024-09-25T15:57:07Z'
+  '716':
+    type: pr
+    date-opened: '2024-09-25T23:47:20Z'
+    date-closed: null
+  '715':
+    type: pr
+    date-opened: '2024-09-25T15:58:59Z'
+    date-closed: null
+  '714':
+    type: issue
+    date-opened: '2024-09-25T12:20:09Z'
     date-closed: null

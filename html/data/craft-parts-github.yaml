@@ -3427,3 +3427,11 @@ issues:
     type: issue
     date-opened: '2024-09-24T17:25:09Z'
     date-closed: null
+  '859':
+    type: pr
+    date-opened: '2024-09-25T22:34:05Z'
+    date-closed: null
+  '858':
+    type: pr
+    date-opened: '2024-09-25T18:38:41Z'
+    date-closed: null

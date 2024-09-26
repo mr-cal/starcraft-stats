@@ -7630,7 +7630,7 @@ issues:
   '1915':
     type: pr
     date-opened: '2024-09-23T20:54:32Z'
-    date-closed: null
+    date-closed: '2024-09-25T17:11:30Z'
   '1914':
     type: pr
     date-opened: '2024-09-23T04:53:14Z'
@@ -7647,3 +7647,23 @@ issues:
     type: issue
     date-opened: '2024-09-24T13:34:50Z'
     date-closed: null
+  '1924':
+    type: pr
+    date-opened: '2024-09-25T20:36:03Z'
+    date-closed: null
+  '1923':
+    type: issue
+    date-opened: '2024-09-25T13:19:41Z'
+    date-closed: null
+  '1922':
+    type: pr
+    date-opened: '2024-09-25T12:44:02Z'
+    date-closed: '2024-09-25T15:39:08Z'
+  '1921':
+    type: pr
+    date-opened: '2024-09-25T12:43:56Z'
+    date-closed: '2024-09-25T15:39:06Z'
+  '1920':
+    type: pr
+    date-opened: '2024-09-25T12:43:50Z'
+    date-closed: '2024-09-25T15:39:10Z'
