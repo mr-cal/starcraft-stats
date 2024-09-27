@@ -3366,7 +3366,7 @@ issues:
   '843':
     type: issue
     date-opened: '2024-09-11T23:43:49Z'
-    date-closed: null
+    date-closed: '2024-09-26T13:45:44Z'
   '842':
     type: issue
     date-opened: '2024-09-11T15:45:19Z'
@@ -3434,4 +3434,4 @@ issues:
   '858':
     type: pr
     date-opened: '2024-09-25T18:38:41Z'
-    date-closed: null
+    date-closed: '2024-09-26T13:45:43Z'

@@ -1954,7 +1954,7 @@ issues:
   '491':
     type: pr
     date-opened: '2024-09-24T18:51:56Z'
-    date-closed: null
+    date-closed: '2024-09-26T15:37:45Z'
   '490':
     type: pr
     date-opened: '2024-09-24T18:13:30Z'
@@ -1971,3 +1971,7 @@ issues:
     type: issue
     date-opened: '2024-09-25T15:14:48Z'
     date-closed: '2024-09-25T16:49:54Z'
+  '495':
+    type: pr
+    date-opened: '2024-09-26T14:28:46Z'
+    date-closed: null

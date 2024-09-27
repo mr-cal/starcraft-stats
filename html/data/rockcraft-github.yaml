@@ -2706,7 +2706,7 @@ issues:
   '698':
     type: issue
     date-opened: '2024-09-05T19:56:28Z'
-    date-closed: null
+    date-closed: '2024-09-26T17:05:24Z'
   '697':
     type: pr
     date-opened: '2024-09-04T17:35:06Z'
@@ -2854,8 +2854,16 @@ issues:
   '715':
     type: pr
     date-opened: '2024-09-25T15:58:59Z'
-    date-closed: null
+    date-closed: '2024-09-26T17:05:23Z'
   '714':
     type: issue
     date-opened: '2024-09-25T12:20:09Z'
+    date-closed: null
+  '718':
+    type: issue
+    date-opened: '2024-09-26T22:09:50Z'
+    date-closed: null
+  '717':
+    type: pr
+    date-opened: '2024-09-26T19:57:11Z'
     date-closed: null

@@ -7534,7 +7534,7 @@ issues:
   '1898':
     type: pr
     date-opened: '2024-09-11T16:31:16Z'
-    date-closed: null
+    date-closed: '2024-09-26T15:50:28Z'
   '1897':
     type: pr
     date-opened: '2024-09-11T16:19:06Z'
@@ -7614,11 +7614,11 @@ issues:
   '1911':
     type: pr
     date-opened: '2024-09-20T01:29:04Z'
-    date-closed: null
+    date-closed: '2024-09-26T18:50:51Z'
   '1910':
     type: pr
     date-opened: '2024-09-19T20:15:20Z'
-    date-closed: null
+    date-closed: '2024-09-26T15:51:08Z'
   '1913':
     type: issue
     date-opened: '2024-09-20T20:21:56Z'
@@ -7634,7 +7634,7 @@ issues:
   '1914':
     type: pr
     date-opened: '2024-09-23T04:53:14Z'
-    date-closed: null
+    date-closed: '2024-09-26T15:52:02Z'
   '1919':
     type: issue
     date-opened: '2024-09-25T00:12:07Z'
@@ -7658,12 +7658,24 @@ issues:
   '1922':
     type: pr
     date-opened: '2024-09-25T12:44:02Z'
-    date-closed: '2024-09-25T15:39:08Z'
+    date-closed: null
   '1921':
     type: pr
     date-opened: '2024-09-25T12:43:56Z'
-    date-closed: '2024-09-25T15:39:06Z'
+    date-closed: null
   '1920':
     type: pr
     date-opened: '2024-09-25T12:43:50Z'
-    date-closed: '2024-09-25T15:39:10Z'
+    date-closed: null
+  '1927':
+    type: pr
+    date-opened: '2024-09-26T23:34:10Z'
+    date-closed: null
+  '1926':
+    type: issue
+    date-opened: '2024-09-26T22:12:26Z'
+    date-closed: null
+  '1925':
+    type: pr
+    date-opened: '2024-09-26T15:47:08Z'
+    date-closed: null
