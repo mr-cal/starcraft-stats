@@ -1979,3 +1979,7 @@ issues:
     type: pr
     date-opened: '2024-09-27T19:08:06Z'
     date-closed: null
+  '497':
+    type: pr
+    date-opened: '2024-09-30T17:58:02Z'
+    date-closed: null

@@ -20174,7 +20174,7 @@ issues:
   '5053':
     type: issue
     date-opened: '2024-09-20T19:40:34Z'
-    date-closed: null
+    date-closed: '2024-09-30T23:28:52Z'
   '5052':
     type: pr
     date-opened: '2024-09-20T16:42:41Z'
@@ -20210,7 +20210,7 @@ issues:
   '5068':
     type: pr
     date-opened: '2024-09-25T22:43:04Z'
-    date-closed: null
+    date-closed: '2024-09-30T14:57:18Z'
   '5067':
     type: pr
     date-opened: '2024-09-25T14:33:28Z'
@@ -20218,7 +20218,7 @@ issues:
   '5066':
     type: pr
     date-opened: '2024-09-25T14:33:23Z'
-    date-closed: null
+    date-closed: '2024-09-30T12:40:34Z'
   '5065':
     type: pr
     date-opened: '2024-09-25T14:33:16Z'
@@ -20254,12 +20254,40 @@ issues:
   '5076':
     type: pr
     date-opened: '2024-09-27T15:03:06Z'
-    date-closed: null
+    date-closed: '2024-10-01T00:16:54Z'
   '5075':
     type: pr
     date-opened: '2024-09-27T14:34:38Z'
-    date-closed: null
+    date-closed: '2024-09-30T23:28:51Z'
   '5074':
     type: pr
     date-opened: '2024-09-27T13:52:32Z'
     date-closed: '2024-09-27T14:34:47Z'
+  '5083':
+    type: issue
+    date-opened: '2024-10-01T03:17:47Z'
+    date-closed: null
+  '5082':
+    type: pr
+    date-opened: '2024-10-01T00:13:37Z'
+    date-closed: null
+  '5081':
+    type: pr
+    date-opened: '2024-09-30T23:53:44Z'
+    date-closed: null
+  '5080':
+    type: issue
+    date-opened: '2024-09-30T18:26:42Z'
+    date-closed: null
+  '5079':
+    type: issue
+    date-opened: '2024-09-30T15:10:08Z'
+    date-closed: null
+  '5078':
+    type: pr
+    date-opened: '2024-09-30T12:33:18Z'
+    date-closed: '2024-09-30T23:51:33Z'
+  '5077':
+    type: issue
+    date-opened: '2024-09-30T07:27:28Z'
+    date-closed: null

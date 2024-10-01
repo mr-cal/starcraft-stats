@@ -3430,7 +3430,7 @@ issues:
   '859':
     type: pr
     date-opened: '2024-09-25T22:34:05Z'
-    date-closed: null
+    date-closed: '2024-09-30T15:22:26Z'
   '858':
     type: pr
     date-opened: '2024-09-25T18:38:41Z'
@@ -3438,4 +3438,12 @@ issues:
   '860':
     type: pr
     date-opened: '2024-09-28T07:02:32Z'
+    date-closed: '2024-09-30T15:24:17Z'
+  '862':
+    type: pr
+    date-opened: '2024-09-30T18:39:56Z'
+    date-closed: null
+  '861':
+    type: pr
+    date-opened: '2024-09-30T15:56:02Z'
     date-closed: null
