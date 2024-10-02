@@ -3442,8 +3442,12 @@ issues:
   '862':
     type: pr
     date-opened: '2024-09-30T18:39:56Z'
-    date-closed: null
+    date-closed: '2024-10-01T13:23:30Z'
   '861':
     type: pr
     date-opened: '2024-09-30T15:56:02Z'
+    date-closed: null
+  '863':
+    type: pr
+    date-opened: '2024-10-01T14:15:18Z'
     date-closed: null
