@@ -818,7 +818,7 @@ issues:
   '204':
     type: issue
     date-opened: '2024-09-09T17:47:05Z'
-    date-closed: null
+    date-closed: '2024-10-02T16:50:18Z'
   '206':
     type: pr
     date-opened: '2024-09-12T22:46:03Z'
@@ -870,7 +870,7 @@ issues:
   '218':
     type: pr
     date-opened: '2024-09-26T16:07:49Z'
-    date-closed: null
+    date-closed: '2024-10-02T17:07:50Z'
   '219':
     type: pr
     date-opened: '2024-09-28T03:59:19Z'
@@ -890,4 +890,4 @@ issues:
   '223':
     type: pr
     date-opened: '2024-10-01T19:37:34Z'
-    date-closed: null
+    date-closed: '2024-10-02T17:42:16Z'
