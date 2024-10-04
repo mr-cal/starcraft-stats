@@ -7642,7 +7642,7 @@ issues:
   '1918':
     type: pr
     date-opened: '2024-09-24T22:09:47Z'
-    date-closed: null
+    date-closed: '2024-10-03T19:21:24Z'
   '1917':
     type: issue
     date-opened: '2024-09-24T13:34:50Z'
@@ -7698,4 +7698,8 @@ issues:
   '1931':
     type: issue
     date-opened: '2024-10-02T04:29:57Z'
+    date-closed: null
+  '1933':
+    type: pr
+    date-opened: '2024-10-04T00:13:46Z'
     date-closed: null
