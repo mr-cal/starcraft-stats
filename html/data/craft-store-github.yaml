@@ -874,7 +874,7 @@ issues:
   '219':
     type: pr
     date-opened: '2024-09-28T03:59:19Z'
-    date-closed: null
+    date-closed: '2024-10-04T18:25:01Z'
   '220':
     type: pr
     date-opened: '2024-09-28T06:56:09Z'
@@ -891,3 +891,7 @@ issues:
     type: pr
     date-opened: '2024-10-01T19:37:34Z'
     date-closed: '2024-10-02T17:42:16Z'
+  '224':
+    type: pr
+    date-opened: '2024-10-05T03:41:01Z'
+    date-closed: null

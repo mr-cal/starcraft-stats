@@ -1062,4 +1062,12 @@ issues:
   '266':
     type: pr
     date-opened: '2024-10-02T23:30:18Z'
+    date-closed: '2024-10-04T12:38:13Z'
+  '268':
+    type: pr
+    date-opened: '2024-10-05T04:10:31Z'
     date-closed: null
+  '267':
+    type: pr
+    date-opened: '2024-10-04T20:47:21Z'
+    date-closed: '2024-10-04T23:18:20Z'

@@ -3455,3 +3455,11 @@ issues:
     type: pr
     date-opened: '2024-10-03T22:25:39Z'
     date-closed: null
+  '866':
+    type: pr
+    date-opened: '2024-10-04T21:18:44Z'
+    date-closed: null
+  '865':
+    type: pr
+    date-opened: '2024-10-04T19:53:37Z'
+    date-closed: null

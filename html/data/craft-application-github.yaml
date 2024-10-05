@@ -1986,7 +1986,7 @@ issues:
   '499':
     type: pr
     date-opened: '2024-10-01T20:13:25Z'
-    date-closed: null
+    date-closed: '2024-10-04T12:55:34Z'
   '498':
     type: pr
     date-opened: '2024-10-01T16:45:55Z'
@@ -1994,8 +1994,24 @@ issues:
   '501':
     type: pr
     date-opened: '2024-10-03T17:34:54Z'
-    date-closed: null
+    date-closed: '2024-10-04T19:53:30Z'
   '500':
     type: pr
     date-opened: '2024-10-03T13:36:07Z'
     date-closed: '2024-10-03T13:41:48Z'
+  '505':
+    type: pr
+    date-opened: '2024-10-04T21:24:41Z'
+    date-closed: null
+  '504':
+    type: pr
+    date-opened: '2024-10-04T20:54:17Z'
+    date-closed: null
+  '503':
+    type: pr
+    date-opened: '2024-10-04T15:55:37Z'
+    date-closed: '2024-10-04T18:54:28Z'
+  '502':
+    type: issue
+    date-opened: '2024-10-04T14:27:36Z'
+    date-closed: null
