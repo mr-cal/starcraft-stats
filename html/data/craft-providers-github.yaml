@@ -2698,8 +2698,24 @@ issues:
   '677':
     type: pr
     date-opened: '2024-10-05T00:49:41Z'
-    date-closed: null
+    date-closed: '2024-10-05T13:15:04Z'
   '676':
     type: pr
     date-opened: '2024-10-04T16:32:24Z'
     date-closed: '2024-10-04T23:19:36Z'
+  '681':
+    type: pr
+    date-opened: '2024-10-05T18:03:17Z'
+    date-closed: null
+  '680':
+    type: pr
+    date-opened: '2024-10-05T15:27:00Z'
+    date-closed: null
+  '679':
+    type: pr
+    date-opened: '2024-10-05T13:16:01Z'
+    date-closed: '2024-10-05T13:20:15Z'
+  '678':
+    type: pr
+    date-opened: '2024-10-05T04:36:03Z'
+    date-closed: '2024-10-05T13:09:23Z'

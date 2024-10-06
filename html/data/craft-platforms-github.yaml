@@ -239,3 +239,7 @@ issues:
     type: pr
     date-opened: '2024-09-30T21:03:51Z'
     date-closed: null
+  '61':
+    type: pr
+    date-opened: '2024-10-05T04:21:38Z'
+    date-closed: null
