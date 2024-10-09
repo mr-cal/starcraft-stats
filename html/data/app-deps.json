@@ -149,9 +149,9 @@
         "rockcraft/main": {
             "craft-application": {
                 "series": "4.2",
-                "version": "4.2.4",
+                "version": "4.2.6",
                 "latest": "4.2.6",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.0",
@@ -173,9 +173,9 @@
             },
             "craft-parts": {
                 "series": "2.1",
-                "version": "2.1.1",
+                "version": "2.1.2",
                 "latest": "2.1.2",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.3",
@@ -185,9 +185,9 @@
             },
             "craft-providers": {
                 "series": "2.0",
-                "version": "2.0.1",
+                "version": "2.0.4",
                 "latest": "2.0.4",
-                "outdated": true
+                "outdated": false
             }
         },
         "rockcraft/hotfix/1.5": {
@@ -231,9 +231,9 @@
         "snapcraft/main": {
             "craft-application": {
                 "series": "4.2",
-                "version": "4.2.4",
+                "version": "4.2.6",
                 "latest": "4.2.6",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.0",
@@ -255,9 +255,9 @@
             },
             "craft-parts": {
                 "series": "2.1",
-                "version": "2.1.1",
+                "version": "2.1.2",
                 "latest": "2.1.2",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.1",
@@ -267,15 +267,15 @@
             },
             "craft-providers": {
                 "series": "2.0",
-                "version": "2.0.1",
+                "version": "2.0.4",
                 "latest": "2.0.4",
-                "outdated": true
+                "outdated": false
             },
             "craft-store": {
                 "series": "3.0",
-                "version": "3.0.1",
+                "version": "3.0.2",
                 "latest": "3.0.2",
-                "outdated": true
+                "outdated": false
             }
         },
         "snapcraft/hotfix/7.5": {

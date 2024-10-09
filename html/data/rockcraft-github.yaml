@@ -2870,7 +2870,7 @@ issues:
   '719':
     type: pr
     date-opened: '2024-09-27T05:07:07Z'
-    date-closed: null
+    date-closed: '2024-10-08T13:06:17Z'
   '720':
     type: pr
     date-opened: '2024-09-28T06:59:44Z'
@@ -2899,3 +2899,11 @@ issues:
     type: issue
     date-opened: '2024-10-07T12:07:42Z'
     date-closed: null
+  '728':
+    type: pr
+    date-opened: '2024-10-08T20:09:22Z'
+    date-closed: null
+  '727':
+    type: pr
+    date-opened: '2024-10-08T13:35:10Z'
+    date-closed: '2024-10-08T16:53:16Z'

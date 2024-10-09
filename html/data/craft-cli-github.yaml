@@ -1114,11 +1114,11 @@ issues:
   '286':
     type: pr
     date-opened: '2024-10-08T00:51:44Z'
-    date-closed: null
+    date-closed: '2024-10-08T13:06:28Z'
   '285':
     type: pr
     date-opened: '2024-10-08T00:51:37Z'
-    date-closed: null
+    date-closed: '2024-10-08T13:43:09Z'
   '284':
     type: pr
     date-opened: '2024-10-08T00:51:35Z'
@@ -1126,20 +1126,28 @@ issues:
   '283':
     type: pr
     date-opened: '2024-10-08T00:51:33Z'
-    date-closed: null
+    date-closed: '2024-10-08T13:39:09Z'
   '282':
     type: pr
     date-opened: '2024-10-08T00:51:16Z'
-    date-closed: null
+    date-closed: '2024-10-08T13:13:31Z'
   '281':
     type: pr
     date-opened: '2024-10-08T00:51:13Z'
-    date-closed: null
+    date-closed: '2024-10-08T13:20:47Z'
   '280':
     type: pr
     date-opened: '2024-10-07T22:31:38Z'
-    date-closed: null
+    date-closed: '2024-10-08T13:03:48Z'
   '279':
     type: pr
     date-opened: '2024-10-07T22:31:36Z'
     date-closed: '2024-10-07T23:21:33Z'
+  '288':
+    type: pr
+    date-opened: '2024-10-08T18:17:07Z'
+    date-closed: null
+  '287':
+    type: issue
+    date-opened: '2024-10-08T13:38:44Z'
+    date-closed: null
