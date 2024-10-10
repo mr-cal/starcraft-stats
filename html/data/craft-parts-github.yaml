@@ -3491,3 +3491,11 @@ issues:
     type: pr
     date-opened: '2024-10-07T15:52:13Z'
     date-closed: '2024-10-08T17:38:11Z'
+  '875':
+    type: pr
+    date-opened: '2024-10-09T16:04:47Z'
+    date-closed: null
+  '874':
+    type: issue
+    date-opened: '2024-10-09T14:25:31Z'
+    date-closed: null

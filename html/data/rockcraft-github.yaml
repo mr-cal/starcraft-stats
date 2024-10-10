@@ -2838,7 +2838,7 @@ issues:
   '711':
     type: issue
     date-opened: '2024-09-21T12:51:41Z'
-    date-closed: null
+    date-closed: '2024-10-09T13:11:17Z'
   '713':
     type: pr
     date-opened: '2024-09-24T16:01:33Z'
@@ -2890,7 +2890,7 @@ issues:
   '725':
     type: pr
     date-opened: '2024-10-04T18:56:40Z'
-    date-closed: null
+    date-closed: '2024-10-09T13:11:16Z'
   '724':
     type: issue
     date-opened: '2024-10-04T15:06:31Z'
@@ -2907,3 +2907,7 @@ issues:
     type: pr
     date-opened: '2024-10-08T13:35:10Z'
     date-closed: '2024-10-08T16:53:16Z'
+  '729':
+    type: issue
+    date-opened: '2024-10-09T12:58:44Z'
+    date-closed: null

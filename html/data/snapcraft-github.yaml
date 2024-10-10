@@ -20375,3 +20375,15 @@ issues:
     type: issue
     date-opened: '2024-10-08T05:58:55Z'
     date-closed: null
+  '5107':
+    type: issue
+    date-opened: '2024-10-10T00:48:38Z'
+    date-closed: null
+  '5106':
+    type: pr
+    date-opened: '2024-10-09T23:31:05Z'
+    date-closed: null
+  '5105':
+    type: pr
+    date-opened: '2024-10-09T14:00:08Z'
+    date-closed: null
