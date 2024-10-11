@@ -2727,3 +2727,7 @@ issues:
     type: pr
     date-opened: '2024-10-08T12:49:26Z'
     date-closed: '2024-10-08T12:49:28Z'
+  '684':
+    type: issue
+    date-opened: '2024-10-10T22:04:57Z'
+    date-closed: null

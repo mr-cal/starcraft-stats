@@ -2030,7 +2030,7 @@ issues:
   '510':
     type: pr
     date-opened: '2024-10-08T00:52:38Z'
-    date-closed: null
+    date-closed: '2024-10-10T16:15:10Z'
   '509':
     type: pr
     date-opened: '2024-10-07T21:49:22Z'
@@ -2054,12 +2054,24 @@ issues:
   '515':
     type: pr
     date-opened: '2024-10-08T18:16:02Z'
-    date-closed: null
+    date-closed: '2024-10-10T13:39:40Z'
   '514':
     type: pr
     date-opened: '2024-10-08T16:33:14Z'
-    date-closed: null
+    date-closed: '2024-10-10T17:21:32Z'
   '513':
     type: pr
     date-opened: '2024-10-08T14:01:56Z'
     date-closed: '2024-10-08T16:45:30Z'
+  '520':
+    type: pr
+    date-opened: '2024-10-10T20:36:03Z'
+    date-closed: null
+  '519':
+    type: pr
+    date-opened: '2024-10-10T17:31:55Z'
+    date-closed: '2024-10-11T01:32:14Z'
+  '518':
+    type: pr
+    date-opened: '2024-10-10T14:42:30Z'
+    date-closed: '2024-10-10T14:47:00Z'
