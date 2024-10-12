@@ -2731,3 +2731,11 @@ issues:
     type: issue
     date-opened: '2024-10-10T22:04:57Z'
     date-closed: null
+  '686':
+    type: pr
+    date-opened: '2024-10-12T03:31:11Z'
+    date-closed: null
+  '685':
+    type: pr
+    date-opened: '2024-10-12T01:13:33Z'
+    date-closed: null

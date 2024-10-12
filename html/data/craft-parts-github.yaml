@@ -3294,7 +3294,7 @@ issues:
   '821':
     type: issue
     date-opened: '2024-08-20T18:38:54Z'
-    date-closed: null
+    date-closed: '2024-10-11T17:06:55Z'
   '826':
     type: pr
     date-opened: '2024-08-21T20:32:01Z'
@@ -3322,7 +3322,7 @@ issues:
   '832':
     type: pr
     date-opened: '2024-08-28T18:47:45Z'
-    date-closed: null
+    date-closed: '2024-10-11T17:06:54Z'
   '831':
     type: pr
     date-opened: '2024-08-28T16:32:54Z'
@@ -3498,4 +3498,8 @@ issues:
   '874':
     type: issue
     date-opened: '2024-10-09T14:25:31Z'
+    date-closed: null
+  '876':
+    type: pr
+    date-opened: '2024-10-11T17:26:15Z'
     date-closed: null

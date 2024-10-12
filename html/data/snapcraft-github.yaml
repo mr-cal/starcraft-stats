@@ -20194,7 +20194,7 @@ issues:
   '5059':
     type: pr
     date-opened: '2024-09-23T19:02:21Z'
-    date-closed: null
+    date-closed: '2024-10-11T19:48:09Z'
   '5058':
     type: pr
     date-opened: '2024-09-23T13:05:15Z'
@@ -20386,7 +20386,7 @@ issues:
   '5105':
     type: pr
     date-opened: '2024-10-09T14:00:08Z'
-    date-closed: null
+    date-closed: '2024-10-11T13:12:51Z'
   '5110':
     type: pr
     date-opened: '2024-10-10T20:39:36Z'
@@ -20398,4 +20398,8 @@ issues:
   '5108':
     type: pr
     date-opened: '2024-10-10T14:53:33Z'
+    date-closed: '2024-10-11T16:59:12Z'
+  '5111':
+    type: pr
+    date-opened: '2024-10-11T17:55:14Z'
     date-closed: null

@@ -1058,7 +1058,7 @@ issues:
   '265':
     type: pr
     date-opened: '2024-10-01T15:53:00Z'
-    date-closed: null
+    date-closed: '2024-10-11T20:07:31Z'
   '266':
     type: pr
     date-opened: '2024-10-02T23:30:18Z'
@@ -1075,3 +1075,7 @@ issues:
     type: pr
     date-opened: '2024-10-06T19:26:14Z'
     date-closed: '2024-10-06T22:05:48Z'
+  '270':
+    type: pr
+    date-opened: '2024-10-11T20:36:35Z'
+    date-closed: '2024-10-11T21:01:10Z'

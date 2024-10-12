@@ -910,4 +910,8 @@ issues:
   '226':
     type: pr
     date-opened: '2024-10-08T18:17:39Z'
+    date-closed: '2024-10-11T19:16:57Z'
+  '229':
+    type: pr
+    date-opened: '2024-10-12T03:29:46Z'
     date-closed: null

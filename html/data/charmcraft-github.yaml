@@ -7762,7 +7762,7 @@ issues:
   '1939':
     type: pr
     date-opened: '2024-10-07T19:38:26Z'
-    date-closed: null
+    date-closed: '2024-10-11T13:27:39Z'
   '1951':
     type: pr
     date-opened: '2024-10-09T00:45:47Z'
@@ -7782,4 +7782,32 @@ issues:
   '1953':
     type: issue
     date-opened: '2024-10-10T16:30:24Z'
+    date-closed: null
+  '1960':
+    type: pr
+    date-opened: '2024-10-11T22:12:11Z'
+    date-closed: null
+  '1959':
+    type: pr
+    date-opened: '2024-10-11T22:00:50Z'
+    date-closed: null
+  '1958':
+    type: pr
+    date-opened: '2024-10-11T21:33:07Z'
+    date-closed: null
+  '1957':
+    type: pr
+    date-opened: '2024-10-11T21:29:24Z'
+    date-closed: null
+  '1956':
+    type: pr
+    date-opened: '2024-10-11T20:55:41Z'
+    date-closed: null
+  '1955':
+    type: pr
+    date-opened: '2024-10-11T19:31:43Z'
+    date-closed: null
+  '1954':
+    type: issue
+    date-opened: '2024-10-11T18:53:08Z'
     date-closed: null
