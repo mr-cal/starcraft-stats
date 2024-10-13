@@ -43610,7 +43610,7 @@ issues:
   craft-grammar-59:
     type: pr
     date-opened: '2024-10-12T03:28:56Z'
-    date-closed: null
+    date-closed: '2024-10-12T11:04:18Z'
   craft-parts-876:
     type: pr
     date-opened: '2024-10-11T17:26:15Z'
@@ -43647,3 +43647,15 @@ issues:
     type: pr
     date-opened: '2024-10-11T20:36:35Z'
     date-closed: '2024-10-11T21:01:10Z'
+  craft-grammar-60:
+    type: pr
+    date-opened: '2024-10-12T21:45:52Z'
+    date-closed: null
+  craft-store-230:
+    type: pr
+    date-opened: '2024-10-12T16:25:28Z'
+    date-closed: null
+  snapcraft-5112:
+    type: issue
+    date-opened: '2024-10-12T11:27:49Z'
+    date-closed: null

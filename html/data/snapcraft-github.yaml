@@ -20403,3 +20403,7 @@ issues:
     type: pr
     date-opened: '2024-10-11T17:55:14Z'
     date-closed: null
+  '5112':
+    type: issue
+    date-opened: '2024-10-12T11:27:49Z'
+    date-closed: null
