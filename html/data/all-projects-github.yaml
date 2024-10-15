@@ -43634,7 +43634,7 @@ issues:
   rockcraft-731:
     type: pr
     date-opened: '2024-10-11T20:41:31Z'
-    date-closed: null
+    date-closed: '2024-10-14T17:06:05Z'
   rockcraft-730:
     type: issue
     date-opened: '2024-10-11T11:41:59Z'
@@ -43674,4 +43674,8 @@ issues:
   snapcraft-5113:
     type: issue
     date-opened: '2024-10-13T09:46:43Z'
+    date-closed: null
+  charmcraft-1961:
+    type: pr
+    date-opened: '2024-10-14T12:10:59Z'
     date-closed: null

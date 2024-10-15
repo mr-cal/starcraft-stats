@@ -7811,3 +7811,7 @@ issues:
     type: issue
     date-opened: '2024-10-11T18:53:08Z'
     date-closed: null
+  '1961':
+    type: pr
+    date-opened: '2024-10-14T12:10:59Z'
+    date-closed: null
