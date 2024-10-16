@@ -2922,4 +2922,16 @@ issues:
   '732':
     type: pr
     date-opened: '2024-10-13T20:01:30Z'
+    date-closed: '2024-10-15T20:46:59Z'
+  '735':
+    type: pr
+    date-opened: '2024-10-15T19:42:00Z'
+    date-closed: null
+  '734':
+    type: pr
+    date-opened: '2024-10-15T16:46:05Z'
+    date-closed: null
+  '733':
+    type: pr
+    date-opened: '2024-10-15T12:46:43Z'
     date-closed: null

@@ -3466,7 +3466,7 @@ issues:
   '873':
     type: pr
     date-opened: '2024-10-08T00:54:07Z'
-    date-closed: null
+    date-closed: '2024-10-15T20:45:38Z'
   '872':
     type: pr
     date-opened: '2024-10-07T20:51:18Z'
@@ -3502,4 +3502,32 @@ issues:
   '876':
     type: pr
     date-opened: '2024-10-11T17:26:15Z'
+    date-closed: null
+  '883':
+    type: pr
+    date-opened: '2024-10-15T20:59:45Z'
+    date-closed: null
+  '882':
+    type: pr
+    date-opened: '2024-10-15T20:59:43Z'
+    date-closed: null
+  '881':
+    type: pr
+    date-opened: '2024-10-15T20:59:40Z'
+    date-closed: null
+  '880':
+    type: pr
+    date-opened: '2024-10-15T20:59:39Z'
+    date-closed: null
+  '879':
+    type: pr
+    date-opened: '2024-10-15T20:59:36Z'
+    date-closed: null
+  '878':
+    type: pr
+    date-opened: '2024-10-15T20:59:34Z'
+    date-closed: null
+  '877':
+    type: pr
+    date-opened: '2024-10-15T20:59:32Z'
     date-closed: null

@@ -2083,3 +2083,23 @@ issues:
     type: pr
     date-opened: '2024-10-11T18:34:00Z'
     date-closed: '2024-10-11T19:29:42Z'
+  '527':
+    type: pr
+    date-opened: '2024-10-15T20:56:18Z'
+    date-closed: null
+  '526':
+    type: pr
+    date-opened: '2024-10-15T20:56:15Z'
+    date-closed: null
+  '525':
+    type: pr
+    date-opened: '2024-10-15T20:56:12Z'
+    date-closed: null
+  '524':
+    type: pr
+    date-opened: '2024-10-15T20:56:09Z'
+    date-closed: null
+  '523':
+    type: pr
+    date-opened: '2024-10-15T20:56:06Z'
+    date-closed: null
