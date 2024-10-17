@@ -7794,11 +7794,11 @@ issues:
   '1958':
     type: pr
     date-opened: '2024-10-11T21:33:07Z'
-    date-closed: null
+    date-closed: '2024-10-16T16:14:03Z'
   '1957':
     type: pr
     date-opened: '2024-10-11T21:29:24Z'
-    date-closed: null
+    date-closed: '2024-10-16T16:10:29Z'
   '1956':
     type: pr
     date-opened: '2024-10-11T20:55:41Z'
@@ -7814,4 +7814,20 @@ issues:
   '1961':
     type: pr
     date-opened: '2024-10-14T12:10:59Z'
+    date-closed: null
+  '1965':
+    type: pr
+    date-opened: '2024-10-16T16:18:46Z'
+    date-closed: null
+  '1964':
+    type: issue
+    date-opened: '2024-10-16T14:47:07Z'
+    date-closed: null
+  '1963':
+    type: issue
+    date-opened: '2024-10-16T14:20:29Z'
+    date-closed: null
+  '1962':
+    type: issue
+    date-opened: '2024-10-16T14:08:12Z'
     date-closed: null

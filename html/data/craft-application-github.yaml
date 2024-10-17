@@ -2102,4 +2102,12 @@ issues:
   '523':
     type: pr
     date-opened: '2024-10-15T20:56:06Z'
+    date-closed: '2024-10-16T20:44:45Z'
+  '529':
+    type: issue
+    date-opened: '2024-10-16T15:46:50Z'
     date-closed: null
+  '528':
+    type: pr
+    date-opened: '2024-10-16T13:39:17Z'
+    date-closed: '2024-10-16T15:29:40Z'

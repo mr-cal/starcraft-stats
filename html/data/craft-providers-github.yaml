@@ -2739,3 +2739,15 @@ issues:
     type: pr
     date-opened: '2024-10-12T01:13:33Z'
     date-closed: '2024-10-15T20:50:38Z'
+  '689':
+    type: pr
+    date-opened: '2024-10-16T22:50:53Z'
+    date-closed: null
+  '688':
+    type: pr
+    date-opened: '2024-10-16T20:47:04Z'
+    date-closed: '2024-10-16T22:04:35Z'
+  '687':
+    type: pr
+    date-opened: '2024-10-16T14:07:25Z'
+    date-closed: '2024-10-16T15:17:17Z'
