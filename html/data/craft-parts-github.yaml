@@ -3506,15 +3506,15 @@ issues:
   '883':
     type: pr
     date-opened: '2024-10-15T20:59:45Z'
-    date-closed: null
+    date-closed: '2024-10-17T19:15:53Z'
   '882':
     type: pr
     date-opened: '2024-10-15T20:59:43Z'
-    date-closed: null
+    date-closed: '2024-10-17T13:42:15Z'
   '881':
     type: pr
     date-opened: '2024-10-15T20:59:40Z'
-    date-closed: null
+    date-closed: '2024-10-17T13:41:51Z'
   '880':
     type: pr
     date-opened: '2024-10-15T20:59:39Z'
@@ -3530,4 +3530,8 @@ issues:
   '877':
     type: pr
     date-opened: '2024-10-15T20:59:32Z'
+    date-closed: null
+  '884':
+    type: pr
+    date-opened: '2024-10-17T11:54:03Z'
     date-closed: null
