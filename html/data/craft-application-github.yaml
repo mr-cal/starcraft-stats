@@ -2115,3 +2115,7 @@ issues:
     type: issue
     date-opened: '2024-10-17T18:46:29Z'
     date-closed: null
+  '531':
+    type: pr
+    date-opened: '2024-10-18T19:04:03Z'
+    date-closed: null

@@ -514,7 +514,7 @@ issues:
   '129':
     type: issue
     date-opened: '2024-10-07T13:11:03Z'
-    date-closed: null
+    date-closed: '2024-10-18T18:18:11Z'
   '132':
     type: pr
     date-opened: '2024-10-08T18:17:00Z'
@@ -542,4 +542,8 @@ issues:
   '136':
     type: pr
     date-opened: '2024-10-17T21:34:27Z'
+    date-closed: '2024-10-18T18:18:10Z'
+  '137':
+    type: pr
+    date-opened: '2024-10-18T18:24:22Z'
     date-closed: null
