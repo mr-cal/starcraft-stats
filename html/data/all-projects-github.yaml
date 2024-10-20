@@ -43906,7 +43906,7 @@ issues:
   craft-grammar-61:
     type: pr
     date-opened: '2024-10-19T03:36:02Z'
-    date-closed: null
+    date-closed: '2024-10-19T14:41:55Z'
   craft-providers-695:
     type: pr
     date-opened: '2024-10-19T00:14:18Z'
@@ -43922,4 +43922,24 @@ issues:
   snapcraft-5128:
     type: issue
     date-opened: '2024-10-18T13:10:14Z'
+    date-closed: null
+  craft-grammar-63:
+    type: pr
+    date-opened: '2024-10-19T22:49:11Z'
+    date-closed: null
+  craft-grammar-62:
+    type: pr
+    date-opened: '2024-10-19T07:43:18Z'
+    date-closed: '2024-10-19T14:38:17Z'
+  craft-parts-885:
+    type: pr
+    date-opened: '2024-10-19T15:22:49Z'
+    date-closed: null
+  craft-platforms-67:
+    type: pr
+    date-opened: '2024-10-19T04:36:26Z'
+    date-closed: null
+  craft-store-231:
+    type: pr
+    date-opened: '2024-10-19T07:21:51Z'
     date-closed: null

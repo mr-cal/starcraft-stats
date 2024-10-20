@@ -919,3 +919,7 @@ issues:
     type: pr
     date-opened: '2024-10-12T16:25:28Z'
     date-closed: null
+  '231':
+    type: pr
+    date-opened: '2024-10-19T07:21:51Z'
+    date-closed: null

@@ -242,4 +242,12 @@ issues:
   '61':
     type: pr
     date-opened: '2024-10-19T03:36:02Z'
+    date-closed: '2024-10-19T14:41:55Z'
+  '63':
+    type: pr
+    date-opened: '2024-10-19T22:49:11Z'
     date-closed: null
+  '62':
+    type: pr
+    date-opened: '2024-10-19T07:43:18Z'
+    date-closed: '2024-10-19T14:38:17Z'
