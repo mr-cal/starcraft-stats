@@ -2766,7 +2766,7 @@ issues:
   '695':
     type: pr
     date-opened: '2024-10-19T00:14:18Z'
-    date-closed: null
+    date-closed: '2024-10-21T00:22:33Z'
   '694':
     type: pr
     date-opened: '2024-10-18T20:42:46Z'
@@ -2775,3 +2775,7 @@ issues:
     type: pr
     date-opened: '2024-10-18T13:08:15Z'
     date-closed: null
+  '696':
+    type: pr
+    date-opened: '2024-10-20T23:43:24Z'
+    date-closed: '2024-10-20T23:43:26Z'

@@ -43910,7 +43910,7 @@ issues:
   craft-providers-695:
     type: pr
     date-opened: '2024-10-19T00:14:18Z'
-    date-closed: null
+    date-closed: '2024-10-21T00:22:33Z'
   craft-providers-694:
     type: pr
     date-opened: '2024-10-18T20:42:46Z'
@@ -43926,7 +43926,7 @@ issues:
   craft-grammar-63:
     type: pr
     date-opened: '2024-10-19T22:49:11Z'
-    date-closed: null
+    date-closed: '2024-10-20T23:42:13Z'
   craft-grammar-62:
     type: pr
     date-opened: '2024-10-19T07:43:18Z'
@@ -43942,4 +43942,52 @@ issues:
   craft-store-231:
     type: pr
     date-opened: '2024-10-19T07:21:51Z'
+    date-closed: null
+  craft-application-535:
+    type: pr
+    date-opened: '2024-10-20T23:45:24Z'
+    date-closed: null
+  craft-application-534:
+    type: pr
+    date-opened: '2024-10-20T23:45:23Z'
+    date-closed: null
+  craft-application-533:
+    type: pr
+    date-opened: '2024-10-20T23:45:20Z'
+    date-closed: null
+  craft-application-532:
+    type: pr
+    date-opened: '2024-10-20T23:45:19Z'
+    date-closed: null
+  craft-archives-138:
+    type: pr
+    date-opened: '2024-10-20T23:44:47Z'
+    date-closed: null
+  craft-cli-294:
+    type: pr
+    date-opened: '2024-10-20T23:44:25Z'
+    date-closed: null
+  craft-cli-293:
+    type: pr
+    date-opened: '2024-10-20T23:44:24Z'
+    date-closed: null
+  craft-parts-886:
+    type: pr
+    date-opened: '2024-10-20T23:44:15Z'
+    date-closed: null
+  craft-providers-696:
+    type: pr
+    date-opened: '2024-10-20T23:43:24Z'
+    date-closed: '2024-10-20T23:43:26Z'
+  craft-store-233:
+    type: pr
+    date-opened: '2024-10-20T23:44:08Z'
+    date-closed: null
+  craft-store-232:
+    type: pr
+    date-opened: '2024-10-20T23:44:06Z'
+    date-closed: null
+  rockcraft-736:
+    type: pr
+    date-opened: '2024-10-20T23:46:30Z'
     date-closed: null
