@@ -7530,7 +7530,7 @@ issues:
   '1889':
     type: issue
     date-opened: '2024-09-10T15:03:28Z'
-    date-closed: null
+    date-closed: '2024-10-21T14:38:56Z'
   '1898':
     type: pr
     date-opened: '2024-09-11T16:31:16Z'
@@ -7766,7 +7766,7 @@ issues:
   '1951':
     type: pr
     date-opened: '2024-10-09T00:45:47Z'
-    date-closed: null
+    date-closed: '2024-10-21T14:38:55Z'
   '1950':
     type: pr
     date-opened: '2024-10-08T20:51:33Z'

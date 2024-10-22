@@ -1170,8 +1170,12 @@ issues:
   '294':
     type: pr
     date-opened: '2024-10-20T23:44:25Z'
-    date-closed: null
+    date-closed: '2024-10-21T14:09:51Z'
   '293':
     type: pr
     date-opened: '2024-10-20T23:44:24Z'
+    date-closed: '2024-10-21T14:21:10Z'
+  '295':
+    type: pr
+    date-opened: '2024-10-21T19:47:20Z'
     date-closed: null

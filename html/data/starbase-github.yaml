@@ -1079,3 +1079,7 @@ issues:
     type: pr
     date-opened: '2024-10-11T20:36:35Z'
     date-closed: '2024-10-11T21:01:10Z'
+  '271':
+    type: pr
+    date-opened: '2024-10-21T19:16:58Z'
+    date-closed: '2024-10-21T19:41:47Z'
