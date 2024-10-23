@@ -294,7 +294,7 @@ issues:
   '169':
     type: pr
     date-opened: '2023-08-22T14:24:17Z'
-    date-closed: null
+    date-closed: '2024-10-22T16:29:56Z'
   '168':
     type: pr
     date-opened: '2023-08-14T17:25:58Z'
@@ -1166,7 +1166,7 @@ issues:
   '292':
     type: issue
     date-opened: '2024-10-17T18:41:45Z'
-    date-closed: null
+    date-closed: '2024-10-22T16:27:50Z'
   '294':
     type: pr
     date-opened: '2024-10-20T23:44:25Z'
@@ -1178,4 +1178,8 @@ issues:
   '295':
     type: pr
     date-opened: '2024-10-21T19:47:20Z'
-    date-closed: null
+    date-closed: '2024-10-22T16:27:49Z'
+  '296':
+    type: pr
+    date-opened: '2024-10-22T16:33:36Z'
+    date-closed: '2024-10-22T17:42:48Z'

@@ -2554,7 +2554,7 @@ issues:
   '638':
     type: issue
     date-opened: '2024-08-26T19:43:32Z'
-    date-closed: null
+    date-closed: '2024-10-22T21:07:31Z'
   '637':
     type: pr
     date-opened: '2024-08-22T19:15:48Z'
@@ -2770,7 +2770,7 @@ issues:
   '694':
     type: pr
     date-opened: '2024-10-18T20:42:46Z'
-    date-closed: null
+    date-closed: '2024-10-22T21:07:30Z'
   '693':
     type: pr
     date-opened: '2024-10-18T13:08:15Z'

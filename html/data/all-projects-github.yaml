@@ -15150,7 +15150,7 @@ issues:
   craft-cli-169:
     type: pr
     date-opened: '2023-08-22T14:24:17Z'
-    date-closed: null
+    date-closed: '2024-10-22T16:29:56Z'
   craft-cli-168:
     type: pr
     date-opened: '2023-08-14T17:25:58Z'
@@ -41494,7 +41494,7 @@ issues:
   craft-providers-638:
     type: issue
     date-opened: '2024-08-26T19:43:32Z'
-    date-closed: null
+    date-closed: '2024-10-22T21:07:31Z'
   craft-providers-637:
     type: pr
     date-opened: '2024-08-22T19:15:48Z'
@@ -41762,7 +41762,7 @@ issues:
   craft-application-452:
     type: issue
     date-opened: '2024-09-06T18:41:53Z'
-    date-closed: null
+    date-closed: '2024-10-22T19:04:25Z'
   craft-application-451:
     type: pr
     date-opened: '2024-09-06T16:56:44Z'
@@ -42882,7 +42882,7 @@ issues:
   craft-platforms-57:
     type: pr
     date-opened: '2024-09-27T17:56:07Z'
-    date-closed: null
+    date-closed: '2024-10-22T15:44:55Z'
   craft-providers-668:
     type: pr
     date-opened: '2024-09-28T03:27:15Z'
@@ -43122,7 +43122,7 @@ issues:
   craft-application-504:
     type: pr
     date-opened: '2024-10-04T20:54:17Z'
-    date-closed: null
+    date-closed: '2024-10-22T12:20:09Z'
   craft-application-503:
     type: pr
     date-opened: '2024-10-04T15:55:37Z'
@@ -43302,7 +43302,7 @@ issues:
   craft-application-508:
     type: issue
     date-opened: '2024-10-07T14:39:08Z'
-    date-closed: null
+    date-closed: '2024-10-22T19:04:25Z'
   craft-application-507:
     type: issue
     date-opened: '2024-10-07T13:17:23Z'
@@ -43590,7 +43590,7 @@ issues:
   craft-application-522:
     type: pr
     date-opened: '2024-10-11T23:10:36Z'
-    date-closed: null
+    date-closed: '2024-10-22T19:04:24Z'
   craft-application-521:
     type: pr
     date-opened: '2024-10-11T18:34:00Z'
@@ -43846,7 +43846,7 @@ issues:
   craft-application-530:
     type: issue
     date-opened: '2024-10-17T18:46:29Z'
-    date-closed: null
+    date-closed: '2024-10-22T18:07:21Z'
   craft-archives-136:
     type: pr
     date-opened: '2024-10-17T21:34:27Z'
@@ -43854,7 +43854,7 @@ issues:
   craft-cli-292:
     type: issue
     date-opened: '2024-10-17T18:41:45Z'
-    date-closed: null
+    date-closed: '2024-10-22T16:27:50Z'
   craft-parts-884:
     type: pr
     date-opened: '2024-10-17T11:54:03Z'
@@ -43898,7 +43898,7 @@ issues:
   craft-application-531:
     type: pr
     date-opened: '2024-10-18T19:04:03Z'
-    date-closed: null
+    date-closed: '2024-10-22T18:08:34Z'
   craft-archives-137:
     type: pr
     date-opened: '2024-10-18T18:24:22Z'
@@ -43914,7 +43914,7 @@ issues:
   craft-providers-694:
     type: pr
     date-opened: '2024-10-18T20:42:46Z'
-    date-closed: null
+    date-closed: '2024-10-22T21:07:30Z'
   craft-providers-693:
     type: pr
     date-opened: '2024-10-18T13:08:15Z'
@@ -43994,7 +43994,7 @@ issues:
   craft-application-541:
     type: pr
     date-opened: '2024-10-21T20:09:51Z'
-    date-closed: null
+    date-closed: '2024-10-22T18:07:20Z'
   craft-application-540:
     type: issue
     date-opened: '2024-10-21T16:18:20Z'
@@ -44002,11 +44002,11 @@ issues:
   craft-application-539:
     type: pr
     date-opened: '2024-10-21T16:15:35Z'
-    date-closed: null
+    date-closed: '2024-10-22T18:40:46Z'
   craft-application-538:
     type: pr
     date-opened: '2024-10-21T14:27:05Z'
-    date-closed: null
+    date-closed: '2024-10-22T16:31:13Z'
   craft-application-537:
     type: issue
     date-opened: '2024-10-21T14:18:26Z'
@@ -44018,7 +44018,7 @@ issues:
   craft-cli-295:
     type: pr
     date-opened: '2024-10-21T19:47:20Z'
-    date-closed: null
+    date-closed: '2024-10-22T16:27:49Z'
   rockcraft-741:
     type: pr
     date-opened: '2024-10-21T21:58:26Z'
@@ -44030,7 +44030,7 @@ issues:
   rockcraft-739:
     type: pr
     date-opened: '2024-10-21T20:14:25Z'
-    date-closed: null
+    date-closed: '2024-10-22T14:22:20Z'
   rockcraft-738:
     type: pr
     date-opened: '2024-10-21T19:54:15Z'
@@ -44043,3 +44043,27 @@ issues:
     type: pr
     date-opened: '2024-10-21T19:16:58Z'
     date-closed: '2024-10-21T19:41:47Z'
+  charmcraft-1974:
+    type: pr
+    date-opened: '2024-10-22T15:52:21Z'
+    date-closed: null
+  charmcraft-1973:
+    type: issue
+    date-opened: '2024-10-22T14:36:15Z'
+    date-closed: null
+  craft-application-543:
+    type: pr
+    date-opened: '2024-10-22T19:27:24Z'
+    date-closed: null
+  craft-application-542:
+    type: pr
+    date-opened: '2024-10-22T18:14:47Z'
+    date-closed: null
+  craft-cli-296:
+    type: pr
+    date-opened: '2024-10-22T16:33:36Z'
+    date-closed: '2024-10-22T17:42:48Z'
+  starbase-272:
+    type: pr
+    date-opened: '2024-10-22T22:21:26Z'
+    date-closed: null

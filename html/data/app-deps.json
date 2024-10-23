@@ -12,7 +12,7 @@
     "latest": {
         "craft-application": "4.3.0",
         "craft-archives": "2.0.1",
-        "craft-cli": "2.8.0",
+        "craft-cli": "2.9.0",
         "craft-grammar": "2.0.1",
         "craft-parts": "2.1.2",
         "craft-platforms": "0.4.0",
@@ -36,7 +36,7 @@
             "craft-cli": {
                 "series": "2.7",
                 "version": "2.7.0",
-                "latest": "2.8.0",
+                "latest": "2.9.0",
                 "outdated": true
             },
             "craft-grammar": {
@@ -162,8 +162,8 @@
             "craft-cli": {
                 "series": "2.8",
                 "version": "2.8.0",
-                "latest": "2.8.0",
-                "outdated": false
+                "latest": "2.9.0",
+                "outdated": true
             },
             "craft-grammar": {
                 "series": "2.0",
@@ -244,7 +244,7 @@
             "craft-cli": {
                 "series": "2.7",
                 "version": "2.7.0",
-                "latest": "2.8.0",
+                "latest": "2.9.0",
                 "outdated": true
             },
             "craft-grammar": {

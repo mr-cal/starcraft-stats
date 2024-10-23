@@ -1798,7 +1798,7 @@ issues:
   '452':
     type: issue
     date-opened: '2024-09-06T18:41:53Z'
-    date-closed: null
+    date-closed: '2024-10-22T19:04:25Z'
   '451':
     type: pr
     date-opened: '2024-09-06T16:56:44Z'
@@ -2006,7 +2006,7 @@ issues:
   '504':
     type: pr
     date-opened: '2024-10-04T20:54:17Z'
-    date-closed: null
+    date-closed: '2024-10-22T12:20:09Z'
   '503':
     type: pr
     date-opened: '2024-10-04T15:55:37Z'
@@ -2038,7 +2038,7 @@ issues:
   '508':
     type: issue
     date-opened: '2024-10-07T14:39:08Z'
-    date-closed: null
+    date-closed: '2024-10-22T19:04:25Z'
   '507':
     type: issue
     date-opened: '2024-10-07T13:17:23Z'
@@ -2078,7 +2078,7 @@ issues:
   '522':
     type: pr
     date-opened: '2024-10-11T23:10:36Z'
-    date-closed: null
+    date-closed: '2024-10-22T19:04:24Z'
   '521':
     type: pr
     date-opened: '2024-10-11T18:34:00Z'
@@ -2114,11 +2114,11 @@ issues:
   '530':
     type: issue
     date-opened: '2024-10-17T18:46:29Z'
-    date-closed: null
+    date-closed: '2024-10-22T18:07:21Z'
   '531':
     type: pr
     date-opened: '2024-10-18T19:04:03Z'
-    date-closed: null
+    date-closed: '2024-10-22T18:08:34Z'
   '535':
     type: pr
     date-opened: '2024-10-20T23:45:24Z'
@@ -2138,7 +2138,7 @@ issues:
   '541':
     type: pr
     date-opened: '2024-10-21T20:09:51Z'
-    date-closed: null
+    date-closed: '2024-10-22T18:07:20Z'
   '540':
     type: issue
     date-opened: '2024-10-21T16:18:20Z'
@@ -2146,11 +2146,11 @@ issues:
   '539':
     type: pr
     date-opened: '2024-10-21T16:15:35Z'
-    date-closed: null
+    date-closed: '2024-10-22T18:40:46Z'
   '538':
     type: pr
     date-opened: '2024-10-21T14:27:05Z'
-    date-closed: null
+    date-closed: '2024-10-22T16:31:13Z'
   '537':
     type: issue
     date-opened: '2024-10-21T14:18:26Z'
@@ -2158,4 +2158,12 @@ issues:
   '536':
     type: issue
     date-opened: '2024-10-21T14:15:53Z'
+    date-closed: null
+  '543':
+    type: pr
+    date-opened: '2024-10-22T19:27:24Z'
+    date-closed: null
+  '542':
+    type: pr
+    date-opened: '2024-10-22T18:14:47Z'
     date-closed: null

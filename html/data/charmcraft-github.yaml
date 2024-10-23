@@ -7859,3 +7859,11 @@ issues:
     type: pr
     date-opened: '2024-10-18T04:57:55Z'
     date-closed: '2024-10-18T05:57:53Z'
+  '1974':
+    type: pr
+    date-opened: '2024-10-22T15:52:21Z'
+    date-closed: null
+  '1973':
+    type: issue
+    date-opened: '2024-10-22T14:36:15Z'
+    date-closed: null
