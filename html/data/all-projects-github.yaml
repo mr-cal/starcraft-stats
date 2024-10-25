@@ -37558,7 +37558,7 @@ issues:
   snapcraft-4785:
     type: issue
     date-opened: '2024-05-03T09:24:35Z'
-    date-closed: null
+    date-closed: '2024-10-24T12:37:11Z'
   craft-grammar-26:
     type: pr
     date-opened: '2024-05-05T14:54:53Z'
@@ -44014,7 +44014,7 @@ issues:
   craft-application-536:
     type: issue
     date-opened: '2024-10-21T14:15:53Z'
-    date-closed: null
+    date-closed: '2024-10-24T18:40:02Z'
   craft-cli-295:
     type: pr
     date-opened: '2024-10-21T19:47:20Z'
@@ -44074,11 +44074,11 @@ issues:
   craft-application-545:
     type: pr
     date-opened: '2024-10-23T17:05:31Z'
-    date-closed: null
+    date-closed: '2024-10-24T22:30:11Z'
   craft-application-544:
     type: pr
     date-opened: '2024-10-23T14:26:18Z'
-    date-closed: null
+    date-closed: '2024-10-24T18:40:01Z'
   craft-platforms-68:
     type: issue
     date-opened: '2024-10-23T05:41:41Z'
@@ -44091,3 +44091,27 @@ issues:
     type: pr
     date-opened: '2024-10-23T17:04:50Z'
     date-closed: null
+  craft-application-546:
+    type: issue
+    date-opened: '2024-10-24T12:19:09Z'
+    date-closed: null
+  snapcraft-5134:
+    type: pr
+    date-opened: '2024-10-24T22:34:18Z'
+    date-closed: null
+  snapcraft-5133:
+    type: pr
+    date-opened: '2024-10-24T22:32:32Z'
+    date-closed: '2024-10-24T22:33:26Z'
+  snapcraft-5132:
+    type: issue
+    date-opened: '2024-10-24T13:51:29Z'
+    date-closed: null
+  snapcraft-5131:
+    type: pr
+    date-opened: '2024-10-24T13:13:59Z'
+    date-closed: '2024-10-24T22:20:29Z'
+  snapcraft-5130:
+    type: pr
+    date-opened: '2024-10-24T13:06:22Z'
+    date-closed: '2024-10-24T18:36:38Z'
