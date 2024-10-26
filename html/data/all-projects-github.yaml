@@ -44098,7 +44098,7 @@ issues:
   snapcraft-5134:
     type: pr
     date-opened: '2024-10-24T22:34:18Z'
-    date-closed: null
+    date-closed: '2024-10-25T13:36:08Z'
   snapcraft-5133:
     type: pr
     date-opened: '2024-10-24T22:32:32Z'
@@ -44115,3 +44115,27 @@ issues:
     type: pr
     date-opened: '2024-10-24T13:06:22Z'
     date-closed: '2024-10-24T18:36:38Z'
+  craft-grammar-64:
+    type: pr
+    date-opened: '2024-10-26T03:17:19Z'
+    date-closed: null
+  craft-parts-887:
+    type: pr
+    date-opened: '2024-10-26T00:01:44Z'
+    date-closed: null
+  craft-platforms-69:
+    type: pr
+    date-opened: '2024-10-26T04:05:50Z'
+    date-closed: null
+  craft-providers-698:
+    type: pr
+    date-opened: '2024-10-26T03:24:20Z'
+    date-closed: null
+  craft-providers-697:
+    type: pr
+    date-opened: '2024-10-26T00:20:53Z'
+    date-closed: '2024-10-26T00:20:55Z'
+  craft-store-234:
+    type: pr
+    date-opened: '2024-10-26T03:08:20Z'
+    date-closed: null
