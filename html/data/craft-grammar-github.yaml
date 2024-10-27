@@ -254,4 +254,8 @@ issues:
   '64':
     type: pr
     date-opened: '2024-10-26T03:17:19Z'
-    date-closed: null
+    date-closed: '2024-10-26T12:46:31Z'
+  '65':
+    type: pr
+    date-opened: '2024-10-26T06:30:05Z'
+    date-closed: '2024-10-26T12:35:38Z'
