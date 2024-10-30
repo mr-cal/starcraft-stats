@@ -43130,7 +43130,7 @@ issues:
   craft-application-502:
     type: issue
     date-opened: '2024-10-04T14:27:36Z'
-    date-closed: null
+    date-closed: '2024-10-29T09:09:05Z'
   craft-parts-866:
     type: pr
     date-opened: '2024-10-04T21:18:44Z'
@@ -44182,4 +44182,12 @@ issues:
   snapcraft-5135:
     type: pr
     date-opened: '2024-10-28T15:55:30Z'
+    date-closed: null
+  craft-parts-889:
+    type: issue
+    date-opened: '2024-10-29T15:59:06Z'
+    date-closed: null
+  snapcraft-5136:
+    type: pr
+    date-opened: '2024-10-29T14:36:36Z'
     date-closed: null
