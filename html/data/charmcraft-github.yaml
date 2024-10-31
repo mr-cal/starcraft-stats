@@ -7871,3 +7871,11 @@ issues:
     type: pr
     date-opened: '2024-10-23T07:52:49Z'
     date-closed: null
+  '1977':
+    type: issue
+    date-opened: '2024-10-30T14:56:00Z'
+    date-closed: null
+  '1976':
+    type: pr
+    date-opened: '2024-10-30T11:15:39Z'
+    date-closed: null
