@@ -44202,8 +44202,52 @@ issues:
   craft-cli-298:
     type: pr
     date-opened: '2024-10-30T14:04:36Z'
-    date-closed: null
+    date-closed: '2024-10-31T15:34:37Z'
   craft-parts-890:
     type: issue
     date-opened: '2024-10-30T10:07:37Z'
+    date-closed: null
+  charmcraft-1981:
+    type: issue
+    date-opened: '2024-10-31T15:31:54Z'
+    date-closed: null
+  charmcraft-1980:
+    type: issue
+    date-opened: '2024-10-31T14:50:17Z'
+    date-closed: null
+  charmcraft-1979:
+    type: issue
+    date-opened: '2024-10-31T14:40:50Z'
+    date-closed: null
+  charmcraft-1978:
+    type: pr
+    date-opened: '2024-10-31T10:45:46Z'
+    date-closed: null
+  craft-cli-299:
+    type: pr
+    date-opened: '2024-10-31T10:33:45Z'
+    date-closed: '2024-10-31T15:39:13Z'
+  craft-parts-894:
+    type: pr
+    date-opened: '2024-10-31T16:37:38Z'
+    date-closed: null
+  craft-parts-893:
+    type: issue
+    date-opened: '2024-10-31T15:32:28Z'
+    date-closed: null
+  craft-parts-892:
+    type: issue
+    date-opened: '2024-10-31T14:55:46Z'
+    date-closed: null
+  craft-parts-891:
+    type: issue
+    date-opened: '2024-10-31T14:54:33Z'
+    date-closed: null
+  craft-providers-703:
+    type: issue
+    date-opened: '2024-10-31T16:15:01Z'
+    date-closed: null
+  snapcraft-5137:
+    type: issue
+    date-opened: '2024-10-31T16:36:56Z'
     date-closed: null
