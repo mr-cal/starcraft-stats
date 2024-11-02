@@ -40942,7 +40942,7 @@ issues:
   craft-parts-824:
     type: issue
     date-opened: '2024-08-20T23:07:58Z'
-    date-closed: null
+    date-closed: '2024-11-01T08:57:00Z'
   craft-parts-823:
     type: issue
     date-opened: '2024-08-20T22:54:45Z'
@@ -44250,4 +44250,20 @@ issues:
   snapcraft-5137:
     type: issue
     date-opened: '2024-10-31T16:36:56Z'
+    date-closed: null
+  charmcraft-1982:
+    type: issue
+    date-opened: '2024-11-01T09:26:54Z'
+    date-closed: null
+  craft-platforms-71:
+    type: pr
+    date-opened: '2024-11-02T03:52:32Z'
+    date-closed: null
+  rockcraft-744:
+    type: pr
+    date-opened: '2024-11-01T12:37:29Z'
+    date-closed: null
+  starbase-273:
+    type: issue
+    date-opened: '2024-11-01T09:45:56Z'
     date-closed: null
