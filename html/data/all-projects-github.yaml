@@ -44267,3 +44267,19 @@ issues:
     type: issue
     date-opened: '2024-11-01T09:45:56Z'
     date-closed: null
+  craft-grammar-67:
+    type: pr
+    date-opened: '2024-11-02T06:59:45Z'
+    date-closed: null
+  craft-grammar-66:
+    type: pr
+    date-opened: '2024-11-02T04:14:40Z'
+    date-closed: null
+  craft-platforms-72:
+    type: pr
+    date-opened: '2024-11-02T06:16:25Z'
+    date-closed: null
+  craft-store-235:
+    type: pr
+    date-opened: '2024-11-02T04:27:56Z'
+    date-closed: null
