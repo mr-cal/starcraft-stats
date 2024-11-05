@@ -44283,3 +44283,11 @@ issues:
     type: pr
     date-opened: '2024-11-02T04:27:56Z'
     date-closed: null
+  craft-cli-300:
+    type: pr
+    date-opened: '2024-11-04T17:10:15Z'
+    date-closed: null
+  rockcraft-745:
+    type: pr
+    date-opened: '2024-11-04T08:18:19Z'
+    date-closed: null
