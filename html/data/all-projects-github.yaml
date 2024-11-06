@@ -44274,7 +44274,7 @@ issues:
   craft-grammar-66:
     type: pr
     date-opened: '2024-11-02T04:14:40Z'
-    date-closed: null
+    date-closed: '2024-11-05T13:26:42Z'
   craft-platforms-72:
     type: pr
     date-opened: '2024-11-02T06:16:25Z'
@@ -44290,4 +44290,8 @@ issues:
   rockcraft-745:
     type: pr
     date-opened: '2024-11-04T08:18:19Z'
+    date-closed: null
+  snapcraft-5138:
+    type: issue
+    date-opened: '2024-11-05T10:30:34Z'
     date-closed: null
