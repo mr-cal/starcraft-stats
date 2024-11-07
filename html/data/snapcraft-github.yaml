@@ -19774,7 +19774,7 @@ issues:
   '4952':
     type: issue
     date-opened: '2024-08-05T10:57:31Z'
-    date-closed: null
+    date-closed: '2024-11-06T19:07:01Z'
   '4956':
     type: pr
     date-opened: '2024-08-06T20:21:32Z'
@@ -20510,4 +20510,12 @@ issues:
   '5138':
     type: issue
     date-opened: '2024-11-05T10:30:34Z'
+    date-closed: null
+  '5140':
+    type: issue
+    date-opened: '2024-11-06T21:38:11Z'
+    date-closed: null
+  '5139':
+    type: pr
+    date-opened: '2024-11-06T14:48:48Z'
     date-closed: null
