@@ -3546,7 +3546,7 @@ issues:
   '887':
     type: pr
     date-opened: '2024-10-26T00:01:44Z'
-    date-closed: null
+    date-closed: '2024-11-07T18:27:45Z'
   '888':
     type: issue
     date-opened: '2024-10-26T14:23:51Z'
@@ -3578,4 +3578,20 @@ issues:
   '895':
     type: pr
     date-opened: '2024-11-07T02:16:49Z'
+    date-closed: null
+  '899':
+    type: issue
+    date-opened: '2024-11-07T19:04:48Z'
+    date-closed: null
+  '898':
+    type: issue
+    date-opened: '2024-11-07T19:01:52Z'
+    date-closed: null
+  '897':
+    type: pr
+    date-opened: '2024-11-07T14:34:00Z'
+    date-closed: null
+  '896':
+    type: issue
+    date-opened: '2024-11-07T12:29:38Z'
     date-closed: null
