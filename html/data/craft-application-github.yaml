@@ -2203,3 +2203,7 @@ issues:
     type: issue
     date-opened: '2024-11-07T12:35:14Z'
     date-closed: null
+  '553':
+    type: pr
+    date-opened: '2024-11-08T13:53:54Z'
+    date-closed: '2024-11-08T18:20:12Z'

@@ -7899,3 +7899,11 @@ issues:
     type: issue
     date-opened: '2024-11-01T09:26:54Z'
     date-closed: null
+  '1984':
+    type: pr
+    date-opened: '2024-11-08T15:08:42Z'
+    date-closed: null
+  '1983':
+    type: issue
+    date-opened: '2024-11-08T11:55:53Z'
+    date-closed: null

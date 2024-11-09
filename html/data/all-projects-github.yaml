@@ -43390,7 +43390,7 @@ issues:
   snapcraft-5098:
     type: issue
     date-opened: '2024-10-07T14:39:21Z'
-    date-closed: null
+    date-closed: '2024-11-08T23:21:29Z'
   snapcraft-5097:
     type: issue
     date-opened: '2024-10-07T12:30:25Z'
@@ -43706,7 +43706,7 @@ issues:
   craft-cli-290:
     type: pr
     date-opened: '2024-10-15T20:58:01Z'
-    date-closed: null
+    date-closed: '2024-11-08T19:46:23Z'
   craft-parts-883:
     type: pr
     date-opened: '2024-10-15T20:59:45Z'
@@ -44090,7 +44090,7 @@ issues:
   snapcraft-5129:
     type: pr
     date-opened: '2024-10-23T17:04:50Z'
-    date-closed: null
+    date-closed: '2024-11-08T23:21:28Z'
   craft-application-546:
     type: issue
     date-opened: '2024-10-24T12:19:09Z'
@@ -44178,7 +44178,7 @@ issues:
   craft-cli-297:
     type: issue
     date-opened: '2024-10-28T11:33:49Z'
-    date-closed: null
+    date-closed: '2024-11-08T19:38:22Z'
   snapcraft-5135:
     type: pr
     date-opened: '2024-10-28T15:55:30Z'
@@ -44351,3 +44351,43 @@ issues:
     type: pr
     date-opened: '2024-11-07T15:51:53Z'
     date-closed: '2024-11-07T18:51:09Z'
+  charmcraft-1984:
+    type: pr
+    date-opened: '2024-11-08T15:08:42Z'
+    date-closed: null
+  charmcraft-1983:
+    type: issue
+    date-opened: '2024-11-08T11:55:53Z'
+    date-closed: null
+  craft-application-553:
+    type: pr
+    date-opened: '2024-11-08T13:53:54Z'
+    date-closed: '2024-11-08T18:20:12Z'
+  craft-cli-302:
+    type: pr
+    date-opened: '2024-11-08T19:07:26Z'
+    date-closed: '2024-11-08T19:38:21Z'
+  craft-cli-301:
+    type: pr
+    date-opened: '2024-11-08T18:54:06Z'
+    date-closed: '2024-11-08T19:17:03Z'
+  craft-grammar-68:
+    type: pr
+    date-opened: '2024-11-09T03:19:10Z'
+    date-closed: null
+  craft-parts-900:
+    type: issue
+    date-opened: '2024-11-08T15:07:42Z'
+    date-closed: null
+  rockcraft-747:
+    type: pr
+    date-opened: '2024-11-08T08:36:40Z'
+    date-closed: null
+  snapcraft-5141:
+    type: pr
+    date-opened: '2024-11-08T13:28:20Z'
+    date-closed: null
+  starbase-275:
+    type: pr
+    date-opened: '2024-11-09T04:20:22Z'
+    date-closed: null

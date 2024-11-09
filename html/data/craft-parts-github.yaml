@@ -3595,3 +3595,7 @@ issues:
     type: issue
     date-opened: '2024-11-07T12:29:38Z'
     date-closed: null
+  '900':
+    type: issue
+    date-opened: '2024-11-08T15:07:42Z'
+    date-closed: null
