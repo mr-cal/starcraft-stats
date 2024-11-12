@@ -2182,7 +2182,7 @@ issues:
   '547':
     type: pr
     date-opened: '2024-10-27T15:49:05Z'
-    date-closed: null
+    date-closed: '2024-11-11T19:17:19Z'
   '548':
     type: pr
     date-opened: '2024-11-06T21:34:15Z'
@@ -2207,3 +2207,11 @@ issues:
     type: pr
     date-opened: '2024-11-08T13:53:54Z'
     date-closed: '2024-11-08T18:20:12Z'
+  '555':
+    type: pr
+    date-opened: '2024-11-11T20:35:03Z'
+    date-closed: null
+  '554':
+    type: pr
+    date-opened: '2024-11-11T11:49:10Z'
+    date-closed: null

@@ -44174,7 +44174,7 @@ issues:
   craft-application-547:
     type: pr
     date-opened: '2024-10-27T15:49:05Z'
-    date-closed: null
+    date-closed: '2024-11-11T19:17:19Z'
   craft-cli-297:
     type: issue
     date-opened: '2024-10-28T11:33:49Z'
@@ -44394,4 +44394,24 @@ issues:
   starbase-276:
     type: pr
     date-opened: '2024-11-09T06:49:10Z'
+    date-closed: null
+  charmcraft-1986:
+    type: pr
+    date-opened: '2024-11-12T03:11:43Z'
+    date-closed: null
+  charmcraft-1985:
+    type: issue
+    date-opened: '2024-11-11T09:47:55Z'
+    date-closed: null
+  craft-application-555:
+    type: pr
+    date-opened: '2024-11-11T20:35:03Z'
+    date-closed: null
+  craft-application-554:
+    type: pr
+    date-opened: '2024-11-11T11:49:10Z'
+    date-closed: null
+  rockcraft-748:
+    type: issue
+    date-opened: '2024-11-11T16:06:59Z'
     date-closed: null

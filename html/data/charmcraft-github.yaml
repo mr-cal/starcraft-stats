@@ -7907,3 +7907,11 @@ issues:
     type: issue
     date-opened: '2024-11-08T11:55:53Z'
     date-closed: null
+  '1986':
+    type: pr
+    date-opened: '2024-11-12T03:11:43Z'
+    date-closed: null
+  '1985':
+    type: issue
+    date-opened: '2024-11-11T09:47:55Z'
+    date-closed: null
