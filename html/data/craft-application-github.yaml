@@ -2186,7 +2186,7 @@ issues:
   '548':
     type: pr
     date-opened: '2024-11-06T21:34:15Z'
-    date-closed: null
+    date-closed: '2024-11-12T15:23:19Z'
   '552':
     type: issue
     date-opened: '2024-11-07T13:40:14Z'
@@ -2194,7 +2194,7 @@ issues:
   '551':
     type: issue
     date-opened: '2024-11-07T13:34:36Z'
-    date-closed: null
+    date-closed: '2024-11-12T12:49:54Z'
   '550':
     type: issue
     date-opened: '2024-11-07T13:14:15Z'
@@ -2214,4 +2214,8 @@ issues:
   '554':
     type: pr
     date-opened: '2024-11-11T11:49:10Z'
-    date-closed: null
+    date-closed: '2024-11-12T12:49:53Z'
+  '556':
+    type: pr
+    date-opened: '2024-11-12T21:19:09Z'
+    date-closed: '2024-11-12T21:21:46Z'

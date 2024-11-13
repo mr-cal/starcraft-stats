@@ -7898,11 +7898,11 @@ issues:
   '1982':
     type: issue
     date-opened: '2024-11-01T09:26:54Z'
-    date-closed: null
+    date-closed: '2024-11-12T17:37:57Z'
   '1984':
     type: pr
     date-opened: '2024-11-08T15:08:42Z'
-    date-closed: null
+    date-closed: '2024-11-12T17:37:56Z'
   '1983':
     type: issue
     date-opened: '2024-11-08T11:55:53Z'
