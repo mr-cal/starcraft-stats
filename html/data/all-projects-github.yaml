@@ -5702,7 +5702,7 @@ issues:
   rockcraft-487:
     type: pr
     date-opened: '2024-02-19T08:18:07Z'
-    date-closed: null
+    date-closed: '2024-11-14T15:44:31Z'
   rockcraft-486:
     type: issue
     date-opened: '2024-02-16T01:53:36Z'
@@ -44450,4 +44450,28 @@ issues:
   starbase-277:
     type: issue
     date-opened: '2024-11-13T21:11:02Z'
+    date-closed: null
+  charmcraft-1992:
+    type: issue
+    date-opened: '2024-11-14T14:57:07Z'
+    date-closed: null
+  charmcraft-1991:
+    type: issue
+    date-opened: '2024-11-14T09:08:47Z'
+    date-closed: null
+  charmcraft-1990:
+    type: issue
+    date-opened: '2024-11-14T06:17:23Z'
+    date-closed: null
+  craft-store-236:
+    type: pr
+    date-opened: '2024-11-14T15:43:18Z'
+    date-closed: null
+  rockcraft-750:
+    type: issue
+    date-opened: '2024-11-14T16:12:28Z'
+    date-closed: null
+  snapcraft-5144:
+    type: issue
+    date-opened: '2024-11-14T21:56:26Z'
     date-closed: null

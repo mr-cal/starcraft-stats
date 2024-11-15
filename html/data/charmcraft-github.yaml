@@ -7927,3 +7927,15 @@ issues:
     type: issue
     date-opened: '2024-11-13T09:51:54Z'
     date-closed: '2024-11-13T11:41:08Z'
+  '1992':
+    type: issue
+    date-opened: '2024-11-14T14:57:07Z'
+    date-closed: null
+  '1991':
+    type: issue
+    date-opened: '2024-11-14T09:08:47Z'
+    date-closed: null
+  '1990':
+    type: issue
+    date-opened: '2024-11-14T06:17:23Z'
+    date-closed: null

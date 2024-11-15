@@ -114,7 +114,7 @@ issues:
   '487':
     type: pr
     date-opened: '2024-02-19T08:18:07Z'
-    date-closed: null
+    date-closed: '2024-11-14T15:44:31Z'
   '486':
     type: issue
     date-opened: '2024-02-16T01:53:36Z'
@@ -2990,4 +2990,8 @@ issues:
   '749':
     type: issue
     date-opened: '2024-11-12T13:24:54Z'
+    date-closed: null
+  '750':
+    type: issue
+    date-opened: '2024-11-14T16:12:28Z'
     date-closed: null
