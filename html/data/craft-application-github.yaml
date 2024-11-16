@@ -2219,3 +2219,15 @@ issues:
     type: pr
     date-opened: '2024-11-12T21:19:09Z'
     date-closed: '2024-11-12T21:21:46Z'
+  '559':
+    type: pr
+    date-opened: '2024-11-15T20:31:38Z'
+    date-closed: null
+  '558':
+    type: issue
+    date-opened: '2024-11-15T15:44:16Z'
+    date-closed: null
+  '557':
+    type: pr
+    date-opened: '2024-11-15T15:01:56Z'
+    date-closed: null

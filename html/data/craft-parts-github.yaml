@@ -3126,7 +3126,7 @@ issues:
   '782':
     type: pr
     date-opened: '2024-07-16T00:18:40Z'
-    date-closed: null
+    date-closed: '2024-11-15T22:10:30Z'
   '785':
     type: pr
     date-opened: '2024-07-16T22:19:24Z'
@@ -3598,4 +3598,12 @@ issues:
   '900':
     type: issue
     date-opened: '2024-11-08T15:07:42Z'
+    date-closed: null
+  '902':
+    type: pr
+    date-opened: '2024-11-15T22:10:54Z'
+    date-closed: null
+  '901':
+    type: pr
+    date-opened: '2024-11-15T19:06:45Z'
     date-closed: null

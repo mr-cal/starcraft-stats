@@ -1107,3 +1107,11 @@ issues:
     type: issue
     date-opened: '2024-11-13T21:11:02Z'
     date-closed: null
+  '279':
+    type: pr
+    date-opened: '2024-11-16T03:28:19Z'
+    date-closed: null
+  '278':
+    type: pr
+    date-opened: '2024-11-16T01:06:32Z'
+    date-closed: null
