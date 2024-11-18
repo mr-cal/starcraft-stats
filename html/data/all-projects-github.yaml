@@ -44527,3 +44527,11 @@ issues:
     type: pr
     date-opened: '2024-11-16T01:06:32Z'
     date-closed: null
+  craft-grammar-70:
+    type: pr
+    date-opened: '2024-11-17T18:55:50Z'
+    date-closed: null
+  rockcraft-752:
+    type: pr
+    date-opened: '2024-11-18T01:07:29Z'
+    date-closed: null
