@@ -20530,8 +20530,24 @@ issues:
   '5143':
     type: pr
     date-opened: '2024-11-13T18:18:41Z'
-    date-closed: null
+    date-closed: '2024-11-18T13:50:47Z'
   '5144':
     type: issue
     date-opened: '2024-11-14T21:56:26Z'
+    date-closed: null
+  '5148':
+    type: pr
+    date-opened: '2024-11-18T16:30:14Z'
+    date-closed: null
+  '5147':
+    type: pr
+    date-opened: '2024-11-18T12:44:39Z'
+    date-closed: null
+  '5146':
+    type: issue
+    date-opened: '2024-11-18T10:39:55Z'
+    date-closed: null
+  '5145':
+    type: issue
+    date-opened: '2024-11-18T06:35:18Z'
     date-closed: null

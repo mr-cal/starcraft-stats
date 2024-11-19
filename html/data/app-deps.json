@@ -243,9 +243,9 @@
             },
             "craft-cli": {
                 "series": "2.10",
-                "version": "2.10.0",
+                "version": "2.10.1",
                 "latest": "2.10.1",
-                "outdated": true
+                "outdated": false
             },
             "craft-grammar": {
                 "series": "2.0",

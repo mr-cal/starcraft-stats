@@ -2226,8 +2226,16 @@ issues:
   '558':
     type: issue
     date-opened: '2024-11-15T15:44:16Z'
-    date-closed: null
+    date-closed: '2024-11-18T20:57:50Z'
   '557':
     type: pr
     date-opened: '2024-11-15T15:01:56Z'
+    date-closed: '2024-11-18T13:48:20Z'
+  '561':
+    type: issue
+    date-opened: '2024-11-18T12:41:14Z'
+    date-closed: null
+  '560':
+    type: issue
+    date-opened: '2024-11-18T12:37:15Z'
     date-closed: null

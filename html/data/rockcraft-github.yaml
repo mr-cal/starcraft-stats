@@ -3003,3 +3003,11 @@ issues:
     type: pr
     date-opened: '2024-11-18T01:07:29Z'
     date-closed: null
+  '754':
+    type: pr
+    date-opened: '2024-11-18T19:55:51Z'
+    date-closed: null
+  '753':
+    type: issue
+    date-opened: '2024-11-18T12:54:47Z'
+    date-closed: null

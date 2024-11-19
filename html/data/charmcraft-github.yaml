@@ -7955,3 +7955,19 @@ issues:
     type: issue
     date-opened: '2024-11-15T10:29:00Z'
     date-closed: null
+  '2000':
+    type: pr
+    date-opened: '2024-11-18T15:22:40Z'
+    date-closed: null
+  '1999':
+    type: pr
+    date-opened: '2024-11-18T15:22:37Z'
+    date-closed: null
+  '1998':
+    type: issue
+    date-opened: '2024-11-18T12:05:11Z'
+    date-closed: null
+  '1997':
+    type: issue
+    date-opened: '2024-11-18T11:58:47Z'
+    date-closed: null
