@@ -7971,3 +7971,11 @@ issues:
     type: issue
     date-opened: '2024-11-18T11:58:47Z'
     date-closed: null
+  '2002':
+    type: pr
+    date-opened: '2024-11-19T20:11:57Z'
+    date-closed: null
+  '2001':
+    type: issue
+    date-opened: '2024-11-19T19:02:58Z'
+    date-closed: null
