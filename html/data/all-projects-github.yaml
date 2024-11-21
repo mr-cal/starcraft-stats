@@ -230,7 +230,7 @@ issues:
   craft-parts-637:
     type: pr
     date-opened: '2024-01-25T14:40:09Z'
-    date-closed: null
+    date-closed: '2024-11-20T08:51:57Z'
   craft-parts-636:
     type: issue
     date-opened: '2024-01-24T18:01:47Z'
@@ -5794,7 +5794,7 @@ issues:
   rockcraft-464:
     type: pr
     date-opened: '2024-01-25T10:56:14Z'
-    date-closed: null
+    date-closed: '2024-11-20T09:55:42Z'
   rockcraft-463:
     type: pr
     date-opened: '2024-01-24T19:07:42Z'
@@ -9158,7 +9158,7 @@ issues:
   charmcraft-1431:
     type: issue
     date-opened: '2023-12-08T03:11:56Z'
-    date-closed: null
+    date-closed: '2024-11-20T13:17:23Z'
   charmcraft-1430:
     type: pr
     date-opened: '2023-12-08T00:45:34Z'
@@ -43614,7 +43614,7 @@ issues:
   craft-parts-876:
     type: pr
     date-opened: '2024-10-11T17:26:15Z'
-    date-closed: null
+    date-closed: '2024-11-20T14:22:52Z'
   craft-platforms-64:
     type: pr
     date-opened: '2024-10-12T04:11:40Z'
@@ -44430,7 +44430,7 @@ issues:
   charmcraft-1989:
     type: pr
     date-opened: '2024-11-14T00:12:54Z'
-    date-closed: null
+    date-closed: '2024-11-20T13:17:22Z'
   charmcraft-1988:
     type: pr
     date-opened: '2024-11-13T13:00:48Z'
@@ -44514,7 +44514,7 @@ issues:
   craft-parts-901:
     type: pr
     date-opened: '2024-11-15T19:06:45Z'
-    date-closed: null
+    date-closed: '2024-11-20T14:20:30Z'
   rockcraft-751:
     type: pr
     date-opened: '2024-11-15T20:43:33Z'
@@ -44602,7 +44602,7 @@ issues:
   charmcraft-2002:
     type: pr
     date-opened: '2024-11-19T20:11:57Z'
-    date-closed: null
+    date-closed: '2024-11-20T18:09:23Z'
   charmcraft-2001:
     type: issue
     date-opened: '2024-11-19T19:02:58Z'
@@ -44622,4 +44622,24 @@ issues:
   snapcraft-5149:
     type: pr
     date-opened: '2024-11-19T21:18:08Z'
+    date-closed: null
+  craft-application-563:
+    type: pr
+    date-opened: '2024-11-20T12:49:27Z'
+    date-closed: null
+  craft-parts-904:
+    type: pr
+    date-opened: '2024-11-20T08:49:11Z'
+    date-closed: null
+  rockcraft-759:
+    type: pr
+    date-opened: '2024-11-20T10:06:59Z'
+    date-closed: null
+  rockcraft-758:
+    type: pr
+    date-opened: '2024-11-20T09:54:30Z'
+    date-closed: null
+  rockcraft-757:
+    type: pr
+    date-opened: '2024-11-20T09:44:41Z'
     date-closed: null

@@ -738,7 +738,7 @@ issues:
   '1431':
     type: issue
     date-opened: '2023-12-08T03:11:56Z'
-    date-closed: null
+    date-closed: '2024-11-20T13:17:23Z'
   '1430':
     type: pr
     date-opened: '2023-12-08T00:45:34Z'
@@ -7918,7 +7918,7 @@ issues:
   '1989':
     type: pr
     date-opened: '2024-11-14T00:12:54Z'
-    date-closed: null
+    date-closed: '2024-11-20T13:17:22Z'
   '1988':
     type: pr
     date-opened: '2024-11-13T13:00:48Z'
@@ -7974,7 +7974,7 @@ issues:
   '2002':
     type: pr
     date-opened: '2024-11-19T20:11:57Z'
-    date-closed: null
+    date-closed: '2024-11-20T18:09:23Z'
   '2001':
     type: issue
     date-opened: '2024-11-19T19:02:58Z'
