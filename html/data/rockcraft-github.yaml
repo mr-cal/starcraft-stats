@@ -3022,7 +3022,7 @@ issues:
   '759':
     type: pr
     date-opened: '2024-11-20T10:06:59Z'
-    date-closed: null
+    date-closed: '2024-11-21T14:40:57Z'
   '758':
     type: pr
     date-opened: '2024-11-20T09:54:30Z'
@@ -3030,4 +3030,4 @@ issues:
   '757':
     type: pr
     date-opened: '2024-11-20T09:44:41Z'
-    date-closed: null
+    date-closed: '2024-11-21T12:25:42Z'

@@ -3614,4 +3614,16 @@ issues:
   '904':
     type: pr
     date-opened: '2024-11-20T08:49:11Z'
-    date-closed: null
+    date-closed: '2024-11-21T16:00:09Z'
+  '907':
+    type: pr
+    date-opened: '2024-11-21T20:50:15Z'
+    date-closed: '2024-11-21T22:06:15Z'
+  '906':
+    type: pr
+    date-opened: '2024-11-21T20:17:25Z'
+    date-closed: '2024-11-21T20:46:04Z'
+  '905':
+    type: pr
+    date-opened: '2024-11-21T14:56:40Z'
+    date-closed: '2024-11-21T19:30:15Z'
