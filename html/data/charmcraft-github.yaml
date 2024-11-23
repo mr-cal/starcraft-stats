@@ -7094,7 +7094,7 @@ issues:
   '1779':
     type: pr
     date-opened: '2024-08-01T13:46:38Z'
-    date-closed: null
+    date-closed: '2024-11-22T13:35:50Z'
   '1787':
     type: issue
     date-opened: '2024-08-02T21:50:58Z'
@@ -7218,7 +7218,7 @@ issues:
   '1813':
     type: issue
     date-opened: '2024-08-14T20:25:54Z'
-    date-closed: null
+    date-closed: '2024-11-22T17:15:50Z'
   '1812':
     type: issue
     date-opened: '2024-08-14T19:03:02Z'
@@ -7978,4 +7978,8 @@ issues:
   '2001':
     type: issue
     date-opened: '2024-11-19T19:02:58Z'
+    date-closed: null
+  '2003':
+    type: pr
+    date-opened: '2024-11-22T13:38:28Z'
     date-closed: null

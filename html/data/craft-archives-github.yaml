@@ -551,3 +551,7 @@ issues:
     type: pr
     date-opened: '2024-10-20T23:44:47Z'
     date-closed: '2024-10-21T13:44:16Z'
+  '139':
+    type: issue
+    date-opened: '2024-11-22T11:24:42Z'
+    date-closed: null

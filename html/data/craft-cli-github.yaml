@@ -98,7 +98,7 @@ issues:
   '218':
     type: pr
     date-opened: '2024-01-11T18:41:54Z'
-    date-closed: null
+    date-closed: '2024-11-22T15:39:08Z'
   '217':
     type: pr
     date-opened: '2023-12-15T17:56:05Z'
@@ -322,7 +322,7 @@ issues:
   '162':
     type: issue
     date-opened: '2023-06-30T17:21:12Z'
-    date-closed: null
+    date-closed: '2024-11-22T15:39:09Z'
   '161':
     type: pr
     date-opened: '2023-06-30T16:00:21Z'
