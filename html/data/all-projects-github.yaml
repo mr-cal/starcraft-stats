@@ -44711,3 +44711,7 @@ issues:
     type: pr
     date-opened: '2024-11-22T21:24:27Z'
     date-closed: null
+  craft-grammar-71:
+    type: pr
+    date-opened: '2024-11-24T17:03:35Z'
+    date-closed: null
