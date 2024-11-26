@@ -7983,3 +7983,11 @@ issues:
     type: pr
     date-opened: '2024-11-22T13:38:28Z'
     date-closed: null
+  '2005':
+    type: pr
+    date-opened: '2024-11-25T21:58:02Z'
+    date-closed: null
+  '2004':
+    type: issue
+    date-opened: '2024-11-25T21:57:17Z'
+    date-closed: null

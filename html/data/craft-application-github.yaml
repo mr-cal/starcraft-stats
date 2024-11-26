@@ -2251,3 +2251,11 @@ issues:
     type: pr
     date-opened: '2024-11-22T20:56:38Z'
     date-closed: null
+  '566':
+    type: pr
+    date-opened: '2024-11-25T18:52:43Z'
+    date-closed: '2024-11-25T19:35:12Z'
+  '565':
+    type: pr
+    date-opened: '2024-11-25T15:06:11Z'
+    date-closed: null

@@ -2710,7 +2710,7 @@ issues:
   '697':
     type: pr
     date-opened: '2024-09-04T17:35:06Z'
-    date-closed: null
+    date-closed: '2024-11-25T21:52:18Z'
   '696':
     type: pr
     date-opened: '2024-09-04T12:49:10Z'
@@ -3031,3 +3031,11 @@ issues:
     type: pr
     date-opened: '2024-11-20T09:44:41Z'
     date-closed: '2024-11-21T12:25:42Z'
+  '761':
+    type: pr
+    date-opened: '2024-11-25T14:22:20Z'
+    date-closed: null
+  '760':
+    type: pr
+    date-opened: '2024-11-25T12:04:15Z'
+    date-closed: null

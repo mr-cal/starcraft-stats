@@ -1170,7 +1170,7 @@ issues:
   '402':
     type: pr
     date-opened: '2023-03-10T17:49:41Z'
-    date-closed: null
+    date-closed: '2024-11-25T18:39:10Z'
   '401':
     type: pr
     date-opened: '2023-03-09T14:39:29Z'
@@ -3638,4 +3638,8 @@ issues:
   '908':
     type: issue
     date-opened: '2024-11-22T14:00:40Z'
+    date-closed: null
+  '911':
+    type: issue
+    date-opened: '2024-11-25T12:21:42Z'
     date-closed: null

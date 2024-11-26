@@ -19550,7 +19550,7 @@ issues:
   '4894':
     type: issue
     date-opened: '2024-07-05T18:28:22Z'
-    date-closed: null
+    date-closed: '2024-11-25T14:38:46Z'
   '4893':
     type: issue
     date-opened: '2024-07-05T17:38:43Z'
@@ -19990,7 +19990,7 @@ issues:
   '5002':
     type: issue
     date-opened: '2024-08-26T16:13:05Z'
-    date-closed: null
+    date-closed: '2024-11-25T14:35:35Z'
   '5001':
     type: issue
     date-opened: '2024-08-26T14:17:49Z'
@@ -20574,4 +20574,8 @@ issues:
   '5150':
     type: pr
     date-opened: '2024-11-22T19:03:21Z'
+    date-closed: null
+  '5155':
+    type: issue
+    date-opened: '2024-11-25T15:32:38Z'
     date-closed: null
