@@ -44742,7 +44742,7 @@ issues:
   rockcraft-760:
     type: pr
     date-opened: '2024-11-25T12:04:15Z'
-    date-closed: null
+    date-closed: '2024-11-26T13:04:17Z'
   snapcraft-5155:
     type: issue
     date-opened: '2024-11-25T15:32:38Z'
@@ -44750,4 +44750,16 @@ issues:
   starbase-286:
     type: pr
     date-opened: '2024-11-25T23:02:10Z'
+    date-closed: null
+  craft-application-568:
+    type: pr
+    date-opened: '2024-11-26T16:19:24Z'
+    date-closed: null
+  craft-application-567:
+    type: pr
+    date-opened: '2024-11-26T13:01:51Z'
+    date-closed: null
+  snapcraft-5156:
+    type: pr
+    date-opened: '2024-11-26T09:32:29Z'
     date-closed: null

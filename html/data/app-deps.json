@@ -148,10 +148,10 @@
         },
         "rockcraft/main": {
             "craft-application": {
-                "series": "4.3",
-                "version": "4.3.0",
+                "series": "4.4",
+                "version": "4.4.0",
                 "latest": "4.4.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.0",
@@ -160,10 +160,10 @@
                 "outdated": false
             },
             "craft-cli": {
-                "series": "2.9",
-                "version": "2.9.0",
+                "series": "2.10",
+                "version": "2.10.1",
                 "latest": "2.10.1",
-                "outdated": true
+                "outdated": false
             },
             "craft-grammar": {
                 "series": "2.0",
