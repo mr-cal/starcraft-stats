@@ -282,8 +282,24 @@ issues:
   '71':
     type: pr
     date-opened: '2024-11-02T03:52:32Z'
-    date-closed: null
+    date-closed: '2024-11-27T20:16:44Z'
   '72':
     type: pr
     date-opened: '2024-11-02T06:16:25Z'
+    date-closed: '2024-11-27T20:18:21Z'
+  '76':
+    type: pr
+    date-opened: '2024-11-27T20:17:54Z'
+    date-closed: null
+  '75':
+    type: issue
+    date-opened: '2024-11-27T17:57:38Z'
+    date-closed: null
+  '74':
+    type: pr
+    date-opened: '2024-11-27T17:18:55Z'
+    date-closed: '2024-11-27T20:41:38Z'
+  '73':
+    type: issue
+    date-opened: '2024-11-27T17:11:54Z'
     date-closed: null

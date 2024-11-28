@@ -1806,7 +1806,7 @@ issues:
   '453':
     type: issue
     date-opened: '2024-09-09T15:40:15Z'
-    date-closed: null
+    date-closed: '2024-11-27T15:17:07Z'
   '454':
     type: pr
     date-opened: '2024-09-10T14:33:19Z'
@@ -2266,4 +2266,8 @@ issues:
   '567':
     type: pr
     date-opened: '2024-11-26T13:01:51Z'
+    date-closed: '2024-11-27T20:06:40Z'
+  '569':
+    type: issue
+    date-opened: '2024-11-27T17:12:15Z'
     date-closed: null

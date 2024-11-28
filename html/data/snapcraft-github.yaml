@@ -20558,19 +20558,19 @@ issues:
   '5154':
     type: pr
     date-opened: '2024-11-22T22:15:31Z'
-    date-closed: null
+    date-closed: '2024-11-27T14:07:20Z'
   '5153':
     type: pr
     date-opened: '2024-11-22T22:15:24Z'
-    date-closed: null
+    date-closed: '2024-11-27T15:41:58Z'
   '5152':
     type: pr
     date-opened: '2024-11-22T22:15:16Z'
-    date-closed: null
+    date-closed: '2024-11-27T15:42:00Z'
   '5151':
     type: pr
     date-opened: '2024-11-22T22:13:14Z'
-    date-closed: null
+    date-closed: '2024-11-27T15:40:13Z'
   '5150':
     type: pr
     date-opened: '2024-11-22T19:03:21Z'
@@ -20582,4 +20582,12 @@ issues:
   '5156':
     type: pr
     date-opened: '2024-11-26T09:32:29Z'
+    date-closed: null
+  '5158':
+    type: issue
+    date-opened: '2024-11-27T17:33:52Z'
+    date-closed: null
+  '5157':
+    type: pr
+    date-opened: '2024-11-27T16:03:41Z'
     date-closed: null
