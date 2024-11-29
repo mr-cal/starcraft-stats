@@ -1130,7 +1130,7 @@ issues:
   '283':
     type: issue
     date-opened: '2024-11-21T15:54:25Z'
-    date-closed: null
+    date-closed: '2024-11-28T14:33:45Z'
   '285':
     type: pr
     date-opened: '2024-11-23T00:13:05Z'
@@ -1138,7 +1138,7 @@ issues:
   '284':
     type: pr
     date-opened: '2024-11-22T21:24:27Z'
-    date-closed: null
+    date-closed: '2024-11-28T14:33:43Z'
   '286':
     type: pr
     date-opened: '2024-11-25T23:02:10Z'
