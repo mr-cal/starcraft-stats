@@ -20594,4 +20594,12 @@ issues:
   '5159':
     type: pr
     date-opened: '2024-11-28T20:51:33Z'
+    date-closed: '2024-11-29T13:48:34Z'
+  '5161':
+    type: issue
+    date-opened: '2024-11-29T18:47:59Z'
+    date-closed: null
+  '5160':
+    type: pr
+    date-opened: '2024-11-29T11:03:58Z'
     date-closed: null

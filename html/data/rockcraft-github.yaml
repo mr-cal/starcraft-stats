@@ -2986,7 +2986,7 @@ issues:
   '748':
     type: issue
     date-opened: '2024-11-11T16:06:59Z'
-    date-closed: null
+    date-closed: '2024-11-29T11:39:25Z'
   '749':
     type: issue
     date-opened: '2024-11-12T13:24:54Z'
@@ -3050,4 +3050,8 @@ issues:
   '764':
     type: pr
     date-opened: '2024-11-28T18:33:26Z'
+    date-closed: '2024-11-29T11:39:24Z'
+  '765':
+    type: pr
+    date-opened: '2024-11-29T13:24:29Z'
     date-closed: null

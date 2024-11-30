@@ -3655,3 +3655,7 @@ issues:
     type: pr
     date-opened: '2024-11-28T10:28:57Z'
     date-closed: null
+  '915':
+    type: issue
+    date-opened: '2024-11-29T17:42:39Z'
+    date-closed: null
