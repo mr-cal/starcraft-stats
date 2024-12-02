@@ -3659,3 +3659,11 @@ issues:
     type: issue
     date-opened: '2024-11-29T17:42:39Z'
     date-closed: null
+  '917':
+    type: pr
+    date-opened: '2024-12-02T02:50:41Z'
+    date-closed: null
+  '916':
+    type: pr
+    date-opened: '2024-12-01T20:36:44Z'
+    date-closed: null
