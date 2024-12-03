@@ -3650,7 +3650,7 @@ issues:
   '914':
     type: pr
     date-opened: '2024-11-28T14:13:44Z'
-    date-closed: null
+    date-closed: '2024-12-02T16:47:42Z'
   '913':
     type: pr
     date-opened: '2024-11-28T10:28:57Z'
@@ -3666,4 +3666,12 @@ issues:
   '916':
     type: pr
     date-opened: '2024-12-01T20:36:44Z'
+    date-closed: null
+  '919':
+    type: issue
+    date-opened: '2024-12-02T16:59:59Z'
+    date-closed: null
+  '918':
+    type: issue
+    date-opened: '2024-12-02T13:12:35Z'
     date-closed: null

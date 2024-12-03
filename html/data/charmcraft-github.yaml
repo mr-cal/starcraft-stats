@@ -8011,3 +8011,7 @@ issues:
     type: pr
     date-opened: '2024-11-29T11:56:29Z'
     date-closed: null
+  '2011':
+    type: pr
+    date-opened: '2024-12-02T23:40:41Z'
+    date-closed: null

@@ -3055,3 +3055,7 @@ issues:
     type: pr
     date-opened: '2024-11-29T13:24:29Z'
     date-closed: null
+  '766':
+    type: issue
+    date-opened: '2024-12-02T12:50:41Z'
+    date-closed: null

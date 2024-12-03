@@ -1206,7 +1206,7 @@ issues:
   '4394':
     type: issue
     date-opened: '2023-10-06T00:08:22Z'
-    date-closed: null
+    date-closed: '2024-12-02T14:29:45Z'
   '4393':
     type: pr
     date-opened: '2023-10-04T23:56:49Z'
@@ -20542,7 +20542,7 @@ issues:
   '5147':
     type: pr
     date-opened: '2024-11-18T12:44:39Z'
-    date-closed: null
+    date-closed: '2024-12-02T09:06:11Z'
   '5146':
     type: issue
     date-opened: '2024-11-18T10:39:55Z'
@@ -20602,4 +20602,8 @@ issues:
   '5160':
     type: pr
     date-opened: '2024-11-29T11:03:58Z'
+    date-closed: null
+  '5162':
+    type: issue
+    date-opened: '2024-12-02T13:48:16Z'
     date-closed: null
