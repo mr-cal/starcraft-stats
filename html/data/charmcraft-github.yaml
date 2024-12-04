@@ -7958,7 +7958,7 @@ issues:
   '2000':
     type: pr
     date-opened: '2024-11-18T15:22:40Z'
-    date-closed: null
+    date-closed: '2024-12-03T19:06:42Z'
   '1999':
     type: pr
     date-opened: '2024-11-18T15:22:37Z'
@@ -8014,4 +8014,12 @@ issues:
   '2011':
     type: pr
     date-opened: '2024-12-02T23:40:41Z'
+    date-closed: null
+  '2013':
+    type: pr
+    date-opened: '2024-12-03T21:40:35Z'
+    date-closed: null
+  '2012':
+    type: issue
+    date-opened: '2024-12-03T16:20:48Z'
     date-closed: null

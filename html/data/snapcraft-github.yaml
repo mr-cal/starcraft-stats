@@ -20607,3 +20607,15 @@ issues:
     type: issue
     date-opened: '2024-12-02T13:48:16Z'
     date-closed: null
+  '5165':
+    type: pr
+    date-opened: '2024-12-03T21:04:30Z'
+    date-closed: '2024-12-04T01:16:32Z'
+  '5164':
+    type: pr
+    date-opened: '2024-12-03T14:44:33Z'
+    date-closed: null
+  '5163':
+    type: pr
+    date-opened: '2024-12-03T14:32:59Z'
+    date-closed: null
