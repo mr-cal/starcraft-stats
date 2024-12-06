@@ -3699,3 +3699,11 @@ issues:
     type: pr
     date-opened: '2024-12-04T13:16:06Z'
     date-closed: '2024-12-04T14:07:44Z'
+  '927':
+    type: pr
+    date-opened: '2024-12-05T15:06:05Z'
+    date-closed: null
+  '926':
+    type: pr
+    date-opened: '2024-12-05T13:26:25Z'
+    date-closed: null

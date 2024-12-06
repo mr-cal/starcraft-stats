@@ -554,8 +554,8 @@ issues:
   '139':
     type: issue
     date-opened: '2024-11-22T11:24:42Z'
-    date-closed: null
+    date-closed: '2024-12-05T22:04:31Z'
   '140':
     type: pr
     date-opened: '2024-12-04T15:43:13Z'
-    date-closed: null
+    date-closed: '2024-12-05T22:04:30Z'
