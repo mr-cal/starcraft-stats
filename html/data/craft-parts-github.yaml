@@ -3707,3 +3707,7 @@ issues:
     type: pr
     date-opened: '2024-12-05T13:26:25Z'
     date-closed: null
+  '928':
+    type: pr
+    date-opened: '2024-12-06T22:10:48Z'
+    date-closed: null

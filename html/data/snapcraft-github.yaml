@@ -20582,7 +20582,7 @@ issues:
   '5156':
     type: pr
     date-opened: '2024-11-26T09:32:29Z'
-    date-closed: null
+    date-closed: '2024-12-06T16:59:01Z'
   '5158':
     type: issue
     date-opened: '2024-11-27T17:33:52Z'
@@ -20618,7 +20618,7 @@ issues:
   '5163':
     type: pr
     date-opened: '2024-12-03T14:32:59Z'
-    date-closed: null
+    date-closed: '2024-12-06T18:36:17Z'
   '5166':
     type: pr
     date-opened: '2024-12-04T18:04:22Z'
@@ -20630,4 +20630,8 @@ issues:
   '5167':
     type: issue
     date-opened: '2024-12-05T20:06:08Z'
+    date-closed: null
+  '5169':
+    type: issue
+    date-opened: '2024-12-06T21:29:14Z'
     date-closed: null

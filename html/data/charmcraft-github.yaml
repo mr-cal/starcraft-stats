@@ -8030,4 +8030,16 @@ issues:
   '2014':
     type: pr
     date-opened: '2024-12-05T19:22:28Z'
+    date-closed: '2024-12-06T14:50:53Z'
+  '2018':
+    type: issue
+    date-opened: '2024-12-06T20:39:00Z'
+    date-closed: null
+  '2017':
+    type: pr
+    date-opened: '2024-12-06T10:49:30Z'
+    date-closed: null
+  '2016':
+    type: issue
+    date-opened: '2024-12-06T09:30:56Z'
     date-closed: null
