@@ -307,3 +307,7 @@ issues:
     type: pr
     date-opened: '2024-11-30T03:46:03Z'
     date-closed: '2024-12-03T20:00:55Z'
+  '78':
+    type: pr
+    date-opened: '2024-12-07T05:19:44Z'
+    date-closed: null

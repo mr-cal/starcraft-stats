@@ -45083,3 +45083,35 @@ issues:
     type: pr
     date-opened: '2024-12-06T22:32:39Z'
     date-closed: null
+  charmcraft-2019:
+    type: pr
+    date-opened: '2024-12-07T08:07:23Z'
+    date-closed: null
+  craft-application-584:
+    type: pr
+    date-opened: '2024-12-07T06:33:56Z'
+    date-closed: null
+  craft-cli-307:
+    type: pr
+    date-opened: '2024-12-07T08:02:38Z'
+    date-closed: null
+  craft-platforms-78:
+    type: pr
+    date-opened: '2024-12-07T05:19:44Z'
+    date-closed: null
+  snapcraft-5171:
+    type: issue
+    date-opened: '2024-12-07T22:18:28Z'
+    date-closed: null
+  snapcraft-5170:
+    type: pr
+    date-opened: '2024-12-07T07:13:04Z'
+    date-closed: null
+  starbase-291:
+    type: pr
+    date-opened: '2024-12-07T19:58:16Z'
+    date-closed: null
+  starbase-290:
+    type: pr
+    date-opened: '2024-12-07T05:17:45Z'
+    date-closed: null

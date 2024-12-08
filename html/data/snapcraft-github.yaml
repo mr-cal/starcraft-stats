@@ -20635,3 +20635,11 @@ issues:
     type: issue
     date-opened: '2024-12-06T21:29:14Z'
     date-closed: null
+  '5171':
+    type: issue
+    date-opened: '2024-12-07T22:18:28Z'
+    date-closed: null
+  '5170':
+    type: pr
+    date-opened: '2024-12-07T07:13:04Z'
+    date-closed: null
