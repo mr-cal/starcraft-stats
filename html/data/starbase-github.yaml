@@ -1150,16 +1150,20 @@ issues:
   '287':
     type: pr
     date-opened: '2024-12-04T09:20:36Z'
-    date-closed: null
+    date-closed: '2024-12-09T22:20:23Z'
   '289':
     type: pr
     date-opened: '2024-12-06T22:32:39Z'
-    date-closed: null
+    date-closed: '2024-12-09T17:32:46Z'
   '291':
     type: pr
     date-opened: '2024-12-07T19:58:16Z'
-    date-closed: null
+    date-closed: '2024-12-09T22:18:36Z'
   '290':
     type: pr
     date-opened: '2024-12-07T05:17:45Z'
-    date-closed: null
+    date-closed: '2024-12-09T22:17:43Z'
+  '292':
+    type: pr
+    date-opened: '2024-12-09T17:41:18Z'
+    date-closed: '2024-12-09T22:06:29Z'

@@ -311,3 +311,19 @@ issues:
     type: pr
     date-opened: '2024-12-07T05:19:44Z'
     date-closed: null
+  '82':
+    type: pr
+    date-opened: '2024-12-09T21:14:35Z'
+    date-closed: null
+  '81':
+    type: pr
+    date-opened: '2024-12-09T19:00:05Z'
+    date-closed: null
+  '80':
+    type: issue
+    date-opened: '2024-12-09T18:57:27Z'
+    date-closed: null
+  '79':
+    type: issue
+    date-opened: '2024-12-09T18:53:28Z'
+    date-closed: null
