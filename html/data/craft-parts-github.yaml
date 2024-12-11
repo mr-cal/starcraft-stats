@@ -3598,7 +3598,7 @@ issues:
   '900':
     type: issue
     date-opened: '2024-11-08T15:07:42Z'
-    date-closed: null
+    date-closed: '2024-12-10T17:14:02Z'
   '902':
     type: pr
     date-opened: '2024-11-15T22:10:54Z'
@@ -3690,7 +3690,7 @@ issues:
   '925':
     type: pr
     date-opened: '2024-12-04T19:12:09Z'
-    date-closed: null
+    date-closed: '2024-12-10T17:14:01Z'
   '924':
     type: pr
     date-opened: '2024-12-04T13:16:27Z'
@@ -3718,4 +3718,8 @@ issues:
   '929':
     type: pr
     date-opened: '2024-12-09T12:56:02Z'
+    date-closed: null
+  '931':
+    type: pr
+    date-opened: '2024-12-11T01:48:25Z'
     date-closed: null
