@@ -3562,7 +3562,7 @@ issues:
   '894':
     type: pr
     date-opened: '2024-10-31T16:37:38Z'
-    date-closed: null
+    date-closed: '2024-12-12T00:44:24Z'
   '893':
     type: issue
     date-opened: '2024-10-31T15:32:28Z'
@@ -3722,4 +3722,8 @@ issues:
   '931':
     type: pr
     date-opened: '2024-12-11T01:48:25Z'
+    date-closed: null
+  '932':
+    type: issue
+    date-opened: '2024-12-11T15:27:14Z'
     date-closed: null

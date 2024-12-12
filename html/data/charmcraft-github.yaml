@@ -7234,7 +7234,7 @@ issues:
   '1819':
     type: pr
     date-opened: '2024-08-15T21:38:58Z'
-    date-closed: null
+    date-closed: '2024-12-11T19:55:06Z'
   '1818':
     type: pr
     date-opened: '2024-08-15T19:20:32Z'
@@ -7802,15 +7802,15 @@ issues:
   '1956':
     type: pr
     date-opened: '2024-10-11T20:55:41Z'
-    date-closed: null
+    date-closed: '2024-12-12T00:49:28Z'
   '1955':
     type: pr
     date-opened: '2024-10-11T19:31:43Z'
-    date-closed: null
+    date-closed: '2024-12-11T18:09:18Z'
   '1954':
     type: issue
     date-opened: '2024-10-11T18:53:08Z'
-    date-closed: null
+    date-closed: '2024-12-11T18:09:19Z'
   '1961':
     type: pr
     date-opened: '2024-10-14T12:10:59Z'
@@ -7878,7 +7878,7 @@ issues:
   '1976':
     type: pr
     date-opened: '2024-10-30T11:15:39Z'
-    date-closed: null
+    date-closed: '2024-12-11T21:15:39Z'
   '1981':
     type: issue
     date-opened: '2024-10-31T15:31:54Z'
@@ -8018,7 +8018,7 @@ issues:
   '2013':
     type: pr
     date-opened: '2024-12-03T21:40:35Z'
-    date-closed: null
+    date-closed: '2024-12-12T00:39:59Z'
   '2012':
     type: issue
     date-opened: '2024-12-03T16:20:48Z'
@@ -8026,7 +8026,7 @@ issues:
   '2015':
     type: pr
     date-opened: '2024-12-05T22:14:51Z'
-    date-closed: null
+    date-closed: '2024-12-11T17:25:47Z'
   '2014':
     type: pr
     date-opened: '2024-12-05T19:22:28Z'
@@ -8062,8 +8062,52 @@ issues:
   '2021':
     type: pr
     date-opened: '2024-12-10T15:21:02Z'
-    date-closed: null
+    date-closed: '2024-12-11T18:05:23Z'
   '2020':
     type: issue
     date-opened: '2024-12-10T13:08:46Z'
+    date-closed: null
+  '2035':
+    type: pr
+    date-opened: '2024-12-12T00:15:55Z'
+    date-closed: null
+  '2034':
+    type: pr
+    date-opened: '2024-12-11T21:27:59Z'
+    date-closed: null
+  '2033':
+    type: pr
+    date-opened: '2024-12-11T20:52:10Z'
+    date-closed: null
+  '2032':
+    type: pr
+    date-opened: '2024-12-11T20:43:39Z'
+    date-closed: null
+  '2031':
+    type: pr
+    date-opened: '2024-12-11T20:26:25Z'
+    date-closed: null
+  '2030':
+    type: pr
+    date-opened: '2024-12-11T20:20:15Z'
+    date-closed: null
+  '2029':
+    type: issue
+    date-opened: '2024-12-11T18:26:12Z'
+    date-closed: null
+  '2028':
+    type: pr
+    date-opened: '2024-12-11T18:02:52Z'
+    date-closed: null
+  '2027':
+    type: pr
+    date-opened: '2024-12-11T17:47:11Z'
+    date-closed: '2024-12-11T19:49:38Z'
+  '2026':
+    type: pr
+    date-opened: '2024-12-11T15:53:23Z'
+    date-closed: null
+  '2025':
+    type: issue
+    date-opened: '2024-12-11T15:45:53Z'
     date-closed: null

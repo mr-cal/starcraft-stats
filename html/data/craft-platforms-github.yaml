@@ -310,7 +310,7 @@ issues:
   '78':
     type: pr
     date-opened: '2024-12-07T05:19:44Z'
-    date-closed: null
+    date-closed: '2024-12-11T23:51:35Z'
   '82':
     type: pr
     date-opened: '2024-12-09T21:14:35Z'
@@ -326,4 +326,8 @@ issues:
   '79':
     type: issue
     date-opened: '2024-12-09T18:53:28Z'
+    date-closed: null
+  '83':
+    type: pr
+    date-opened: '2024-12-12T00:08:46Z'
     date-closed: null

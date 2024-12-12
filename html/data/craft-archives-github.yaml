@@ -502,11 +502,11 @@ issues:
   '127':
     type: pr
     date-opened: '2024-09-19T23:13:26Z'
-    date-closed: null
+    date-closed: '2024-12-12T02:06:15Z'
   '126':
     type: pr
     date-opened: '2024-09-19T22:19:51Z'
-    date-closed: null
+    date-closed: '2024-12-12T01:31:51Z'
   '128':
     type: pr
     date-opened: '2024-09-26T16:00:52Z'
@@ -562,4 +562,20 @@ issues:
   '141':
     type: issue
     date-opened: '2024-12-06T15:59:33Z'
+    date-closed: null
+  '145':
+    type: pr
+    date-opened: '2024-12-12T02:17:55Z'
+    date-closed: null
+  '144':
+    type: issue
+    date-opened: '2024-12-12T01:45:29Z'
+    date-closed: null
+  '143':
+    type: pr
+    date-opened: '2024-12-12T01:31:26Z'
+    date-closed: null
+  '142':
+    type: pr
+    date-opened: '2024-12-12T01:09:34Z'
     date-closed: null
