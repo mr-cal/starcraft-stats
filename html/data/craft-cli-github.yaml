@@ -322,7 +322,7 @@ issues:
   '162':
     type: issue
     date-opened: '2023-06-30T17:21:12Z'
-    date-closed: '2024-11-22T15:39:09Z'
+    date-closed: null
   '161':
     type: pr
     date-opened: '2023-06-30T16:00:21Z'
@@ -450,7 +450,7 @@ issues:
   '130':
     type: issue
     date-opened: '2022-12-14T03:19:38Z'
-    date-closed: null
+    date-closed: '2024-12-12T22:38:29Z'
   '129':
     type: pr
     date-opened: '2022-10-27T11:50:23Z'
@@ -1226,8 +1226,20 @@ issues:
   '307':
     type: pr
     date-opened: '2024-12-07T08:02:38Z'
-    date-closed: null
+    date-closed: '2024-12-12T20:25:12Z'
   '308':
     type: issue
     date-opened: '2024-12-10T14:38:09Z'
-    date-closed: null
+    date-closed: '2024-12-12T18:06:35Z'
+  '311':
+    type: pr
+    date-opened: '2024-12-12T22:13:15Z'
+    date-closed: '2024-12-12T23:23:51Z'
+  '310':
+    type: pr
+    date-opened: '2024-12-12T18:52:13Z'
+    date-closed: '2024-12-12T22:38:28Z'
+  '309':
+    type: pr
+    date-opened: '2024-12-12T13:06:49Z'
+    date-closed: '2024-12-12T18:06:34Z'

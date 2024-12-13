@@ -2138,7 +2138,7 @@ issues:
   '550':
     type: pr
     date-opened: '2024-04-12T23:30:06Z'
-    date-closed: null
+    date-closed: '2024-12-13T01:11:46Z'
   '549':
     type: pr
     date-opened: '2024-04-12T21:33:35Z'
@@ -3066,4 +3066,8 @@ issues:
   '768':
     type: pr
     date-opened: '2024-12-12T00:18:50Z'
+    date-closed: null
+  '769':
+    type: pr
+    date-opened: '2024-12-12T17:21:02Z'
     date-closed: null
