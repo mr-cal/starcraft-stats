@@ -20522,7 +20522,7 @@ issues:
   '5141':
     type: pr
     date-opened: '2024-11-08T13:28:20Z'
-    date-closed: null
+    date-closed: '2024-12-13T20:06:59Z'
   '5142':
     type: pr
     date-opened: '2024-11-12T13:58:29Z'
@@ -20662,7 +20662,7 @@ issues:
   '5176':
     type: pr
     date-opened: '2024-12-11T11:46:49Z'
-    date-closed: null
+    date-closed: '2024-12-13T15:02:38Z'
   '5175':
     type: issue
     date-opened: '2024-12-11T08:30:12Z'

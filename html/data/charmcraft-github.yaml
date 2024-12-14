@@ -8119,3 +8119,15 @@ issues:
     type: pr
     date-opened: '2024-12-12T12:48:02Z'
     date-closed: null
+  '2040':
+    type: issue
+    date-opened: '2024-12-13T21:22:23Z'
+    date-closed: null
+  '2039':
+    type: issue
+    date-opened: '2024-12-13T21:16:26Z'
+    date-closed: null
+  '2038':
+    type: pr
+    date-opened: '2024-12-13T21:08:32Z'
+    date-closed: null

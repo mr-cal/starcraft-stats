@@ -3058,7 +3058,7 @@ issues:
   '766':
     type: issue
     date-opened: '2024-12-02T12:50:41Z'
-    date-closed: null
+    date-closed: '2024-12-13T19:14:21Z'
   '767':
     type: pr
     date-opened: '2024-12-03T15:34:38Z'
@@ -3070,4 +3070,12 @@ issues:
   '769':
     type: pr
     date-opened: '2024-12-12T17:21:02Z'
+    date-closed: '2024-12-13T19:14:20Z'
+  '771':
+    type: pr
+    date-opened: '2024-12-13T20:14:23Z'
+    date-closed: '2024-12-14T02:08:28Z'
+  '770':
+    type: pr
+    date-opened: '2024-12-13T07:40:31Z'
     date-closed: null

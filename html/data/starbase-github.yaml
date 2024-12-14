@@ -1178,7 +1178,7 @@ issues:
   '294':
     type: pr
     date-opened: '2024-12-11T23:29:36Z'
-    date-closed: null
+    date-closed: '2024-12-13T21:05:41Z'
   '298':
     type: pr
     date-opened: '2024-12-12T21:34:36Z'
@@ -1191,3 +1191,15 @@ issues:
     type: pr
     date-opened: '2024-12-12T20:28:10Z'
     date-closed: '2024-12-12T21:24:17Z'
+  '301':
+    type: pr
+    date-opened: '2024-12-13T20:19:13Z'
+    date-closed: '2024-12-13T20:53:40Z'
+  '300':
+    type: pr
+    date-opened: '2024-12-13T20:10:47Z'
+    date-closed: null
+  '299':
+    type: pr
+    date-opened: '2024-12-13T20:05:06Z'
+    date-closed: '2024-12-13T20:52:23Z'

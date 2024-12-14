@@ -954,11 +954,11 @@ issues:
   '239':
     type: issue
     date-opened: '2024-12-06T16:46:53Z'
-    date-closed: null
+    date-closed: '2024-12-14T02:13:13Z'
   '240':
     type: pr
     date-opened: '2024-12-11T01:15:24Z'
-    date-closed: null
+    date-closed: '2024-12-14T02:13:12Z'
   '243':
     type: issue
     date-opened: '2024-12-11T23:47:05Z'
@@ -970,4 +970,12 @@ issues:
   '241':
     type: pr
     date-opened: '2024-12-11T22:02:23Z'
+    date-closed: null
+  '245':
+    type: pr
+    date-opened: '2024-12-14T03:32:08Z'
+    date-closed: null
+  '244':
+    type: issue
+    date-opened: '2024-12-13T17:38:02Z'
     date-closed: null

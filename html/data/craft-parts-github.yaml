@@ -3630,7 +3630,7 @@ issues:
   '910':
     type: pr
     date-opened: '2024-11-22T21:03:20Z'
-    date-closed: null
+    date-closed: '2024-12-13T20:01:19Z'
   '909':
     type: pr
     date-opened: '2024-11-22T15:02:19Z'
@@ -3722,7 +3722,7 @@ issues:
   '931':
     type: pr
     date-opened: '2024-12-11T01:48:25Z'
-    date-closed: null
+    date-closed: '2024-12-13T21:31:12Z'
   '932':
     type: issue
     date-opened: '2024-12-11T15:27:14Z'
@@ -3743,3 +3743,7 @@ issues:
     type: issue
     date-opened: '2024-12-12T15:41:59Z'
     date-closed: null
+  '937':
+    type: pr
+    date-opened: '2024-12-13T14:45:12Z'
+    date-closed: '2024-12-13T15:32:13Z'
