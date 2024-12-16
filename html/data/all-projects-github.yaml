@@ -45475,3 +45475,11 @@ issues:
     type: pr
     date-opened: '2024-12-14T18:29:49Z'
     date-closed: null
+  snapcraft-5181:
+    type: issue
+    date-opened: '2024-12-15T17:40:21Z'
+    date-closed: null
+  starbase-303:
+    type: issue
+    date-opened: '2024-12-15T18:23:36Z'
+    date-closed: null
