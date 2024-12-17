@@ -3079,3 +3079,11 @@ issues:
     type: pr
     date-opened: '2024-12-13T07:40:31Z'
     date-closed: null
+  '773':
+    type: issue
+    date-opened: '2024-12-16T16:47:53Z'
+    date-closed: null
+  '772':
+    type: pr
+    date-opened: '2024-12-16T12:06:57Z'
+    date-closed: '2024-12-16T14:18:01Z'

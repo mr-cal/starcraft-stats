@@ -1206,8 +1206,12 @@ issues:
   '302':
     type: pr
     date-opened: '2024-12-14T18:29:49Z'
-    date-closed: null
+    date-closed: '2024-12-16T22:41:17Z'
   '303':
     type: issue
     date-opened: '2024-12-15T18:23:36Z'
+    date-closed: null
+  '304':
+    type: pr
+    date-opened: '2024-12-16T21:55:02Z'
     date-closed: null

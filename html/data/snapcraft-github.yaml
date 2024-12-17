@@ -20002,7 +20002,7 @@ issues:
   '4999':
     type: issue
     date-opened: '2024-08-23T15:57:46Z'
-    date-closed: null
+    date-closed: '2024-12-16T19:52:48Z'
   '4998':
     type: issue
     date-opened: '2024-08-22T16:14:24Z'
@@ -20634,7 +20634,7 @@ issues:
   '5169':
     type: issue
     date-opened: '2024-12-06T21:29:14Z'
-    date-closed: null
+    date-closed: '2024-12-16T15:33:54Z'
   '5171':
     type: issue
     date-opened: '2024-12-07T22:18:28Z'
@@ -20674,7 +20674,7 @@ issues:
   '5178':
     type: pr
     date-opened: '2024-12-12T19:28:58Z'
-    date-closed: null
+    date-closed: '2024-12-16T15:15:53Z'
   '5180':
     type: pr
     date-opened: '2024-12-14T06:43:30Z'
@@ -20683,3 +20683,11 @@ issues:
     type: issue
     date-opened: '2024-12-15T17:40:21Z'
     date-closed: null
+  '5183':
+    type: pr
+    date-opened: '2024-12-16T20:36:56Z'
+    date-closed: '2024-12-16T22:35:04Z'
+  '5182':
+    type: pr
+    date-opened: '2024-12-16T15:42:26Z'
+    date-closed: '2024-12-16T20:34:13Z'
