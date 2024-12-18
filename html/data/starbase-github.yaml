@@ -1174,7 +1174,7 @@ issues:
   '295':
     type: pr
     date-opened: '2024-12-12T00:12:39Z'
-    date-closed: null
+    date-closed: '2024-12-17T21:35:22Z'
   '294':
     type: pr
     date-opened: '2024-12-11T23:29:36Z'
@@ -1214,4 +1214,8 @@ issues:
   '304':
     type: pr
     date-opened: '2024-12-16T21:55:02Z'
+    date-closed: '2024-12-17T12:09:33Z'
+  '305':
+    type: pr
+    date-opened: '2024-12-17T22:41:08Z'
     date-closed: null

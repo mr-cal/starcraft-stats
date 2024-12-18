@@ -20678,7 +20678,7 @@ issues:
   '5180':
     type: pr
     date-opened: '2024-12-14T06:43:30Z'
-    date-closed: null
+    date-closed: '2024-12-17T14:02:27Z'
   '5181':
     type: issue
     date-opened: '2024-12-15T17:40:21Z'

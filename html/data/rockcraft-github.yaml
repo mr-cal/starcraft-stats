@@ -2938,7 +2938,7 @@ issues:
   '736':
     type: pr
     date-opened: '2024-10-20T23:46:30Z'
-    date-closed: null
+    date-closed: '2024-12-17T21:28:26Z'
   '741':
     type: pr
     date-opened: '2024-10-21T21:58:26Z'
@@ -3087,3 +3087,15 @@ issues:
     type: pr
     date-opened: '2024-12-16T12:06:57Z'
     date-closed: '2024-12-16T14:18:01Z'
+  '776':
+    type: pr
+    date-opened: '2024-12-17T18:19:15Z'
+    date-closed: null
+  '775':
+    type: pr
+    date-opened: '2024-12-17T16:09:12Z'
+    date-closed: '2024-12-17T21:51:21Z'
+  '774':
+    type: pr
+    date-opened: '2024-12-17T11:48:40Z'
+    date-closed: '2024-12-17T15:21:45Z'

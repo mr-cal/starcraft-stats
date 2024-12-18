@@ -974,7 +974,7 @@ issues:
   '245':
     type: pr
     date-opened: '2024-12-14T03:32:08Z'
-    date-closed: null
+    date-closed: '2024-12-17T13:56:34Z'
   '244':
     type: issue
     date-opened: '2024-12-13T17:38:02Z'
@@ -982,12 +982,16 @@ issues:
   '248':
     type: pr
     date-opened: '2024-12-16T22:37:55Z'
-    date-closed: null
+    date-closed: '2024-12-17T13:55:38Z'
   '247':
     type: issue
     date-opened: '2024-12-16T15:10:08Z'
-    date-closed: null
+    date-closed: '2024-12-17T13:55:39Z'
   '246':
     type: pr
     date-opened: '2024-12-16T14:34:52Z'
     date-closed: '2024-12-16T15:29:06Z'
+  '249':
+    type: pr
+    date-opened: '2024-12-18T01:02:54Z'
+    date-closed: null
