@@ -8162,11 +8162,11 @@ issues:
   '2052':
     type: pr
     date-opened: '2024-12-17T23:29:50Z'
-    date-closed: null
+    date-closed: '2024-12-18T14:46:09Z'
   '2051':
     type: pr
     date-opened: '2024-12-17T21:58:08Z'
-    date-closed: null
+    date-closed: '2024-12-18T16:04:59Z'
   '2050':
     type: pr
     date-opened: '2024-12-17T20:06:39Z'
@@ -8178,4 +8178,12 @@ issues:
   '2048':
     type: pr
     date-opened: '2024-12-17T17:40:40Z'
+    date-closed: null
+  '2054':
+    type: pr
+    date-opened: '2024-12-18T16:53:06Z'
+    date-closed: null
+  '2053':
+    type: pr
+    date-opened: '2024-12-18T10:05:01Z'
     date-closed: null

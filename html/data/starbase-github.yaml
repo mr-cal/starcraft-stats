@@ -1219,3 +1219,7 @@ issues:
     type: pr
     date-opened: '2024-12-17T22:41:08Z'
     date-closed: null
+  '306':
+    type: pr
+    date-opened: '2024-12-18T21:56:01Z'
+    date-closed: null
