@@ -20694,8 +20694,16 @@ issues:
   '5185':
     type: pr
     date-opened: '2024-12-19T01:04:04Z'
-    date-closed: null
+    date-closed: '2024-12-19T21:21:10Z'
   '5184':
     type: issue
     date-opened: '2024-12-18T12:40:44Z'
     date-closed: '2024-12-18T12:42:05Z'
+  '5187':
+    type: issue
+    date-opened: '2024-12-19T16:51:52Z'
+    date-closed: null
+  '5186':
+    type: pr
+    date-opened: '2024-12-19T15:21:29Z'
+    date-closed: null

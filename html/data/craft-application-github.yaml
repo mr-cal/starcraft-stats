@@ -2270,7 +2270,7 @@ issues:
   '569':
     type: issue
     date-opened: '2024-11-27T17:12:15Z'
-    date-closed: null
+    date-closed: '2024-12-19T19:53:12Z'
   '570':
     type: pr
     date-opened: '2024-11-28T16:04:03Z'
@@ -2370,7 +2370,7 @@ issues:
   '588':
     type: pr
     date-opened: '2024-12-12T04:23:54Z'
-    date-closed: null
+    date-closed: '2024-12-19T22:02:13Z'
   '596':
     type: pr
     date-opened: '2024-12-13T16:33:53Z'
@@ -2386,4 +2386,4 @@ issues:
   '598':
     type: pr
     date-opened: '2024-12-18T16:53:26Z'
-    date-closed: null
+    date-closed: '2024-12-19T19:53:11Z'

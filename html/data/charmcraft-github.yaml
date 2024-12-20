@@ -7154,7 +7154,7 @@ issues:
   '1789':
     type: issue
     date-opened: '2024-08-06T10:23:34Z'
-    date-closed: null
+    date-closed: '2024-12-19T21:45:36Z'
   '1799':
     type: pr
     date-opened: '2024-08-07T21:25:18Z'
@@ -7998,7 +7998,7 @@ issues:
   '2008':
     type: issue
     date-opened: '2024-11-27T17:12:29Z'
-    date-closed: null
+    date-closed: '2024-12-19T21:45:36Z'
   '2007':
     type: issue
     date-opened: '2024-11-27T16:08:45Z'
@@ -8082,7 +8082,7 @@ issues:
   '2032':
     type: pr
     date-opened: '2024-12-11T20:43:39Z'
-    date-closed: null
+    date-closed: '2024-12-19T21:53:34Z'
   '2031':
     type: pr
     date-opened: '2024-12-11T20:26:25Z'
@@ -8182,8 +8182,16 @@ issues:
   '2054':
     type: pr
     date-opened: '2024-12-18T16:53:06Z'
-    date-closed: null
+    date-closed: '2024-12-19T21:45:35Z'
   '2053':
     type: pr
     date-opened: '2024-12-18T10:05:01Z'
+    date-closed: '2024-12-19T23:38:35Z'
+  '2056':
+    type: pr
+    date-opened: '2024-12-19T15:51:13Z'
+    date-closed: '2024-12-19T19:55:40Z'
+  '2055':
+    type: issue
+    date-opened: '2024-12-19T10:13:50Z'
     date-closed: null
