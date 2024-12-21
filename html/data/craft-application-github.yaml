@@ -2387,3 +2387,7 @@ issues:
     type: pr
     date-opened: '2024-12-18T16:53:26Z'
     date-closed: '2024-12-19T19:53:11Z'
+  '599':
+    type: pr
+    date-opened: '2024-12-20T13:21:12Z'
+    date-closed: '2024-12-20T19:03:46Z'

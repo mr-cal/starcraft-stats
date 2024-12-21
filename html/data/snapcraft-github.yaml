@@ -786,7 +786,7 @@ issues:
   '4499':
     type: issue
     date-opened: '2023-12-15T16:18:35Z'
-    date-closed: null
+    date-closed: '2024-12-20T18:42:41Z'
   '4498':
     type: pr
     date-opened: '2023-12-14T19:26:58Z'
@@ -20706,4 +20706,8 @@ issues:
   '5186':
     type: pr
     date-opened: '2024-12-19T15:21:29Z'
-    date-closed: null
+    date-closed: '2024-12-20T15:21:37Z'
+  '5188':
+    type: pr
+    date-opened: '2024-12-20T15:26:04Z'
+    date-closed: '2024-12-20T18:42:40Z'

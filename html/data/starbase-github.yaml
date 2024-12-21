@@ -1223,3 +1223,19 @@ issues:
     type: pr
     date-opened: '2024-12-18T21:56:01Z'
     date-closed: '2024-12-19T15:44:12Z'
+  '310':
+    type: pr
+    date-opened: '2024-12-20T20:48:02Z'
+    date-closed: null
+  '309':
+    type: issue
+    date-opened: '2024-12-20T19:43:28Z'
+    date-closed: null
+  '308':
+    type: issue
+    date-opened: '2024-12-20T19:42:26Z'
+    date-closed: null
+  '307':
+    type: issue
+    date-opened: '2024-12-20T17:53:26Z'
+    date-closed: null

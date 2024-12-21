@@ -3106,7 +3106,7 @@ issues:
   '779':
     type: pr
     date-opened: '2024-12-19T03:34:04Z'
-    date-closed: null
+    date-closed: '2024-12-20T18:44:48Z'
   '778':
     type: pr
     date-opened: '2024-12-18T16:12:23Z'
@@ -3118,4 +3118,8 @@ issues:
   '781':
     type: pr
     date-opened: '2024-12-19T06:42:13Z'
+    date-closed: null
+  '782':
+    type: pr
+    date-opened: '2024-12-20T12:15:23Z'
     date-closed: null

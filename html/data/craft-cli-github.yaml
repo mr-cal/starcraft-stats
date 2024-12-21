@@ -1258,4 +1258,8 @@ issues:
   '315':
     type: pr
     date-opened: '2024-12-19T22:33:27Z'
-    date-closed: null
+    date-closed: '2024-12-20T17:16:44Z'
+  '316':
+    type: pr
+    date-opened: '2024-12-20T11:48:33Z'
+    date-closed: '2024-12-20T17:02:03Z'
