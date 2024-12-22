@@ -8215,3 +8215,11 @@ issues:
     type: issue
     date-opened: '2024-12-20T09:43:57Z'
     date-closed: null
+  '2063':
+    type: pr
+    date-opened: '2024-12-21T07:47:34Z'
+    date-closed: null
+  '2062':
+    type: pr
+    date-opened: '2024-12-21T04:05:24Z'
+    date-closed: null

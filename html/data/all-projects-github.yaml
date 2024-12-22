@@ -45550,7 +45550,7 @@ issues:
   rockcraft-773:
     type: issue
     date-opened: '2024-12-16T16:47:53Z'
-    date-closed: null
+    date-closed: '2024-12-21T15:47:29Z'
   rockcraft-772:
     type: pr
     date-opened: '2024-12-16T12:06:57Z'
@@ -45750,7 +45750,7 @@ issues:
   rockcraft-782:
     type: pr
     date-opened: '2024-12-20T12:15:23Z'
-    date-closed: null
+    date-closed: '2024-12-21T15:47:04Z'
   snapcraft-5188:
     type: pr
     date-opened: '2024-12-20T15:26:04Z'
@@ -45770,4 +45770,32 @@ issues:
   starbase-307:
     type: issue
     date-opened: '2024-12-20T17:53:26Z'
+    date-closed: null
+  charmcraft-2063:
+    type: pr
+    date-opened: '2024-12-21T07:47:34Z'
+    date-closed: null
+  charmcraft-2062:
+    type: pr
+    date-opened: '2024-12-21T04:05:24Z'
+    date-closed: null
+  craft-platforms-86:
+    type: pr
+    date-opened: '2024-12-21T04:14:18Z'
+    date-closed: null
+  craft-store-250:
+    type: pr
+    date-opened: '2024-12-21T05:18:47Z'
+    date-closed: null
+  rockcraft-783:
+    type: pr
+    date-opened: '2024-12-21T20:15:39Z'
+    date-closed: null
+  starbase-312:
+    type: pr
+    date-opened: '2024-12-21T20:00:49Z'
+    date-closed: null
+  starbase-311:
+    type: pr
+    date-opened: '2024-12-21T04:34:20Z'
     date-closed: null

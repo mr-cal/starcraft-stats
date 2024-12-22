@@ -1239,3 +1239,11 @@ issues:
     type: issue
     date-opened: '2024-12-20T17:53:26Z'
     date-closed: null
+  '312':
+    type: pr
+    date-opened: '2024-12-21T20:00:49Z'
+    date-closed: null
+  '311':
+    type: pr
+    date-opened: '2024-12-21T04:34:20Z'
+    date-closed: null
