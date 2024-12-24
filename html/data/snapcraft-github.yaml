@@ -20711,3 +20711,19 @@ issues:
     type: pr
     date-opened: '2024-12-20T15:26:04Z'
     date-closed: '2024-12-20T18:42:40Z'
+  '5192':
+    type: pr
+    date-opened: '2024-12-24T00:45:30Z'
+    date-closed: null
+  '5191':
+    type: pr
+    date-opened: '2024-12-24T00:45:24Z'
+    date-closed: null
+  '5190':
+    type: pr
+    date-opened: '2024-12-24T00:45:18Z'
+    date-closed: null
+  '5189':
+    type: pr
+    date-opened: '2024-12-24T00:43:42Z'
+    date-closed: null

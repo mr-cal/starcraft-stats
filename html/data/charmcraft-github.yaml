@@ -8223,3 +8223,15 @@ issues:
     type: pr
     date-opened: '2024-12-21T04:05:24Z'
     date-closed: null
+  '2066':
+    type: pr
+    date-opened: '2024-12-24T00:55:37Z'
+    date-closed: null
+  '2065':
+    type: pr
+    date-opened: '2024-12-24T00:55:32Z'
+    date-closed: null
+  '2064':
+    type: pr
+    date-opened: '2024-12-24T00:55:25Z'
+    date-closed: null

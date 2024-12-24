@@ -45794,8 +45794,36 @@ issues:
   starbase-312:
     type: pr
     date-opened: '2024-12-21T20:00:49Z'
-    date-closed: null
+    date-closed: '2024-12-24T01:30:38Z'
   starbase-311:
     type: pr
     date-opened: '2024-12-21T04:34:20Z'
+    date-closed: '2024-12-24T01:31:51Z'
+  charmcraft-2066:
+    type: pr
+    date-opened: '2024-12-24T00:55:37Z'
+    date-closed: null
+  charmcraft-2065:
+    type: pr
+    date-opened: '2024-12-24T00:55:32Z'
+    date-closed: null
+  charmcraft-2064:
+    type: pr
+    date-opened: '2024-12-24T00:55:25Z'
+    date-closed: null
+  snapcraft-5192:
+    type: pr
+    date-opened: '2024-12-24T00:45:30Z'
+    date-closed: null
+  snapcraft-5191:
+    type: pr
+    date-opened: '2024-12-24T00:45:24Z'
+    date-closed: null
+  snapcraft-5190:
+    type: pr
+    date-opened: '2024-12-24T00:45:18Z'
+    date-closed: null
+  snapcraft-5189:
+    type: pr
+    date-opened: '2024-12-24T00:43:42Z'
     date-closed: null
