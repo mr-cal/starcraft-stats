@@ -45706,7 +45706,7 @@ issues:
   rockcraft-781:
     type: pr
     date-opened: '2024-12-19T06:42:13Z'
-    date-closed: null
+    date-closed: '2025-01-02T03:16:13Z'
   snapcraft-5187:
     type: issue
     date-opened: '2024-12-19T16:51:52Z'
@@ -45834,4 +45834,8 @@ issues:
   starbase-313:
     type: pr
     date-opened: '2024-12-28T04:37:52Z'
+    date-closed: null
+  rockcraft-784:
+    type: pr
+    date-opened: '2025-01-02T03:15:55Z'
     date-closed: null
