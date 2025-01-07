@@ -2822,4 +2822,8 @@ issues:
   '707':
     type: pr
     date-opened: '2024-12-21T00:27:26Z'
+    date-closed: '2025-01-06T18:02:40Z'
+  '708':
+    type: pr
+    date-opened: '2025-01-06T21:39:34Z'
     date-closed: null

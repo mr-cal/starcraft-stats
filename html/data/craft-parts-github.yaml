@@ -3803,3 +3803,11 @@ issues:
     type: pr
     date-opened: '2025-01-06T03:13:52Z'
     date-closed: null
+  '953':
+    type: pr
+    date-opened: '2025-01-06T19:03:39Z'
+    date-closed: null
+  '952':
+    type: pr
+    date-opened: '2025-01-06T17:07:19Z'
+    date-closed: null
