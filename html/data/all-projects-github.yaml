@@ -43726,7 +43726,7 @@ issues:
   craft-parts-879:
     type: pr
     date-opened: '2024-10-15T20:59:36Z'
-    date-closed: null
+    date-closed: '2025-01-07T22:11:37Z'
   craft-parts-878:
     type: pr
     date-opened: '2024-10-15T20:59:34Z'
@@ -44266,7 +44266,7 @@ issues:
   starbase-273:
     type: issue
     date-opened: '2024-11-01T09:45:56Z'
-    date-closed: null
+    date-closed: '2025-01-07T20:42:37Z'
   craft-grammar-67:
     type: pr
     date-opened: '2024-11-02T06:59:45Z'
@@ -45626,7 +45626,7 @@ issues:
   starbase-305:
     type: pr
     date-opened: '2024-12-17T22:41:08Z'
-    date-closed: null
+    date-closed: '2025-01-07T20:42:36Z'
   charmcraft-2054:
     type: pr
     date-opened: '2024-12-18T16:53:06Z'
@@ -45718,7 +45718,7 @@ issues:
   charmcraft-2061:
     type: pr
     date-opened: '2024-12-20T18:51:45Z'
-    date-closed: null
+    date-closed: '2025-01-07T18:32:50Z'
   charmcraft-2060:
     type: pr
     date-opened: '2024-12-20T17:48:42Z'
@@ -45854,11 +45854,11 @@ issues:
   craft-parts-953:
     type: pr
     date-opened: '2025-01-06T19:03:39Z'
-    date-closed: null
+    date-closed: '2025-01-07T22:09:46Z'
   craft-parts-952:
     type: pr
     date-opened: '2025-01-06T17:07:19Z'
-    date-closed: null
+    date-closed: '2025-01-07T22:11:32Z'
   craft-providers-708:
     type: pr
     date-opened: '2025-01-06T21:39:34Z'
@@ -45882,4 +45882,36 @@ issues:
   snapcraft-5193:
     type: issue
     date-opened: '2025-01-06T15:16:51Z'
+    date-closed: null
+  charmcraft-2067:
+    type: issue
+    date-opened: '2025-01-07T17:27:47Z'
+    date-closed: null
+  craft-parts-956:
+    type: pr
+    date-opened: '2025-01-07T21:12:26Z'
+    date-closed: null
+  craft-parts-955:
+    type: pr
+    date-opened: '2025-01-07T20:52:06Z'
+    date-closed: null
+  craft-parts-954:
+    type: issue
+    date-opened: '2025-01-07T20:25:00Z'
+    date-closed: null
+  craft-platforms-87:
+    type: issue
+    date-opened: '2025-01-07T19:33:43Z'
+    date-closed: null
+  craft-providers-711:
+    type: issue
+    date-opened: '2025-01-07T19:18:45Z'
+    date-closed: null
+  craft-providers-710:
+    type: pr
+    date-opened: '2025-01-07T18:48:55Z'
+    date-closed: null
+  craft-providers-709:
+    type: issue
+    date-opened: '2024-12-15T18:23:36Z'
     date-closed: null

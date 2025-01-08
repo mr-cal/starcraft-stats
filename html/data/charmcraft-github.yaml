@@ -8198,7 +8198,7 @@ issues:
   '2061':
     type: pr
     date-opened: '2024-12-20T18:51:45Z'
-    date-closed: null
+    date-closed: '2025-01-07T18:32:50Z'
   '2060':
     type: pr
     date-opened: '2024-12-20T17:48:42Z'
@@ -8235,3 +8235,7 @@ issues:
     type: pr
     date-opened: '2024-12-24T00:55:25Z'
     date-closed: '2025-01-06T20:11:22Z'
+  '2067':
+    type: issue
+    date-opened: '2025-01-07T17:27:47Z'
+    date-closed: null

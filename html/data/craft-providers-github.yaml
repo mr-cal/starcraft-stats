@@ -2827,3 +2827,15 @@ issues:
     type: pr
     date-opened: '2025-01-06T21:39:34Z'
     date-closed: null
+  '711':
+    type: issue
+    date-opened: '2025-01-07T19:18:45Z'
+    date-closed: null
+  '710':
+    type: pr
+    date-opened: '2025-01-07T18:48:55Z'
+    date-closed: null
+  '709':
+    type: issue
+    date-opened: '2024-12-15T18:23:36Z'
+    date-closed: null

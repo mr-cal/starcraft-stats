@@ -3522,7 +3522,7 @@ issues:
   '879':
     type: pr
     date-opened: '2024-10-15T20:59:36Z'
-    date-closed: null
+    date-closed: '2025-01-07T22:11:37Z'
   '878':
     type: pr
     date-opened: '2024-10-15T20:59:34Z'
@@ -3806,8 +3806,20 @@ issues:
   '953':
     type: pr
     date-opened: '2025-01-06T19:03:39Z'
-    date-closed: null
+    date-closed: '2025-01-07T22:09:46Z'
   '952':
     type: pr
     date-opened: '2025-01-06T17:07:19Z'
+    date-closed: '2025-01-07T22:11:32Z'
+  '956':
+    type: pr
+    date-opened: '2025-01-07T21:12:26Z'
+    date-closed: null
+  '955':
+    type: pr
+    date-opened: '2025-01-07T20:52:06Z'
+    date-closed: null
+  '954':
+    type: issue
+    date-opened: '2025-01-07T20:25:00Z'
     date-closed: null
