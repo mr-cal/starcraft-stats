@@ -2826,7 +2826,7 @@ issues:
   '708':
     type: pr
     date-opened: '2025-01-06T21:39:34Z'
-    date-closed: null
+    date-closed: '2025-01-08T18:26:27Z'
   '711':
     type: issue
     date-opened: '2025-01-07T19:18:45Z'
@@ -2838,4 +2838,12 @@ issues:
   '709':
     type: issue
     date-opened: '2024-12-15T18:23:36Z'
+    date-closed: null
+  '713':
+    type: pr
+    date-opened: '2025-01-08T21:29:51Z'
+    date-closed: null
+  '712':
+    type: pr
+    date-opened: '2025-01-08T21:10:10Z'
     date-closed: null

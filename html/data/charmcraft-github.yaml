@@ -8239,3 +8239,11 @@ issues:
     type: issue
     date-opened: '2025-01-07T17:27:47Z'
     date-closed: null
+  '2069':
+    type: pr
+    date-opened: '2025-01-08T15:39:41Z'
+    date-closed: null
+  '2068':
+    type: issue
+    date-opened: '2025-01-08T11:57:44Z'
+    date-closed: null

@@ -998,4 +998,12 @@ issues:
   '250':
     type: pr
     date-opened: '2024-12-21T05:18:47Z'
+    date-closed: '2025-01-08T20:38:10Z'
+  '252':
+    type: pr
+    date-opened: '2025-01-08T16:42:00Z'
     date-closed: null
+  '251':
+    type: pr
+    date-opened: '2025-01-08T15:06:13Z'
+    date-closed: '2025-01-08T17:49:19Z'
