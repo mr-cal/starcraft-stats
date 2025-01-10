@@ -8247,3 +8247,7 @@ issues:
     type: issue
     date-opened: '2025-01-08T11:57:44Z'
     date-closed: null
+  '2070':
+    type: pr
+    date-opened: '2025-01-10T01:09:42Z'
+    date-closed: null

@@ -347,3 +347,11 @@ issues:
     type: issue
     date-opened: '2025-01-07T19:33:43Z'
     date-closed: null
+  '89':
+    type: issue
+    date-opened: '2025-01-09T20:02:18Z'
+    date-closed: null
+  '88':
+    type: pr
+    date-opened: '2025-01-09T17:22:00Z'
+    date-closed: null
