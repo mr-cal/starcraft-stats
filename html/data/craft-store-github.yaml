@@ -1007,3 +1007,7 @@ issues:
     type: pr
     date-opened: '2025-01-08T15:06:13Z'
     date-closed: '2025-01-08T17:49:19Z'
+  '253':
+    type: pr
+    date-opened: '2025-01-11T00:22:42Z'
+    date-closed: null

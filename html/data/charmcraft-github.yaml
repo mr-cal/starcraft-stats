@@ -7910,7 +7910,7 @@ issues:
   '1986':
     type: pr
     date-opened: '2024-11-12T03:11:43Z'
-    date-closed: null
+    date-closed: '2025-01-10T16:59:20Z'
   '1985':
     type: issue
     date-opened: '2024-11-11T09:47:55Z'
@@ -8250,4 +8250,8 @@ issues:
   '2070':
     type: pr
     date-opened: '2025-01-10T01:09:42Z'
+    date-closed: null
+  '2071':
+    type: issue
+    date-opened: '2025-01-10T12:51:10Z'
     date-closed: null

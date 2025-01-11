@@ -2399,3 +2399,11 @@ issues:
     type: pr
     date-opened: '2025-01-08T22:17:34Z'
     date-closed: null
+  '603':
+    type: pr
+    date-opened: '2025-01-10T19:54:58Z'
+    date-closed: null
+  '602':
+    type: pr
+    date-opened: '2025-01-10T18:11:33Z'
+    date-closed: '2025-01-10T19:31:58Z'

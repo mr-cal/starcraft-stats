@@ -3859,3 +3859,11 @@ issues:
     type: pr
     date-opened: '2025-01-09T13:52:48Z'
     date-closed: '2025-01-09T19:15:09Z'
+  '967':
+    type: pr
+    date-opened: '2025-01-10T22:34:10Z'
+    date-closed: null
+  '966':
+    type: pr
+    date-opened: '2025-01-10T13:02:40Z'
+    date-closed: null
