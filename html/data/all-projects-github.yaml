@@ -43726,7 +43726,7 @@ issues:
   craft-parts-879:
     type: pr
     date-opened: '2024-10-15T20:59:36Z'
-    date-closed: '2025-01-07T22:11:37Z'
+    date-closed: null
   craft-parts-878:
     type: pr
     date-opened: '2024-10-15T20:59:34Z'
@@ -45858,7 +45858,7 @@ issues:
   craft-parts-952:
     type: pr
     date-opened: '2025-01-06T17:07:19Z'
-    date-closed: '2025-01-07T22:11:32Z'
+    date-closed: null
   craft-providers-708:
     type: pr
     date-opened: '2025-01-06T21:39:34Z'
@@ -46063,3 +46063,23 @@ issues:
     type: pr
     date-opened: '2025-01-11T00:22:42Z'
     date-closed: null
+  charmcraft-2072:
+    type: pr
+    date-opened: '2025-01-11T04:38:27Z'
+    date-closed: null
+  craft-store-254:
+    type: pr
+    date-opened: '2025-01-11T04:55:50Z'
+    date-closed: null
+  starbase-318:
+    type: pr
+    date-opened: '2025-01-11T20:12:52Z'
+    date-closed: null
+  starbase-317:
+    type: pr
+    date-opened: '2025-01-11T08:19:04Z'
+    date-closed: null
+  starbase-316:
+    type: pr
+    date-opened: '2025-01-11T04:42:57Z'
+    date-closed: '2025-01-11T16:48:00Z'

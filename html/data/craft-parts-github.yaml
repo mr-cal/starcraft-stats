@@ -3522,7 +3522,7 @@ issues:
   '879':
     type: pr
     date-opened: '2024-10-15T20:59:36Z'
-    date-closed: '2025-01-07T22:11:37Z'
+    date-closed: null
   '878':
     type: pr
     date-opened: '2024-10-15T20:59:34Z'
@@ -3810,7 +3810,7 @@ issues:
   '952':
     type: pr
     date-opened: '2025-01-06T17:07:19Z'
-    date-closed: '2025-01-07T22:11:32Z'
+    date-closed: null
   '956':
     type: pr
     date-opened: '2025-01-07T21:12:26Z'
