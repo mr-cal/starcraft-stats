@@ -1015,3 +1015,7 @@ issues:
     type: pr
     date-opened: '2025-01-11T04:55:50Z'
     date-closed: null
+  '255':
+    type: pr
+    date-opened: '2025-01-13T22:16:12Z'
+    date-closed: null

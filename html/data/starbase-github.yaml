@@ -1198,7 +1198,7 @@ issues:
   '300':
     type: pr
     date-opened: '2024-12-13T20:10:47Z'
-    date-closed: null
+    date-closed: '2025-01-13T19:24:15Z'
   '299':
     type: pr
     date-opened: '2024-12-13T20:05:06Z'
@@ -1226,11 +1226,11 @@ issues:
   '310':
     type: pr
     date-opened: '2024-12-20T20:48:02Z'
-    date-closed: null
+    date-closed: '2025-01-13T21:46:58Z'
   '309':
     type: issue
     date-opened: '2024-12-20T19:43:28Z'
-    date-closed: null
+    date-closed: '2025-01-13T21:46:59Z'
   '308':
     type: issue
     date-opened: '2024-12-20T19:42:26Z'
@@ -1262,12 +1262,28 @@ issues:
   '318':
     type: pr
     date-opened: '2025-01-11T20:12:52Z'
-    date-closed: null
+    date-closed: '2025-01-13T19:22:18Z'
   '317':
     type: pr
     date-opened: '2025-01-11T08:19:04Z'
-    date-closed: null
+    date-closed: '2025-01-13T19:13:48Z'
   '316':
     type: pr
     date-opened: '2025-01-11T04:42:57Z'
     date-closed: '2025-01-11T16:48:00Z'
+  '322':
+    type: pr
+    date-opened: '2025-01-13T19:44:43Z'
+    date-closed: '2025-01-13T20:36:08Z'
+  '321':
+    type: pr
+    date-opened: '2025-01-13T19:20:34Z'
+    date-closed: '2025-01-13T20:36:39Z'
+  '320':
+    type: pr
+    date-opened: '2025-01-13T19:05:26Z'
+    date-closed: '2025-01-13T19:14:45Z'
+  '319':
+    type: pr
+    date-opened: '2025-01-13T18:57:52Z'
+    date-closed: '2025-01-13T19:21:53Z'
