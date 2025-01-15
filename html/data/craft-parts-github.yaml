@@ -3810,7 +3810,7 @@ issues:
   '952':
     type: pr
     date-opened: '2025-01-06T17:07:19Z'
-    date-closed: null
+    date-closed: '2025-01-14T14:58:08Z'
   '956':
     type: pr
     date-opened: '2025-01-07T21:12:26Z'
@@ -3870,12 +3870,24 @@ issues:
   '970':
     type: pr
     date-opened: '2025-01-13T21:20:42Z'
-    date-closed: null
+    date-closed: '2025-01-14T17:23:47Z'
   '969':
     type: pr
     date-opened: '2025-01-13T20:52:54Z'
-    date-closed: null
+    date-closed: '2025-01-14T14:07:26Z'
   '968':
     type: pr
     date-opened: '2025-01-13T20:48:29Z'
+    date-closed: '2025-01-14T17:32:36Z'
+  '973':
+    type: pr
+    date-opened: '2025-01-14T21:15:45Z'
+    date-closed: null
+  '972':
+    type: pr
+    date-opened: '2025-01-14T17:24:47Z'
+    date-closed: null
+  '971':
+    type: pr
+    date-opened: '2025-01-14T06:04:47Z'
     date-closed: null

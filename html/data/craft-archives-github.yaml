@@ -538,7 +538,7 @@ issues:
   '133':
     type: issue
     date-opened: '2024-10-11T14:43:33Z'
-    date-closed: null
+    date-closed: '2025-01-14T14:15:26Z'
   '136':
     type: pr
     date-opened: '2024-10-17T21:34:27Z'
@@ -574,7 +574,7 @@ issues:
   '143':
     type: pr
     date-opened: '2024-12-12T01:31:26Z'
-    date-closed: null
+    date-closed: '2025-01-14T14:15:25Z'
   '142':
     type: pr
     date-opened: '2024-12-12T01:09:34Z'
@@ -582,4 +582,4 @@ issues:
   '146':
     type: issue
     date-opened: '2024-12-16T22:11:00Z'
-    date-closed: null
+    date-closed: '2025-01-14T14:15:26Z'
