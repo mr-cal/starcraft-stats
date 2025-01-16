@@ -1414,7 +1414,7 @@ issues:
   '341':
     type: pr
     date-opened: '2022-12-28T15:11:08Z'
-    date-closed: null
+    date-closed: '2025-01-15T15:14:02Z'
   '340':
     type: pr
     date-opened: '2022-12-22T17:22:30Z'
@@ -3890,4 +3890,16 @@ issues:
   '971':
     type: pr
     date-opened: '2025-01-14T06:04:47Z'
+    date-closed: null
+  '976':
+    type: issue
+    date-opened: '2025-01-15T18:55:53Z'
+    date-closed: null
+  '975':
+    type: issue
+    date-opened: '2025-01-15T18:30:34Z'
+    date-closed: null
+  '974':
+    type: issue
+    date-opened: '2025-01-15T18:18:38Z'
     date-closed: null

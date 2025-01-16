@@ -994,7 +994,7 @@ issues:
   '249':
     type: pr
     date-opened: '2024-12-18T01:02:54Z'
-    date-closed: null
+    date-closed: '2025-01-15T20:05:27Z'
   '250':
     type: pr
     date-opened: '2024-12-21T05:18:47Z'
@@ -1019,3 +1019,7 @@ issues:
     type: pr
     date-opened: '2025-01-13T22:16:12Z'
     date-closed: '2025-01-14T17:19:34Z'
+  '256':
+    type: pr
+    date-opened: '2025-01-16T03:34:30Z'
+    date-closed: null

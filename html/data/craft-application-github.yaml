@@ -2415,3 +2415,11 @@ issues:
     type: pr
     date-opened: '2025-01-13T17:49:52Z'
     date-closed: '2025-01-13T18:17:09Z'
+  '607':
+    type: pr
+    date-opened: '2025-01-15T18:24:48Z'
+    date-closed: null
+  '606':
+    type: issue
+    date-opened: '2025-01-15T17:08:38Z'
+    date-closed: null
