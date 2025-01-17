@@ -355,3 +355,11 @@ issues:
     type: pr
     date-opened: '2025-01-09T17:22:00Z'
     date-closed: '2025-01-13T17:16:39Z'
+  '91':
+    type: issue
+    date-opened: '2025-01-16T19:00:32Z'
+    date-closed: '2025-01-16T19:01:07Z'
+  '90':
+    type: issue
+    date-opened: '2025-01-16T16:41:06Z'
+    date-closed: null

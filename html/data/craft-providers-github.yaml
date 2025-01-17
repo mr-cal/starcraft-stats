@@ -1410,7 +1410,7 @@ issues:
   '191':
     type: issue
     date-opened: '2022-12-16T02:56:13Z'
-    date-closed: null
+    date-closed: '2025-01-16T21:55:57Z'
   '190':
     type: issue
     date-opened: '2022-12-15T16:12:27Z'
@@ -2834,11 +2834,11 @@ issues:
   '710':
     type: pr
     date-opened: '2025-01-07T18:48:55Z'
-    date-closed: null
+    date-closed: '2025-01-16T17:43:06Z'
   '709':
     type: issue
     date-opened: '2024-12-15T18:23:36Z'
-    date-closed: null
+    date-closed: '2025-01-16T17:43:07Z'
   '713':
     type: pr
     date-opened: '2025-01-08T21:29:51Z'
@@ -2862,4 +2862,8 @@ issues:
   '717':
     type: pr
     date-opened: '2025-01-15T17:19:32Z'
-    date-closed: null
+    date-closed: '2025-01-16T21:55:56Z'
+  '718':
+    type: pr
+    date-opened: '2025-01-16T22:08:06Z'
+    date-closed: '2025-01-16T22:09:23Z'

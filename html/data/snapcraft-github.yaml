@@ -20770,7 +20770,7 @@ issues:
   '5202':
     type: pr
     date-opened: '2025-01-14T14:35:37Z'
-    date-closed: null
+    date-closed: '2025-01-16T21:22:21Z'
   '5205':
     type: pr
     date-opened: '2025-01-15T20:23:32Z'
@@ -20779,3 +20779,7 @@ issues:
     type: pr
     date-opened: '2025-01-15T16:32:52Z'
     date-closed: '2025-01-16T01:37:53Z'
+  '5206':
+    type: issue
+    date-opened: '2025-01-16T18:43:25Z'
+    date-closed: null

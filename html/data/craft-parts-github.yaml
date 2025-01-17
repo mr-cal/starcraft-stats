@@ -3886,11 +3886,11 @@ issues:
   '972':
     type: pr
     date-opened: '2025-01-14T17:24:47Z'
-    date-closed: null
+    date-closed: '2025-01-16T23:42:02Z'
   '971':
     type: pr
     date-opened: '2025-01-14T06:04:47Z'
-    date-closed: null
+    date-closed: '2025-01-16T14:13:10Z'
   '976':
     type: issue
     date-opened: '2025-01-15T18:55:53Z'
@@ -3902,4 +3902,16 @@ issues:
   '974':
     type: issue
     date-opened: '2025-01-15T18:18:38Z'
+    date-closed: null
+  '979':
+    type: pr
+    date-opened: '2025-01-16T15:24:39Z'
+    date-closed: null
+  '978':
+    type: issue
+    date-opened: '2025-01-16T15:18:45Z'
+    date-closed: null
+  '977':
+    type: pr
+    date-opened: '2025-01-16T14:24:00Z'
     date-closed: null

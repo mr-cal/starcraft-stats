@@ -1287,3 +1287,7 @@ issues:
     type: pr
     date-opened: '2025-01-13T18:57:52Z'
     date-closed: '2025-01-13T19:21:53Z'
+  '323':
+    type: issue
+    date-opened: '2025-01-16T08:21:50Z'
+    date-closed: null
