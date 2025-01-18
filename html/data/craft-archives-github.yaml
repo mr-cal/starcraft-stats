@@ -526,7 +526,7 @@ issues:
   '130':
     type: pr
     date-opened: '2024-10-08T18:16:52Z'
-    date-closed: null
+    date-closed: '2025-01-18T03:28:01Z'
   '135':
     type: pr
     date-opened: '2024-10-11T16:24:18Z'
@@ -583,3 +583,11 @@ issues:
     type: issue
     date-opened: '2024-12-16T22:11:00Z'
     date-closed: '2025-01-14T14:15:26Z'
+  '148':
+    type: pr
+    date-opened: '2025-01-18T03:32:24Z'
+    date-closed: null
+  '147':
+    type: pr
+    date-opened: '2025-01-18T03:29:21Z'
+    date-closed: null

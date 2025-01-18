@@ -342,7 +342,7 @@ issues:
   '86':
     type: pr
     date-opened: '2024-12-21T04:14:18Z'
-    date-closed: null
+    date-closed: '2025-01-18T03:21:06Z'
   '87':
     type: issue
     date-opened: '2025-01-07T19:33:43Z'
@@ -362,4 +362,8 @@ issues:
   '90':
     type: issue
     date-opened: '2025-01-16T16:41:06Z'
+    date-closed: null
+  '92':
+    type: pr
+    date-opened: '2025-01-18T03:22:12Z'
     date-closed: null

@@ -1270,7 +1270,7 @@ issues:
   '316':
     type: pr
     date-opened: '2025-01-11T04:42:57Z'
-    date-closed: '2025-01-11T16:48:00Z'
+    date-closed: '2025-01-18T03:07:25Z'
   '322':
     type: pr
     date-opened: '2025-01-13T19:44:43Z'
@@ -1290,4 +1290,20 @@ issues:
   '323':
     type: issue
     date-opened: '2025-01-16T08:21:50Z'
+    date-closed: null
+  '327':
+    type: pr
+    date-opened: '2025-01-18T03:11:58Z'
+    date-closed: null
+  '326':
+    type: pr
+    date-opened: '2025-01-18T03:06:15Z'
+    date-closed: '2025-01-18T03:06:46Z'
+  '325':
+    type: pr
+    date-opened: '2025-01-18T03:05:02Z'
+    date-closed: '2025-01-18T03:13:05Z'
+  '324':
+    type: pr
+    date-opened: '2025-01-18T02:45:11Z'
     date-closed: null

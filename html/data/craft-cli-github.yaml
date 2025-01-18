@@ -1275,3 +1275,11 @@ issues:
     type: pr
     date-opened: '2025-01-13T21:49:51Z'
     date-closed: null
+  '321':
+    type: pr
+    date-opened: '2025-01-18T03:23:12Z'
+    date-closed: null
+  '320':
+    type: pr
+    date-opened: '2025-01-17T20:18:50Z'
+    date-closed: null

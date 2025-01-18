@@ -2427,3 +2427,19 @@ issues:
     type: pr
     date-opened: '2025-01-16T18:21:25Z'
     date-closed: '2025-01-16T19:02:02Z'
+  '612':
+    type: pr
+    date-opened: '2025-01-18T03:17:36Z'
+    date-closed: '2025-01-18T03:18:42Z'
+  '611':
+    type: pr
+    date-opened: '2025-01-18T03:17:34Z'
+    date-closed: null
+  '610':
+    type: pr
+    date-opened: '2025-01-18T03:17:32Z'
+    date-closed: null
+  '609':
+    type: pr
+    date-opened: '2025-01-18T03:16:36Z'
+    date-closed: null

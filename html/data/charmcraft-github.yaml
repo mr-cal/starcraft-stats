@@ -6854,7 +6854,7 @@ issues:
   '1721':
     type: issue
     date-opened: '2024-07-08T08:15:12Z'
-    date-closed: null
+    date-closed: '2025-01-18T02:15:54Z'
   '1724':
     type: pr
     date-opened: '2024-07-09T22:03:40Z'
@@ -7882,7 +7882,7 @@ issues:
   '1981':
     type: issue
     date-opened: '2024-10-31T15:31:54Z'
-    date-closed: '2024-12-17T22:54:39Z'
+    date-closed: null
   '1980':
     type: issue
     date-opened: '2024-10-31T14:50:17Z'
@@ -8278,7 +8278,7 @@ issues:
   '2080':
     type: pr
     date-opened: '2025-01-14T23:17:50Z'
-    date-closed: null
+    date-closed: '2025-01-18T02:21:11Z'
   '2079':
     type: pr
     date-opened: '2025-01-14T19:21:36Z'
@@ -8294,7 +8294,7 @@ issues:
   '2084':
     type: pr
     date-opened: '2025-01-17T01:17:08Z'
-    date-closed: null
+    date-closed: '2025-01-18T02:15:53Z'
   '2083':
     type: pr
     date-opened: '2025-01-17T00:57:02Z'
@@ -8306,4 +8306,64 @@ issues:
   '2081':
     type: issue
     date-opened: '2025-01-16T22:40:17Z'
+    date-closed: null
+  '2099':
+    type: pr
+    date-opened: '2025-01-18T03:33:01Z'
+    date-closed: null
+  '2098':
+    type: pr
+    date-opened: '2025-01-18T03:14:17Z'
+    date-closed: null
+  '2097':
+    type: pr
+    date-opened: '2025-01-18T03:05:40Z'
+    date-closed: null
+  '2096':
+    type: pr
+    date-opened: '2025-01-18T02:43:40Z'
+    date-closed: null
+  '2095':
+    type: pr
+    date-opened: '2025-01-18T02:27:35Z'
+    date-closed: null
+  '2094':
+    type: issue
+    date-opened: '2025-01-18T01:54:44Z'
+    date-closed: null
+  '2093':
+    type: issue
+    date-opened: '2025-01-18T01:54:14Z'
+    date-closed: null
+  '2092':
+    type: issue
+    date-opened: '2025-01-18T01:53:42Z'
+    date-closed: null
+  '2091':
+    type: issue
+    date-opened: '2025-01-18T01:11:33Z'
+    date-closed: null
+  '2090':
+    type: issue
+    date-opened: '2025-01-17T19:44:25Z'
+    date-closed: null
+  '2089':
+    type: issue
+    date-opened: '2025-01-17T19:29:06Z'
+    date-closed: null
+  '2088':
+    type: issue
+    date-opened: '2025-01-17T19:01:13Z'
+    date-closed: null
+  '2087':
+    type: issue
+    date-opened: '2025-01-17T17:34:25Z'
+    date-closed: null
+  '2086':
+    type: issue
+    date-opened: '2025-01-17T16:16:39Z'
+    date-closed: null
+  '2085':
+    type: pr
+    date-opened: '2025-01-17T15:50:50Z'
     date-closed: null
