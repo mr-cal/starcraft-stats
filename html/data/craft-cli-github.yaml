@@ -126,7 +126,7 @@ issues:
   '211':
     type: issue
     date-opened: '2023-12-04T20:11:50Z'
-    date-closed: null
+    date-closed: '2025-01-20T13:42:44Z'
   '210':
     type: pr
     date-opened: '2023-12-02T06:41:19Z'
@@ -1274,7 +1274,7 @@ issues:
   '319':
     type: pr
     date-opened: '2025-01-13T21:49:51Z'
-    date-closed: null
+    date-closed: '2025-01-20T13:42:43Z'
   '321':
     type: pr
     date-opened: '2025-01-18T03:23:12Z'
