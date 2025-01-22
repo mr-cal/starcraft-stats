@@ -2434,7 +2434,7 @@ issues:
   '611':
     type: pr
     date-opened: '2025-01-18T03:17:34Z'
-    date-closed: null
+    date-closed: '2025-01-21T15:09:54Z'
   '610':
     type: pr
     date-opened: '2025-01-18T03:17:32Z'
@@ -2442,8 +2442,12 @@ issues:
   '609':
     type: pr
     date-opened: '2025-01-18T03:16:36Z'
-    date-closed: null
+    date-closed: '2025-01-21T21:28:20Z'
   '613':
     type: issue
     date-opened: '2025-01-20T13:42:15Z'
+    date-closed: null
+  '614':
+    type: issue
+    date-opened: '2025-01-21T17:21:16Z'
     date-closed: null

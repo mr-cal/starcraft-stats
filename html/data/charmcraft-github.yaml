@@ -814,7 +814,7 @@ issues:
   '1412':
     type: issue
     date-opened: '2023-12-01T21:13:15Z'
-    date-closed: null
+    date-closed: '2025-01-21T18:23:13Z'
   '1411':
     type: issue
     date-opened: '2023-12-01T20:46:53Z'
@@ -1674,7 +1674,7 @@ issues:
   '1196':
     type: issue
     date-opened: '2023-07-26T17:16:43Z'
-    date-closed: null
+    date-closed: '2025-01-21T18:19:51Z'
   '1195':
     type: pr
     date-opened: '2023-07-26T16:32:11Z'
@@ -3050,7 +3050,7 @@ issues:
   '851':
     type: issue
     date-opened: '2022-08-30T19:11:31Z'
-    date-closed: null
+    date-closed: '2025-01-21T18:22:37Z'
   '850':
     type: issue
     date-opened: '2022-08-30T10:39:49Z'
@@ -6630,7 +6630,7 @@ issues:
   '1664':
     type: issue
     date-opened: '2024-04-23T09:33:08Z'
-    date-closed: null
+    date-closed: '2025-01-21T18:26:17Z'
   '1667':
     type: issue
     date-opened: '2024-04-24T18:44:07Z'
@@ -8178,7 +8178,7 @@ issues:
   '2048':
     type: pr
     date-opened: '2024-12-17T17:40:40Z'
-    date-closed: null
+    date-closed: '2025-01-21T19:13:05Z'
   '2054':
     type: pr
     date-opened: '2024-12-18T16:53:06Z'
@@ -8314,7 +8314,7 @@ issues:
   '2098':
     type: pr
     date-opened: '2025-01-18T03:14:17Z'
-    date-closed: null
+    date-closed: '2025-01-21T20:44:39Z'
   '2097':
     type: pr
     date-opened: '2025-01-18T03:05:40Z'
@@ -8326,7 +8326,7 @@ issues:
   '2095':
     type: pr
     date-opened: '2025-01-18T02:27:35Z'
-    date-closed: null
+    date-closed: '2025-01-21T23:39:44Z'
   '2094':
     type: issue
     date-opened: '2025-01-18T01:54:44Z'
@@ -8366,4 +8366,24 @@ issues:
   '2085':
     type: pr
     date-opened: '2025-01-17T15:50:50Z'
+    date-closed: null
+  '2104':
+    type: pr
+    date-opened: '2025-01-21T18:03:16Z'
+    date-closed: null
+  '2103':
+    type: issue
+    date-opened: '2025-01-21T17:59:56Z'
+    date-closed: null
+  '2102':
+    type: issue
+    date-opened: '2025-01-21T17:32:02Z'
+    date-closed: null
+  '2101':
+    type: pr
+    date-opened: '2025-01-21T17:29:37Z'
+    date-closed: null
+  '2100':
+    type: pr
+    date-opened: '2025-01-21T07:25:59Z'
     date-closed: null
