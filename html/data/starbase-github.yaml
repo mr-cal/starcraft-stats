@@ -1306,4 +1306,16 @@ issues:
   '324':
     type: pr
     date-opened: '2025-01-18T02:45:11Z'
+    date-closed: '2025-01-22T15:54:28Z'
+  '330':
+    type: pr
+    date-opened: '2025-01-23T01:11:48Z'
     date-closed: null
+  '329':
+    type: pr
+    date-opened: '2025-01-23T00:39:38Z'
+    date-closed: '2025-01-23T01:08:19Z'
+  '328':
+    type: pr
+    date-opened: '2025-01-22T18:21:10Z'
+    date-closed: '2025-01-23T02:59:38Z'

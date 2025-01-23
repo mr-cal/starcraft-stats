@@ -290,7 +290,7 @@ issues:
   '76':
     type: pr
     date-opened: '2024-11-27T20:17:54Z'
-    date-closed: null
+    date-closed: '2025-01-22T15:56:11Z'
   '75':
     type: issue
     date-opened: '2024-11-27T17:57:38Z'
@@ -366,4 +366,8 @@ issues:
   '92':
     type: pr
     date-opened: '2025-01-18T03:22:12Z'
-    date-closed: null
+    date-closed: '2025-01-22T15:55:46Z'
+  '93':
+    type: pr
+    date-opened: '2025-01-22T16:52:52Z'
+    date-closed: '2025-01-22T19:53:08Z'

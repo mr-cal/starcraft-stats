@@ -20806,8 +20806,16 @@ issues:
   '5210':
     type: pr
     date-opened: '2025-01-20T18:31:12Z'
-    date-closed: null
+    date-closed: '2025-01-22T15:26:18Z'
   '5213':
     type: pr
     date-opened: '2025-01-21T23:23:33Z'
+    date-closed: null
+  '5215':
+    type: pr
+    date-opened: '2025-01-22T20:11:47Z'
+    date-closed: null
+  '5214':
+    type: issue
+    date-opened: '2025-01-22T06:16:47Z'
     date-closed: null
