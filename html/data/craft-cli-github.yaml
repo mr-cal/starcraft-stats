@@ -1290,4 +1290,8 @@ issues:
   '323':
     type: pr
     date-opened: '2025-01-22T20:55:37Z'
-    date-closed: null
+    date-closed: '2025-01-23T14:41:06Z'
+  '324':
+    type: pr
+    date-opened: '2025-01-23T19:13:16Z'
+    date-closed: '2025-01-24T03:12:45Z'

@@ -3918,7 +3918,7 @@ issues:
   '981':
     type: pr
     date-opened: '2025-01-17T20:18:02Z'
-    date-closed: null
+    date-closed: '2025-01-23T15:26:02Z'
   '980':
     type: pr
     date-opened: '2025-01-17T14:12:33Z'
@@ -3934,7 +3934,7 @@ issues:
   '983':
     type: issue
     date-opened: '2025-01-20T14:33:48Z'
-    date-closed: null
+    date-closed: '2025-01-23T15:26:03Z'
   '987':
     type: pr
     date-opened: '2025-01-22T20:02:12Z'
@@ -3947,3 +3947,11 @@ issues:
     type: issue
     date-opened: '2025-01-22T19:06:24Z'
     date-closed: null
+  '989':
+    type: issue
+    date-opened: '2025-01-23T18:01:06Z'
+    date-closed: null
+  '988':
+    type: pr
+    date-opened: '2025-01-23T17:07:06Z'
+    date-closed: '2025-01-23T17:44:15Z'
