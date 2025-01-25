@@ -1323,3 +1323,11 @@ issues:
     type: pr
     date-opened: '2025-01-23T21:28:07Z'
     date-closed: '2025-01-24T03:12:12Z'
+  '333':
+    type: pr
+    date-opened: '2025-01-24T23:37:29Z'
+    date-closed: null
+  '332':
+    type: pr
+    date-opened: '2025-01-24T19:46:21Z'
+    date-closed: null

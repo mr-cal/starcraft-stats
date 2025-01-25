@@ -3158,8 +3158,16 @@ issues:
   '791':
     type: issue
     date-opened: '2025-01-21T12:56:27Z'
-    date-closed: null
+    date-closed: '2025-01-24T19:45:21Z'
   '790':
     type: issue
     date-opened: '2025-01-21T05:19:19Z'
+    date-closed: null
+  '794':
+    type: pr
+    date-opened: '2025-01-24T14:52:16Z'
+    date-closed: '2025-01-24T19:45:20Z'
+  '793':
+    type: pr
+    date-opened: '2025-01-24T14:29:26Z'
     date-closed: null

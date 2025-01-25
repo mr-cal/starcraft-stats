@@ -6462,7 +6462,7 @@ issues:
   '1633':
     type: issue
     date-opened: '2024-04-08T17:33:55Z'
-    date-closed: null
+    date-closed: '2025-01-24T20:26:32Z'
   '1632':
     type: pr
     date-opened: '2024-04-04T16:40:45Z'
@@ -8302,7 +8302,7 @@ issues:
   '2082':
     type: pr
     date-opened: '2025-01-16T23:25:06Z'
-    date-closed: null
+    date-closed: '2025-01-24T20:26:31Z'
   '2081':
     type: issue
     date-opened: '2025-01-16T22:40:17Z'
@@ -8410,4 +8410,24 @@ issues:
   '2107':
     type: issue
     date-opened: '2025-01-23T13:41:58Z'
+    date-closed: null
+  '2115':
+    type: pr
+    date-opened: '2025-01-24T21:44:10Z'
+    date-closed: null
+  '2114':
+    type: issue
+    date-opened: '2025-01-24T21:08:36Z'
+    date-closed: null
+  '2113':
+    type: issue
+    date-opened: '2025-01-24T21:07:46Z'
+    date-closed: null
+  '2112':
+    type: issue
+    date-opened: '2025-01-24T17:53:02Z'
+    date-closed: null
+  '2111':
+    type: pr
+    date-opened: '2025-01-24T14:23:16Z'
     date-closed: null
