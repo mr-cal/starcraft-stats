@@ -8431,3 +8431,11 @@ issues:
     type: pr
     date-opened: '2025-01-24T14:23:16Z'
     date-closed: null
+  '2117':
+    type: pr
+    date-opened: '2025-01-25T09:48:30Z'
+    date-closed: null
+  '2116':
+    type: pr
+    date-opened: '2025-01-25T06:19:58Z'
+    date-closed: null

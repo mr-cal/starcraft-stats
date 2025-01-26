@@ -1330,4 +1330,12 @@ issues:
   '332':
     type: pr
     date-opened: '2025-01-24T19:46:21Z'
+    date-closed: '2025-01-25T22:40:45Z'
+  '335':
+    type: pr
+    date-opened: '2025-01-26T02:01:45Z'
+    date-closed: null
+  '334':
+    type: pr
+    date-opened: '2025-01-25T06:37:48Z'
     date-closed: null
