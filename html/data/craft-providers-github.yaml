@@ -2871,3 +2871,7 @@ issues:
     type: issue
     date-opened: '2025-01-23T22:55:20Z'
     date-closed: null
+  '720':
+    type: pr
+    date-opened: '2025-01-28T01:00:48Z'
+    date-closed: null

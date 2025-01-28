@@ -41730,7 +41730,7 @@ issues:
   snapcraft-4992:
     type: issue
     date-opened: '2024-08-21T14:33:24Z'
-    date-closed: null
+    date-closed: '2025-01-27T15:54:27Z'
   starbase-242:
     type: pr
     date-opened: '2024-09-06T04:47:06Z'
@@ -44210,7 +44210,7 @@ issues:
   charmcraft-1981:
     type: issue
     date-opened: '2024-10-31T15:31:54Z'
-    date-closed: null
+    date-closed: '2025-01-27T20:11:31Z'
   charmcraft-1980:
     type: issue
     date-opened: '2024-10-31T14:50:17Z'
@@ -44766,7 +44766,7 @@ issues:
   charmcraft-2009:
     type: issue
     date-opened: '2024-11-27T17:53:05Z'
-    date-closed: null
+    date-closed: '2025-01-27T20:11:31Z'
   charmcraft-2008:
     type: issue
     date-opened: '2024-11-27T17:12:29Z'
@@ -44814,11 +44814,11 @@ issues:
   snapcraft-5158:
     type: issue
     date-opened: '2024-11-27T17:33:52Z'
-    date-closed: null
+    date-closed: '2025-01-27T17:42:08Z'
   snapcraft-5157:
     type: pr
     date-opened: '2024-11-27T16:03:41Z'
-    date-closed: null
+    date-closed: '2025-01-27T17:42:07Z'
   craft-application-570:
     type: pr
     date-opened: '2024-11-28T16:04:03Z'
@@ -45002,7 +45002,7 @@ issues:
   snapcraft-5166:
     type: pr
     date-opened: '2024-12-04T18:04:22Z'
-    date-closed: null
+    date-closed: '2025-01-27T17:44:12Z'
   starbase-288:
     type: pr
     date-opened: '2024-12-04T09:25:08Z'
@@ -45690,11 +45690,11 @@ issues:
   craft-parts-949:
     type: pr
     date-opened: '2024-12-20T00:53:34Z'
-    date-closed: null
+    date-closed: '2025-01-27T16:07:24Z'
   craft-parts-948:
     type: issue
     date-opened: '2024-12-19T23:47:48Z'
-    date-closed: null
+    date-closed: '2025-01-27T16:07:26Z'
   craft-parts-947:
     type: pr
     date-opened: '2024-12-19T19:31:02Z'
@@ -46598,7 +46598,7 @@ issues:
   snapcraft-5216:
     type: pr
     date-opened: '2025-01-23T21:38:49Z'
-    date-closed: null
+    date-closed: '2025-01-27T15:54:26Z'
   starbase-331:
     type: pr
     date-opened: '2025-01-23T21:28:07Z'
@@ -46606,7 +46606,7 @@ issues:
   charmcraft-2115:
     type: pr
     date-opened: '2025-01-24T21:44:10Z'
-    date-closed: null
+    date-closed: '2025-01-27T22:49:03Z'
   charmcraft-2114:
     type: issue
     date-opened: '2025-01-24T21:08:36Z'
@@ -46622,7 +46622,7 @@ issues:
   charmcraft-2111:
     type: pr
     date-opened: '2025-01-24T14:23:16Z'
-    date-closed: null
+    date-closed: '2025-01-27T17:02:09Z'
   craft-parts-991:
     type: issue
     date-opened: '2025-01-24T22:09:56Z'
@@ -46646,7 +46646,7 @@ issues:
   rockcraft-793:
     type: pr
     date-opened: '2025-01-24T14:29:26Z'
-    date-closed: null
+    date-closed: '2025-01-27T18:31:20Z'
   snapcraft-5218:
     type: pr
     date-opened: '2025-01-24T14:13:16Z'
@@ -46682,4 +46682,40 @@ issues:
   starbase-334:
     type: pr
     date-opened: '2025-01-25T06:37:48Z'
+    date-closed: null
+  charmcraft-2122:
+    type: pr
+    date-opened: '2025-01-27T23:11:57Z'
+    date-closed: null
+  charmcraft-2121:
+    type: pr
+    date-opened: '2025-01-27T18:48:19Z'
+    date-closed: '2025-01-27T20:11:28Z'
+  charmcraft-2120:
+    type: issue
+    date-opened: '2025-01-27T17:36:01Z'
+    date-closed: null
+  charmcraft-2119:
+    type: issue
+    date-opened: '2025-01-27T17:16:28Z'
+    date-closed: null
+  charmcraft-2118:
+    type: pr
+    date-opened: '2025-01-27T12:32:01Z'
+    date-closed: '2025-01-27T18:42:49Z'
+  craft-application-615:
+    type: pr
+    date-opened: '2025-01-27T22:22:39Z'
+    date-closed: null
+  craft-providers-720:
+    type: pr
+    date-opened: '2025-01-28T01:00:48Z'
+    date-closed: null
+  rockcraft-795:
+    type: pr
+    date-opened: '2025-01-27T19:54:49Z'
+    date-closed: null
+  starbase-336:
+    type: pr
+    date-opened: '2025-01-27T18:23:35Z'
     date-closed: null

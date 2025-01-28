@@ -3170,4 +3170,8 @@ issues:
   '793':
     type: pr
     date-opened: '2025-01-24T14:29:26Z'
+    date-closed: '2025-01-27T18:31:20Z'
+  '795':
+    type: pr
+    date-opened: '2025-01-27T19:54:49Z'
     date-closed: null
