@@ -3174,4 +3174,12 @@ issues:
   '795':
     type: pr
     date-opened: '2025-01-27T19:54:49Z'
+    date-closed: '2025-01-28T22:27:24Z'
+  '797':
+    type: pr
+    date-opened: '2025-01-29T02:48:22Z'
+    date-closed: null
+  '796':
+    type: pr
+    date-opened: '2025-01-28T23:10:43Z'
     date-closed: null
