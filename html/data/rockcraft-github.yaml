@@ -3150,11 +3150,11 @@ issues:
   '789':
     type: issue
     date-opened: '2025-01-16T21:00:34Z'
-    date-closed: null
+    date-closed: '2025-01-29T15:33:16Z'
   '792':
     type: pr
     date-opened: '2025-01-21T21:10:04Z'
-    date-closed: null
+    date-closed: '2025-01-29T15:33:15Z'
   '791':
     type: issue
     date-opened: '2025-01-21T12:56:27Z'
@@ -3182,4 +3182,4 @@ issues:
   '796':
     type: pr
     date-opened: '2025-01-28T23:10:43Z'
-    date-closed: null
+    date-closed: '2025-01-29T20:56:12Z'

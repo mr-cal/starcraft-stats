@@ -8442,7 +8442,7 @@ issues:
   '2122':
     type: pr
     date-opened: '2025-01-27T23:11:57Z'
-    date-closed: null
+    date-closed: '2025-01-29T21:53:10Z'
   '2121':
     type: pr
     date-opened: '2025-01-27T18:48:19Z'
@@ -8466,4 +8466,12 @@ issues:
   '2125':
     type: issue
     date-opened: '2025-01-28T14:47:24Z'
+    date-closed: null
+  '2129':
+    type: pr
+    date-opened: '2025-01-30T00:30:13Z'
+    date-closed: null
+  '2128':
+    type: pr
+    date-opened: '2025-01-29T16:35:34Z'
     date-closed: null
