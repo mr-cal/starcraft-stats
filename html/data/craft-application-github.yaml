@@ -2466,15 +2466,15 @@ issues:
   '620':
     type: issue
     date-opened: '2025-01-29T00:07:46Z'
-    date-closed: null
+    date-closed: '2025-01-30T15:20:23Z'
   '619':
     type: issue
     date-opened: '2025-01-28T20:21:15Z'
-    date-closed: null
+    date-closed: '2025-01-30T20:53:23Z'
   '618':
     type: issue
     date-opened: '2025-01-28T20:18:07Z'
-    date-closed: null
+    date-closed: '2025-01-30T20:53:22Z'
   '617':
     type: issue
     date-opened: '2025-01-28T17:04:17Z'
@@ -2486,12 +2486,24 @@ issues:
   '625':
     type: pr
     date-opened: '2025-01-29T18:55:20Z'
-    date-closed: null
+    date-closed: '2025-01-30T20:53:21Z'
   '624':
     type: pr
     date-opened: '2025-01-29T18:44:29Z'
-    date-closed: null
+    date-closed: '2025-01-30T17:47:29Z'
   '623':
     type: pr
     date-opened: '2025-01-29T18:41:58Z'
+    date-closed: '2025-01-30T15:20:21Z'
+  '628':
+    type: pr
+    date-opened: '2025-01-30T22:07:40Z'
+    date-closed: null
+  '627':
+    type: pr
+    date-opened: '2025-01-30T21:01:34Z'
+    date-closed: '2025-01-30T22:30:58Z'
+  '626':
+    type: pr
+    date-opened: '2025-01-30T16:04:39Z'
     date-closed: null

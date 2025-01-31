@@ -1347,3 +1347,23 @@ issues:
     type: issue
     date-opened: '2025-01-28T17:58:50Z'
     date-closed: null
+  '342':
+    type: pr
+    date-opened: '2025-01-30T21:48:55Z'
+    date-closed: '2025-01-30T22:35:41Z'
+  '341':
+    type: pr
+    date-opened: '2025-01-30T19:45:33Z'
+    date-closed: '2025-01-30T22:42:08Z'
+  '340':
+    type: issue
+    date-opened: '2025-01-30T18:48:44Z'
+    date-closed: null
+  '339':
+    type: pr
+    date-opened: '2025-01-30T18:38:57Z'
+    date-closed: '2025-01-30T18:53:50Z'
+  '338':
+    type: pr
+    date-opened: '2025-01-30T18:04:30Z'
+    date-closed: '2025-01-30T18:40:57Z'

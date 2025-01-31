@@ -8462,7 +8462,7 @@ issues:
   '2126':
     type: pr
     date-opened: '2025-01-28T21:52:30Z'
-    date-closed: null
+    date-closed: '2025-01-30T17:01:17Z'
   '2125':
     type: issue
     date-opened: '2025-01-28T14:47:24Z'
@@ -8470,7 +8470,7 @@ issues:
   '2129':
     type: pr
     date-opened: '2025-01-30T00:30:13Z'
-    date-closed: null
+    date-closed: '2025-01-30T08:11:53Z'
   '2128':
     type: pr
     date-opened: '2025-01-29T16:35:34Z'

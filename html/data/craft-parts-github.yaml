@@ -3974,7 +3974,7 @@ issues:
   '992':
     type: pr
     date-opened: '2025-01-28T15:40:46Z'
-    date-closed: null
+    date-closed: '2025-01-30T16:33:55Z'
   '997':
     type: pr
     date-opened: '2025-01-29T23:37:21Z'
@@ -3987,3 +3987,7 @@ issues:
     type: issue
     date-opened: '2025-01-29T19:17:56Z'
     date-closed: null
+  '998':
+    type: pr
+    date-opened: '2025-01-30T14:21:52Z'
+    date-closed: '2025-01-30T15:58:13Z'
