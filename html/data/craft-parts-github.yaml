@@ -3991,3 +3991,15 @@ issues:
     type: pr
     date-opened: '2025-01-30T14:21:52Z'
     date-closed: '2025-01-30T15:58:13Z'
+  '1001':
+    type: issue
+    date-opened: '2025-01-31T13:31:44Z'
+    date-closed: null
+  '1000':
+    type: issue
+    date-opened: '2025-01-31T13:21:27Z'
+    date-closed: null
+  '999':
+    type: issue
+    date-opened: '2025-01-31T08:28:07Z'
+    date-closed: null

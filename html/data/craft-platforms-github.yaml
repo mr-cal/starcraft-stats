@@ -387,3 +387,11 @@ issues:
     type: pr
     date-opened: '2025-01-25T06:39:37Z'
     date-closed: '2025-01-30T22:49:14Z'
+  '99':
+    type: pr
+    date-opened: '2025-02-01T01:51:07Z'
+    date-closed: null
+  '98':
+    type: pr
+    date-opened: '2025-01-31T19:06:02Z'
+    date-closed: null

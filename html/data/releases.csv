@@ -3,9 +3,9 @@ charmcraft,main,3.4.0,3
 charmcraft,hotfix/2.7,2.7.5,0
 charmcraft,hotfix/3.3,3.3.2,0
 charmcraft,hotfix/3.4,3.4.0,0
-rockcraft,main,1.7.0,45
+rockcraft,main,1.8.0,0
 rockcraft,hotfix/1.5,1.5.3,0
-snapcraft,main,8.5.1,38
+snapcraft,main,8.5.1,41
 snapcraft,hotfix/7.5,7.5.8,0
 snapcraft,hotfix/8.5,8.5.1,0
 snapcraft,hotfix/8.6,8.6.0,0

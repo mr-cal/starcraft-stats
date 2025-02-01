@@ -591,3 +591,11 @@ issues:
     type: pr
     date-opened: '2025-01-18T03:29:21Z'
     date-closed: '2025-01-22T00:10:54Z'
+  '150':
+    type: issue
+    date-opened: '2025-01-31T14:11:30Z'
+    date-closed: null
+  '149':
+    type: pr
+    date-opened: '2025-01-31T13:38:53Z'
+    date-closed: null
