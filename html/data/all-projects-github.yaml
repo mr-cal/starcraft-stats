@@ -47007,3 +47007,19 @@ issues:
     type: pr
     date-opened: '2025-01-31T16:11:37Z'
     date-closed: '2025-01-31T16:19:13Z'
+  craft-platforms-100:
+    type: pr
+    date-opened: '2025-02-01T05:50:34Z'
+    date-closed: null
+  craft-store-268:
+    type: pr
+    date-opened: '2025-02-01T09:39:49Z'
+    date-closed: null
+  craft-store-267:
+    type: pr
+    date-opened: '2025-02-01T05:56:30Z'
+    date-closed: null
+  starbase-344:
+    type: pr
+    date-opened: '2025-02-01T06:17:45Z'
+    date-closed: null

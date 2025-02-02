@@ -1371,3 +1371,7 @@ issues:
     type: pr
     date-opened: '2025-01-31T16:11:37Z'
     date-closed: '2025-01-31T16:19:13Z'
+  '344':
+    type: pr
+    date-opened: '2025-02-01T06:17:45Z'
+    date-closed: null
