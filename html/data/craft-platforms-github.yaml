@@ -390,12 +390,12 @@ issues:
   '99':
     type: pr
     date-opened: '2025-02-01T01:51:07Z'
-    date-closed: null
+    date-closed: '2025-02-03T16:45:54Z'
   '98':
     type: pr
     date-opened: '2025-01-31T19:06:02Z'
-    date-closed: null
+    date-closed: '2025-02-03T16:21:29Z'
   '100':
     type: pr
     date-opened: '2025-02-01T05:50:34Z'
-    date-closed: null
+    date-closed: '2025-02-03T16:45:07Z'

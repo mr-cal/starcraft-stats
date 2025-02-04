@@ -8495,3 +8495,11 @@ issues:
     type: issue
     date-opened: '2025-01-31T07:48:43Z'
     date-closed: null
+  '2136':
+    type: pr
+    date-opened: '2025-02-03T23:02:53Z'
+    date-closed: null
+  '2135':
+    type: issue
+    date-opened: '2025-02-03T22:56:55Z'
+    date-closed: null
