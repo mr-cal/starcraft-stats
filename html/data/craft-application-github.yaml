@@ -2511,3 +2511,11 @@ issues:
     type: issue
     date-opened: '2025-01-31T19:10:38Z'
     date-closed: '2025-02-03T16:21:30Z'
+  '631':
+    type: pr
+    date-opened: '2025-02-04T20:42:24Z'
+    date-closed: null
+  '630':
+    type: pr
+    date-opened: '2025-02-04T15:59:03Z'
+    date-closed: '2025-02-04T20:14:31Z'

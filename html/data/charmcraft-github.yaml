@@ -8474,7 +8474,7 @@ issues:
   '2128':
     type: pr
     date-opened: '2025-01-29T16:35:34Z'
-    date-closed: null
+    date-closed: '2025-02-04T21:25:44Z'
   '2134':
     type: pr
     date-opened: '2025-01-31T22:07:01Z'
@@ -8498,8 +8498,12 @@ issues:
   '2136':
     type: pr
     date-opened: '2025-02-03T23:02:53Z'
-    date-closed: null
+    date-closed: '2025-02-04T20:31:00Z'
   '2135':
     type: issue
     date-opened: '2025-02-03T22:56:55Z'
+    date-closed: null
+  '2137':
+    type: pr
+    date-opened: '2025-02-04T20:46:03Z'
     date-closed: null
