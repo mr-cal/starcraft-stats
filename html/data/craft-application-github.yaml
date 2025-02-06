@@ -2482,7 +2482,7 @@ issues:
   '616':
     type: pr
     date-opened: '2025-01-28T16:43:54Z'
-    date-closed: null
+    date-closed: '2025-02-05T20:16:13Z'
   '625':
     type: pr
     date-opened: '2025-01-29T18:55:20Z'
@@ -2519,3 +2519,11 @@ issues:
     type: pr
     date-opened: '2025-02-04T15:59:03Z'
     date-closed: '2025-02-04T20:14:31Z'
+  '633':
+    type: pr
+    date-opened: '2025-02-05T21:14:24Z'
+    date-closed: null
+  '632':
+    type: pr
+    date-opened: '2025-02-05T18:47:05Z'
+    date-closed: null

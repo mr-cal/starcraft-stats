@@ -8434,7 +8434,7 @@ issues:
   '2117':
     type: pr
     date-opened: '2025-01-25T09:48:30Z'
-    date-closed: null
+    date-closed: '2025-02-05T19:25:25Z'
   '2116':
     type: pr
     date-opened: '2025-01-25T06:19:58Z'
@@ -8466,7 +8466,7 @@ issues:
   '2125':
     type: issue
     date-opened: '2025-01-28T14:47:24Z'
-    date-closed: null
+    date-closed: '2025-02-05T19:20:43Z'
   '2129':
     type: pr
     date-opened: '2025-01-30T00:30:13Z'
@@ -8478,7 +8478,7 @@ issues:
   '2134':
     type: pr
     date-opened: '2025-01-31T22:07:01Z'
-    date-closed: null
+    date-closed: '2025-02-05T18:12:43Z'
   '2133':
     type: issue
     date-opened: '2025-01-31T14:23:15Z'
@@ -8506,4 +8506,56 @@ issues:
   '2137':
     type: pr
     date-opened: '2025-02-04T20:46:03Z'
+    date-closed: '2025-02-05T16:55:28Z'
+  '2150':
+    type: pr
+    date-opened: '2025-02-06T00:19:02Z'
     date-closed: null
+  '2149':
+    type: issue
+    date-opened: '2025-02-06T00:14:24Z'
+    date-closed: null
+  '2148':
+    type: pr
+    date-opened: '2025-02-05T21:07:34Z'
+    date-closed: null
+  '2147':
+    type: pr
+    date-opened: '2025-02-05T21:02:52Z'
+    date-closed: '2025-02-05T21:05:37Z'
+  '2146':
+    type: pr
+    date-opened: '2025-02-05T20:37:19Z'
+    date-closed: '2025-02-05T23:01:05Z'
+  '2145':
+    type: pr
+    date-opened: '2025-02-05T20:17:22Z'
+    date-closed: null
+  '2144':
+    type: pr
+    date-opened: '2025-02-05T20:07:00Z'
+    date-closed: null
+  '2143':
+    type: pr
+    date-opened: '2025-02-05T19:40:28Z'
+    date-closed: null
+  '2142':
+    type: pr
+    date-opened: '2025-02-05T18:43:13Z'
+    date-closed: '2025-02-05T20:49:34Z'
+  '2141':
+    type: pr
+    date-opened: '2025-02-05T18:21:58Z'
+    date-closed: '2025-02-05T20:19:13Z'
+  '2140':
+    type: pr
+    date-opened: '2025-02-05T18:15:21Z'
+    date-closed: '2025-02-05T19:13:22Z'
+  '2139':
+    type: pr
+    date-opened: '2025-02-05T17:08:36Z'
+    date-closed: '2025-02-05T18:34:01Z'
+  '2138':
+    type: pr
+    date-opened: '2025-02-05T17:01:22Z'
+    date-closed: '2025-02-05T18:10:41Z'
