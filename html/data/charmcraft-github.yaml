@@ -8514,11 +8514,11 @@ issues:
   '2149':
     type: issue
     date-opened: '2025-02-06T00:14:24Z'
-    date-closed: null
+    date-closed: '2025-02-06T19:04:39Z'
   '2148':
     type: pr
     date-opened: '2025-02-05T21:07:34Z'
-    date-closed: null
+    date-closed: '2025-02-06T15:36:29Z'
   '2147':
     type: pr
     date-opened: '2025-02-05T21:02:52Z'
@@ -8559,3 +8559,19 @@ issues:
     type: pr
     date-opened: '2025-02-05T17:01:22Z'
     date-closed: '2025-02-05T18:10:41Z'
+  '2154':
+    type: pr
+    date-opened: '2025-02-06T20:30:41Z'
+    date-closed: null
+  '2153':
+    type: pr
+    date-opened: '2025-02-06T19:33:12Z'
+    date-closed: null
+  '2152':
+    type: pr
+    date-opened: '2025-02-06T16:29:36Z'
+    date-closed: '2025-02-06T19:30:19Z'
+  '2151':
+    type: pr
+    date-opened: '2025-02-06T15:37:09Z'
+    date-closed: '2025-02-06T17:19:19Z'

@@ -4002,7 +4002,7 @@ issues:
   '999':
     type: issue
     date-opened: '2025-01-31T08:28:07Z'
-    date-closed: null
+    date-closed: '2025-02-06T08:11:23Z'
   '1003':
     type: pr
     date-opened: '2025-02-03T19:13:56Z'
@@ -4010,7 +4010,7 @@ issues:
   '1002':
     type: pr
     date-opened: '2025-02-03T10:14:45Z'
-    date-closed: null
+    date-closed: '2025-02-06T08:11:22Z'
   '1005':
     type: pr
     date-opened: '2025-02-04T19:42:19Z'
@@ -4019,3 +4019,11 @@ issues:
     type: pr
     date-opened: '2025-02-04T15:15:56Z'
     date-closed: null
+  '1007':
+    type: issue
+    date-opened: '2025-02-06T20:13:35Z'
+    date-closed: null
+  '1006':
+    type: pr
+    date-opened: '2025-02-06T08:14:10Z'
+    date-closed: '2025-02-06T12:52:13Z'

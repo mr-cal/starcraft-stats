@@ -3210,4 +3210,16 @@ issues:
   '804':
     type: pr
     date-opened: '2025-02-05T20:37:04Z'
+    date-closed: '2025-02-06T12:52:26Z'
+  '807':
+    type: pr
+    date-opened: '2025-02-06T14:44:44Z'
+    date-closed: null
+  '806':
+    type: pr
+    date-opened: '2025-02-06T12:57:00Z'
+    date-closed: null
+  '805':
+    type: issue
+    date-opened: '2025-02-06T06:56:44Z'
     date-closed: null
