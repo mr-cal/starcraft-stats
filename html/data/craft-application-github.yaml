@@ -2458,7 +2458,7 @@ issues:
   '622':
     type: pr
     date-opened: '2025-01-29T00:33:37Z'
-    date-closed: null
+    date-closed: '2025-02-07T17:29:38Z'
   '621':
     type: issue
     date-opened: '2025-01-29T00:09:34Z'
@@ -2514,7 +2514,7 @@ issues:
   '631':
     type: pr
     date-opened: '2025-02-04T20:42:24Z'
-    date-closed: null
+    date-closed: '2025-02-07T17:08:50Z'
   '630':
     type: pr
     date-opened: '2025-02-04T15:59:03Z'
@@ -2526,8 +2526,20 @@ issues:
   '632':
     type: pr
     date-opened: '2025-02-05T18:47:05Z'
-    date-closed: null
+    date-closed: '2025-02-07T22:16:38Z'
   '634':
     type: pr
     date-opened: '2025-02-06T15:19:08Z'
+    date-closed: '2025-02-07T21:20:04Z'
+  '637':
+    type: pr
+    date-opened: '2025-02-07T22:54:24Z'
+    date-closed: null
+  '636':
+    type: pr
+    date-opened: '2025-02-07T20:09:29Z'
+    date-closed: '2025-02-07T20:38:25Z'
+  '635':
+    type: pr
+    date-opened: '2025-02-07T15:55:12Z'
     date-closed: null

@@ -7870,7 +7870,7 @@ issues:
   '1975':
     type: pr
     date-opened: '2024-10-23T07:52:49Z'
-    date-closed: null
+    date-closed: '2025-02-07T23:44:22Z'
   '1977':
     type: issue
     date-opened: '2024-10-30T14:56:00Z'
@@ -8530,15 +8530,15 @@ issues:
   '2145':
     type: pr
     date-opened: '2025-02-05T20:17:22Z'
-    date-closed: null
+    date-closed: '2025-02-07T22:05:07Z'
   '2144':
     type: pr
     date-opened: '2025-02-05T20:07:00Z'
-    date-closed: null
+    date-closed: '2025-02-07T17:25:35Z'
   '2143':
     type: pr
     date-opened: '2025-02-05T19:40:28Z'
-    date-closed: null
+    date-closed: '2025-02-07T20:54:49Z'
   '2142':
     type: pr
     date-opened: '2025-02-05T18:43:13Z'
@@ -8562,11 +8562,11 @@ issues:
   '2154':
     type: pr
     date-opened: '2025-02-06T20:30:41Z'
-    date-closed: null
+    date-closed: '2025-02-07T22:19:03Z'
   '2153':
     type: pr
     date-opened: '2025-02-06T19:33:12Z'
-    date-closed: null
+    date-closed: '2025-02-07T16:15:33Z'
   '2152':
     type: pr
     date-opened: '2025-02-06T16:29:36Z'
