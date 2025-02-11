@@ -1386,8 +1386,16 @@ issues:
   '348':
     type: pr
     date-opened: '2025-02-09T02:22:02Z'
-    date-closed: null
+    date-closed: '2025-02-10T22:18:05Z'
   '347':
     type: pr
     date-opened: '2025-02-08T06:09:50Z'
+    date-closed: '2025-02-10T22:18:33Z'
+  '350':
+    type: pr
+    date-opened: '2025-02-11T00:52:21Z'
+    date-closed: null
+  '349':
+    type: pr
+    date-opened: '2025-02-10T22:16:08Z'
     date-closed: null

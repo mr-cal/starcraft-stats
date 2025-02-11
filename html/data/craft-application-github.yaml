@@ -2534,7 +2534,7 @@ issues:
   '637':
     type: pr
     date-opened: '2025-02-07T22:54:24Z'
-    date-closed: null
+    date-closed: '2025-02-10T18:44:30Z'
   '636':
     type: pr
     date-opened: '2025-02-07T20:09:29Z'
@@ -2546,8 +2546,12 @@ issues:
   '639':
     type: pr
     date-opened: '2025-02-08T10:31:08Z'
-    date-closed: null
+    date-closed: '2025-02-10T13:02:21Z'
   '638':
     type: pr
     date-opened: '2025-02-08T06:09:06Z'
+    date-closed: null
+  '640':
+    type: pr
+    date-opened: '2025-02-10T22:07:52Z'
     date-closed: null

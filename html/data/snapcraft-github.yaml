@@ -20939,3 +20939,11 @@ issues:
     type: issue
     date-opened: '2025-02-07T14:19:48Z'
     date-closed: null
+  '5247':
+    type: pr
+    date-opened: '2025-02-10T21:17:24Z'
+    date-closed: null
+  '5246':
+    type: pr
+    date-opened: '2025-02-10T13:53:14Z'
+    date-closed: '2025-02-10T17:01:33Z'
