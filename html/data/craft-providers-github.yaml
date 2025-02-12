@@ -2870,7 +2870,7 @@ issues:
   '719':
     type: issue
     date-opened: '2025-01-23T22:55:20Z'
-    date-closed: null
+    date-closed: '2025-02-11T23:44:12Z'
   '720':
     type: pr
     date-opened: '2025-01-28T01:00:48Z'
@@ -2882,7 +2882,7 @@ issues:
   '722':
     type: pr
     date-opened: '2025-01-31T08:58:58Z'
-    date-closed: null
+    date-closed: '2025-02-11T14:17:06Z'
   '723':
     type: pr
     date-opened: '2025-02-05T21:59:13Z'
@@ -2890,4 +2890,20 @@ issues:
   '724':
     type: pr
     date-opened: '2025-02-10T21:16:27Z'
+    date-closed: '2025-02-11T23:44:12Z'
+  '728':
+    type: pr
+    date-opened: '2025-02-11T17:26:21Z'
     date-closed: null
+  '727':
+    type: pr
+    date-opened: '2025-02-11T15:37:28Z'
+    date-closed: '2025-02-11T19:36:35Z'
+  '726':
+    type: pr
+    date-opened: '2025-02-11T14:21:04Z'
+    date-closed: '2025-02-11T15:33:05Z'
+  '725':
+    type: pr
+    date-opened: '2025-02-11T13:37:38Z'
+    date-closed: '2025-02-11T15:31:05Z'

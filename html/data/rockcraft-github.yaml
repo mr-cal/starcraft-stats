@@ -3222,7 +3222,7 @@ issues:
   '805':
     type: issue
     date-opened: '2025-02-06T06:56:44Z'
-    date-closed: null
+    date-closed: '2025-02-11T17:07:40Z'
   '808':
     type: issue
     date-opened: '2025-02-07T16:23:21Z'
@@ -3230,7 +3230,7 @@ issues:
   '810':
     type: pr
     date-opened: '2025-02-11T00:28:39Z'
-    date-closed: null
+    date-closed: '2025-02-11T13:58:06Z'
   '809':
     type: pr
     date-opened: '2025-02-10T12:54:10Z'
