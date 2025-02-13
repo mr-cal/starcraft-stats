@@ -2558,4 +2558,8 @@ issues:
   '641':
     type: pr
     date-opened: '2025-02-11T16:02:58Z'
-    date-closed: null
+    date-closed: '2025-02-12T20:31:12Z'
+  '642':
+    type: pr
+    date-opened: '2025-02-12T21:50:00Z'
+    date-closed: '2025-02-12T22:16:03Z'

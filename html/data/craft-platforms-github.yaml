@@ -34,7 +34,7 @@ issues:
   '31':
     type: issue
     date-opened: '2024-08-22T17:40:48Z'
-    date-closed: null
+    date-closed: '2025-02-12T15:40:29Z'
   '30':
     type: pr
     date-opened: '2024-08-17T05:12:46Z'
@@ -402,7 +402,7 @@ issues:
   '101':
     type: pr
     date-opened: '2025-02-04T23:13:44Z'
-    date-closed: null
+    date-closed: '2025-02-12T15:40:28Z'
   '102':
     type: pr
     date-opened: '2025-02-08T06:26:42Z'
@@ -414,4 +414,4 @@ issues:
   '104':
     type: pr
     date-opened: '2025-02-11T16:03:19Z'
-    date-closed: null
+    date-closed: '2025-02-12T17:59:24Z'
