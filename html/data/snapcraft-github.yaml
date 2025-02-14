@@ -20782,7 +20782,7 @@ issues:
   '5206':
     type: issue
     date-opened: '2025-01-16T18:43:25Z'
-    date-closed: null
+    date-closed: '2025-02-13T19:01:33Z'
   '5209':
     type: pr
     date-opened: '2025-01-17T15:45:04Z'
@@ -20846,7 +20846,7 @@ issues:
   '5225':
     type: pr
     date-opened: '2025-01-29T23:04:39Z'
-    date-closed: null
+    date-closed: '2025-02-13T19:01:32Z'
   '5224':
     type: issue
     date-opened: '2025-01-29T19:45:21Z'
@@ -20942,7 +20942,7 @@ issues:
   '5247':
     type: pr
     date-opened: '2025-02-10T21:17:24Z'
-    date-closed: null
+    date-closed: '2025-02-13T21:14:44Z'
   '5246':
     type: pr
     date-opened: '2025-02-10T13:53:14Z'
@@ -20958,11 +20958,11 @@ issues:
   '5254':
     type: pr
     date-opened: '2025-02-11T19:21:25Z'
-    date-closed: null
+    date-closed: '2025-02-13T19:03:22Z'
   '5253':
     type: pr
     date-opened: '2025-02-11T19:21:19Z'
-    date-closed: null
+    date-closed: '2025-02-13T19:03:20Z'
   '5252':
     type: pr
     date-opened: '2025-02-11T19:21:12Z'
@@ -20982,4 +20982,20 @@ issues:
   '5248':
     type: pr
     date-opened: '2025-02-11T13:26:50Z'
+    date-closed: null
+  '5260':
+    type: pr
+    date-opened: '2025-02-13T23:25:54Z'
+    date-closed: null
+  '5259':
+    type: pr
+    date-opened: '2025-02-13T19:58:29Z'
+    date-closed: null
+  '5258':
+    type: issue
+    date-opened: '2025-02-13T16:02:25Z'
+    date-closed: null
+  '5257':
+    type: issue
+    date-opened: '2025-02-13T08:21:34Z'
     date-closed: null

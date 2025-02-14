@@ -8634,4 +8634,20 @@ issues:
   '2168':
     type: pr
     date-opened: '2025-02-12T15:58:13Z'
+    date-closed: '2025-02-13T04:09:29Z'
+  '2173':
+    type: pr
+    date-opened: '2025-02-13T18:12:42Z'
     date-closed: null
+  '2172':
+    type: pr
+    date-opened: '2025-02-13T16:42:37Z'
+    date-closed: '2025-02-13T19:04:42Z'
+  '2171':
+    type: issue
+    date-opened: '2025-02-13T16:15:37Z'
+    date-closed: '2025-02-13T19:04:43Z'
+  '2170':
+    type: pr
+    date-opened: '2025-02-13T10:13:51Z'
+    date-closed: '2025-02-13T23:21:30Z'
