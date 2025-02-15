@@ -415,3 +415,11 @@ issues:
     type: pr
     date-opened: '2025-02-11T16:03:19Z'
     date-closed: '2025-02-12T17:59:24Z'
+  '106':
+    type: pr
+    date-opened: '2025-02-14T17:31:49Z'
+    date-closed: null
+  '105':
+    type: pr
+    date-opened: '2025-02-14T17:31:47Z'
+    date-closed: '2025-02-14T21:57:57Z'

@@ -1330,7 +1330,7 @@ issues:
   '333':
     type: issue
     date-opened: '2024-04-30T13:56:50Z'
-    date-closed: null
+    date-closed: '2025-02-14T04:14:38Z'
   '332':
     type: pr
     date-opened: '2024-04-30T13:05:34Z'
@@ -2582,8 +2582,16 @@ issues:
   '644':
     type: pr
     date-opened: '2025-02-13T22:00:41Z'
-    date-closed: null
+    date-closed: '2025-02-14T16:26:51Z'
   '643':
     type: pr
     date-opened: '2025-02-13T15:20:21Z'
     date-closed: '2025-02-13T16:32:38Z'
+  '650':
+    type: pr
+    date-opened: '2025-02-14T05:09:50Z'
+    date-closed: null
+  '649':
+    type: pr
+    date-opened: '2025-02-14T04:57:18Z'
+    date-closed: null

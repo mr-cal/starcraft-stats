@@ -3206,7 +3206,7 @@ issues:
   '803':
     type: pr
     date-opened: '2025-02-04T16:57:35Z'
-    date-closed: null
+    date-closed: '2025-02-14T16:46:54Z'
   '804':
     type: pr
     date-opened: '2025-02-05T20:37:04Z'
@@ -3238,7 +3238,7 @@ issues:
   '814':
     type: pr
     date-opened: '2025-02-13T01:41:21Z'
-    date-closed: null
+    date-closed: '2025-02-14T15:48:33Z'
   '813':
     type: issue
     date-opened: '2025-02-12T18:38:17Z'
