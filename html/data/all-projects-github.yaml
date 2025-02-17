@@ -46214,7 +46214,7 @@ issues:
   rockcraft-788:
     type: pr
     date-opened: '2025-01-15T12:50:08Z'
-    date-closed: null
+    date-closed: '2025-02-16T20:55:49Z'
   snapcraft-5205:
     type: pr
     date-opened: '2025-01-15T20:23:32Z'
@@ -47514,7 +47514,7 @@ issues:
   rockcraft-811:
     type: pr
     date-opened: '2025-02-12T13:08:18Z'
-    date-closed: null
+    date-closed: '2025-02-16T20:55:49Z'
   starbase-352:
     type: issue
     date-opened: '2025-02-12T18:26:58Z'
@@ -47654,4 +47654,8 @@ issues:
   starbase-354:
     type: pr
     date-opened: '2025-02-15T05:06:24Z'
+    date-closed: null
+  starbase-355:
+    type: pr
+    date-opened: '2025-02-17T01:00:17Z'
     date-closed: null

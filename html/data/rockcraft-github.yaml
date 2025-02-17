@@ -3146,7 +3146,7 @@ issues:
   '788':
     type: pr
     date-opened: '2025-01-15T12:50:08Z'
-    date-closed: null
+    date-closed: '2025-02-16T20:55:49Z'
   '789':
     type: issue
     date-opened: '2025-01-16T21:00:34Z'
@@ -3250,7 +3250,7 @@ issues:
   '811':
     type: pr
     date-opened: '2025-02-12T13:08:18Z'
-    date-closed: null
+    date-closed: '2025-02-16T20:55:49Z'
   '816':
     type: pr
     date-opened: '2025-02-14T02:54:39Z'
