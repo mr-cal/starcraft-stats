@@ -2554,7 +2554,7 @@ issues:
   '640':
     type: pr
     date-opened: '2025-02-10T22:07:52Z'
-    date-closed: null
+    date-closed: '2025-02-18T14:12:40Z'
   '641':
     type: pr
     date-opened: '2025-02-11T16:02:58Z'
@@ -2578,7 +2578,7 @@ issues:
   '645':
     type: pr
     date-opened: '2025-02-13T23:13:40Z'
-    date-closed: null
+    date-closed: '2025-02-18T22:06:28Z'
   '644':
     type: pr
     date-opened: '2025-02-13T22:00:41Z'
@@ -2598,4 +2598,12 @@ issues:
   '651':
     type: pr
     date-opened: '2025-02-15T05:05:43Z'
+    date-closed: null
+  '653':
+    type: pr
+    date-opened: '2025-02-18T22:10:45Z'
+    date-closed: null
+  '652':
+    type: pr
+    date-opened: '2025-02-18T21:30:01Z'
     date-closed: null
