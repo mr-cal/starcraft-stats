@@ -8674,7 +8674,7 @@ issues:
   '2182':
     type: pr
     date-opened: '2025-02-20T01:29:43Z'
-    date-closed: null
+    date-closed: '2025-02-20T21:17:31Z'
   '2181':
     type: pr
     date-opened: '2025-02-19T22:40:55Z'
@@ -8686,4 +8686,20 @@ issues:
   '2179':
     type: pr
     date-opened: '2025-02-19T21:08:58Z'
+    date-closed: '2025-02-20T18:21:55Z'
+  '2186':
+    type: pr
+    date-opened: '2025-02-20T22:22:00Z'
+    date-closed: null
+  '2185':
+    type: pr
+    date-opened: '2025-02-20T21:59:21Z'
+    date-closed: null
+  '2184':
+    type: pr
+    date-opened: '2025-02-20T21:58:24Z'
+    date-closed: null
+  '2183':
+    type: pr
+    date-opened: '2025-02-20T20:34:39Z'
     date-closed: null
