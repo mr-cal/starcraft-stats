@@ -3694,7 +3694,7 @@ issues:
   '687':
     type: issue
     date-opened: '2022-02-24T00:36:09Z'
-    date-closed: null
+    date-closed: '2025-02-21T19:34:20Z'
   '686':
     type: issue
     date-opened: '2022-02-23T17:49:55Z'
@@ -8702,4 +8702,12 @@ issues:
   '2183':
     type: pr
     date-opened: '2025-02-20T20:34:39Z'
+    date-closed: '2025-02-21T19:34:19Z'
+  '2188':
+    type: pr
+    date-opened: '2025-02-21T18:28:22Z'
+    date-closed: null
+  '2187':
+    type: pr
+    date-opened: '2025-02-21T11:52:02Z'
     date-closed: null

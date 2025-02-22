@@ -2618,8 +2618,20 @@ issues:
   '654':
     type: pr
     date-opened: '2025-02-19T17:38:31Z'
-    date-closed: null
+    date-closed: '2025-02-21T15:28:46Z'
   '657':
     type: pr
     date-opened: '2025-02-20T18:56:05Z'
     date-closed: '2025-02-20T20:58:18Z'
+  '660':
+    type: pr
+    date-opened: '2025-02-21T20:49:14Z'
+    date-closed: null
+  '659':
+    type: pr
+    date-opened: '2025-02-21T18:21:21Z'
+    date-closed: null
+  '658':
+    type: pr
+    date-opened: '2025-02-21T18:10:56Z'
+    date-closed: null

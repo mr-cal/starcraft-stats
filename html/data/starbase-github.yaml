@@ -450,7 +450,7 @@ issues:
   '82':
     type: issue
     date-opened: '2023-06-05T18:04:04Z'
-    date-closed: null
+    date-closed: '2025-02-21T16:22:07Z'
   '81':
     type: issue
     date-opened: '2023-06-03T01:37:39Z'
@@ -1422,4 +1422,8 @@ issues:
   '356':
     type: pr
     date-opened: '2025-02-20T14:33:58Z'
+    date-closed: '2025-02-21T16:20:41Z'
+  '357':
+    type: issue
+    date-opened: '2025-02-21T19:51:34Z'
     date-closed: null
