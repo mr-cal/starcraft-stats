@@ -47851,3 +47851,19 @@ issues:
     type: issue
     date-opened: '2025-02-21T19:51:34Z'
     date-closed: null
+  charmcraft-2190:
+    type: pr
+    date-opened: '2025-02-22T08:52:33Z'
+    date-closed: null
+  charmcraft-2189:
+    type: pr
+    date-opened: '2025-02-22T05:09:41Z'
+    date-closed: null
+  craft-platforms-108:
+    type: pr
+    date-opened: '2025-02-22T21:08:22Z'
+    date-closed: null
+  craft-platforms-107:
+    type: pr
+    date-opened: '2025-02-22T06:18:15Z'
+    date-closed: null

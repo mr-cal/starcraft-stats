@@ -8711,3 +8711,11 @@ issues:
     type: pr
     date-opened: '2025-02-21T11:52:02Z'
     date-closed: null
+  '2190':
+    type: pr
+    date-opened: '2025-02-22T08:52:33Z'
+    date-closed: null
+  '2189':
+    type: pr
+    date-opened: '2025-02-22T05:09:41Z'
+    date-closed: null
