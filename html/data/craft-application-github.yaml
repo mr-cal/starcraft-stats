@@ -2598,7 +2598,7 @@ issues:
   '651':
     type: pr
     date-opened: '2025-02-15T05:05:43Z'
-    date-closed: null
+    date-closed: '2025-02-24T17:56:16Z'
   '653':
     type: pr
     date-opened: '2025-02-18T22:10:45Z'
@@ -2626,7 +2626,7 @@ issues:
   '660':
     type: pr
     date-opened: '2025-02-21T20:49:14Z'
-    date-closed: null
+    date-closed: '2025-02-24T15:01:55Z'
   '659':
     type: pr
     date-opened: '2025-02-21T18:21:21Z'
@@ -2634,4 +2634,8 @@ issues:
   '658':
     type: pr
     date-opened: '2025-02-21T18:10:56Z'
+    date-closed: null
+  '661':
+    type: pr
+    date-opened: '2025-02-24T17:20:23Z'
     date-closed: null

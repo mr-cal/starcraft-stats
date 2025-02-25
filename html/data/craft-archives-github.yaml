@@ -594,7 +594,7 @@ issues:
   '150':
     type: issue
     date-opened: '2025-01-31T14:11:30Z'
-    date-closed: null
+    date-closed: '2025-02-24T21:28:21Z'
   '149':
     type: pr
     date-opened: '2025-01-31T13:38:53Z'
@@ -610,4 +610,4 @@ issues:
   '153':
     type: pr
     date-opened: '2025-02-20T15:02:32Z'
-    date-closed: null
+    date-closed: '2025-02-24T21:28:20Z'

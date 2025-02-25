@@ -21062,16 +21062,20 @@ issues:
   '5277':
     type: pr
     date-opened: '2025-02-21T20:31:20Z'
-    date-closed: null
+    date-closed: '2025-02-24T15:53:04Z'
   '5276':
     type: pr
     date-opened: '2025-02-21T18:29:39Z'
-    date-closed: null
+    date-closed: '2025-02-24T19:10:49Z'
   '5279':
     type: pr
     date-opened: '2025-02-23T21:05:12Z'
-    date-closed: null
+    date-closed: '2025-02-24T21:31:58Z'
   '5278':
     type: issue
     date-opened: '2025-02-23T12:28:04Z'
     date-closed: null
+  '5280':
+    type: pr
+    date-opened: '2025-02-24T16:25:05Z'
+    date-closed: '2025-02-25T00:57:58Z'

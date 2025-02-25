@@ -4078,7 +4078,7 @@ issues:
   '1021':
     type: pr
     date-opened: '2025-02-20T22:56:25Z'
-    date-closed: null
+    date-closed: '2025-02-24T19:12:10Z'
   '1020':
     type: pr
     date-opened: '2025-02-20T14:06:39Z'
@@ -4090,4 +4090,4 @@ issues:
   '1022':
     type: pr
     date-opened: '2025-02-21T18:30:48Z'
-    date-closed: null
+    date-closed: '2025-02-24T14:21:00Z'
