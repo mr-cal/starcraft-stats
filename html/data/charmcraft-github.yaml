@@ -8710,7 +8710,7 @@ issues:
   '2187':
     type: pr
     date-opened: '2025-02-21T11:52:02Z'
-    date-closed: null
+    date-closed: '2025-02-26T02:53:22Z'
   '2190':
     type: pr
     date-opened: '2025-02-22T08:52:33Z'
@@ -8726,7 +8726,7 @@ issues:
   '2193':
     type: pr
     date-opened: '2025-02-24T20:45:50Z'
-    date-closed: null
+    date-closed: '2025-02-26T00:48:04Z'
   '2192':
     type: issue
     date-opened: '2025-02-24T18:55:58Z'
