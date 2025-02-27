@@ -4095,3 +4095,7 @@ issues:
     type: pr
     date-opened: '2025-02-25T21:23:04Z'
     date-closed: null
+  '1025':
+    type: issue
+    date-opened: '2025-02-26T19:44:29Z'
+    date-closed: null

@@ -6,7 +6,7 @@ issues:
   '104':
     type: issue
     date-opened: '2024-01-26T11:40:17Z'
-    date-closed: null
+    date-closed: '2025-02-26T22:05:40Z'
   '103':
     type: pr
     date-opened: '2023-12-14T16:12:02Z'
@@ -598,7 +598,7 @@ issues:
   '149':
     type: pr
     date-opened: '2025-01-31T13:38:53Z'
-    date-closed: null
+    date-closed: '2025-02-26T22:07:58Z'
   '151':
     type: issue
     date-opened: '2025-02-04T17:17:38Z'

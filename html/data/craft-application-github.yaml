@@ -2638,12 +2638,16 @@ issues:
   '661':
     type: pr
     date-opened: '2025-02-24T17:20:23Z'
-    date-closed: null
+    date-closed: '2025-02-26T18:45:08Z'
   '663':
     type: pr
     date-opened: '2025-02-25T19:49:10Z'
-    date-closed: null
+    date-closed: '2025-02-26T14:46:35Z'
   '662':
     type: issue
     date-opened: '2025-02-25T17:56:02Z'
+    date-closed: null
+  '664':
+    type: pr
+    date-opened: '2025-02-26T13:04:36Z'
     date-closed: null

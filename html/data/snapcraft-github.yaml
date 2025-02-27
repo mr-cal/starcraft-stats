@@ -20890,7 +20890,7 @@ issues:
   '5233':
     type: pr
     date-opened: '2025-01-31T15:47:54Z'
-    date-closed: null
+    date-closed: '2025-02-26T22:03:59Z'
   '5235':
     type: pr
     date-opened: '2025-02-05T02:23:00Z'
@@ -21094,4 +21094,28 @@ issues:
   '5281':
     type: pr
     date-opened: '2025-02-25T14:13:38Z'
+    date-closed: '2025-02-26T21:59:27Z'
+  '5290':
+    type: pr
+    date-opened: '2025-02-26T23:46:21Z'
     date-closed: null
+  '5289':
+    type: pr
+    date-opened: '2025-02-26T21:53:05Z'
+    date-closed: null
+  '5288':
+    type: issue
+    date-opened: '2025-02-26T21:24:18Z'
+    date-closed: null
+  '5287':
+    type: pr
+    date-opened: '2025-02-26T21:20:59Z'
+    date-closed: null
+  '5286':
+    type: pr
+    date-opened: '2025-02-26T18:45:31Z'
+    date-closed: null
+  '5285':
+    type: pr
+    date-opened: '2025-02-26T15:57:50Z'
+    date-closed: '2025-02-26T17:26:50Z'
