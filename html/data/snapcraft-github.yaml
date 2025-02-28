@@ -19694,7 +19694,7 @@ issues:
   '4932':
     type: issue
     date-opened: '2024-07-22T13:19:03Z'
-    date-closed: null
+    date-closed: '2025-02-27T19:08:11Z'
   '4931':
     type: issue
     date-opened: '2024-07-22T12:22:08Z'
@@ -20786,7 +20786,7 @@ issues:
   '5209':
     type: pr
     date-opened: '2025-01-17T15:45:04Z'
-    date-closed: null
+    date-closed: '2025-02-27T19:08:10Z'
   '5208':
     type: pr
     date-opened: '2025-01-17T15:40:45Z'
@@ -20822,7 +20822,7 @@ issues:
   '5217':
     type: issue
     date-opened: '2025-01-23T22:20:36Z'
-    date-closed: null
+    date-closed: '2025-02-27T21:24:24Z'
   '5216':
     type: pr
     date-opened: '2025-01-23T21:38:49Z'
@@ -20970,7 +20970,7 @@ issues:
   '5251':
     type: pr
     date-opened: '2025-02-11T19:19:30Z'
-    date-closed: null
+    date-closed: '2025-02-27T21:28:40Z'
   '5250':
     type: pr
     date-opened: '2025-02-11T14:58:28Z'
@@ -20978,7 +20978,7 @@ issues:
   '5249':
     type: pr
     date-opened: '2025-02-11T13:36:55Z'
-    date-closed: null
+    date-closed: '2025-02-28T01:36:10Z'
   '5248':
     type: pr
     date-opened: '2025-02-11T13:26:50Z'
@@ -21086,7 +21086,7 @@ issues:
   '5283':
     type: pr
     date-opened: '2025-02-25T19:55:48Z'
-    date-closed: null
+    date-closed: '2025-02-27T23:17:09Z'
   '5282':
     type: issue
     date-opened: '2025-02-25T14:52:31Z'
@@ -21098,15 +21098,15 @@ issues:
   '5290':
     type: pr
     date-opened: '2025-02-26T23:46:21Z'
-    date-closed: null
+    date-closed: '2025-02-27T21:24:23Z'
   '5289':
     type: pr
     date-opened: '2025-02-26T21:53:05Z'
-    date-closed: null
+    date-closed: '2025-02-27T14:19:28Z'
   '5288':
     type: issue
     date-opened: '2025-02-26T21:24:18Z'
-    date-closed: null
+    date-closed: '2025-02-27T14:19:10Z'
   '5287':
     type: pr
     date-opened: '2025-02-26T21:20:59Z'
@@ -21114,8 +21114,20 @@ issues:
   '5286':
     type: pr
     date-opened: '2025-02-26T18:45:31Z'
-    date-closed: null
+    date-closed: '2025-02-27T21:24:57Z'
   '5285':
     type: pr
     date-opened: '2025-02-26T15:57:50Z'
     date-closed: '2025-02-26T17:26:50Z'
+  '5293':
+    type: pr
+    date-opened: '2025-02-27T21:44:33Z'
+    date-closed: '2025-02-28T01:25:46Z'
+  '5292':
+    type: pr
+    date-opened: '2025-02-27T16:23:44Z'
+    date-closed: null
+  '5291':
+    type: issue
+    date-opened: '2025-02-27T13:37:04Z'
+    date-closed: null
