@@ -3282,12 +3282,20 @@ issues:
   '824':
     type: pr
     date-opened: '2025-02-27T17:46:06Z'
-    date-closed: null
+    date-closed: '2025-02-28T20:03:06Z'
   '823':
     type: pr
     date-opened: '2025-02-27T14:17:21Z'
-    date-closed: null
+    date-closed: '2025-02-28T13:08:58Z'
   '822':
     type: pr
     date-opened: '2025-02-27T13:57:22Z'
     date-closed: null
+  '826':
+    type: pr
+    date-opened: '2025-02-28T18:46:57Z'
+    date-closed: '2025-02-28T23:13:28Z'
+  '825':
+    type: pr
+    date-opened: '2025-02-28T15:44:49Z'
+    date-closed: '2025-02-28T18:00:25Z'
