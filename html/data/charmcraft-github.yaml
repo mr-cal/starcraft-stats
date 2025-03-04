@@ -8482,7 +8482,7 @@ issues:
   '2133':
     type: issue
     date-opened: '2025-01-31T14:23:15Z'
-    date-closed: null
+    date-closed: '2025-03-03T14:46:04Z'
   '2132':
     type: issue
     date-opened: '2025-01-31T13:38:37Z'
@@ -8750,4 +8750,8 @@ issues:
   '2198':
     type: pr
     date-opened: '2025-03-01T05:00:30Z'
+    date-closed: null
+  '2199':
+    type: pr
+    date-opened: '2025-03-03T07:30:43Z'
     date-closed: null

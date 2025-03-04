@@ -3299,3 +3299,7 @@ issues:
     type: pr
     date-opened: '2025-02-28T15:44:49Z'
     date-closed: '2025-02-28T18:00:25Z'
+  '827':
+    type: pr
+    date-opened: '2025-03-03T14:34:47Z'
+    date-closed: null

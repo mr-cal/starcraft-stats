@@ -1438,8 +1438,12 @@ issues:
   '360':
     type: pr
     date-opened: '2025-02-28T19:03:54Z'
-    date-closed: null
+    date-closed: '2025-03-03T13:41:42Z'
   '361':
     type: pr
     date-opened: '2025-03-02T00:51:12Z'
+    date-closed: null
+  '362':
+    type: pr
+    date-opened: '2025-03-03T20:50:13Z'
     date-closed: null
