@@ -3254,7 +3254,7 @@ issues:
   '816':
     type: pr
     date-opened: '2025-02-14T02:54:39Z'
-    date-closed: null
+    date-closed: '2025-03-04T19:31:20Z'
   '815':
     type: pr
     date-opened: '2025-02-13T13:54:11Z'
@@ -3302,4 +3302,8 @@ issues:
   '827':
     type: pr
     date-opened: '2025-03-03T14:34:47Z'
+    date-closed: null
+  '828':
+    type: pr
+    date-opened: '2025-03-04T16:58:52Z'
     date-closed: null

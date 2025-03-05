@@ -8742,7 +8742,7 @@ issues:
   '2196':
     type: pr
     date-opened: '2025-02-27T12:57:49Z'
-    date-closed: null
+    date-closed: '2025-03-04T18:45:09Z'
   '2197':
     type: pr
     date-opened: '2025-02-28T19:59:50Z'
@@ -8754,4 +8754,16 @@ issues:
   '2199':
     type: pr
     date-opened: '2025-03-03T07:30:43Z'
+    date-closed: '2025-03-04T21:27:54Z'
+  '2202':
+    type: pr
+    date-opened: '2025-03-04T18:01:34Z'
+    date-closed: null
+  '2201':
+    type: issue
+    date-opened: '2025-03-04T17:29:03Z'
+    date-closed: null
+  '2200':
+    type: pr
+    date-opened: '2025-03-04T16:47:26Z'
     date-closed: null

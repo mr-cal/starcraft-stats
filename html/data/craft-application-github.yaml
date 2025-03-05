@@ -2654,11 +2654,11 @@ issues:
   '667':
     type: pr
     date-opened: '2025-02-28T03:43:10Z'
-    date-closed: null
+    date-closed: '2025-03-04T22:30:03Z'
   '666':
     type: pr
     date-opened: '2025-02-27T19:24:26Z'
-    date-closed: null
+    date-closed: '2025-03-04T21:32:41Z'
   '665':
     type: pr
     date-opened: '2025-02-27T13:37:19Z'
@@ -2670,4 +2670,20 @@ issues:
   '669':
     type: issue
     date-opened: '2025-03-03T14:54:44Z'
+    date-closed: null
+  '673':
+    type: pr
+    date-opened: '2025-03-04T20:49:16Z'
+    date-closed: null
+  '672':
+    type: pr
+    date-opened: '2025-03-04T19:10:34Z'
+    date-closed: null
+  '671':
+    type: pr
+    date-opened: '2025-03-04T18:52:17Z'
+    date-closed: null
+  '670':
+    type: issue
+    date-opened: '2025-03-04T14:29:05Z'
     date-closed: null
