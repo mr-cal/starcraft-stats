@@ -2630,11 +2630,11 @@ issues:
   '659':
     type: pr
     date-opened: '2025-02-21T18:21:21Z'
-    date-closed: null
+    date-closed: '2025-03-05T23:35:36Z'
   '658':
     type: pr
     date-opened: '2025-02-21T18:10:56Z'
-    date-closed: null
+    date-closed: '2025-03-05T18:25:38Z'
   '661':
     type: pr
     date-opened: '2025-02-24T17:20:23Z'
@@ -2686,4 +2686,12 @@ issues:
   '670':
     type: issue
     date-opened: '2025-03-04T14:29:05Z'
+    date-closed: null
+  '675':
+    type: pr
+    date-opened: '2025-03-06T00:08:06Z'
+    date-closed: null
+  '674':
+    type: pr
+    date-opened: '2025-03-05T21:57:07Z'
     date-closed: null
