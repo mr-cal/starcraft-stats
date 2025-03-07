@@ -4123,3 +4123,15 @@ issues:
     type: pr
     date-opened: '2025-03-05T20:43:19Z'
     date-closed: null
+  '1034':
+    type: pr
+    date-opened: '2025-03-06T16:24:26Z'
+    date-closed: '2025-03-06T20:33:57Z'
+  '1033':
+    type: pr
+    date-opened: '2025-03-06T16:20:27Z'
+    date-closed: null
+  '1032':
+    type: pr
+    date-opened: '2025-03-06T09:47:14Z'
+    date-closed: null
