@@ -48030,7 +48030,7 @@ issues:
   craft-parts-1027:
     type: issue
     date-opened: '2025-02-28T18:08:04Z'
-    date-closed: null
+    date-closed: '2025-03-07T19:21:48Z'
   craft-platforms-109:
     type: issue
     date-opened: '2025-02-28T14:20:29Z'
@@ -48142,7 +48142,7 @@ issues:
   snapcraft-5301:
     type: pr
     date-opened: '2025-03-04T19:55:03Z'
-    date-closed: null
+    date-closed: '2025-03-07T13:11:14Z'
   snapcraft-5300:
     type: pr
     date-opened: '2025-03-04T17:48:25Z'
@@ -48174,7 +48174,7 @@ issues:
   craft-application-674:
     type: pr
     date-opened: '2025-03-05T21:57:07Z'
-    date-closed: null
+    date-closed: '2025-03-07T18:04:58Z'
   craft-parts-1031:
     type: pr
     date-opened: '2025-03-05T20:43:19Z'
@@ -48254,7 +48254,7 @@ issues:
   craft-parts-1033:
     type: pr
     date-opened: '2025-03-06T16:20:27Z'
-    date-closed: null
+    date-closed: '2025-03-07T19:21:47Z'
   craft-parts-1032:
     type: pr
     date-opened: '2025-03-06T09:47:14Z'
@@ -48262,7 +48262,7 @@ issues:
   rockcraft-830:
     type: pr
     date-opened: '2025-03-06T06:44:03Z'
-    date-closed: null
+    date-closed: '2025-03-07T12:43:56Z'
   rockcraft-829:
     type: pr
     date-opened: '2025-03-06T06:27:58Z'
@@ -48299,3 +48299,31 @@ issues:
     type: pr
     date-opened: '2025-03-06T08:48:30Z'
     date-closed: '2025-03-06T23:05:01Z'
+  craft-grammar-77:
+    type: pr
+    date-opened: '2025-03-07T13:44:20Z'
+    date-closed: '2025-03-07T14:25:12Z'
+  craft-grammar-76:
+    type: pr
+    date-opened: '2025-03-07T10:08:12Z'
+    date-closed: '2025-03-07T15:37:39Z'
+  craft-grammar-75:
+    type: pr
+    date-opened: '2025-03-07T10:03:35Z'
+    date-closed: '2025-03-07T13:20:56Z'
+  rockcraft-831:
+    type: pr
+    date-opened: '2025-03-07T12:43:41Z'
+    date-closed: '2025-03-07T21:19:59Z'
+  snapcraft-5316:
+    type: issue
+    date-opened: '2025-03-07T22:59:20Z'
+    date-closed: null
+  snapcraft-5315:
+    type: pr
+    date-opened: '2025-03-07T14:21:05Z'
+    date-closed: null
+  snapcraft-5314:
+    type: pr
+    date-opened: '2025-03-07T13:21:34Z'
+    date-closed: null

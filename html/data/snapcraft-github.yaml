@@ -21150,7 +21150,7 @@ issues:
   '5301':
     type: pr
     date-opened: '2025-03-04T19:55:03Z'
-    date-closed: null
+    date-closed: '2025-03-07T13:11:14Z'
   '5300':
     type: pr
     date-opened: '2025-03-04T17:48:25Z'
@@ -21211,3 +21211,15 @@ issues:
     type: pr
     date-opened: '2025-03-06T08:48:30Z'
     date-closed: '2025-03-06T23:05:01Z'
+  '5316':
+    type: issue
+    date-opened: '2025-03-07T22:59:20Z'
+    date-closed: null
+  '5315':
+    type: pr
+    date-opened: '2025-03-07T14:21:05Z'
+    date-closed: null
+  '5314':
+    type: pr
+    date-opened: '2025-03-07T13:21:34Z'
+    date-closed: null

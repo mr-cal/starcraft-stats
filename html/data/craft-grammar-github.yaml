@@ -295,3 +295,15 @@ issues:
     type: issue
     date-opened: '2025-02-26T10:03:47Z'
     date-closed: '2025-03-06T14:32:46Z'
+  '77':
+    type: pr
+    date-opened: '2025-03-07T13:44:20Z'
+    date-closed: '2025-03-07T14:25:12Z'
+  '76':
+    type: pr
+    date-opened: '2025-03-07T10:08:12Z'
+    date-closed: '2025-03-07T15:37:39Z'
+  '75':
+    type: pr
+    date-opened: '2025-03-07T10:03:35Z'
+    date-closed: '2025-03-07T13:20:56Z'

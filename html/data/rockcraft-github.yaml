@@ -3310,8 +3310,12 @@ issues:
   '830':
     type: pr
     date-opened: '2025-03-06T06:44:03Z'
-    date-closed: null
+    date-closed: '2025-03-07T12:43:56Z'
   '829':
     type: pr
     date-opened: '2025-03-06T06:27:58Z'
     date-closed: '2025-03-06T06:29:15Z'
+  '831':
+    type: pr
+    date-opened: '2025-03-07T12:43:41Z'
+    date-closed: '2025-03-07T21:19:59Z'
