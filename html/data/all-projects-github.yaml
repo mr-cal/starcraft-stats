@@ -48327,3 +48327,23 @@ issues:
     type: pr
     date-opened: '2025-03-07T13:21:34Z'
     date-closed: null
+  craft-grammar-79:
+    type: pr
+    date-opened: '2025-03-08T08:53:37Z'
+    date-closed: null
+  craft-grammar-78:
+    type: pr
+    date-opened: '2025-03-08T04:44:05Z'
+    date-closed: null
+  craft-parts-1035:
+    type: pr
+    date-opened: '2025-03-08T18:54:36Z'
+    date-closed: null
+  snapcraft-5318:
+    type: pr
+    date-opened: '2025-03-08T09:05:09Z'
+    date-closed: null
+  snapcraft-5317:
+    type: pr
+    date-opened: '2025-03-08T04:29:24Z'
+    date-closed: null
