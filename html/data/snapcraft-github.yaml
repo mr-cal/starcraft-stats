@@ -21182,7 +21182,7 @@ issues:
   '5313':
     type: pr
     date-opened: '2025-03-06T21:40:16Z'
-    date-closed: null
+    date-closed: '2025-03-10T12:51:28Z'
   '5312':
     type: pr
     date-opened: '2025-03-06T17:26:16Z'
@@ -21218,16 +21218,20 @@ issues:
   '5315':
     type: pr
     date-opened: '2025-03-07T14:21:05Z'
-    date-closed: null
+    date-closed: '2025-03-10T16:41:37Z'
   '5314':
     type: pr
     date-opened: '2025-03-07T13:21:34Z'
-    date-closed: null
+    date-closed: '2025-03-10T14:58:26Z'
   '5318':
     type: pr
     date-opened: '2025-03-08T09:05:09Z'
-    date-closed: null
+    date-closed: '2025-03-10T19:43:33Z'
   '5317':
     type: pr
     date-opened: '2025-03-08T04:29:24Z'
+    date-closed: '2025-03-10T21:30:27Z'
+  '5319':
+    type: pr
+    date-opened: '2025-03-10T19:54:38Z'
     date-closed: null

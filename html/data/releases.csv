@@ -1,10 +1,10 @@
 app,branch,latest tag,commits since tag
-charmcraft,main,3.4.3,53
+charmcraft,main,3.4.3,54
 charmcraft,hotfix/2.7,2.7.5,0
 charmcraft,hotfix/3.3,3.3.3,0
 charmcraft,hotfix/3.4,3.4.3,0
-rockcraft,main,1.9.0,4
+rockcraft,main,1.9.0,5
 rockcraft,hotfix/1.5,1.5.3,0
-snapcraft,main,8.7.1,34
+snapcraft,main,8.7.1,39
 snapcraft,hotfix/7.5,7.5.8,0
 snapcraft,hotfix/8.7,8.7.2,0

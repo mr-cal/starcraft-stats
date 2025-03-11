@@ -3130,7 +3130,7 @@ issues:
   '784':
     type: pr
     date-opened: '2025-01-02T03:15:55Z'
-    date-closed: null
+    date-closed: '2025-03-10T14:25:06Z'
   '785':
     type: issue
     date-opened: '2025-01-06T06:04:08Z'
@@ -3319,3 +3319,7 @@ issues:
     type: pr
     date-opened: '2025-03-07T12:43:41Z'
     date-closed: '2025-03-07T21:19:59Z'
+  '832':
+    type: pr
+    date-opened: '2025-03-10T15:26:59Z'
+    date-closed: null
