@@ -310,8 +310,12 @@ issues:
   '79':
     type: pr
     date-opened: '2025-03-08T08:53:37Z'
-    date-closed: null
+    date-closed: '2025-03-11T13:02:56Z'
   '78':
     type: pr
     date-opened: '2025-03-08T04:44:05Z'
-    date-closed: null
+    date-closed: '2025-03-11T08:26:09Z'
+  '80':
+    type: pr
+    date-opened: '2025-03-11T13:19:47Z'
+    date-closed: '2025-03-11T19:29:33Z'

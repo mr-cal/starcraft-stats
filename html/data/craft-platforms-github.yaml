@@ -435,3 +435,11 @@ issues:
     type: issue
     date-opened: '2025-02-28T14:20:29Z'
     date-closed: null
+  '111':
+    type: pr
+    date-opened: '2025-03-11T13:32:43Z'
+    date-closed: '2025-03-11T18:23:28Z'
+  '110':
+    type: pr
+    date-opened: '2025-03-11T13:09:28Z'
+    date-closed: '2025-03-11T18:49:17Z'

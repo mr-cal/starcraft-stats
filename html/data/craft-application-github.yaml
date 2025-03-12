@@ -2670,7 +2670,7 @@ issues:
   '669':
     type: issue
     date-opened: '2025-03-03T14:54:44Z'
-    date-closed: null
+    date-closed: '2025-03-11T15:03:57Z'
   '673':
     type: pr
     date-opened: '2025-03-04T20:49:16Z'
@@ -2682,7 +2682,7 @@ issues:
   '671':
     type: pr
     date-opened: '2025-03-04T18:52:17Z'
-    date-closed: null
+    date-closed: '2025-03-11T17:19:12Z'
   '670':
     type: issue
     date-opened: '2025-03-04T14:29:05Z'
@@ -2698,8 +2698,12 @@ issues:
   '677':
     type: pr
     date-opened: '2025-03-07T00:38:47Z'
-    date-closed: null
+    date-closed: '2025-03-12T00:57:13Z'
   '676':
     type: issue
     date-opened: '2025-03-07T00:21:00Z'
+    date-closed: null
+  '678':
+    type: pr
+    date-opened: '2025-03-11T13:31:10Z'
     date-closed: null
