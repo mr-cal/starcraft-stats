@@ -1090,15 +1090,15 @@ issues:
   '273':
     type: pr
     date-opened: '2025-02-15T04:38:07Z'
-    date-closed: null
+    date-closed: '2025-03-12T17:48:33Z'
   '277':
     type: pr
     date-opened: '2025-03-11T18:43:04Z'
-    date-closed: null
+    date-closed: '2025-03-12T17:35:50Z'
   '276':
     type: pr
     date-opened: '2025-03-11T18:20:54Z'
-    date-closed: null
+    date-closed: '2025-03-12T12:50:50Z'
   '275':
     type: pr
     date-opened: '2025-03-11T13:33:49Z'
@@ -1106,4 +1106,4 @@ issues:
   '274':
     type: pr
     date-opened: '2025-03-11T13:26:18Z'
-    date-closed: null
+    date-closed: '2025-03-12T17:39:17Z'

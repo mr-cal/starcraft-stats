@@ -8654,7 +8654,7 @@ issues:
   '2174':
     type: issue
     date-opened: '2025-02-14T09:58:24Z'
-    date-closed: null
+    date-closed: '2025-03-12T18:55:14Z'
   '2178':
     type: pr
     date-opened: '2025-02-15T20:08:42Z'
@@ -8834,4 +8834,8 @@ issues:
   '2218':
     type: issue
     date-opened: '2025-03-11T04:14:04Z'
+    date-closed: null
+  '2220':
+    type: pr
+    date-opened: '2025-03-12T19:26:28Z'
     date-closed: null

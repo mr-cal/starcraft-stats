@@ -2666,7 +2666,7 @@ issues:
   '668':
     type: pr
     date-opened: '2025-03-02T20:27:32Z'
-    date-closed: null
+    date-closed: '2025-03-12T19:21:53Z'
   '669':
     type: issue
     date-opened: '2025-03-03T14:54:44Z'
@@ -2706,4 +2706,8 @@ issues:
   '678':
     type: pr
     date-opened: '2025-03-11T13:31:10Z'
+    date-closed: '2025-03-12T12:57:22Z'
+  '679':
+    type: issue
+    date-opened: '2025-03-12T07:50:54Z'
     date-closed: null
