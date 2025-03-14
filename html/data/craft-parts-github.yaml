@@ -3662,7 +3662,7 @@ issues:
   '917':
     type: pr
     date-opened: '2024-12-02T02:50:41Z'
-    date-closed: null
+    date-closed: '2025-03-13T12:18:18Z'
   '916':
     type: pr
     date-opened: '2024-12-01T20:36:44Z'
@@ -4159,3 +4159,15 @@ issues:
     type: pr
     date-opened: '2025-03-11T12:57:12Z'
     date-closed: '2025-03-11T17:17:33Z'
+  '1043':
+    type: pr
+    date-opened: '2025-03-13T18:49:52Z'
+    date-closed: null
+  '1042':
+    type: pr
+    date-opened: '2025-03-13T16:22:12Z'
+    date-closed: '2025-03-13T18:50:44Z'
+  '1041':
+    type: issue
+    date-opened: '2025-03-13T16:14:00Z'
+    date-closed: null

@@ -21238,7 +21238,7 @@ issues:
   '5324':
     type: pr
     date-opened: '2025-03-11T22:42:21Z'
-    date-closed: null
+    date-closed: '2025-03-13T12:20:32Z'
   '5323':
     type: pr
     date-opened: '2025-03-11T18:29:52Z'
@@ -21258,7 +21258,7 @@ issues:
   '5328':
     type: pr
     date-opened: '2025-03-12T16:55:17Z'
-    date-closed: null
+    date-closed: '2025-03-13T17:00:00Z'
   '5327':
     type: issue
     date-opened: '2025-03-12T16:52:03Z'
@@ -21271,3 +21271,19 @@ issues:
     type: pr
     date-opened: '2025-03-12T04:39:30Z'
     date-closed: '2025-03-12T16:58:11Z'
+  '5332':
+    type: pr
+    date-opened: '2025-03-14T02:36:21Z'
+    date-closed: null
+  '5331':
+    type: pr
+    date-opened: '2025-03-13T19:01:36Z'
+    date-closed: null
+  '5330':
+    type: issue
+    date-opened: '2025-03-13T14:55:02Z'
+    date-closed: null
+  '5329':
+    type: issue
+    date-opened: '2025-03-13T10:55:42Z'
+    date-closed: null

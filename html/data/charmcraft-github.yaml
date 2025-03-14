@@ -8838,4 +8838,20 @@ issues:
   '2220':
     type: pr
     date-opened: '2025-03-12T19:26:28Z'
+    date-closed: '2025-03-13T18:08:22Z'
+  '2224':
+    type: pr
+    date-opened: '2025-03-13T23:46:05Z'
+    date-closed: null
+  '2223':
+    type: pr
+    date-opened: '2025-03-13T23:41:55Z'
+    date-closed: null
+  '2222':
+    type: pr
+    date-opened: '2025-03-13T23:29:47Z'
+    date-closed: null
+  '2221':
+    type: pr
+    date-opened: '2025-03-13T18:01:32Z'
     date-closed: null
