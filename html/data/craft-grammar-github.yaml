@@ -322,8 +322,12 @@ issues:
   '81':
     type: issue
     date-opened: '2025-03-12T09:55:54Z'
-    date-closed: null
+    date-closed: '2025-03-14T12:38:56Z'
   '82':
     type: pr
     date-opened: '2025-03-13T15:56:34Z'
-    date-closed: null
+    date-closed: '2025-03-14T12:38:55Z'
+  '83':
+    type: pr
+    date-opened: '2025-03-14T12:48:53Z'
+    date-closed: '2025-03-14T17:01:26Z'

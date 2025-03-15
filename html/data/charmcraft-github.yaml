@@ -1838,7 +1838,7 @@ issues:
   '1155':
     type: issue
     date-opened: '2023-07-13T14:11:21Z'
-    date-closed: null
+    date-closed: '2025-03-14T17:50:58Z'
   '1154':
     type: issue
     date-opened: '2023-07-13T12:41:18Z'
@@ -8770,7 +8770,7 @@ issues:
   '2205':
     type: pr
     date-opened: '2025-03-05T21:31:01Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:16:50Z'
   '2204':
     type: issue
     date-opened: '2025-03-05T16:06:19Z'
@@ -8782,11 +8782,11 @@ issues:
   '2215':
     type: pr
     date-opened: '2025-03-06T19:00:23Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:13:00Z'
   '2214':
     type: issue
     date-opened: '2025-03-06T18:51:31Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:13:01Z'
   '2213':
     type: issue
     date-opened: '2025-03-06T18:50:23Z'
@@ -8802,23 +8802,23 @@ issues:
   '2210':
     type: pr
     date-opened: '2025-03-06T04:53:55Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:12:48Z'
   '2209':
     type: pr
     date-opened: '2025-03-06T04:53:50Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:12:47Z'
   '2208':
     type: pr
     date-opened: '2025-03-06T04:53:45Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:12:45Z'
   '2207':
     type: pr
     date-opened: '2025-03-06T04:53:38Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:12:51Z'
   '2206':
     type: pr
     date-opened: '2025-03-06T04:52:16Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:12:48Z'
   '2217':
     type: pr
     date-opened: '2025-03-11T00:41:14Z'
@@ -8842,15 +8842,15 @@ issues:
   '2224':
     type: pr
     date-opened: '2025-03-13T23:46:05Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:12:23Z'
   '2223':
     type: pr
     date-opened: '2025-03-13T23:41:55Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:11:26Z'
   '2222':
     type: pr
     date-opened: '2025-03-13T23:29:47Z'
-    date-closed: null
+    date-closed: '2025-03-14T16:11:41Z'
   '2221':
     type: pr
     date-opened: '2025-03-13T18:01:32Z'

@@ -4114,7 +4114,7 @@ issues:
   '1028':
     type: issue
     date-opened: '2025-03-03T09:47:41Z'
-    date-closed: null
+    date-closed: '2025-03-14T18:37:43Z'
   '1030':
     type: pr
     date-opened: '2025-03-04T13:21:15Z'
@@ -4138,7 +4138,7 @@ issues:
   '1035':
     type: pr
     date-opened: '2025-03-08T18:54:36Z'
-    date-closed: null
+    date-closed: '2025-03-14T18:37:42Z'
   '1036':
     type: pr
     date-opened: '2025-03-09T22:57:44Z'

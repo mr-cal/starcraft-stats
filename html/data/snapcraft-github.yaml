@@ -21274,7 +21274,7 @@ issues:
   '5332':
     type: pr
     date-opened: '2025-03-14T02:36:21Z'
-    date-closed: null
+    date-closed: '2025-03-14T21:30:36Z'
   '5331':
     type: pr
     date-opened: '2025-03-13T19:01:36Z'
@@ -21287,3 +21287,11 @@ issues:
     type: issue
     date-opened: '2025-03-13T10:55:42Z'
     date-closed: null
+  '5334':
+    type: pr
+    date-opened: '2025-03-15T01:06:26Z'
+    date-closed: null
+  '5333':
+    type: pr
+    date-opened: '2025-03-14T13:00:46Z'
+    date-closed: '2025-03-14T20:47:20Z'
