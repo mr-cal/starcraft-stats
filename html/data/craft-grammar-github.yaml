@@ -331,3 +331,11 @@ issues:
     type: pr
     date-opened: '2025-03-14T12:48:53Z'
     date-closed: '2025-03-14T17:01:26Z'
+  '85':
+    type: pr
+    date-opened: '2025-03-15T09:09:34Z'
+    date-closed: null
+  '84':
+    type: pr
+    date-opened: '2025-03-15T04:38:47Z'
+    date-closed: null

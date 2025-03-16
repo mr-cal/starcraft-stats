@@ -426,7 +426,7 @@ issues:
   '108':
     type: pr
     date-opened: '2025-02-22T21:08:22Z'
-    date-closed: null
+    date-closed: '2025-03-15T20:32:23Z'
   '107':
     type: pr
     date-opened: '2025-02-22T06:18:15Z'
@@ -443,3 +443,7 @@ issues:
     type: pr
     date-opened: '2025-03-11T13:09:28Z'
     date-closed: '2025-03-11T18:49:17Z'
+  '112':
+    type: pr
+    date-opened: '2025-03-15T20:32:19Z'
+    date-closed: null

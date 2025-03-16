@@ -47862,7 +47862,7 @@ issues:
   craft-platforms-108:
     type: pr
     date-opened: '2025-02-22T21:08:22Z'
-    date-closed: null
+    date-closed: '2025-03-15T20:32:23Z'
   craft-platforms-107:
     type: pr
     date-opened: '2025-02-22T06:18:15Z'
@@ -48591,3 +48591,19 @@ issues:
     type: pr
     date-opened: '2025-03-14T13:00:46Z'
     date-closed: '2025-03-14T20:47:20Z'
+  craft-application-681:
+    type: pr
+    date-opened: '2025-03-15T05:01:22Z'
+    date-closed: null
+  craft-grammar-85:
+    type: pr
+    date-opened: '2025-03-15T09:09:34Z'
+    date-closed: null
+  craft-grammar-84:
+    type: pr
+    date-opened: '2025-03-15T04:38:47Z'
+    date-closed: null
+  craft-platforms-112:
+    type: pr
+    date-opened: '2025-03-15T20:32:19Z'
+    date-closed: null
