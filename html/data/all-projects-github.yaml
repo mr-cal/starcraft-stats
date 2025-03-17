@@ -48607,3 +48607,7 @@ issues:
     type: pr
     date-opened: '2025-03-15T20:32:19Z'
     date-closed: null
+  snapcraft-5335:
+    type: issue
+    date-opened: '2025-03-16T23:05:31Z'
+    date-closed: null
