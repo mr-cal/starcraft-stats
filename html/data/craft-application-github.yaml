@@ -2719,3 +2719,7 @@ issues:
     type: pr
     date-opened: '2025-03-15T05:01:22Z'
     date-closed: null
+  '682':
+    type: issue
+    date-opened: '2025-03-17T12:47:05Z'
+    date-closed: null

@@ -8822,7 +8822,7 @@ issues:
   '2217':
     type: pr
     date-opened: '2025-03-11T00:41:14Z'
-    date-closed: null
+    date-closed: '2025-03-17T13:45:12Z'
   '2216':
     type: issue
     date-opened: '2025-03-11T00:32:13Z'
@@ -8854,4 +8854,20 @@ issues:
   '2221':
     type: pr
     date-opened: '2025-03-13T18:01:32Z'
+    date-closed: null
+  '2228':
+    type: pr
+    date-opened: '2025-03-17T18:37:17Z'
+    date-closed: null
+  '2227':
+    type: pr
+    date-opened: '2025-03-17T14:37:02Z'
+    date-closed: null
+  '2226':
+    type: pr
+    date-opened: '2025-03-17T14:33:35Z'
+    date-closed: null
+  '2225':
+    type: issue
+    date-opened: '2025-03-17T13:29:04Z'
     date-closed: null
