@@ -2723,3 +2723,15 @@ issues:
     type: issue
     date-opened: '2025-03-17T12:47:05Z'
     date-closed: null
+  '685':
+    type: issue
+    date-opened: '2025-03-18T20:41:49Z'
+    date-closed: null
+  '684':
+    type: pr
+    date-opened: '2025-03-18T16:23:14Z'
+    date-closed: null
+  '683':
+    type: pr
+    date-opened: '2025-03-18T15:12:57Z'
+    date-closed: null

@@ -4174,4 +4174,12 @@ issues:
   '1044':
     type: pr
     date-opened: '2025-03-17T08:14:00Z'
+    date-closed: '2025-03-18T13:11:03Z'
+  '1046':
+    type: pr
+    date-opened: '2025-03-18T21:24:44Z'
     date-closed: null
+  '1045':
+    type: pr
+    date-opened: '2025-03-18T12:55:34Z'
+    date-closed: '2025-03-18T17:48:46Z'
