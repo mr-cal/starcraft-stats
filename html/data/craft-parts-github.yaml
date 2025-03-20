@@ -4183,3 +4183,7 @@ issues:
     type: pr
     date-opened: '2025-03-18T12:55:34Z'
     date-closed: '2025-03-18T17:48:46Z'
+  '1047':
+    type: pr
+    date-opened: '2025-03-19T19:56:04Z'
+    date-closed: null

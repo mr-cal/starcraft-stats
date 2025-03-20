@@ -1282,7 +1282,7 @@ issues:
   '320':
     type: pr
     date-opened: '2025-01-17T20:18:50Z'
-    date-closed: null
+    date-closed: '2025-03-19T16:48:58Z'
   '322':
     type: pr
     date-opened: '2025-01-21T16:11:20Z'
@@ -1318,4 +1318,8 @@ issues:
   '330':
     type: issue
     date-opened: '2025-03-18T12:46:46Z'
+    date-closed: null
+  '331':
+    type: pr
+    date-opened: '2025-03-19T17:55:04Z'
     date-closed: null

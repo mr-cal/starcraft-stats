@@ -46374,7 +46374,7 @@ issues:
   craft-cli-320:
     type: pr
     date-opened: '2025-01-17T20:18:50Z'
-    date-closed: null
+    date-closed: '2025-03-19T16:48:58Z'
   craft-parts-981:
     type: pr
     date-opened: '2025-01-17T20:18:02Z'
@@ -47670,7 +47670,7 @@ issues:
   rockcraft-817:
     type: pr
     date-opened: '2025-02-18T08:49:58Z'
-    date-closed: null
+    date-closed: '2025-03-19T17:38:00Z'
   snapcraft-5265:
     type: pr
     date-opened: '2025-02-18T22:39:21Z'
@@ -48714,8 +48714,28 @@ issues:
   snapcraft-5343:
     type: pr
     date-opened: '2025-03-18T12:28:06Z'
-    date-closed: null
+    date-closed: '2025-03-19T22:23:15Z'
   starbase-368:
     type: pr
     date-opened: '2025-03-18T18:19:12Z'
+    date-closed: null
+  craft-cli-331:
+    type: pr
+    date-opened: '2025-03-19T17:55:04Z'
+    date-closed: null
+  craft-parts-1047:
+    type: pr
+    date-opened: '2025-03-19T19:56:04Z'
+    date-closed: null
+  rockcraft-838:
+    type: pr
+    date-opened: '2025-03-19T21:34:07Z'
+    date-closed: null
+  rockcraft-837:
+    type: pr
+    date-opened: '2025-03-19T18:48:49Z'
+    date-closed: null
+  rockcraft-836:
+    type: pr
+    date-opened: '2025-03-19T11:02:45Z'
     date-closed: null
