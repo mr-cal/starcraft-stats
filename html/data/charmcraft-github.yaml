@@ -8875,3 +8875,15 @@ issues:
     type: pr
     date-opened: '2025-03-18T14:56:52Z'
     date-closed: '2025-03-18T17:44:22Z'
+  '2232':
+    type: pr
+    date-opened: '2025-03-20T20:08:21Z'
+    date-closed: null
+  '2231':
+    type: issue
+    date-opened: '2025-03-20T20:06:37Z'
+    date-closed: null
+  '2230':
+    type: pr
+    date-opened: '2025-03-20T19:12:22Z'
+    date-closed: null

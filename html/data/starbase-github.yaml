@@ -1470,4 +1470,12 @@ issues:
   '368':
     type: pr
     date-opened: '2025-03-18T18:19:12Z'
+    date-closed: '2025-03-20T15:10:29Z'
+  '370':
+    type: pr
+    date-opened: '2025-03-20T19:10:39Z'
+    date-closed: null
+  '369':
+    type: pr
+    date-opened: '2025-03-20T13:00:34Z'
     date-closed: null

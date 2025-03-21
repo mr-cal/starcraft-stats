@@ -21278,11 +21278,11 @@ issues:
   '5331':
     type: pr
     date-opened: '2025-03-13T19:01:36Z'
-    date-closed: null
+    date-closed: '2025-03-20T20:11:10Z'
   '5330':
     type: issue
     date-opened: '2025-03-13T14:55:02Z'
-    date-closed: null
+    date-closed: '2025-03-20T20:12:14Z'
   '5329':
     type: issue
     date-opened: '2025-03-13T10:55:42Z'
@@ -21302,7 +21302,7 @@ issues:
   '5342':
     type: pr
     date-opened: '2025-03-17T23:10:09Z'
-    date-closed: null
+    date-closed: '2025-03-20T15:18:27Z'
   '5341':
     type: pr
     date-opened: '2025-03-17T22:58:42Z'
@@ -21330,7 +21330,7 @@ issues:
   '5345':
     type: pr
     date-opened: '2025-03-19T00:31:39Z'
-    date-closed: null
+    date-closed: '2025-03-20T16:34:34Z'
   '5344':
     type: pr
     date-opened: '2025-03-18T13:26:27Z'
@@ -21339,3 +21339,11 @@ issues:
     type: pr
     date-opened: '2025-03-18T12:28:06Z'
     date-closed: '2025-03-19T22:23:15Z'
+  '5347':
+    type: pr
+    date-opened: '2025-03-20T19:11:49Z'
+    date-closed: null
+  '5346':
+    type: pr
+    date-opened: '2025-03-20T16:56:02Z'
+    date-closed: '2025-03-20T17:52:33Z'
