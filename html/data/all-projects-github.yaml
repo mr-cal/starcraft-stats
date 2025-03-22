@@ -48354,7 +48354,7 @@ issues:
   starbase-364:
     type: pr
     date-opened: '2025-03-09T04:56:31Z'
-    date-closed: null
+    date-closed: '2025-03-21T19:11:54Z'
   charmcraft-2217:
     type: pr
     date-opened: '2025-03-11T00:41:14Z'
@@ -48682,7 +48682,7 @@ issues:
   craft-application-684:
     type: pr
     date-opened: '2025-03-18T16:23:14Z'
-    date-closed: null
+    date-closed: '2025-03-21T16:21:01Z'
   craft-application-683:
     type: pr
     date-opened: '2025-03-18T15:12:57Z'
@@ -48730,7 +48730,7 @@ issues:
   rockcraft-838:
     type: pr
     date-opened: '2025-03-19T21:34:07Z'
-    date-closed: null
+    date-closed: '2025-03-21T19:17:24Z'
   rockcraft-837:
     type: pr
     date-opened: '2025-03-19T18:48:49Z'
@@ -48750,15 +48750,15 @@ issues:
   charmcraft-2230:
     type: pr
     date-opened: '2025-03-20T19:12:22Z'
-    date-closed: null
+    date-closed: '2025-03-21T20:16:07Z'
   craft-application-686:
     type: pr
     date-opened: '2025-03-20T18:22:09Z'
-    date-closed: null
+    date-closed: '2025-03-21T20:16:37Z'
   craft-parts-1049:
     type: pr
     date-opened: '2025-03-20T23:15:53Z'
-    date-closed: null
+    date-closed: '2025-03-21T14:25:01Z'
   craft-parts-1048:
     type: pr
     date-opened: '2025-03-20T09:59:31Z'
@@ -48766,7 +48766,7 @@ issues:
   rockcraft-841:
     type: pr
     date-opened: '2025-03-20T08:18:58Z'
-    date-closed: null
+    date-closed: '2025-03-21T17:29:56Z'
   rockcraft-840:
     type: issue
     date-opened: '2025-03-20T07:38:13Z'
@@ -48774,11 +48774,11 @@ issues:
   rockcraft-839:
     type: pr
     date-opened: '2025-03-20T04:17:40Z'
-    date-closed: null
+    date-closed: '2025-03-21T14:27:05Z'
   snapcraft-5347:
     type: pr
     date-opened: '2025-03-20T19:11:49Z'
-    date-closed: null
+    date-closed: '2025-03-21T12:41:05Z'
   snapcraft-5346:
     type: pr
     date-opened: '2025-03-20T16:56:02Z'
@@ -48786,8 +48786,40 @@ issues:
   starbase-370:
     type: pr
     date-opened: '2025-03-20T19:10:39Z'
-    date-closed: null
+    date-closed: '2025-03-21T13:51:33Z'
   starbase-369:
     type: pr
     date-opened: '2025-03-20T13:00:34Z'
+    date-closed: '2025-03-21T11:22:18Z'
+  craft-application-690:
+    type: issue
+    date-opened: '2025-03-21T21:24:07Z'
+    date-closed: null
+  craft-application-689:
+    type: pr
+    date-opened: '2025-03-21T21:09:36Z'
+    date-closed: null
+  craft-application-688:
+    type: issue
+    date-opened: '2025-03-21T17:17:52Z'
+    date-closed: null
+  craft-application-687:
+    type: pr
+    date-opened: '2025-03-21T16:35:59Z'
+    date-closed: null
+  craft-parts-1051:
+    type: issue
+    date-opened: '2025-03-21T16:13:59Z'
+    date-closed: null
+  craft-parts-1050:
+    type: pr
+    date-opened: '2025-03-21T07:23:23Z'
+    date-closed: null
+  snapcraft-5349:
+    type: pr
+    date-opened: '2025-03-21T21:39:39Z'
+    date-closed: null
+  snapcraft-5348:
+    type: pr
+    date-opened: '2025-03-21T19:34:10Z'
     date-closed: null

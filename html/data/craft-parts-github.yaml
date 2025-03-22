@@ -4190,8 +4190,16 @@ issues:
   '1049':
     type: pr
     date-opened: '2025-03-20T23:15:53Z'
-    date-closed: null
+    date-closed: '2025-03-21T14:25:01Z'
   '1048':
     type: pr
     date-opened: '2025-03-20T09:59:31Z'
+    date-closed: null
+  '1051':
+    type: issue
+    date-opened: '2025-03-21T16:13:59Z'
+    date-closed: null
+  '1050':
+    type: pr
+    date-opened: '2025-03-21T07:23:23Z'
     date-closed: null

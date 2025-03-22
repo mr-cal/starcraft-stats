@@ -3338,7 +3338,7 @@ issues:
   '838':
     type: pr
     date-opened: '2025-03-19T21:34:07Z'
-    date-closed: null
+    date-closed: '2025-03-21T19:17:24Z'
   '837':
     type: pr
     date-opened: '2025-03-19T18:48:49Z'
@@ -3350,7 +3350,7 @@ issues:
   '841':
     type: pr
     date-opened: '2025-03-20T08:18:58Z'
-    date-closed: null
+    date-closed: '2025-03-21T17:29:56Z'
   '840':
     type: issue
     date-opened: '2025-03-20T07:38:13Z'
@@ -3358,4 +3358,4 @@ issues:
   '839':
     type: pr
     date-opened: '2025-03-20T04:17:40Z'
-    date-closed: null
+    date-closed: '2025-03-21T14:27:05Z'

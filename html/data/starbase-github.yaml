@@ -1454,7 +1454,7 @@ issues:
   '364':
     type: pr
     date-opened: '2025-03-09T04:56:31Z'
-    date-closed: null
+    date-closed: '2025-03-21T19:11:54Z'
   '367':
     type: pr
     date-opened: '2025-03-13T23:11:36Z'
@@ -1474,8 +1474,8 @@ issues:
   '370':
     type: pr
     date-opened: '2025-03-20T19:10:39Z'
-    date-closed: null
+    date-closed: '2025-03-21T13:51:33Z'
   '369':
     type: pr
     date-opened: '2025-03-20T13:00:34Z'
-    date-closed: null
+    date-closed: '2025-03-21T11:22:18Z'

@@ -2730,7 +2730,7 @@ issues:
   '684':
     type: pr
     date-opened: '2025-03-18T16:23:14Z'
-    date-closed: null
+    date-closed: '2025-03-21T16:21:01Z'
   '683':
     type: pr
     date-opened: '2025-03-18T15:12:57Z'
@@ -2738,4 +2738,20 @@ issues:
   '686':
     type: pr
     date-opened: '2025-03-20T18:22:09Z'
+    date-closed: '2025-03-21T20:16:37Z'
+  '690':
+    type: issue
+    date-opened: '2025-03-21T21:24:07Z'
+    date-closed: null
+  '689':
+    type: pr
+    date-opened: '2025-03-21T21:09:36Z'
+    date-closed: null
+  '688':
+    type: issue
+    date-opened: '2025-03-21T17:17:52Z'
+    date-closed: null
+  '687':
+    type: pr
+    date-opened: '2025-03-21T16:35:59Z'
     date-closed: null
