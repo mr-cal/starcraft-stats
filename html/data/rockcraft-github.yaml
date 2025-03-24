@@ -3359,3 +3359,7 @@ issues:
     type: pr
     date-opened: '2025-03-20T04:17:40Z'
     date-closed: '2025-03-21T14:27:05Z'
+  '842':
+    type: pr
+    date-opened: '2025-03-23T06:16:03Z'
+    date-closed: null
