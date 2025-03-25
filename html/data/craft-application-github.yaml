@@ -2754,4 +2754,12 @@ issues:
   '687':
     type: pr
     date-opened: '2025-03-21T16:35:59Z'
+    date-closed: '2025-03-24T16:58:41Z'
+  '692':
+    type: issue
+    date-opened: '2025-03-24T23:04:16Z'
+    date-closed: null
+  '691':
+    type: pr
+    date-opened: '2025-03-24T14:05:11Z'
     date-closed: null
