@@ -1,4 +1,4 @@
-@supports(display: grid) {
+@supports (display: grid) {
     .p-navigation__row--25-75,
     .p-stepped-list--detailed .p-stepped-list__item,
     .row--25-25-25-25,
@@ -15,10 +15,9 @@
     .row,
     .p-equal-height-row,
     .p-divider {
-      max-width: 120rem;
-      /* Override max-width. It may be cleaner to configure this via 
+        max-width: 120rem;
+        /* Override max-width. It may be cleaner to configure this via
       https://github.com/canonical/vanilla-framework/blob/ca2b9685568d4733bdd66972c1dc6bc99424ca42/scss/_settings_grid.scss#L5
       */
     }
-  }
-  
+}

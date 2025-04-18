@@ -1,4 +1,4 @@
-PROJECT=starcraft
+PROJECT=starcraft_stats
 # Define when more than the main package tree requires coverage
 # like is the case for snapcraft (snapcraft and snapcraft_legacy):
 # COVERAGE_SOURCE="starcraft"

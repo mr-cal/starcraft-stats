@@ -116,7 +116,8 @@ def _get_reqs_for_project(
 
     df = parse(reqs_request.text, file_type=filetypes.requirements_txt)
     deps: dict[str, str] = {
-        dep.name: dep.specs for dep in df.dependencies  # type: ignore[reportUnknownVariableType,reportUnknownMemberType]
+        dep.name: dep.specs
+        for dep in df.dependencies  # type: ignore[reportUnknownVariableType,reportUnknownMemberType]
     }
 
     # normalize the version and convert to string
@@ -129,7 +130,6 @@ def _get_reqs_for_project(
     dlist: dict[str, Dependency] = {}
     emit.debug(f"Collected requirements for {app.name}:")
     for library_name, library_version in libraries.items():
-
         if library_version in ("unknown", "not used"):
             continue
 

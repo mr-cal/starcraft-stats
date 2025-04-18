@@ -65,7 +65,8 @@ class Config(CraftBaseModel):
                     continue
                 # convert head data into a list of branch names
                 branches: list[str] = [  # type: ignore[reportUnknownVariableType]
-                    item.split("\t")[1][11:] for item in raw_head_data.split("\n")  # type: ignore[reportUnknownVariableType]
+                    item.split("\t")[1][11:]
+                    for item in raw_head_data.split("\n")  # type: ignore[reportUnknownVariableType]
                 ]
 
                 all_branches.extend(

@@ -4,7 +4,7 @@ import argparse
 import csv
 import os
 import pathlib
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from functools import cached_property
 
 from craft_application.models import CraftBaseModel
@@ -149,8 +149,8 @@ class GithubProject:
         # intermediate data structure of
         intermediate_data = IntermediateData()
 
-        start_date = datetime(year=2021, month=1, day=1, tzinfo=timezone.utc)
-        end_date = datetime.now(tz=timezone.utc)
+        start_date = datetime(year=2021, month=1, day=1, tzinfo=UTC)
+        end_date = datetime.now(tz=UTC)
 
         # iterate through each day from start_date to end_date
         emit.debug(f"Counting open issues and age for {self.name}")
@@ -280,7 +280,7 @@ def get_median_age(dates: list[datetime] | None, date: datetime) -> int | None:
 
 def get_mean_date(dates: list[datetime]) -> datetime:
     """Get mean date from a list of datetimes."""
-    reference = datetime(year=2000, month=1, day=1, tzinfo=timezone.utc)
+    reference = datetime(year=2000, month=1, day=1, tzinfo=UTC)
     return reference + sum([date - reference for date in dates], timedelta()) / len(
         dates,
     )
