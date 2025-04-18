@@ -1,3 +1,1 @@
-- [ ] Have you successfully run `tox`?
-
------
+- [ ] Have you successfully run `make lint && make test`?
