@@ -39,22 +39,23 @@ How to run locally
 
 It's a Python package with a CLI, so it can be installed and run locally.
 
-You will need a github token. You can create a new fine-grained
-token in your `settings page`_.
+You will need a `fine-grained github token`_ with no extra permissions, just
+read-only access to public repositories.
 
 .. code-block::
 
     export GITHUB_TOKEN=<your token from github>
-    pip install -e .
+    uv tool install -e .
     starcraft-stats --help
 
 Web browsers will not run Javascript from a local webpage.
-The easiest way to view the webpage locally is to run a web server:
+The easiest way to view the webpage locally is to use Python:
 
-#. Install Visual Studio Code
-#. Install the Live Server extension
-#. Open the ``html`` directory in Visual Studio Code
-#. Right-click on ``index.html`` and select "Open with Live Server"
+.. code-block::
+
+    cd html
+    python3 -m http.server 8000
+    open http://127.0.0.1:8000
 
 Contributing
 ============
@@ -65,4 +66,4 @@ Contributions are encouraged!
 .. _test-status-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml
 .. |data-collection-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml/badge.svg?branch=main
 .. _data-collection-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml
-.. _settings page: https://github.com/settings/tokens?type=beta
+.. _fine-grained github token: https://github.com/settings/tokens?type=beta
