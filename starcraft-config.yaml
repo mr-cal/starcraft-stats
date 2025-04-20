@@ -1,12 +1,12 @@
 craft-applications:
-#  - name: charmcraft
-#    branch-wildcards:
-#      - main
-#      - hotfix/*
-#  - name: rockcraft
-#    branch-wildcards:
-#      - main
-#      - hotfix/*
+  #  - name: charmcraft
+  #    branch-wildcards:
+  #      - main
+  #      - hotfix/*
+  #  - name: rockcraft
+  #    branch-wildcards:
+  #      - main
+  #      - hotfix/*
   - name: snapcraft
     branch-wildcards:
       - main

@@ -5,9 +5,9 @@ import json
 import pathlib
 import subprocess
 import tempfile
-import git
 from dataclasses import dataclass
 
+import git
 from craft_cli import BaseCommand, emit
 from dataclasses_json import dataclass_json
 from dparse import filetypes, parse  # type: ignore[import-untyped]
@@ -82,7 +82,13 @@ class Library:
         """
         # `uvx pip install <library>==1111111 --disable-pip-version-check` will show
         # all available versions for the library
-        command = ["uvx", "pip", "install", f"{self.name}==1111111", "--disable-pip-version-check"]
+        command = [
+            "uvx",
+            "pip",
+            "install",
+            f"{self.name}==1111111",
+            "--disable-pip-version-check",
+        ]
         emit.debug(f"Running {' '.join(command)}")
         proc = subprocess.run(command, check=False, capture_output=True)
         output = proc.stderr.decode("utf-8").split("\n")
@@ -110,6 +116,7 @@ class Library:
         emit.debug(f"Could not find versions for library {self.name}.")
         return []
 
+
 class Application:
     name: str
     """The name of the application."""
@@ -129,15 +136,12 @@ class Application:
     owner: str
     """The owner of the application in github."""
 
-    def __init__(
-        self, name: str, owner: str, branch_wildcards: list[str]
-    ) -> None:
+    def __init__(self, name: str, owner: str, branch_wildcards: list[str]) -> None:
         self.name = name
         self.owner = owner
         self.branch_wildcards = branch_wildcards
         self.branches = self._get_branches()
         self.local_repos = self.init_local_repos()
-
 
     def _get_branches(self) -> list[CraftApplicationBranch]:
         """Return a list of branches of interest."""
@@ -170,7 +174,9 @@ class Application:
         local_repos = {}
         for branch in self.branches:
             safe_name = branch.branch.replace("/", "-")
-            repo_path = tempfile.mkdtemp(prefix=f"starcraft-stats-{self.name}-{safe_name}-")
+            repo_path = tempfile.mkdtemp(
+                prefix=f"starcraft-stats-{self.name}-{safe_name}-"
+            )
             local_repos[branch.branch] = repo_path
             emit.debug(f"Cloning {branch} into {repo_path}")
             git.Repo.clone_from(
@@ -209,7 +215,8 @@ class GetDependenciesCommand(BaseCommand):
                 name=app.name,
                 owner=app.owner,
                 branch_wildcards=app.branch_wildcards,
-            ) for app in config.craft_applications
+            )
+            for app in config.craft_applications
         ]
 
         app_reqs: dict[str, dict[str, Dependency]] = {}
@@ -219,9 +226,7 @@ class GetDependenciesCommand(BaseCommand):
             for branch_name, repo in app.local_repos.items():
                 name = f"{app.name}/{branch_name}"
                 emit.debug(f"Fetching requirements for {name}")
-                app_reqs[name] = _get_reqs_for_project2(
-                    branch_name, repo, libraries
-                )
+                app_reqs[name] = _get_reqs_for_project2(branch_name, repo, libraries)
                 emit.message(f"Parsed requirements for {name}")
 
         latest = {lib.name: str(lib.latest) for lib in libraries.values()}
@@ -245,7 +250,11 @@ def _get_reqs_for_project2(
     # TODO split this out into a function that also falls back to parsing requirements.txt
     emit.debug(f"Fetching requirements for {branch_name} from {repo}")
     reqs = subprocess.run(
-        ["uv", "export", "--no-hashes"], cwd=repo, check=True, capture_output=True, text=True
+        ["uv", "export", "--no-hashes"],
+        cwd=repo,
+        check=True,
+        capture_output=True,
+        text=True,
     ).stdout
 
     df = parse(reqs, file_type=filetypes.requirements_txt)
@@ -259,7 +268,7 @@ def _get_reqs_for_project2(
         deps[dep] = str(spec).lstrip("=") if spec else "unknown"
 
     # filter for craft library deps
-    libraries = {lib: deps.get(lib, "not used") for lib in libs.keys()}
+    libraries = {lib: deps.get(lib, "not used") for lib in libs}
 
     dlist: dict[str, Dependency] = {}
     emit.debug(f"Collected requirements for {branch_name}:")

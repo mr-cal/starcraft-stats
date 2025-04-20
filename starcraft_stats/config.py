@@ -35,6 +35,7 @@ class CraftApplication(CraftBaseModel):
     owner: str = "canonical"
     """Owner of the application in github."""
 
+
 class Config(CraftBaseModel):
     """Pydantic model for starcraft-stats configuration."""
 
