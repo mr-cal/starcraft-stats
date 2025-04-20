@@ -1,16 +1,16 @@
 craft-applications:
-  - name: charmcraft
-    branches:
-      - main
-      - hotfix/*
-  - name: rockcraft
-    branches:
-      - main
-      - hotfix/*
+#  - name: charmcraft
+#    branch-wildcards:
+#      - main
+#      - hotfix/*
+#  - name: rockcraft
+#    branch-wildcards:
+#      - main
+#      - hotfix/*
   - name: snapcraft
-    branches:
+    branch-wildcards:
       - main
-      - hotfix/*
+      - hotfix/8*
 
 craft-libraries:
   - craft-application

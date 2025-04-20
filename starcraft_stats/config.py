@@ -29,12 +29,11 @@ class CraftApplication(CraftBaseModel):
     name: str
     """Name of the application."""
 
-    branches: list[str]
-    """A list of all branches of interest."""
+    branch_wildcards: list[str]
+    """A list of branch wildcards from the config."""
 
     owner: str = "canonical"
     """Owner of the application in github."""
-
 
 class Config(CraftBaseModel):
     """Pydantic model for starcraft-stats configuration."""
