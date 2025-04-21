@@ -169,16 +169,6 @@ ifneq ($(CI),)
 	@echo ::endgroup::
 endif
 
-.PHONY: lint-docs
-lint-docs:  ##- Lint the documentation
-ifneq ($(CI),)
-	@echo ::group::$@
-endif
-	uv run $(UV_DOCS_GROUPS) sphinx-lint --max-line-length 88 --ignore docs/reference/commands --ignore docs/_build --enable all $(DOCS) -d missing-underscore-after-hyperlink,missing-space-in-hyperlink
-ifneq ($(CI),)
-	@echo ::endgroup::
-endif
-
 .PHONY: lint-twine
 lint-twine: pack-pip  ##- Lint Python packages with twine
 ifneq ($(CI),)
@@ -218,14 +208,6 @@ endif
 .PHONY: test-find-slow
 test-find-slow:  ##- Identify slow tests. Set cutoff time in seconds with SLOW_CUTOFF_TIME
 	uv run pytest --durations 0 --durations-min $(SLOW_CUTOFF_TIME)
-
-.PHONY: docs
-docs:  ## Build documentation
-	uv run $(UV_DOCS_GROUPS) sphinx-build -b html -W $(DOCS) $(DOCS)/_build
-
-.PHONY: docs-auto
-docs-auto:  ## Build and host docs with sphinx-autobuild
-	uv run --group docs sphinx-autobuild -b html --open-browser --port=8080 --watch $(PROJECT) -W $(DOCS) $(DOCS)/_build
 
 .PHONY: pack-pip
 pack-pip:  ##- Build packages for pip (sdist, wheel)
