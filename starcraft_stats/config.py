@@ -54,7 +54,7 @@ class Config(CraftBaseModel):
         all_branches: list[CraftApplicationBranch] = []
 
         for app in self.craft_applications:
-            for branch_pattern in app.branches:
+            for branch_pattern in app.branch_wildcards:
                 # fetch branch heads from the remote
                 raw_head_data: str = git.cmd.Git().ls_remote(  # type: ignore[reportUnknownVariableType, reportUnknownMemberType]
                     "--heads",
@@ -65,7 +65,7 @@ class Config(CraftBaseModel):
                     continue
                 # convert head data into a list of branch names
                 branches: list[str] = [  # type: ignore[reportUnknownVariableType]
-                    item.split("\t")[1][11:]
+                    item.split("\t")[1][11:]  # type: ignore[reportUnknownMemberType]
                     for item in raw_head_data.split("\n")  # type: ignore[reportUnknownVariableType]
                 ]
 

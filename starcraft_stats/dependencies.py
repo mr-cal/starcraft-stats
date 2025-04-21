@@ -6,6 +6,7 @@ import pathlib
 import subprocess
 import tempfile
 from dataclasses import dataclass
+from typing import cast
 
 import git
 from craft_cli import BaseCommand, emit
@@ -47,6 +48,8 @@ class DependencyTable:
 
 
 class Library:
+    """A python library with all its versions."""
+
     name: str
     """The name of the library."""
 
@@ -64,6 +67,7 @@ class Library:
         return max(self.versions)
 
     def latest_in_series(self, version: Version) -> Version:
+        """Given a version, find the latest patch release in the same minor series."""
         target_minor = (version.major, version.minor)
         candidates = [v for v in self.versions if (v.major, v.minor) == target_minor]
         return max(candidates)
@@ -118,6 +122,8 @@ class Library:
 
 
 class Application:
+    """Application with management of branches and local repositories."""
+
     name: str
     """The name of the application."""
 
@@ -145,18 +151,21 @@ class Application:
 
     def _get_branches(self) -> list[CraftApplicationBranch]:
         """Return a list of branches of interest."""
-        all_branches = []
+        all_branches: list[CraftApplicationBranch] = []
         for pattern in self.branch_wildcards:
             # fetch branch heads from the remote
-            raw_head_data: str = git.cmd.Git().ls_remote(  # type: ignore[reportUnknownVariableType, reportUnknownMemberType]
-                "--heads",
-                f"https://github.com/{self.owner}/{self.name}",
-                f"refs/heads/{pattern}",
+            raw_head_data: str = cast(
+                str,
+                git.cmd.Git().ls_remote(  # type: ignore[reportUnknownMemberType]
+                    "--heads",
+                    f"https://github.com/{self.owner}/{self.name}",
+                    f"refs/heads/{pattern}",
+                ),
             )
             if not raw_head_data:
                 continue
             # convert head data into a list of branch names
-            branches: list[str] = [  # type: ignore[reportUnknownVariableType]
+            branches: list[str] = [
                 item.split("\t")[1][11:]
                 for item in raw_head_data.split("\n")  # type: ignore[reportUnknownVariableType]
             ]
@@ -171,11 +180,12 @@ class Application:
         return all_branches
 
     def init_local_repos(self) -> dict[str, pathlib.Path]:
-        local_repos = {}
+        """Initialize all branches into local repos in temporary directories."""
+        local_repos: dict[str, pathlib.Path] = {}
         for branch in self.branches:
             safe_name = branch.branch.replace("/", "-")
-            repo_path = tempfile.mkdtemp(
-                prefix=f"starcraft-stats-{self.name}-{safe_name}-"
+            repo_path = pathlib.Path(
+                tempfile.mkdtemp(prefix=f"starcraft-stats-{self.name}-{safe_name}-")
             )
             local_repos[branch.branch] = repo_path
             emit.debug(f"Cloning {branch} into {repo_path}")
@@ -247,7 +257,7 @@ def _get_reqs_for_project2(
     branch_name: str, repo: pathlib.Path, libs: dict[str, Library]
 ) -> dict[str, Dependency]:
     """Fetch craft library requirements for an application with uv."""
-    # TODO split this out into a function that also falls back to parsing requirements.txt
+    # split this out into a function that also falls back to parsing requirements.txt
     emit.debug(f"Fetching requirements for {branch_name} from {repo}")
     reqs = subprocess.run(
         ["uv", "export", "--no-hashes"],
@@ -259,10 +269,12 @@ def _get_reqs_for_project2(
 
     df = parse(reqs, file_type=filetypes.requirements_txt)
 
-    deps: dict[str, str] = {
-        dep.name: dep.specs
-        for dep in df.dependencies  # type: ignore[reportUnknownVariableType,reportUnknownMemberType]
-    }
+    deps: dict[str, str] = {}
+    for dep in df.dependencies:  # type: ignore[reportUnknownVariableType]
+        name = cast(str, dep.name)  # type: ignore[reportUnknownMemberType]
+        specs = cast(str, dep.specs)  # type: ignore[reportUnknownMemberType]
+        deps[name] = specs
+
     # normalize the version and convert to string
     for dep, spec in deps.items():
         deps[dep] = str(spec).lstrip("=") if spec else "unknown"
