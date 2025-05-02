@@ -3,12 +3,7 @@ name = "starcraft-stats"
 dynamic = ["version", "readme"]
 dependencies = [
     "craft-application",
-    "craft-archives",
     "craft-cli",
-    "craft-grammar",
-    "craft-parts",
-    "craft-providers",
-    "craft-store",
     "dparse~=0.6",
     "dataclasses-json",
     "gitpython~=3.1",

@@ -1,7 +1,8 @@
-name: data collection
+name: slow data collection
 on:
   schedule:
-    - cron: "00 4 * * *"
+    # run every 3 days
+    - cron: "0 0 */3 * *"
   workflow_dispatch:
     inputs:
       enable_ssh_access:
@@ -23,7 +24,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
       - name: install project
         run: |
           pip install .
@@ -37,9 +38,7 @@ jobs:
         env:
           STARCRAFT_GITHUB_TOKEN: ${{ secrets.STARCRAFT_GITHUB_TOKEN }}
         run: |
-          starcraft-stats get-dependencies --verbosity=trace
           starcraft-stats get-issues --verbosity=trace
-          starcraft-stats get-releases --verbosity=trace
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v5
         if: github.event_name != 'pull_request'

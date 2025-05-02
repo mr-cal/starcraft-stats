@@ -4,17 +4,17 @@ import argparse
 import json
 import pathlib
 import subprocess
-import tempfile
 from dataclasses import dataclass
 from typing import cast
 
-import git
 from craft_cli import BaseCommand, emit
 from dataclasses_json import dataclass_json
 from dparse import filetypes, parse  # type: ignore[import-untyped]
 from packaging.version import Version
 
-from .config import CONFIG_FILE, Config, CraftApplicationBranch
+from .application import Application
+from .config import CONFIG_FILE, Config
+from .library import Library
 
 DATA_FILE = pathlib.Path("html/data/app-deps.json")
 
@@ -47,158 +47,6 @@ class DependencyTable:
     apps: dict[str, dict[str, Dependency]]
 
 
-class Library:
-    """A python library with all its versions."""
-
-    name: str
-    """The name of the library."""
-
-    versions: list[Version]
-    """A list of all versions of the library."""
-
-    def __init__(self, name: str) -> None:
-        self.name = name
-
-        self.versions = self._get_versions()
-
-    @property
-    def latest(self) -> Version:
-        """Return the latest version of the library."""
-        return max(self.versions)
-
-    def latest_in_series(self, version: Version) -> Version:
-        """Given a version, find the latest patch release in the same minor series."""
-        target_minor = (version.major, version.minor)
-        candidates = [v for v in self.versions if (v.major, v.minor) == target_minor]
-        return max(candidates)
-
-    def is_latest_patch(self, version: Version) -> bool:
-        """Check if a version is the latest patch version of a minor release series.
-
-        For the 3.2 series with 3.2.0, 3.2.1, and 3.2.2, 3.2.2 is the latest patch version.
-        """
-        return version == self.latest_in_series(version)
-
-    def _get_versions(self) -> list[Version]:
-        """Get a list of versions for a library.
-
-        :returns: A list of versions for the library.
-        """
-        # `uvx pip install <library>==1111111 --disable-pip-version-check` will show
-        # all available versions for the library
-        command = [
-            "uvx",
-            "pip",
-            "install",
-            f"{self.name}==1111111",
-            "--disable-pip-version-check",
-        ]
-        emit.debug(f"Running {' '.join(command)}")
-        proc = subprocess.run(command, check=False, capture_output=True)
-        output = proc.stderr.decode("utf-8").split("\n")
-        emit.trace(f"pip output: {output}")
-
-        for line in output:
-            emit.trace(f"parsing output line: {line}")
-
-            # get the latest version in each major.minor seriess
-            anchor = "from versions: "
-            idx = line.find(anchor)
-            if idx < 0:
-                emit.trace(f"Could not find anchor {anchor}")
-                continue
-
-            versions = line[idx + len(anchor) : -1]
-            if versions == "none":
-                emit.debug(f"No versions found for library {self.name}.")
-                return []
-
-            versions_list = versions.split(", ")
-            emit.debug(f"Found versions: {versions_list}")
-            return [Version(v) for v in versions_list]
-
-        emit.debug(f"Could not find versions for library {self.name}.")
-        return []
-
-
-class Application:
-    """Application with management of branches and local repositories."""
-
-    name: str
-    """The name of the application."""
-
-    local_repos: dict[str, pathlib.Path]
-    """A mapping of branches to local repository paths."""
-
-    library_versions: dict[str, str]
-    """A mapping of library names to the installed version."""
-
-    branch_wildcards: list[str]
-    """A list of branch wildcards from the config."""
-
-    branches: list[CraftApplicationBranch]
-    """A list of branches of the application."""
-
-    owner: str
-    """The owner of the application in github."""
-
-    def __init__(self, name: str, owner: str, branch_wildcards: list[str]) -> None:
-        self.name = name
-        self.owner = owner
-        self.branch_wildcards = branch_wildcards
-        self.branches = self._get_branches()
-        self.local_repos = self.init_local_repos()
-
-    def _get_branches(self) -> list[CraftApplicationBranch]:
-        """Return a list of branches of interest."""
-        all_branches: list[CraftApplicationBranch] = []
-        for pattern in self.branch_wildcards:
-            # fetch branch heads from the remote
-            raw_head_data: str = cast(
-                str,
-                git.cmd.Git().ls_remote(  # type: ignore[reportUnknownMemberType]
-                    "--heads",
-                    f"https://github.com/{self.owner}/{self.name}",
-                    f"refs/heads/{pattern}",
-                ),
-            )
-            if not raw_head_data:
-                continue
-            # convert head data into a list of branch names
-            branches: list[str] = [
-                item.split("\t")[1][11:]
-                for item in raw_head_data.split("\n")  # type: ignore[reportUnknownVariableType]
-            ]
-
-            all_branches.extend(
-                [
-                    CraftApplicationBranch(self.name, branch, self.owner)
-                    for branch in branches
-                ],
-            )
-
-        return all_branches
-
-    def init_local_repos(self) -> dict[str, pathlib.Path]:
-        """Initialize all branches into local repos in temporary directories."""
-        local_repos: dict[str, pathlib.Path] = {}
-        for branch in self.branches:
-            safe_name = branch.branch.replace("/", "-")
-            repo_path = pathlib.Path(
-                tempfile.mkdtemp(prefix=f"starcraft-stats-{self.name}-{safe_name}-")
-            )
-            local_repos[branch.branch] = repo_path
-            emit.debug(f"Cloning {branch} into {repo_path}")
-            git.Repo.clone_from(
-                url=f"https://github.com/{self.owner}/{self.name}",
-                to_path=repo_path,
-                branch=branch.branch,
-                depth=1,
-            )
-
-        return local_repos
-
-
 class GetDependenciesCommand(BaseCommand):
     """Get craft library requirements for all applications."""
 
@@ -220,14 +68,7 @@ class GetDependenciesCommand(BaseCommand):
         libraries = {lib: Library(lib) for lib in config.craft_libraries}
         """A mapping of library names to their data."""
 
-        apps = [
-            Application(
-                name=app.name,
-                owner=app.owner,
-                branch_wildcards=app.branch_wildcards,
-            )
-            for app in config.craft_applications
-        ]
+        apps = [Application(name=app) for app in config.craft_applications]
 
         app_reqs: dict[str, dict[str, Dependency]] = {}
         """A mapping of apps and branches to their library usage."""
@@ -236,7 +77,7 @@ class GetDependenciesCommand(BaseCommand):
             for branch_name, repo in app.local_repos.items():
                 name = f"{app.name}/{branch_name}"
                 emit.debug(f"Fetching requirements for {name}")
-                app_reqs[name] = _get_reqs_for_project2(branch_name, repo, libraries)
+                app_reqs[name] = _get_reqs_for_project(branch_name, repo, libraries)
                 emit.message(f"Parsed requirements for {name}")
 
         latest = {lib.name: str(lib.latest) for lib in libraries.values()}
@@ -253,20 +94,11 @@ class GetDependenciesCommand(BaseCommand):
         emit.message(f"Wrote to {DATA_FILE}")
 
 
-def _get_reqs_for_project2(
+def _get_reqs_for_project(
     branch_name: str, repo: pathlib.Path, libs: dict[str, Library]
 ) -> dict[str, Dependency]:
     """Fetch craft library requirements for an application with uv."""
-    # split this out into a function that also falls back to parsing requirements.txt
-    emit.debug(f"Fetching requirements for {branch_name} from {repo}")
-    reqs = subprocess.run(
-        ["uv", "export", "--no-hashes"],
-        cwd=repo,
-        check=True,
-        capture_output=True,
-        text=True,
-    ).stdout
-
+    reqs = _export_reqs(repo)
     df = parse(reqs, file_type=filetypes.requirements_txt)
 
     deps: dict[str, str] = {}
@@ -309,3 +141,20 @@ def _get_reqs_for_project2(
         )
 
     return dlist
+
+
+def _export_reqs(repo: pathlib.Path) -> str:
+    """Export requirements for a project with uv."""
+    emit.debug(f"Exporting requirements for {repo}")
+    try:
+        return subprocess.run(
+            ["uv", "export", "--no-hashes"],
+            cwd=repo,
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout
+    except subprocess.CalledProcessError as err:
+        emit.debug(f"Error exporting requirements for {repo.name} using uv: {err}")
+        emit.debug("Falling back to requirements.txt")
+        return (repo / "requirements.txt").read_text()

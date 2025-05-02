@@ -1,20 +1,14 @@
 craft-applications:
-  #  - name: charmcraft
-  #    branch-wildcards:
-  #      - main
-  #      - hotfix/*
-  #  - name: rockcraft
-  #    branch-wildcards:
-  #      - main
-  #      - hotfix/*
-  - name: snapcraft
-    branch-wildcards:
-      - main
-      - hotfix/8*
+  - charmcraft
+  - imagecraft
+  - rockcraft
+  - snapcraft
 
 craft-libraries:
   - craft-application
   - craft-archives
+  # not used by any projects
+  # - craft-artifacts
   - craft-cli
   - craft-grammar
   - craft-parts
@@ -26,12 +20,14 @@ craft-projects:
   - charmcraft
   - craft-application
   - craft-archives
+  - craft-artifacts
   - craft-cli
   - craft-grammar
   - craft-parts
   - craft-platforms
   - craft-providers
   - craft-store
+  - imagecraft
   - rockcraft
   - snapcraft
   - starbase

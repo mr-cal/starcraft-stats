@@ -3,12 +3,12 @@
 import argparse
 import csv
 import pathlib
-import tempfile
 from dataclasses import dataclass
 
 import git
 from craft_cli import BaseCommand, emit
 
+from .application import Application
 from .config import CONFIG_FILE, Config
 
 DATA_FILE = pathlib.Path("html/data/releases.csv")
@@ -19,9 +19,16 @@ class BranchInfo:
     """Info about a branch."""
 
     application: str
+    """The name of the application."""
+
     branch: str
+    """The name of the branch."""
+
     latest_tag: str
+    """The latest tag on the branch."""
+
     commits_since_tag: int
+    """The number of commits since the latest tag."""
 
 
 class GetReleasesCommand(BaseCommand):
@@ -44,33 +51,40 @@ class GetReleasesCommand(BaseCommand):
 
         branch_infos: list[BranchInfo] = []
 
-        # yes this clones a new repo for each branch but
-        # pre-optimization is the cause of much suffering
-        for app_branch in config.application_branches:
-            with tempfile.TemporaryDirectory() as temp_dir:
-                url = f"https://github.com/{app_branch.owner}/{app_branch.name}.git"
+        apps = [
+            Application(name=app, full_clone=True) for app in config.craft_applications
+        ]
 
-                emit.debug(f"Cloning {app_branch.name} to {temp_dir}")
-                repo = git.Repo.clone_from(url, temp_dir)
-                emit.progress(f"Cloned {app_branch.name} to {temp_dir}", permanent=True)
-                repo.git.checkout(app_branch.branch)
-                tag = repo.git.describe(
-                    "--abbrev=0",
-                    "--tags",
-                    "--match",
-                    "[0-9]*.[0-9]*.[0-9]*",
-                )
-                commits_since_tag = repo.git.rev_list("--count", "HEAD", f"^{tag}")
+        for app in apps:
+            for branch_name, repo_dir in app.local_repos.items():
+                repo = git.Repo(path=repo_dir)
+                try:
+                    tag = repo.git.describe(
+                        "--abbrev=0",
+                        "--tags",
+                        "--match",
+                        "[0-9]*.[0-9]*.[0-9]*",
+                    )
+                    commits_since_tag = repo.git.rev_list("--count", "HEAD", f"^{tag}")
+                except git.GitCommandError as err:
+                    if "No names found" in str(err):
+                        # No tags found, skip this branch
+                        emit.debug(f"No tags found for {branch_name}")
+                        tag = "0.0.0"
+                        commits_since_tag = repo.git.rev_list("--count", "HEAD")
+                    else:
+                        raise
 
                 emit.debug(
-                    f"branch: {app_branch.branch}, "
+                    f"application: {app.name}, "
+                    f"branch: {branch_name}, "
                     f"latest tag: {tag}, "
                     f"commits since tag: {commits_since_tag}",
                 )
                 branch_infos.append(
                     BranchInfo(
-                        app_branch.name,
-                        app_branch.branch,
+                        app.name,
+                        branch_name,
                         tag,
                         int(commits_since_tag),
                     ),
