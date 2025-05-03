@@ -1322,4 +1322,40 @@ issues:
   '331':
     type: pr
     date-opened: '2025-03-19T17:55:04Z'
+    date-closed: '2025-03-27T16:05:57Z'
+  '340':
+    type: pr
+    date-opened: '2025-05-02T16:09:15Z'
     date-closed: null
+  '339':
+    type: pr
+    date-opened: '2025-04-29T19:35:46Z'
+    date-closed: '2025-04-30T11:26:03Z'
+  '338':
+    type: pr
+    date-opened: '2025-04-29T10:05:25Z'
+    date-closed: null
+  '337':
+    type: pr
+    date-opened: '2025-04-25T16:43:24Z'
+    date-closed: null
+  '336':
+    type: pr
+    date-opened: '2025-04-25T16:35:37Z'
+    date-closed: '2025-04-30T13:31:28Z'
+  '335':
+    type: pr
+    date-opened: '2025-04-15T15:34:37Z'
+    date-closed: null
+  '334':
+    type: issue
+    date-opened: '2025-04-14T15:05:05Z'
+    date-closed: '2025-04-30T11:26:03Z'
+  '333':
+    type: pr
+    date-opened: '2025-03-27T16:08:48Z'
+    date-closed: '2025-03-27T17:40:30Z'
+  '332':
+    type: pr
+    date-opened: '2025-03-27T13:54:05Z'
+    date-closed: '2025-03-27T15:42:47Z'

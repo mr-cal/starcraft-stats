@@ -1418,7 +1418,7 @@ issues:
   '355':
     type: pr
     date-opened: '2025-02-17T01:00:17Z'
-    date-closed: null
+    date-closed: '2025-03-26T01:20:03Z'
   '356':
     type: pr
     date-opened: '2025-02-20T14:33:58Z'
@@ -1482,4 +1482,52 @@ issues:
   '371':
     type: pr
     date-opened: '2025-03-22T04:50:52Z'
+    date-closed: '2025-03-31T17:40:39Z'
+  '383':
+    type: pr
+    date-opened: '2025-05-02T16:01:56Z'
     date-closed: null
+  '382':
+    type: pr
+    date-opened: '2025-05-01T16:00:36Z'
+    date-closed: '2025-05-01T16:56:23Z'
+  '381':
+    type: pr
+    date-opened: '2025-04-27T00:25:47Z'
+    date-closed: null
+  '380':
+    type: pr
+    date-opened: '2025-04-22T23:58:06Z'
+    date-closed: '2025-04-23T11:56:24Z'
+  '379':
+    type: pr
+    date-opened: '2025-04-19T20:27:55Z'
+    date-closed: '2025-04-24T21:27:44Z'
+  '378':
+    type: pr
+    date-opened: '2025-04-15T15:45:04Z'
+    date-closed: '2025-04-15T18:36:27Z'
+  '377':
+    type: pr
+    date-opened: '2025-04-14T19:30:43Z'
+    date-closed: '2025-04-15T17:00:55Z'
+  '376':
+    type: pr
+    date-opened: '2025-04-11T00:33:32Z'
+    date-closed: '2025-04-11T19:01:03Z'
+  '375':
+    type: pr
+    date-opened: '2025-04-07T22:48:06Z'
+    date-closed: '2025-04-09T17:13:37Z'
+  '374':
+    type: pr
+    date-opened: '2025-04-07T01:25:43Z'
+    date-closed: '2025-04-24T21:28:27Z'
+  '373':
+    type: pr
+    date-opened: '2025-03-29T01:00:51Z'
+    date-closed: '2025-04-14T15:18:16Z'
+  '372':
+    type: pr
+    date-opened: '2025-03-27T17:00:08Z'
+    date-closed: '2025-03-31T17:40:15Z'

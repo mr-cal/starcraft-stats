@@ -1110,8 +1110,36 @@ issues:
   '278':
     type: pr
     date-opened: '2025-03-15T00:28:33Z'
-    date-closed: null
+    date-closed: '2025-04-25T03:13:35Z'
   '279':
     type: issue
     date-opened: '2025-03-17T17:31:44Z'
     date-closed: null
+  '286':
+    type: pr
+    date-opened: '2025-05-02T19:39:34Z'
+    date-closed: null
+  '285':
+    type: pr
+    date-opened: '2025-04-29T18:34:50Z'
+    date-closed: '2025-05-02T19:30:17Z'
+  '284':
+    type: pr
+    date-opened: '2025-04-29T17:36:22Z'
+    date-closed: '2025-04-29T18:29:19Z'
+  '283':
+    type: pr
+    date-opened: '2025-04-29T01:24:16Z'
+    date-closed: '2025-05-01T16:50:02Z'
+  '282':
+    type: pr
+    date-opened: '2025-04-26T00:51:35Z'
+    date-closed: null
+  '281':
+    type: pr
+    date-opened: '2025-04-15T00:31:54Z'
+    date-closed: null
+  '280':
+    type: pr
+    date-opened: '2025-04-04T12:58:01Z'
+    date-closed: '2025-04-07T19:17:41Z'
