@@ -517,6 +517,10 @@ projects:
         type: issue
         date-opened: '2024-05-14T12:22:29Z'
         date-closed: null
+      '130':
+        type: pr
+        date-opened: '2025-05-03T20:45:28Z'
+        date-closed: null
   craft-grammar:
     issues:
       '91':
@@ -24080,6 +24084,10 @@ projects:
       '1':
         type: issue
         date-opened: '2023-08-18T16:07:54Z'
+        date-closed: null
+      '144':
+        type: pr
+        date-opened: '2025-05-03T20:48:55Z'
         date-closed: null
   rockcraft:
     issues:
