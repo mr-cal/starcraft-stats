@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/custom.css" />
     <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.js"></script>
-    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/issues.js"></script>
   </head>
 
   <header id="navigation" class="p-navigation is-dark">
@@ -28,14 +28,14 @@
       </div>
       <nav class="p-navigation__nav" aria-label="Example main">
         <ul class="p-navigation__items">
-          <li class="p-navigation__item is-selected">
-            <a class="p-navigation__link" href="#">Libraries and Applications</a>
+          <li class="p-navigation__item">
+            <a class="p-navigation__link" href="index.html">Libraries and Applications</a>
           </li>
           <li class="p-navigation__item">
             <a class="p-navigation__link" href="commits.html">Releases and commits</a>
           </li>
-          <li class="p-navigation__item">
-            <a class="p-navigation__link" href="issues.html">Issues</a>
+          <li class="p-navigation__item is-selected">
+            <a class="p-navigation__link" href="#">Issues</a>
           </li>
         </ul>
       </nav>
@@ -46,16 +46,12 @@
     <div class="p-strip">
       <div class="row">
         <div class="col-12">
-          <h2>Libraries and Applications</h2>
+          <h2>Issues</h2>
         </div>
       </div>
       <div class="row">
         <div class="col-12">
-          <p>A table showing which applications are using up-to-date craft libraries.</p>
-          <p>
-            Main branches are expected to be using the latest release. Hotfix branches are expected to have the latest
-            patch release in their minor release series.
-          </p>
+          <p>A collection of graphs showing open issues in repositories.</p>
         </div>
       </div>
     </div>
@@ -66,7 +62,7 @@
 
     <div class="p-strip">
       <div class="row">
-        <div id="libs-and-apps-table"></div>
+        <div id="issues"></div>
       </div>
     </div>
 
