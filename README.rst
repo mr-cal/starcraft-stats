@@ -1,7 +1,7 @@
 craft-stats
 ###########
 
-|test-status-badge| |data-collection-badge|
+|test-status-badge| |fast-data-collection-badge| |slow-data-collection-badge|
 
 Overview
 ========
@@ -62,8 +62,10 @@ Contributing
 
 Contributions are encouraged!
 
-.. |test-status-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml/badge.svg?branch=main
-.. _test-status-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/tests.yaml
-.. |data-collection-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml/badge.svg?branch=main
-.. _data-collection-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/data-collection.yaml
+.. |test-status-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/qa.yaml/badge.svg?branch=main
+.. _test-status-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/qa.yaml
+.. |fast-data-collection-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/fast-data-collection.yaml/badge.svg?branch=main
+.. _fast-data-collection-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/fast-data-collection.yaml
+.. |slow-data-collection-badge| image:: https://github.com/mr-cal/starcraft-stats/actions/workflows/slow-data-collection.yaml/badge.svg?branch=main
+.. _slow-data-collection-badge: https://github.com/mr-cal/starcraft-stats/actions/workflows/slow-data-collection.yaml
 .. _fine-grained github token: https://github.com/settings/tokens?type=beta
