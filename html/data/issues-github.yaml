@@ -10005,6 +10005,10 @@ projects:
         type: pr
         date-opened: '2025-05-14T07:22:23Z'
         date-closed: null
+      '2290':
+        type: pr
+        date-opened: '2025-05-17T04:29:32Z'
+        date-closed: null
   craft-application:
     issues:
       '753':
@@ -13014,7 +13018,7 @@ projects:
       '754':
         type: pr
         date-opened: '2025-05-06T15:19:49Z'
-        date-closed: null
+        date-closed: '2025-05-16T08:35:39Z'
       '760':
         type: pr
         date-opened: '2025-05-08T10:29:45Z'
@@ -19515,6 +19519,10 @@ projects:
         type: pr
         date-opened: '2025-05-07T19:23:08Z'
         date-closed: '2025-05-08T14:22:02Z'
+      '1095':
+        type: pr
+        date-opened: '2025-05-16T08:10:04Z'
+        date-closed: null
   craft-providers:
     issues:
       '740':
@@ -22497,6 +22505,10 @@ projects:
         type: pr
         date-opened: '2025-05-09T10:36:25Z'
         date-closed: '2025-05-09T13:43:01Z'
+      '747':
+        type: pr
+        date-opened: '2025-05-16T08:12:01Z'
+        date-closed: null
   craft-store:
     issues:
       '286':
@@ -24229,6 +24241,10 @@ projects:
         type: pr
         date-opened: '2025-05-11T20:36:07Z'
         date-closed: null
+      '147':
+        type: pr
+        date-opened: '2025-05-17T05:13:30Z'
+        date-closed: null
   rockcraft:
     issues:
       '877':
@@ -24302,7 +24318,7 @@ projects:
       '860':
         type: pr
         date-opened: '2025-04-14T04:10:17Z'
-        date-closed: null
+        date-closed: '2025-05-18T18:05:22Z'
       '859':
         type: issue
         date-opened: '2025-04-10T23:59:42Z'
@@ -27754,6 +27770,14 @@ projects:
       '882':
         type: issue
         date-opened: '2025-05-11T08:01:41Z'
+        date-closed: null
+      '884':
+        type: issue
+        date-opened: '2025-05-17T15:02:34Z'
+        date-closed: null
+      '883':
+        type: issue
+        date-opened: '2025-05-17T14:55:32Z'
         date-closed: null
   snapcraft:
     issues:
@@ -49648,6 +49672,22 @@ projects:
       '5487':
         type: pr
         date-opened: '2025-05-13T12:25:43Z'
+        date-closed: null
+      '5494':
+        type: pr
+        date-opened: '2025-05-16T17:13:43Z'
+        date-closed: null
+      '5493':
+        type: pr
+        date-opened: '2025-05-16T17:13:35Z'
+        date-closed: null
+      '5492':
+        type: pr
+        date-opened: '2025-05-16T17:13:29Z'
+        date-closed: null
+      '5491':
+        type: issue
+        date-opened: '2025-05-16T14:30:32Z'
         date-closed: null
   starbase:
     issues:
