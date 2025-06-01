@@ -537,6 +537,10 @@ projects:
         type: pr
         date-opened: '2025-05-27T18:41:17Z'
         date-closed: '2025-05-27T19:15:00Z'
+      '135':
+        type: pr
+        date-opened: '2025-05-31T06:56:58Z'
+        date-closed: null
   craft-grammar:
     issues:
       '91':
@@ -24468,6 +24472,14 @@ projects:
       '153':
         type: pr
         date-opened: '2025-05-30T22:23:41Z'
+        date-closed: null
+      '155':
+        type: pr
+        date-opened: '2025-05-31T23:19:37Z'
+        date-closed: null
+      '154':
+        type: pr
+        date-opened: '2025-05-31T18:46:23Z'
         date-closed: null
   rockcraft:
     issues:
@@ -50081,6 +50093,10 @@ projects:
         type: pr
         date-opened: '2025-05-28T16:54:44Z'
         date-closed: '2025-05-29T19:32:06Z'
+      '5528':
+        type: pr
+        date-opened: '2025-05-31T03:33:22Z'
+        date-closed: null
   starbase:
     issues:
       '383':
@@ -51646,4 +51662,12 @@ projects:
       '392':
         type: pr
         date-opened: '2025-05-29T17:38:19Z'
+        date-closed: null
+      '394':
+        type: pr
+        date-opened: '2025-05-31T19:00:25Z'
+        date-closed: null
+      '393':
+        type: pr
+        date-opened: '2025-05-31T03:50:17Z'
         date-closed: null
