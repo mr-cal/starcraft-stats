@@ -317,9 +317,9 @@
             },
             "craft-store": {
                 "series": "3.2",
-                "version": "3.2.1",
+                "version": "3.2.2",
                 "latest": "3.2.2",
-                "outdated": true
+                "outdated": false
             }
         },
         "snapcraft/hotfix/7.5": {
@@ -364,8 +364,8 @@
             "craft-application": {
                 "series": "5.2",
                 "version": "5.2.0",
-                "latest": "5.2.0",
-                "outdated": false
+                "latest": "5.2.1",
+                "outdated": true
             },
             "craft-archives": {
                 "series": "2.1",
