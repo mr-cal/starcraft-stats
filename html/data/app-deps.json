@@ -172,10 +172,10 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.8",
-                "version": "2.8.0",
+                "series": "2.12",
+                "version": "2.12.0",
                 "latest": "2.12.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.8",
