@@ -387,9 +387,9 @@
             },
             "craft-parts": {
                 "series": "2.10",
-                "version": "2.10.0",
+                "version": "2.10.1",
                 "latest": "2.10.1",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.8",
