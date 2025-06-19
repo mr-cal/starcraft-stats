@@ -568,11 +568,11 @@ projects:
       '142':
         type: pr
         date-opened: '2025-06-13T19:17:21Z'
-        date-closed: null
+        date-closed: '2025-06-16T22:23:50Z'
       '141':
         type: pr
         date-opened: '2025-06-13T19:15:03Z'
-        date-closed: null
+        date-closed: '2025-06-16T19:57:29Z'
       '140':
         type: pr
         date-opened: '2025-06-13T19:04:41Z'
@@ -10160,7 +10160,7 @@ projects:
       '2313':
         type: pr
         date-opened: '2025-06-06T13:47:55Z'
-        date-closed: null
+        date-closed: '2025-06-17T12:00:41Z'
       '2312':
         type: pr
         date-opened: '2025-06-05T03:49:53Z'
@@ -10264,6 +10264,26 @@ projects:
       '2329':
         type: pr
         date-opened: '2025-06-13T07:39:18Z'
+        date-closed: null
+      '2340':
+        type: issue
+        date-opened: '2025-06-18T12:28:17Z'
+        date-closed: null
+      '2339':
+        type: pr
+        date-opened: '2025-06-17T20:56:03Z'
+        date-closed: null
+      '2338':
+        type: pr
+        date-opened: '2025-06-17T11:54:45Z'
+        date-closed: null
+      '2337':
+        type: pr
+        date-opened: '2025-06-16T14:46:42Z'
+        date-closed: null
+      '2336':
+        type: issue
+        date-opened: '2025-06-16T13:11:41Z'
         date-closed: null
   craft-application:
     issues:
@@ -20026,7 +20046,7 @@ projects:
       '1113':
         type: pr
         date-opened: '2025-06-04T18:34:03Z'
-        date-closed: null
+        date-closed: '2025-06-16T18:19:19Z'
       '1121':
         type: pr
         date-opened: '2025-06-09T21:06:30Z'
@@ -20058,6 +20078,30 @@ projects:
       '1123':
         type: pr
         date-opened: '2025-06-13T15:52:05Z'
+        date-closed: null
+      '1129':
+        type: pr
+        date-opened: '2025-06-18T21:19:28Z'
+        date-closed: '2025-06-18T23:06:17Z'
+      '1128':
+        type: pr
+        date-opened: '2025-06-18T15:27:35Z'
+        date-closed: '2025-06-18T16:28:12Z'
+      '1127':
+        type: issue
+        date-opened: '2025-06-17T08:58:40Z'
+        date-closed: null
+      '1126':
+        type: pr
+        date-opened: '2025-06-16T20:57:13Z'
+        date-closed: null
+      '1125':
+        type: pr
+        date-opened: '2025-06-16T18:23:15Z'
+        date-closed: '2025-06-18T14:40:39Z'
+      '1124':
+        type: pr
+        date-opened: '2025-06-16T12:35:44Z'
         date-closed: null
   craft-providers:
     issues:
@@ -23101,6 +23145,10 @@ projects:
         type: pr
         date-opened: '2025-06-13T20:31:50Z'
         date-closed: null
+      '762':
+        type: pr
+        date-opened: '2025-06-18T20:43:00Z'
+        date-closed: null
   craft-store:
     issues:
       '286':
@@ -24920,7 +24968,7 @@ projects:
       '161':
         type: pr
         date-opened: '2025-06-14T07:12:01Z'
-        date-closed: null
+        date-closed: '2025-06-16T20:09:02Z'
   rockcraft:
     issues:
       '877':
@@ -25002,7 +25050,7 @@ projects:
       '858':
         type: pr
         date-opened: '2025-04-09T20:26:18Z'
-        date-closed: null
+        date-closed: '2025-06-18T21:16:58Z'
       '857':
         type: issue
         date-opened: '2025-04-09T13:53:38Z'
@@ -28502,7 +28550,7 @@ projects:
       '896':
         type: pr
         date-opened: '2025-06-05T13:55:13Z'
-        date-closed: null
+        date-closed: '2025-06-18T13:56:27Z'
       '895':
         type: pr
         date-opened: '2025-06-05T13:48:29Z'
@@ -28518,6 +28566,18 @@ projects:
       '900':
         type: pr
         date-opened: '2025-06-13T19:14:36Z'
+        date-closed: '2025-06-17T16:54:28Z'
+      '903':
+        type: pr
+        date-opened: '2025-06-18T21:23:57Z'
+        date-closed: null
+      '902':
+        type: issue
+        date-opened: '2025-06-18T16:30:11Z'
+        date-closed: null
+      '901':
+        type: issue
+        date-opened: '2025-06-17T13:28:46Z'
         date-closed: null
   snapcraft:
     issues:
@@ -50600,7 +50660,7 @@ projects:
       '5534':
         type: pr
         date-opened: '2025-06-04T18:34:35Z'
-        date-closed: null
+        date-closed: '2025-06-18T15:32:06Z'
       '5533':
         type: pr
         date-opened: '2025-06-04T16:14:05Z'
@@ -50688,6 +50748,34 @@ projects:
       '5558':
         type: pr
         date-opened: '2025-06-13T12:59:10Z'
+        date-closed: null
+      '5566':
+        type: pr
+        date-opened: '2025-06-18T23:32:02Z'
+        date-closed: null
+      '5565':
+        type: pr
+        date-opened: '2025-06-18T23:01:06Z'
+        date-closed: '2025-06-18T23:35:32Z'
+      '5564':
+        type: pr
+        date-opened: '2025-06-18T23:00:59Z'
+        date-closed: null
+      '5563':
+        type: pr
+        date-opened: '2025-06-18T23:00:52Z'
+        date-closed: '2025-06-18T23:35:59Z'
+      '5562':
+        type: pr
+        date-opened: '2025-06-18T22:59:47Z'
+        date-closed: '2025-06-18T23:34:22Z'
+      '5561':
+        type: pr
+        date-opened: '2025-06-18T15:36:57Z'
+        date-closed: null
+      '5560':
+        type: issue
+        date-opened: '2025-06-16T14:45:48Z'
         date-closed: null
   starbase:
     issues:
@@ -52298,7 +52386,7 @@ projects:
       '404':
         type: pr
         date-opened: '2025-06-11T00:37:22Z'
-        date-closed: null
+        date-closed: '2025-06-16T19:42:44Z'
       '403':
         type: pr
         date-opened: '2025-06-10T19:27:25Z'
