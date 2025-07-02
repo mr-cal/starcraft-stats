@@ -14,10 +14,10 @@
         "craft-archives": "2.1.0",
         "craft-cli": "3.0.0",
         "craft-grammar": "2.0.3",
-        "craft-parts": "2.14.0",
+        "craft-parts": "2.15.0",
         "craft-platforms": "0.9.0",
         "craft-providers": "2.3.1",
-        "craft-store": "3.2.2"
+        "craft-store": "3.3.0"
     },
     "apps": {
         "charmcraft/main": {
@@ -48,7 +48,7 @@
             "craft-parts": {
                 "series": "2.9",
                 "version": "2.9.1",
-                "latest": "2.14.0",
+                "latest": "2.15.0",
                 "outdated": true
             },
             "craft-platforms": {
@@ -66,7 +66,7 @@
             "craft-store": {
                 "series": "3.2",
                 "version": "3.2.1",
-                "latest": "3.2.2",
+                "latest": "3.3.0",
                 "outdated": true
             }
         },
@@ -174,7 +174,7 @@
             "craft-parts": {
                 "series": "2.12",
                 "version": "2.12.0",
-                "latest": "2.14.0",
+                "latest": "2.15.0",
                 "outdated": true
             },
             "craft-platforms": {
@@ -218,7 +218,7 @@
             "craft-parts": {
                 "series": "2.10",
                 "version": "2.10.0",
-                "latest": "2.14.0",
+                "latest": "2.15.0",
                 "outdated": true
             },
             "craft-platforms": {
@@ -300,8 +300,8 @@
             "craft-parts": {
                 "series": "2.14",
                 "version": "2.14.0",
-                "latest": "2.14.0",
-                "outdated": false
+                "latest": "2.15.0",
+                "outdated": true
             },
             "craft-platforms": {
                 "series": "0.9",
@@ -318,8 +318,8 @@
             "craft-store": {
                 "series": "3.2",
                 "version": "3.2.2",
-                "latest": "3.2.2",
-                "outdated": false
+                "latest": "3.3.0",
+                "outdated": true
             }
         },
         "snapcraft/hotfix/7.5": {
