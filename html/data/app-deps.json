@@ -274,10 +274,10 @@
         },
         "snapcraft/main": {
             "craft-application": {
-                "series": "5.3",
-                "version": "5.3.0",
+                "series": "5.4",
+                "version": "5.4.0",
                 "latest": "5.4.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.1",
@@ -298,10 +298,10 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.14",
-                "version": "2.14.0",
+                "series": "2.18",
+                "version": "2.18.0",
                 "latest": "2.18.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.9",
