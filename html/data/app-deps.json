@@ -22,10 +22,10 @@
     "apps": {
         "charmcraft/main": {
             "craft-application": {
-                "series": "4.10",
-                "version": "4.10.0",
+                "series": "5.5",
+                "version": "5.5.0",
                 "latest": "5.5.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.1",
@@ -46,20 +46,20 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.9",
-                "version": "2.9.1",
+                "series": "2.18",
+                "version": "2.18.0",
                 "latest": "2.18.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
-                "series": "0.8",
-                "version": "0.8.0",
+                "series": "0.10",
+                "version": "0.10.0",
                 "latest": "0.10.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-providers": {
-                "series": "2.2",
-                "version": "2.2.0",
+                "series": "2.3",
+                "version": "2.3.1",
                 "latest": "2.4.0",
                 "outdated": true
             },
@@ -286,10 +286,10 @@
                 "outdated": false
             },
             "craft-cli": {
-                "series": "3.0",
-                "version": "3.0.0",
+                "series": "3.1",
+                "version": "3.1.2",
                 "latest": "3.1.2",
-                "outdated": true
+                "outdated": false
             },
             "craft-grammar": {
                 "series": "2.0",
