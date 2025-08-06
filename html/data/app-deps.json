@@ -149,9 +149,9 @@
         "imagecraft/main": {
             "craft-application": {
                 "series": "5.6",
-                "version": "5.6.0",
+                "version": "5.6.3",
                 "latest": "5.6.3",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.1",
@@ -275,9 +275,9 @@
         "snapcraft/main": {
             "craft-application": {
                 "series": "5.6",
-                "version": "5.6.1",
+                "version": "5.6.3",
                 "latest": "5.6.3",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.1",
@@ -298,28 +298,28 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.18",
-                "version": "2.18.0",
+                "series": "2.20",
+                "version": "2.20.0",
                 "latest": "2.20.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
-                "series": "0.9",
-                "version": "0.9.0",
+                "series": "0.10",
+                "version": "0.10.0",
                 "latest": "0.10.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-providers": {
-                "series": "2.3",
-                "version": "2.3.1",
+                "series": "2.4",
+                "version": "2.4.0",
                 "latest": "2.4.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-store": {
-                "series": "3.2",
-                "version": "3.2.2",
+                "series": "3.3",
+                "version": "3.3.0",
                 "latest": "3.3.0",
-                "outdated": true
+                "outdated": false
             }
         },
         "snapcraft/hotfix/7.5": {
