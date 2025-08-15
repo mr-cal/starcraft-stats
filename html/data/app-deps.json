@@ -280,10 +280,10 @@
                 "outdated": false
             },
             "craft-archives": {
-                "series": "2.1",
-                "version": "2.1.0",
+                "series": "2.2",
+                "version": "2.2.0",
                 "latest": "2.2.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-cli": {
                 "series": "3.1",
