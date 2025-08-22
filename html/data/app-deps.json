@@ -363,9 +363,9 @@
         "snapcraft/hotfix/8.11": {
             "craft-application": {
                 "series": "5.6",
-                "version": "5.6.3",
+                "version": "5.6.5",
                 "latest": "5.6.5",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.1",
