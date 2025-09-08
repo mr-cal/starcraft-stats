@@ -166,16 +166,16 @@
                 "outdated": false
             },
             "craft-grammar": {
-                "series": "2.1",
-                "version": "2.1.0",
+                "series": "2.2",
+                "version": "2.2.0",
                 "latest": "2.2.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-parts": {
-                "series": "2.20",
-                "version": "2.20.0",
+                "series": "2.21",
+                "version": "2.21.0",
                 "latest": "2.21.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.10",
