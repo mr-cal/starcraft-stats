@@ -274,10 +274,10 @@
         },
         "snapcraft/main": {
             "craft-application": {
-                "series": "5.9",
-                "version": "5.9.1",
+                "series": "5.10",
+                "version": "5.10.1",
                 "latest": "5.10.1",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.2",
@@ -286,10 +286,10 @@
                 "outdated": false
             },
             "craft-cli": {
-                "series": "3.1",
-                "version": "3.1.2",
+                "series": "3.2",
+                "version": "3.2.0",
                 "latest": "3.2.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-grammar": {
                 "series": "2.2",
@@ -298,8 +298,8 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.21",
-                "version": "2.21.0",
+                "series": "2.22",
+                "version": "2.22.1",
                 "latest": "2.23.0",
                 "outdated": true
             },
