@@ -123,16 +123,16 @@
         "charmcraft/hotfix/2.7": {},
         "imagecraft/main": {
             "craft-application": {
-                "series": "5.6",
-                "version": "5.6.3",
+                "series": "5.9",
+                "version": "5.9.1",
                 "latest": "5.10.1",
                 "outdated": true
             },
             "craft-archives": {
-                "series": "2.1",
-                "version": "2.1.0",
+                "series": "2.2",
+                "version": "2.2.0",
                 "latest": "2.2.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-cli": {
                 "series": "3.1",
@@ -159,10 +159,10 @@
                 "outdated": false
             },
             "craft-providers": {
-                "series": "2.4",
-                "version": "2.4.0",
+                "series": "3.1",
+                "version": "3.1.0",
                 "latest": "3.1.0",
-                "outdated": true
+                "outdated": false
             }
         },
         "rockcraft/main": {
