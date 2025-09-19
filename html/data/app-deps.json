@@ -10,10 +10,10 @@
         "craft-store"
     ],
     "latest": {
-        "craft-application": "5.10.1",
+        "craft-application": "5.10.2",
         "craft-archives": "2.2.0",
         "craft-cli": "3.2.0",
-        "craft-grammar": "2.2.0",
+        "craft-grammar": "2.3.0",
         "craft-parts": "2.23.0",
         "craft-platforms": "0.10.0",
         "craft-providers": "3.1.0",
@@ -24,8 +24,8 @@
             "craft-application": {
                 "series": "5.10",
                 "version": "5.10.1",
-                "latest": "5.10.1",
-                "outdated": false
+                "latest": "5.10.2",
+                "outdated": true
             },
             "craft-archives": {
                 "series": "2.2",
@@ -42,8 +42,8 @@
             "craft-grammar": {
                 "series": "2.2",
                 "version": "2.2.0",
-                "latest": "2.2.0",
-                "outdated": false
+                "latest": "2.3.0",
+                "outdated": true
             },
             "craft-parts": {
                 "series": "2.22",
@@ -125,7 +125,7 @@
             "craft-application": {
                 "series": "5.9",
                 "version": "5.9.1",
-                "latest": "5.10.1",
+                "latest": "5.10.2",
                 "outdated": true
             },
             "craft-archives": {
@@ -143,8 +143,8 @@
             "craft-grammar": {
                 "series": "2.2",
                 "version": "2.2.0",
-                "latest": "2.2.0",
-                "outdated": false
+                "latest": "2.3.0",
+                "outdated": true
             },
             "craft-parts": {
                 "series": "2.22",
@@ -169,8 +169,8 @@
             "craft-application": {
                 "series": "5.10",
                 "version": "5.10.1",
-                "latest": "5.10.1",
-                "outdated": false
+                "latest": "5.10.2",
+                "outdated": true
             },
             "craft-archives": {
                 "series": "2.2",
@@ -187,8 +187,8 @@
             "craft-grammar": {
                 "series": "2.2",
                 "version": "2.2.0",
-                "latest": "2.2.0",
-                "outdated": false
+                "latest": "2.3.0",
+                "outdated": true
             },
             "craft-parts": {
                 "series": "2.23",
@@ -214,8 +214,8 @@
             "craft-application": {
                 "series": "5.10",
                 "version": "5.10.1",
-                "latest": "5.10.1",
-                "outdated": false
+                "latest": "5.10.2",
+                "outdated": true
             },
             "craft-archives": {
                 "series": "2.2",
@@ -232,8 +232,8 @@
             "craft-grammar": {
                 "series": "2.2",
                 "version": "2.2.0",
-                "latest": "2.2.0",
-                "outdated": false
+                "latest": "2.3.0",
+                "outdated": true
             },
             "craft-parts": {
                 "series": "2.22",
