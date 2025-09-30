@@ -70,6 +70,56 @@
                 "outdated": false
             }
         },
+        "charmcraft/hotfix/4.0": {
+            "craft-application": {
+                "series": "5.10",
+                "version": "5.10.1",
+                "latest": "5.10.2",
+                "outdated": true
+            },
+            "craft-archives": {
+                "series": "2.2",
+                "version": "2.2.0",
+                "latest": "2.2.0",
+                "outdated": false
+            },
+            "craft-cli": {
+                "series": "3.2",
+                "version": "3.2.0",
+                "latest": "3.2.0",
+                "outdated": false
+            },
+            "craft-grammar": {
+                "series": "2.2",
+                "version": "2.2.0",
+                "latest": "2.2.0",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "2.22",
+                "version": "2.22.1",
+                "latest": "2.22.1",
+                "outdated": false
+            },
+            "craft-platforms": {
+                "series": "0.10",
+                "version": "0.10.0",
+                "latest": "0.10.0",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "3.1",
+                "version": "3.1.0",
+                "latest": "3.1.0",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "3.3",
+                "version": "3.3.0",
+                "latest": "3.3.0",
+                "outdated": false
+            }
+        },
         "charmcraft/hotfix/3.5": {
             "craft-application": {
                 "series": "4.10",
