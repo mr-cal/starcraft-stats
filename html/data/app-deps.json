@@ -10,7 +10,7 @@
         "craft-store"
     ],
     "latest": {
-        "craft-application": "5.10.3",
+        "craft-application": "5.11.0",
         "craft-archives": "2.2.0",
         "craft-cli": "3.2.0",
         "craft-grammar": "2.3.0",
@@ -24,7 +24,7 @@
             "craft-application": {
                 "series": "5.10",
                 "version": "5.10.1",
-                "latest": "5.10.3",
+                "latest": "5.11.0",
                 "outdated": true
             },
             "craft-archives": {
@@ -175,7 +175,7 @@
             "craft-application": {
                 "series": "5.9",
                 "version": "5.9.1",
-                "latest": "5.10.3",
+                "latest": "5.11.0",
                 "outdated": true
             },
             "craft-archives": {
@@ -219,7 +219,7 @@
             "craft-application": {
                 "series": "5.10",
                 "version": "5.10.1",
-                "latest": "5.10.3",
+                "latest": "5.11.0",
                 "outdated": true
             },
             "craft-archives": {
@@ -264,7 +264,7 @@
             "craft-application": {
                 "series": "5.10",
                 "version": "5.10.1",
-                "latest": "5.10.3",
+                "latest": "5.11.0",
                 "outdated": true
             },
             "craft-archives": {
