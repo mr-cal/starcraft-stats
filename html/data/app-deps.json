@@ -217,10 +217,10 @@
         },
         "rockcraft/main": {
             "craft-application": {
-                "series": "5.10",
-                "version": "5.10.1",
+                "series": "5.11",
+                "version": "5.11.0",
                 "latest": "5.11.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.2",
@@ -235,16 +235,16 @@
                 "outdated": false
             },
             "craft-grammar": {
-                "series": "2.2",
-                "version": "2.2.0",
+                "series": "2.3",
+                "version": "2.3.0",
                 "latest": "2.3.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-parts": {
-                "series": "2.24",
-                "version": "2.24.0",
+                "series": "2.25",
+                "version": "2.25.0",
                 "latest": "2.25.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.10",
