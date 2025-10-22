@@ -14,7 +14,7 @@
         "craft-archives": "2.2.0",
         "craft-cli": "3.2.0",
         "craft-grammar": "2.3.0",
-        "craft-parts": "2.25.0",
+        "craft-parts": "2.26.0",
         "craft-platforms": "0.10.0",
         "craft-providers": "3.1.0",
         "craft-store": "3.3.0"
@@ -48,7 +48,7 @@
             "craft-parts": {
                 "series": "2.22",
                 "version": "2.22.1",
-                "latest": "2.25.0",
+                "latest": "2.26.0",
                 "outdated": true
             },
             "craft-platforms": {
@@ -199,8 +199,8 @@
             "craft-parts": {
                 "series": "2.25",
                 "version": "2.25.0",
-                "latest": "2.25.0",
-                "outdated": false
+                "latest": "2.26.0",
+                "outdated": true
             },
             "craft-platforms": {
                 "series": "0.10",
@@ -243,8 +243,8 @@
             "craft-parts": {
                 "series": "2.25",
                 "version": "2.25.0",
-                "latest": "2.25.0",
-                "outdated": false
+                "latest": "2.26.0",
+                "outdated": true
             },
             "craft-platforms": {
                 "series": "0.10",
@@ -288,8 +288,8 @@
             "craft-parts": {
                 "series": "2.25",
                 "version": "2.25.0",
-                "latest": "2.25.0",
-                "outdated": false
+                "latest": "2.26.0",
+                "outdated": true
             },
             "craft-platforms": {
                 "series": "0.10",
