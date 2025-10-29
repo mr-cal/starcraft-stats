@@ -311,11 +311,11 @@
             }
         },
         "snapcraft/hotfix/7.5": {},
-        "snapcraft/hotfix/8.12": {
+        "snapcraft/hotfix/8.13": {
             "craft-application": {
-                "series": "5.8",
-                "version": "5.8.0",
-                "latest": "5.8.0",
+                "series": "5.11",
+                "version": "5.11.0",
+                "latest": "5.11.0",
                 "outdated": false
             },
             "craft-archives": {
@@ -325,21 +325,21 @@
                 "outdated": false
             },
             "craft-cli": {
-                "series": "3.1",
-                "version": "3.1.2",
-                "latest": "3.1.2",
+                "series": "3.2",
+                "version": "3.2.0",
+                "latest": "3.2.0",
                 "outdated": false
             },
             "craft-grammar": {
-                "series": "2.2",
-                "version": "2.2.0",
-                "latest": "2.2.0",
+                "series": "2.3",
+                "version": "2.3.0",
+                "latest": "2.3.0",
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.21",
-                "version": "2.21.0",
-                "latest": "2.21.0",
+                "series": "2.25",
+                "version": "2.25.0",
+                "latest": "2.25.0",
                 "outdated": false
             },
             "craft-platforms": {
@@ -349,9 +349,9 @@
                 "outdated": false
             },
             "craft-providers": {
-                "series": "3.0",
-                "version": "3.0.0",
-                "latest": "3.0.0",
+                "series": "3.1",
+                "version": "3.1.0",
+                "latest": "3.1.0",
                 "outdated": false
             },
             "craft-store": {
