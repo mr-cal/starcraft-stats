@@ -23050,7 +23050,7 @@ projects:
       '1360':
         type: issue
         date-opened: '2025-10-08T19:37:34Z'
-        date-closed: null
+        date-closed: '2025-10-31T16:23:29Z'
       '1359':
         type: pr
         date-opened: '2025-10-08T13:17:53Z'
@@ -23138,7 +23138,7 @@ projects:
       '1378':
         type: pr
         date-opened: '2025-10-22T17:24:36Z'
-        date-closed: null
+        date-closed: '2025-10-31T16:23:28Z'
       '1377':
         type: pr
         date-opened: '2025-10-22T01:13:25Z'
@@ -32734,7 +32734,7 @@ projects:
       '1000':
         type: pr
         date-opened: '2025-10-09T11:05:45Z'
-        date-closed: null
+        date-closed: '2025-10-31T09:25:08Z'
       '999':
         type: pr
         date-opened: '2025-10-08T15:28:23Z'
@@ -56161,6 +56161,10 @@ projects:
         type: issue
         date-opened: '2025-10-28T07:10:27Z'
         date-closed: '2025-10-28T20:36:22Z'
+      '5860':
+        type: issue
+        date-opened: '2025-10-31T12:38:40Z'
+        date-closed: null
   starbase:
     issues:
       '383':
