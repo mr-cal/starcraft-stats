@@ -11220,11 +11220,11 @@ projects:
       '2473':
         type: pr
         date-opened: '2025-10-22T08:52:16Z'
-        date-closed: null
+        date-closed: '2025-11-12T21:07:01Z'
       '2475':
         type: pr
         date-opened: '2025-10-27T05:55:27Z'
-        date-closed: null
+        date-closed: '2025-11-12T21:07:49Z'
       '2477':
         type: issue
         date-opened: '2025-10-30T08:35:05Z'
@@ -16106,7 +16106,7 @@ projects:
       '51':
         type: pr
         date-opened: '2025-11-09T03:32:30Z'
-        date-closed: null
+        date-closed: '2025-11-12T22:05:21Z'
   craft-cli:
     issues:
       '340':
@@ -23210,7 +23210,7 @@ projects:
       '1373':
         type: issue
         date-opened: '2025-10-16T19:28:10Z'
-        date-closed: null
+        date-closed: '2025-11-12T20:28:30Z'
       '1376':
         type: pr
         date-opened: '2025-10-21T19:07:29Z'
@@ -23238,7 +23238,7 @@ projects:
       '1383':
         type: pr
         date-opened: '2025-10-29T20:44:19Z'
-        date-closed: null
+        date-closed: '2025-11-12T20:28:29Z'
       '1382':
         type: issue
         date-opened: '2025-10-29T11:03:28Z'
@@ -23282,7 +23282,15 @@ projects:
       '1392':
         type: pr
         date-opened: '2025-11-08T03:11:29Z'
+        date-closed: '2025-11-12T21:54:43Z'
+      '1395':
+        type: pr
+        date-opened: '2025-11-12T14:23:15Z'
         date-closed: null
+      '1394':
+        type: pr
+        date-opened: '2025-11-12T12:04:18Z'
+        date-closed: '2025-11-12T14:24:27Z'
   craft-providers:
     issues:
       '740':
@@ -26672,7 +26680,7 @@ projects:
       '850':
         type: pr
         date-opened: '2025-11-08T13:18:52Z'
-        date-closed: null
+        date-closed: '2025-11-12T16:17:13Z'
       '849':
         type: pr
         date-opened: '2025-11-08T12:14:17Z'
@@ -26680,6 +26688,10 @@ projects:
       '848':
         type: pr
         date-opened: '2025-11-08T00:03:44Z'
+        date-closed: null
+      '851':
+        type: pr
+        date-opened: '2025-11-12T16:21:05Z'
         date-closed: null
   craft-store:
     issues:
@@ -32995,6 +33007,10 @@ projects:
         type: pr
         date-opened: '2025-10-29T22:16:38Z'
         date-closed: null
+      '1017':
+        type: issue
+        date-opened: '2025-11-10T11:54:19Z'
+        date-closed: null
   snapcraft:
     issues:
       '5471':
@@ -34848,7 +34864,7 @@ projects:
       '5009':
         type: issue
         date-opened: '2024-09-03T12:06:24Z'
-        date-closed: null
+        date-closed: '2025-11-10T09:54:00Z'
       '5008':
         type: issue
         date-opened: '2024-08-29T14:48:10Z'
@@ -56361,6 +56377,10 @@ projects:
         type: issue
         date-opened: '2025-11-03T07:53:48Z'
         date-closed: '2025-11-03T07:54:16Z'
+      '5871':
+        type: pr
+        date-opened: '2025-11-12T16:35:10Z'
+        date-closed: null
   starbase:
     issues:
       '383':
