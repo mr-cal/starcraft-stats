@@ -197,10 +197,10 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.26",
-                "version": "2.26.0",
+                "series": "2.27",
+                "version": "2.27.0",
                 "latest": "2.27.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.10",
@@ -262,10 +262,10 @@
         "rockcraft/hotfix/1.5": {},
         "snapcraft/main": {
             "craft-application": {
-                "series": "5.11",
-                "version": "5.11.0",
+                "series": "6.0",
+                "version": "6.0.1",
                 "latest": "6.0.1",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.2",
@@ -286,10 +286,10 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.25",
-                "version": "2.25.0",
+                "series": "2.27",
+                "version": "2.27.0",
                 "latest": "2.27.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.10",
