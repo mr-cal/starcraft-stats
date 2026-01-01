@@ -57649,6 +57649,10 @@ projects:
         type: issue
         date-opened: '2025-12-29T07:08:40Z'
         date-closed: null
+      '5943':
+        type: issue
+        date-opened: '2025-12-31T05:31:03Z'
+        date-closed: '2025-12-31T13:39:05Z'
   starbase:
     issues:
       '383':
