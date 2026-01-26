@@ -311,11 +311,11 @@
             }
         },
         "snapcraft/hotfix/7.5": {},
-        "snapcraft/hotfix/8.13": {
+        "snapcraft/hotfix/8.14": {
             "craft-application": {
-                "series": "5.11",
-                "version": "5.11.0",
-                "latest": "5.11.0",
+                "series": "6.1",
+                "version": "6.1.0",
+                "latest": "6.1.0",
                 "outdated": false
             },
             "craft-archives": {
@@ -337,9 +337,9 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.25",
-                "version": "2.25.0",
-                "latest": "2.25.0",
+                "series": "2.28",
+                "version": "2.28.0",
+                "latest": "2.28.0",
                 "outdated": false
             },
             "craft-platforms": {
