@@ -173,10 +173,10 @@
         "charmcraft/hotfix/2.7": {},
         "imagecraft/main": {
             "craft-application": {
-                "series": "5.11",
-                "version": "5.11.0",
+                "series": "6.1",
+                "version": "6.1.0",
                 "latest": "6.1.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.2",
@@ -197,10 +197,10 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.27",
-                "version": "2.27.0",
+                "series": "2.28",
+                "version": "2.28.0",
                 "latest": "2.28.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.10",
@@ -209,10 +209,10 @@
                 "outdated": false
             },
             "craft-providers": {
-                "series": "3.1",
-                "version": "3.1.0",
+                "series": "3.2",
+                "version": "3.2.0",
                 "latest": "3.2.0",
-                "outdated": true
+                "outdated": false
             }
         },
         "rockcraft/main": {
