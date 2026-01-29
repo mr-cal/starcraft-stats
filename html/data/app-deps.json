@@ -174,9 +174,9 @@
         "imagecraft/main": {
             "craft-application": {
                 "series": "6.1",
-                "version": "6.1.0",
+                "version": "6.1.1",
                 "latest": "6.1.1",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.2",
