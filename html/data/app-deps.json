@@ -218,9 +218,9 @@
         "rockcraft/main": {
             "craft-application": {
                 "series": "6.1",
-                "version": "6.1.0",
+                "version": "6.1.1",
                 "latest": "6.1.1",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.2",
@@ -241,10 +241,10 @@
                 "outdated": false
             },
             "craft-parts": {
-                "series": "2.28",
-                "version": "2.28.0",
+                "series": "2.29",
+                "version": "2.29.0",
                 "latest": "2.29.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-platforms": {
                 "series": "0.10",
