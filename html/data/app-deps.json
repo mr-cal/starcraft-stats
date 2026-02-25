@@ -16,7 +16,7 @@
         "craft-grammar": "2.3.0",
         "craft-parts": "2.29.0",
         "craft-platforms": "0.10.0",
-        "craft-providers": "3.3.0",
+        "craft-providers": "3.4.0",
         "craft-store": "3.3.0"
     },
     "apps": {
@@ -60,7 +60,7 @@
             "craft-providers": {
                 "series": "3.2",
                 "version": "3.2.0",
-                "latest": "3.3.0",
+                "latest": "3.4.0",
                 "outdated": true
             },
             "craft-store": {
@@ -211,8 +211,8 @@
             "craft-providers": {
                 "series": "3.3",
                 "version": "3.3.0",
-                "latest": "3.3.0",
-                "outdated": false
+                "latest": "3.4.0",
+                "outdated": true
             }
         },
         "rockcraft/main": {
@@ -255,8 +255,8 @@
             "craft-providers": {
                 "series": "3.3",
                 "version": "3.3.0",
-                "latest": "3.3.0",
-                "outdated": false
+                "latest": "3.4.0",
+                "outdated": true
             }
         },
         "rockcraft/hotfix/1.5": {},
@@ -300,8 +300,8 @@
             "craft-providers": {
                 "series": "3.3",
                 "version": "3.3.0",
-                "latest": "3.3.0",
-                "outdated": false
+                "latest": "3.4.0",
+                "outdated": true
             },
             "craft-store": {
                 "series": "3.3",
