@@ -2,7 +2,6 @@
 # https://github.com/canonical/starbase
 
 SOURCES=$(wildcard *.py) $(PROJECT) tests
-DOCS=docs
 
 ifneq ($(OS),Windows_NT)
 	OS := $(shell uname)
@@ -13,7 +12,7 @@ else
 	APT := apt-get
 endif
 
-PRETTIER=npm exec --package=prettier -- prettier --log-level warn
+PRETTIER=npm exec --package=prettier@3.6.0 -- prettier --log-level warn # renovate: datasource=npm
 PRETTIER_FILES="**/*.{yaml,yml,json,json5,css,md}"
 
 # Cutoff (in seconds) before a test is considered slow by pytest
@@ -47,15 +46,25 @@ help: ## Show this help.
 			$$3=sprintf(" └ %s", $$3);
 			print $$0;
 		}
-	}'
+	}' | uniq
 
 .PHONY: setup
-setup: install-uv setup-precommit install-build-deps ## Set up a development environment
-	uv sync $(UV_TEST_GROUPS) $(UV_LINT_GROUPS) $(UV_DOCS_GROUPS)
+setup: install-uv _setup-lint _setup-tests setup-precommit install-build-deps  ## Set up a development environment
+	uv sync $(UV_TEST_GROUPS) $(UV_LINT_GROUPS)
+
+.PHONY: setup-lint
+setup-lint: _setup-lint  ##- Set up a linting-only environment
+	uv sync $(UV_LINT_GROUPS)
+
+.PHONY: _setup-lint
+_setup-lint: install-uv install-shellcheck install-lint-build-deps
 
 .PHONY: setup-tests
-setup-tests: install-uv install-build-deps ##- Set up a testing environment without linters
+setup-tests: _setup-tests ##- Set up a testing environment without linters
 	uv sync $(UV_TEST_GROUPS)
+
+.PHONY: _setup-tests
+_setup-tests: install-uv install-build-deps
 
 .PHONY: setup-tics
 setup-tics: install-uv install-build-deps ##- Set up a testing environment for Tiobe TICS
@@ -64,14 +73,6 @@ setup-tics: install-uv install-build-deps ##- Set up a testing environment for T
 ifneq ($(CI),)
 	echo $(PWD)/.venv/bin >> $(GITHUB_PATH)
 endif
-
-.PHONY: setup-lint
-setup-lint: install-uv install-shellcheck install-pyright install-lint-build-deps  ##- Set up a linting-only environment
-	uv sync $(UV_LINT_GROUPS)
-
-.PHONY: setup-docs
-setup-docs: install-uv  ##- Set up a documentation-only environment
-	uv sync --no-dev $(UV_DOCS_GROUPS)
 
 .PHONY: setup-precommit
 setup-precommit: install-uv  ##- Set up pre-commit hooks in this repository.
@@ -84,7 +85,7 @@ endif
 .PHONY: clean
 clean:  ## Clean up the development environment
 	uv tool run pyclean .
-	rm -rf dist/ build/ docs/_build/ *.snap .coverage*
+	rm -rf dist build *.snap .coverage* .venv
 
 .PHONY: autoformat
 autoformat: format  # Hidden alias for 'format'
@@ -99,6 +100,10 @@ format-ruff: install-ruff  ##- Automatically format with ruff
 .PHONY: format-codespell
 format-codespell:  ##- Fix spelling issues with codespell
 	uv run codespell --toml pyproject.toml --write-changes $(SOURCES)
+
+.PHONY: format-pre-commit
+format-pre-commit:  ##- Format the entire repository using pre-commit
+	uv tool run pre-commit run
 
 .PHONY: format-prettier
 format-prettier: install-npm  ##- Format files with prettier
@@ -125,36 +130,29 @@ ifneq ($(CI),)
 	@echo ::endgroup::
 endif
 
-.PHONY: lint-mypy
-lint-mypy:  ##- Check types with mypy
+.PHONY: lint-ty
+lint-ty: install-ty  ##- Check types with Astral ty
 ifneq ($(CI),)
 	@echo ::group::$@
 endif
-	uv run mypy --show-traceback --show-error-codes $(PROJECT)
+	ty check --python .venv/bin/python $(SOURCES)
 ifneq ($(CI),)
 	@echo ::endgroup::
 endif
 
-.PHONY: lint-pyright
-lint-pyright:  ##- Check types with pyright
-ifneq ($(CI),)
-	@echo ::group::$@
-endif
-ifneq ($(shell which pyright),) # Prefer the system pyright
-	pyright --pythonpath .venv/bin/python
-else
-	uv tool run pyright --pythonpath .venv/bin/python
-endif
-ifneq ($(CI),)
-	@echo ::endgroup::
-endif
+.PHONY: lint-uv-lockfile
+lint-uv-lockfile: install-uv  ##- Check that uv.lock matches expectations from pyproject.toml
+	unset UV_FROZEN
+	uv lock --check
 
 .PHONY: lint-shellcheck
 lint-shellcheck:  ##- Lint shell scripts
 ifneq ($(CI),)
 	@echo ::group::$@
 endif
-	git ls-files | file --mime-type -Nnf- | grep shellscript | cut -f1 -d: | xargs -r shellcheck
+	@# jinja2 shell script templates are mistakenly counted as "true" shell scripts due to their shebang,
+	@# so explicitly filter them out
+	git ls-files | grep -vE "\.sh\.j2$$" | file --mime-type -Nnf- | grep shellscript | cut -f1 -d: | xargs -r shellcheck
 ifneq ($(CI),)
 	@echo ::endgroup::
 endif
@@ -247,17 +245,6 @@ else
 	$(warning Codespell not installed. Please install it yourself.)
 endif
 
-.PHONY: install-pyright
-install-pyright: install-uv
-ifneq ($(shell which pyright),)
-else ifneq ($(shell which snap),)
-	sudo snap install --classic pyright
-else
-	# Workaround for a bug in npm
-	[ -d "$(HOME)/.npm/_cacache" ] && chown -R `id -u`:`id -g` "$(HOME)/.npm" || true
-	uv tool install pyright
-endif
-
 .PHONY: install-ruff
 install-ruff:
 ifneq ($(shell which ruff),)
@@ -277,6 +264,17 @@ else ifneq ($(shell which brew),)
 	brew install shellcheck
 else
 	$(warning Shellcheck not installed. Please install it yourself.)
+endif
+
+.PHONY: install-ty
+install-ty:
+ifneq ($(shell which ty),)
+else ifneq ($(shell which snap),)
+	sudo snap install --beta astral-ty
+	sudo snap alias astral-ty.ty ty
+else
+	make install-uv
+	uv tool install ty
 endif
 
 .PHONY: install-npm
