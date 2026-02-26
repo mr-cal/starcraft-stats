@@ -30,7 +30,6 @@ lint = [
     # Left empty for scaffolding and Makefile compatibility
 ]
 types = [
-    "mypy[reports]~=1.19.0",
     "types-Pygments",
     "types-colorama",
     "types-requests",
@@ -83,7 +82,7 @@ namespaces = false
 
 [tool.codespell]
 ignore-words-list = "buildd,crate,keyserver,comandos,ro,dedent,dedented"
-skip = ".tox,.git,build,.*_cache,__pycache__,*.tar,*.snap,*.png,./node_modules,./docs/_build,.direnv,.venv,venv,.vscode"
+skip = ".tox,.git,build,.*_cache,__pycache__,*.tar,*.snap,*.png,./node_modules,.direnv,.venv,venv,.vscode"
 quiet-level = 3
 check-filenames = true
 
@@ -108,7 +107,6 @@ exclude_also = [
 line-length = 88
 target-version = "py312"
 src = ["starcraft_stats", "tests"]
-extend-exclude = ["docs"]
 
 [tool.ruff.lint]
 # Follow ST063 - Maintaining and updating linting specifications for updating these.
