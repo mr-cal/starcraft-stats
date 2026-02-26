@@ -1,33 +1,33 @@
-craft-applications:
-  - charmcraft
-  - imagecraft
-  - rockcraft
-  - snapcraft
+craft-applications: []
+  # - charmcraft
+  # - imagecraft
+  # - rockcraft
+  # - snapcraft
 
-craft-libraries:
-  - craft-application
-  - craft-archives
+craft-libraries: []
+  # - craft-application
+  # - craft-archives
   # not used by any projects
   # - craft-artifacts
-  - craft-cli
-  - craft-grammar
-  - craft-parts
-  - craft-platforms
-  - craft-providers
-  - craft-store
+  # - craft-cli
+  # - craft-grammar
+  # - craft-parts
+  # - craft-platforms
+  # - craft-providers
+  # - craft-store
 
 craft-projects:
-  - charmcraft
-  - craft-application
-  - craft-archives
-  - craft-artifacts
-  - craft-cli
-  - craft-grammar
-  - craft-parts
+  # - charmcraft
+  # - craft-application
+  # - craft-archives
+  # - craft-artifacts
+  # - craft-cli
+  # - craft-grammar
+  # - craft-parts
   - craft-platforms
-  - craft-providers
-  - craft-store
-  - imagecraft
-  - rockcraft
-  - snapcraft
-  - starbase
+  # - craft-providers
+  # - craft-store
+  # - imagecraft
+  # - rockcraft
+  # - snapcraft
+  # - starbase

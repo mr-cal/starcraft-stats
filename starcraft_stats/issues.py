@@ -118,7 +118,7 @@ class GithubProject:
 
     def update_data_from_github(self, github_api: Github, project: str) -> None:
         """Update a local data about issues from github."""
-        emit.progress(f"Collecting data for {project}", permanent=True)
+        emit.progress(f"Collecting data for {self.owner}/{project}", permanent=True)
         issues = github_api.get_repo(f"{self.owner}/{project}").get_issues(
             state="all",
         )
@@ -245,7 +245,9 @@ def load_github_token() -> str:
         return token
 
     token = os.getenv("GITHUB_TOKEN")
-    if not token:
+    if token:
+        emit.debug("Loaded GITHUB_TOKEN from environment")
+    else:
         raise RuntimeError(
             "Could not connect to github because environment "
             "variable GITHUB_TOKEN is not set",
