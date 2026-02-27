@@ -65,13 +65,13 @@ class GetDependenciesCommand(BaseCommand):
         """
         config = Config.from_yaml_file(CONFIG_FILE)
 
+        # A mapping of library names to their data
         libraries = {lib: Library(lib) for lib in config.craft_libraries}
-        """A mapping of library names to their data."""
 
         apps = [Application(name=app) for app in config.craft_applications]
 
+        # A mapping of app/branch names to their library usage
         app_reqs: dict[str, dict[str, Dependency]] = {}
-        """A mapping of apps and branches to their library usage."""
 
         for app in apps:
             for branch_name, repo in app.local_repos.items():
@@ -90,7 +90,7 @@ class GetDependenciesCommand(BaseCommand):
 
         # write dependency data to a json file
         emit.debug(f"Writing data to {DATA_FILE}")
-        pathlib.Path(DATA_FILE).write_text(json.dumps(table.to_dict(), indent=4))  # type: ignore[attr-defined]
+        DATA_FILE.write_text(json.dumps(table.to_dict(), indent=4))  # type: ignore[attr-defined]
         emit.message(f"Wrote to {DATA_FILE}")
 
 
@@ -101,15 +101,11 @@ def _get_reqs_for_project(
     reqs = _export_reqs(repo)
     df = parse(reqs, file_type=filetypes.requirements_txt)
 
-    deps: dict[str, str] = {}
-    for dep in df.dependencies:
-        name = cast(str, dep.name)
-        specs = cast(str, dep.specs)
-        deps[name] = specs
-
-    # normalize the version and convert to string
-    for dep, spec in deps.items():
-        deps[dep] = str(spec).lstrip("=") if spec else "unknown"
+    # Collect and normalize dep versions in one pass: strip leading "==" from specs
+    deps = {
+        cast(str, dep.name): str(cast(str, dep.specs)).lstrip("=") or "unknown"
+        for dep in df.dependencies
+    }
 
     # filter for craft library deps
     libraries = {lib: deps.get(lib, "not used") for lib in libs}
