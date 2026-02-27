@@ -9,7 +9,7 @@ from typing import cast
 
 from craft_cli import BaseCommand, emit
 from dataclasses_json import dataclass_json
-from dparse import filetypes, parse  # type: ignore[import-untyped]
+from dparse import filetypes, parse
 from packaging.version import Version
 
 from .application import Application
@@ -102,9 +102,9 @@ def _get_reqs_for_project(
     df = parse(reqs, file_type=filetypes.requirements_txt)
 
     deps: dict[str, str] = {}
-    for dep in df.dependencies:  # type: ignore[reportUnknownVariableType]
-        name = cast(str, dep.name)  # type: ignore[reportUnknownMemberType]
-        specs = cast(str, dep.specs)  # type: ignore[reportUnknownMemberType]
+    for dep in df.dependencies:
+        name = cast(str, dep.name)
+        specs = cast(str, dep.specs)
         deps[name] = specs
 
     # normalize the version and convert to string

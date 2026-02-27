@@ -1,70 +1,23 @@
 """Module for github data collection."""
 
 import argparse
-import csv
 import os
 import pathlib
 from datetime import UTC, datetime, timedelta
 from functools import cached_property
 
-from craft_application.models import CraftBaseModel
 from craft_cli import BaseCommand, emit
-from github import Github
+from github import Github, GithubException
 
 from .config import CONFIG_FILE, Config
-
-
-class GithubIssue(CraftBaseModel):
-    """Pydantic model for a github issue."""
-
-    type: str
-    """The type of issue, either 'issue' or 'pr'."""
-
-    date_opened: datetime
-    """The date the issue was opened."""
-
-    date_closed: datetime | None
-    """The date the issue was closed, if applicable."""
-
-    def __str__(self) -> str:
-        """Return the issue as a string."""
-        date_closed = f" closed: {self.date_closed}" if self.date_closed else ""
-        return f"type: {self.type} opened: {self.date_opened}{date_closed}"
-
-    def is_open(self, date: datetime) -> bool:
-        """Check if an issue was open on a particular date."""
-        return self.date_opened < date and (
-            self.date_closed is None or self.date_closed > date
-        )
-
-
-class GithubIssues(CraftBaseModel):
-    """Pydantic model for a collection of github issues."""
-
-    issues: dict[int, GithubIssue] = {}
-    """A dictionary of issues, indexed by issue number."""
-
-
-class Projects(CraftBaseModel):
-    """Pydantic model for a collection of github projects."""
-
-    projects: dict[str, GithubIssues] = {}
-    """A dictionary of projects, indexed by project name."""
-
-
-class IntermediateDataPoint(CraftBaseModel):
-    """Intermediate datapoint about issues for a github project."""
-
-    date: str
-    open_issues: int
-    open_issues_avg: int | None = None
-    mean_age: int | None
-
-
-class IntermediateData(CraftBaseModel):
-    """Intermediate data about issues for a github project."""
-
-    data: list[IntermediateDataPoint] = []
+from .models import (
+    GithubIssue,
+    GithubIssues,
+    IntermediateData,
+    IntermediateDataPoint,
+    IssueDataPoint,
+    Projects,
+)
 
 
 class GithubProject:
@@ -116,28 +69,86 @@ class GithubProject:
             return pathlib.Path("html/data/all-projects-github.csv")
         return pathlib.Path(f"html/data/{project}-github.csv")
 
-    def update_data_from_github(self, github_api: Github, project: str) -> None:
-        """Update a local data about issues from github."""
-        emit.progress(f"Collecting data for {project}", permanent=True)
-        issues = github_api.get_repo(f"{self.owner}/{project}").get_issues(
-            state="all",
-        )
+    def update_data_from_github(
+        self, github_api: Github, project: str, refresh_interval_days: int = 7
+    ) -> None:
+        """Update local data about issues from github.
 
+        Only fetches issues that haven't been refreshed in the specified interval,
+        and always checks for new issues.
+
+        :param github_api: GitHub API client
+        :param project: Project name
+        :param refresh_interval_days: Number of days before refreshing an issue
+        """
+        emit.progress(f"Collecting data for {self.owner}/{project}", permanent=True)
+
+        # Initialize project if it doesn't exist
         if project not in self.data.projects:
             emit.debug(f"Creating new project in data file {project}")
             self.data.projects[project] = GithubIssues(issues={})
 
-        for issue in issues:
-            self.data.projects[project].issues[int(issue.number)] = GithubIssue(
-                type="issue" if issue.pull_request is None else "pr",
-                date_opened=issue.created_at,
-                date_closed=issue.closed_at,
-            )
-            emit.debug(
-                f"Collected issue {issue.number} {self.data.projects[project].issues[issue.number]}",
-            )
+        now = datetime.now(tz=UTC)
+        refresh_threshold = timedelta(days=refresh_interval_days)
+
+        # Find issues that need refreshing (haven't been updated in threshold days)
+        issues_to_refresh = []
+        for issue_num, issue in self.data.projects[project].issues.items():
+            if (now - issue.refresh_date) > refresh_threshold:
+                issues_to_refresh.append(issue_num)
+
+        emit.debug(f"Found {len(issues_to_refresh)} existing issues to refresh")
+
+        # Refresh stale issues
+        for issue_num in issues_to_refresh:
+            try:
+                issue = github_api.get_repo(f"{self.owner}/{project}").get_issue(
+                    number=issue_num
+                )
+                self.data.projects[project].issues[issue_num] = GithubIssue(
+                    type="issue" if issue.pull_request is None else "pr",
+                    date_opened=issue.created_at,
+                    date_closed=issue.closed_at,
+                    refresh_date=now,
+                )
+                emit.debug(f"Refreshed issue {issue_num}")
+            except GithubException as e:
+                emit.debug(f"Could not fetch issue {issue_num}: {e}")
+
+        # Find the highest issue number we have
+        max_issue_num = max(self.data.projects[project].issues.keys(), default=0)
+        emit.debug(f"Highest existing issue number: {max_issue_num}")
+
+        # Check for new issues starting from max_issue_num + 1
+        new_issues_found = 0
+        next_issue_num = max_issue_num + 1
+        consecutive_not_found = 0
+        max_consecutive_not_found = 5  # Stop after 5 consecutive missing issues
+
+        while consecutive_not_found < max_consecutive_not_found:
+            try:
+                issue = github_api.get_repo(f"{self.owner}/{project}").get_issue(
+                    number=next_issue_num
+                )
+                # Issue exists!
+                self.data.projects[project].issues[next_issue_num] = GithubIssue(
+                    type="issue" if issue.pull_request is None else "pr",
+                    date_opened=issue.created_at,
+                    date_closed=issue.closed_at,
+                    refresh_date=now,
+                )
+                emit.debug(f"Found new issue {next_issue_num}")
+                new_issues_found += 1
+                consecutive_not_found = 0  # Reset counter
+            except GithubException:
+                # Issue doesn't exist (404 or other error)
+                consecutive_not_found += 1
+
+            next_issue_num += 1
+
         emit.progress(
-            f"Collected {len(self.data.projects[project].issues)} issues for {project}"
+            f"Refreshed {len(issues_to_refresh)} issues, found {new_issues_found} new issues for {project}",
+            permanent=True,
         )
 
     def save_data_to_file(self) -> None:
@@ -217,18 +228,8 @@ class GithubProject:
 
         csv_file = self.csv_file(str(project))
         emit.debug(f"Writing data to {csv_file}")
-        with csv_file.open("w", encoding="utf-8") as file:
-            writer = csv.writer(file, lineterminator="\n")
-            writer.writerow(["date", "issues", "issues_avg", "age"])
-            for entry in intermediate_data.data:
-                writer.writerow(
-                    [
-                        entry.date,
-                        entry.open_issues,
-                        entry.open_issues_avg,
-                        entry.mean_age,
-                    ],
-                )
+        csv_models = intermediate_data.to_csv_models()
+        IssueDataPoint.save_to_csv(csv_models, csv_file)
         emit.progress(f"Wrote to {csv_file}", permanent=True)
 
 
@@ -245,7 +246,9 @@ def load_github_token() -> str:
         return token
 
     token = os.getenv("GITHUB_TOKEN")
-    if not token:
+    if token:
+        emit.debug("Loaded GITHUB_TOKEN from environment")
+    else:
         raise RuntimeError(
             "Could not connect to github because environment "
             "variable GITHUB_TOKEN is not set",
@@ -280,7 +283,9 @@ class GetIssuesCommand(BaseCommand):
 
         # iterate through all projects
         for project in config.craft_projects:
-            github_project.update_data_from_github(github_api, project)
+            github_project.update_data_from_github(
+                github_api, project, config.refresh_interval_days
+            )
             github_project.save_data_to_file()
             github_project.generate_csv(project)
 

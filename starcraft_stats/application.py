@@ -60,7 +60,7 @@ class Application:
         # fetch branch heads from the remote
         raw_head_data: str = cast(
             str,
-            git.cmd.Git().ls_remote(  # type: ignore[reportUnknownMemberType]
+            git.cmd.Git().ls_remote(
                 "--heads",
                 f"https://github.com/{self.owner}/{self.name}",
                 "refs/heads/hotfix/*",
@@ -69,8 +69,7 @@ class Application:
         if raw_head_data:
             # convert head data into a list of branch names
             all_hotfix_branches: list[str] = [
-                item.split("\t")[1][11:]
-                for item in raw_head_data.split("\n")  # type: ignore[reportUnknownVariableType]
+                item.split("\t")[1][11:] for item in raw_head_data.split("\n")
             ]
 
             # get the latest minor release of each major branch

@@ -3,7 +3,6 @@ PROJECT=starcraft_stats
 # like is the case for snapcraft (snapcraft and snapcraft_legacy):
 # COVERAGE_SOURCE="starcraft"
 UV_TEST_GROUPS := "--group=dev"
-UV_DOCS_GROUPS := "--group=docs"
 UV_LINT_GROUPS := "--group=lint" "--group=types"
 UV_TICS_GROUPS := "--group=tics"
 
@@ -13,7 +12,6 @@ UV_TICS_GROUPS := "--group=tics"
 # endif
 # ifdef VERSION_CODENAME
 # UV_TEST_GROUPS += "--group=dev-$(VERSION_CODENAME)"
-# UV_DOCS_GROUPS += "--group=dev-$(VERSION_CODENAME)"
 # UV_LINT_GROUPS += "--group=dev-$(VERSION_CODENAME)"
 # UV_TICS_GROUPS += "--group=dev-$(VERSION_CODENAME)"
 # endif
@@ -21,27 +19,13 @@ UV_TICS_GROUPS := "--group=tics"
 include common.mk
 
 .PHONY: format
-format: format-ruff format-codespell format-prettier  ## Run all automatic formatters
+format: format-ruff format-codespell format-prettier format-pre-commit  ## Run all automatic formatters
 
 .PHONY: lint
-lint: lint-ruff lint-codespell lint-mypy lint-prettier lint-pyright lint-shellcheck lint-twine  ## Run all linters
+lint: lint-ruff lint-ty lint-codespell lint-prettier lint-shellcheck lint-twine lint-uv-lockfile  ## Run all linters
 
 .PHONY: pack
 pack: pack-pip  ## Build all packages
-
-.PHONY: pack-snap
-pack-snap: snap/snapcraft.yaml  ##- Build snap package
-ifeq ($(shell which snapcraft),)
-	sudo snap install --classic snapcraft
-endif
-	snapcraft pack
-
-.PHONY: publish
-publish: publish-pypi  ## Publish packages
-
-.PHONY: publish-pypi
-publish-pypi: clean package-pip lint-twine  ##- Publish Python packages to pypi
-	uv tool run twine upload dist/*
 
 # Find dependencies that need installing
 APT_PACKAGES :=
