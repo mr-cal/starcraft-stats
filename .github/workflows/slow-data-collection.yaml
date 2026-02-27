@@ -1,8 +1,8 @@
 name: slow data collection
 on:
   schedule:
-    # run every 3 days
-    - cron: "0 0 */3 * *"
+    # run every 12 hours
+    - cron: "0 */12 * * *"
   workflow_dispatch:
     inputs:
       enable_ssh_access:
