@@ -16,7 +16,7 @@ const colors = [
 ];
 
 const ROLLING_WINDOW = 4;
-const CLOSED_WEEKLY_WINDOW = 7;
+const CLOSED_ROLLING_WINDOW = 30;
 
 /**
  * Compute a rolling average over an array of numbers.
@@ -25,20 +25,13 @@ function rollingAverage(values, windowSize) {
   return values.map((_, i) => {
     const start = Math.max(0, i - windowSize + 1);
     const window = values.slice(start, i + 1);
-    return Math.floor(window.reduce((sum, v) => sum + v, 0) / window.length);
+    return window.reduce((sum, v) => sum + v, 0) / window.length;
   });
 }
 
 /**
  * Compute a rolling sum over an array of numbers.
  */
-function rollingSum(values, windowSize) {
-  return values.map((_, i) => {
-    const start = Math.max(0, i - windowSize + 1);
-    return values.slice(start, i + 1).reduce((sum, v) => sum + v, 0);
-  });
-}
-
 // Storage for project data and chart instances
 const projectData = {};
 let chart = null;
@@ -66,10 +59,10 @@ function loadProjectData(project, index) {
           result.data.map((d) => d.issues),
           ROLLING_WINDOW,
         ),
-        closed: rollingSum(
+        closed: rollingAverage(
           result.data.map((d) => d.closed ?? 0),
-          CLOSED_WEEKLY_WINDOW,
-        ),
+          CLOSED_ROLLING_WINDOW,
+        ).map((v) => v * 7),
         color: getProjectColor(index),
       };
 
@@ -277,7 +270,7 @@ function initializeClosedChart() {
           beginAtZero: true,
           title: {
             display: true,
-            text: "Issues Closed / Week",
+            text: "Issues Closed / Week (30-day avg)",
           },
           ticks: {
             precision: 0,
