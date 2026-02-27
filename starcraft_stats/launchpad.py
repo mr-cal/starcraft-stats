@@ -1,12 +1,13 @@
 """Module for launchpad data collection."""
 
 import argparse
-import csv
 import pathlib
 from datetime import datetime
 
 from craft_cli import BaseCommand, emit
 from launchpadlib.launchpad import Launchpad
+
+from .models import LaunchpadDataPoint
 
 
 class GetLaunchpadDataCommand(BaseCommand):
@@ -41,17 +42,34 @@ class GetLaunchpadDataCommand(BaseCommand):
             "Does Not Exist",
         ]
 
-        data = [datetime.now().strftime("%Y-%b-%d %H:%M:%S")]
+        # Map status names to field names
+        status_field_map = {
+            "New": "new",
+            "Incomplete": "incomplete",
+            "Opinion": "opinion",
+            "Invalid": "invalid",
+            "Won't Fix": "wont_fix",
+            "Expired": "expired",
+            "Confirmed": "confirmed",
+            "Triaged": "triaged",
+            "In Progress": "in_progress",
+            "Fix Committed": "fix_committed",
+            "Fix Released": "fix_released",
+            "Does Not Exist": "does_not_exist",
+        }
+
+        data_dict: dict[str, str | int] = {
+            "timestamp": datetime.now().strftime("%Y-%b-%d %H:%M:%S"),
+        }
 
         emit.message(f"{project} bugs on launchpad")
         for status in statuses:
             bugs = launchpad_project.searchTasks(status=status)
-            print(f"{len(bugs)} {status} bugs")
-            data.append(str(len(bugs)))
+            count = len(bugs)
+            print(f"{count} {status} bugs")
+            field_name = status_field_map[status]
+            data_dict[field_name] = count
 
-        with pathlib.Path(f"data/{project}-launchpad.csv").open(
-            "a",
-            encoding="utf-8",
-        ) as file:
-            writer = csv.writer(file, lineterminator="\n")
-            writer.writerow(data)
+        data_point = LaunchpadDataPoint(**data_dict)  # type: ignore[arg-type]
+        csv_file = pathlib.Path(f"data/{project}-launchpad.csv")
+        LaunchpadDataPoint.save_to_csv([data_point], csv_file, append=True)

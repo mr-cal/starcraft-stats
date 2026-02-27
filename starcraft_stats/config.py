@@ -33,3 +33,6 @@ class Config(CraftBaseModel):
 
     craft_applications: list[str]
     """A list of all craft applications."""
+
+    refresh_interval_days: int = 7
+    """Number of days before refreshing issue data from GitHub."""

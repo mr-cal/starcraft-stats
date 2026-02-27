@@ -31,3 +31,6 @@ craft-projects:
   # - rockcraft
   # - snapcraft
   # - starbase
+
+# Number of days before refreshing issue data from GitHub
+refresh-interval-days: 7

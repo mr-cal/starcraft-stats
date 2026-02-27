@@ -1,34 +1,16 @@
 """Get tag and release data for a git repositories."""
 
 import argparse
-import csv
 import pathlib
-from dataclasses import dataclass
 
 import git
 from craft_cli import BaseCommand, emit
 
 from .application import Application
 from .config import CONFIG_FILE, Config
+from .models import ReleaseBranchInfo
 
 DATA_FILE = pathlib.Path("html/data/releases.csv")
-
-
-@dataclass(frozen=True)
-class BranchInfo:
-    """Info about a branch."""
-
-    application: str
-    """The name of the application."""
-
-    branch: str
-    """The name of the branch."""
-
-    latest_tag: str
-    """The latest tag on the branch."""
-
-    commits_since_tag: int
-    """The number of commits since the latest tag."""
 
 
 class GetReleasesCommand(BaseCommand):
@@ -49,7 +31,7 @@ class GetReleasesCommand(BaseCommand):
         """
         config = Config.from_yaml_file(CONFIG_FILE)
 
-        branch_infos: list[BranchInfo] = []
+        branch_infos: list[ReleaseBranchInfo] = []
 
         apps = [
             Application(name=app, full_clone=True) for app in config.craft_applications
@@ -82,26 +64,15 @@ class GetReleasesCommand(BaseCommand):
                     f"commits since tag: {commits_since_tag}",
                 )
                 branch_infos.append(
-                    BranchInfo(
-                        app.name,
-                        branch_name,
-                        tag,
-                        int(commits_since_tag),
+                    ReleaseBranchInfo(
+                        app=app.name,
+                        branch=branch_name,
+                        latest_tag=tag,
+                        commits_since_tag=int(commits_since_tag),
                     ),
                 )
 
         # write data to a csv in a ready-to-display format
         emit.debug(f"Writing data to {DATA_FILE}")
-        with DATA_FILE.open("w", encoding="utf-8") as file:
-            writer = csv.writer(file, lineterminator="\n")
-            writer.writerow(["app", "branch", "latest tag", "commits since tag"])
-            for branch_info in branch_infos:
-                writer.writerow(
-                    [
-                        branch_info.application,
-                        branch_info.branch,
-                        branch_info.latest_tag,
-                        branch_info.commits_since_tag,
-                    ],
-                )
+        ReleaseBranchInfo.save_to_csv(branch_infos, DATA_FILE)
         emit.message(f"Wrote to {DATA_FILE}")
