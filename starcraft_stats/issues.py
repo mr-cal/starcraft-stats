@@ -89,7 +89,7 @@ class GithubProject:
             emit.debug(f"Creating new project in data file {project}")
             self.data.projects[project] = GithubIssues(issues={})
 
-        now = datetime.now(tz=UTC)
+        now = datetime.now()
         refresh_threshold = timedelta(days=refresh_interval_days)
         repo = github_api.get_repo(f"{self.owner}/{project}")
 
@@ -263,8 +263,11 @@ class GetIssuesCommand(BaseCommand):
 
         # write the project list for the frontend
         projects_file = pathlib.Path("html/data/projects.json")
-        projects_list = ["all-projects", *config.craft_projects]
-        projects_file.write_text(json.dumps(projects_list, indent=2) + "\n")
+        projects_data = {
+            "applications": sorted(config.craft_applications),
+            "libraries": sorted(config.craft_libraries),
+        }
+        projects_file.write_text(json.dumps(projects_data, indent=2) + "\n")
         emit.progress(f"Wrote projects list to {projects_file}", permanent=True)
 
 
@@ -290,9 +293,12 @@ def get_median_date(dates: list[datetime]) -> datetime:
     if len(dates) == 0:
         raise ValueError("Cannot get median date from an empty list")
 
+    sorted_dates = sorted(dates)
+    n = len(sorted_dates)
+
     # if the list is even, average the two middle values
-    if len(dates) % 2 == 0:
-        return get_mean_date(dates[len(dates) // 2 - 1 : len(dates) // 2 + 1])
+    if n % 2 == 0:
+        return get_mean_date(sorted_dates[n // 2 - 1 : n // 2 + 1])
 
     # if the list is odd, return the middle value
-    return dates[len(dates) // 2]
+    return sorted_dates[n // 2]

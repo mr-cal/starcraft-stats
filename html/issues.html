@@ -49,11 +49,6 @@
           <h2>Issues</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <p>Open issues over time. Select projects to display on the graph.</p>
-        </div>
-      </div>
     </div>
 
     <div class="row">
@@ -61,6 +56,12 @@
     </div>
 
     <div class="p-strip">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="p-heading--3">Open issues</h2>
+          <p>4-week rolling average of open issues over time.</p>
+        </div>
+      </div>
       <div class="row">
         <div class="col-3">
           <h3 class="p-heading--4">Projects</h3>
@@ -79,8 +80,30 @@
     <div class="p-strip">
       <div class="row">
         <div class="col-12">
+          <h2 class="p-heading--3">Median issue age</h2>
+          <p>4-week rolling average of median open issue age in days. Rising age indicates the backlog is getting staler.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <h3 class="p-heading--4">Projects</h3>
+          <div id="age-checkboxes"></div>
+        </div>
+        <div class="col-9">
+          <canvas id="age-chart" style="width: 100%; height: 500px;"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <hr class="p-rule" />
+    </div>
+
+    <div class="p-strip">
+      <div class="row">
+        <div class="col-12">
           <h2 class="p-heading--3">Issues closed per week</h2>
-          <p>30-day rolling average of issues closed per week. Shows throughput over time.</p>
+          <p>4-week rolling average of issues closed per week. Shows throughput over time.</p>
         </div>
       </div>
       <div class="row">

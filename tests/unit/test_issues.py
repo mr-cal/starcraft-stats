@@ -25,6 +25,16 @@ def _read_csv(path: pathlib.Path) -> list[dict[str, str]]:
 
 
 class TestGetMedianDate:
+    def test_unsorted_input_returns_correct_median(self):
+        # Simulates the all-projects case: issues concatenated across projects,
+        # not sorted by date. Without sorting, the middle element would be wrong.
+        dates = [
+            datetime(2024, 1, 20, tzinfo=UTC),  # project B issue 1
+            datetime(2024, 1, 1, tzinfo=UTC),  # project A issue 1
+            datetime(2024, 1, 10, tzinfo=UTC),  # project A issue 2
+        ]
+        assert get_median_date(dates) == datetime(2024, 1, 10, tzinfo=UTC)
+
     def test_odd_list_returns_middle_element(self):
         dates = [
             datetime(2024, 1, 1, tzinfo=UTC),

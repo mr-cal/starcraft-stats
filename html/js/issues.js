@@ -16,6 +16,7 @@ const colors = [
 ];
 
 const ROLLING_WINDOW = 4;
+const AGE_ROLLING_WINDOW = 4;
 const CLOSED_ROLLING_WINDOW = 30;
 
 /**
@@ -30,11 +31,22 @@ function rollingAverage(values, windowSize) {
 }
 
 /**
- * Compute a rolling sum over an array of numbers.
+ * Compute a rolling average over an array of nullable numbers, skipping nulls.
+ * Returns null for windows where all values are null.
  */
+function rollingAverageNullable(values, windowSize) {
+  return values.map((_, i) => {
+    const start = Math.max(0, i - windowSize + 1);
+    const window = values.slice(start, i + 1).filter((v) => v !== null);
+    if (window.length === 0) return null;
+    return window.reduce((sum, v) => sum + v, 0) / window.length;
+  });
+}
+
 // Storage for project data and chart instances
 const projectData = {};
 let chart = null;
+let ageChart = null;
 let closedChart = null;
 
 /**
@@ -58,6 +70,10 @@ function loadProjectData(project, index) {
         issues: rollingAverage(
           result.data.map((d) => d.issues),
           ROLLING_WINDOW,
+        ),
+        age: rollingAverageNullable(
+          result.data.map((d) => (d.age !== "" ? d.age : null)),
+          AGE_ROLLING_WINDOW,
         ),
         closed: rollingAverage(
           result.data.map((d) => d.closed ?? 0),
@@ -123,6 +139,7 @@ function createProjectCheckboxes(containerId, checkboxPrefix, onChange) {
  */
 function initializeUI() {
   createProjectCheckboxes("project-checkboxes", "checkbox", updateChart);
+  createProjectCheckboxes("age-checkboxes", "age-checkbox", updateAgeChart);
   createProjectCheckboxes(
     "closed-checkboxes",
     "closed-checkbox",
@@ -130,8 +147,10 @@ function initializeUI() {
   );
 
   initializeChart();
+  initializeAgeChart();
   initializeClosedChart();
   updateChart();
+  updateAgeChart();
   updateClosedChart();
 }
 
@@ -229,6 +248,97 @@ function updateChart() {
 }
 
 /**
+ * Initialize the median issue age chart
+ */
+function initializeAgeChart() {
+  const ctx = document.getElementById("age-chart");
+
+  ageChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: [],
+      datasets: [],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      elements: {
+        point: {
+          radius: 0,
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          mode: "index",
+          intersect: false,
+        },
+      },
+      scales: {
+        x: {
+          display: true,
+          title: {
+            display: true,
+            text: "Date",
+          },
+        },
+        y: {
+          display: true,
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: "Median Issue Age (days)",
+          },
+          ticks: {
+            precision: 0,
+          },
+        },
+      },
+      interaction: {
+        mode: "nearest",
+        axis: "x",
+        intersect: false,
+      },
+    },
+  });
+}
+
+/**
+ * Update the age chart based on selected checkboxes
+ */
+function updateAgeChart() {
+  const selectedProjects = projects.filter((project) => {
+    const checkbox = document.getElementById(`age-checkbox-${project}`);
+    return checkbox?.checked;
+  });
+
+  if (selectedProjects.length === 0) {
+    ageChart.data.labels = [];
+    ageChart.data.datasets = [];
+    ageChart.update();
+    return;
+  }
+
+  const firstProject = selectedProjects[0];
+  ageChart.data.labels = projectData[firstProject].dates;
+
+  ageChart.data.datasets = selectedProjects.map((project) => ({
+    label: project,
+    data: projectData[project].age,
+    borderColor: projectData[project].color,
+    backgroundColor: `${projectData[project].color}20`,
+    borderWidth: 2,
+    fill: false,
+    tension: 0.1,
+    spanGaps: false,
+  }));
+
+  ageChart.update();
+}
+
+/**
  * Initialize the closed-issues-per-day chart
  */
 function initializeClosedChart() {
@@ -320,7 +430,10 @@ function updateClosedChart() {
 
 // Load projects from the generated config and initialize the page
 const response = await fetch("data/projects.json");
-const projects = await response.json();
+const { applications, libraries } = await response.json();
+
+// Order: all-projects first, then applications (alpha), then libraries (alpha)
+const projects = ["all-projects", ...applications, ...libraries];
 
 // Load all project data
 projects.forEach((project, index) => {
