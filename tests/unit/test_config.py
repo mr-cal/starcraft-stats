@@ -1,7 +1,8 @@
 """Tests for Config model and CraftApplicationBranch."""
 
 import pytest
-from starcraft_stats.config import Config, CraftApplicationBranch
+from starcraft_stats.application import CraftApplicationBranch
+from starcraft_stats.config import Config
 
 
 class TestCraftApplicationBranch:
