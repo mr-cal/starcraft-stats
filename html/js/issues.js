@@ -29,7 +29,7 @@ function rollingAverage(values, windowSize) {
 }
 
 // Storage for project data and chart instance
-let projectData = {};
+const projectData = {};
 let chart = null;
 
 /**
@@ -47,7 +47,7 @@ function loadProjectData(project, index) {
     download: true,
     dynamicTyping: true,
     header: true,
-    complete: function (result) {
+    complete: (result) => {
       projectData[project] = {
         dates: result.data.map((d) => d.date),
         issues: rollingAverage(
@@ -62,7 +62,7 @@ function loadProjectData(project, index) {
         initializeUI();
       }
     },
-    error: function (error) {
+    error: (error) => {
       console.error(`Error loading ${project}:`, error);
     },
   });
@@ -184,7 +184,7 @@ function initializeChart() {
 function updateChart() {
   const selectedProjects = projects.filter((project) => {
     const checkbox = document.getElementById(`checkbox-${project}`);
-    return checkbox && checkbox.checked;
+    return checkbox?.checked;
   });
 
   // If no projects selected, clear the chart
@@ -204,7 +204,7 @@ function updateChart() {
     label: project,
     data: projectData[project].issues,
     borderColor: projectData[project].color,
-    backgroundColor: projectData[project].color + "20", // Add transparency
+    backgroundColor: `${projectData[project].color}20`, // Add transparency
     borderWidth: 2,
     fill: false,
     tension: 0.1,

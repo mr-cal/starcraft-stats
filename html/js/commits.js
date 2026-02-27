@@ -5,7 +5,7 @@ Papa.parse("data/releases.csv", {
   download: true,
   dynamicTyping: true,
   header: false,
-  complete: function (data) {
+  complete: (data) => {
     chartData(data.data, "releases-and-commits-table");
   },
 });

@@ -7,34 +7,34 @@ async function getData(url) {
 
 /* Graph the dependencies */
 
-var deps = await getData("./data/app-deps.json");
-var apps = Object.keys(deps.apps);
+const deps = await getData("./data/app-deps.json");
+const apps = Object.keys(deps.apps);
 
 console.log(deps);
 
 // First row is the header
 // Replace the first "/" with a line break (i.e. 'charmcraft/hotfix/3.2' -> 'charmcraft<br>hotfix/3.2')
-var deps_data = [
+const deps_data = [
   ["Library"].concat(apps.map((app) => app.replace("/", "<br>"))),
 ];
 // Create empty rows for each library
-for (var i = 0; i < deps.libs.length; i++) {
-  var row = Array(apps.length + 2).fill("");
+for (let i = 0; i < deps.libs.length; i++) {
+  const row = Array(apps.length + 2).fill("");
   console.log(row);
   deps_data.push(row);
 }
 
 // Populate table
-for (var i = 0; i < deps.libs.length; i++) {
-  var lib = deps.libs[i];
+for (let i = 0; i < deps.libs.length; i++) {
+  const lib = deps.libs[i];
   deps_data[i + 1][0] = lib;
-  for (var j = 0; j < apps.length; j++) {
-    var app = apps[j];
+  for (let j = 0; j < apps.length; j++) {
+    const app = apps[j];
     if (app in deps.apps && lib in deps.apps[app]) {
-      var dep_lib = deps.apps[app][lib];
-      var v = dep_lib.version;
+      const dep_lib = deps.apps[app][lib];
+      let v = dep_lib.version;
       if (dep_lib.outdated) {
-        v = "!" + v + "<br>(" + dep_lib.latest + ")";
+        v = `!${v}<br>(${dep_lib.latest})`;
       }
       deps_data[i + 1][j + 1] = v;
     } else {
