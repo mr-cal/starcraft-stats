@@ -316,9 +316,9 @@ def get_median_date(dates: list[datetime]) -> datetime:
     if len(dates) == 0:
         raise ValueError("Cannot get median date from an empty list")
 
-    # if the list is even, average the middle two values
+    # if the list is even, average the two middle values
     if len(dates) % 2 == 0:
-        return get_mean_date(dates[int(len(dates) / 2) - 1 : int(len(dates) / 2)])
+        return get_mean_date(dates[len(dates) // 2 - 1 : len(dates) // 2 + 1])
 
     # if the list is odd, return the middle value
-    return dates[int(len(dates) / 2)]
+    return dates[len(dates) // 2]

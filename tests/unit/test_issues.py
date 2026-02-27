@@ -33,15 +33,15 @@ class TestGetMedianDate:
         ]
         assert get_median_date(dates) == datetime(2024, 1, 10, tzinfo=UTC)
 
-    def test_even_list_returns_lower_middle_element(self):
+    def test_even_list_returns_mean_of_two_middle_elements(self):
         dates = [
             datetime(2024, 1, 1, tzinfo=UTC),
             datetime(2024, 1, 3, tzinfo=UTC),
             datetime(2024, 1, 5, tzinfo=UTC),
             datetime(2024, 1, 10, tzinfo=UTC),
         ]
-        # Implementation slices [n/2-1 : n/2] — one element, the lower middle
-        assert get_median_date(dates) == datetime(2024, 1, 3, tzinfo=UTC)
+        # Middle two are Jan 3 and Jan 5; mean = Jan 4
+        assert get_median_date(dates) == datetime(2024, 1, 4, tzinfo=UTC)
 
     def test_single_element_returns_that_date(self):
         date = datetime(2024, 6, 15, tzinfo=UTC)
