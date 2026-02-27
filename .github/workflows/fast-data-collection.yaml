@@ -1,8 +1,8 @@
 name: fast data collection
 on:
   schedule:
-    # run every 4 hours
-    - cron: "0 */4 * * *"
+    # run every 6 hours
+    - cron: "0 */6 * * *"
   workflow_dispatch:
     inputs:
       enable_ssh_access:
