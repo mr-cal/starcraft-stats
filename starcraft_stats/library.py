@@ -53,28 +53,35 @@ class Library:
             "--disable-pip-version-check",
         ]
         emit.debug(f"Running {' '.join(command)}")
-        proc = subprocess.run(command, check=False, capture_output=True)
-        output = proc.stderr.decode("utf-8").split("\n")
-        emit.trace(f"pip output: {output}")
+        proc = subprocess.run(command, check=False, capture_output=True, text=True)
+        emit.trace(f"pip output: {proc.stderr}")
 
-        for line in output:
+        versions = self._parse_versions_output(proc.stderr.split("\n"))
+        if versions is None:
+            emit.debug(f"Could not find versions for library {self.name}.")
+            return []
+        if not versions:
+            emit.debug(f"No versions found for library {self.name}.")
+        else:
+            emit.debug(f"Found versions: {versions}")
+        return versions
+
+    @staticmethod
+    def _parse_versions_output(lines: list[str]) -> list[Version] | None:
+        """Parse pip install error output to extract available versions.
+
+        :returns: A list of versions, an empty list if the library has no versions,
+            or None if the expected output line was not found.
+        """
+        anchor = "from versions: "
+        for line in lines:
             emit.trace(f"parsing output line: {line}")
-
-            # get the latest version in each major.minor seriess
-            anchor = "from versions: "
             idx = line.find(anchor)
             if idx < 0:
-                emit.trace(f"Could not find anchor {anchor}")
+                emit.trace("Could not find anchor in line")
                 continue
-
-            versions = line[idx + len(anchor) : -1]
-            if versions == "none":
-                emit.debug(f"No versions found for library {self.name}.")
+            versions_str = line[idx + len(anchor) : -1]
+            if versions_str == "none":
                 return []
-
-            versions_list = versions.split(", ")
-            emit.debug(f"Found versions: {versions_list}")
-            return [Version(v) for v in versions_list]
-
-        emit.debug(f"Could not find versions for library {self.name}.")
-        return []
+            return [Version(v) for v in versions_str.split(", ")]
+        return None
