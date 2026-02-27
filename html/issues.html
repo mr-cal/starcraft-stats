@@ -51,7 +51,7 @@
       </div>
       <div class="row">
         <div class="col-12">
-          <p>A collection of graphs showing open issues in repositories.</p>
+          <p>Open issues over time. Select projects to display on the graph.</p>
         </div>
       </div>
     </div>
@@ -62,7 +62,13 @@
 
     <div class="p-strip">
       <div class="row">
-        <div id="issues"></div>
+        <div class="col-3">
+          <h3 class="p-heading--4">Projects</h3>
+          <div id="project-checkboxes"></div>
+        </div>
+        <div class="col-9">
+          <canvas id="issues-chart" style="width: 100%; height: 500px;"></canvas>
+        </div>
       </div>
     </div>
 

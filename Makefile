@@ -1,4 +1,6 @@
 PROJECT=starcraft_stats
+JS_SOURCES := html/js/
+BIOME=npm exec --package=@biomejs/biome@1.9.4 -- biome # renovate: datasource=npm depName=@biomejs/biome
 # Define when more than the main package tree requires coverage
 # like is the case for snapcraft (snapcraft and snapcraft_legacy):
 # COVERAGE_SOURCE="starcraft"
@@ -19,10 +21,24 @@ UV_TICS_GROUPS := "--group=tics"
 include common.mk
 
 .PHONY: format
-format: format-ruff format-codespell format-prettier format-pre-commit  ## Run all automatic formatters
+format: format-ruff format-codespell format-prettier format-biome format-pre-commit  ## Run all automatic formatters
 
 .PHONY: lint
-lint: lint-ruff lint-ty lint-codespell lint-prettier lint-shellcheck lint-twine lint-uv-lockfile  ## Run all linters
+lint: lint-ruff lint-ty lint-codespell lint-prettier lint-biome lint-shellcheck lint-twine lint-uv-lockfile  ## Run all linters
+
+.PHONY: format-biome
+format-biome: install-npm  ##- Automatically format JavaScript with biome
+	$(BIOME) format --write $(JS_SOURCES)
+
+.PHONY: lint-biome
+lint-biome: install-npm  ##- Lint JavaScript with biome
+ifneq ($(CI),)
+	@echo ::group::$@
+endif
+	$(BIOME) lint $(JS_SOURCES)
+ifneq ($(CI),)
+	@echo ::endgroup::
+endif
 
 .PHONY: pack
 pack: pack-pip  ## Build all packages
