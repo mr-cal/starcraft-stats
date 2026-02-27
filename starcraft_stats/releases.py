@@ -6,7 +6,7 @@ import pathlib
 import git
 from craft_cli import BaseCommand, emit
 
-from .application import Application
+from .application import Application, _parse_min_version
 from .config import CONFIG_FILE, Config
 from .models import ReleaseBranchInfo
 
@@ -65,7 +65,14 @@ class GetReleasesCommand(BaseCommand):
         """
         config = Config.from_yaml_file(CONFIG_FILE)
         apps = [
-            Application(name=app, full_clone=True) for app in config.craft_applications
+            Application(
+                name=app,
+                full_clone=True,
+                min_hotfix_version=_parse_min_version(
+                    config.hotfix_min_versions.get(app)
+                ),
+            )
+            for app in config.craft_applications
         ]
 
         branch_infos = [

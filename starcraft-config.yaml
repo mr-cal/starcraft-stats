@@ -34,3 +34,10 @@ craft-projects:
 
 # Number of days before refreshing issue data from GitHub
 refresh-interval-days: 7
+
+# Oldest hotfix branch to include per application, as "major.minor".
+# Branches with a lower version are excluded.
+hotfix-min-versions:
+  charmcraft: "3.0"
+  snapcraft: "8.0"
+  rockcraft: "1.15"

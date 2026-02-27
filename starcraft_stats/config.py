@@ -22,3 +22,6 @@ class Config(CraftBaseModel):
 
     refresh_interval_days: int = 7
     """Number of days before refreshing issue data from GitHub."""
+
+    hotfix_min_versions: dict[str, str] = {}
+    """Oldest hotfix branch to include per application, as 'major.minor'."""

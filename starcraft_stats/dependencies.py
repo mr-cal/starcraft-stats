@@ -12,7 +12,7 @@ from dataclasses_json import dataclass_json
 from dparse import filetypes, parse
 from packaging.version import Version
 
-from .application import Application
+from .application import Application, _parse_min_version
 from .config import CONFIG_FILE, Config
 from .library import Library
 
@@ -68,7 +68,15 @@ class GetDependenciesCommand(BaseCommand):
         # A mapping of library names to their data
         libraries = {lib: Library(lib) for lib in config.craft_libraries}
 
-        apps = [Application(name=app) for app in config.craft_applications]
+        apps = [
+            Application(
+                name=app,
+                min_hotfix_version=_parse_min_version(
+                    config.hotfix_min_versions.get(app)
+                ),
+            )
+            for app in config.craft_applications
+        ]
 
         # A mapping of app/branch names to their library usage
         app_reqs: dict[str, dict[str, Dependency]] = {}

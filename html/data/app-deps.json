@@ -170,7 +170,6 @@
                 "outdated": true
             }
         },
-        "charmcraft/hotfix/2.7": {},
         "imagecraft/main": {
             "craft-application": {
                 "series": "6.2",
@@ -259,7 +258,6 @@
                 "outdated": true
             }
         },
-        "rockcraft/hotfix/1.5": {},
         "snapcraft/main": {
             "craft-application": {
                 "series": "6.1",
@@ -310,7 +308,6 @@
                 "outdated": false
             }
         },
-        "snapcraft/hotfix/7.5": {},
         "snapcraft/hotfix/8.14": {
             "craft-application": {
                 "series": "6.2",
