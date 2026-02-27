@@ -42,3 +42,26 @@ class TestLibrary:
 
     def test_is_latest_patch_true_when_only_version_in_series(self, library):
         assert library.is_latest_patch(Version("2.0.0")) is True
+
+
+class TestParseVersionsOutput:
+    def test_returns_versions_from_pip_error_line(self):
+        lines = [
+            "ERROR: Could not find a version that satisfies the requirement craft-cli==1111111",
+            "ERROR: No matching distribution found for craft-cli==1111111 from versions: 1.0.0, 1.0.1, 2.0.0)",
+        ]
+        result = Library._parse_versions_output(lines)
+        assert result == [Version("1.0.0"), Version("1.0.1"), Version("2.0.0")]
+
+    def test_returns_empty_list_when_no_versions(self):
+        lines = ["ERROR: No matching distribution found from versions: none)"]
+        result = Library._parse_versions_output(lines)
+        assert result == []
+
+    def test_returns_none_when_anchor_not_found(self):
+        lines = ["some unrelated output", "another line"]
+        result = Library._parse_versions_output(lines)
+        assert result is None
+
+    def test_returns_none_for_empty_output(self):
+        assert Library._parse_versions_output([]) is None
