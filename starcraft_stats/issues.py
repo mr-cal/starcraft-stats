@@ -5,7 +5,6 @@ import json
 import os
 import pathlib
 from datetime import UTC, datetime, timedelta
-from functools import cached_property
 
 from craft_cli import BaseCommand, emit
 from github import Github, GithubException
@@ -30,38 +29,29 @@ class GithubProject:
     It also generates a CSV file ready for visualization.
 
     :cvar owner: The owner of the project.
-    :cvar __data: Data about the project's issues.
     :cvar data_file: The path to the shared local data file, written as yaml.
     """
 
     owner: str
-    __data: Projects | None = None
     data_file: pathlib.Path
 
     def __init__(self, owner: str = "canonical") -> None:
         self.owner = owner
         self.data_file = pathlib.Path("html/data/issues-github.yaml")
-        self.get_data()
+        self._data = self._load_data()
 
-    def get_data(self) -> Projects:
-        """Load a local data file containing Github issues for a project."""
-        if self.__data:
-            return self.__data
-
+    def _load_data(self) -> Projects:
+        """Load issue data from the local YAML file, or return an empty store."""
         if self.data_file.exists():
             emit.progress(f"Loading data from {self.data_file}", permanent=True)
-            data: Projects = Projects.from_yaml_file(self.data_file)
-        else:
-            emit.message(f"Data file {self.data_file} does not exist.")
-            data = Projects(projects={})
+            return Projects.from_yaml_file(self.data_file)
+        emit.message(f"Data file {self.data_file} does not exist.")
+        return Projects(projects={})
 
-        self.__data = data
-        return data
-
-    @cached_property
+    @property
     def data(self) -> Projects:
-        """Get the data for the project."""
-        return self.get_data()
+        """The in-memory issue data store."""
+        return self._data
 
     @staticmethod
     def csv_file(project: str) -> pathlib.Path:
@@ -69,6 +59,16 @@ class GithubProject:
         if project == "all":
             return pathlib.Path("html/data/all-projects-github.csv")
         return pathlib.Path(f"html/data/{project}-github.csv")
+
+    @staticmethod
+    def _issue_from_api(api_issue: object, now: datetime) -> GithubIssue:
+        """Construct a GithubIssue from a PyGithub issue object."""
+        return GithubIssue(
+            type="issue" if api_issue.pull_request is None else "pr",  # type: ignore[union-attr]
+            date_opened=api_issue.created_at,  # type: ignore[union-attr]
+            date_closed=api_issue.closed_at,  # type: ignore[union-attr]
+            refresh_date=now,
+        )
 
     def update_data_from_github(
         self, github_api: Github, project: str, refresh_interval_days: int = 7
@@ -91,36 +91,31 @@ class GithubProject:
 
         now = datetime.now(tz=UTC)
         refresh_threshold = timedelta(days=refresh_interval_days)
+        repo = github_api.get_repo(f"{self.owner}/{project}")
 
         # Find issues that need refreshing (haven't been updated in threshold days)
-        issues_to_refresh = []
-        for issue_num, issue in self.data.projects[project].issues.items():
-            if (now - issue.refresh_date) > refresh_threshold:
-                issues_to_refresh.append(issue_num)
-
+        issues_to_refresh = [
+            issue_num
+            for issue_num, issue in self.data.projects[project].issues.items()
+            if (now - issue.refresh_date) > refresh_threshold
+        ]
         emit.debug(f"Found {len(issues_to_refresh)} existing issues to refresh")
 
         # Refresh stale issues
         for issue_num in issues_to_refresh:
             try:
-                issue = github_api.get_repo(f"{self.owner}/{project}").get_issue(
-                    number=issue_num
-                )
-                self.data.projects[project].issues[issue_num] = GithubIssue(
-                    type="issue" if issue.pull_request is None else "pr",
-                    date_opened=issue.created_at,
-                    date_closed=issue.closed_at,
-                    refresh_date=now,
+                api_issue = repo.get_issue(number=issue_num)
+                self.data.projects[project].issues[issue_num] = self._issue_from_api(
+                    api_issue, now
                 )
                 emit.debug(f"Refreshed issue {issue_num}")
             except GithubException as e:
                 emit.debug(f"Could not fetch issue {issue_num}: {e}")
 
-        # Find the highest issue number we have
+        # Check for new issues starting from the highest known issue number
         max_issue_num = max(self.data.projects[project].issues.keys(), default=0)
         emit.debug(f"Highest existing issue number: {max_issue_num}")
 
-        # Check for new issues starting from max_issue_num + 1
         new_issues_found = 0
         next_issue_num = max_issue_num + 1
         consecutive_not_found = 0
@@ -128,21 +123,14 @@ class GithubProject:
 
         while consecutive_not_found < max_consecutive_not_found:
             try:
-                issue = github_api.get_repo(f"{self.owner}/{project}").get_issue(
-                    number=next_issue_num
-                )
-                # Issue exists!
-                self.data.projects[project].issues[next_issue_num] = GithubIssue(
-                    type="issue" if issue.pull_request is None else "pr",
-                    date_opened=issue.created_at,
-                    date_closed=issue.closed_at,
-                    refresh_date=now,
+                api_issue = repo.get_issue(number=next_issue_num)
+                self.data.projects[project].issues[next_issue_num] = (
+                    self._issue_from_api(api_issue, now)
                 )
                 emit.debug(f"Found new issue {next_issue_num}")
                 new_issues_found += 1
-                consecutive_not_found = 0  # Reset counter
+                consecutive_not_found = 0
             except GithubException:
-                # Issue doesn't exist (404 or other error)
                 consecutive_not_found += 1
 
             next_issue_num += 1
@@ -155,76 +143,62 @@ class GithubProject:
     def save_data_to_file(self) -> None:
         """Write data to a local file."""
         emit.progress(f"Writing data to {self.data_file}")
-
         self.data.to_yaml_file(self.data_file)
         emit.message(f"Wrote to {self.data_file}")
 
     def generate_csv(self, project: str) -> None:
-        """Generate a CSV file from a GithubIssues object.
+        """Generate a CSV file from issue data.
 
         Iterates through each day from the start date to today, counts open issues
         and computes median age, then writes the results to a CSV file.
 
         Data is organized as:
-        | date       | open issues | mean age  |
-        | ---------- | ----------- | --------- |
-        | 2021-01-01 | 10          | 20        |
-        | ...        | ...         | ...       |
+        | date       | open issues | closed | age |
+        | ---------- | ----------- | ------ | --- |
+        | 2021-01-01 | 10          | 2      | 20  |
+        | ...        | ...         | ...    | ... |
         """
-        # intermediate data structure of
-        intermediate_data = IntermediateData()
-
         start_date = datetime(year=2021, month=1, day=1, tzinfo=UTC)
         end_date = datetime.now(tz=UTC)
 
-        # iterate through each day from start_date to end_date
+        # Collect the flat list of issues to count once, before the per-day loop
+        if project == "all":
+            issues = [
+                issue
+                for proj in self.data.projects.values()
+                for issue in proj.issues.values()
+            ]
+        else:
+            issues = list(self.data.projects[project].issues.values())
+
+        intermediate_data = IntermediateData()
         emit.progress(f"Counting open issues and age for {project}")
+
         for date in [
             start_date + timedelta(days=i) for i in range((end_date - start_date).days)
         ]:
-            if project == "all":
-                open_issues = [
-                    issue
-                    for project in self.data.projects.values()
-                    for issue in project.issues.values()
-                    if issue.is_open(date)
-                ]
-                closed_today = sum(
-                    1
-                    for proj in self.data.projects.values()
-                    for issue in proj.issues.values()
-                    if issue.date_closed is not None
-                    and issue.date_closed.date() == date.date()
-                )
-            else:
-                open_issues = [
-                    issue
-                    for issue in self.data.projects[project].issues.values()
-                    if issue.is_open(date)
-                ]
-                closed_today = sum(
-                    1
-                    for issue in self.data.projects[project].issues.values()
-                    if issue.date_closed is not None
-                    and issue.date_closed.date() == date.date()
-                )
-            mean_age = get_median_age(
-                [issue.date_opened for issue in open_issues],
-                date,
+            open_issues = [issue for issue in issues if issue.is_open(date)]
+            closed_today = sum(
+                1
+                for issue in issues
+                if issue.date_closed is not None
+                and issue.date_closed.date() == date.date()
             )
             intermediate_data.data.append(
                 IntermediateDataPoint(
                     date=date.strftime("%Y-%b-%d"),
                     open_issues=len(open_issues),
                     closed_issues=closed_today,
-                    mean_age=mean_age,
+                    mean_age=get_median_age(
+                        [issue.date_opened for issue in open_issues],
+                        date,
+                    ),
                 ),
             )
 
         csv_file = self.csv_file(str(project))
         emit.debug(f"Writing data to {csv_file}")
-        csv_models = intermediate_data.to_csv_models()
-        IssueDataPoint.save_to_csv(csv_models, csv_file)
+        IssueDataPoint.save_to_csv(intermediate_data.to_csv_models(), csv_file)
         emit.progress(f"Wrote to {csv_file}", permanent=True)
 
 
@@ -306,7 +280,7 @@ def get_median_age(dates: list[datetime] | None, date: datetime) -> int | None:
 def get_mean_date(dates: list[datetime]) -> datetime:
     """Get mean date from a list of datetimes."""
     reference = datetime(year=2000, month=1, day=1, tzinfo=UTC)
-    return reference + sum([date - reference for date in dates], timedelta()) / len(
+    return reference + sum((date - reference for date in dates), timedelta()) / len(
         dates,
     )
 

@@ -131,7 +131,7 @@ class TestGithubProjectGenerateCsv:
         gp = GithubProject.__new__(GithubProject)
         gp.owner = "canonical"
         gp.data_file = tmp_path / "issues.yaml"
-        gp._GithubProject__data = Projects(projects={})
+        gp._data = Projects(projects={})
         return gp
 
     def _make_issue(self, opened, closed=None):
@@ -153,9 +153,7 @@ class TestGithubProjectGenerateCsv:
             gp.generate_csv(project)
 
     def test_empty_project_produces_all_zero_rows(self, github_project, tmp_path):
-        github_project._GithubProject__data = Projects(
-            projects={"proj": GithubIssues(issues={})}
-        )
+        github_project._data = Projects(projects={"proj": GithubIssues(issues={})})
         self._generate(github_project, "proj", REAL_DATETIME(2021, 1, 4, tzinfo=UTC))
 
         rows = _read_csv(tmp_path / "html/data/proj-github.csv")
@@ -164,7 +162,7 @@ class TestGithubProjectGenerateCsv:
 
     def test_open_issues_counted_on_correct_dates(self, github_project, tmp_path):
         issue = self._make_issue(opened=REAL_DATETIME(2021, 1, 2, tzinfo=UTC))
-        github_project._GithubProject__data = Projects(
+        github_project._data = Projects(
             projects={"proj": GithubIssues(issues={1: issue})}
         )
         self._generate(github_project, "proj", REAL_DATETIME(2021, 1, 5, tzinfo=UTC))
@@ -180,7 +178,7 @@ class TestGithubProjectGenerateCsv:
             opened=REAL_DATETIME(2021, 1, 1, tzinfo=UTC),
             closed=REAL_DATETIME(2021, 1, 3, tzinfo=UTC),
         )
-        github_project._GithubProject__data = Projects(
+        github_project._data = Projects(
             projects={"proj": GithubIssues(issues={1: issue})}
         )
         self._generate(github_project, "proj", REAL_DATETIME(2021, 1, 5, tzinfo=UTC))
@@ -200,9 +198,7 @@ class TestGithubProjectGenerateCsv:
             )
             for i in range(1, 4)
         }
-        github_project._GithubProject__data = Projects(
-            projects={"proj": GithubIssues(issues=issues)}
-        )
+        github_project._data = Projects(projects={"proj": GithubIssues(issues=issues)})
         self._generate(github_project, "proj", REAL_DATETIME(2021, 1, 4, tzinfo=UTC))
 
         rows = _read_csv(tmp_path / "html/data/proj-github.csv")
@@ -211,7 +207,7 @@ class TestGithubProjectGenerateCsv:
     def test_all_aggregates_open_issues_across_projects(self, github_project, tmp_path):
         issue_a = self._make_issue(opened=REAL_DATETIME(2021, 1, 1, tzinfo=UTC))
         issue_b = self._make_issue(opened=REAL_DATETIME(2021, 1, 1, tzinfo=UTC))
-        github_project._GithubProject__data = Projects(
+        github_project._data = Projects(
             projects={
                 "proj-a": GithubIssues(issues={1: issue_a}),
                 "proj-b": GithubIssues(issues={1: issue_b}),
@@ -232,7 +228,7 @@ class TestGithubProjectGenerateCsv:
         issue_b = self._make_issue(
             opened=REAL_DATETIME(2021, 1, 1, tzinfo=UTC), closed=close_date
         )
-        github_project._GithubProject__data = Projects(
+        github_project._data = Projects(
             projects={
                 "proj-a": GithubIssues(issues={1: issue_a}),
                 "proj-b": GithubIssues(issues={1: issue_b}),
@@ -244,9 +240,7 @@ class TestGithubProjectGenerateCsv:
         assert rows[2]["closed"] == "2"  # Jan 3: both closed
 
     def test_csv_headers_are_correct(self, github_project, tmp_path):
-        github_project._GithubProject__data = Projects(
-            projects={"proj": GithubIssues(issues={})}
-        )
+        github_project._data = Projects(projects={"proj": GithubIssues(issues={})})
         self._generate(github_project, "proj", REAL_DATETIME(2021, 1, 3, tzinfo=UTC))
 
         content = (tmp_path / "html/data/proj-github.csv").read_text()
