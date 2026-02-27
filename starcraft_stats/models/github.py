@@ -53,6 +53,7 @@ class IntermediateDataPoint(CraftBaseModel):
 
     date: str
     open_issues: int
+    closed_issues: int = 0
     mean_age: int | None
 
 
@@ -67,6 +68,7 @@ class IntermediateData(CraftBaseModel):
             IssueDataPoint(
                 date=point.date,
                 issues=point.open_issues,
+                closed=point.closed_issues,
                 age=point.mean_age,
             )
             for point in self.data

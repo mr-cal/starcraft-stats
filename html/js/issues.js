@@ -16,6 +16,7 @@ const colors = [
 ];
 
 const ROLLING_WINDOW = 4;
+const CLOSED_WEEKLY_WINDOW = 7;
 
 /**
  * Compute a rolling average over an array of numbers.
@@ -28,9 +29,20 @@ function rollingAverage(values, windowSize) {
   });
 }
 
-// Storage for project data and chart instance
+/**
+ * Compute a rolling sum over an array of numbers.
+ */
+function rollingSum(values, windowSize) {
+  return values.map((_, i) => {
+    const start = Math.max(0, i - windowSize + 1);
+    return values.slice(start, i + 1).reduce((sum, v) => sum + v, 0);
+  });
+}
+
+// Storage for project data and chart instances
 const projectData = {};
 let chart = null;
+let closedChart = null;
 
 /**
  * Generate a distinct color for a project
@@ -54,6 +66,10 @@ function loadProjectData(project, index) {
           result.data.map((d) => d.issues),
           ROLLING_WINDOW,
         ),
+        closed: rollingSum(
+          result.data.map((d) => d.closed ?? 0),
+          CLOSED_WEEKLY_WINDOW,
+        ),
         color: getProjectColor(index),
       };
 
@@ -69,36 +85,29 @@ function loadProjectData(project, index) {
 }
 
 /**
- * Initialize the checkboxes and chart
+ * Populate a checkbox container with one checkbox per project.
  */
-function initializeUI() {
-  const checkboxContainer = document.getElementById("project-checkboxes");
+function createProjectCheckboxes(containerId, checkboxPrefix, onChange) {
+  const container = document.getElementById(containerId);
 
-  projects.forEach((project, index) => {
-    // Create checkbox wrapper
+  for (const project of projects) {
     const wrapper = document.createElement("div");
     wrapper.className = "p-checkbox";
 
-    // Create checkbox input
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.className = "p-checkbox__input";
-    checkbox.id = `checkbox-${project}`;
+    checkbox.id = `${checkboxPrefix}-${project}`;
     checkbox.value = project;
-
-    // Check "all-projects" by default
     if (project === "all-projects") {
       checkbox.checked = true;
     }
+    checkbox.addEventListener("change", onChange);
 
-    checkbox.addEventListener("change", updateChart);
-
-    // Create label
     const label = document.createElement("label");
     label.className = "p-checkbox__label";
-    label.htmlFor = `checkbox-${project}`;
+    label.htmlFor = `${checkboxPrefix}-${project}`;
 
-    // Add color indicator
     const colorBox = document.createElement("span");
     colorBox.style.display = "inline-block";
     colorBox.style.width = "12px";
@@ -112,12 +121,25 @@ function initializeUI() {
 
     wrapper.appendChild(checkbox);
     wrapper.appendChild(label);
-    checkboxContainer.appendChild(wrapper);
-  });
+    container.appendChild(wrapper);
+  }
+}
 
-  // Initialize the chart
+/**
+ * Initialize checkboxes and charts once all project data is loaded.
+ */
+function initializeUI() {
+  createProjectCheckboxes("project-checkboxes", "checkbox", updateChart);
+  createProjectCheckboxes(
+    "closed-checkboxes",
+    "closed-checkbox",
+    updateClosedChart,
+  );
+
   initializeChart();
+  initializeClosedChart();
   updateChart();
+  updateClosedChart();
 }
 
 /**
@@ -211,6 +233,96 @@ function updateChart() {
   }));
 
   chart.update();
+}
+
+/**
+ * Initialize the closed-issues-per-day chart
+ */
+function initializeClosedChart() {
+  const ctx = document.getElementById("closed-chart");
+
+  closedChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: [],
+      datasets: [],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      elements: {
+        point: {
+          radius: 0,
+        },
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          mode: "index",
+          intersect: false,
+        },
+      },
+      scales: {
+        x: {
+          display: true,
+          title: {
+            display: true,
+            text: "Date",
+          },
+        },
+        y: {
+          display: true,
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: "Issues Closed / Week",
+          },
+          ticks: {
+            precision: 0,
+          },
+        },
+      },
+      interaction: {
+        mode: "nearest",
+        axis: "x",
+        intersect: false,
+      },
+    },
+  });
+}
+
+/**
+ * Update the closed-issues chart based on selected checkboxes
+ */
+function updateClosedChart() {
+  const selectedProjects = projects.filter((project) => {
+    const checkbox = document.getElementById(`closed-checkbox-${project}`);
+    return checkbox?.checked;
+  });
+
+  if (selectedProjects.length === 0) {
+    closedChart.data.labels = [];
+    closedChart.data.datasets = [];
+    closedChart.update();
+    return;
+  }
+
+  const firstProject = selectedProjects[0];
+  closedChart.data.labels = projectData[firstProject].dates;
+
+  closedChart.data.datasets = selectedProjects.map((project) => ({
+    label: project,
+    data: projectData[project].closed,
+    borderColor: projectData[project].color,
+    backgroundColor: `${projectData[project].color}20`,
+    borderWidth: 2,
+    fill: false,
+    tension: 0.1,
+  }));
+
+  closedChart.update();
 }
 
 // Load projects from the generated config and initialize the page

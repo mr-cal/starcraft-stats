@@ -189,12 +189,25 @@ class GithubProject:
                     for issue in project.issues.values()
                     if issue.is_open(date)
                 ]
+                closed_today = sum(
+                    1
+                    for proj in self.data.projects.values()
+                    for issue in proj.issues.values()
+                    if issue.date_closed is not None
+                    and issue.date_closed.date() == date.date()
+                )
             else:
                 open_issues = [
                     issue
                     for issue in self.data.projects[project].issues.values()
                     if issue.is_open(date)
                 ]
+                closed_today = sum(
+                    1
+                    for issue in self.data.projects[project].issues.values()
+                    if issue.date_closed is not None
+                    and issue.date_closed.date() == date.date()
+                )
             mean_age = get_median_age(
                 [issue.date_opened for issue in open_issues],
                 date,
@@ -203,6 +216,7 @@ class GithubProject:
                 IntermediateDataPoint(
                     date=date.strftime("%Y-%b-%d"),
                     open_issues=len(open_issues),
+                    closed_issues=closed_today,
                     mean_age=mean_age,
                 ),
             )
