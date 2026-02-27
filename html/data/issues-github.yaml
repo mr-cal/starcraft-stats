@@ -14695,6 +14695,11 @@ projects:
         date-opened: '2026-02-20T04:02:30Z'
         date-closed: null
         refresh-date: '2026-02-27T12:12:50.613951Z'
+      '2579':
+        type: pr
+        date-opened: '2026-02-26T14:24:33Z'
+        date-closed: '2026-02-26T18:24:44Z'
+        refresh-date: '2026-02-27T16:28:56.208372Z'
   craft-application:
     issues:
       '753':
@@ -30650,6 +30655,56 @@ projects:
         date-opened: '2026-02-22T19:40:49Z'
         date-closed: null
         refresh-date: '2026-02-27T12:12:50.613951Z'
+      '1474':
+        type: pr
+        date-opened: '2026-02-25T02:48:11Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:29:42.210917Z'
+      '1475':
+        type: pr
+        date-opened: '2026-02-25T13:18:46Z'
+        date-closed: '2026-02-26T12:48:41Z'
+        refresh-date: '2026-02-27T16:29:42.210917Z'
+      '1476':
+        type: pr
+        date-opened: '2026-02-25T14:26:22Z'
+        date-closed: '2026-02-25T21:58:24Z'
+        refresh-date: '2026-02-27T16:29:42.210917Z'
+      '1477':
+        type: pr
+        date-opened: '2026-02-25T15:22:31Z'
+        date-closed: '2026-02-26T18:41:57Z'
+        refresh-date: '2026-02-27T16:29:42.210917Z'
+      '1478':
+        type: pr
+        date-opened: '2026-02-25T18:47:34Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:29:42.210917Z'
+      '1479':
+        type: pr
+        date-opened: '2026-02-26T13:16:09Z'
+        date-closed: '2026-02-26T13:16:17Z'
+        refresh-date: '2026-02-27T16:29:42.210917Z'
+      '1480':
+        type: pr
+        date-opened: '2026-02-26T13:17:05Z'
+        date-closed: '2026-02-26T21:09:09Z'
+        refresh-date: '2026-02-27T16:29:42.210917Z'
+      '1481':
+        type: pr
+        date-opened: '2026-02-26T15:57:41Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:29:42.210917Z'
+      '1482':
+        type: pr
+        date-opened: '2026-02-26T23:36:23Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:29:42.210917Z'
+      '1483':
+        type: pr
+        date-opened: '2026-02-27T13:03:54Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:29:42.210917Z'
   craft-providers:
     issues:
       '740':
@@ -35237,6 +35292,11 @@ projects:
         date-opened: '2026-02-23T16:34:52Z'
         date-closed: '2026-02-24T12:16:10Z'
         refresh-date: '2026-02-27T12:12:50.613951Z'
+      '919':
+        type: pr
+        date-opened: '2026-02-25T14:14:53Z'
+        date-closed: '2026-02-25T17:35:35Z'
+        refresh-date: '2026-02-27T16:30:06.526143Z'
   craft-store:
     issues:
       '286':
@@ -38346,6 +38406,16 @@ projects:
         date-opened: '2026-02-21T00:05:45Z'
         date-closed: null
         refresh-date: '2026-02-27T12:12:50.613951Z'
+      '279':
+        type: issue
+        date-opened: '2026-02-26T18:26:27Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:22.283426Z'
+      '280':
+        type: issue
+        date-opened: '2026-02-26T18:28:08Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:22.283426Z'
   rockcraft:
     issues:
       '877':
@@ -43868,6 +43938,61 @@ projects:
         date-opened: '2026-02-22T16:50:50Z'
         date-closed: null
         refresh-date: '2026-02-27T12:12:50.613951Z'
+      '1106':
+        type: pr
+        date-opened: '2026-02-25T12:38:21Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:31.199200Z'
+      '1107':
+        type: pr
+        date-opened: '2026-02-25T17:16:16Z'
+        date-closed: '2026-02-25T17:22:27Z'
+        refresh-date: '2026-02-27T16:30:31.199200Z'
+      '1108':
+        type: pr
+        date-opened: '2026-02-25T17:22:06Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:31.199200Z'
+      '1109':
+        type: pr
+        date-opened: '2026-02-25T17:39:58Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:31.199200Z'
+      '1110':
+        type: pr
+        date-opened: '2026-02-25T18:16:49Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:31.199200Z'
+      '1111':
+        type: pr
+        date-opened: '2026-02-25T19:14:32Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:31.199200Z'
+      '1112':
+        type: pr
+        date-opened: '2026-02-26T07:32:25Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:31.199200Z'
+      '1113':
+        type: pr
+        date-opened: '2026-02-26T11:40:37Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:31.199200Z'
+      '1114':
+        type: pr
+        date-opened: '2026-02-26T17:32:35Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:31.199200Z'
+      '1115':
+        type: pr
+        date-opened: '2026-02-27T08:55:30Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:31.199200Z'
+      '1116':
+        type: pr
+        date-opened: '2026-02-27T14:46:05Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:31.199200Z'
   snapcraft:
     issues:
       '5471':
@@ -74005,6 +74130,16 @@ projects:
         date-opened: '2026-02-22T14:08:23Z'
         date-closed: '2026-02-22T14:08:42Z'
         refresh-date: '2026-02-27T12:12:50.613951Z'
+      '6066':
+        type: issue
+        date-opened: '2026-02-25T16:51:19Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:30:49.395017Z'
+      '6067':
+        type: pr
+        date-opened: '2026-02-26T16:47:14Z'
+        date-closed: '2026-02-26T18:40:20Z'
+        refresh-date: '2026-02-27T16:30:49.395017Z'
   starbase:
     issues:
       '383':
@@ -76477,3 +76612,8 @@ projects:
         date-opened: '2026-02-13T00:52:15Z'
         date-closed: '2026-02-13T13:49:26Z'
         refresh-date: '2026-02-27T12:12:50.613951Z'
+      '496':
+        type: issue
+        date-opened: '2026-02-27T01:26:37Z'
+        date-closed: null
+        refresh-date: '2026-02-27T16:31:05.583081Z'
