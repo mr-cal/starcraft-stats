@@ -28,23 +28,28 @@ const libHeader = document.createElement("th");
 libHeader.rowSpan = 2;
 libHeader.textContent = "Library";
 headerRow1.appendChild(libHeader);
-for (const [appName, branches] of Object.entries(appGroups)) {
+for (const [appIndex, [appName, branches]] of Object.entries(
+  appGroups,
+).entries()) {
   const th = document.createElement("th");
   th.colSpan = branches.length;
   th.textContent = appName;
-  th.className = "u-align--center app-group-header";
+  th.className =
+    appIndex === 0 ? "u-align--center" : "u-align--center app-group-header";
   headerRow1.appendChild(th);
 }
 thead.appendChild(headerRow1);
 
 // Header row 2: branch names
 const headerRow2 = document.createElement("tr");
-for (const [, branches] of Object.entries(appGroups)) {
+for (const [appIndex, [, branches]] of Object.entries(appGroups).entries()) {
   for (const [i, { branch }] of branches.entries()) {
     const th = document.createElement("th");
     th.textContent = branch;
     th.className =
-      i === 0 ? "u-align--right app-group-start" : "u-align--right";
+      i === 0 && appIndex > 0
+        ? "u-align--right app-group-start"
+        : "u-align--right";
     headerRow2.appendChild(th);
   }
 }
@@ -60,11 +65,13 @@ for (const lib of deps.libs) {
   libCell.textContent = lib;
   tr.appendChild(libCell);
 
-  for (const [, branches] of Object.entries(appGroups)) {
+  for (const [appIndex, [, branches]] of Object.entries(appGroups).entries()) {
     for (const [i, { key }] of branches.entries()) {
       const td = document.createElement("td");
       td.className =
-        i === 0 ? "u-align--right app-group-start" : "u-align--right";
+        i === 0 && appIndex > 0
+          ? "u-align--right app-group-start"
+          : "u-align--right";
 
       const depInfo = deps.apps[key]?.[lib];
       if (depInfo) {

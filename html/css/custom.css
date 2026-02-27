@@ -33,3 +33,14 @@
 .not-used {
   color: gray;
 }
+
+.app-group-start {
+  overflow: visible;
+  box-shadow: inset 2px 0 0 #666;
+}
+
+.app-group-header {
+  overflow: visible;
+  box-shadow: inset 2px 0 0 #666;
+  font-weight: bold;
+}
