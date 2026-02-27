@@ -162,18 +162,14 @@ class GithubProject:
     def generate_csv(self, project: str) -> None:
         """Generate a CSV file from a GithubIssues object.
 
-        Steps:
-        1. Generate an intermediate data structure containing the date, open issues, and mean age.
-        2. Compute rolling averages for open issues and mean age and add to data structure.
-        3. Write the data to a CSV file.
-
-        Rolling averages are done for a smoother visualization.
+        Iterates through each day from the start date to today, counts open issues
+        and computes median age, then writes the results to a CSV file.
 
         Data is organized as:
-        | date       | open issues | open issues average | mean age  | mean age average |
-        | ---------- | ----------- | ------------------- | --------- | ---------------- |
-        | 2021-01-01 | 10          | 10                  | 20        | 20               |
-        | ...        | ...         | ...                 | ...       | ...              |
+        | date       | open issues | mean age  |
+        | ---------- | ----------- | --------- |
+        | 2021-01-01 | 10          | 20        |
+        | ...        | ...         | ...       |
         """
         # intermediate data structure of
         intermediate_data = IntermediateData()
@@ -210,22 +206,6 @@ class GithubProject:
                     mean_age=mean_age,
                 ),
             )
-
-        emit.progress(f"Calculating rolling averages for {project}")
-        window_size = 4
-        for entry in intermediate_data.data:
-            # compute rolling averages
-            start_date_index = max(
-                0,
-                intermediate_data.data.index(entry) - window_size + 1,
-            )
-            window_data = intermediate_data.data[
-                start_date_index : intermediate_data.data.index(entry) + 1
-            ]
-            average_open_issues = sum(
-                entry.open_issues for entry in window_data
-            ) // len(window_data)
-            entry.open_issues_avg = average_open_issues
 
         csv_file = self.csv_file(str(project))
         emit.debug(f"Writing data to {csv_file}")

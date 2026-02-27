@@ -15,6 +15,19 @@ const colors = [
   "#335280", // Slate blue
 ];
 
+const ROLLING_WINDOW = 4;
+
+/**
+ * Compute a rolling average over an array of numbers.
+ */
+function rollingAverage(values, windowSize) {
+  return values.map((_, i) => {
+    const start = Math.max(0, i - windowSize + 1);
+    const window = values.slice(start, i + 1);
+    return Math.floor(window.reduce((sum, v) => sum + v, 0) / window.length);
+  });
+}
+
 // Storage for project data and chart instance
 let projectData = {};
 let chart = null;
@@ -37,7 +50,10 @@ function loadProjectData(project, index) {
     complete: function (result) {
       projectData[project] = {
         dates: result.data.map((d) => d.date),
-        issues: result.data.map((d) => d.issues_avg),
+        issues: rollingAverage(
+          result.data.map((d) => d.issues),
+          ROLLING_WINDOW,
+        ),
         color: getProjectColor(index),
       };
 
