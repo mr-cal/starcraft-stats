@@ -41,3 +41,14 @@ export GITHUB_TOKEN=<your token from github>
 uv tool install -e .
 starcraft-stats --help
 ```
+
+Web browsers will not run Javascript from a local webpage.
+The easiest way to view the webpage locally is to use Python:
+
+.. code-block::
+
+```bash
+cd html
+python3 -m http.server 8000
+open http://127.0.0.1:8000
+```
