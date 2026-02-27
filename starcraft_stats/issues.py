@@ -1,6 +1,7 @@
 """Module for github data collection."""
 
 import argparse
+import json
 import os
 import pathlib
 from datetime import UTC, datetime, timedelta
@@ -291,6 +292,12 @@ class GetIssuesCommand(BaseCommand):
 
         # generate csv and save data for all projects
         github_project.generate_csv("all")
+
+        # write the project list for the frontend
+        projects_file = pathlib.Path("html/data/projects.json")
+        projects_list = ["all-projects", *config.craft_projects]
+        projects_file.write_text(json.dumps(projects_list, indent=2) + "\n")
+        emit.progress(f"Wrote projects list to {projects_file}", permanent=True)
 
 
 def get_median_age(dates: list[datetime] | None, date: datetime) -> int | None:

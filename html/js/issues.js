@@ -1,20 +1,3 @@
-// Project list
-const projects = [
-  "all-projects",
-  "charmcraft",
-  "rockcraft",
-  "snapcraft",
-  "craft-application",
-  "craft-archives",
-  "craft-cli",
-  "craft-grammar",
-  "craft-parts",
-  "craft-providers",
-  "craft-platforms",
-  "craft-store",
-  "starbase",
-];
-
 // Color palette for different projects
 const colors = [
   "#E95420", // Ubuntu orange
@@ -213,6 +196,10 @@ function updateChart() {
 
   chart.update();
 }
+
+// Load projects from the generated config and initialize the page
+const response = await fetch("data/projects.json");
+const projects = await response.json();
 
 // Load all project data
 projects.forEach((project, index) => {
