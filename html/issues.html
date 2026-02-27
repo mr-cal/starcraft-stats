@@ -7,6 +7,7 @@
     <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.js"></script>
     <script type="module" src="js/issues.js"></script>
+    <script type="module" src="js/snapshot.js"></script>
   </head>
 
   <header id="navigation" class="p-navigation is-dark">
@@ -113,6 +114,37 @@
         </div>
         <div class="col-9">
           <canvas id="closed-chart" style="width: 100%; height: 500px;"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <hr class="p-rule" />
+    </div>
+
+    <div class="p-strip">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="p-heading--3">Project snapshot</h2>
+          <p>Current state of each project: open issues and PRs, median age, and throughput over the last year.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h4 class="p-heading--5">Open issues and PRs</h4>
+          <canvas id="snapshot-open-chart" style="width: 100%;"></canvas>
+        </div>
+      </div>
+      <div class="row u-sv3">
+        <div class="col-12">
+          <h4 class="p-heading--5">Median age (days)</h4>
+          <canvas id="snapshot-age-chart" style="width: 100%;"></canvas>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h4 class="p-heading--5">Closed in the last year</h4>
+          <canvas id="snapshot-closed-chart" style="width: 100%;"></canvas>
         </div>
       </div>
     </div>

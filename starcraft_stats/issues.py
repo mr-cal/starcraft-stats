@@ -201,6 +201,53 @@ class GithubProject:
         IssueDataPoint.save_to_csv(intermediate_data.to_csv_models(), csv_file)
         emit.progress(f"Wrote to {csv_file}", permanent=True)
 
+    def generate_snapshot(self, projects: list[str]) -> None:
+        """Generate a point-in-time snapshot JSON for the comparison charts.
+
+        For each project, computes open issues, open PRs, median age of open issues,
+        median age of open PRs, and issues/PRs closed in the last year.
+
+        :param projects: Ordered list of project names to include.
+        """
+        now = datetime.now(tz=UTC)
+        one_year_ago = now - timedelta(days=365)
+
+        snapshot: dict[str, dict[str, int | None]] = {}
+        for project in projects:
+            if project not in self.data.projects:
+                continue
+            issues = list(self.data.projects[project].issues.values())
+
+            open_issues = [i for i in issues if i.type == "issue" and i.is_open(now)]
+            open_prs = [i for i in issues if i.type == "pr" and i.is_open(now)]
+
+            snapshot[project] = {
+                "open_issues": len(open_issues),
+                "open_prs": len(open_prs),
+                "median_issue_age": get_median_age(
+                    [i.date_opened for i in open_issues], now
+                ),
+                "median_pr_age": get_median_age([i.date_opened for i in open_prs], now),
+                "closed_issues_year": sum(
+                    1
+                    for i in issues
+                    if i.type == "issue"
+                    and i.date_closed is not None
+                    and i.date_closed >= one_year_ago
+                ),
+                "closed_prs_year": sum(
+                    1
+                    for i in issues
+                    if i.type == "pr"
+                    and i.date_closed is not None
+                    and i.date_closed >= one_year_ago
+                ),
+            }
+
+        snapshot_file = pathlib.Path("html/data/snapshot.json")
+        snapshot_file.write_text(json.dumps(snapshot, indent=2) + "\n")
+        emit.progress(f"Wrote snapshot to {snapshot_file}", permanent=True)
+
 
 def load_github_token() -> str:
     """Load a github token from the environment.
@@ -269,6 +316,9 @@ class GetIssuesCommand(BaseCommand):
         }
         projects_file.write_text(json.dumps(projects_data, indent=2) + "\n")
         emit.progress(f"Wrote projects list to {projects_file}", permanent=True)
+
+        # write the snapshot for the comparison charts
+        github_project.generate_snapshot(config.craft_projects)
 
 
 def get_median_age(dates: list[datetime] | None, date: datetime) -> int | None:

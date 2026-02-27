@@ -1,6 +1,7 @@
 """Tests for issues.py utility functions and GithubProject logic."""
 
 import csv as csv_module
+import json
 import pathlib
 from datetime import UTC, datetime
 from unittest.mock import patch
@@ -255,3 +256,150 @@ class TestGithubProjectGenerateCsv:
 
         content = (tmp_path / "html/data/proj-github.csv").read_text()
         assert content.startswith("date,issues,closed,age")
+
+
+class TestGithubProjectGenerateSnapshot:
+    """Tests for GithubProject.generate_snapshot."""
+
+    _NOW = REAL_DATETIME(2026, 1, 15, tzinfo=UTC)
+    _ONE_YEAR_AGO = REAL_DATETIME(2025, 1, 15, tzinfo=UTC)
+
+    @pytest.fixture
+    def github_project(self, tmp_path, monkeypatch):
+        (tmp_path / "html" / "data").mkdir(parents=True)
+        monkeypatch.chdir(tmp_path)
+        gp = GithubProject.__new__(GithubProject)
+        gp.owner = "canonical"
+        gp.data_file = tmp_path / "issues.yaml"
+        gp._data = Projects(projects={})
+        return gp
+
+    def _make_issue(self, itype, opened, closed=None):
+        return GithubIssue(
+            type=itype,
+            date_opened=opened,
+            date_closed=closed,
+            refresh_date=REAL_DATETIME(2026, 1, 1, tzinfo=UTC),
+        )
+
+    def _run_snapshot(self, gp, projects):
+        with patch("starcraft_stats.issues.emit"):
+            gp.generate_snapshot(projects)
+
+    def _read_snapshot(self, tmp_path):
+        return json.loads((tmp_path / "html/data/snapshot.json").read_text())
+
+    def test_open_issues_and_prs_counted_separately(self, github_project, tmp_path):
+        github_project._data = Projects(
+            projects={
+                "proj": GithubIssues(
+                    issues={
+                        1: self._make_issue(
+                            "issue", REAL_DATETIME(2025, 6, 1, tzinfo=UTC)
+                        ),
+                        2: self._make_issue(
+                            "issue", REAL_DATETIME(2025, 6, 2, tzinfo=UTC)
+                        ),
+                        3: self._make_issue(
+                            "pr", REAL_DATETIME(2025, 6, 3, tzinfo=UTC)
+                        ),
+                    }
+                )
+            }
+        )
+        with (
+            patch("starcraft_stats.issues.datetime") as mock_dt,
+            patch("starcraft_stats.issues.emit"),
+        ):
+            mock_dt.now.return_value = self._NOW
+            mock_dt.side_effect = REAL_DATETIME
+            github_project.generate_snapshot(["proj"])
+
+        snapshot = self._read_snapshot(tmp_path)
+        assert snapshot["proj"]["open_issues"] == 2
+        assert snapshot["proj"]["open_prs"] == 1
+
+    def test_closed_issues_and_prs_within_year_counted(self, github_project, tmp_path):
+        github_project._data = Projects(
+            projects={
+                "proj": GithubIssues(
+                    issues={
+                        # closed within the last year
+                        1: self._make_issue(
+                            "issue",
+                            REAL_DATETIME(2024, 6, 1, tzinfo=UTC),
+                            closed=REAL_DATETIME(2025, 6, 1, tzinfo=UTC),
+                        ),
+                        2: self._make_issue(
+                            "pr",
+                            REAL_DATETIME(2024, 6, 1, tzinfo=UTC),
+                            closed=REAL_DATETIME(2025, 6, 1, tzinfo=UTC),
+                        ),
+                        # closed more than a year ago — should not count
+                        3: self._make_issue(
+                            "issue",
+                            REAL_DATETIME(2023, 1, 1, tzinfo=UTC),
+                            closed=REAL_DATETIME(2024, 1, 1, tzinfo=UTC),
+                        ),
+                    }
+                )
+            }
+        )
+        with (
+            patch("starcraft_stats.issues.datetime") as mock_dt,
+            patch("starcraft_stats.issues.emit"),
+        ):
+            mock_dt.now.return_value = self._NOW
+            mock_dt.side_effect = REAL_DATETIME
+            github_project.generate_snapshot(["proj"])
+
+        snapshot = self._read_snapshot(tmp_path)
+        assert snapshot["proj"]["closed_issues_year"] == 1
+        assert snapshot["proj"]["closed_prs_year"] == 1
+
+    def test_median_age_is_none_when_no_open_items(self, github_project, tmp_path):
+        github_project._data = Projects(projects={"proj": GithubIssues(issues={})})
+        with (
+            patch("starcraft_stats.issues.datetime") as mock_dt,
+            patch("starcraft_stats.issues.emit"),
+        ):
+            mock_dt.now.return_value = self._NOW
+            mock_dt.side_effect = REAL_DATETIME
+            github_project.generate_snapshot(["proj"])
+
+        snapshot = self._read_snapshot(tmp_path)
+        assert snapshot["proj"]["median_issue_age"] is None
+        assert snapshot["proj"]["median_pr_age"] is None
+
+    def test_project_missing_from_data_is_skipped(self, github_project, tmp_path):
+        github_project._data = Projects(projects={})
+        with (
+            patch("starcraft_stats.issues.datetime") as mock_dt,
+            patch("starcraft_stats.issues.emit"),
+        ):
+            mock_dt.now.return_value = self._NOW
+            mock_dt.side_effect = REAL_DATETIME
+            github_project.generate_snapshot(["missing-proj"])
+
+        snapshot = self._read_snapshot(tmp_path)
+        assert "missing-proj" not in snapshot
+
+    def test_snapshot_includes_all_expected_keys(self, github_project, tmp_path):
+        github_project._data = Projects(projects={"proj": GithubIssues(issues={})})
+        with (
+            patch("starcraft_stats.issues.datetime") as mock_dt,
+            patch("starcraft_stats.issues.emit"),
+        ):
+            mock_dt.now.return_value = self._NOW
+            mock_dt.side_effect = REAL_DATETIME
+            github_project.generate_snapshot(["proj"])
+
+        snapshot = self._read_snapshot(tmp_path)
+        assert set(snapshot["proj"].keys()) == {
+            "open_issues",
+            "open_prs",
+            "median_issue_age",
+            "median_pr_age",
+            "closed_issues_year",
+            "closed_prs_year",
+        }

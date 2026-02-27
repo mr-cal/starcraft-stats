@@ -1,46 +1,87 @@
-import { chartData } from "./util.js";
-
 async function getData(url) {
   const response = await fetch(url);
   return response.json();
 }
 
-/* Graph the dependencies */
-
 const deps = await getData("./data/app-deps.json");
-const apps = Object.keys(deps.apps);
+const appKeys = Object.keys(deps.apps);
 
-console.log(deps);
-
-// First row is the header
-// Replace the first "/" with a line break (i.e. 'charmcraft/hotfix/3.2' -> 'charmcraft<br>hotfix/3.2')
-const deps_data = [
-  ["Library"].concat(apps.map((app) => app.replace("/", "<br>"))),
-];
-// Create empty rows for each library
-for (let i = 0; i < deps.libs.length; i++) {
-  const row = Array(apps.length + 2).fill("");
-  console.log(row);
-  deps_data.push(row);
+// Group app/branch keys by application name
+// e.g. "charmcraft/hotfix/4.1" → appGroups["charmcraft"] = [{key, branch: "hotfix/4.1"}, ...]
+const appGroups = {};
+for (const key of appKeys) {
+  const slash = key.indexOf("/");
+  const appName = slash === -1 ? key : key.slice(0, slash);
+  const branch = slash === -1 ? "main" : key.slice(slash + 1);
+  if (!appGroups[appName]) appGroups[appName] = [];
+  appGroups[appName].push({ key, branch });
 }
 
-// Populate table
-for (let i = 0; i < deps.libs.length; i++) {
-  const lib = deps.libs[i];
-  deps_data[i + 1][0] = lib;
-  for (let j = 0; j < apps.length; j++) {
-    const app = apps[j];
-    if (app in deps.apps && lib in deps.apps[app]) {
-      const dep_lib = deps.apps[app][lib];
-      let v = dep_lib.version;
-      if (dep_lib.outdated) {
-        v = `!${v}<br>(${dep_lib.latest})`;
-      }
-      deps_data[i + 1][j + 1] = v;
-    } else {
-      deps_data[i + 1][j + 1] = "not used";
-    }
+// Build the table
+const div = document.getElementById("libs-and-apps-table");
+const table = document.createElement("table");
+const thead = document.createElement("thead");
+
+// Header row 1: app name spanning all its branches
+const headerRow1 = document.createElement("tr");
+const libHeader = document.createElement("th");
+libHeader.rowSpan = 2;
+libHeader.textContent = "Library";
+headerRow1.appendChild(libHeader);
+for (const [appName, branches] of Object.entries(appGroups)) {
+  const th = document.createElement("th");
+  th.colSpan = branches.length;
+  th.textContent = appName;
+  th.className = "u-align--center app-group-header";
+  headerRow1.appendChild(th);
+}
+thead.appendChild(headerRow1);
+
+// Header row 2: branch names
+const headerRow2 = document.createElement("tr");
+for (const [, branches] of Object.entries(appGroups)) {
+  for (const [i, { branch }] of branches.entries()) {
+    const th = document.createElement("th");
+    th.textContent = branch;
+    th.className =
+      i === 0 ? "u-align--right app-group-start" : "u-align--right";
+    headerRow2.appendChild(th);
   }
 }
+thead.appendChild(headerRow2);
+table.appendChild(thead);
 
-chartData(deps_data, "libs-and-apps-table");
+// Body rows: one per library
+const tbody = document.createElement("tbody");
+for (const lib of deps.libs) {
+  const tr = document.createElement("tr");
+
+  const libCell = document.createElement("td");
+  libCell.textContent = lib;
+  tr.appendChild(libCell);
+
+  for (const [, branches] of Object.entries(appGroups)) {
+    for (const [i, { key }] of branches.entries()) {
+      const td = document.createElement("td");
+      td.className =
+        i === 0 ? "u-align--right app-group-start" : "u-align--right";
+
+      const depInfo = deps.apps[key]?.[lib];
+      if (depInfo) {
+        if (depInfo.outdated) {
+          td.classList.add("outdated");
+          td.innerHTML = `${depInfo.version}<br><small>(${depInfo.latest})</small>`;
+        } else {
+          td.textContent = depInfo.version;
+        }
+      } else {
+        td.textContent = "not used";
+        td.classList.add("not-used");
+      }
+      tr.appendChild(td);
+    }
+  }
+  tbody.appendChild(tr);
+}
+table.appendChild(tbody);
+div.appendChild(table);
