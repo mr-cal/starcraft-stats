@@ -227,13 +227,11 @@ class TestIntermediateDataPoint:
         point = IntermediateDataPoint(
             date="2024-Jan-01",
             open_issues=10,
-            open_issues_avg=12,
             mean_age=30,
         )
 
         assert point.date == "2024-Jan-01"
         assert point.open_issues == 10
-        assert point.open_issues_avg == 12
         assert point.mean_age == 30
 
     def test_create_datapoint_minimal(self):
@@ -246,7 +244,6 @@ class TestIntermediateDataPoint:
 
         assert point.date == "2024-Jan-01"
         assert point.open_issues == 10
-        assert point.open_issues_avg is None
         assert point.mean_age is None
 
 
@@ -278,13 +275,11 @@ class TestIntermediateData:
             IntermediateDataPoint(
                 date="2024-Jan-01",
                 open_issues=10,
-                open_issues_avg=11,
                 mean_age=30,
             ),
             IntermediateDataPoint(
                 date="2024-Jan-02",
                 open_issues=12,
-                open_issues_avg=13,
                 mean_age=32,
             ),
         ]
@@ -296,7 +291,6 @@ class TestIntermediateData:
         assert isinstance(csv_models[0], IssueDataPoint)
         assert csv_models[0].date == "2024-Jan-01"
         assert csv_models[0].issues == 10
-        assert csv_models[0].issues_avg == 11
         assert csv_models[0].age == 30
 
     def test_to_csv_models_handles_none_values(self):
@@ -305,7 +299,6 @@ class TestIntermediateData:
             IntermediateDataPoint(
                 date="2024-Jan-01",
                 open_issues=10,
-                open_issues_avg=None,
                 mean_age=None,
             ),
         ]
@@ -313,5 +306,4 @@ class TestIntermediateData:
 
         csv_models = data.to_csv_models()
 
-        assert csv_models[0].issues_avg is None
         assert csv_models[0].age is None

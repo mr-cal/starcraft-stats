@@ -11,13 +11,11 @@ class TestIssueDataPoint:
         point = IssueDataPoint(
             date="2024-Jan-01",
             issues=10,
-            issues_avg=12,
             age=30,
         )
 
         assert point.date == "2024-Jan-01"
         assert point.issues == 10
-        assert point.issues_avg == 12
         assert point.age == 30
 
     def test_create_with_none_values(self):
@@ -25,49 +23,45 @@ class TestIssueDataPoint:
         point = IssueDataPoint(
             date="2024-Jan-01",
             issues=10,
-            issues_avg=None,
             age=None,
         )
 
-        assert point.issues_avg is None
         assert point.age is None
 
     def test_csv_headers(self):
         """Test CSV headers are defined correctly."""
-        assert IssueDataPoint.CSV_HEADERS == ["date", "issues", "issues_avg", "age"]
+        assert IssueDataPoint.CSV_HEADERS == ["date", "issues", "age"]
 
     def test_to_csv_row_all_values(self):
         """Test converting to CSV row with all values."""
         point = IssueDataPoint(
             date="2024-Jan-01",
             issues=10,
-            issues_avg=12,
             age=30,
         )
 
         row = point.to_csv_row()
 
-        assert row == ["2024-Jan-01", "10", "12", "30"]
+        assert row == ["2024-Jan-01", "10", "30"]
 
     def test_to_csv_row_with_none(self):
         """Test converting to CSV row with None values."""
         point = IssueDataPoint(
             date="2024-Jan-01",
             issues=10,
-            issues_avg=None,
             age=None,
         )
 
         row = point.to_csv_row()
 
-        assert row == ["2024-Jan-01", "10", "", ""]
+        assert row == ["2024-Jan-01", "10", ""]
 
     def test_save_and_load_roundtrip(self, tmp_path):
         """Test saving and loading data maintains integrity."""
         csv_file = tmp_path / "issues.csv"
         data = [
-            IssueDataPoint(date="2024-Jan-01", issues=10, issues_avg=12, age=30),
-            IssueDataPoint(date="2024-Jan-02", issues=15, issues_avg=14, age=32),
+            IssueDataPoint(date="2024-Jan-01", issues=10, age=30),
+            IssueDataPoint(date="2024-Jan-02", issues=15, age=32),
         ]
 
         IssueDataPoint.save_to_csv(data, csv_file)
@@ -82,12 +76,12 @@ class TestIssueDataPoint:
         """Test CSV file format is correct."""
         csv_file = tmp_path / "issues.csv"
         data = [
-            IssueDataPoint(date="2024-Jan-01", issues=10, issues_avg=12, age=30),
+            IssueDataPoint(date="2024-Jan-01", issues=10, age=30),
         ]
 
         IssueDataPoint.save_to_csv(data, csv_file)
         content = csv_file.read_text()
 
         lines = content.strip().split("\n")
-        assert lines[0] == "date,issues,issues_avg,age"
-        assert lines[1] == "2024-Jan-01,10,12,30"
+        assert lines[0] == "date,issues,age"
+        assert lines[1] == "2024-Jan-01,10,30"
