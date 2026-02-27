@@ -1,17 +1,20 @@
-[
-  "all-projects",
-  "charmcraft",
-  "craft-application",
-  "craft-archives",
-  "craft-artifacts",
-  "craft-cli",
-  "craft-grammar",
-  "craft-parts",
-  "craft-platforms",
-  "craft-providers",
-  "craft-store",
-  "imagecraft",
-  "rockcraft",
-  "snapcraft",
-  "starbase"
-]
+{
+  "applications": [
+    "charmcraft",
+    "imagecraft",
+    "rockcraft",
+    "snapcraft"
+  ],
+  "libraries": [
+    "craft-application",
+    "craft-archives",
+    "craft-artifacts",
+    "craft-cli",
+    "craft-grammar",
+    "craft-parts",
+    "craft-platforms",
+    "craft-providers",
+    "craft-store",
+    "starbase"
+  ]
+}
