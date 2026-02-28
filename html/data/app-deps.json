@@ -70,56 +70,6 @@
                 "outdated": false
             }
         },
-        "charmcraft/hotfix/4.1": {
-            "craft-application": {
-                "series": "6.0",
-                "version": "6.0.1",
-                "latest": "6.0.1",
-                "outdated": false
-            },
-            "craft-archives": {
-                "series": "2.2",
-                "version": "2.2.0",
-                "latest": "2.2.0",
-                "outdated": false
-            },
-            "craft-cli": {
-                "series": "3.2",
-                "version": "3.2.0",
-                "latest": "3.2.0",
-                "outdated": false
-            },
-            "craft-grammar": {
-                "series": "2.3",
-                "version": "2.3.0",
-                "latest": "2.3.0",
-                "outdated": false
-            },
-            "craft-parts": {
-                "series": "2.27",
-                "version": "2.27.0",
-                "latest": "2.27.0",
-                "outdated": false
-            },
-            "craft-platforms": {
-                "series": "0.10",
-                "version": "0.10.0",
-                "latest": "0.10.0",
-                "outdated": false
-            },
-            "craft-providers": {
-                "series": "3.2",
-                "version": "3.2.0",
-                "latest": "3.2.0",
-                "outdated": false
-            },
-            "craft-store": {
-                "series": "3.3",
-                "version": "3.3.0",
-                "latest": "3.3.0",
-                "outdated": false
-            }
-        },
         "charmcraft/hotfix/3.5": {
             "craft-application": {
                 "series": "4.10",
@@ -168,6 +118,56 @@
                 "version": "3.2.1",
                 "latest": "3.2.2",
                 "outdated": true
+            }
+        },
+        "charmcraft/hotfix/4.1": {
+            "craft-application": {
+                "series": "6.0",
+                "version": "6.0.1",
+                "latest": "6.0.1",
+                "outdated": false
+            },
+            "craft-archives": {
+                "series": "2.2",
+                "version": "2.2.0",
+                "latest": "2.2.0",
+                "outdated": false
+            },
+            "craft-cli": {
+                "series": "3.2",
+                "version": "3.2.0",
+                "latest": "3.2.0",
+                "outdated": false
+            },
+            "craft-grammar": {
+                "series": "2.3",
+                "version": "2.3.0",
+                "latest": "2.3.0",
+                "outdated": false
+            },
+            "craft-parts": {
+                "series": "2.27",
+                "version": "2.27.0",
+                "latest": "2.27.0",
+                "outdated": false
+            },
+            "craft-platforms": {
+                "series": "0.10",
+                "version": "0.10.0",
+                "latest": "0.10.0",
+                "outdated": false
+            },
+            "craft-providers": {
+                "series": "3.2",
+                "version": "3.2.0",
+                "latest": "3.2.0",
+                "outdated": false
+            },
+            "craft-store": {
+                "series": "3.3",
+                "version": "3.3.0",
+                "latest": "3.3.0",
+                "outdated": false
             }
         },
         "imagecraft/main": {
