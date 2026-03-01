@@ -2,15 +2,15 @@
   "charmcraft": {
     "open_issues": 198,
     "open_prs": 27,
-    "median_issue_age": 520,
-    "median_pr_age": 52,
+    "median_issue_age": 521,
+    "median_pr_age": 53,
     "closed_issues_year": 66,
     "closed_prs_year": 292
   },
   "craft-application": {
     "open_issues": 107,
     "open_prs": 34,
-    "median_issue_age": 439,
+    "median_issue_age": 440,
     "median_pr_age": 142,
     "closed_issues_year": 39,
     "closed_prs_year": 246
@@ -19,7 +19,7 @@
     "open_issues": 9,
     "open_prs": 1,
     "median_issue_age": 449,
-    "median_pr_age": 35,
+    "median_pr_age": 36,
     "closed_issues_year": 3,
     "closed_prs_year": 65
   },
@@ -27,14 +27,14 @@
     "open_issues": 1,
     "open_prs": 3,
     "median_issue_age": 452,
-    "median_pr_age": 0,
+    "median_pr_age": 1,
     "closed_issues_year": 0,
     "closed_prs_year": 52
   },
   "craft-cli": {
     "open_issues": 52,
     "open_prs": 10,
-    "median_issue_age": 744,
+    "median_issue_age": 745,
     "median_pr_age": 259,
     "closed_issues_year": 9,
     "closed_prs_year": 68
@@ -42,15 +42,15 @@
   "craft-grammar": {
     "open_issues": 4,
     "open_prs": 3,
-    "median_issue_age": 462,
-    "median_pr_age": 13,
+    "median_issue_age": 463,
+    "median_pr_age": 14,
     "closed_issues_year": 8,
     "closed_prs_year": 86
   },
   "craft-parts": {
     "open_issues": 176,
     "open_prs": 41,
-    "median_issue_age": 395,
+    "median_issue_age": 396,
     "median_pr_age": 114,
     "closed_issues_year": 52,
     "closed_prs_year": 310
@@ -99,7 +99,7 @@
     "open_issues": 210,
     "open_prs": 24,
     "median_issue_age": 353,
-    "median_pr_age": 111,
+    "median_pr_age": 112,
     "closed_issues_year": 232,
     "closed_prs_year": 484
   },
@@ -107,7 +107,7 @@
     "open_issues": 22,
     "open_prs": 4,
     "median_issue_age": 435,
-    "median_pr_age": 43,
+    "median_pr_age": 44,
     "closed_issues_year": 9,
     "closed_prs_year": 130
   }
