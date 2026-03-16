@@ -23,7 +23,7 @@
         "charmcraft/main": {
             "craft-application": {
                 "series": "6.2",
-                "version": "6.2.0",
+                "version": "6.2.1",
                 "latest": "6.2.2",
                 "outdated": true
             },
@@ -304,10 +304,10 @@
         },
         "snapcraft/main": {
             "craft-application": {
-                "series": "6.1",
-                "version": "6.1.0",
+                "series": "6.2",
+                "version": "6.2.2",
                 "latest": "6.2.2",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.2",
