@@ -14900,6 +14900,11 @@ projects:
         date-opened: '2026-03-27T20:30:53Z'
         date-closed: null
         refresh-date: '2026-03-28T00:31:55.667966'
+      '2616':
+        type: pr
+        date-opened: '2026-03-28T06:44:40Z'
+        date-closed: null
+        refresh-date: '2026-03-28T12:14:17.554351'
   craft-application:
     issues:
       '753':
@@ -20105,13 +20110,13 @@ projects:
       '1044':
         type: pr
         date-opened: '2026-03-21T03:13:00Z'
-        date-closed: null
-        refresh-date: '2026-03-21T12:11:24.890260'
+        date-closed: '2026-03-23T19:58:54Z'
+        refresh-date: '2026-03-28T12:14:26.409071'
       '1045':
         type: pr
         date-opened: '2026-03-21T06:33:07Z'
-        date-closed: null
-        refresh-date: '2026-03-21T12:11:24.890260'
+        date-closed: '2026-03-23T19:57:13Z'
+        refresh-date: '2026-03-28T12:14:26.409071'
       '1046':
         type: pr
         date-opened: '2026-03-23T14:16:18Z'
@@ -20142,6 +20147,11 @@ projects:
         date-opened: '2026-03-26T15:03:20Z'
         date-closed: null
         refresh-date: '2026-03-27T12:19:18.207936'
+      '1052':
+        type: pr
+        date-opened: '2026-03-28T06:03:07Z'
+        date-closed: null
+        refresh-date: '2026-03-28T12:14:26.409071'
   craft-archives:
     issues:
       '161':
@@ -23771,18 +23781,23 @@ projects:
       '430':
         type: pr
         date-opened: '2026-03-21T03:06:45Z'
-        date-closed: null
-        refresh-date: '2026-03-21T12:11:41.581160'
+        date-closed: '2026-03-23T19:58:34Z'
+        refresh-date: '2026-03-28T12:14:43.624152'
       '431':
         type: pr
         date-opened: '2026-03-21T06:08:36Z'
         date-closed: null
-        refresh-date: '2026-03-21T12:11:41.581160'
+        refresh-date: '2026-03-28T12:14:43.624152'
       '432':
         type: pr
         date-opened: '2026-03-26T12:55:24Z'
         date-closed: null
         refresh-date: '2026-03-27T12:19:37.869018'
+      '433':
+        type: pr
+        date-opened: '2026-03-28T02:27:42Z'
+        date-closed: null
+        refresh-date: '2026-03-28T12:14:43.624152'
   craft-parts:
     issues:
       '1091':
