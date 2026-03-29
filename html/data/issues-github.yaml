@@ -1902,7 +1902,7 @@ projects:
         type: pr
         date-opened: '2026-02-28T06:41:58Z'
         date-closed: '2026-03-11T21:27:01Z'
-        refresh-date: '2026-03-22T12:12:26.032027'
+        refresh-date: '2026-03-29T12:14:26.850576'
       '170':
         type: pr
         date-opened: '2026-03-07T03:59:32Z'
@@ -14798,8 +14798,8 @@ projects:
       '2595':
         type: pr
         date-opened: '2026-03-14T18:52:28Z'
-        date-closed: null
-        refresh-date: '2026-03-22T12:11:54.450917'
+        date-closed: '2026-03-27T15:40:58Z'
+        refresh-date: '2026-03-29T12:13:51.148351'
       '2596':
         type: pr
         date-opened: '2026-03-16T13:15:52Z'
@@ -14824,7 +14824,7 @@ projects:
         type: pr
         date-opened: '2026-03-22T05:17:25Z'
         date-closed: null
-        refresh-date: '2026-03-22T12:11:54.450917'
+        refresh-date: '2026-03-29T12:13:51.148351'
       '2601':
         type: pr
         date-opened: '2026-03-23T16:56:45Z'
@@ -14905,6 +14905,11 @@ projects:
         date-opened: '2026-03-28T06:44:40Z'
         date-closed: null
         refresh-date: '2026-03-28T12:14:17.554351'
+      '2617':
+        type: pr
+        date-opened: '2026-03-29T04:50:28Z'
+        date-closed: null
+        refresh-date: '2026-03-29T12:13:51.148351'
   craft-application:
     issues:
       '753':
@@ -20011,7 +20016,7 @@ projects:
         type: pr
         date-opened: '2026-03-14T23:14:22Z'
         date-closed: '2026-03-17T23:30:59Z'
-        refresh-date: '2026-03-22T12:12:03.792182'
+        refresh-date: '2026-03-29T12:14:01.652634'
       '1025':
         type: pr
         date-opened: '2026-03-15T02:59:53Z'
@@ -21636,6 +21641,11 @@ projects:
         date-opened: '2026-03-21T22:45:32Z'
         date-closed: '2026-03-23T13:29:53Z'
         refresh-date: '2026-03-29T00:36:55.398203'
+      '74':
+        type: pr
+        date-opened: '2026-03-29T06:44:59Z'
+        date-closed: null
+        refresh-date: '2026-03-29T12:14:14.341504'
   craft-cli:
     issues:
       '340':
@@ -23757,12 +23767,12 @@ projects:
         type: pr
         date-opened: '2026-03-14T16:44:54Z'
         date-closed: '2026-03-16T18:51:33Z'
-        refresh-date: '2026-03-22T12:12:19.926175'
+        refresh-date: '2026-03-29T12:14:20.137388'
       '425':
         type: pr
         date-opened: '2026-03-14T17:49:17Z'
-        date-closed: null
-        refresh-date: '2026-03-22T12:12:19.926175'
+        date-closed: '2026-03-24T13:00:23Z'
+        refresh-date: '2026-03-29T12:14:20.137388'
       '426':
         type: pr
         date-opened: '2026-03-20T01:18:11Z'
