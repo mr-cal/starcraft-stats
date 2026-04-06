@@ -1,6 +1,6 @@
 app,branch,latest tag,commits since tag
 charmcraft,main,4.2.0,10
-charmcraft,hotfix/3.5,3.5.3,0
+charmcraft,hotfix/3.5,3.5.3,1
 charmcraft,hotfix/4.2,4.2.0,4
 imagecraft,main,0.1.0,29
 rockcraft,main,1.17.2,31
