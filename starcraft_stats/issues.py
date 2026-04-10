@@ -8,6 +8,7 @@ from datetime import UTC, datetime, timedelta
 
 from craft_cli import BaseCommand, emit
 from github import Github, GithubException
+from github.Issue import Issue as GithubApiIssue
 
 from .config import CONFIG_FILE, Config
 from .models import (
@@ -16,6 +17,7 @@ from .models import (
     IntermediateData,
     IntermediateDataPoint,
     IssueDataPoint,
+    LaunchpadProjects,
     Projects,
 )
 
@@ -61,12 +63,12 @@ class GithubProject:
         return pathlib.Path(f"html/data/{project}-github.csv")
 
     @staticmethod
-    def _issue_from_api(api_issue: object, now: datetime) -> GithubIssue:
+    def _issue_from_api(api_issue: GithubApiIssue, now: datetime) -> GithubIssue:
         """Construct a GithubIssue from a PyGithub issue object."""
         return GithubIssue(
-            type="issue" if api_issue.pull_request is None else "pr",  # type: ignore[union-attr]
-            date_opened=api_issue.created_at,  # type: ignore[union-attr]
-            date_closed=api_issue.closed_at,  # type: ignore[union-attr]
+            type="issue" if api_issue.pull_request is None else "pr",
+            date_opened=api_issue.created_at,
+            date_closed=api_issue.closed_at,
             refresh_date=now,
         )
 
@@ -99,22 +101,30 @@ class GithubProject:
             for issue_num, issue in self.data.projects[project].issues.items()
             if (now - issue.refresh_date) > refresh_threshold
         ]
-        emit.debug(f"Found {len(issues_to_refresh)} existing issues to refresh")
+        total_to_refresh = len(issues_to_refresh)
+        emit.debug(f"[{project}] Found {total_to_refresh} existing issues to refresh")
 
         # Refresh stale issues
-        for issue_num in issues_to_refresh:
+        for i, issue_num in enumerate(issues_to_refresh):
+            emit.trace(
+                f"[{project}] Refreshing issue {issue_num} ({i + 1}/{total_to_refresh})"
+            )
             try:
                 api_issue = repo.get_issue(number=issue_num)
                 self.data.projects[project].issues[issue_num] = self._issue_from_api(
                     api_issue, now
                 )
-                emit.debug(f"Refreshed issue {issue_num}")
-            except GithubException as e:
-                emit.debug(f"Could not fetch issue {issue_num}: {e}")
+                emit.trace(f"[{project}] Refreshed issue {issue_num}")
+            except (GithubException, RuntimeError) as e:
+                emit.debug(f"[{project}] Could not refresh issue {issue_num}: {e}")
+
+        # Save after stale-refresh so a crash in new-issue discovery doesn't
+        # lose the refresh_date updates we just made
+        self.save_data_to_file()
 
         # Check for new issues starting from the highest known issue number
         max_issue_num = max(self.data.projects[project].issues.keys(), default=0)
-        emit.debug(f"Highest existing issue number: {max_issue_num}")
+        emit.debug(f"[{project}] Highest existing issue number: {max_issue_num}")
 
         new_issues_found = 0
         next_issue_num = max_issue_num + 1
@@ -122,15 +132,17 @@ class GithubProject:
         max_consecutive_not_found = 5  # Stop after 5 consecutive missing issues
 
         while consecutive_not_found < max_consecutive_not_found:
+            emit.trace(f"[{project}] Checking new issue {next_issue_num}")
             try:
                 api_issue = repo.get_issue(number=next_issue_num)
                 self.data.projects[project].issues[next_issue_num] = (
                     self._issue_from_api(api_issue, now)
                 )
-                emit.debug(f"Found new issue {next_issue_num}")
+                emit.trace(f"[{project}] Found new issue {next_issue_num}")
                 new_issues_found += 1
                 consecutive_not_found = 0
-            except GithubException:
+            except (GithubException, RuntimeError) as e:
+                emit.trace(f"[{project}] Issue {next_issue_num} not found: {e}")
                 consecutive_not_found += 1
 
             next_issue_num += 1
@@ -201,13 +213,18 @@ class GithubProject:
         IssueDataPoint.save_to_csv(intermediate_data.to_csv_models(), csv_file)
         emit.progress(f"Wrote to {csv_file}", permanent=True)
 
-    def generate_snapshot(self, projects: list[str]) -> None:
+    def generate_snapshot(
+        self,
+        projects: list[str],
+        launchpad_data: LaunchpadProjects | None = None,
+    ) -> None:
         """Generate a point-in-time snapshot JSON for the comparison charts.
 
         For each project, computes open issues, open PRs, median age of open issues,
         median age of open PRs, and issues/PRs closed in the last year.
 
         :param projects: Ordered list of project names to include.
+        :param launchpad_data: Optional Launchpad bug data to include as extra entries.
         """
         now = datetime.now(tz=UTC)
         one_year_ago = now - timedelta(days=365)
@@ -243,6 +260,26 @@ class GithubProject:
                     and i.date_closed >= one_year_ago
                 ),
             }
+
+        if launchpad_data:
+            for lp_project, lp_bugs in launchpad_data.projects.items():
+                display_name = f"{lp_project} (launchpad)"
+                bugs = list(lp_bugs.bugs.values())
+                open_bugs = [b for b in bugs if b.is_open(now)]
+                snapshot[display_name] = {
+                    "open_issues": len(open_bugs),
+                    "open_prs": 0,
+                    "median_issue_age": get_median_age(
+                        [b.date_opened for b in open_bugs], now
+                    ),
+                    "median_pr_age": None,
+                    "closed_issues_year": sum(
+                        1
+                        for b in bugs
+                        if b.date_closed is not None and b.date_closed >= one_year_ago
+                    ),
+                    "closed_prs_year": 0,
+                }
 
         snapshot_file = pathlib.Path("html/data/snapshot.json")
         snapshot_file.write_text(json.dumps(snapshot, indent=2) + "\n")
@@ -305,20 +342,76 @@ class GetIssuesCommand(BaseCommand):
             github_project.save_data_to_file()
             github_project.generate_csv(project)
 
-        # generate csv and save data for all projects
-        github_project.generate_csv("all")
+        # generate csv for all projects combined (Launchpad data loaded separately)
+        launchpad_data = (
+            LaunchpadProjects.from_yaml_file(
+                pathlib.Path("html/data/issues-launchpad.yaml")
+            )
+            if pathlib.Path("html/data/issues-launchpad.yaml").exists()
+            else LaunchpadProjects()
+        )
+        generate_all_projects_csv(github_project, launchpad_data)
 
         # write the project list for the frontend
         projects_file = pathlib.Path("html/data/projects.json")
         projects_data = {
             "applications": sorted(config.craft_applications),
             "libraries": sorted(config.craft_libraries),
+            "launchpad": sorted(config.launchpad_projects),
         }
         projects_file.write_text(json.dumps(projects_data, indent=2) + "\n")
         emit.progress(f"Wrote projects list to {projects_file}", permanent=True)
 
         # write the snapshot for the comparison charts
-        github_project.generate_snapshot(config.craft_projects)
+        github_project.generate_snapshot(config.craft_projects, launchpad_data)
+
+
+def generate_all_projects_csv(
+    github_project: "GithubProject",
+    launchpad_data: LaunchpadProjects,
+) -> None:
+    """Generate the all-projects combined open-issues CSV.
+
+    Counts GitHub open issues and Launchpad open bugs per day.
+    Both share the is_open(date) interface so no special-casing is needed.
+    """
+    start_date = datetime(year=2021, month=1, day=1, tzinfo=UTC)
+    end_date = datetime.now(tz=UTC)
+
+    all_issues = [
+        issue
+        for proj in github_project.data.projects.values()
+        for issue in proj.issues.values()
+    ] + [bug for proj in launchpad_data.projects.values() for bug in proj.bugs.values()]
+
+    intermediate_data = IntermediateData()
+    emit.progress("Counting open issues and age for all projects")
+
+    for date in [
+        start_date + timedelta(days=i) for i in range((end_date - start_date).days)
+    ]:
+        open_issues = [issue for issue in all_issues if issue.is_open(date)]
+        closed_today = sum(
+            1
+            for issue in all_issues
+            if issue.date_closed is not None and issue.date_closed.date() == date.date()
+        )
+        intermediate_data.data.append(
+            IntermediateDataPoint(
+                date=date.strftime("%Y-%b-%d"),
+                open_issues=len(open_issues),
+                closed_issues=closed_today,
+                mean_age=get_median_age(
+                    [issue.date_opened for issue in open_issues],
+                    date,
+                ),
+            ),
+        )
+
+    csv_file = GithubProject.csv_file("all")
+    emit.debug(f"Writing data to {csv_file}")
+    IssueDataPoint.save_to_csv(intermediate_data.to_csv_models(), csv_file)
+    emit.progress(f"Wrote to {csv_file}", permanent=True)
 
 
 def get_median_age(dates: list[datetime] | None, date: datetime) -> int | None:

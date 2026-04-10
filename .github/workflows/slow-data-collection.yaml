@@ -1,8 +1,8 @@
 name: slow data collection
 on:
   schedule:
-    # run every 12 hours
-    - cron: "0 */12 * * *"
+    # run every 12 hours at 6am and 6pm
+    - cron: "0 6,18 * * *"
   workflow_dispatch:
     inputs:
       enable_ssh_access:
@@ -42,6 +42,9 @@ jobs:
           STARCRAFT_GITHUB_TOKEN: ${{ secrets.STARCRAFT_GITHUB_TOKEN }}
         run: |
           starcraft-stats get-issues --verbosity=trace
+      - name: collect launchpad data
+        run: |
+          starcraft-stats get-launchpad-data --verbosity=trace
       - name: commit
         uses: stefanzweifel/git-auto-commit-action@v5
         if: github.event_name != 'pull_request'

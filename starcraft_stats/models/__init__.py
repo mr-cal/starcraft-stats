@@ -9,7 +9,7 @@ from .github import (
     Projects,
 )
 from .issues import IssueDataPoint
-from .launchpad import LaunchpadDataPoint
+from .launchpad import LaunchpadBug, LaunchpadBugs, LaunchpadProjects
 from .releases import ReleaseBranchInfo
 
 __all__ = [
@@ -19,7 +19,9 @@ __all__ = [
     "IntermediateData",
     "IntermediateDataPoint",
     "IssueDataPoint",
-    "LaunchpadDataPoint",
+    "LaunchpadBug",
+    "LaunchpadBugs",
+    "LaunchpadProjects",
     "Projects",
     "ReleaseBranchInfo",
 ]

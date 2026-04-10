@@ -9,12 +9,18 @@ from unittest.mock import patch
 import pytest
 from starcraft_stats.issues import (
     GithubProject,
+    generate_all_projects_csv,
     get_mean_date,
     get_median_age,
     get_median_date,
     load_github_token,
 )
 from starcraft_stats.models.github import GithubIssue, GithubIssues, Projects
+from starcraft_stats.models.launchpad import (
+    LaunchpadBug,
+    LaunchpadBugs,
+    LaunchpadProjects,
+)
 
 REAL_DATETIME = datetime
 
@@ -403,3 +409,92 @@ class TestGithubProjectGenerateSnapshot:
             "closed_issues_year",
             "closed_prs_year",
         }
+
+
+class TestGenerateAllProjectsCsv:
+    """Tests for generate_all_projects_csv() combining GitHub and Launchpad data."""
+
+    @pytest.fixture
+    def github_project(self, tmp_path, monkeypatch):
+        (tmp_path / "html" / "data").mkdir(parents=True)
+        monkeypatch.chdir(tmp_path)
+        gp = GithubProject.__new__(GithubProject)
+        gp.owner = "canonical"
+        gp.data_file = tmp_path / "issues.yaml"
+        gp._data = Projects(projects={})
+        return gp
+
+    def _make_gh_issue(self, opened, closed=None):
+        return GithubIssue(
+            type="issue",
+            date_opened=opened,
+            date_closed=closed,
+            refresh_date=REAL_DATETIME(2026, 1, 1, tzinfo=UTC),
+        )
+
+    def _make_lp_bug(self, opened, closed=None):
+        return LaunchpadBug(
+            date_opened=opened,
+            date_closed=closed,
+            refresh_date=REAL_DATETIME(2026, 1, 1, tzinfo=UTC),
+        )
+
+    def _generate(self, gp, lp_data, end_date):
+        with (
+            patch("starcraft_stats.issues.datetime") as mock_dt,
+            patch("starcraft_stats.issues.emit"),
+        ):
+            mock_dt.now.return_value = end_date
+            mock_dt.side_effect = REAL_DATETIME
+            generate_all_projects_csv(gp, lp_data)
+
+    def test_github_and_launchpad_issues_summed(self, github_project, tmp_path):
+        gh_issue = self._make_gh_issue(REAL_DATETIME(2021, 1, 1, tzinfo=UTC))
+        github_project._data = Projects(
+            projects={"snapcraft": GithubIssues(issues={1: gh_issue})}
+        )
+        lp_bug = self._make_lp_bug(REAL_DATETIME(2021, 1, 1, tzinfo=UTC))
+        lp_data = LaunchpadProjects(
+            projects={"snapcraft": LaunchpadBugs(bugs={101: lp_bug})}
+        )
+        self._generate(github_project, lp_data, REAL_DATETIME(2021, 1, 4, tzinfo=UTC))
+
+        rows = _read_csv(tmp_path / "html/data/all-projects-github.csv")
+        # Both opened on Jan 1, open from Jan 2 onwards
+        assert rows[1]["issues"] == "2"
+
+    def test_empty_launchpad_data_contributes_zero(self, github_project, tmp_path):
+        gh_issue = self._make_gh_issue(REAL_DATETIME(2021, 1, 1, tzinfo=UTC))
+        github_project._data = Projects(
+            projects={"snapcraft": GithubIssues(issues={1: gh_issue})}
+        )
+        lp_data = LaunchpadProjects()
+
+        self._generate(github_project, lp_data, REAL_DATETIME(2021, 1, 4, tzinfo=UTC))
+
+        rows = _read_csv(tmp_path / "html/data/all-projects-github.csv")
+        assert rows[1]["issues"] == "1"
+
+    def test_closed_issues_from_both_sources_counted(self, github_project, tmp_path):
+        close_date = REAL_DATETIME(2021, 1, 3, tzinfo=UTC)
+        gh_issue = self._make_gh_issue(
+            REAL_DATETIME(2021, 1, 1, tzinfo=UTC), closed=close_date
+        )
+        github_project._data = Projects(
+            projects={"gh": GithubIssues(issues={1: gh_issue})}
+        )
+        lp_bug = self._make_lp_bug(
+            REAL_DATETIME(2021, 1, 1, tzinfo=UTC), closed=close_date
+        )
+        lp_data = LaunchpadProjects(projects={"lp": LaunchpadBugs(bugs={101: lp_bug})})
+        self._generate(github_project, lp_data, REAL_DATETIME(2021, 1, 5, tzinfo=UTC))
+
+        rows = _read_csv(tmp_path / "html/data/all-projects-github.csv")
+        assert rows[2]["closed"] == "2"
+
+    def test_csv_headers_correct(self, github_project, tmp_path):
+        self._generate(
+            github_project, LaunchpadProjects(), REAL_DATETIME(2021, 1, 3, tzinfo=UTC)
+        )
+        content = (tmp_path / "html/data/all-projects-github.csv").read_text()
+        assert content.startswith("date,issues,closed,age")

@@ -25,3 +25,6 @@ class Config(CraftBaseModel):
 
     hotfix_min_versions: dict[str, str] = {}
     """Oldest hotfix branch to include per application, as 'major.minor'."""
+
+    launchpad_projects: list[str] = []
+    """A list of projects whose issues are tracked on Launchpad."""
