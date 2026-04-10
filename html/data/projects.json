@@ -14,5 +14,8 @@
     "craft-platforms",
     "craft-providers",
     "craft-store"
+  ],
+  "launchpad": [
+    "snapcraft"
   ]
 }
