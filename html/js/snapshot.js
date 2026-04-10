@@ -3,8 +3,9 @@ const ISSUE_COLOR = "#0066CC";
 const PR_COLOR = "#E95420";
 
 const response = await fetch("data/projects.json");
-const { applications, libraries } = await response.json();
-const projects = [...applications, ...libraries];
+const { applications, libraries, launchpad } = await response.json();
+const launchpadProjects = (launchpad ?? []).map((p) => `${p} (launchpad)`);
+const projects = [...applications, ...libraries, ...launchpadProjects];
 
 const snapshotResponse = await fetch("data/snapshot.json");
 const snapshot = await snapshotResponse.json();

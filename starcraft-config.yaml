@@ -41,3 +41,6 @@ hotfix-min-versions:
   charmcraft: "3.0"
   snapcraft: "8.0"
   rockcraft: "1.15"
+
+launchpad-projects:
+  - snapcraft

@@ -57,10 +57,21 @@ function getProjectColor(index) {
 }
 
 /**
+ * Resolve the CSV file path for a project key.
+ * Launchpad projects use the "(launchpad)" suffix convention.
+ */
+function csvPath(project) {
+  if (project.endsWith(" (launchpad)")) {
+    return `data/${project.replace(" (launchpad)", "")}-launchpad.csv`;
+  }
+  return `data/${project}-github.csv`;
+}
+
+/**
  * Load CSV data for a project
  */
 function loadProjectData(project, index) {
-  Papa.parse(`data/${project}-github.csv`, {
+  Papa.parse(csvPath(project), {
     download: true,
     dynamicTyping: true,
     header: true,
@@ -89,6 +100,11 @@ function loadProjectData(project, index) {
     },
     error: (error) => {
       console.error(`Error loading ${project}:`, error);
+      // Still mark as attempted so other projects aren't blocked
+      projectData[project] = null;
+      if (Object.keys(projectData).length === projects.length) {
+        initializeUI();
+      }
     },
   });
 }
@@ -100,6 +116,8 @@ function createProjectCheckboxes(containerId, checkboxPrefix, onChange) {
   const container = document.getElementById(containerId);
 
   for (const project of projects) {
+    if (!projectData[project]) continue;
+
     const wrapper = document.createElement("div");
     wrapper.className = "p-checkbox";
 
@@ -430,10 +448,17 @@ function updateClosedChart() {
 
 // Load projects from the generated config and initialize the page
 const response = await fetch("data/projects.json");
-const { applications, libraries } = await response.json();
+const { applications, libraries, launchpad } = await response.json();
 
-// Order: all-projects first, then applications (alpha), then libraries (alpha)
-const projects = ["all-projects", ...applications, ...libraries];
+// Order: all-projects first, then applications (alpha), then libraries (alpha),
+// then launchpad projects displayed as "{name} (launchpad)"
+const launchpadProjects = (launchpad ?? []).map((p) => `${p} (launchpad)`);
+const projects = [
+  "all-projects",
+  ...applications,
+  ...libraries,
+  ...launchpadProjects,
+];
 
 // Load all project data
 projects.forEach((project, index) => {

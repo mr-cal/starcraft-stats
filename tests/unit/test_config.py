@@ -26,6 +26,7 @@ class TestConfig:
             "craft-libraries:\n  - craft-cli\n  - craft-parts\n"
             "craft-projects:\n  - snapcraft\ncraft-applications:\n  - snapcraft\n"
             "refresh-interval-days: 14\n"
+            "launchpad-projects:\n  - snapcraft\n"
         )
         config = Config.from_yaml_file(config_file)
 
@@ -33,6 +34,16 @@ class TestConfig:
         assert config.craft_projects == ["snapcraft"]
         assert config.craft_applications == ["snapcraft"]
         assert config.refresh_interval_days == 14
+        assert config.launchpad_projects == ["snapcraft"]
+
+    def test_launchpad_projects_defaults_to_empty(self, tmp_path):
+        config_file = tmp_path / "config.yaml"
+        config_file.write_text(
+            "craft-libraries: []\ncraft-projects: []\ncraft-applications: []\n"
+        )
+        config = Config.from_yaml_file(config_file)
+
+        assert config.launchpad_projects == []
 
     def test_refresh_interval_defaults_to_7(self, tmp_path):
         config_file = tmp_path / "config.yaml"

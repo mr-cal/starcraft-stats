@@ -4,7 +4,7 @@ import argparse
 import json
 import pathlib
 import subprocess
-from dataclasses import dataclass
+from dataclasses import asdict, dataclass
 from typing import cast
 
 from craft_cli import BaseCommand, emit
@@ -98,7 +98,7 @@ class GetDependenciesCommand(BaseCommand):
 
         # write dependency data to a json file
         emit.debug(f"Writing data to {DATA_FILE}")
-        DATA_FILE.write_text(json.dumps(table.to_dict(), indent=4))  # type: ignore[attr-defined]
+        DATA_FILE.write_text(json.dumps(asdict(table), indent=4))
         emit.message(f"Wrote to {DATA_FILE}")
 
 
