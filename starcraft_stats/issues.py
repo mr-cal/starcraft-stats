@@ -11,6 +11,7 @@ from github import Github, GithubException
 from github.Issue import Issue as GithubApiIssue
 
 from .config import CONFIG_FILE, Config
+from .const import CSV_START_DATE
 from .models import (
     GithubIssue,
     GithubIssues,
@@ -170,7 +171,7 @@ class GithubProject:
         | 2021-01-01 | 10          | 2      | 20  |
         | ...        | ...         | ...    | ... |
         """
-        start_date = datetime(year=2021, month=1, day=1, tzinfo=UTC)
+        start_date = CSV_START_DATE
         end_date = datetime.now(tz=UTC)
 
         # Collect the flat list of issues to count once, before the per-day loop
@@ -375,7 +376,7 @@ def generate_all_projects_csv(
     Counts GitHub open issues and Launchpad open bugs per day.
     Both share the is_open(date) interface so no special-casing is needed.
     """
-    start_date = datetime(year=2021, month=1, day=1, tzinfo=UTC)
+    start_date = CSV_START_DATE
     end_date = datetime.now(tz=UTC)
 
     all_issues = [

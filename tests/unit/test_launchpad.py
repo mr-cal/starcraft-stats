@@ -213,24 +213,24 @@ class TestLaunchpadProjectGenerateCsv:
     def test_csv_headers_match_issue_data_point_format(
         self, launchpad_project_obj, tmp_path
     ):
-        bug = self._make_bug(REAL_DATETIME(2015, 1, 2, tzinfo=UTC))
+        bug = self._make_bug(REAL_DATETIME(2021, 1, 2, tzinfo=UTC))
         launchpad_project_obj._data = LaunchpadProjects(
             projects={"snapcraft": LaunchpadBugs(bugs={1: bug})}
         )
         self._generate(
-            launchpad_project_obj, "snapcraft", REAL_DATETIME(2015, 1, 4, tzinfo=UTC)
+            launchpad_project_obj, "snapcraft", REAL_DATETIME(2021, 1, 4, tzinfo=UTC)
         )
 
         content = (tmp_path / "html/data/snapcraft-launchpad.csv").read_text()
         assert content.startswith("date,issues,closed,age")
 
     def test_open_bug_counted_correctly(self, launchpad_project_obj, tmp_path):
-        bug = self._make_bug(REAL_DATETIME(2015, 1, 2, tzinfo=UTC))
+        bug = self._make_bug(REAL_DATETIME(2021, 1, 2, tzinfo=UTC))
         launchpad_project_obj._data = LaunchpadProjects(
             projects={"snapcraft": LaunchpadBugs(bugs={1: bug})}
         )
         self._generate(
-            launchpad_project_obj, "snapcraft", REAL_DATETIME(2015, 1, 5, tzinfo=UTC)
+            launchpad_project_obj, "snapcraft", REAL_DATETIME(2021, 1, 5, tzinfo=UTC)
         )
 
         rows = _read_csv(tmp_path / "html/data/snapcraft-launchpad.csv")
@@ -241,14 +241,14 @@ class TestLaunchpadProjectGenerateCsv:
 
     def test_closed_bug_counted_on_close_date(self, launchpad_project_obj, tmp_path):
         bug = self._make_bug(
-            REAL_DATETIME(2015, 1, 1, tzinfo=UTC),
-            closed=REAL_DATETIME(2015, 1, 3, tzinfo=UTC),
+            REAL_DATETIME(2021, 1, 1, tzinfo=UTC),
+            closed=REAL_DATETIME(2021, 1, 3, tzinfo=UTC),
         )
         launchpad_project_obj._data = LaunchpadProjects(
             projects={"snapcraft": LaunchpadBugs(bugs={1: bug})}
         )
         self._generate(
-            launchpad_project_obj, "snapcraft", REAL_DATETIME(2015, 1, 5, tzinfo=UTC)
+            launchpad_project_obj, "snapcraft", REAL_DATETIME(2021, 1, 5, tzinfo=UTC)
         )
 
         rows = _read_csv(tmp_path / "html/data/snapcraft-launchpad.csv")

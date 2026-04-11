@@ -8,6 +8,7 @@ from craft_cli import BaseCommand, emit
 from launchpadlib.launchpad import Launchpad
 
 from .config import CONFIG_FILE, Config
+from .const import CSV_START_DATE
 from .issues import GithubProject, generate_all_projects_csv, get_median_age
 from .models import IntermediateData, IntermediateDataPoint, IssueDataPoint
 from .models.launchpad import LaunchpadBug, LaunchpadBugs, LaunchpadProjects
@@ -255,7 +256,7 @@ class LaunchpadProject:
             emit.message(f"No data for {project}, skipping CSV generation")
             return
 
-        start_date = datetime(year=2015, month=1, day=1, tzinfo=UTC)
+        start_date = CSV_START_DATE
         end_date = datetime.now(tz=UTC)
 
         bugs = list(self.data.projects[project].bugs.values())
