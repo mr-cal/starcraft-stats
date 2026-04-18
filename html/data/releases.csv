@@ -1,9 +1,9 @@
 app,branch,latest tag,commits since tag
-charmcraft,main,4.2.1,19
+charmcraft,main,4.2.1,20
 charmcraft,hotfix/3.5,3.5.3,2
 charmcraft,hotfix/4.2,4.2.1,1
 imagecraft,main,0.1.0,33
-rockcraft,main,1.18.0,5
+rockcraft,main,1.18.0,6
 rockcraft,hotfix/1.17,1.17.2,0
-snapcraft,main,8.14.5,109
+snapcraft,main,8.14.5,111
 snapcraft,hotfix/8.15,8.14.4,2
