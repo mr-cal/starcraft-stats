@@ -2,15 +2,15 @@
   "charmcraft": {
     "open_issues": 204,
     "open_prs": 30,
-    "median_issue_age": 563,
+    "median_issue_age": 564,
     "median_pr_age": 72,
     "closed_issues_year": 64,
-    "closed_prs_year": 302
+    "closed_prs_year": 300
   },
   "craft-application": {
     "open_issues": 114,
     "open_prs": 30,
-    "median_issue_age": 434,
+    "median_issue_age": 435,
     "median_pr_age": 195,
     "closed_issues_year": 27,
     "closed_prs_year": 240
@@ -19,7 +19,7 @@
     "open_issues": 10,
     "open_prs": 2,
     "median_issue_age": 472,
-    "median_pr_age": 24,
+    "median_pr_age": 25,
     "closed_issues_year": 3,
     "closed_prs_year": 65
   },
@@ -27,14 +27,14 @@
     "open_issues": 1,
     "open_prs": 3,
     "median_issue_age": 505,
-    "median_pr_age": 17,
+    "median_pr_age": 18,
     "closed_issues_year": 0,
     "closed_prs_year": 59
   },
   "craft-cli": {
     "open_issues": 51,
     "open_prs": 8,
-    "median_issue_age": 804,
+    "median_issue_age": 805,
     "median_pr_age": 253,
     "closed_issues_year": 11,
     "closed_prs_year": 83
@@ -50,15 +50,15 @@
   "craft-parts": {
     "open_issues": 183,
     "open_prs": 39,
-    "median_issue_age": 435,
-    "median_pr_age": 166,
+    "median_issue_age": 436,
+    "median_pr_age": 167,
     "closed_issues_year": 54,
     "closed_prs_year": 326
   },
   "craft-platforms": {
     "open_issues": 9,
     "open_prs": 6,
-    "median_issue_age": 488,
+    "median_issue_age": 489,
     "median_pr_age": 262,
     "closed_issues_year": 5,
     "closed_prs_year": 82
@@ -67,14 +67,14 @@
     "open_issues": 81,
     "open_prs": 17,
     "median_issue_age": 671,
-    "median_pr_age": 137,
+    "median_pr_age": 138,
     "closed_issues_year": 18,
     "closed_prs_year": 156
   },
   "craft-store": {
     "open_issues": 16,
     "open_prs": 4,
-    "median_issue_age": 496,
+    "median_issue_age": 497,
     "median_pr_age": 304,
     "closed_issues_year": 1,
     "closed_prs_year": 68
@@ -82,31 +82,31 @@
   "imagecraft": {
     "open_issues": 22,
     "open_prs": 5,
-    "median_issue_age": 49,
-    "median_pr_age": 32,
+    "median_issue_age": 50,
+    "median_pr_age": 33,
     "closed_issues_year": 9,
     "closed_prs_year": 151
   },
   "rockcraft": {
     "open_issues": 142,
     "open_prs": 71,
-    "median_issue_age": 665,
-    "median_pr_age": 216,
+    "median_issue_age": 666,
+    "median_pr_age": 217,
     "closed_issues_year": 32,
-    "closed_prs_year": 224
+    "closed_prs_year": 222
   },
   "snapcraft": {
     "open_issues": 212,
     "open_prs": 24,
-    "median_issue_age": 372,
-    "median_pr_age": 73,
+    "median_issue_age": 373,
+    "median_pr_age": 74,
     "closed_issues_year": 240,
     "closed_prs_year": 464
   },
   "starbase": {
     "open_issues": 23,
     "open_prs": 3,
-    "median_issue_age": 487,
+    "median_issue_age": 488,
     "median_pr_age": 33,
     "closed_issues_year": 9,
     "closed_prs_year": 133
@@ -114,7 +114,7 @@
   "snapcraft (launchpad)": {
     "open_issues": 879,
     "open_prs": 0,
-    "median_issue_age": 2688,
+    "median_issue_age": 2689,
     "median_pr_age": null,
     "closed_issues_year": 7,
     "closed_prs_year": 0
