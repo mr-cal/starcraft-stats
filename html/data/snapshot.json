@@ -3,7 +3,7 @@
     "open_issues": 204,
     "open_prs": 30,
     "median_issue_age": 575,
-    "median_pr_age": 83,
+    "median_pr_age": 84,
     "closed_issues_year": 64,
     "closed_prs_year": 285
   },
@@ -11,14 +11,14 @@
     "open_issues": 114,
     "open_prs": 30,
     "median_issue_age": 446,
-    "median_pr_age": 206,
+    "median_pr_age": 207,
     "closed_issues_year": 27,
     "closed_prs_year": 225
   },
   "craft-archives": {
     "open_issues": 10,
     "open_prs": 2,
-    "median_issue_age": 483,
+    "median_issue_age": 484,
     "median_pr_age": 36,
     "closed_issues_year": 3,
     "closed_prs_year": 59
@@ -26,7 +26,7 @@
   "craft-artifacts": {
     "open_issues": 1,
     "open_prs": 3,
-    "median_issue_age": 516,
+    "median_issue_age": 517,
     "median_pr_age": 29,
     "closed_issues_year": 0,
     "closed_prs_year": 59
@@ -35,14 +35,14 @@
     "open_issues": 51,
     "open_prs": 8,
     "median_issue_age": 816,
-    "median_pr_age": 264,
+    "median_pr_age": 265,
     "closed_issues_year": 10,
     "closed_prs_year": 81
   },
   "craft-grammar": {
     "open_issues": 4,
     "open_prs": 5,
-    "median_issue_age": 526,
+    "median_issue_age": 527,
     "median_pr_age": 30,
     "closed_issues_year": 6,
     "closed_prs_year": 76
@@ -59,14 +59,14 @@
     "open_issues": 9,
     "open_prs": 6,
     "median_issue_age": 500,
-    "median_pr_age": 273,
+    "median_pr_age": 274,
     "closed_issues_year": 5,
     "closed_prs_year": 81
   },
   "craft-providers": {
     "open_issues": 81,
     "open_prs": 17,
-    "median_issue_age": 682,
+    "median_issue_age": 683,
     "median_pr_age": 149,
     "closed_issues_year": 18,
     "closed_prs_year": 154
@@ -75,7 +75,7 @@
     "open_issues": 16,
     "open_prs": 4,
     "median_issue_age": 508,
-    "median_pr_age": 315,
+    "median_pr_age": 316,
     "closed_issues_year": 1,
     "closed_prs_year": 64
   },
@@ -107,7 +107,7 @@
     "open_issues": 23,
     "open_prs": 3,
     "median_issue_age": 499,
-    "median_pr_age": 44,
+    "median_pr_age": 45,
     "closed_issues_year": 9,
     "closed_prs_year": 129
   },
