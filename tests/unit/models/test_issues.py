@@ -30,7 +30,15 @@ class TestIssueDataPoint:
 
     def test_csv_headers(self):
         """Test CSV headers are defined correctly."""
-        assert IssueDataPoint.CSV_HEADERS == ["date", "issues", "closed", "age"]
+        assert IssueDataPoint.CSV_HEADERS == [
+            "date",
+            "issues",
+            "closed",
+            "age",
+            "nm_issues",
+            "nm_closed",
+            "nm_age",
+        ]
 
     def test_to_csv_row_all_values(self):
         """Test converting to CSV row with all values."""
@@ -39,11 +47,14 @@ class TestIssueDataPoint:
             issues=10,
             closed=3,
             age=30,
+            nm_issues=7,
+            nm_closed=2,
+            nm_age=25,
         )
 
         row = point.to_csv_row()
 
-        assert row == ["2024-Jan-01", "10", "3", "30"]
+        assert row == ["2024-Jan-01", "10", "3", "30", "7", "2", "25"]
 
     def test_to_csv_row_with_none(self):
         """Test converting to CSV row with None values."""
@@ -55,14 +66,24 @@ class TestIssueDataPoint:
 
         row = point.to_csv_row()
 
-        assert row == ["2024-Jan-01", "10", "0", ""]
+        assert row == ["2024-Jan-01", "10", "0", "", "0", "0", ""]
 
     def test_save_and_load_roundtrip(self, tmp_path):
         """Test saving and loading data maintains integrity."""
         csv_file = tmp_path / "issues.csv"
         data = [
-            IssueDataPoint(date="2024-Jan-01", issues=10, closed=2, age=30),
-            IssueDataPoint(date="2024-Jan-02", issues=15, closed=1, age=32),
+            IssueDataPoint(
+                date="2024-Jan-01",
+                issues=10,
+                closed=2,
+                age=30,
+                nm_issues=8,
+                nm_closed=1,
+                nm_age=28,
+            ),
+            IssueDataPoint(
+                date="2024-Jan-02", issues=15, closed=1, age=32, nm_issues=12
+            ),
         ]
 
         IssueDataPoint.save_to_csv(data, csv_file)
@@ -72,18 +93,29 @@ class TestIssueDataPoint:
         assert loaded[0].date == "2024-Jan-01"
         assert loaded[0].issues == 10
         assert loaded[0].closed == 2
+        assert loaded[0].nm_issues == 8
+        assert loaded[0].nm_closed == 1
         assert loaded[1].issues == 15
+        assert loaded[1].nm_issues == 12
 
     def test_save_csv_format(self, tmp_path):
         """Test CSV file format is correct."""
         csv_file = tmp_path / "issues.csv"
         data = [
-            IssueDataPoint(date="2024-Jan-01", issues=10, closed=3, age=30),
+            IssueDataPoint(
+                date="2024-Jan-01",
+                issues=10,
+                closed=3,
+                age=30,
+                nm_issues=7,
+                nm_closed=2,
+                nm_age=25,
+            ),
         ]
 
         IssueDataPoint.save_to_csv(data, csv_file)
         content = csv_file.read_text()
 
         lines = content.strip().split("\n")
-        assert lines[0] == "date,issues,closed,age"
-        assert lines[1] == "2024-Jan-01,10,3,30"
+        assert lines[0] == "date,issues,closed,age,nm_issues,nm_closed,nm_age"
+        assert lines[1] == "2024-Jan-01,10,3,30,7,2,25"

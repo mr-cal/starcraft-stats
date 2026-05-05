@@ -22,6 +22,9 @@ class GithubIssue(CraftBaseModel):
     refresh_date: datetime
     """The date this issue was last fetched from GitHub."""
 
+    opened_by: str | None = None
+    """The GitHub username of the user who opened the issue or PR."""
+
     def __str__(self) -> str:
         """Return the issue as a string."""
         date_closed = f" closed: {self.date_closed}" if self.date_closed else ""
@@ -55,6 +58,9 @@ class IntermediateDataPoint(CraftBaseModel):
     open_issues: int
     closed_issues: int = 0
     mean_age: int | None
+    nm_open_issues: int = 0
+    nm_closed_issues: int = 0
+    nm_mean_age: int | None = None
 
 
 class IntermediateData(CraftBaseModel):
@@ -70,6 +76,9 @@ class IntermediateData(CraftBaseModel):
                 issues=point.open_issues,
                 closed=point.closed_issues,
                 age=point.mean_age,
+                nm_issues=point.nm_open_issues,
+                nm_closed=point.nm_closed_issues,
+                nm_age=point.nm_mean_age,
             )
             for point in self.data
         ]

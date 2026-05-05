@@ -44,3 +44,24 @@ hotfix-min-versions:
 
 launchpad-projects:
   - snapcraft
+
+# GitHub usernames of project maintainers
+maintainers:
+  - cmatsuoka
+  - steinbro
+  - tigarmo
+  - lengau
+  - dariuszd21
+  - bepri
+  - medubelko
+  - mr-cal
+  - smethnani
+  - jahn-junior
+  - juju-charm-bot
+  - alderic-coroir
+  - sergiusens
+  - mattculler
+  - syu-w
+  - facundobatista
+  - dependabot
+  - copilot

@@ -151,15 +151,16 @@ class TestGithubProjectGenerateCsv:
         gp._data = Projects(projects={})
         return gp
 
-    def _make_issue(self, opened, closed=None):
+    def _make_issue(self, opened, closed=None, opened_by=None):
         return GithubIssue(
             type="issue",
             date_opened=opened,
             date_closed=closed,
             refresh_date=datetime(2026, 1, 1, tzinfo=UTC),
+            opened_by=opened_by,
         )
 
-    def _generate(self, gp, project, end_date):
+    def _generate(self, gp, project, end_date, maintainers=None):
         """Run generate_csv with a fixed end date."""
         with (
             patch("starcraft_stats.issues.datetime") as mock_dt,
@@ -167,7 +168,7 @@ class TestGithubProjectGenerateCsv:
         ):
             mock_dt.now.return_value = end_date
             mock_dt.side_effect = REAL_DATETIME
-            gp.generate_csv(project)
+            gp.generate_csv(project, maintainers or set())
 
     def test_empty_project_produces_all_zero_rows(self, github_project, tmp_path):
         github_project._data = Projects(projects={"proj": GithubIssues(issues={})})
@@ -261,7 +262,80 @@ class TestGithubProjectGenerateCsv:
         self._generate(github_project, "proj", REAL_DATETIME(2021, 1, 3, tzinfo=UTC))
 
         content = (tmp_path / "html/data/proj-github.csv").read_text()
-        assert content.startswith("date,issues,closed,age")
+        assert content.startswith("date,issues,closed,age,nm_issues,nm_closed,nm_age")
+
+    def test_nm_issues_excludes_maintainer_issues(self, github_project, tmp_path):
+        maintainer_issue = self._make_issue(
+            opened=REAL_DATETIME(2021, 1, 1, tzinfo=UTC), opened_by="maintainer-a"
+        )
+        community_issue = self._make_issue(
+            opened=REAL_DATETIME(2021, 1, 1, tzinfo=UTC), opened_by="community-user"
+        )
+        github_project._data = Projects(
+            projects={
+                "proj": GithubIssues(issues={1: maintainer_issue, 2: community_issue})
+            }
+        )
+        self._generate(
+            github_project,
+            "proj",
+            REAL_DATETIME(2021, 1, 4, tzinfo=UTC),
+            maintainers={"maintainer-a"},
+        )
+
+        rows = _read_csv(tmp_path / "html/data/proj-github.csv")
+        # Jan 2: both open, but only community issue is non-maintainer
+        assert rows[1]["issues"] == "2"
+        assert rows[1]["nm_issues"] == "1"
+
+    def test_nm_issues_treats_none_opened_by_as_non_maintainer(
+        self, github_project, tmp_path
+    ):
+        legacy_issue = self._make_issue(
+            opened=REAL_DATETIME(2021, 1, 1, tzinfo=UTC), opened_by=None
+        )
+        github_project._data = Projects(
+            projects={"proj": GithubIssues(issues={1: legacy_issue})}
+        )
+        self._generate(
+            github_project,
+            "proj",
+            REAL_DATETIME(2021, 1, 4, tzinfo=UTC),
+            maintainers={"maintainer-a"},
+        )
+
+        rows = _read_csv(tmp_path / "html/data/proj-github.csv")
+        # opened_by=None → treated as non-maintainer
+        assert rows[1]["issues"] == "1"
+        assert rows[1]["nm_issues"] == "1"
+
+    def test_nm_closed_excludes_maintainer_closes(self, github_project, tmp_path):
+        maintainer_issue = self._make_issue(
+            opened=REAL_DATETIME(2021, 1, 1, tzinfo=UTC),
+            closed=REAL_DATETIME(2021, 1, 3, tzinfo=UTC),
+            opened_by="maintainer-a",
+        )
+        community_issue = self._make_issue(
+            opened=REAL_DATETIME(2021, 1, 1, tzinfo=UTC),
+            closed=REAL_DATETIME(2021, 1, 3, tzinfo=UTC),
+            opened_by="community-user",
+        )
+        github_project._data = Projects(
+            projects={
+                "proj": GithubIssues(issues={1: maintainer_issue, 2: community_issue})
+            }
+        )
+        self._generate(
+            github_project,
+            "proj",
+            REAL_DATETIME(2021, 1, 5, tzinfo=UTC),
+            maintainers={"maintainer-a"},
+        )
+
+        rows = _read_csv(tmp_path / "html/data/proj-github.csv")
+        # Jan 3: both closed, but only community issue counts for nm
+        assert rows[2]["closed"] == "2"
+        assert rows[2]["nm_closed"] == "1"
 
 
 class TestGithubProjectGenerateSnapshot:
@@ -280,17 +354,18 @@ class TestGithubProjectGenerateSnapshot:
         gp._data = Projects(projects={})
         return gp
 
-    def _make_issue(self, itype, opened, closed=None):
+    def _make_issue(self, itype, opened, closed=None, opened_by=None):
         return GithubIssue(
             type=itype,
             date_opened=opened,
             date_closed=closed,
             refresh_date=REAL_DATETIME(2026, 1, 1, tzinfo=UTC),
+            opened_by=opened_by,
         )
 
-    def _run_snapshot(self, gp, projects):
+    def _run_snapshot(self, gp, projects, maintainers=None):
         with patch("starcraft_stats.issues.emit"):
-            gp.generate_snapshot(projects)
+            gp.generate_snapshot(projects, maintainers=maintainers or set())
 
     def _read_snapshot(self, tmp_path):
         return json.loads((tmp_path / "html/data/snapshot.json").read_text())
@@ -408,7 +483,51 @@ class TestGithubProjectGenerateSnapshot:
             "median_pr_age",
             "closed_issues_year",
             "closed_prs_year",
+            "nm_open_issues",
+            "nm_open_prs",
+            "nm_median_issue_age",
+            "nm_median_pr_age",
+            "nm_closed_issues_year",
+            "nm_closed_prs_year",
         }
+
+    def test_nm_snapshot_excludes_maintainer_issues(self, github_project, tmp_path):
+        github_project._data = Projects(
+            projects={
+                "proj": GithubIssues(
+                    issues={
+                        1: self._make_issue(
+                            "issue",
+                            REAL_DATETIME(2025, 6, 1, tzinfo=UTC),
+                            opened_by="maintainer-a",
+                        ),
+                        2: self._make_issue(
+                            "issue",
+                            REAL_DATETIME(2025, 6, 2, tzinfo=UTC),
+                            opened_by="community-user",
+                        ),
+                        3: self._make_issue(
+                            "pr",
+                            REAL_DATETIME(2025, 6, 3, tzinfo=UTC),
+                            opened_by="maintainer-a",
+                        ),
+                    }
+                )
+            }
+        )
+        with (
+            patch("starcraft_stats.issues.datetime") as mock_dt,
+            patch("starcraft_stats.issues.emit"),
+        ):
+            mock_dt.now.return_value = self._NOW
+            mock_dt.side_effect = REAL_DATETIME
+            github_project.generate_snapshot(["proj"], maintainers={"maintainer-a"})
+
+        snapshot = self._read_snapshot(tmp_path)
+        assert snapshot["proj"]["open_issues"] == 2
+        assert snapshot["proj"]["nm_open_issues"] == 1
+        assert snapshot["proj"]["open_prs"] == 1
+        assert snapshot["proj"]["nm_open_prs"] == 0
 
 
 class TestGenerateAllProjectsCsv:
@@ -424,12 +543,13 @@ class TestGenerateAllProjectsCsv:
         gp._data = Projects(projects={})
         return gp
 
-    def _make_gh_issue(self, opened, closed=None):
+    def _make_gh_issue(self, opened, closed=None, opened_by=None):
         return GithubIssue(
             type="issue",
             date_opened=opened,
             date_closed=closed,
             refresh_date=REAL_DATETIME(2026, 1, 1, tzinfo=UTC),
+            opened_by=opened_by,
         )
 
     def _make_lp_bug(self, opened, closed=None):
@@ -439,14 +559,14 @@ class TestGenerateAllProjectsCsv:
             refresh_date=REAL_DATETIME(2026, 1, 1, tzinfo=UTC),
         )
 
-    def _generate(self, gp, lp_data, end_date):
+    def _generate(self, gp, lp_data, end_date, maintainers=None):
         with (
             patch("starcraft_stats.issues.datetime") as mock_dt,
             patch("starcraft_stats.issues.emit"),
         ):
             mock_dt.now.return_value = end_date
             mock_dt.side_effect = REAL_DATETIME
-            generate_all_projects_csv(gp, lp_data)
+            generate_all_projects_csv(gp, lp_data, maintainers or set())
 
     def test_github_and_launchpad_issues_summed(self, github_project, tmp_path):
         gh_issue = self._make_gh_issue(REAL_DATETIME(2021, 1, 1, tzinfo=UTC))
@@ -497,4 +617,44 @@ class TestGenerateAllProjectsCsv:
             github_project, LaunchpadProjects(), REAL_DATETIME(2021, 1, 3, tzinfo=UTC)
         )
         content = (tmp_path / "html/data/all-projects-github.csv").read_text()
-        assert content.startswith("date,issues,closed,age")
+        assert content.startswith("date,issues,closed,age,nm_issues,nm_closed,nm_age")
+
+    def test_nm_excludes_maintainer_github_issues(self, github_project, tmp_path):
+        maintainer_issue = self._make_gh_issue(
+            REAL_DATETIME(2021, 1, 1, tzinfo=UTC), opened_by="maintainer-a"
+        )
+        community_issue = self._make_gh_issue(
+            REAL_DATETIME(2021, 1, 1, tzinfo=UTC), opened_by="community-user"
+        )
+        github_project._data = Projects(
+            projects={
+                "proj": GithubIssues(issues={1: maintainer_issue, 2: community_issue})
+            }
+        )
+        self._generate(
+            github_project,
+            LaunchpadProjects(),
+            REAL_DATETIME(2021, 1, 4, tzinfo=UTC),
+            maintainers={"maintainer-a"},
+        )
+
+        rows = _read_csv(tmp_path / "html/data/all-projects-github.csv")
+        assert rows[1]["issues"] == "2"
+        assert rows[1]["nm_issues"] == "1"
+
+    def test_nm_treats_launchpad_bugs_as_non_maintainer(self, github_project, tmp_path):
+        lp_bug = self._make_lp_bug(REAL_DATETIME(2021, 1, 1, tzinfo=UTC))
+        lp_data = LaunchpadProjects(
+            projects={"snapcraft": LaunchpadBugs(bugs={101: lp_bug})}
+        )
+        self._generate(
+            github_project,
+            lp_data,
+            REAL_DATETIME(2021, 1, 4, tzinfo=UTC),
+            maintainers={"maintainer-a"},
+        )
+
+        rows = _read_csv(tmp_path / "html/data/all-projects-github.csv")
+        # Launchpad bug is always non-maintainer
+        assert rows[1]["issues"] == "1"
+        assert rows[1]["nm_issues"] == "1"

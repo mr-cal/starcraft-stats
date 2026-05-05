@@ -18,6 +18,7 @@ from .models import (
     IntermediateData,
     IntermediateDataPoint,
     IssueDataPoint,
+    LaunchpadBug,
     LaunchpadProjects,
     Projects,
 )
@@ -71,6 +72,7 @@ class GithubProject:
             date_opened=api_issue.created_at,
             date_closed=api_issue.closed_at,
             refresh_date=now,
+            opened_by=api_issue.user.login if api_issue.user else None,
         )
 
     def update_data_from_github(
@@ -159,18 +161,23 @@ class GithubProject:
         self.data.to_yaml_file(self.data_file)
         emit.message(f"Wrote to {self.data_file}")
 
-    def generate_csv(self, project: str) -> None:
+    def generate_csv(self, project: str, maintainers: set[str] | None = None) -> None:
         """Generate a CSV file from issue data.
 
         Iterates through each day from the start date to today, counts open issues
         and computes median age, then writes the results to a CSV file.
 
         Data is organized as:
-        | date       | open issues | closed | age |
-        | ---------- | ----------- | ------ | --- |
-        | 2021-01-01 | 10          | 2      | 20  |
-        | ...        | ...         | ...    | ... |
+        | date       | open issues | closed | age | nm_issues | nm_closed | nm_age |
+        | ---------- | ----------- | ------ | --- | --------- | --------- | ------ |
+        | 2021-01-01 | 10          | 2      | 20  | 8         | 1         | 15     |
+        | ...        | ...         | ...    | ... | ...       | ...       | ...    |
+
+        :param project: The project name, or "all" for all projects combined.
+        :param maintainers: Set of maintainer GitHub usernames. Issues opened by these
+            users are excluded from the ``nm_*`` (non-maintainer) columns.
         """
+        maintainers = maintainers or set()
         start_date = CSV_START_DATE
         end_date = datetime.now(tz=UTC)
 
@@ -197,6 +204,14 @@ class GithubProject:
                 if issue.date_closed is not None
                 and issue.date_closed.date() == date.date()
             )
+            nm_open = [i for i in open_issues if not _is_maintainer(i, maintainers)]
+            nm_closed = sum(
+                1
+                for issue in issues
+                if issue.date_closed is not None
+                and issue.date_closed.date() == date.date()
+                and not _is_maintainer(issue, maintainers)
+            )
             intermediate_data.data.append(
                 IntermediateDataPoint(
                     date=date.strftime("%Y-%b-%d"),
@@ -204,6 +219,12 @@ class GithubProject:
                     closed_issues=closed_today,
                     mean_age=get_median_age(
                         [issue.date_opened for issue in open_issues],
+                        date,
+                    ),
+                    nm_open_issues=len(nm_open),
+                    nm_closed_issues=nm_closed,
+                    nm_mean_age=get_median_age(
+                        [issue.date_opened for issue in nm_open],
                         date,
                     ),
                 ),
@@ -218,15 +239,21 @@ class GithubProject:
         self,
         projects: list[str],
         launchpad_data: LaunchpadProjects | None = None,
+        maintainers: set[str] | None = None,
     ) -> None:
         """Generate a point-in-time snapshot JSON for the comparison charts.
 
         For each project, computes open issues, open PRs, median age of open issues,
-        median age of open PRs, and issues/PRs closed in the last year.
+        median age of open PRs, and issues/PRs closed in the last year. Non-maintainer
+        (``nm_*``) variants of each metric are also included.
 
         :param projects: Ordered list of project names to include.
         :param launchpad_data: Optional Launchpad bug data to include as extra entries.
+        :param maintainers: Set of maintainer GitHub usernames used to separate
+            maintainer activity from non-maintainer activity in the ``nm_*`` fields.
+            Launchpad bugs are always treated as non-maintainer.
         """
+        maintainers = maintainers or set()
         now = datetime.now(tz=UTC)
         one_year_ago = now - timedelta(days=365)
 
@@ -238,6 +265,10 @@ class GithubProject:
 
             open_issues = [i for i in issues if i.type == "issue" and i.is_open(now)]
             open_prs = [i for i in issues if i.type == "pr" and i.is_open(now)]
+            nm_open_issues = [
+                i for i in open_issues if not _is_maintainer(i, maintainers)
+            ]
+            nm_open_prs = [i for i in open_prs if not _is_maintainer(i, maintainers)]
 
             snapshot[project] = {
                 "open_issues": len(open_issues),
@@ -260,6 +291,30 @@ class GithubProject:
                     and i.date_closed is not None
                     and i.date_closed >= one_year_ago
                 ),
+                "nm_open_issues": len(nm_open_issues),
+                "nm_open_prs": len(nm_open_prs),
+                "nm_median_issue_age": get_median_age(
+                    [i.date_opened for i in nm_open_issues], now
+                ),
+                "nm_median_pr_age": get_median_age(
+                    [i.date_opened for i in nm_open_prs], now
+                ),
+                "nm_closed_issues_year": sum(
+                    1
+                    for i in issues
+                    if i.type == "issue"
+                    and i.date_closed is not None
+                    and i.date_closed >= one_year_ago
+                    and not _is_maintainer(i, maintainers)
+                ),
+                "nm_closed_prs_year": sum(
+                    1
+                    for i in issues
+                    if i.type == "pr"
+                    and i.date_closed is not None
+                    and i.date_closed >= one_year_ago
+                    and not _is_maintainer(i, maintainers)
+                ),
             }
 
         if launchpad_data:
@@ -267,6 +322,11 @@ class GithubProject:
                 display_name = f"{lp_project} (launchpad)"
                 bugs = list(lp_bugs.bugs.values())
                 open_bugs = [b for b in bugs if b.is_open(now)]
+                closed_lp_year = sum(
+                    1
+                    for b in bugs
+                    if b.date_closed is not None and b.date_closed >= one_year_ago
+                )
                 snapshot[display_name] = {
                     "open_issues": len(open_bugs),
                     "open_prs": 0,
@@ -274,12 +334,17 @@ class GithubProject:
                         [b.date_opened for b in open_bugs], now
                     ),
                     "median_pr_age": None,
-                    "closed_issues_year": sum(
-                        1
-                        for b in bugs
-                        if b.date_closed is not None and b.date_closed >= one_year_ago
-                    ),
+                    "closed_issues_year": closed_lp_year,
                     "closed_prs_year": 0,
+                    # All Launchpad bugs are treated as non-maintainer
+                    "nm_open_issues": len(open_bugs),
+                    "nm_open_prs": 0,
+                    "nm_median_issue_age": get_median_age(
+                        [b.date_opened for b in open_bugs], now
+                    ),
+                    "nm_median_pr_age": None,
+                    "nm_closed_issues_year": closed_lp_year,
+                    "nm_closed_prs_year": 0,
                 }
 
         snapshot_file = pathlib.Path("html/data/snapshot.json")
@@ -331,6 +396,7 @@ class GetIssuesCommand(BaseCommand):
         :param parsed_args: parsed command line arguments
         """
         config = Config.from_yaml_file(CONFIG_FILE)
+        maintainers = set(config.maintainers)
         github_token = load_github_token()
         github_api = Github(github_token)
         github_project = GithubProject()
@@ -341,7 +407,7 @@ class GetIssuesCommand(BaseCommand):
                 github_api, project, config.refresh_interval_days
             )
             github_project.save_data_to_file()
-            github_project.generate_csv(project)
+            github_project.generate_csv(project, maintainers)
 
         # generate csv for all projects combined (Launchpad data loaded separately)
         launchpad_data = (
@@ -351,7 +417,7 @@ class GetIssuesCommand(BaseCommand):
             if pathlib.Path("html/data/issues-launchpad.yaml").exists()
             else LaunchpadProjects()
         )
-        generate_all_projects_csv(github_project, launchpad_data)
+        generate_all_projects_csv(github_project, launchpad_data, maintainers)
 
         # write the project list for the frontend
         projects_file = pathlib.Path("html/data/projects.json")
@@ -364,26 +430,39 @@ class GetIssuesCommand(BaseCommand):
         emit.progress(f"Wrote projects list to {projects_file}", permanent=True)
 
         # write the snapshot for the comparison charts
-        github_project.generate_snapshot(config.craft_projects, launchpad_data)
+        github_project.generate_snapshot(
+            config.craft_projects, launchpad_data, maintainers
+        )
 
 
 def generate_all_projects_csv(
     github_project: "GithubProject",
     launchpad_data: LaunchpadProjects,
+    maintainers: set[str] | None = None,
 ) -> None:
     """Generate the all-projects combined open-issues CSV.
 
     Counts GitHub open issues and Launchpad open bugs per day.
     Both share the is_open(date) interface so no special-casing is needed.
+
+    :param github_project: GitHub project data.
+    :param launchpad_data: Launchpad bug data.
+    :param maintainers: Set of maintainer GitHub usernames. Launchpad bugs are always
+        treated as non-maintainer.
     """
+    maintainers = maintainers or set()
     start_date = CSV_START_DATE
     end_date = datetime.now(tz=UTC)
 
-    all_issues = [
+    github_issues = [
         issue
         for proj in github_project.data.projects.values()
         for issue in proj.issues.values()
-    ] + [bug for proj in launchpad_data.projects.values() for bug in proj.bugs.values()]
+    ]
+    launchpad_bugs = [
+        bug for proj in launchpad_data.projects.values() for bug in proj.bugs.values()
+    ]
+    all_issues = github_issues + launchpad_bugs
 
     intermediate_data = IntermediateData()
     emit.progress("Counting open issues and age for all projects")
@@ -397,6 +476,14 @@ def generate_all_projects_csv(
             for issue in all_issues
             if issue.date_closed is not None and issue.date_closed.date() == date.date()
         )
+        nm_open = [i for i in open_issues if not _is_maintainer(i, maintainers)]
+        nm_closed = sum(
+            1
+            for issue in all_issues
+            if issue.date_closed is not None
+            and issue.date_closed.date() == date.date()
+            and not _is_maintainer(issue, maintainers)
+        )
         intermediate_data.data.append(
             IntermediateDataPoint(
                 date=date.strftime("%Y-%b-%d"),
@@ -406,6 +493,12 @@ def generate_all_projects_csv(
                     [issue.date_opened for issue in open_issues],
                     date,
                 ),
+                nm_open_issues=len(nm_open),
+                nm_closed_issues=nm_closed,
+                nm_mean_age=get_median_age(
+                    [issue.date_opened for issue in nm_open],
+                    date,
+                ),
             ),
         )
 
@@ -413,6 +506,19 @@ def generate_all_projects_csv(
     emit.debug(f"Writing data to {csv_file}")
     IssueDataPoint.save_to_csv(intermediate_data.to_csv_models(), csv_file)
     emit.progress(f"Wrote to {csv_file}", permanent=True)
+
+
+def _is_maintainer(
+    issue: GithubIssue | LaunchpadBug,
+    maintainers: set[str],
+) -> bool:
+    """Return True if the issue was opened by a maintainer.
+
+    Launchpad bugs always return False. GitHub issues return True only when
+    ``opened_by`` is set and is in the maintainers set.
+    """
+    opened_by = getattr(issue, "opened_by", None)
+    return opened_by is not None and opened_by in maintainers
 
 
 def get_median_age(dates: list[datetime] | None, date: datetime) -> int | None:

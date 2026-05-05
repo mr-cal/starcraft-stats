@@ -49,6 +49,9 @@ let chart = null;
 let ageChart = null;
 let closedChart = null;
 
+// "all" = all issues, "nm" = non-maintainer issues only
+let viewMode = "all";
+
 /**
  * Generate a distinct color for a project
  */
@@ -88,6 +91,20 @@ function loadProjectData(project, index) {
         ),
         closed: rollingAverage(
           result.data.map((d) => d.closed ?? 0),
+          CLOSED_ROLLING_WINDOW,
+        ).map((v) => v * 7),
+        nm_issues: rollingAverage(
+          result.data.map((d) => d.nm_issues ?? 0),
+          ROLLING_WINDOW,
+        ),
+        nm_age: rollingAverageNullable(
+          result.data.map((d) =>
+            d.nm_age !== "" && d.nm_age != null ? d.nm_age : null,
+          ),
+          AGE_ROLLING_WINDOW,
+        ),
+        nm_closed: rollingAverage(
+          result.data.map((d) => d.nm_closed ?? 0),
           CLOSED_ROLLING_WINDOW,
         ).map((v) => v * 7),
         color: getProjectColor(index),
@@ -153,6 +170,21 @@ function createProjectCheckboxes(containerId, checkboxPrefix, onChange) {
 }
 
 /**
+ * Wire up the view-mode toggle (All / Non-maintainer).
+ * Changing the toggle re-renders all three charts.
+ */
+function initializeViewToggle() {
+  for (const radio of document.querySelectorAll('input[name="view-mode"]')) {
+    radio.addEventListener("change", () => {
+      viewMode = radio.value;
+      updateChart();
+      updateAgeChart();
+      updateClosedChart();
+    });
+  }
+}
+
+/**
  * Initialize checkboxes and charts once all project data is loaded.
  */
 function initializeUI() {
@@ -164,6 +196,7 @@ function initializeUI() {
     updateClosedChart,
   );
 
+  initializeViewToggle();
   initializeChart();
   initializeAgeChart();
   initializeClosedChart();
@@ -251,10 +284,12 @@ function updateChart() {
   const firstProject = selectedProjects[0];
   chart.data.labels = projectData[firstProject].dates;
 
+  const dataKey = viewMode === "nm" ? "nm_issues" : "issues";
+
   // Create datasets for each selected project
   chart.data.datasets = selectedProjects.map((project) => ({
     label: project,
-    data: projectData[project].issues,
+    data: projectData[project][dataKey],
     borderColor: projectData[project].color,
     backgroundColor: `${projectData[project].color}20`, // Add transparency
     borderWidth: 2,
@@ -342,9 +377,11 @@ function updateAgeChart() {
   const firstProject = selectedProjects[0];
   ageChart.data.labels = projectData[firstProject].dates;
 
+  const dataKey = viewMode === "nm" ? "nm_age" : "age";
+
   ageChart.data.datasets = selectedProjects.map((project) => ({
     label: project,
-    data: projectData[project].age,
+    data: projectData[project][dataKey],
     borderColor: projectData[project].color,
     backgroundColor: `${projectData[project].color}20`,
     borderWidth: 2,
@@ -433,9 +470,11 @@ function updateClosedChart() {
   const firstProject = selectedProjects[0];
   closedChart.data.labels = projectData[firstProject].dates;
 
+  const dataKey = viewMode === "nm" ? "nm_closed" : "closed";
+
   closedChart.data.datasets = selectedProjects.map((project) => ({
     label: project,
-    data: projectData[project].closed,
+    data: projectData[project][dataKey],
     borderColor: projectData[project].color,
     backgroundColor: `${projectData[project].color}20`,
     borderWidth: 2,

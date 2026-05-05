@@ -56,6 +56,37 @@
       <hr class="p-rule" />
     </div>
 
+    <div class="p-strip u-no-padding--bottom">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="p-heading--4">View</h3>
+          <div class="p-segmented-control">
+            <div class="p-segmented-control__list" role="radiogroup" aria-label="View mode">
+              <label class="p-segmented-control__item">
+                <input
+                  class="p-segmented-control__input"
+                  type="radio"
+                  name="view-mode"
+                  value="all"
+                  checked
+                />
+                <span class="p-segmented-control__label">All</span>
+              </label>
+              <label class="p-segmented-control__item">
+                <input
+                  class="p-segmented-control__input"
+                  type="radio"
+                  name="view-mode"
+                  value="nm"
+                />
+                <span class="p-segmented-control__label">Non-maintainer</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="p-strip">
       <div class="row">
         <div class="col-12">
@@ -127,6 +158,33 @@
         <div class="col-12">
           <h2 class="p-heading--3">Project snapshot</h2>
           <p>Current state of each project: open issues and PRs, median age, and throughput over the last year.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="p-segmented-control">
+            <div class="p-segmented-control__list" role="radiogroup" aria-label="Snapshot view mode">
+              <label class="p-segmented-control__item">
+                <input
+                  class="p-segmented-control__input"
+                  type="radio"
+                  name="snapshot-view-mode"
+                  value="all"
+                  checked
+                />
+                <span class="p-segmented-control__label">All</span>
+              </label>
+              <label class="p-segmented-control__item">
+                <input
+                  class="p-segmented-control__input"
+                  type="radio"
+                  name="snapshot-view-mode"
+                  value="nm"
+                />
+                <span class="p-segmented-control__label">Non-maintainer</span>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
       <div class="row">
