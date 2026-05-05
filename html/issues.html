@@ -60,29 +60,7 @@
       <div class="row">
         <div class="col-12">
           <h3 class="p-heading--4">View</h3>
-          <div class="p-segmented-control">
-            <div class="p-segmented-control__list" role="radiogroup" aria-label="View mode">
-              <label class="p-segmented-control__item">
-                <input
-                  class="p-segmented-control__input"
-                  type="radio"
-                  name="view-mode"
-                  value="all"
-                  checked
-                />
-                <span class="p-segmented-control__label">All</span>
-              </label>
-              <label class="p-segmented-control__item">
-                <input
-                  class="p-segmented-control__input"
-                  type="radio"
-                  name="view-mode"
-                  value="nm"
-                />
-                <span class="p-segmented-control__label">Non-maintainer</span>
-              </label>
-            </div>
-          </div>
+          <div id="view-checkboxes"></div>
         </div>
       </div>
     </div>
@@ -161,48 +139,31 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12">
-          <div class="p-segmented-control">
-            <div class="p-segmented-control__list" role="radiogroup" aria-label="Snapshot view mode">
-              <label class="p-segmented-control__item">
-                <input
-                  class="p-segmented-control__input"
-                  type="radio"
-                  name="snapshot-view-mode"
-                  value="all"
-                  checked
-                />
-                <span class="p-segmented-control__label">All</span>
-              </label>
-              <label class="p-segmented-control__item">
-                <input
-                  class="p-segmented-control__input"
-                  type="radio"
-                  name="snapshot-view-mode"
-                  value="nm"
-                />
-                <span class="p-segmented-control__label">Non-maintainer</span>
-              </label>
+        <div class="col-3">
+          <h3 class="p-heading--4">View</h3>
+          <div id="snapshot-view-checkboxes"></div>
+          <h3 class="p-heading--4">Projects</h3>
+          <div id="snapshot-checkboxes"></div>
+        </div>
+        <div class="col-9">
+          <div class="row">
+            <div class="col-12">
+              <h4 class="p-heading--5">Open issues and PRs</h4>
+              <canvas id="snapshot-open-chart" style="width: 100%;"></canvas>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <h4 class="p-heading--5">Open issues and PRs</h4>
-          <canvas id="snapshot-open-chart" style="width: 100%;"></canvas>
-        </div>
-      </div>
-      <div class="row u-sv3">
-        <div class="col-12">
-          <h4 class="p-heading--5">Median age (days)</h4>
-          <canvas id="snapshot-age-chart" style="width: 100%;"></canvas>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <h4 class="p-heading--5">Closed in the last year</h4>
-          <canvas id="snapshot-closed-chart" style="width: 100%;"></canvas>
+          <div class="row u-sv3">
+            <div class="col-12">
+              <h4 class="p-heading--5">Median age (days)</h4>
+              <canvas id="snapshot-age-chart" style="width: 100%;"></canvas>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h4 class="p-heading--5">Closed in the last year</h4>
+              <canvas id="snapshot-closed-chart" style="width: 100%;"></canvas>
+            </div>
+          </div>
         </div>
       </div>
     </div>

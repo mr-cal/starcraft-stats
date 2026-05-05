@@ -49,8 +49,9 @@ let chart = null;
 let ageChart = null;
 let closedChart = null;
 
-// "all" = all issues, "nm" = non-maintainer issues only
-let viewMode = "all";
+// Which data series to display
+let showAll = true;
+let showContributors = false;
 
 /**
  * Generate a distinct color for a project
@@ -135,52 +136,59 @@ function createProjectCheckboxes(containerId, checkboxPrefix, onChange) {
   for (const project of projects) {
     if (!projectData[project]) continue;
 
-    const wrapper = document.createElement("div");
-    wrapper.className = "p-checkbox";
+    const labelEl = document.createElement("label");
+    labelEl.htmlFor = `${checkboxPrefix}-${project}`;
+    labelEl.style.cssText = "display:flex;align-items:center;gap:0.4rem;cursor:pointer;margin-bottom:0.3rem;";
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.className = "p-checkbox__input";
     checkbox.id = `${checkboxPrefix}-${project}`;
     checkbox.value = project;
-    if (project === "all-projects") {
-      checkbox.checked = true;
-    }
+    checkbox.checked = project === "all-projects";
     checkbox.addEventListener("change", onChange);
 
-    const label = document.createElement("label");
-    label.className = "p-checkbox__label";
-    label.htmlFor = `${checkboxPrefix}-${project}`;
-
     const colorBox = document.createElement("span");
-    colorBox.style.display = "inline-block";
-    colorBox.style.width = "12px";
-    colorBox.style.height = "12px";
-    colorBox.style.backgroundColor = projectData[project].color;
-    colorBox.style.marginRight = "8px";
-    colorBox.style.border = "1px solid #666";
+    colorBox.style.cssText = `display:inline-block;width:12px;height:12px;flex-shrink:0;background-color:${projectData[project].color};border:1px solid #666;`;
 
-    label.appendChild(colorBox);
-    label.appendChild(document.createTextNode(project));
-
-    wrapper.appendChild(checkbox);
-    wrapper.appendChild(label);
-    container.appendChild(wrapper);
+    labelEl.appendChild(checkbox);
+    labelEl.appendChild(colorBox);
+    labelEl.appendChild(document.createTextNode(project));
+    container.appendChild(labelEl);
   }
 }
 
 /**
- * Wire up the view-mode toggle (All / Non-maintainer).
- * Changing the toggle re-renders all three charts.
+ * Create view-mode checkboxes and wire up events.
+ * Runs immediately so the checkboxes appear before project data loads.
  */
 function initializeViewToggle() {
-  for (const radio of document.querySelectorAll('input[name="view-mode"]')) {
-    radio.addEventListener("change", () => {
-      viewMode = radio.value;
+  const container = document.getElementById("view-checkboxes");
+  if (!container) return;
+
+  const viewOptions = [
+    { id: "view-all", label: "All issues", getter: () => showAll, setter: (v) => { showAll = v; } },
+    { id: "view-contributors", label: "Only contributor issues", getter: () => showContributors, setter: (v) => { showContributors = v; } },
+  ];
+
+  for (const { id, label, getter, setter } of viewOptions) {
+    const labelEl = document.createElement("label");
+    labelEl.htmlFor = id;
+    labelEl.style.cssText = "display:flex;align-items:center;gap:0.5rem;cursor:pointer;margin-bottom:0.4rem;";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.id = id;
+    checkbox.checked = getter();
+    checkbox.addEventListener("change", () => {
+      setter(checkbox.checked);
       updateChart();
       updateAgeChart();
       updateClosedChart();
     });
+
+    labelEl.appendChild(checkbox);
+    labelEl.appendChild(document.createTextNode(label));
+    container.appendChild(labelEl);
   }
 }
 
@@ -272,30 +280,50 @@ function updateChart() {
     return checkbox?.checked;
   });
 
-  // If no projects selected, clear the chart
-  if (selectedProjects.length === 0) {
+  if (selectedProjects.length === 0 || (!showAll && !showContributors)) {
     chart.data.labels = [];
     chart.data.datasets = [];
     chart.update();
     return;
   }
 
-  // Use the dates from the first selected project
   const firstProject = selectedProjects[0];
   chart.data.labels = projectData[firstProject].dates;
 
-  const dataKey = viewMode === "nm" ? "nm_issues" : "issues";
-
-  // Create datasets for each selected project
-  chart.data.datasets = selectedProjects.map((project) => ({
-    label: project,
-    data: projectData[project][dataKey],
-    borderColor: projectData[project].color,
-    backgroundColor: `${projectData[project].color}20`, // Add transparency
-    borderWidth: 2,
-    fill: false,
-    tension: 0.1,
-  }));
+  if (showAll && showContributors) {
+    chart.data.datasets = selectedProjects.flatMap((project) => [
+      {
+        label: `${project} (all)`,
+        data: projectData[project].issues,
+        borderColor: projectData[project].color,
+        backgroundColor: `${projectData[project].color}20`,
+        borderWidth: 2,
+        fill: false,
+        tension: 0.1,
+      },
+      {
+        label: `${project} (contributors)`,
+        data: projectData[project].nm_issues,
+        borderColor: projectData[project].color,
+        backgroundColor: `${projectData[project].color}20`,
+        borderWidth: 2,
+        borderDash: [6, 4],
+        fill: false,
+        tension: 0.1,
+      },
+    ]);
+  } else {
+    const dataKey = showContributors ? "nm_issues" : "issues";
+    chart.data.datasets = selectedProjects.map((project) => ({
+      label: project,
+      data: projectData[project][dataKey],
+      borderColor: projectData[project].color,
+      backgroundColor: `${projectData[project].color}20`,
+      borderWidth: 2,
+      fill: false,
+      tension: 0.1,
+    }));
+  }
 
   chart.update();
 }
@@ -367,7 +395,7 @@ function updateAgeChart() {
     return checkbox?.checked;
   });
 
-  if (selectedProjects.length === 0) {
+  if (selectedProjects.length === 0 || (!showAll && !showContributors)) {
     ageChart.data.labels = [];
     ageChart.data.datasets = [];
     ageChart.update();
@@ -377,18 +405,43 @@ function updateAgeChart() {
   const firstProject = selectedProjects[0];
   ageChart.data.labels = projectData[firstProject].dates;
 
-  const dataKey = viewMode === "nm" ? "nm_age" : "age";
-
-  ageChart.data.datasets = selectedProjects.map((project) => ({
-    label: project,
-    data: projectData[project][dataKey],
-    borderColor: projectData[project].color,
-    backgroundColor: `${projectData[project].color}20`,
-    borderWidth: 2,
-    fill: false,
-    tension: 0.1,
-    spanGaps: false,
-  }));
+  if (showAll && showContributors) {
+    ageChart.data.datasets = selectedProjects.flatMap((project) => [
+      {
+        label: `${project} (all)`,
+        data: projectData[project].age,
+        borderColor: projectData[project].color,
+        backgroundColor: `${projectData[project].color}20`,
+        borderWidth: 2,
+        fill: false,
+        tension: 0.1,
+        spanGaps: false,
+      },
+      {
+        label: `${project} (contributors)`,
+        data: projectData[project].nm_age,
+        borderColor: projectData[project].color,
+        backgroundColor: `${projectData[project].color}20`,
+        borderWidth: 2,
+        borderDash: [6, 4],
+        fill: false,
+        tension: 0.1,
+        spanGaps: false,
+      },
+    ]);
+  } else {
+    const dataKey = showContributors ? "nm_age" : "age";
+    ageChart.data.datasets = selectedProjects.map((project) => ({
+      label: project,
+      data: projectData[project][dataKey],
+      borderColor: projectData[project].color,
+      backgroundColor: `${projectData[project].color}20`,
+      borderWidth: 2,
+      fill: false,
+      tension: 0.1,
+      spanGaps: false,
+    }));
+  }
 
   ageChart.update();
 }
@@ -460,7 +513,7 @@ function updateClosedChart() {
     return checkbox?.checked;
   });
 
-  if (selectedProjects.length === 0) {
+  if (selectedProjects.length === 0 || (!showAll && !showContributors)) {
     closedChart.data.labels = [];
     closedChart.data.datasets = [];
     closedChart.update();
@@ -470,17 +523,40 @@ function updateClosedChart() {
   const firstProject = selectedProjects[0];
   closedChart.data.labels = projectData[firstProject].dates;
 
-  const dataKey = viewMode === "nm" ? "nm_closed" : "closed";
-
-  closedChart.data.datasets = selectedProjects.map((project) => ({
-    label: project,
-    data: projectData[project][dataKey],
-    borderColor: projectData[project].color,
-    backgroundColor: `${projectData[project].color}20`,
-    borderWidth: 2,
-    fill: false,
-    tension: 0.1,
-  }));
+  if (showAll && showContributors) {
+    closedChart.data.datasets = selectedProjects.flatMap((project) => [
+      {
+        label: `${project} (all)`,
+        data: projectData[project].closed,
+        borderColor: projectData[project].color,
+        backgroundColor: `${projectData[project].color}20`,
+        borderWidth: 2,
+        fill: false,
+        tension: 0.1,
+      },
+      {
+        label: `${project} (contributors)`,
+        data: projectData[project].nm_closed,
+        borderColor: projectData[project].color,
+        backgroundColor: `${projectData[project].color}20`,
+        borderWidth: 2,
+        borderDash: [6, 4],
+        fill: false,
+        tension: 0.1,
+      },
+    ]);
+  } else {
+    const dataKey = showContributors ? "nm_closed" : "closed";
+    closedChart.data.datasets = selectedProjects.map((project) => ({
+      label: project,
+      data: projectData[project][dataKey],
+      borderColor: projectData[project].color,
+      backgroundColor: `${projectData[project].color}20`,
+      borderWidth: 2,
+      fill: false,
+      tension: 0.1,
+    }));
+  }
 
   closedChart.update();
 }

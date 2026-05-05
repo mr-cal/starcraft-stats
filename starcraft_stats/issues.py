@@ -347,6 +347,95 @@ class GithubProject:
                     "nm_closed_prs_year": 0,
                 }
 
+        # Generate the "all-projects" aggregate entry using raw data (same methodology
+        # as generate_all_projects_csv), so the snapshot matches the line-chart CSV.
+        all_gh = [
+            issue
+            for proj in self.data.projects.values()
+            for issue in proj.issues.values()
+        ]
+        all_lp = (
+            [
+                bug
+                for proj in launchpad_data.projects.values()
+                for bug in proj.bugs.values()
+            ]
+            if launchpad_data
+            else []
+        )
+        agg_open_issues = [
+            i for i in all_gh if i.type == "issue" and i.is_open(now)
+        ] + [b for b in all_lp if b.is_open(now)]
+        agg_open_prs = [i for i in all_gh if i.type == "pr" and i.is_open(now)]
+        agg_nm_open_issues = [
+            i
+            for i in all_gh
+            if i.type == "issue"
+            and i.is_open(now)
+            and not _is_maintainer(i, maintainers)
+        ] + [b for b in all_lp if b.is_open(now)]
+        agg_nm_open_prs = [
+            i
+            for i in all_gh
+            if i.type == "pr" and i.is_open(now) and not _is_maintainer(i, maintainers)
+        ]
+        snapshot["all-projects"] = {
+            "open_issues": len(agg_open_issues),
+            "open_prs": len(agg_open_prs),
+            "median_issue_age": get_median_age(
+                [i.date_opened for i in agg_open_issues], now
+            ),
+            "median_pr_age": get_median_age([i.date_opened for i in agg_open_prs], now),
+            "closed_issues_year": sum(
+                1
+                for i in all_gh
+                if i.type == "issue"
+                and i.date_closed is not None
+                and i.date_closed >= one_year_ago
+            )
+            + sum(
+                1
+                for b in all_lp
+                if b.date_closed is not None and b.date_closed >= one_year_ago
+            ),
+            "closed_prs_year": sum(
+                1
+                for i in all_gh
+                if i.type == "pr"
+                and i.date_closed is not None
+                and i.date_closed >= one_year_ago
+            ),
+            "nm_open_issues": len(agg_nm_open_issues),
+            "nm_open_prs": len(agg_nm_open_prs),
+            "nm_median_issue_age": get_median_age(
+                [i.date_opened for i in agg_nm_open_issues], now
+            ),
+            "nm_median_pr_age": get_median_age(
+                [i.date_opened for i in agg_nm_open_prs], now
+            ),
+            "nm_closed_issues_year": sum(
+                1
+                for i in all_gh
+                if i.type == "issue"
+                and i.date_closed is not None
+                and i.date_closed >= one_year_ago
+                and not _is_maintainer(i, maintainers)
+            )
+            + sum(
+                1
+                for b in all_lp
+                if b.date_closed is not None and b.date_closed >= one_year_ago
+            ),
+            "nm_closed_prs_year": sum(
+                1
+                for i in all_gh
+                if i.type == "pr"
+                and i.date_closed is not None
+                and i.date_closed >= one_year_ago
+                and not _is_maintainer(i, maintainers)
+            ),
+        }
+
         snapshot_file = pathlib.Path("html/data/snapshot.json")
         snapshot_file.write_text(json.dumps(snapshot, indent=2) + "\n")
         emit.progress(f"Wrote snapshot to {snapshot_file}", permanent=True)

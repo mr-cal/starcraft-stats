@@ -16,6 +16,7 @@ from .dependencies import GetDependenciesCommand
 from .issues import GetIssuesCommand
 from .launchpad import GetLaunchpadDataCommand
 from .releases import GetReleasesCommand
+from .schedule import ScheduleRefreshCommand
 
 
 def main() -> None:
@@ -35,6 +36,7 @@ def main() -> None:
             GetIssuesCommand,
             GetLaunchpadDataCommand,
             GetReleasesCommand,
+            ScheduleRefreshCommand,
         ],
     )
     summary = "Retrieve and process data for *craft applications"
