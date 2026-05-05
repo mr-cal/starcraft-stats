@@ -94,7 +94,7 @@ class GithubProject:
             emit.debug(f"Creating new project in data file {project}")
             self.data.projects[project] = GithubIssues(issues={})
 
-        now = datetime.now()
+        now = datetime.now(tz=UTC)
         refresh_threshold = timedelta(days=refresh_interval_days)
         repo = github_api.get_repo(f"{self.owner}/{project}")
 
