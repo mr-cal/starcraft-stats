@@ -277,7 +277,7 @@ class LaunchpadProject:
                     date=date.strftime("%Y-%b-%d"),
                     open_issues=len(open_bugs),
                     closed_issues=closed_today,
-                    mean_age=get_median_age(
+                    median_age=get_median_age(
                         [bug.date_opened for bug in open_bugs],
                         date,
                     ),

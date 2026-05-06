@@ -330,24 +330,24 @@ class TestIntermediateDataPoint:
         point = IntermediateDataPoint(
             date="2024-Jan-01",
             open_issues=10,
-            mean_age=30,
+            median_age=30,
         )
 
         assert point.date == "2024-Jan-01"
         assert point.open_issues == 10
-        assert point.mean_age == 30
+        assert point.median_age == 30
 
     def test_create_datapoint_minimal(self):
         """Test creating datapoint with minimal fields."""
         point = IntermediateDataPoint(
             date="2024-Jan-01",
             open_issues=10,
-            mean_age=None,
+            median_age=None,
         )
 
         assert point.date == "2024-Jan-01"
         assert point.open_issues == 10
-        assert point.mean_age is None
+        assert point.median_age is None
 
 
 class TestIntermediateData:
@@ -362,8 +362,8 @@ class TestIntermediateData:
     def test_create_with_datapoints(self):
         """Test creating with datapoints."""
         points = [
-            IntermediateDataPoint(date="2024-Jan-01", open_issues=10, mean_age=30),
-            IntermediateDataPoint(date="2024-Jan-02", open_issues=12, mean_age=32),
+            IntermediateDataPoint(date="2024-Jan-01", open_issues=10, median_age=30),
+            IntermediateDataPoint(date="2024-Jan-02", open_issues=12, median_age=32),
         ]
 
         data = IntermediateData(data=points)
@@ -379,13 +379,13 @@ class TestIntermediateData:
                 date="2024-Jan-01",
                 open_issues=10,
                 closed_issues=2,
-                mean_age=30,
+                median_age=30,
             ),
             IntermediateDataPoint(
                 date="2024-Jan-02",
                 open_issues=12,
                 closed_issues=1,
-                mean_age=32,
+                median_age=32,
             ),
         ]
         data = IntermediateData(data=points)
@@ -405,7 +405,7 @@ class TestIntermediateData:
             IntermediateDataPoint(
                 date="2024-Jan-01",
                 open_issues=10,
-                mean_age=None,
+                median_age=None,
             ),
         ]
         data = IntermediateData(data=points)

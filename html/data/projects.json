@@ -1,6 +1,7 @@
 {
   "applications": [
     "charmcraft",
+    "debcraft",
     "imagecraft",
     "rockcraft",
     "snapcraft"
@@ -14,6 +15,13 @@
     "craft-platforms",
     "craft-providers",
     "craft-store"
+  ],
+  "other": [
+    "craft-actions",
+    "craft-artifacts",
+    "snapcraft-rocks",
+    "starbase",
+    "starflow"
   ],
   "launchpad": [
     "snapcraft"

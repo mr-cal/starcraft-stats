@@ -28,3 +28,6 @@ class Config(CraftBaseModel):
 
     launchpad_projects: list[str] = []
     """A list of projects whose issues are tracked on Launchpad."""
+
+    maintainers: list[str] = []
+    """GitHub usernames of project maintainers."""

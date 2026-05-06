@@ -49,6 +49,10 @@ let chart = null;
 let ageChart = null;
 let closedChart = null;
 
+// Which data series to display
+let showAll = true;
+let showContributors = false;
+
 /**
  * Generate a distinct color for a project
  */
@@ -90,6 +94,20 @@ function loadProjectData(project, index) {
           result.data.map((d) => d.closed ?? 0),
           CLOSED_ROLLING_WINDOW,
         ).map((v) => v * 7),
+        nm_issues: rollingAverage(
+          result.data.map((d) => d.nm_issues ?? 0),
+          ROLLING_WINDOW,
+        ),
+        nm_age: rollingAverageNullable(
+          result.data.map((d) =>
+            d.nm_age !== "" && d.nm_age != null ? d.nm_age : null,
+          ),
+          AGE_ROLLING_WINDOW,
+        ),
+        nm_closed: rollingAverage(
+          result.data.map((d) => d.nm_closed ?? 0),
+          CLOSED_ROLLING_WINDOW,
+        ).map((v) => v * 7),
         color: getProjectColor(index),
       };
 
@@ -110,6 +128,35 @@ function loadProjectData(project, index) {
 }
 
 /**
+ * Create a styled checkbox item and append it to a container.
+ * If colorBox is provided (a CSS color string), a small color swatch is shown.
+ */
+function createCheckboxItem(
+  container,
+  { id, label, checked, onChange, colorBox = null },
+) {
+  const labelEl = document.createElement("label");
+  labelEl.htmlFor = id;
+  labelEl.style.cssText =
+    "display:flex;align-items:center;gap:0.4rem;cursor:pointer;margin-bottom:0.3rem;";
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.id = id;
+  checkbox.checked = checked;
+  checkbox.addEventListener("change", () => onChange(checkbox.checked));
+
+  labelEl.appendChild(checkbox);
+  if (colorBox) {
+    const swatch = document.createElement("span");
+    swatch.style.cssText = `display:inline-block;width:12px;height:12px;flex-shrink:0;background-color:${colorBox};border:1px solid #666;`;
+    labelEl.appendChild(swatch);
+  }
+  labelEl.appendChild(document.createTextNode(label));
+  container.appendChild(labelEl);
+}
+
+/**
  * Populate a checkbox container with one checkbox per project.
  */
 function createProjectCheckboxes(containerId, checkboxPrefix, onChange) {
@@ -117,38 +164,141 @@ function createProjectCheckboxes(containerId, checkboxPrefix, onChange) {
 
   for (const project of projects) {
     if (!projectData[project]) continue;
+    createCheckboxItem(container, {
+      id: `${checkboxPrefix}-${project}`,
+      label: project,
+      checked: project === "all-projects",
+      onChange: () => onChange(),
+      colorBox: projectData[project].color,
+    });
+  }
+}
 
-    const wrapper = document.createElement("div");
-    wrapper.className = "p-checkbox";
+/**
+ * Create a new Chart.js line chart on the given canvas with a y-axis label.
+ */
+function createLineChart(canvasId, yLabel) {
+  return new Chart(document.getElementById(canvasId), {
+    type: "line",
+    data: { labels: [], datasets: [] },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      elements: { point: { radius: 0 } },
+      plugins: {
+        legend: { display: false },
+        tooltip: { mode: "index", intersect: false },
+      },
+      scales: {
+        x: { display: true, title: { display: true, text: "Date" } },
+        y: {
+          display: true,
+          beginAtZero: true,
+          title: { display: true, text: yLabel },
+          ticks: { precision: 0 },
+        },
+      },
+      interaction: { mode: "nearest", axis: "x", intersect: false },
+    },
+  });
+}
 
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.className = "p-checkbox__input";
-    checkbox.id = `${checkboxPrefix}-${project}`;
-    checkbox.value = project;
-    if (project === "all-projects") {
-      checkbox.checked = true;
-    }
-    checkbox.addEventListener("change", onChange);
+/**
+ * Update a line chart based on the currently-checked project checkboxes.
+ *
+ * @param {Chart} chartRef - The Chart.js instance to update.
+ * @param {string} checkboxPrefix - Prefix used for checkbox element IDs.
+ * @param {string} allKey - projectData key for the "all issues" series.
+ * @param {string} nmKey - projectData key for the "contributors only" series.
+ * @param {object} extraDatasetProps - Extra dataset properties (e.g. { spanGaps: false }).
+ */
+function updateLineChart(
+  chartRef,
+  checkboxPrefix,
+  allKey,
+  nmKey,
+  extraDatasetProps = {},
+) {
+  const selectedProjects = projects.filter((project) => {
+    const checkbox = document.getElementById(`${checkboxPrefix}-${project}`);
+    return checkbox?.checked;
+  });
 
-    const label = document.createElement("label");
-    label.className = "p-checkbox__label";
-    label.htmlFor = `${checkboxPrefix}-${project}`;
+  if (selectedProjects.length === 0 || (!showAll && !showContributors)) {
+    chartRef.data.labels = [];
+    chartRef.data.datasets = [];
+    chartRef.update();
+    return;
+  }
 
-    const colorBox = document.createElement("span");
-    colorBox.style.display = "inline-block";
-    colorBox.style.width = "12px";
-    colorBox.style.height = "12px";
-    colorBox.style.backgroundColor = projectData[project].color;
-    colorBox.style.marginRight = "8px";
-    colorBox.style.border = "1px solid #666";
+  chartRef.data.labels = projectData[selectedProjects[0]].dates;
 
-    label.appendChild(colorBox);
-    label.appendChild(document.createTextNode(project));
+  const makeDataset = (project, dataKey, label, isDashed) => ({
+    label,
+    data: projectData[project][dataKey],
+    borderColor: projectData[project].color,
+    backgroundColor: `${projectData[project].color}20`,
+    borderWidth: 2,
+    fill: false,
+    tension: 0.1,
+    ...(isDashed ? { borderDash: [6, 4] } : {}),
+    ...extraDatasetProps,
+  });
 
-    wrapper.appendChild(checkbox);
-    wrapper.appendChild(label);
-    container.appendChild(wrapper);
+  if (showAll && showContributors) {
+    chartRef.data.datasets = selectedProjects.flatMap((project) => [
+      makeDataset(project, allKey, `${project} (all)`, false),
+      makeDataset(project, nmKey, `${project} (contributors)`, true),
+    ]);
+  } else {
+    const dataKey = showContributors ? nmKey : allKey;
+    chartRef.data.datasets = selectedProjects.map((project) =>
+      makeDataset(project, dataKey, project, false),
+    );
+  }
+
+  chartRef.update();
+}
+
+/**
+ * Create view-mode checkboxes and wire up events.
+ * Runs immediately so the checkboxes appear before project data loads.
+ */
+function initializeViewToggle() {
+  const container = document.getElementById("view-checkboxes");
+  if (!container) return;
+
+  const viewOptions = [
+    {
+      id: "view-all",
+      label: "All issues",
+      getter: () => showAll,
+      setter: (v) => {
+        showAll = v;
+      },
+    },
+    {
+      id: "view-contributors",
+      label: "Only contributor issues",
+      getter: () => showContributors,
+      setter: (v) => {
+        showContributors = v;
+      },
+    },
+  ];
+
+  for (const { id, label, getter, setter } of viewOptions) {
+    createCheckboxItem(container, {
+      id,
+      label,
+      checked: getter(),
+      onChange: (v) => {
+        setter(v);
+        updateChart();
+        updateAgeChart();
+        updateClosedChart();
+      },
+    });
   }
 }
 
@@ -164,299 +314,44 @@ function initializeUI() {
     updateClosedChart,
   );
 
-  initializeChart();
-  initializeAgeChart();
-  initializeClosedChart();
+  initializeViewToggle();
+  chart = createLineChart("issues-chart", "Open Issues");
+  ageChart = createLineChart("age-chart", "Median Issue Age (days)");
+  closedChart = createLineChart(
+    "closed-chart",
+    "Issues Closed / Week (30-day avg)",
+  );
   updateChart();
   updateAgeChart();
   updateClosedChart();
 }
 
-/**
- * Initialize the Chart.js chart
- */
-function initializeChart() {
-  const ctx = document.getElementById("issues-chart");
-
-  chart = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: [],
-      datasets: [],
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      elements: {
-        point: {
-          radius: 0,
-        },
-      },
-      plugins: {
-        legend: {
-          display: false,
-        },
-        tooltip: {
-          mode: "index",
-          intersect: false,
-        },
-      },
-      scales: {
-        x: {
-          display: true,
-          title: {
-            display: true,
-            text: "Date",
-          },
-        },
-        y: {
-          display: true,
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: "Open Issues",
-          },
-          ticks: {
-            precision: 0,
-          },
-        },
-      },
-      interaction: {
-        mode: "nearest",
-        axis: "x",
-        intersect: false,
-      },
-    },
-  });
-}
-
-/**
- * Update chart based on selected checkboxes
- */
 function updateChart() {
-  const selectedProjects = projects.filter((project) => {
-    const checkbox = document.getElementById(`checkbox-${project}`);
-    return checkbox?.checked;
-  });
-
-  // If no projects selected, clear the chart
-  if (selectedProjects.length === 0) {
-    chart.data.labels = [];
-    chart.data.datasets = [];
-    chart.update();
-    return;
-  }
-
-  // Use the dates from the first selected project
-  const firstProject = selectedProjects[0];
-  chart.data.labels = projectData[firstProject].dates;
-
-  // Create datasets for each selected project
-  chart.data.datasets = selectedProjects.map((project) => ({
-    label: project,
-    data: projectData[project].issues,
-    borderColor: projectData[project].color,
-    backgroundColor: `${projectData[project].color}20`, // Add transparency
-    borderWidth: 2,
-    fill: false,
-    tension: 0.1,
-  }));
-
-  chart.update();
+  updateLineChart(chart, "checkbox", "issues", "nm_issues");
 }
 
-/**
- * Initialize the median issue age chart
- */
-function initializeAgeChart() {
-  const ctx = document.getElementById("age-chart");
-
-  ageChart = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: [],
-      datasets: [],
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      elements: {
-        point: {
-          radius: 0,
-        },
-      },
-      plugins: {
-        legend: {
-          display: false,
-        },
-        tooltip: {
-          mode: "index",
-          intersect: false,
-        },
-      },
-      scales: {
-        x: {
-          display: true,
-          title: {
-            display: true,
-            text: "Date",
-          },
-        },
-        y: {
-          display: true,
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: "Median Issue Age (days)",
-          },
-          ticks: {
-            precision: 0,
-          },
-        },
-      },
-      interaction: {
-        mode: "nearest",
-        axis: "x",
-        intersect: false,
-      },
-    },
-  });
-}
-
-/**
- * Update the age chart based on selected checkboxes
- */
 function updateAgeChart() {
-  const selectedProjects = projects.filter((project) => {
-    const checkbox = document.getElementById(`age-checkbox-${project}`);
-    return checkbox?.checked;
-  });
-
-  if (selectedProjects.length === 0) {
-    ageChart.data.labels = [];
-    ageChart.data.datasets = [];
-    ageChart.update();
-    return;
-  }
-
-  const firstProject = selectedProjects[0];
-  ageChart.data.labels = projectData[firstProject].dates;
-
-  ageChart.data.datasets = selectedProjects.map((project) => ({
-    label: project,
-    data: projectData[project].age,
-    borderColor: projectData[project].color,
-    backgroundColor: `${projectData[project].color}20`,
-    borderWidth: 2,
-    fill: false,
-    tension: 0.1,
+  updateLineChart(ageChart, "age-checkbox", "age", "nm_age", {
     spanGaps: false,
-  }));
-
-  ageChart.update();
-}
-
-/**
- * Initialize the closed-issues-per-day chart
- */
-function initializeClosedChart() {
-  const ctx = document.getElementById("closed-chart");
-
-  closedChart = new Chart(ctx, {
-    type: "line",
-    data: {
-      labels: [],
-      datasets: [],
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      elements: {
-        point: {
-          radius: 0,
-        },
-      },
-      plugins: {
-        legend: {
-          display: false,
-        },
-        tooltip: {
-          mode: "index",
-          intersect: false,
-        },
-      },
-      scales: {
-        x: {
-          display: true,
-          title: {
-            display: true,
-            text: "Date",
-          },
-        },
-        y: {
-          display: true,
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: "Issues Closed / Week (30-day avg)",
-          },
-          ticks: {
-            precision: 0,
-          },
-        },
-      },
-      interaction: {
-        mode: "nearest",
-        axis: "x",
-        intersect: false,
-      },
-    },
   });
 }
 
-/**
- * Update the closed-issues chart based on selected checkboxes
- */
 function updateClosedChart() {
-  const selectedProjects = projects.filter((project) => {
-    const checkbox = document.getElementById(`closed-checkbox-${project}`);
-    return checkbox?.checked;
-  });
-
-  if (selectedProjects.length === 0) {
-    closedChart.data.labels = [];
-    closedChart.data.datasets = [];
-    closedChart.update();
-    return;
-  }
-
-  const firstProject = selectedProjects[0];
-  closedChart.data.labels = projectData[firstProject].dates;
-
-  closedChart.data.datasets = selectedProjects.map((project) => ({
-    label: project,
-    data: projectData[project].closed,
-    borderColor: projectData[project].color,
-    backgroundColor: `${projectData[project].color}20`,
-    borderWidth: 2,
-    fill: false,
-    tension: 0.1,
-  }));
-
-  closedChart.update();
+  updateLineChart(closedChart, "closed-checkbox", "closed", "nm_closed");
 }
 
 // Load projects from the generated config and initialize the page
 const response = await fetch("data/projects.json");
-const { applications, libraries, launchpad } = await response.json();
+const { applications, libraries, other, launchpad } = await response.json();
 
 // Order: all-projects first, then applications (alpha), then libraries (alpha),
-// then launchpad projects displayed as "{name} (launchpad)"
+// then other craft-projects (alpha), then launchpad projects as "{name} (launchpad)"
 const launchpadProjects = (launchpad ?? []).map((p) => `${p} (launchpad)`);
 const projects = [
   "all-projects",
   ...applications,
   ...libraries,
+  ...(other ?? []),
   ...launchpadProjects,
 ];
 

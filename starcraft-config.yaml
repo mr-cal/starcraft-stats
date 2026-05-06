@@ -3,6 +3,7 @@ craft-applications:
   - imagecraft
   - rockcraft
   - snapcraft
+  - debcraft
 
 craft-libraries:
   - craft-application
@@ -21,16 +22,20 @@ craft-projects:
   - craft-application
   - craft-archives
   - craft-artifacts
+  - craft-actions
   - craft-cli
   - craft-grammar
   - craft-parts
   - craft-platforms
   - craft-providers
   - craft-store
+  - debcraft
   - imagecraft
   - rockcraft
   - snapcraft
+  - snapcraft-rocks
   - starbase
+  - starflow
 
 # Number of days before refreshing issue data from GitHub
 refresh-interval-days: 7
@@ -44,3 +49,30 @@ hotfix-min-versions:
 
 launchpad-projects:
   - snapcraft
+
+# GitHub usernames of project maintainers
+maintainers:
+  - alderic-coroir
+  - bepri
+  - cmatsuoka
+  - Copilot
+  - come-maiz
+  - cjdcordeiro
+  - cjp256
+  - dariuszd21
+  - dboddie
+  - dependabot[bot]
+  - facundobatista
+  - jahn-junior
+  - kyrofa
+  - lengau
+  - mattculler
+  - medubelko
+  - mr-cal
+  - renovate[bot]
+  - sergiusens
+  - smethnani
+  - steinbro
+  - syu-w
+  - tigarmo
+  - upils
