@@ -342,15 +342,16 @@ function updateClosedChart() {
 
 // Load projects from the generated config and initialize the page
 const response = await fetch("data/projects.json");
-const { applications, libraries, launchpad } = await response.json();
+const { applications, libraries, other, launchpad } = await response.json();
 
 // Order: all-projects first, then applications (alpha), then libraries (alpha),
-// then launchpad projects displayed as "{name} (launchpad)"
+// then other craft-projects (alpha), then launchpad projects as "{name} (launchpad)"
 const launchpadProjects = (launchpad ?? []).map((p) => `${p} (launchpad)`);
 const projects = [
   "all-projects",
   ...applications,
   ...libraries,
+  ...(other ?? []),
   ...launchpadProjects,
 ];
 

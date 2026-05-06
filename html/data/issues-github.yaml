@@ -38708,6 +38708,12 @@ projects:
         date-closed: null
         refresh-date: '2026-05-05T17:12:32.234026Z'
         opened-by: lengau
+      '1567':
+        type: pr
+        date-opened: '2026-05-06T01:24:50Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:35:44.566689Z'
+        opened-by: lengau
   craft-providers:
     issues:
       '740':

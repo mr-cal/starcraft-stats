@@ -6,12 +6,12 @@
     "median_pr_age": 32,
     "closed_issues_year": 67,
     "closed_prs_year": 310,
-    "nm_open_issues": 107,
-    "nm_open_prs": 19,
-    "nm_median_issue_age": 533,
-    "nm_median_pr_age": 88,
+    "nm_open_issues": 106,
+    "nm_open_prs": 8,
+    "nm_median_issue_age": 529,
+    "nm_median_pr_age": 32,
     "nm_closed_issues_year": 40,
-    "nm_closed_prs_year": 186
+    "nm_closed_prs_year": 99
   },
   "craft-application": {
     "open_issues": 115,
@@ -20,12 +20,12 @@
     "median_pr_age": 216,
     "closed_issues_year": 28,
     "closed_prs_year": 238,
-    "nm_open_issues": 11,
-    "nm_open_prs": 11,
-    "nm_median_issue_age": 273,
-    "nm_median_pr_age": 181,
-    "nm_closed_issues_year": 4,
-    "nm_closed_prs_year": 80
+    "nm_open_issues": 10,
+    "nm_open_prs": 8,
+    "nm_median_issue_age": 247,
+    "nm_median_pr_age": 246,
+    "nm_closed_issues_year": 2,
+    "nm_closed_prs_year": 5
   },
   "craft-archives": {
     "open_issues": 10,
@@ -34,12 +34,12 @@
     "median_pr_age": 38,
     "closed_issues_year": 3,
     "closed_prs_year": 59,
-    "nm_open_issues": 3,
-    "nm_open_prs": 2,
-    "nm_median_issue_age": 515,
-    "nm_median_pr_age": 38,
+    "nm_open_issues": 2,
+    "nm_open_prs": 0,
+    "nm_median_issue_age": 393,
+    "nm_median_pr_age": null,
     "nm_closed_issues_year": 1,
-    "nm_closed_prs_year": 44
+    "nm_closed_prs_year": 0
   },
   "craft-artifacts": {
     "open_issues": 1,
@@ -48,12 +48,12 @@
     "median_pr_age": null,
     "closed_issues_year": 0,
     "closed_prs_year": 68,
-    "nm_open_issues": 1,
+    "nm_open_issues": 0,
     "nm_open_prs": 0,
-    "nm_median_issue_age": 518,
+    "nm_median_issue_age": null,
     "nm_median_pr_age": null,
     "nm_closed_issues_year": 0,
-    "nm_closed_prs_year": 58
+    "nm_closed_prs_year": 0
   },
   "craft-actions": {
     "open_issues": 9,
@@ -62,12 +62,12 @@
     "median_pr_age": 49,
     "closed_issues_year": 2,
     "closed_prs_year": 14,
-    "nm_open_issues": 5,
-    "nm_open_prs": 2,
-    "nm_median_issue_age": 881,
-    "nm_median_pr_age": 174,
+    "nm_open_issues": 4,
+    "nm_open_prs": 1,
+    "nm_median_issue_age": 653,
+    "nm_median_pr_age": 0,
     "nm_closed_issues_year": 1,
-    "nm_closed_prs_year": 9
+    "nm_closed_prs_year": 5
   },
   "craft-cli": {
     "open_issues": 50,
@@ -76,12 +76,12 @@
     "median_pr_age": 117,
     "closed_issues_year": 11,
     "closed_prs_year": 86,
-    "nm_open_issues": 6,
-    "nm_open_prs": 7,
-    "nm_median_issue_age": 1052,
-    "nm_median_pr_age": 17,
+    "nm_open_issues": 5,
+    "nm_open_prs": 5,
+    "nm_median_issue_age": 1049,
+    "nm_median_pr_age": 13,
     "nm_closed_issues_year": 2,
-    "nm_closed_prs_year": 46
+    "nm_closed_prs_year": 6
   },
   "craft-grammar": {
     "open_issues": 4,
@@ -90,26 +90,26 @@
     "median_pr_age": 123,
     "closed_issues_year": 6,
     "closed_prs_year": 84,
-    "nm_open_issues": 1,
+    "nm_open_issues": 0,
     "nm_open_prs": 0,
-    "nm_median_issue_age": 733,
+    "nm_median_issue_age": null,
     "nm_median_pr_age": null,
     "nm_closed_issues_year": 0,
-    "nm_closed_prs_year": 64
+    "nm_closed_prs_year": 0
   },
   "craft-parts": {
     "open_issues": 188,
-    "open_prs": 45,
+    "open_prs": 46,
     "median_issue_age": 439,
-    "median_pr_age": 85,
+    "median_pr_age": 79,
     "closed_issues_year": 54,
     "closed_prs_year": 317,
-    "nm_open_issues": 53,
-    "nm_open_prs": 33,
+    "nm_open_issues": 47,
+    "nm_open_prs": 22,
     "nm_median_issue_age": 628,
-    "nm_median_pr_age": 85,
-    "nm_closed_issues_year": 17,
-    "nm_closed_prs_year": 114
+    "nm_median_pr_age": 101,
+    "nm_closed_issues_year": 7,
+    "nm_closed_prs_year": 29
   },
   "craft-platforms": {
     "open_issues": 8,
@@ -118,12 +118,12 @@
     "median_pr_age": 400,
     "closed_issues_year": 6,
     "closed_prs_year": 87,
-    "nm_open_issues": 2,
-    "nm_open_prs": 2,
-    "nm_median_issue_age": 640,
-    "nm_median_pr_age": 8,
+    "nm_open_issues": 1,
+    "nm_open_prs": 0,
+    "nm_median_issue_age": 559,
+    "nm_median_pr_age": null,
     "nm_closed_issues_year": 0,
-    "nm_closed_prs_year": 61
+    "nm_closed_prs_year": 1
   },
   "craft-providers": {
     "open_issues": 84,
@@ -132,12 +132,12 @@
     "median_pr_age": 67,
     "closed_issues_year": 19,
     "closed_prs_year": 161,
-    "nm_open_issues": 12,
-    "nm_open_prs": 9,
-    "nm_median_issue_age": 896,
-    "nm_median_pr_age": 88,
+    "nm_open_issues": 11,
+    "nm_open_prs": 6,
+    "nm_median_issue_age": 816,
+    "nm_median_pr_age": 65,
     "nm_closed_issues_year": 5,
-    "nm_closed_prs_year": 85
+    "nm_closed_prs_year": 13
   },
   "craft-store": {
     "open_issues": 15,
@@ -146,12 +146,12 @@
     "median_pr_age": 386,
     "closed_issues_year": 2,
     "closed_prs_year": 75,
-    "nm_open_issues": 3,
+    "nm_open_issues": 2,
     "nm_open_prs": 0,
-    "nm_median_issue_age": 1014,
+    "nm_median_issue_age": 920,
     "nm_median_pr_age": null,
     "nm_closed_issues_year": 0,
-    "nm_closed_prs_year": 57
+    "nm_closed_prs_year": 1
   },
   "debcraft": {
     "open_issues": 20,
@@ -160,12 +160,12 @@
     "median_pr_age": 158,
     "closed_issues_year": 21,
     "closed_prs_year": 107,
-    "nm_open_issues": 8,
-    "nm_open_prs": 3,
+    "nm_open_issues": 7,
+    "nm_open_prs": 0,
     "nm_median_issue_age": 8,
-    "nm_median_pr_age": 159,
+    "nm_median_pr_age": null,
     "nm_closed_issues_year": 1,
-    "nm_closed_prs_year": 68
+    "nm_closed_prs_year": 2
   },
   "imagecraft": {
     "open_issues": 21,
@@ -174,12 +174,12 @@
     "median_pr_age": 14,
     "closed_issues_year": 9,
     "closed_prs_year": 162,
-    "nm_open_issues": 10,
-    "nm_open_prs": 6,
+    "nm_open_issues": 9,
+    "nm_open_prs": 2,
     "nm_median_issue_age": 68,
-    "nm_median_pr_age": 30,
-    "nm_closed_issues_year": 3,
-    "nm_closed_prs_year": 81
+    "nm_median_pr_age": 47,
+    "nm_closed_issues_year": 0,
+    "nm_closed_prs_year": 2
   },
   "rockcraft": {
     "open_issues": 142,
@@ -188,12 +188,12 @@
     "median_pr_age": 228,
     "closed_issues_year": 35,
     "closed_prs_year": 230,
-    "nm_open_issues": 110,
-    "nm_open_prs": 48,
-    "nm_median_issue_age": 650,
+    "nm_open_issues": 90,
+    "nm_open_prs": 40,
+    "nm_median_issue_age": 654,
     "nm_median_pr_age": 205,
-    "nm_closed_issues_year": 29,
-    "nm_closed_prs_year": 106
+    "nm_closed_issues_year": 25,
+    "nm_closed_prs_year": 80
   },
   "snapcraft": {
     "open_issues": 208,
@@ -202,12 +202,12 @@
     "median_pr_age": 69,
     "closed_issues_year": 215,
     "closed_prs_year": 470,
-    "nm_open_issues": 132,
-    "nm_open_prs": 13,
-    "nm_median_issue_age": 405,
-    "nm_median_pr_age": 99,
-    "nm_closed_issues_year": 129,
-    "nm_closed_prs_year": 180
+    "nm_open_issues": 131,
+    "nm_open_prs": 10,
+    "nm_median_issue_age": 392,
+    "nm_median_pr_age": 87,
+    "nm_closed_issues_year": 128,
+    "nm_closed_prs_year": 95
   },
   "snapcraft-rocks": {
     "open_issues": 14,
@@ -216,12 +216,12 @@
     "median_pr_age": 218,
     "closed_issues_year": 6,
     "closed_prs_year": 43,
-    "nm_open_issues": 12,
-    "nm_open_prs": 5,
+    "nm_open_issues": 11,
+    "nm_open_prs": 0,
     "nm_median_issue_age": 588,
-    "nm_median_pr_age": 218,
+    "nm_median_pr_age": null,
     "nm_closed_issues_year": 2,
-    "nm_closed_prs_year": 17
+    "nm_closed_prs_year": 2
   },
   "starbase": {
     "open_issues": 22,
@@ -230,12 +230,12 @@
     "median_pr_age": 247,
     "closed_issues_year": 10,
     "closed_prs_year": 140,
-    "nm_open_issues": 2,
-    "nm_open_prs": 1,
-    "nm_median_issue_age": 835,
-    "nm_median_pr_age": 447,
+    "nm_open_issues": 0,
+    "nm_open_prs": 0,
+    "nm_median_issue_age": null,
+    "nm_median_pr_age": null,
     "nm_closed_issues_year": 0,
-    "nm_closed_prs_year": 65
+    "nm_closed_prs_year": 0
   },
   "starflow": {
     "open_issues": 7,
@@ -244,12 +244,12 @@
     "median_pr_age": 192,
     "closed_issues_year": 3,
     "closed_prs_year": 68,
-    "nm_open_issues": 2,
-    "nm_open_prs": 3,
-    "nm_median_issue_age": 466,
+    "nm_open_issues": 0,
+    "nm_open_prs": 1,
+    "nm_median_issue_age": null,
     "nm_median_pr_age": 25,
     "nm_closed_issues_year": 1,
-    "nm_closed_prs_year": 27
+    "nm_closed_prs_year": 0
   },
   "snapcraft (launchpad)": {
     "open_issues": 879,
@@ -267,16 +267,16 @@
   },
   "all-projects": {
     "open_issues": 2001,
-    "open_prs": 283,
+    "open_prs": 284,
     "median_issue_age": 935,
     "median_pr_age": 137,
     "closed_issues_year": 504,
     "closed_prs_year": 2719,
-    "nm_open_issues": 1359,
-    "nm_open_prs": 164,
-    "nm_median_issue_age": 1820,
-    "nm_median_pr_age": 102,
-    "nm_closed_issues_year": 242,
-    "nm_closed_prs_year": 1348
+    "nm_open_issues": 1315,
+    "nm_open_prs": 103,
+    "nm_median_issue_age": 1938,
+    "nm_median_pr_age": 93,
+    "nm_closed_issues_year": 222,
+    "nm_closed_prs_year": 340
   }
 }

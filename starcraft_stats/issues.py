@@ -332,9 +332,12 @@ class GetIssuesCommand(BaseCommand):
 
         # write the project list for the frontend
         projects_file = pathlib.Path("html/data/projects.json")
+        known = set(config.craft_applications) | set(config.craft_libraries)
+        other_projects = sorted(p for p in config.craft_projects if p not in known)
         projects_data = {
             "applications": sorted(config.craft_applications),
             "libraries": sorted(config.craft_libraries),
+            "other": other_projects,
             "launchpad": sorted(config.launchpad_projects),
         }
         projects_file.write_text(json.dumps(projects_data, indent=2) + "\n")

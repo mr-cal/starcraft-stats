@@ -6,9 +6,9 @@ const BAR_HEIGHT_PX = 28;
 const CHART_BASE_HEIGHT_PX = 80;
 
 const response = await fetch("data/projects.json");
-const { applications, libraries, launchpad } = await response.json();
+const { applications, libraries, other, launchpad } = await response.json();
 const launchpadProjects = (launchpad ?? []).map((p) => `${p} (launchpad)`);
-const projects = [...applications, ...libraries, ...launchpadProjects];
+const projects = [...applications, ...libraries, ...(other ?? []), ...launchpadProjects];
 
 const snapshotResponse = await fetch("data/snapshot.json");
 const snapshot = await snapshotResponse.json();
