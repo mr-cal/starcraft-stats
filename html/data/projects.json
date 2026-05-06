@@ -1,10 +1,10 @@
 {
   "applications": [
     "charmcraft",
-    "debcraft",
     "imagecraft",
     "rockcraft",
-    "snapcraft"
+    "snapcraft",
+    "debcraft"
   ],
   "libraries": [
     "craft-application",
@@ -25,5 +25,26 @@
   ],
   "launchpad": [
     "snapcraft"
+  ],
+  "ordered": [
+    "charmcraft",
+    "imagecraft",
+    "rockcraft",
+    "snapcraft",
+    "debcraft",
+    "craft-application",
+    "craft-archives",
+    "craft-cli",
+    "craft-grammar",
+    "craft-parts",
+    "craft-platforms",
+    "craft-providers",
+    "craft-store",
+    "craft-actions",
+    "craft-artifacts",
+    "snapcraft-rocks",
+    "starbase",
+    "starflow",
+    "snapcraft (launchpad)"
   ]
 }
