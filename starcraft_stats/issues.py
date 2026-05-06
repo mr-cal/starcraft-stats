@@ -177,11 +177,6 @@ class GithubProject:
         :param maintainers: Set of maintainer GitHub usernames. Issues opened by these
             users are excluded from the ``nm_*`` (non-maintainer) columns.
         """
-        maintainers = maintainers or set()
-        start_date = CSV_START_DATE
-        end_date = datetime.now(tz=UTC)
-
-        # Collect the flat list of issues to count once, before the per-day loop
         if project == "all":
             issues = [
                 issue
@@ -191,49 +186,9 @@ class GithubProject:
         else:
             issues = list(self.data.projects[project].issues.values())
 
-        intermediate_data = IntermediateData()
-        emit.progress(f"Counting open issues and age for {project}")
-
-        for date in [
-            start_date + timedelta(days=i) for i in range((end_date - start_date).days)
-        ]:
-            open_issues = [issue for issue in issues if issue.is_open(date)]
-            closed_today = sum(
-                1
-                for issue in issues
-                if issue.date_closed is not None
-                and issue.date_closed.date() == date.date()
-            )
-            nm_open = [i for i in open_issues if not _is_maintainer(i, maintainers)]
-            nm_closed = sum(
-                1
-                for issue in issues
-                if issue.date_closed is not None
-                and issue.date_closed.date() == date.date()
-                and not _is_maintainer(issue, maintainers)
-            )
-            intermediate_data.data.append(
-                IntermediateDataPoint(
-                    date=date.strftime("%Y-%b-%d"),
-                    open_issues=len(open_issues),
-                    closed_issues=closed_today,
-                    mean_age=get_median_age(
-                        [issue.date_opened for issue in open_issues],
-                        date,
-                    ),
-                    nm_open_issues=len(nm_open),
-                    nm_closed_issues=nm_closed,
-                    nm_mean_age=get_median_age(
-                        [issue.date_opened for issue in nm_open],
-                        date,
-                    ),
-                ),
-            )
-
-        csv_file = self.csv_file(str(project))
-        emit.debug(f"Writing data to {csv_file}")
-        IssueDataPoint.save_to_csv(intermediate_data.to_csv_models(), csv_file)
-        emit.progress(f"Wrote to {csv_file}", permanent=True)
+        _generate_issue_csv(
+            issues, self.csv_file(str(project)), project, maintainers or set()
+        )
 
     def generate_snapshot(
         self,
@@ -261,94 +216,26 @@ class GithubProject:
         for project in projects:
             if project not in self.data.projects:
                 continue
-            issues = list(self.data.projects[project].issues.values())
-
-            open_issues = [i for i in issues if i.type == "issue" and i.is_open(now)]
-            open_prs = [i for i in issues if i.type == "pr" and i.is_open(now)]
-            nm_open_issues = [
-                i for i in open_issues if not _is_maintainer(i, maintainers)
-            ]
-            nm_open_prs = [i for i in open_prs if not _is_maintainer(i, maintainers)]
-
-            snapshot[project] = {
-                "open_issues": len(open_issues),
-                "open_prs": len(open_prs),
-                "median_issue_age": get_median_age(
-                    [i.date_opened for i in open_issues], now
-                ),
-                "median_pr_age": get_median_age([i.date_opened for i in open_prs], now),
-                "closed_issues_year": sum(
-                    1
-                    for i in issues
-                    if i.type == "issue"
-                    and i.date_closed is not None
-                    and i.date_closed >= one_year_ago
-                ),
-                "closed_prs_year": sum(
-                    1
-                    for i in issues
-                    if i.type == "pr"
-                    and i.date_closed is not None
-                    and i.date_closed >= one_year_ago
-                ),
-                "nm_open_issues": len(nm_open_issues),
-                "nm_open_prs": len(nm_open_prs),
-                "nm_median_issue_age": get_median_age(
-                    [i.date_opened for i in nm_open_issues], now
-                ),
-                "nm_median_pr_age": get_median_age(
-                    [i.date_opened for i in nm_open_prs], now
-                ),
-                "nm_closed_issues_year": sum(
-                    1
-                    for i in issues
-                    if i.type == "issue"
-                    and i.date_closed is not None
-                    and i.date_closed >= one_year_ago
-                    and not _is_maintainer(i, maintainers)
-                ),
-                "nm_closed_prs_year": sum(
-                    1
-                    for i in issues
-                    if i.type == "pr"
-                    and i.date_closed is not None
-                    and i.date_closed >= one_year_ago
-                    and not _is_maintainer(i, maintainers)
-                ),
-            }
+            snapshot[project] = _compute_snapshot_metrics(
+                gh_issues=list(self.data.projects[project].issues.values()),
+                lp_bugs=[],
+                now=now,
+                one_year_ago=one_year_ago,
+                maintainers=maintainers,
+            )
 
         if launchpad_data:
             for lp_project, lp_bugs in launchpad_data.projects.items():
-                display_name = f"{lp_project} (launchpad)"
-                bugs = list(lp_bugs.bugs.values())
-                open_bugs = [b for b in bugs if b.is_open(now)]
-                closed_lp_year = sum(
-                    1
-                    for b in bugs
-                    if b.date_closed is not None and b.date_closed >= one_year_ago
+                snapshot[f"{lp_project} (launchpad)"] = _compute_snapshot_metrics(
+                    gh_issues=[],
+                    lp_bugs=list(lp_bugs.bugs.values()),
+                    now=now,
+                    one_year_ago=one_year_ago,
+                    maintainers=maintainers,
                 )
-                snapshot[display_name] = {
-                    "open_issues": len(open_bugs),
-                    "open_prs": 0,
-                    "median_issue_age": get_median_age(
-                        [b.date_opened for b in open_bugs], now
-                    ),
-                    "median_pr_age": None,
-                    "closed_issues_year": closed_lp_year,
-                    "closed_prs_year": 0,
-                    # All Launchpad bugs are treated as non-maintainer
-                    "nm_open_issues": len(open_bugs),
-                    "nm_open_prs": 0,
-                    "nm_median_issue_age": get_median_age(
-                        [b.date_opened for b in open_bugs], now
-                    ),
-                    "nm_median_pr_age": None,
-                    "nm_closed_issues_year": closed_lp_year,
-                    "nm_closed_prs_year": 0,
-                }
 
-        # Generate the "all-projects" aggregate entry using raw data (same methodology
-        # as generate_all_projects_csv), so the snapshot matches the line-chart CSV.
+        # "all-projects" aggregates GitHub + Launchpad using the same raw-data
+        # methodology as generate_all_projects_csv so snapshot matches line charts.
         all_gh = [
             issue
             for proj in self.data.projects.values()
@@ -363,78 +250,13 @@ class GithubProject:
             if launchpad_data
             else []
         )
-        agg_open_issues = [
-            i for i in all_gh if i.type == "issue" and i.is_open(now)
-        ] + [b for b in all_lp if b.is_open(now)]
-        agg_open_prs = [i for i in all_gh if i.type == "pr" and i.is_open(now)]
-        agg_nm_open_issues = [
-            i
-            for i in all_gh
-            if i.type == "issue"
-            and i.is_open(now)
-            and not _is_maintainer(i, maintainers)
-        ] + [b for b in all_lp if b.is_open(now)]
-        agg_nm_open_prs = [
-            i
-            for i in all_gh
-            if i.type == "pr" and i.is_open(now) and not _is_maintainer(i, maintainers)
-        ]
-        snapshot["all-projects"] = {
-            "open_issues": len(agg_open_issues),
-            "open_prs": len(agg_open_prs),
-            "median_issue_age": get_median_age(
-                [i.date_opened for i in agg_open_issues], now
-            ),
-            "median_pr_age": get_median_age([i.date_opened for i in agg_open_prs], now),
-            "closed_issues_year": sum(
-                1
-                for i in all_gh
-                if i.type == "issue"
-                and i.date_closed is not None
-                and i.date_closed >= one_year_ago
-            )
-            + sum(
-                1
-                for b in all_lp
-                if b.date_closed is not None and b.date_closed >= one_year_ago
-            ),
-            "closed_prs_year": sum(
-                1
-                for i in all_gh
-                if i.type == "pr"
-                and i.date_closed is not None
-                and i.date_closed >= one_year_ago
-            ),
-            "nm_open_issues": len(agg_nm_open_issues),
-            "nm_open_prs": len(agg_nm_open_prs),
-            "nm_median_issue_age": get_median_age(
-                [i.date_opened for i in agg_nm_open_issues], now
-            ),
-            "nm_median_pr_age": get_median_age(
-                [i.date_opened for i in agg_nm_open_prs], now
-            ),
-            "nm_closed_issues_year": sum(
-                1
-                for i in all_gh
-                if i.type == "issue"
-                and i.date_closed is not None
-                and i.date_closed >= one_year_ago
-                and not _is_maintainer(i, maintainers)
-            )
-            + sum(
-                1
-                for b in all_lp
-                if b.date_closed is not None and b.date_closed >= one_year_ago
-            ),
-            "nm_closed_prs_year": sum(
-                1
-                for i in all_gh
-                if i.type == "pr"
-                and i.date_closed is not None
-                and i.date_closed >= one_year_ago
-                and not _is_maintainer(i, maintainers)
-            ),
-        }
+        snapshot["all-projects"] = _compute_snapshot_metrics(
+            gh_issues=all_gh,
+            lp_bugs=all_lp,
+            now=now,
+            one_year_ago=one_year_ago,
+            maintainers=maintainers,
+        )
 
         snapshot_file = pathlib.Path("html/data/snapshot.json")
         snapshot_file.write_text(json.dumps(snapshot, indent=2) + "\n")
@@ -539,10 +361,6 @@ def generate_all_projects_csv(
     :param maintainers: Set of maintainer GitHub usernames. Launchpad bugs are always
         treated as non-maintainer.
     """
-    maintainers = maintainers or set()
-    start_date = CSV_START_DATE
-    end_date = datetime.now(tz=UTC)
-
     github_issues = [
         issue
         for proj in github_project.data.projects.values()
@@ -551,24 +369,128 @@ def generate_all_projects_csv(
     launchpad_bugs = [
         bug for proj in launchpad_data.projects.values() for bug in proj.bugs.values()
     ]
-    all_issues = github_issues + launchpad_bugs
+    _generate_issue_csv(
+        github_issues + launchpad_bugs,
+        GithubProject.csv_file("all"),
+        "all projects",
+        maintainers or set(),
+    )
 
+
+def _compute_snapshot_metrics(
+    gh_issues: list[GithubIssue],
+    lp_bugs: list[LaunchpadBug],
+    now: datetime,
+    one_year_ago: datetime,
+    maintainers: set[str],
+) -> dict[str, int | None]:
+    """Compute all snapshot metrics for a combined set of GitHub issues and Launchpad bugs.
+
+    Works for a single GitHub project (``lp_bugs=[]``), a single Launchpad project
+    (``gh_issues=[]``), or the all-projects aggregate (both populated).  Launchpad bugs
+    have no ``type`` or ``opened_by`` so they are always counted as non-maintainer
+    issues (never PRs).
+
+    :param gh_issues: GitHub issues/PRs for the project(s).
+    :param lp_bugs: Launchpad bugs for the project(s). Always treated as nm issues.
+    :param now: Reference datetime for open/closed checks.
+    :param one_year_ago: Lower bound for the "closed in last year" counts.
+    :param maintainers: Set of maintainer GitHub usernames.
+    :returns: Dict matching the snapshot JSON schema for one project entry.
+    """
+    open_issues = [i for i in gh_issues if i.type == "issue" and i.is_open(now)] + [
+        b for b in lp_bugs if b.is_open(now)
+    ]
+    open_prs = [i for i in gh_issues if i.type == "pr" and i.is_open(now)]
+    nm_open_issues = [
+        i
+        for i in gh_issues
+        if i.type == "issue" and i.is_open(now) and not _is_maintainer(i, maintainers)
+    ] + [b for b in lp_bugs if b.is_open(now)]
+    nm_open_prs = [
+        i
+        for i in gh_issues
+        if i.type == "pr" and i.is_open(now) and not _is_maintainer(i, maintainers)
+    ]
+
+    def _closed_count(issues: list, issue_type: str | None) -> int:
+        return sum(
+            1
+            for i in issues
+            if (issue_type is None or getattr(i, "type", "issue") == issue_type)
+            and i.date_closed is not None
+            and i.date_closed >= one_year_ago
+        )
+
+    def _nm_closed_count(issues: list, issue_type: str | None) -> int:
+        return sum(
+            1
+            for i in issues
+            if (issue_type is None or getattr(i, "type", "issue") == issue_type)
+            and i.date_closed is not None
+            and i.date_closed >= one_year_ago
+            and not _is_maintainer(i, maintainers)
+        )
+
+    return {
+        "open_issues": len(open_issues),
+        "open_prs": len(open_prs),
+        "median_issue_age": get_median_age([i.date_opened for i in open_issues], now),
+        "median_pr_age": get_median_age([i.date_opened for i in open_prs], now),
+        "closed_issues_year": _closed_count(gh_issues, "issue")
+        + _closed_count(lp_bugs, None),
+        "closed_prs_year": _closed_count(gh_issues, "pr"),
+        "nm_open_issues": len(nm_open_issues),
+        "nm_open_prs": len(nm_open_prs),
+        "nm_median_issue_age": get_median_age(
+            [i.date_opened for i in nm_open_issues], now
+        ),
+        "nm_median_pr_age": get_median_age([i.date_opened for i in nm_open_prs], now),
+        "nm_closed_issues_year": _nm_closed_count(gh_issues, "issue")
+        + _closed_count(lp_bugs, None),
+        "nm_closed_prs_year": _nm_closed_count(gh_issues, "pr"),
+    }
+
+
+def _generate_issue_csv(
+    issues: list,
+    csv_path: pathlib.Path,
+    label: str,
+    maintainers: set[str],
+) -> None:
+    """Write daily open/closed/age data for a flat list of issues to a CSV file.
+
+    Iterates from :data:`CSV_START_DATE` to today. Each row records the number of
+    open issues, how many closed that day, and the median age of open issues — both
+    overall (``issues``, ``closed``, ``age``) and for the non-maintainer subset
+    (``nm_*`` columns).
+
+    :param issues: Flat list of issue/bug objects that implement ``is_open(date)``
+        and ``date_closed``.
+    :param csv_path: Destination CSV file path.
+    :param label: Human-readable name for progress messages.
+    :param maintainers: Set of maintainer GitHub usernames. Objects without an
+        ``opened_by`` attribute (e.g. Launchpad bugs) are always treated as
+        non-maintainer.
+    """
+    start_date = CSV_START_DATE
+    end_date = datetime.now(tz=UTC)
     intermediate_data = IntermediateData()
-    emit.progress("Counting open issues and age for all projects")
+    emit.progress(f"Counting open issues and age for {label}")
 
     for date in [
         start_date + timedelta(days=i) for i in range((end_date - start_date).days)
     ]:
-        open_issues = [issue for issue in all_issues if issue.is_open(date)]
+        open_issues = [issue for issue in issues if issue.is_open(date)]
         closed_today = sum(
             1
-            for issue in all_issues
+            for issue in issues
             if issue.date_closed is not None and issue.date_closed.date() == date.date()
         )
         nm_open = [i for i in open_issues if not _is_maintainer(i, maintainers)]
         nm_closed = sum(
             1
-            for issue in all_issues
+            for issue in issues
             if issue.date_closed is not None
             and issue.date_closed.date() == date.date()
             and not _is_maintainer(issue, maintainers)
@@ -578,23 +500,20 @@ def generate_all_projects_csv(
                 date=date.strftime("%Y-%b-%d"),
                 open_issues=len(open_issues),
                 closed_issues=closed_today,
-                mean_age=get_median_age(
-                    [issue.date_opened for issue in open_issues],
-                    date,
+                median_age=get_median_age(
+                    [issue.date_opened for issue in open_issues], date
                 ),
                 nm_open_issues=len(nm_open),
                 nm_closed_issues=nm_closed,
-                nm_mean_age=get_median_age(
-                    [issue.date_opened for issue in nm_open],
-                    date,
+                nm_median_age=get_median_age(
+                    [issue.date_opened for issue in nm_open], date
                 ),
             ),
         )
 
-    csv_file = GithubProject.csv_file("all")
-    emit.debug(f"Writing data to {csv_file}")
-    IssueDataPoint.save_to_csv(intermediate_data.to_csv_models(), csv_file)
-    emit.progress(f"Wrote to {csv_file}", permanent=True)
+    emit.debug(f"Writing data to {csv_path}")
+    IssueDataPoint.save_to_csv(intermediate_data.to_csv_models(), csv_path)
+    emit.progress(f"Wrote to {csv_path}", permanent=True)
 
 
 def _is_maintainer(

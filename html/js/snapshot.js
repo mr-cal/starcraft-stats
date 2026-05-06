@@ -2,6 +2,9 @@
 const ISSUE_COLOR = "#0066CC";
 const PR_COLOR = "#E95420";
 
+const BAR_HEIGHT_PX = 28;
+const CHART_BASE_HEIGHT_PX = 80;
+
 const response = await fetch("data/projects.json");
 const { applications, libraries, launchpad } = await response.json();
 const launchpadProjects = (launchpad ?? []).map((p) => `${p} (launchpad)`);
@@ -28,9 +31,11 @@ let selectedProjects = [];
  */
 function getDisplayItems() {
   const items = [];
-  if (showAllProjectsAggregate) items.push({ label: "All projects", isAggregate: true });
+  if (showAllProjectsAggregate)
+    items.push({ label: "All projects", isAggregate: true });
   for (const p of allProjects) {
-    if (selectedProjects.includes(p)) items.push({ label: p, isAggregate: false });
+    if (selectedProjects.includes(p))
+      items.push({ label: p, isAggregate: false });
   }
   return items;
 }
@@ -42,7 +47,9 @@ function sumAll(key) {
 
 /** Average a snapshot field across all projects (fallback for median fields). */
 function avgAll(key) {
-  const vals = allProjects.map((p) => snapshot[p][key]).filter((v) => v != null);
+  const vals = allProjects
+    .map((p) => snapshot[p][key])
+    .filter((v) => v != null);
   return vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
 }
 
@@ -56,7 +63,9 @@ function getValues(items, key, { useAvg = false } = {}) {
     if (item.isAggregate) {
       return "all-projects" in snapshot
         ? snapshot["all-projects"][key]
-        : useAvg ? avgAll(key) : sumAll(key);
+        : useAvg
+          ? avgAll(key)
+          : sumAll(key);
     }
     return snapshot[item.label][key];
   });
@@ -88,7 +97,7 @@ function makeBarChart(canvasId, labels, datasets, xLabel) {
 
   const wrapper = document.createElement("div");
   wrapper.style.position = "relative";
-  wrapper.style.height = `${Math.max(1, labels.length) * Math.max(1, datasets.length) * 28 + 80}px`;
+  wrapper.style.height = `${Math.max(1, labels.length) * Math.max(1, datasets.length) * BAR_HEIGHT_PX + CHART_BASE_HEIGHT_PX}px`;
   ctx.parentNode.insertBefore(wrapper, ctx);
   wrapper.appendChild(ctx);
 
@@ -101,74 +110,118 @@ function makeBarChart(canvasId, labels, datasets, xLabel) {
   return { chart, wrapper };
 }
 
-
 /**
- * Build datasets for the open issues/PRs chart based on the current view state.
+ * Generic dataset builder for a bar chart that shows issue and PR metrics.
+ *
+ * In "both" mode (showAll && showContributors), four datasets are emitted:
+ * all-issues, contributors-issues, all-PRs, contributors-PRs.
+ * In single mode, two datasets are emitted using the active key set.
+ *
+ * @param {Array}  items        - Display items from getDisplayItems().
+ * @param {object} keys         - { allIssue, nmIssue, allPr, nmPr } snapshot keys.
+ * @param {object} labels       - { issue, pr } human-readable label strings.
+ * @param {boolean} useAvg      - Pass true for median-age fields to use avgAll fallback.
  */
+function makeDatasetsForMode(
+  items,
+  {
+    allIssueKey,
+    nmIssueKey,
+    allPrKey,
+    nmPrKey,
+    issueLabel,
+    prLabel,
+    useAvg = false,
+  },
+) {
+  const vals = (key) => getValues(items, key, { useAvg });
+  if (showAll && showContributors) {
+    return [
+      {
+        label: `${issueLabel} (all)`,
+        data: vals(allIssueKey),
+        backgroundColor: `${ISSUE_COLOR}CC`,
+        borderColor: ISSUE_COLOR,
+        borderWidth: 1,
+      },
+      {
+        label: `${issueLabel} (contributors)`,
+        data: vals(nmIssueKey),
+        backgroundColor: `${ISSUE_COLOR}55`,
+        borderColor: ISSUE_COLOR,
+        borderWidth: 1,
+        borderDash: [4, 4],
+      },
+      {
+        label: `${prLabel} (all)`,
+        data: vals(allPrKey),
+        backgroundColor: `${PR_COLOR}CC`,
+        borderColor: PR_COLOR,
+        borderWidth: 1,
+      },
+      {
+        label: `${prLabel} (contributors)`,
+        data: vals(nmPrKey),
+        backgroundColor: `${PR_COLOR}55`,
+        borderColor: PR_COLOR,
+        borderWidth: 1,
+        borderDash: [4, 4],
+      },
+    ];
+  }
+  if (showAll || showContributors) {
+    return [
+      {
+        label: issueLabel,
+        data: vals(showContributors ? nmIssueKey : allIssueKey),
+        backgroundColor: `${ISSUE_COLOR}CC`,
+        borderColor: ISSUE_COLOR,
+        borderWidth: 1,
+      },
+      {
+        label: prLabel,
+        data: vals(showContributors ? nmPrKey : allPrKey),
+        backgroundColor: `${PR_COLOR}CC`,
+        borderColor: PR_COLOR,
+        borderWidth: 1,
+      },
+    ];
+  }
+  return [];
+}
+
 function openDatasetsForMode(items) {
-  const datasets = [];
-  if (showAll && showContributors) {
-    datasets.push(
-      { label: "Open Issues (all)", data: getValues(items, "open_issues"), backgroundColor: `${ISSUE_COLOR}CC`, borderColor: ISSUE_COLOR, borderWidth: 1 },
-      { label: "Open Issues (contributors)", data: getValues(items, "nm_open_issues"), backgroundColor: `${ISSUE_COLOR}55`, borderColor: ISSUE_COLOR, borderWidth: 1, borderDash: [4, 4] },
-      { label: "Open PRs (all)", data: getValues(items, "open_prs"), backgroundColor: `${PR_COLOR}CC`, borderColor: PR_COLOR, borderWidth: 1 },
-      { label: "Open PRs (contributors)", data: getValues(items, "nm_open_prs"), backgroundColor: `${PR_COLOR}55`, borderColor: PR_COLOR, borderWidth: 1, borderDash: [4, 4] },
-    );
-  } else if (showAll || showContributors) {
-    const issueKey = showContributors ? "nm_open_issues" : "open_issues";
-    const prKey = showContributors ? "nm_open_prs" : "open_prs";
-    datasets.push(
-      { label: "Open Issues", data: getValues(items, issueKey), backgroundColor: `${ISSUE_COLOR}CC`, borderColor: ISSUE_COLOR, borderWidth: 1 },
-      { label: "Open PRs", data: getValues(items, prKey), backgroundColor: `${PR_COLOR}CC`, borderColor: PR_COLOR, borderWidth: 1 },
-    );
-  }
-  return datasets;
+  return makeDatasetsForMode(items, {
+    allIssueKey: "open_issues",
+    nmIssueKey: "nm_open_issues",
+    allPrKey: "open_prs",
+    nmPrKey: "nm_open_prs",
+    issueLabel: "Open Issues",
+    prLabel: "Open PRs",
+  });
 }
 
-/**
- * Build datasets for the median age chart based on the current view state.
- */
 function ageDatasetsForMode(items) {
-  const datasets = [];
-  if (showAll && showContributors) {
-    datasets.push(
-      { label: "Median Issue Age, days (all)", data: getValues(items, "median_issue_age", { useAvg: true }), backgroundColor: `${ISSUE_COLOR}CC`, borderColor: ISSUE_COLOR, borderWidth: 1 },
-      { label: "Median Issue Age, days (contributors)", data: getValues(items, "nm_median_issue_age", { useAvg: true }), backgroundColor: `${ISSUE_COLOR}55`, borderColor: ISSUE_COLOR, borderWidth: 1, borderDash: [4, 4] },
-      { label: "Median PR Age, days (all)", data: getValues(items, "median_pr_age", { useAvg: true }), backgroundColor: `${PR_COLOR}CC`, borderColor: PR_COLOR, borderWidth: 1 },
-      { label: "Median PR Age, days (contributors)", data: getValues(items, "nm_median_pr_age", { useAvg: true }), backgroundColor: `${PR_COLOR}55`, borderColor: PR_COLOR, borderWidth: 1, borderDash: [4, 4] },
-    );
-  } else if (showAll || showContributors) {
-    const issueKey = showContributors ? "nm_median_issue_age" : "median_issue_age";
-    const prKey = showContributors ? "nm_median_pr_age" : "median_pr_age";
-    datasets.push(
-      { label: "Median Issue Age (days)", data: getValues(items, issueKey, { useAvg: true }), backgroundColor: `${ISSUE_COLOR}CC`, borderColor: ISSUE_COLOR, borderWidth: 1 },
-      { label: "Median PR Age (days)", data: getValues(items, prKey, { useAvg: true }), backgroundColor: `${PR_COLOR}CC`, borderColor: PR_COLOR, borderWidth: 1 },
-    );
-  }
-  return datasets;
+  return makeDatasetsForMode(items, {
+    allIssueKey: "median_issue_age",
+    nmIssueKey: "nm_median_issue_age",
+    allPrKey: "median_pr_age",
+    nmPrKey: "nm_median_pr_age",
+    issueLabel: "Median Issue Age (days)",
+    prLabel: "Median PR Age (days)",
+    useAvg: true,
+  });
 }
 
-/**
- * Build datasets for the closed-in-year chart based on the current view state.
- */
 function closedDatasetsForMode(items) {
-  const datasets = [];
-  if (showAll && showContributors) {
-    datasets.push(
-      { label: "Issues Closed, last year (all)", data: getValues(items, "closed_issues_year"), backgroundColor: `${ISSUE_COLOR}CC`, borderColor: ISSUE_COLOR, borderWidth: 1 },
-      { label: "Issues Closed, last year (contributors)", data: getValues(items, "nm_closed_issues_year"), backgroundColor: `${ISSUE_COLOR}55`, borderColor: ISSUE_COLOR, borderWidth: 1, borderDash: [4, 4] },
-      { label: "PRs Closed, last year (all)", data: getValues(items, "closed_prs_year"), backgroundColor: `${PR_COLOR}CC`, borderColor: PR_COLOR, borderWidth: 1 },
-      { label: "PRs Closed, last year (contributors)", data: getValues(items, "nm_closed_prs_year"), backgroundColor: `${PR_COLOR}55`, borderColor: PR_COLOR, borderWidth: 1, borderDash: [4, 4] },
-    );
-  } else if (showAll || showContributors) {
-    const issueKey = showContributors ? "nm_closed_issues_year" : "closed_issues_year";
-    const prKey = showContributors ? "nm_closed_prs_year" : "closed_prs_year";
-    datasets.push(
-      { label: "Issues Closed (last year)", data: getValues(items, issueKey), backgroundColor: `${ISSUE_COLOR}CC`, borderColor: ISSUE_COLOR, borderWidth: 1 },
-      { label: "PRs Closed (last year)", data: getValues(items, prKey), backgroundColor: `${PR_COLOR}CC`, borderColor: PR_COLOR, borderWidth: 1 },
-    );
-  }
-  return datasets;
+  return makeDatasetsForMode(items, {
+    allIssueKey: "closed_issues_year",
+    nmIssueKey: "nm_closed_issues_year",
+    allPrKey: "closed_prs_year",
+    nmPrKey: "nm_closed_prs_year",
+    issueLabel: "Issues Closed (last year)",
+    prLabel: "PRs Closed (last year)",
+  });
 }
 
 /**
@@ -183,7 +236,7 @@ function updateSnapshotCharts() {
   const closedDatasets = closedDatasetsForMode(items);
 
   function chartHeight(datasets) {
-    return `${Math.max(1, labels.length) * Math.max(1, datasets.length) * 28 + 80}px`;
+    return `${Math.max(1, labels.length) * Math.max(1, datasets.length) * BAR_HEIGHT_PX + CHART_BASE_HEIGHT_PX}px`;
   }
 
   openChart.destroy();
@@ -217,7 +270,8 @@ function updateSnapshotCharts() {
 function createCheckboxItem(container, { id, label, checked, onChange }) {
   const labelEl = document.createElement("label");
   labelEl.htmlFor = id;
-  labelEl.style.cssText = "display:flex;align-items:center;gap:0.5rem;cursor:pointer;margin-bottom:0.4rem;";
+  labelEl.style.cssText =
+    "display:flex;align-items:center;gap:0.5rem;cursor:pointer;margin-bottom:0.4rem;";
 
   const input = document.createElement("input");
   input.type = "checkbox";
@@ -241,13 +295,19 @@ function createSnapshotViewCheckboxes() {
     id: "snapshot-view-all",
     label: "All issues",
     checked: showAll,
-    onChange: (v) => { showAll = v; updateSnapshotCharts(); },
+    onChange: (v) => {
+      showAll = v;
+      updateSnapshotCharts();
+    },
   });
   createCheckboxItem(container, {
     id: "snapshot-view-contributors",
     label: "Only contributor issues",
     checked: showContributors,
-    onChange: (v) => { showContributors = v; updateSnapshotCharts(); },
+    onChange: (v) => {
+      showContributors = v;
+      updateSnapshotCharts();
+    },
   });
 }
 
@@ -264,7 +324,10 @@ function createSnapshotCheckboxes() {
     id: "snapshot-checkbox-all-projects",
     label: "All projects",
     checked: true,
-    onChange: (v) => { showAllProjectsAggregate = v; updateSnapshotCharts(); },
+    onChange: (v) => {
+      showAllProjectsAggregate = v;
+      updateSnapshotCharts();
+    },
   });
 
   for (const project of allProjects) {
@@ -275,7 +338,9 @@ function createSnapshotCheckboxes() {
       onChange: (checked) => {
         if (checked) {
           selectedProjects.push(project);
-          selectedProjects = allProjects.filter((p) => selectedProjects.includes(p));
+          selectedProjects = allProjects.filter((p) =>
+            selectedProjects.includes(p),
+          );
         } else {
           selectedProjects = selectedProjects.filter((p) => p !== project);
         }

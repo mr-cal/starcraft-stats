@@ -1,12 +1,12 @@
 """Tests for schedule.py (ScheduleRefreshCommand distribution logic)."""
 
-import math
+import argparse
 from datetime import UTC, datetime, timedelta
 from unittest.mock import patch
 
 import pytest
 from starcraft_stats.models.github import GithubIssue, GithubIssues, Projects
-from starcraft_stats.schedule import ScheduleRefreshCommand
+from starcraft_stats.schedule import ScheduleRefreshCommand, distribute_refresh_dates
 
 
 def _make_issue(opened_by: str | None = None) -> GithubIssue:
@@ -38,22 +38,12 @@ class TestScheduleRefreshDistribution:
         interval: int,
         now: datetime,
     ) -> list[datetime]:
-        """Extract and return the new refresh_dates in issue order."""
         all_issues = [
             (proj_name, issue_num)
             for proj_name, proj_issues in projects.projects.items()
             for issue_num in proj_issues.issues
         ]
-        total = len(all_issues)
-        new_dates = []
-        for i, (proj_name, issue_num) in enumerate(all_issues):
-            days_until_expire = math.ceil((i + 1) / total * interval)
-            new_refresh_date = now - timedelta(days=interval - days_until_expire)
-            projects.projects[proj_name].issues[
-                issue_num
-            ].refresh_date = new_refresh_date
-            new_dates.append(new_refresh_date)
-        return new_dates
+        return distribute_refresh_dates(all_issues, projects, interval, now)
 
     def test_first_issue_expires_soonest(self):
         projects = _make_projects({"proj": 7})
@@ -81,6 +71,7 @@ class TestScheduleRefreshDistribution:
         projects = _make_projects({"proj": 14})
         now = datetime(2026, 1, 8, tzinfo=UTC)
         dates = self._run_distribution(projects, interval=interval, now=now)
+        # First issue expires in 1 day, so its refresh_date is (now - (interval - 1))
         earliest = now - timedelta(days=interval - 1)
         for d in dates:
             assert earliest <= d <= now
@@ -126,8 +117,6 @@ class TestScheduleRefreshCommand:
 
     def test_raises_if_data_file_missing(self, config_file):
         cmd = ScheduleRefreshCommand(config=None)
-        import argparse
-
         with pytest.raises(RuntimeError, match="does not exist"):
             cmd.run(argparse.Namespace())
 
@@ -137,11 +126,9 @@ class TestScheduleRefreshCommand:
 
         now = datetime(2026, 5, 1, tzinfo=UTC)
         cmd = ScheduleRefreshCommand(config=None)
-        import argparse
-
         with patch("starcraft_stats.schedule.datetime") as mock_dt:
             mock_dt.now.return_value = now
-            mock_dt.side_effect = lambda *a, **kw: datetime(*a, **kw)
+            mock_dt.side_effect = datetime
             cmd.run(argparse.Namespace())
 
         updated = Projects.from_yaml_file(data_file)
@@ -151,6 +138,7 @@ class TestScheduleRefreshCommand:
             for issue in proj.issues.values()
         ]
         # All dates should be within [now - 6 days, now]
+        # (first issue expires in 1 day → refresh_date = now - (interval - 1))
         earliest = now - timedelta(days=6)
         for d in all_dates:
             assert earliest <= d <= now
@@ -158,7 +146,5 @@ class TestScheduleRefreshCommand:
     def test_empty_data_file_does_not_crash(self, config_file, data_file):
         Projects(projects={}).to_yaml_file(data_file)
         cmd = ScheduleRefreshCommand(config=None)
-        import argparse
-
         # Should not raise; just emit a message
         cmd.run(argparse.Namespace())

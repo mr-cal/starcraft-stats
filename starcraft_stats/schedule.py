@@ -11,6 +11,40 @@ from .config import CONFIG_FILE, Config
 from .models import Projects
 
 
+def distribute_refresh_dates(
+    all_issues: list[tuple[str, int]],
+    projects: Projects,
+    interval: int,
+    now: datetime,
+) -> list[datetime]:
+    """Distribute refresh dates evenly across the refresh interval.
+
+    Assigns a ``refresh_date`` to each issue so that expiry is spread across
+    ``interval`` days.  Issue ``i`` (0-based) expires in
+    ``ceil((i+1) / total * interval)`` days, giving approximately
+    ``total / interval`` issues expiring per day.
+
+    :param all_issues: Ordered list of ``(project_name, issue_number)`` pairs.
+    :param projects: Mutable projects store; refresh dates are updated in-place.
+    :param interval: Refresh interval in days (from config).
+    :param now: Current datetime used as the "today" reference.
+    :returns: The list of assigned refresh dates in the same order as
+        ``all_issues``, useful for testing.
+    """
+    total = len(all_issues)
+    new_dates: list[datetime] = []
+    for i, (project_name, issue_num) in enumerate(all_issues):
+        # Spread expiry evenly: issue i expires in ceil((i+1)/total * interval) days.
+        days_until_expire = math.ceil((i + 1) / total * interval)
+        # refresh_date that will cause the issue to expire exactly that many days from now
+        new_refresh_date = now - timedelta(days=interval - days_until_expire)
+        projects.projects[project_name].issues[
+            issue_num
+        ].refresh_date = new_refresh_date
+        new_dates.append(new_refresh_date)
+    return new_dates
+
+
 class ScheduleRefreshCommand(BaseCommand):
     """Distribute refresh dates for all GitHub issues evenly over the next refresh interval.
 
@@ -48,7 +82,6 @@ class ScheduleRefreshCommand(BaseCommand):
         emit.progress(f"Loading data from {data_file}", permanent=True)
         projects = Projects.from_yaml_file(data_file)
 
-        # Collect all (project_name, issue_number) pairs
         all_issues: list[tuple[str, int]] = [
             (project_name, issue_num)
             for project_name, project_issues in projects.projects.items()
@@ -66,15 +99,7 @@ class ScheduleRefreshCommand(BaseCommand):
         emit.progress(
             f"Distributing {total} issues across {interval} days", permanent=True
         )
-
-        for i, (project_name, issue_num) in enumerate(all_issues):
-            # Spread expiry evenly: issue i expires in ceil((i+1)/total * interval) days.
-            days_until_expire = math.ceil((i + 1) / total * interval)
-            # refresh_date that will cause the issue to expire exactly that many days from now
-            new_refresh_date = now - timedelta(days=interval - days_until_expire)
-            projects.projects[project_name].issues[
-                issue_num
-            ].refresh_date = new_refresh_date
+        distribute_refresh_dates(all_issues, projects, interval, now)
 
         emit.progress(f"Writing updated refresh dates to {data_file}", permanent=True)
         projects.to_yaml_file(data_file)
