@@ -476,7 +476,7 @@ def _generate_issue_csv(
     start_date = CSV_START_DATE
     end_date = datetime.now(tz=UTC)
     intermediate_data = IntermediateData()
-    emit.progress(f"Counting open issues and age for {label}")
+    emit.progress(f"Counting open issues and age for {label}", permanent=True)
 
     for date in [
         start_date + timedelta(days=i) for i in range((end_date - start_date).days)
