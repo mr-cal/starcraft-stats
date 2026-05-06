@@ -1,6 +1,7 @@
 {
   "applications": [
     "charmcraft",
+    "debcraft",
     "imagecraft",
     "rockcraft",
     "snapcraft"
