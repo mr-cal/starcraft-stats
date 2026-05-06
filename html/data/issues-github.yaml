@@ -55912,6 +55912,18 @@ projects:
         date-closed: null
         refresh-date: '2026-05-05T16:49:28.425080Z'
         opened-by: tigarmo
+      '1205':
+        type: pr
+        date-opened: '2026-05-05T23:44:15Z'
+        date-closed: '2026-05-05T23:49:49Z'
+        refresh-date: '2026-05-05T23:50:50.241541Z'
+        opened-by: medubelko
+      '1206':
+        type: pr
+        date-opened: '2026-05-05T23:50:47Z'
+        date-closed: null
+        refresh-date: '2026-05-05T23:50:50.241541Z'
+        opened-by: medubelko
   snapcraft:
     issues:
       '5471':
