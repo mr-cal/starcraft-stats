@@ -63,7 +63,7 @@ class GetDependenciesCommand(BaseCommand):
 
         :param parsed_args: parsed command line arguments
         """
-        config = Config.from_yaml_file(CONFIG_FILE)
+        config = Config.from_toml_file(CONFIG_FILE)
 
         # A mapping of library names to their data
         libraries = {lib: Library(lib) for lib in config.craft_libraries}

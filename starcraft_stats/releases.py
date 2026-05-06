@@ -63,7 +63,7 @@ class GetReleasesCommand(BaseCommand):
 
         :param parsed_args: Parsed arguments from the CLI.
         """
-        config = Config.from_yaml_file(CONFIG_FILE)
+        config = Config.from_toml_file(CONFIG_FILE)
         apps = [
             Application(
                 name=app,

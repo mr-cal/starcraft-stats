@@ -1,11 +1,13 @@
 """Configuration file manager for starcraft-stats."""
 
+import tomllib
 from pathlib import Path
+from typing import Self
 
 from craft_application.models import CraftBaseModel
 
 # you better run this tool from the project root
-CONFIG_FILE = Path("starcraft-config.yaml")
+CONFIG_FILE = Path("starcraft-config.toml")
 
 
 class Config(CraftBaseModel):
@@ -15,7 +17,7 @@ class Config(CraftBaseModel):
     """A list of all craft libraries."""
 
     craft_projects: list[str]
-    """A list of all craft projects."""
+    """A list of all craft projects, in display order."""
 
     craft_applications: list[str]
     """A list of all craft applications."""
@@ -31,3 +33,10 @@ class Config(CraftBaseModel):
 
     maintainers: list[str] = []
     """GitHub usernames of project maintainers."""
+
+    @classmethod
+    def from_toml_file(cls, path: Path) -> Self:
+        """Instantiate this model from a TOML file."""
+        with path.open("rb") as f:
+            data = tomllib.load(f)
+        return cls.unmarshal(data)

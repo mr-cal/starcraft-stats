@@ -20,16 +20,17 @@ class TestCraftApplicationBranch:
 
 
 class TestConfig:
-    def test_load_all_fields_from_yaml(self, tmp_path):
-        config_file = tmp_path / "config.yaml"
-        config_file.write_text(
-            "craft-libraries:\n  - craft-cli\n  - craft-parts\n"
-            "craft-projects:\n  - snapcraft\ncraft-applications:\n  - snapcraft\n"
-            "refresh-interval-days: 14\n"
-            "launchpad-projects:\n  - snapcraft\n"
-            "maintainers:\n  - mr-cal\n  - lengau\n"
+    def test_load_all_fields_from_toml(self, tmp_path):
+        config_file = tmp_path / "config.toml"
+        config_file.write_bytes(
+            b'craft-libraries = ["craft-cli", "craft-parts"]\n'
+            b'craft-projects = ["snapcraft"]\n'
+            b'craft-applications = ["snapcraft"]\n'
+            b"refresh-interval-days = 14\n"
+            b'launchpad-projects = ["snapcraft"]\n'
+            b'maintainers = ["mr-cal", "lengau"]\n'
         )
-        config = Config.from_yaml_file(config_file)
+        config = Config.from_toml_file(config_file)
 
         assert config.craft_libraries == ["craft-cli", "craft-parts"]
         assert config.craft_projects == ["snapcraft"]
@@ -39,36 +40,36 @@ class TestConfig:
         assert config.maintainers == ["mr-cal", "lengau"]
 
     def test_maintainers_defaults_to_empty(self, tmp_path):
-        config_file = tmp_path / "config.yaml"
-        config_file.write_text(
-            "craft-libraries: []\ncraft-projects: []\ncraft-applications: []\n"
+        config_file = tmp_path / "config.toml"
+        config_file.write_bytes(
+            b"craft-libraries = []\ncraft-projects = []\ncraft-applications = []\n"
         )
-        config = Config.from_yaml_file(config_file)
+        config = Config.from_toml_file(config_file)
 
         assert config.maintainers == []
 
     def test_launchpad_projects_defaults_to_empty(self, tmp_path):
-        config_file = tmp_path / "config.yaml"
-        config_file.write_text(
-            "craft-libraries: []\ncraft-projects: []\ncraft-applications: []\n"
+        config_file = tmp_path / "config.toml"
+        config_file.write_bytes(
+            b"craft-libraries = []\ncraft-projects = []\ncraft-applications = []\n"
         )
-        config = Config.from_yaml_file(config_file)
+        config = Config.from_toml_file(config_file)
 
         assert config.launchpad_projects == []
 
     def test_refresh_interval_defaults_to_7(self, tmp_path):
-        config_file = tmp_path / "config.yaml"
-        config_file.write_text(
-            "craft-libraries: []\ncraft-projects: []\ncraft-applications: []\n"
+        config_file = tmp_path / "config.toml"
+        config_file.write_bytes(
+            b"craft-libraries = []\ncraft-projects = []\ncraft-applications = []\n"
         )
-        config = Config.from_yaml_file(config_file)
+        config = Config.from_toml_file(config_file)
 
         assert config.refresh_interval_days == 7
 
     def test_missing_required_field_raises(self, tmp_path):
-        config_file = tmp_path / "config.yaml"
+        config_file = tmp_path / "config.toml"
         # craft-projects is missing
-        config_file.write_text("craft-libraries: []\ncraft-applications: []\n")
+        config_file.write_bytes(b"craft-libraries = []\ncraft-applications = []\n")
 
         with pytest.raises(Exception, match="craft-projects"):
-            Config.from_yaml_file(config_file)
+            Config.from_toml_file(config_file)

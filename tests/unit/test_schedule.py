@@ -102,12 +102,12 @@ class TestScheduleRefreshCommand:
     @pytest.fixture
     def config_file(self, data_dir, monkeypatch):
         monkeypatch.chdir(data_dir)
-        cfg = data_dir / "starcraft-config.yaml"
-        cfg.write_text(
-            "craft-libraries: []\n"
-            "craft-projects: [proj-a, proj-b]\n"
-            "craft-applications: []\n"
-            "refresh-interval-days: 7\n"
+        cfg = data_dir / "starcraft-config.toml"
+        cfg.write_bytes(
+            b"craft-libraries = []\n"
+            b'craft-projects = ["proj-a", "proj-b"]\n'
+            b"craft-applications = []\n"
+            b"refresh-interval-days = 7\n"
         )
         return cfg
 
