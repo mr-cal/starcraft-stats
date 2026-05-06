@@ -11,6 +11,7 @@ from .github import (
 from .issues import IssueDataPoint
 from .launchpad import LaunchpadBug, LaunchpadBugs, LaunchpadProjects
 from .releases import ReleaseBranchInfo
+from .snapshot import ProjectsData, SnapshotMetrics
 
 __all__ = [
     "CsvModel",
@@ -23,5 +24,7 @@ __all__ = [
     "LaunchpadBugs",
     "LaunchpadProjects",
     "Projects",
+    "ProjectsData",
     "ReleaseBranchInfo",
+    "SnapshotMetrics",
 ]

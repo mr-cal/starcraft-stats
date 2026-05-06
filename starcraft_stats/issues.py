@@ -21,6 +21,8 @@ from .models import (
     LaunchpadBug,
     LaunchpadProjects,
     Projects,
+    ProjectsData,
+    SnapshotMetrics,
 )
 
 
@@ -212,7 +214,7 @@ class GithubProject:
         now = datetime.now(tz=UTC)
         one_year_ago = now - timedelta(days=365)
 
-        snapshot: dict[str, dict[str, int | None]] = {}
+        snapshot: dict[str, SnapshotMetrics] = {}
         for project in projects:
             if project not in self.data.projects:
                 continue
@@ -259,7 +261,10 @@ class GithubProject:
         )
 
         snapshot_file = pathlib.Path("html/data/snapshot.json")
-        snapshot_file.write_text(json.dumps(snapshot, indent=2) + "\n")
+        snapshot_file.write_text(
+            json.dumps({k: v.model_dump() for k, v in snapshot.items()}, indent=2)
+            + "\n"
+        )
         emit.progress(f"Wrote snapshot to {snapshot_file}", permanent=True)
 
 
@@ -333,14 +338,23 @@ class GetIssuesCommand(BaseCommand):
         # write the project list for the frontend
         projects_file = pathlib.Path("html/data/projects.json")
         known = set(config.craft_applications) | set(config.craft_libraries)
-        other_projects = sorted(p for p in config.craft_projects if p not in known)
-        projects_data = {
-            "applications": sorted(config.craft_applications),
-            "libraries": sorted(config.craft_libraries),
-            "other": other_projects,
-            "launchpad": sorted(config.launchpad_projects),
-        }
-        projects_file.write_text(json.dumps(projects_data, indent=2) + "\n")
+        # Preserve the order from the config file rather than sorting alphabetically.
+        other_projects = [p for p in config.craft_projects if p not in known]
+        launchpad_projects = config.launchpad_projects
+        launchpad_with_suffix = [f"{p} (launchpad)" for p in launchpad_projects]
+        projects_data = ProjectsData(
+            applications=config.craft_applications,
+            libraries=config.craft_libraries,
+            other=other_projects,
+            launchpad=launchpad_projects,
+            ordered=[
+                *config.craft_applications,
+                *config.craft_libraries,
+                *other_projects,
+                *launchpad_with_suffix,
+            ],
+        )
+        projects_file.write_text(projects_data.model_dump_json(indent=2) + "\n")
         emit.progress(f"Wrote projects list to {projects_file}", permanent=True)
 
         # write the snapshot for the comparison charts
@@ -386,7 +400,7 @@ def _compute_snapshot_metrics(
     now: datetime,
     one_year_ago: datetime,
     maintainers: set[str],
-) -> dict[str, int | None]:
+) -> SnapshotMetrics:
     """Compute all snapshot metrics for a combined set of GitHub issues and Launchpad bugs.
 
     Works for a single GitHub project (``lp_bugs=[]``), a single Launchpad project
@@ -435,24 +449,24 @@ def _compute_snapshot_metrics(
             and not _is_maintainer(i, maintainers)
         )
 
-    return {
-        "open_issues": len(open_issues),
-        "open_prs": len(open_prs),
-        "median_issue_age": get_median_age([i.date_opened for i in open_issues], now),
-        "median_pr_age": get_median_age([i.date_opened for i in open_prs], now),
-        "closed_issues_year": _closed_count(gh_issues, "issue")
+    return SnapshotMetrics(
+        open_issues=len(open_issues),
+        open_prs=len(open_prs),
+        median_issue_age=get_median_age([i.date_opened for i in open_issues], now),
+        median_pr_age=get_median_age([i.date_opened for i in open_prs], now),
+        closed_issues_year=_closed_count(gh_issues, "issue")
         + _closed_count(lp_bugs, None),
-        "closed_prs_year": _closed_count(gh_issues, "pr"),
-        "nm_open_issues": len(nm_open_issues),
-        "nm_open_prs": len(nm_open_prs),
-        "nm_median_issue_age": get_median_age(
+        closed_prs_year=_closed_count(gh_issues, "pr"),
+        nm_open_issues=len(nm_open_issues),
+        nm_open_prs=len(nm_open_prs),
+        nm_median_issue_age=get_median_age(
             [i.date_opened for i in nm_open_issues], now
         ),
-        "nm_median_pr_age": get_median_age([i.date_opened for i in nm_open_prs], now),
-        "nm_closed_issues_year": _nm_closed_count(gh_issues, "issue")
+        nm_median_pr_age=get_median_age([i.date_opened for i in nm_open_prs], now),
+        nm_closed_issues_year=_nm_closed_count(gh_issues, "issue")
         + _closed_count(lp_bugs, None),
-        "nm_closed_prs_year": _nm_closed_count(gh_issues, "pr"),
-    }
+        nm_closed_prs_year=_nm_closed_count(gh_issues, "pr"),
+    )
 
 
 def _generate_issue_csv(
