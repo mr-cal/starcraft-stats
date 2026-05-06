@@ -311,7 +311,7 @@ class GetIssuesCommand(BaseCommand):
 
         :param parsed_args: parsed command line arguments
         """
-        config = Config.from_yaml_file(CONFIG_FILE)
+        config = Config.from_toml_file(CONFIG_FILE)
         maintainers = set(config.maintainers)
         github_token = load_github_token()
         github_api = Github(github_token)
@@ -338,21 +338,15 @@ class GetIssuesCommand(BaseCommand):
         # write the project list for the frontend
         projects_file = pathlib.Path("html/data/projects.json")
         known = set(config.craft_applications) | set(config.craft_libraries)
-        # Preserve the order from the config file rather than sorting alphabetically.
         other_projects = [p for p in config.craft_projects if p not in known]
-        launchpad_projects = config.launchpad_projects
-        launchpad_with_suffix = [f"{p} (launchpad)" for p in launchpad_projects]
+        launchpad_with_suffix = [f"{p} (launchpad)" for p in config.launchpad_projects]
         projects_data = ProjectsData(
             applications=config.craft_applications,
             libraries=config.craft_libraries,
             other=other_projects,
-            launchpad=launchpad_projects,
-            ordered=[
-                *config.craft_applications,
-                *config.craft_libraries,
-                *other_projects,
-                *launchpad_with_suffix,
-            ],
+            launchpad=config.launchpad_projects,
+            # craft-projects defines display order; launchpad appended at the end.
+            ordered=[*config.craft_projects, *launchpad_with_suffix],
         )
         projects_file.write_text(projects_data.model_dump_json(indent=2) + "\n")
         emit.progress(f"Wrote projects list to {projects_file}", permanent=True)

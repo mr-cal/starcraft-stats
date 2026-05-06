@@ -306,7 +306,7 @@ class GetLaunchpadDataCommand(BaseCommand):
 
         :param parsed_args: parsed command line arguments
         """
-        config = Config.from_yaml_file(CONFIG_FILE)
+        config = Config.from_toml_file(CONFIG_FILE)
         lp = Launchpad.login_anonymously("starcraft-stats", "production")
         lp_project = LaunchpadProject()
 

@@ -70,7 +70,7 @@ class ScheduleRefreshCommand(BaseCommand):
         parsed_args: argparse.Namespace,  # noqa: ARG002
     ) -> None:
         """Distribute refresh dates across all issues in the data file."""
-        config = Config.from_yaml_file(CONFIG_FILE)
+        config = Config.from_toml_file(CONFIG_FILE)
         data_file = pathlib.Path("html/data/issues-github.yaml")
 
         if not data_file.exists():
