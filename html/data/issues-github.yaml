@@ -98084,3 +98084,923 @@ projects:
         date-closed: '2026-05-04T14:14:18Z'
         refresh-date: '2026-05-06T01:12:43.669114Z'
         opened-by: renovate[bot]
+  debcraft:
+    issues:
+      '1':
+        type: issue
+        date-opened: '2025-06-02T13:37:16Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '2':
+        type: pr
+        date-opened: '2025-06-02T13:43:36Z'
+        date-closed: '2025-06-03T15:05:54Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: sergiusens
+      '3':
+        type: pr
+        date-opened: '2025-06-03T15:07:37Z'
+        date-closed: '2025-06-04T18:13:54Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '4':
+        type: pr
+        date-opened: '2025-06-07T03:35:02Z'
+        date-closed: '2025-06-13T21:19:13Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '5':
+        type: pr
+        date-opened: '2025-06-07T07:34:32Z'
+        date-closed: '2025-06-07T07:34:34Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '6':
+        type: pr
+        date-opened: '2025-06-07T11:15:11Z'
+        date-closed: '2025-06-13T20:23:32Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '7':
+        type: pr
+        date-opened: '2025-06-14T07:08:58Z'
+        date-closed: '2025-06-14T07:09:00Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '8':
+        type: pr
+        date-opened: '2025-06-21T07:32:14Z'
+        date-closed: '2025-08-14T21:08:13Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '9':
+        type: pr
+        date-opened: '2025-06-23T03:42:14Z'
+        date-closed: '2025-06-25T18:45:44Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '10':
+        type: pr
+        date-opened: '2025-07-04T17:21:01Z'
+        date-closed: '2025-07-07T15:19:20Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: sergiusens
+      '11':
+        type: pr
+        date-opened: '2025-07-12T07:38:56Z'
+        date-closed: '2025-08-14T22:49:14Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '12':
+        type: pr
+        date-opened: '2025-08-14T04:33:03Z'
+        date-closed: '2025-08-15T14:43:45Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '13':
+        type: pr
+        date-opened: '2025-08-16T02:46:38Z'
+        date-closed: '2025-08-19T11:54:27Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '14':
+        type: pr
+        date-opened: '2025-08-16T06:28:55Z'
+        date-closed: '2025-08-20T18:52:53Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '15':
+        type: pr
+        date-opened: '2025-08-23T06:44:18Z'
+        date-closed: '2025-09-02T14:19:51Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '16':
+        type: pr
+        date-opened: '2025-08-31T12:20:59Z'
+        date-closed: '2025-09-02T13:08:54Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '17':
+        type: pr
+        date-opened: '2025-09-06T05:36:02Z'
+        date-closed: '2025-09-08T21:06:13Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '18':
+        type: pr
+        date-opened: '2025-09-06T22:12:45Z'
+        date-closed: '2025-09-08T19:53:12Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '19':
+        type: pr
+        date-opened: '2025-09-14T00:51:15Z'
+        date-closed: '2025-09-15T14:47:57Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '20':
+        type: pr
+        date-opened: '2025-09-14T10:09:10Z'
+        date-closed: '2025-09-15T14:07:46Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '21':
+        type: pr
+        date-opened: '2025-09-20T02:19:33Z'
+        date-closed: '2025-09-22T06:59:44Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '22':
+        type: pr
+        date-opened: '2025-09-21T02:41:05Z'
+        date-closed: '2025-09-22T07:12:37Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '23':
+        type: pr
+        date-opened: '2025-09-27T22:28:01Z'
+        date-closed: '2025-10-01T21:50:16Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '24':
+        type: pr
+        date-opened: '2025-10-04T06:36:01Z'
+        date-closed: '2025-10-06T13:51:38Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '25':
+        type: pr
+        date-opened: '2025-10-05T01:59:55Z'
+        date-closed: '2025-10-06T15:26:10Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '26':
+        type: pr
+        date-opened: '2025-10-11T06:39:41Z'
+        date-closed: '2025-10-14T12:39:41Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '27':
+        type: pr
+        date-opened: '2025-10-13T02:41:18Z'
+        date-closed: '2025-10-14T12:33:53Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '28':
+        type: pr
+        date-opened: '2025-10-18T05:50:43Z'
+        date-closed: '2025-10-21T19:55:38Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '29':
+        type: pr
+        date-opened: '2025-10-18T22:42:08Z'
+        date-closed: '2025-10-21T19:55:36Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '30':
+        type: pr
+        date-opened: '2025-10-25T03:10:54Z'
+        date-closed: '2025-10-25T13:06:01Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '31':
+        type: pr
+        date-opened: '2025-10-25T06:44:25Z'
+        date-closed: '2025-10-27T07:15:57Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '32':
+        type: pr
+        date-opened: '2025-10-25T13:06:40Z'
+        date-closed: '2025-10-27T07:08:28Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '33':
+        type: pr
+        date-opened: '2025-11-01T04:02:37Z'
+        date-closed: '2025-11-04T12:54:27Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '34':
+        type: pr
+        date-opened: '2025-11-01T07:34:12Z'
+        date-closed: '2025-11-04T09:27:39Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '35':
+        type: pr
+        date-opened: '2025-11-08T03:25:48Z'
+        date-closed: '2025-11-20T14:11:04Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '36':
+        type: issue
+        date-opened: '2025-11-12T18:33:08Z'
+        date-closed: '2025-11-24T16:52:26Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '37':
+        type: issue
+        date-opened: '2025-11-12T18:35:40Z'
+        date-closed: '2025-11-25T13:02:20Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '38':
+        type: pr
+        date-opened: '2025-11-15T07:31:05Z'
+        date-closed: '2025-11-17T15:52:05Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '39':
+        type: issue
+        date-opened: '2025-11-19T15:07:58Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '40':
+        type: issue
+        date-opened: '2025-11-19T15:24:27Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '41':
+        type: issue
+        date-opened: '2025-11-19T15:26:17Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '42':
+        type: issue
+        date-opened: '2025-11-19T15:28:02Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '43':
+        type: pr
+        date-opened: '2025-11-19T16:01:12Z'
+        date-closed: '2025-11-25T13:02:19Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '44':
+        type: pr
+        date-opened: '2025-11-19T17:05:41Z'
+        date-closed: '2025-11-24T16:52:25Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '45':
+        type: pr
+        date-opened: '2025-11-20T14:16:42Z'
+        date-closed: '2025-11-21T16:32:47Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '46':
+        type: pr
+        date-opened: '2025-11-20T14:20:40Z'
+        date-closed: '2025-11-21T15:24:42Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '47':
+        type: issue
+        date-opened: '2025-11-21T12:04:20Z'
+        date-closed: '2025-12-04T14:41:57Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '48':
+        type: issue
+        date-opened: '2025-11-21T12:06:06Z'
+        date-closed: '2025-12-05T17:08:54Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '49':
+        type: pr
+        date-opened: '2025-11-22T22:35:49Z'
+        date-closed: '2025-11-24T23:36:53Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '50':
+        type: pr
+        date-opened: '2025-11-23T22:14:06Z'
+        date-closed: '2025-11-25T00:09:54Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '51':
+        type: issue
+        date-opened: '2025-11-24T17:07:01Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '52':
+        type: issue
+        date-opened: '2025-11-25T13:47:29Z'
+        date-closed: '2026-03-05T19:21:36Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '53':
+        type: issue
+        date-opened: '2025-11-25T15:16:38Z'
+        date-closed: '2026-04-13T12:30:04Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '54':
+        type: pr
+        date-opened: '2025-11-27T15:15:51Z'
+        date-closed: '2025-12-04T14:41:56Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '55':
+        type: pr
+        date-opened: '2025-11-27T22:56:02Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: Copilot
+      '56':
+        type: pr
+        date-opened: '2025-11-27T22:56:42Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: Copilot
+      '57':
+        type: pr
+        date-opened: '2025-11-28T13:46:54Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: Copilot
+      '58':
+        type: issue
+        date-opened: '2025-11-28T14:31:21Z'
+        date-closed: '2026-01-13T16:49:46Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '59':
+        type: pr
+        date-opened: '2025-11-30T23:05:55Z'
+        date-closed: '2025-12-01T14:28:04Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '60':
+        type: pr
+        date-opened: '2025-12-04T15:54:01Z'
+        date-closed: '2025-12-05T17:07:41Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '61':
+        type: pr
+        date-opened: '2025-12-06T05:48:00Z'
+        date-closed: '2025-12-08T15:49:03Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '62':
+        type: pr
+        date-opened: '2025-12-08T02:59:47Z'
+        date-closed: '2026-04-03T00:47:53Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '63':
+        type: pr
+        date-opened: '2025-12-08T15:48:57Z'
+        date-closed: '2025-12-11T17:14:29Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: bepri
+      '64':
+        type: issue
+        date-opened: '2025-12-08T15:50:16Z'
+        date-closed: '2026-01-05T21:35:48Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '65':
+        type: pr
+        date-opened: '2025-12-08T17:46:25Z'
+        date-closed: '2025-12-08T19:41:20Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: Copilot
+      '66':
+        type: pr
+        date-opened: '2025-12-14T03:41:54Z'
+        date-closed: '2025-12-15T16:06:44Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '67':
+        type: pr
+        date-opened: '2025-12-14T21:36:29Z'
+        date-closed: '2025-12-15T14:15:06Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '68':
+        type: pr
+        date-opened: '2025-12-15T18:56:54Z'
+        date-closed: '2026-01-05T21:35:47Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '69':
+        type: pr
+        date-opened: '2025-12-20T22:51:27Z'
+        date-closed: '2026-01-13T18:58:41Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '70':
+        type: pr
+        date-opened: '2026-01-04T19:49:30Z'
+        date-closed: '2026-01-13T16:49:45Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '71':
+        type: issue
+        date-opened: '2026-01-05T13:11:40Z'
+        date-closed: '2026-04-01T01:53:42Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '72':
+        type: issue
+        date-opened: '2026-01-05T13:15:00Z'
+        date-closed: '2026-01-15T18:26:03Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '73':
+        type: issue
+        date-opened: '2026-01-05T18:10:11Z'
+        date-closed: '2026-01-20T15:01:09Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '74':
+        type: pr
+        date-opened: '2026-01-12T16:46:00Z'
+        date-closed: '2026-01-14T20:36:25Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: bepri
+      '75':
+        type: pr
+        date-opened: '2026-01-13T17:33:12Z'
+        date-closed: '2026-01-15T18:26:01Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '76':
+        type: pr
+        date-opened: '2026-01-14T13:11:13Z'
+        date-closed: '2026-01-30T16:02:42Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '77':
+        type: pr
+        date-opened: '2026-01-15T18:43:32Z'
+        date-closed: '2026-01-20T15:01:07Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '78':
+        type: issue
+        date-opened: '2026-01-16T16:45:25Z'
+        date-closed: '2026-02-03T18:02:08Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '79':
+        type: issue
+        date-opened: '2026-01-16T16:55:15Z'
+        date-closed: '2026-04-13T12:31:05Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '80':
+        type: pr
+        date-opened: '2026-01-18T02:40:40Z'
+        date-closed: '2026-01-30T17:43:11Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '81':
+        type: pr
+        date-opened: '2026-01-30T16:05:09Z'
+        date-closed: '2026-02-03T18:02:07Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '82':
+        type: pr
+        date-opened: '2026-01-30T16:17:15Z'
+        date-closed: '2026-03-12T20:26:53Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '83':
+        type: pr
+        date-opened: '2026-02-03T18:03:15Z'
+        date-closed: '2026-03-12T20:30:52Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: dependabot[bot]
+      '84':
+        type: pr
+        date-opened: '2026-02-03T18:03:15Z'
+        date-closed: '2026-03-12T20:34:43Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: dependabot[bot]
+      '85':
+        type: pr
+        date-opened: '2026-02-07T06:43:37Z'
+        date-closed: '2026-02-10T15:48:37Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '86':
+        type: pr
+        date-opened: '2026-02-11T02:36:42Z'
+        date-closed: '2026-03-12T19:07:38Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: dependabot[bot]
+      '87':
+        type: pr
+        date-opened: '2026-02-15T06:28:03Z'
+        date-closed: '2026-02-18T13:18:06Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '88':
+        type: issue
+        date-opened: '2026-02-20T14:53:54Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '89':
+        type: issue
+        date-opened: '2026-02-20T14:54:56Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '90':
+        type: pr
+        date-opened: '2026-02-22T06:38:18Z'
+        date-closed: '2026-03-02T13:06:48Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '91':
+        type: pr
+        date-opened: '2026-02-28T06:49:53Z'
+        date-closed: '2026-03-02T14:18:08Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '92':
+        type: issue
+        date-opened: '2026-03-05T18:12:36Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '93':
+        type: issue
+        date-opened: '2026-03-05T18:19:05Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '94':
+        type: pr
+        date-opened: '2026-03-05T18:20:00Z'
+        date-closed: '2026-03-05T19:21:35Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '95':
+        type: pr
+        date-opened: '2026-03-07T04:00:34Z'
+        date-closed: '2026-03-10T18:35:33Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '96':
+        type: pr
+        date-opened: '2026-03-08T06:11:53Z'
+        date-closed: '2026-03-10T00:07:02Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '97':
+        type: pr
+        date-opened: '2026-03-08T14:27:24Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '98':
+        type: pr
+        date-opened: '2026-03-08T14:34:08Z'
+        date-closed: '2026-03-12T20:26:24Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '99':
+        type: pr
+        date-opened: '2026-03-13T14:39:47Z'
+        date-closed: '2026-03-13T16:33:40Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '100':
+        type: issue
+        date-opened: '2026-03-13T17:36:49Z'
+        date-closed: '2026-04-13T12:28:18Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '101':
+        type: pr
+        date-opened: '2026-03-15T06:12:06Z'
+        date-closed: '2026-03-16T16:00:17Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '102':
+        type: pr
+        date-opened: '2026-03-15T21:16:31Z'
+        date-closed: '2026-04-13T19:05:42Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '103':
+        type: pr
+        date-opened: '2026-03-21T23:19:08Z'
+        date-closed: '2026-03-27T15:11:58Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '104':
+        type: pr
+        date-opened: '2026-03-24T18:08:13Z'
+        date-closed: '2026-04-10T18:06:16Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '105':
+        type: pr
+        date-opened: '2026-03-26T13:34:35Z'
+        date-closed: '2026-03-26T14:39:49Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '106':
+        type: pr
+        date-opened: '2026-03-26T14:26:32Z'
+        date-closed: '2026-04-07T18:33:17Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: dependabot[bot]
+      '107':
+        type: pr
+        date-opened: '2026-03-27T13:39:33Z'
+        date-closed: '2026-03-27T15:05:21Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '108':
+        type: issue
+        date-opened: '2026-03-27T16:19:16Z'
+        date-closed: '2026-04-13T19:07:27Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '109':
+        type: issue
+        date-opened: '2026-03-27T16:28:06Z'
+        date-closed: '2026-04-13T12:27:52Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '110':
+        type: pr
+        date-opened: '2026-03-27T20:32:06Z'
+        date-closed: '2026-04-10T18:10:13Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: bepri
+      '111':
+        type: pr
+        date-opened: '2026-03-29T01:21:35Z'
+        date-closed: '2026-04-07T18:26:26Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: dependabot[bot]
+      '112':
+        type: pr
+        date-opened: '2026-03-29T06:58:38Z'
+        date-closed: '2026-03-30T13:08:23Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '113':
+        type: pr
+        date-opened: '2026-03-29T13:10:22Z'
+        date-closed: '2026-04-01T16:58:57Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '114':
+        type: pr
+        date-opened: '2026-03-30T00:50:01Z'
+        date-closed: '2026-04-07T23:27:37Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '115':
+        type: pr
+        date-opened: '2026-03-30T20:02:00Z'
+        date-closed: '2026-04-07T18:20:34Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: dependabot[bot]
+      '116':
+        type: pr
+        date-opened: '2026-03-31T00:44:02Z'
+        date-closed: '2026-04-02T16:45:47Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '117':
+        type: pr
+        date-opened: '2026-03-31T17:52:18Z'
+        date-closed: '2026-04-01T16:53:15Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '118':
+        type: pr
+        date-opened: '2026-04-01T16:57:33Z'
+        date-closed: '2026-04-01T17:00:50Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: Copilot
+      '119':
+        type: pr
+        date-opened: '2026-04-04T06:32:52Z'
+        date-closed: '2026-04-07T13:43:28Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '120':
+        type: pr
+        date-opened: '2026-04-05T02:14:04Z'
+        date-closed: '2026-04-07T14:12:37Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '121':
+        type: pr
+        date-opened: '2026-04-06T21:12:19Z'
+        date-closed: '2026-04-12T11:56:39Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '122':
+        type: pr
+        date-opened: '2026-04-08T22:44:13Z'
+        date-closed: '2026-04-10T13:33:27Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: dependabot[bot]
+      '123':
+        type: pr
+        date-opened: '2026-04-11T22:37:57Z'
+        date-closed: '2026-04-13T11:10:20Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '124':
+        type: issue
+        date-opened: '2026-04-13T12:36:47Z'
+        date-closed: '2026-04-22T17:49:01Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '125':
+        type: issue
+        date-opened: '2026-04-13T12:38:13Z'
+        date-closed: '2026-04-26T13:20:07Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '126':
+        type: issue
+        date-opened: '2026-04-13T12:43:20Z'
+        date-closed: '2026-04-29T03:35:00Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '127':
+        type: issue
+        date-opened: '2026-04-13T17:08:19Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: steinbro
+      '128':
+        type: pr
+        date-opened: '2026-04-13T20:15:03Z'
+        date-closed: '2026-04-21T19:55:37Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '129':
+        type: pr
+        date-opened: '2026-04-18T06:52:56Z'
+        date-closed: '2026-04-20T13:37:43Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '130':
+        type: pr
+        date-opened: '2026-04-19T12:02:15Z'
+        date-closed: '2026-04-20T13:33:04Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '131':
+        type: pr
+        date-opened: '2026-04-20T14:27:09Z'
+        date-closed: '2026-04-21T15:01:06Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: bepri
+      '132':
+        type: pr
+        date-opened: '2026-04-21T11:36:42Z'
+        date-closed: '2026-04-21T13:16:44Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '133':
+        type: pr
+        date-opened: '2026-04-22T00:10:00Z'
+        date-closed: '2026-04-22T17:49:00Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '134':
+        type: issue
+        date-opened: '2026-04-22T11:11:40Z'
+        date-closed: '2026-04-27T14:10:33Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: canon-cat
+      '135':
+        type: pr
+        date-opened: '2026-04-22T11:38:41Z'
+        date-closed: '2026-04-23T14:00:13Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: canon-cat
+      '136':
+        type: pr
+        date-opened: '2026-04-22T19:00:25Z'
+        date-closed: '2026-04-26T13:20:06Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '137':
+        type: pr
+        date-opened: '2026-04-23T11:50:59Z'
+        date-closed: '2026-04-27T14:10:31Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: canon-cat
+      '138':
+        type: issue
+        date-opened: '2026-04-24T17:13:07Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '139':
+        type: pr
+        date-opened: '2026-04-26T01:22:10Z'
+        date-closed: '2026-04-27T18:57:31Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '140':
+        type: issue
+        date-opened: '2026-04-26T13:18:49Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '141':
+        type: pr
+        date-opened: '2026-04-26T13:31:22Z'
+        date-closed: '2026-04-27T19:01:40Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '142':
+        type: pr
+        date-opened: '2026-04-26T23:23:50Z'
+        date-closed: '2026-04-27T12:11:45Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: renovate[bot]
+      '143':
+        type: pr
+        date-opened: '2026-04-27T05:44:27Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: smethnani
+      '144':
+        type: issue
+        date-opened: '2026-04-27T12:56:53Z'
+        date-closed: '2026-05-04T21:40:28Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka
+      '145':
+        type: issue
+        date-opened: '2026-04-27T13:46:11Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: hector-cao
+      '146':
+        type: issue
+        date-opened: '2026-04-27T14:18:30Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: hector-cao
+      '147':
+        type: issue
+        date-opened: '2026-04-27T14:25:48Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: hector-cao
+      '148':
+        type: issue
+        date-opened: '2026-04-27T14:36:26Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: hector-cao
+      '149':
+        type: issue
+        date-opened: '2026-04-27T14:56:25Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: hector-cao
+      '150':
+        type: issue
+        date-opened: '2026-04-27T15:02:57Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: hector-cao
+      '151':
+        type: issue
+        date-opened: '2026-04-27T15:13:55Z'
+        date-closed: null
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: hector-cao
+      '152':
+        type: pr
+        date-opened: '2026-04-27T19:12:56Z'
+        date-closed: '2026-05-04T21:39:33Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: lengau
+      '153':
+        type: pr
+        date-opened: '2026-04-28T20:13:07Z'
+        date-closed: '2026-05-04T21:40:27Z'
+        refresh-date: '2026-05-06T01:20:28.310224Z'
+        opened-by: cmatsuoka

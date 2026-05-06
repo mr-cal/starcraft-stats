@@ -153,6 +153,20 @@
     "nm_closed_issues_year": 0,
     "nm_closed_prs_year": 57
   },
+  "debcraft": {
+    "open_issues": 20,
+    "open_prs": 5,
+    "median_issue_age": 41,
+    "median_pr_age": 158,
+    "closed_issues_year": 21,
+    "closed_prs_year": 107,
+    "nm_open_issues": 8,
+    "nm_open_prs": 3,
+    "nm_median_issue_age": 8,
+    "nm_median_pr_age": 159,
+    "nm_closed_issues_year": 1,
+    "nm_closed_prs_year": 68
+  },
   "imagecraft": {
     "open_issues": 21,
     "open_prs": 9,
@@ -252,17 +266,17 @@
     "nm_closed_prs_year": 0
   },
   "all-projects": {
-    "open_issues": 1981,
-    "open_prs": 278,
-    "median_issue_age": 953,
+    "open_issues": 2001,
+    "open_prs": 283,
+    "median_issue_age": 935,
     "median_pr_age": 137,
-    "closed_issues_year": 483,
-    "closed_prs_year": 2612,
-    "nm_open_issues": 1351,
-    "nm_open_prs": 161,
-    "nm_median_issue_age": 1860,
-    "nm_median_pr_age": 99,
-    "nm_closed_issues_year": 241,
-    "nm_closed_prs_year": 1280
+    "closed_issues_year": 504,
+    "closed_prs_year": 2719,
+    "nm_open_issues": 1359,
+    "nm_open_prs": 164,
+    "nm_median_issue_age": 1820,
+    "nm_median_pr_age": 102,
+    "nm_closed_issues_year": 242,
+    "nm_closed_prs_year": 1348
   }
 }
