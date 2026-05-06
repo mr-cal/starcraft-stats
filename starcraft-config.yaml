@@ -52,21 +52,27 @@ launchpad-projects:
 
 # GitHub usernames of project maintainers
 maintainers:
-  - cmatsuoka
-  - steinbro
-  - tigarmo
-  - lengau
-  - dariuszd21
+  - alderic-coroir
   - bepri
+  - cmatsuoka
+  - Copilot
+  - come-maiz
+  - cjdcordeiro
+  - cjp256
+  - dariuszd21
+  - dboddie
+  - dependabot[bot]
+  - facundobatista
+  - jahn-junior
+  - kyrofa
+  - lengau
+  - mattculler
   - medubelko
   - mr-cal
-  - smethnani
-  - jahn-junior
-  - juju-charm-bot
-  - alderic-coroir
+  - renovate[bot]
   - sergiusens
-  - mattculler
+  - smethnani
+  - steinbro
   - syu-w
-  - facundobatista
-  - dependabot
-  - copilot
+  - tigarmo
+  - upils
