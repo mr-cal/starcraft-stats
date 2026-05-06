@@ -88,7 +88,7 @@ function makeBarChart(canvasId, labels, datasets, xLabel) {
 
   const wrapper = document.createElement("div");
   wrapper.style.position = "relative";
-  wrapper.style.height = `${Math.max(1, labels.length) * 40 + 80}px`;
+  wrapper.style.height = `${Math.max(1, labels.length) * Math.max(1, datasets.length) * 28 + 80}px`;
   ctx.parentNode.insertBefore(wrapper, ctx);
   wrapper.appendChild(ctx);
 
@@ -177,29 +177,36 @@ function closedDatasetsForMode(items) {
 function updateSnapshotCharts() {
   const items = getDisplayItems();
   const labels = items.map((i) => i.label);
-  const height = `${Math.max(1, labels.length) * 40 + 80}px`;
+
+  const openDatasets = openDatasetsForMode(items);
+  const ageDatasets = ageDatasetsForMode(items);
+  const closedDatasets = closedDatasetsForMode(items);
+
+  function chartHeight(datasets) {
+    return `${Math.max(1, labels.length) * Math.max(1, datasets.length) * 28 + 80}px`;
+  }
 
   openChart.destroy();
-  openWrapper.style.height = height;
+  openWrapper.style.height = chartHeight(openDatasets);
   openChart = new Chart(document.getElementById("snapshot-open-chart"), {
     type: "bar",
-    data: { labels, datasets: openDatasetsForMode(items) },
+    data: { labels, datasets: openDatasets },
     options: makeChartOptions("Count"),
   });
 
   ageChart.destroy();
-  ageWrapper.style.height = height;
+  ageWrapper.style.height = chartHeight(ageDatasets);
   ageChart = new Chart(document.getElementById("snapshot-age-chart"), {
     type: "bar",
-    data: { labels, datasets: ageDatasetsForMode(items) },
+    data: { labels, datasets: ageDatasets },
     options: makeChartOptions("Days"),
   });
 
   closedChart.destroy();
-  closedWrapper.style.height = height;
+  closedWrapper.style.height = chartHeight(closedDatasets);
   closedChart = new Chart(document.getElementById("snapshot-closed-chart"), {
     type: "bar",
-    data: { labels, datasets: closedDatasetsForMode(items) },
+    data: { labels, datasets: closedDatasets },
     options: makeChartOptions("Count"),
   });
 }
