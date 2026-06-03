@@ -216,10 +216,10 @@
         },
         "rockcraft/main": {
             "craft-application": {
-                "series": "6.4",
-                "version": "6.4.0",
+                "series": "7.0",
+                "version": "7.0.0",
                 "latest": "7.0.0",
-                "outdated": true
+                "outdated": false
             },
             "craft-archives": {
                 "series": "2.2",
