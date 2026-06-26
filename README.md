@@ -1,8 +1,7 @@
 # craft-stats
 
-[![Test Status](https://github.com/mr-cal/starcraft-stats/actions/workflows/qa.yaml/badge.svg?branch=main)](https://github.com/mr-cal/starcraft-stats/actions/workflows/qa.yaml)
-[![Fast Data Collection](https://github.com/mr-cal/starcraft-stats/actions/workflows/fast-data-collection.yaml/badge.svg?branch=main)](https://github.com/mr-cal/starcraft-stats/actions/workflows/fast-data-collection.yaml)
-[![Slow Data Collection](https://github.com/mr-cal/starcraft-stats/actions/workflows/slow-data-collection.yaml/badge.svg?branch=main)](https://github.com/mr-cal/starcraft-stats/actions/workflows/slow-data-collection.yaml)
+> **This project has been superseded by [mr-cal/craft-dashboard](https://github.com/mr-cal/craft-dashboard).**
+> Visit the new dashboard at https://craft-dashboard.name
 
 ## Overview
 
