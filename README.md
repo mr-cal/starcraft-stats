@@ -1,5 +1,6 @@
 # craft-stats
 
+> [!WARNING]
 > **This project has been superseded by [mr-cal/craft-dashboard](https://github.com/mr-cal/craft-dashboard).**
 > Visit the new dashboard at https://craft-dashboard.name
 
